@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/V_speak_01_02_03_04_05_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/V_speak_01_02_03_04_05_TS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.25"/>
+            <when xml:id="T2" interval="0.30"/>
+            <when xml:id="T3" interval="0.31"/>
+            <when xml:id="T4" interval="0.36"/>
+            <when xml:id="T5" interval="0.47"/>
+            <when xml:id="T6" interval="0.49"/>
+            <when xml:id="T7" interval="0.70"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e36" n="1" start="0" end="0.88">
+               <seg xml:id="d1e37" function="utterance" notation="orth">
+                  <w xml:id="d1e38" synch="#T1">ka'an</w>
+               </seg>
+               <seg xml:id="d1e40" function="utterance" notation="ipa">
+                  <w xml:id="d1e41" synch="#T1">
+                     <c>k</c>
+                     <c>ã̰</c>
+                     <c function="tone">R</c>
+                     <c>ʔ</c>
+                     <c>ã̰</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T7">V.speak</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e38 #d1e41" ana="#V #TRANS"/>
+               <span type="form" target="#d1e38 #d1e41" ana="#GLS"/>
+               <!-- THIS IS THE BASE FORM!! -->
+               <!-- usg: colloc U = (a language) -->
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Speech"/>
+               <span type="domain" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Language"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span xml:lang="en" target="#d1e38 #d1e41" corresp="https://en.wiktionary.org/wiki/speak#Verb">to speak</span>
+               <span xml:lang="es" target="#d1e38 #d1e41" corresp="https://es.wiktionary.org/wiki/hablar">hablar</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

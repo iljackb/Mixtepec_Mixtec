@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_nothing_01_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_nothing_01_spkrTS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline><!-- textgrid changed, txt output not -->
+            <when xml:id="T1" interval="0.08"/>
+            <when xml:id="T2" interval="0.10"/>
+            <when xml:id="T3" interval="0.21"/>
+            <when xml:id="T4" interval="0.31"/>
+            <when xml:id="T5" interval="0.35"/>
+            <when xml:id="T6" interval="0.46"/>
+            <when xml:id="T7" interval="0.49"/>
+            <when xml:id="T8" interval="0.59"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e37" n="1" start="0" end="0.65">
+               <seg xml:id="d1e38" function="utterance" notation="orth" type="compound">
+                  <w xml:id="d1e39" synch="#T1">koo</w>
+                  <w xml:id="d1e40" synch="#T3">ña'a</w>
+               </seg>
+               <seg xml:id="d1e41" function="utterance" notation="ipa" type="compound">
+                  <w xml:id="d1e42" synch="#T1">
+                     <c>k</c>
+                     <c>ɔː</c>
+                     <c function="tone">F</c>                   
+                  </w>
+                  <w xml:id="d1e43" synch="#T3">
+                     <c>ɲ</c>
+                     <c>ã̰</c>
+                     <c function="tone">H</c>
+                     <c>ʔ</c>
+                     <c>a̰</c>
+                     <c function="tone">L</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T8">PRON-INAN.nothing</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e38 #d1e41" ana="#PRON #QNTF"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="profile" target="#d1e38 #d1e41" ana="#INAN"/>
+               <span type="profile" target="#d1e38 #d1e41" ana="#QNTF"/>
+            </spanGrp>
+            
+            <spanGrp type="decomposition" cert="unknown"><!-- koo @ana="#COP #EXIST #NEG"  (or should I just point to lemma?)-->
+               <!--  
+               <span type="" target="#d1e39 #d1e42" corresp=""/>
+               <span type="" target="" corresp=""/>
+               
+               <span type="" target="" corresp=""/>
+               <span type="" target="" corresp=""/>
+               -->
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e38 #d1e41" xml:lang="en" corresp="https://en.wiktionary.org/wiki/nothing">nothing</span>
+               <span target="#d1e38 #d1e41" xml:lang="es" corresp="https://es.wiktionary.org/wiki/nada">nada</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="fsdDecl-MIX-00">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Working Inventory of Mixtepec-Mixtec Lexical and other Categorical Features</title>
+            <principal><name>Jack T. Bowers</name></principal>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl>
+              <!-- cite: GOLD; MAF; ISOcat; and all literature from which you derrived the categories -->
+               <bibl xml:id="Windhouwer-Wright-ISOcat"><author><name>M. Windhouwer</name></author> and <author><name>S. E. Wright</name></author>.<title>Linking to Linguistic Data Categories in ISOcat</title> <publisher>In Linked Data in Linguistics (LDL 2012)</publisher>, <pubPlace>Frankfurt/M., Germany</pubPlace>, <date>2012</date>.</bibl>
+            </listBibl>
+
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        
+        
+        <!-- 
+           MONOLOGUE
+           DIALOGUE
+        
+        -->
+<!-- 
+	
+"metalanguage"
+	fVal="http://www.isocat.org/datcat/DC-3827"
+	def:"a language used in a multi-language lexical resource as a language of description"
+	
+"meta language"
+   fVal="http://www.isocat.org/datcat/DC-2489"
+	def:"Name of the language that is used as a metalanguage in the resource."
+	
+"interlingua"
+	fVal="http://www.isocat.org/datcat/DC-4079"
+	def:"An abstract intermediary language used in the machine translation of human language."
+	
+"Process"	
+	http://www.isocat.org/datcat/DC-3426
+      gold
+      The class of things that happen and have temporal parts or stages.
+      Examples include extended events like a football match or a race, actions like pursuing and reading, and biological processes.
+      The formal definition is: anything that occurs in time but is not an object.
+      Note that a process may have participants 'inside' it which are objects, such as the players in a football match. 
+      In a 4D ontology, a process is something whose spatiotemporal extent is thought of as dividing into temporal stages roughly perpendicular to the time-axis. [SUMO 2010]
+	
+   eg:
+   DIACHRONIC COGNITIVE-LEXICAL PROCESSES:
+    GRAMMATICALIZATION
+      METONOMY
+      METAPHOR
+      BLENDING
+      
+        
+        -->
+
+        
+
+        <!-- ONTOLOGICAL
+           
+entityCategorization
+	fVal="http://www.isocat.org/datcat/DC-1509"	
+ontological subcategorization of the referent of an expression
+	
+"encyclopedic information:
+	fVal="http://www.isocat.org/datcat/DC-3828"
+	
+"CardinalNumeral
+   http://www.isocat.org/datcat/DC-3103
+	A cardinal numeral is a numeral of the class whose members are considered basic in form,
+	are used in counting, and are used in expressing how many objects are referred to [Crystal 1997: 52].(GOLD)	
+	
+"concept relation"
+	fVal="http://www.isocat.org/datcat/DC-88"
+	def: A relation between two concepts having a non-hierarchical thematic connection by virtue of experience.
+	ex: teacher : school; automobile : highway
+	mix:
+	
+"concept relation"
+	fVal="http://www.isocat.org/datcat/DC-142"
+	def: A relation between two concepts having a non-hierarchical thematic connection by virtue of experience.
+	ex: Concept relations form the basis for concept systems. 
+	
+Types of concept relation can include:
+   generic relation;
+   partitive relation;
+   sequential relation;
+   temporal relation;
+   spatial relation;
+   associative relation
+   
+  [open list] .
+	mix:
+	
+"concept relation"
+	fVal="http://www.isocat.org/datcat/DC-247"
+	def:A relation between two concepts where the intension of one of the concepts includes that of the other concept and at least one additional delimiting characteristic.
+	ex: There is a generic relation between the concept fruit and the concept apple.
+	expln: Generic relations can be characterized in that all concepts that belong to the category of the narrower concept (the species) are part of the extension of the broader concept (the genus).
+	
+	mix:
+ -->
+        <!-- 
+        
+"InterlinearGlossedText"
+	fVal="http://www.isocat.org/datcat/DC-3268"
+	gold: Interlinear glossed text (IGT) is a linguistic data structure meant to display morphosyntactic structure: 
+	morphemes, morpheme boundaries, morpheme types (clitics, prefixes, reduplicated forms), morphosyntactic features/values and part of speech information. 
+	At a minimum, an instance of IGT includes a single line of source language followed by a translation line. 
+
+Often, a second gloss line is included to show detailed morphosyntactic structure using both words and phrases from the target language
+and various labels, or 'grams', that indicate morphosyntactic features/values, etc. It is possible to include separate lines for the 
+orthographic form, phonetic form, and phonological form.
+ Standards for IGT include the Leipzig Glossing Rules
+
+
+"transcribed form"
+	fVal="http://www.isocat.org/datcat/DC-322"
+
+	A form of a term or lexeme resulting from an operation whereby the characters of one writing system are represented by characters 
+	from another writing system, taking into account the pronunciation of the characters converted.
+
+
+'lexical unit'
+	"http://www.isocat.org/datcat/DC-2486"
+	source: Athens Core
+	
+	"LexicalItem"
+	fVal="http://www.isocat.org/datcat/DC-3294"
+	gold: A unit of the vocabulary of a language such as a word, phrase or term as listed in a dictionary. It usually has a pronounceable or graphic form, fulfils a grammatical role in a sentence, and carries semantic meaning. [Hartmann and Stork 1972: 128]
+	
+	
+Prefix
+	http://www.isocat.org/datcat/DC-3417
+	src: GOLD
+	
+'discourseUnit'
+	'http://www.isocat.org/datcat/DC-4577' 
+	
+
+	
+'Repetitive'	
+	<f name="Repetitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3457" xml:id="REPET"/> 
+	GOLD: A derivational unit that derives transitives from other transitive or intransitive stems adding the meaning of repetition to the resulting form. [concept mentioned in Kibort 2008c: 9]
+ -->
+        <!-- Higher Level Features (Cognitive)-->
+        <!-- CONCEPTUAL-LEXICAL INTERFACE
+ 
+ 
+ 
+ Etymology @type:
+ 
+"LexicalizedConcept"
+	fVal="http://www.isocat.org/datcat/DC-3295"
+	gold: Grammatical or semantic category expressed by a lexical item, e.g. English 'make' + 'dead' together are lexicalized as 'kill', in German 'tot' + 'machen' [are lexicalized as] 'töten', or the close linking of lexical items in an idiomatic phrase. [Hartmann and Stork 1972: 129]
+	
+	mix: there are distinct lexical items for 'corn' & 'cooked corn'; 
+ -->
+        
+
+        
+
+        <fsdDecl>
+           <!-- UTTERANCE -->
+           <fsDecl type="UtteranceCategories">
+              <!-- eventually, will expand the types of 'DECL' to distinguish things like 'description', 'opinion', 'complaint', 'argument' etc..
+            
+            In spoken MIX (cannot occur orthographically given lack of tone marking in system) this can take two different forms:
+            
+            i) the negative adverbial marker will preceed the predicate (V) being negated;
+            
+            ii) the negated predicate (V) will be inflected to express the negative (aspect) by the transposition of a (falling) tonal contour onto its onset vocalic gesture
+            Conditions:
+            - The predicating verb must have the appropriate native tonal contour;
+            - (?) the verbal person argument MAY have to be 1st.sg....             -->
+              
+              <fDecl name="DeclarativeUtterance-MIX">
+                 <vRange>
+                    <fs>
+                       <f name="declarative" xml:id="DECL"><default/></f>
+                       <f name="affirmativeDeclarative" xml:id="DECL-AFFIRM"/>
+                       <f name="negativeDeclarative" xml:id="DECL-NEG"/>
+                    </fs>
+                 </vRange>
+              </fDecl>
+              
+              <fDecl name="HearsayUtterances-MIX">
+                 <!-- Hearsay utterances can be semantically intended to infer a question, or can be used in a more delarative way such as a means to provide evidence for something.
+         May occur with MODAL marker in MIX. Many or all observations of this in the dataset so far have all been using the predicate + BPT 'ndakánì-na nũ̀ṹ....' which can be translated as "someone told me..." 
+         Category akin to subjunctive but the latter isn't currently being chosen because of the syntactic implications of the terminology which doesn't best fit for MIX.. However given the lack of official 
+         category for term in ISOcat registry, this category may be changed if a pre-existing DataCat which fits comparably is found -->
+                 <vRange>
+                    <fs>
+                       <f name="hearsay" xml:id="HRSY"/>
+                       <!-- can occur as Question; (reference #HRSY in that @"feats" system) -->
+                    </fs>
+                 </vRange>
+              </fDecl>
+              
+
+              
+              <fDecl name="ResponseUtterances">
+                 <fDescr>Responses will vary take the appropriate form according to the specific FOCUS TYPE of the QUESTION 
+                    and will inherit the question's INFORMATION STRUCTURE based on the FOCUS;</fDescr>
+                 <!-- Response to (currently undistinguished type of) WH Question;  Response will vary take the appropriate form according to the specific FOCUS TYPE; eg.
+	 (WH-A(ACTOR)),(WH-U(UNDERGOER)),(WH-LOC(LOCATION)),(WH-TEMP(TEMPORAL)),(WH-CAUS(CAUSE)),(WH-HOW(MEANS)),(WH-QNTY(QUANTITY)),. of the QUESTION,
+	... and will inherit the question's INFORMATION STRUCTURE based on the FOCUS  -->
+                 <vRange>
+                    <fs type="response"><!-- reference @"feats" for each interrogative to which it is responding -->
+                       <f name="response" xml:id="RESP-"/><!-- THIS IS A TEMPORARY PLACEHOLDER; MODIFY!!! -->
+                    </fs>
+                 </vRange>
+              </fDecl>
+              <!-- 
+"answer"
+	fVal="http://www.isocat.org/datcat/DC-1498"
+	def:Answer' is the communicative function of a dialogue act where the speaker has the goal to provide information to the addresse that he believes the addressee want to obtain.
+	src:
+	ex:
+	mix:
+	
+	>(Rule: if question = WH(type(a)); then answer will include focus of the question;)
+	
+"interjection"
+	fVal="http://www.isocat.org/datcat/DC-1318"
+	def: Word or sound that expresses an emotion.
+	src: "www.southwestern.edu/~carlg/Latin_Web/glossary.html"
+	note: An interjection usually lacks grammatical connection
+	mix: #EXMPLS
+ -->
+              
+           </fsDecl>
+
+           <!--  -->
+           <fsDecl type="Verbal-Categories-MIX">
+              
+              <fDecl name="Copular-Verbs-MIX" xml:id="COP-MIX">
+                 <fDescr>
+                    <desc>(MIX) </desc>
+                    <desc>(gold) <ref>Copula</ref>
+                    <quote>Indicates a relationship of equivalency between the subject and predicate or complement of a clause. 
+                    Verbal copulas have essentially the same morphosyntactic properties as verbs: English 'be', Spanish 'ser', and Russian 'byt’' are illustrations of this class.
+                    Nonverbal copular items include the the pro-copula - a demonstrative or personal pronoun which serves as the linker between subject and predicate nominal,
+                    and which is obligatory in nominal predication - and particle copulas, which have their origin in a variety of markers of discourse-oriented phenomena such
+                    as topicalization, backgrounding, or contrastive focus for subjects or predicates. Zero copula refers to a construction in which the relation between a subject
+                    and a nominal predicate is not marked by an overt item. Zero copula is mandatory in some languages, such as Sinhalese, whereas it is conditional or restricted in other languages, such as Russian. [Stassen 2008]</quote>
+                    
+                    </desc>
+                 </fDescr>
+                 <vRange>
+                    <fs>
+                       <f name="copula" xml:id="COP" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3142">
+                          <string>COP</string><default/>
+                       </f>
+                       <f name="locative-copula" xml:id="COP-LOC">
+                          <string>COP-LOC</string>
+                       </f>
+                       
+                       <!-- 
+                          LocativeCase
+                          http://www.isocat.org/datcat/DC-3306
+                          (GOLD); (adj./n.) In languages which express grammatical relationships by means of inflections, this term refers to the form taken by a noun phrase
+                          (often a single noun or pronoun), when it typically expresses the idea of location of an entity or action. Structures which express locational 
+                          meaning may also be referred to as locative, e.g. in 'The woman was standing at a bus stop', 'at a bus stop' could be called a locative phrase. [Crystal 2008: 288] -->
+                      
+                       <f name="copula-attributive" xml:id="COP-ATTRIB">
+                          <string>COP-ATTRB</string>
+                       </f>
+                       <!-- (mix) "copulaAttributive" in MIX is for the mix adjectives that are verbalized through the attatchment
+                          of a PERSON and possibly a combination of: NUMBER, FORMALITY, GENDER markers;
+                          Can also be considered to be an instance of process "verbalization"-->                      
+                       <f name="copula-realis" xml:id="COP-REAL">
+                          <string>COP-REAL</string>
+                       </f>
+                       <!-- 
+                          RealisMood
+                          http://www.isocat.org/datcat/DC-3306
+                          Realis modality is a modality that connotes the factuality of a proposition. 
+                          In its broad usage, the term realis is approximately equivalent in meaning to the term indicative, which in turn is used, narrowly, as a synonym to declarative. [SIL International 2004]
+                       
+                       -->
+                       <!-- ((MIX); (ISOcat) 'lexical Decomposition') alternative (source) sense of "ka" (eg. topic marker) and the base of many verbs in MIX; This has not actually been confirmed to carry out the "Equative" function in MIX but it is heavily featured in related forms of MIX (eg. EXAMPLES!!). -->              
+                       <f name="copula-incompletive" xml:id="COP-INCMPL">
+                          <string>COP-INCMPL</string>
+                       </f>
+                       <f name="copula-potential" xml:id="COP-POT">
+                          <string>COP-POT</string>
+                       </f>
+                       <!-- (also: POT); and (combines with ADV-TEMP; to express IMPERF aspect)-->                     
+                    </fs>
+                 </vRange>
+              </fDecl>
+              <fDecl name="Motion-Arrival-Verb-Features-MIX" xml:id="V-MTN-ARVL-MIX"><!-- These categories may likely need to be re-organized according to Levinson, Zatlev, and Langacre's principles;   -->
+                 <vRange>
+                   <fs>
+                      <f name="motion-verbs" xml:id="V-MTN">
+                         <string>V-MTN</string>
+                      </f>
+                      <f name="depature-verbs" xml:id="V-DPRT">
+                         <string>V-DPRT</string>
+                      </f>
+                      <f name="arrival-verbs" xml:id="V-ARVL">
+                         <string>V-ARVL</string>
+                      </f>
+                      
+                      <f name="Motion-Arrival-Verb-Focus-MIX">
+                         <fs>
+                            <f name="source-focus" xml:id="SRC">
+                               <string>SRC</string>
+                            </f>
+                            <f name="path-focus" xml:id="PTH">
+                               <string>PTH</string>
+                            </f>
+                            <f name="goal-focus" xml:id="GL">
+                               <string>GL</string>
+                               <fs type="Focus-Home" xml:id="HM">
+                                    
+                               </fs>
+                            </f>
+                         </fs>
+                      </f>      
+                   </fs> 
+                    
+                    
+                    <!-- Causative! (Need to find appropriate parent category though!! - this is also not really a voice thing because it's inherant to the verb!)
+                       
+                    causative voice 
+                    http://www.isocat.org/datcat/DC-3847
+                    -->
+                 </vRange>
+              </fDecl>
+              <!-- 
+              
+                 
+
+	
+	
+              
+              -->
+
+           
+              <fDecl name="Tense" xml:id="TENSE">
+                 <fDescr>
+                    <desc>MIX: 
+                       make note of specific details to be articulated in mix system:
+                    eg. (alternate forms of marking past tense:
+                    COMPL) prefix "nì-", tonal marking (Conditional: "if tone1 in V = R|H, tone1 > F|L" to mark COMPL)
+                    POT) prefix "kù-" (equal to/derrived from COP-POT) Has variants according to phonological environment;</desc>
+                 
+                 <desc>From GOLD <ref>Tense</ref>
+                 Following [Comrie 1985: vii], we take tense to be the grammaticalisation of location in time. 
+                 Tense Property is assigned to clauses on the basis of semantics: a tense value is selected for
+                 the clause from the range of tense values available in the given language. Tense Property is typically
+                 realised on the verb, but it may be found expressed multiply on different elements in the same clause.
+                 For example, tense may be found on more than one element of the verbal complex (e.g. in Kayardild [Evans 2003] or 
+                 Paamese [Crowley 2002: 68], or on verbs as well as on certain spatial and temporal adverbs and certain prepositions 
+                 in the same clause (e.g. in Malagasy [Randriamasimanana 1981: 355-367], [Keenan and Polinsky 1998: 566-567]. 
+                 In the given language, the values of the Tense Property are assigned to the designated elements as a consequence of 
+                 semantic choice, and all the available options of particular tense values expressing particular tense meanings can be
+                 described with a Tense Assignment System for that language. Since no languages have been found for which tense values are 
+                 assigned by a Tense Distribution System (i.e. contextually, through agreement or government), Tense Property is not a 
+                 Morphosyntactic Property. Instead, it is a Morphosemantic Property only.
+                 Source: [Comrie 1985: vii; Evans 2003; Crowley 2002: 68; Randriamasimanana 1981: 355-367; Keenan and Polinsky 1998: 566-567]</desc>
+   
+                 </fDescr>
+                 
+                 <vRange>
+                    <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3519" type="TenseProperty">
+                       <f name="present-tense" xml:id="PRES" dcr:datcat="http://www.isocat.org/datcat/DC-3421"/>
+                       <f name="pastTense" xml:id="PAST" dcr:datcat="http://www.isocat.org/datcat/DC-3378"/>  <!--  (MERGE-CONNECT TO 'COMPLETIVE ASPECT') in MIX; CompletiveAspect includes the PAST TENSE-->
+                       <f name="future-tense" xml:id="FUT" dcr:datcat="http://www.isocat.org/datcat/DC-3216"/><!--  (MERGE-CONNECT TO 'POTENTIAL ASPECT') -->
+                    </fs>
+                 </vRange>
+              </fDecl>
+              <!-- (CONNECT compltive) MIX marks this with PRON-TONE or (in given tonal context) TONE -->
+              <!--	def: A value of Aspect Property assigned to the designated element in the clause when the meaning selected for the clause is that which indicates that the event spoken about is to be looked at from inside, from within its temporal boundaries; imperfective aspect is crucially concerned with the internal temporal structure of the event [Comrie 1976: 16ff]. Typically, for an aspect value to be labelled as Imperfective, the aspectual meaning has to minimally express the imperfective viewpoint, although it may additionally express other temporal, aspectual, or modal meanings, or actionality distinctions. Imperfective aspectual meaning can be further subdivided into two types: habitual meaning and continuous meaning. These two aspectual meanings may or may not be grammaticalised as separate aspect values. [Kibort 2008c: 7]-->
+              
+
+              <!-- review ans re-distribute these categories-->
+              <fDecl name="Mood" xml:id="MOOD">
+                 <fDescr>
+                    
+                    <desc>(ISOcat Source?) <ref target="#DEONTIC">Deontic modality</ref>: is concerned with the necessity or possibility of acts performed by morally responsible 
+                       agents and is thus associated with the social functions of permission and obligation. 
+                       Deontic modality focuses on the notions of obligation and permission. It is found in directives 
+                       that grant permission (‘you may go now’) or impose obligations (‘eat your vegetables!’), as well as in 
+                       statements that report deontic conditions. Deontic modality fails to distinguish subcategories that are
+                       expressed inflectionally from lexical or periphrastic expressions of obligation or permission. Deontic modality as
+                       traditionally understood excludes certain semantically related notions such as ability and desire that have linguistic
+                       expression similar to that of permission and obligation. [Bybee and Fleischman 1995: 4-5]</desc>
+                 </fDescr>
+                 <vRange>
+                    <fs>
+                       <f name="realis" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393" xml:id="REALIS"><default/>
+                          <string>REAL</string>
+                       </f>
+                       <f name="DeonticModality" xml:id="DEONTIC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3155">
+                          <string>DEON</string>
+                       </f>
+                       <f name="modal" xml:id="MOD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1329">
+                          <string>MOD</string>
+                       </f><!-- Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention. -->
+                       
+                       <f name="counterFactual"></f>
+                    </fs>
+                 </vRange>
+              </fDecl>
+             
+              <!-- numberProperty; http://www.isocat.org/datcat/DC-78 -->
+
+
+<!-- (ISO:) http://www.isocat.org/datcat/DC-2305 ("relation of one grammatical unit upon another with different restrictions in the scope")
+                 These features all share the function of modifying some aspect of the major components, the main difference between them is what they modify
+                 and in what kind of verbal/predicate semantic contexts they occur.
+
+              
+ Determiners and Enumerators do the same thing grammatically and semantically; need to decide on how to unify them -->
+              
+
+              
+
+        
+
+        
+        
+
+        <!-- 
+
+              "LexicalItem"
+	fVal="http://www.isocat.org/datcat/DC-3294"
+	gold: A unit of the vocabulary of a language such as a word, phrase or term as listed in a dictionary.
+	It usually has a pronounceable or graphic form, fulfils a grammatical role in a sentence, and carries semantic meaning.
+	[Hartmann and Stork 1972: 128] 
+           
+           'lexical unit'
+	"http://www.isocat.org/datcat/DC-2486"
+	source: Athens Core
+           
+           -->
+        <!-- PROJECT WORKFLOW TAGS -->
+           </fsDecl>
+        </fsdDecl>
+     </encodingDesc>
+  </teiHeader>
+
+   <text>
+      <body>
+         <div xml:id="Nouns-MIX">
+            <desc></desc>
+            <fs><!-- THIS SHOULD BE MAPPED TO EXTERNAL ONTOLOGY'-->
+               <f name="Noun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3347"><string>noun</string></f><!-- gold -->
+               <f name="massNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2277" xml:id="N-MASS"><string>massNoun</string></f><!-- (Francopoulo, Gil) Designation of a term or word that is not countable and cannot generally be used with the indefinite article or in the plural. -->
+               <f name="countNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-485" xml:id="N-COUNT"><string>countNoun</string></f><!-- (Wright, Sue Ellen); a common noun that can be modified by a numeral and occur in both singular and plural form, as well as co-occurring with quantificational determiners like every, each, several, etc.-->
+               <f name="ConcreteNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1505" xml:id="N-CNCRT"><string>concreteNoun</string></f>
+               <f name="categoricalNoun" xml:id="N-CAT"><string>categoricalNoun</string></f><!-- may be able to use massNoun? -->
+               <f name="abstractNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1504" xml:id="N-ABS"><string>abstractNoun</string></f>
+               <f name="relationalNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2226" xml:id="N-RLTNL"><string>relationalNoun</string></f><!-- src: can link to 'Adposition' -->
+               <f name="collectiveNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1511" xml:id="N-CLTV"><string>collectiveNoun</string></f>
+               <f name="placeNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3857" xml:id="N-LOC"><string>placeNoun</string></f><!-- if there is a url for 'location' link to this -->
+               <f name="mannerNoun" xml:id="N-MNNR" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3854"><string>mannerNoun</string></f>
+            </fs>
+         </div>
+         <div xml:id="Pronouns-MIX">
+            <desc> Pronoun types in MIX include the (rare) stand-alone pronouns, and the clitics that attatch to; verbs (person inflection),adjectives (adj > V-ATRB),noun (makes N > POSS);
+               While the body part terms that very frequently may be used as indirect and direct object pronouns on the syntactic level, the pronouns included in this category only include those lexical
+               items that are always pronominally attributed to the same morpho-syntactic person argument. Currently I am using the term 'Particle' as defined in the GOLD ontology to describe the
+               person marking system in MIX.
+            </desc>
+            <fs type="pronoun" xml:id="PRON">
+               <f name="attributivePron" xml:id="PRON-ATTRIB"/>
+               <f name="posessivePron" xml:id="POSS"/><!-- possessive particle; http://www.isocat.org/datcat/DC-1895; Particle expressing ownship. -->
+               <f name="ReciprocalPronoun" xml:id="PRON-RECIP" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3445"/><!-- IN MIX a polysemous extension of the lexical item extended from 'face' (eg. orth 'nuu') is used in the role of Reciprocal Pronoun.  -->
+            </fs>
+         </div>
+         
+         
+         <div xml:id="Adverbials-MIX">
+            <desc></desc>
+            <fs>
+               <f name="adverb" xml:id="ADV"><default/></f>
+               <f name="adverbTemporal" xml:id="ADV-TEMP"/>
+               <f name="adverbEnumerative" xml:id="ADV-ENUM"/>
+               <f name="adverbManner" xml:id="ADV-MNR"/>
+               <f name="adverbAffirmative" xml:id="ADV-AFRM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2787">
+                  <!--  <fs/> (NEED TO FINISH ADDING UTTERANCE TYPES: Q-Y-N)-->
+               </f>
+               
+               <!-- negative
+                  http://www.isocat.org/datcat/DC-1839
+                  negative   Type: complex/closed   Origin:    Profile: Morphosyntax
+                  Definition: denotes the negation or the absence
+               -->
+               <f name="adverbNegative" xml:id="ADV-NEG">
+                  <!--  <fs/> adverbNegativePotential (NEED TO FINISH ADDING UTTERANCE TYPES: #Q-YN #RESP xml:id="ADV-NEG-POT")-->
+                  <!--  <fs/> (NEED TO FINISH ADDING UTTERANCE TYPES: DECL)-->
+                  <!-- 
+                             
+NegationOperator
+	http://www.isocat.org/datcat/DC-3334
+	def:NegationOperator is a negative-marking phrase located in scope position of the verb (specifier or adjoined position). 
+	Also called a "negation particle", it is normally associated with the main verb of the clause but may also be a clause-level clitic.[Payne 2007:284; Haegeman 1995: 107, 286]
+	src: GOLD
+	
+negator
+	http://www.isocat.org/datcat/DC-4202
+-->
+               </f>
+            </fs>
+            <fs feats="#ADV #DEG" type="DegreeADV"/>
+         </div>
+         
+         <div xml:id="Quantifiers-MIX">
+            <desc><label>Quantifiers</label>All members of category conceptual base is rooted in the primitive cognitive knowledge of QUANTITY; Quantifiers can be applied on the grammatical and or lexical/cognitive level...In MIX, this feature system should perhaps be unified with the 'number' feature system declared above as they share many of the same lexical (phonological) particals and components in their surface structure. This is likey due to these lexical items deing derrived from common conceptual sources.</desc>
+            
+            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3439" xml:id="QNTF"><!-- this corresponds to higher level ontological features -->
+               <f name="cardinalNumber" xml:id="NUM-CRDNL"></f>
+               <f name="quantifierEnumerative" xml:id="QNTF-ENUM"/><!-- where a specific number (other than 1) is given as the quantifier: MIX: IPA)  ĩ̀ĩ̀ tí.nà	'nine dogs' -->
+               <f name="quantifierALL" xml:id="QNTF-ALL"/> <!-- where the quantifier is THE ENTIRE population of the item in question-->
+               <f name="quantifierMajority" xml:id="QNTF-MAJ"/> <!-- where the quantifier is THE MAJORITY of the population or quantity of the item in question-->                      
+               <f name="quantifierPart" xml:id="QNTF-PART"/><!-- this should be modified and refined to allow for part-many vs part-paucal -->
+               <f name="quantifierHalf" xml:id="QNTF-HLF"/> <!-- Where the quantifier is HALF of the population or quantity of the entity in question; Where occurs with 'countableNoun' 'half' is also countable	-->
+               <f name="quantifierMany" xml:id="QNTF-INDEF"/> 
+               <f name="quantifierPaucal" xml:id="QNTF-PAUC" dcr:datcat="http://www.isocat.org/datcat/DC-3379"/><!--(gold) A category of number denoting the concept 'a few', more than two and usually less than seven, but the exact number varies widely according to context. Prototypically, it refers to a class of three to five individuals and is always restricted to humans.  -->
+               <f name="quantifierNone" xml:id="QNTF-Ø"/>      <!-- where the quantifier is NONE of the population of the item in question-->
+               <f name="quantifierSG" xml:id="QNTF-SG"/>    <!-- (sameAs: (art-indef) in mix, this corresponds to the item: (ipa) "ĩ́ː" (sampa) "i:_n_H" (orth) "iin";Note: this is syntactically and semantically equivalent to a "DETERMINER" or "INDEF ART" as it corresponds to the number "one"-->
+               <!-- sameAs "indefinte article" -->
+               <f name="quantifierPL" xml:id="QNTF-PL"/>    <!-- Note: this is referring to the mix plural marker (ipa) "we" (sampa) "w e_M" (orth) we,  which is non-specific in terms of number (e.g. NOT="ALL"/4, 5 etc..)-->                     
+            </fs>
+         </div>
+         
+         <div xml:id="Demonstratives-MIX">
+            <figure><graphic url="../diagrams-original/LexicalFeature_Diagram-Demonstratives-mix_01.png"/></figure>
+            <desc><label>Demonstratives</label>A demonstrative is a determiner that is used deictically to indicate a referent's spatial, temporal, or discourse location.
+            A demonstrative functions as a modifier of a noun, or a pronoun [Crystal 1997: 312].
+         </desc>
+         </div>
+         
+         <fs type="demonstrative" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3153">
+            <f name="demonstrativeDistal" xml:id="DEM-DIST"/><!-- THIS INVOLVES CO-OCCURRANCE OF MULTIPLE HIGHER AND SAME LEVEL FEATURES (CONFIG-NUMBER)-->
+            <f name="demonstrativeProximal" xml:id="DEM-PROX"/><!-- THIS INVOLVES CO-OCCURRANCE OF MULTIPLE HIGHER AND SAME LEVEL FEATURES (CONFIG-NUMBER)-->
+            <f name="demonstrativeDeictic" xml:id="DEM-DEIC"/><!-- THIS INVOLVES CO-OCCURRANCE OF MULTIPLE HIGHER AND SAME LEVEL FEATURES (CONFIG-NUMBER)-->
+            <f name="demonstrativeDiscourse" xml:id="DEM-DISC"/>
+            <!--	DISCOURSE; "-DISC-" eng: "the aforementioned", "the former", "the latter"; MIX: "inka", ?"ñaka"-->
+            
+            <f name="demonstrativeTemporal" xml:id="DEM-TEMP"/>
+            <!-- TEMPORAL; "-TEMP" (@"#ADV-TEMP)
+			"-DEIC"	eng: "(right) now";	MIX: "michuni", 
+			"-DIST"	eng: "then", "at that time", "when" , "last(x)"; MIX: "ta" 
+ 		-->    
+         </fs>
+        
+         <div xml:id="Determiners-MIX">
+            <desc><label>Determiners</label>  Determiners can take the following features and subfeatures:
+               a) Animacy: 'animate', 'inanimate';
+               b) Number: 'singular', 'plural';             
+               c) Spatial Reference: 'distal', 'proximal', 'deictic';
+            </desc> 
+            <fs type="determiner" xml:id="DET">
+               <f name="demonstrativeDeterminer" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1269"/><!--demonstrative determiner:  Determiner used to point to an entity in the situation or elsewhere in a sentence.	(Crystal 2003) -->
+               
+               <f name="relativeDeterminer" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1379"/><!-- relativeDeterminer :Determiner related to a referent.	(src:MAF) -->
+            </fs>
+            
+            <!-- Determiners have their own internal agreement feature structure eg:, (sg|pl),(distal|proximal),optional(gender),'this'|'that', 'these'|'those', -->       
+            
+         </div>
+         
+         
+
+         
+         <div xml:id="Adpositions-MIX">
+            <desc><label>Adpositions</label> As per Langacker (1978) Adpositions/propositions etc. will always semantically occur as the 'Trajector'
+               whose role is to specify some relation to the constructions' 'Landmark'. </desc><!-- (refer to feature structure for the TR-LM relationship, and its conceptual primacy in Cognitive Semantics) -->                
+           
+            <fs type="Trajector" xml:id="TR">
+               <f name="StaticTrajector" xml:id="TR-static"/>
+               <f name="DynamicTrajector" xml:id="TR-dynam"/>
+               <f name="Person-Object" xml:id="TR-pers-obj"/>
+               <f name="EventTrajector" xml:id="TR-event"/>   
+            </fs>
+            
+            <fs type="Landmark" xml:id="LM"/>   
+           
+            <fs xml:id="PHRS-ADPOS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2285" type="adposition-phrase"><!-- phrase introduced by one or several adpositions and containing a complement such as a noun phrase; Francopoulo, Gil -->
+               
+               <f name="adposition" xml:id="ADPOS" dcr:datcat="http://www.isocat.org/datcat/DC-1231"><!--  Part of speech that occurs before/inside/after a complement composed of a noun phrase, noun, pronoun or clause that functions as a noun phrase and forms a single structure with the complement to express its grammatical and semantic relation to another unit.; Eagles -->
+                  <fs xml:id="ADPOS-CNFIG" feats="#ADPOS #CNFIG"/>
+                  <fs xml:id="ADPOS-DIR" feats="#ADPOS #DIR #V-MTN"/>
+               </f>
+            </fs>
+            
+         </div>
+         <fs>
+            
+         </fs>
+         <div>
+            <!-- 
+            #this series of pronouns is not the primary system used in marking most #verbs for the primary argument. 
+            Their observations in the dataset are #limited, and don't appear to be correlated with Actor - Undergoer...
+
+(1.s) mee, méé, m e:_R
+(1.pl.form.ex) meeko, mèè.k̬ó, m e:_n_F k_v o_R
+(1.pl.form.all) mee we, mẽ́ẽ́.we, m e:_n_H w e_M
+
+	(2.s.inf) meeun, mẽ̀ẽ̀.ṹ, m e:_n_L u_n_R
+
+	(2.s.form) ni, ní, n i_R
+
+(3.s.m) chaka, ʧà.k̬á, (tS) a_F k_v a_R
+
+(3.s.f) ñaka, ɲà.k̬á, J a_F k_v a_R
+
+
+(2.pl.all) mee we yuu, mẽ́ẽ́.we.ju, m e:_n_H w e_M j u_M
+
+(2.pl.all.form) mee we ni, mẽ́ẽ́ we ní, m e:_n_H w e_M n i_R
+
+(3.pl.form.fem) ñaka, ɲá.k̬á, J a_R k_v a_R
+
+(3.pl.inf) kuena,
+
+(3.pl.form.all) naka, nà.k̬á, n a_F k_v a_R
+	
+            
+            -->
+            <div xml:id="Adjectives-MIX">
+               <desc>Adjectives are also sematically subject to the ontological domain to which they themselves belong (eg. COLOR, SIZE, TIME, etc) and thus these too will be connected to the higher level ontologies in the final corpus output</desc>
+               
+               <fs>
+                  <f name="ADJ" xml:id="ADJ"><default/></f>
+                  <f name="adjectiveAttribute" xml:id="ADJ-ATTRIB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-5242"/>
+               </fs>
+               
+            </div><lb/>
+            
+            <div xml:id="GrammaticalPerson-MIX">
+               
+            </div>
+            
+            <div xml:id="GrammaticalNumber-MIX">
+               <desc>In the <ref>MIX</ref> system, the grammatical feature of 'number' is not limited to verbal morphology as 
+                  the same marker is used to indicate: plural verbal arguments, plural possessor arguments, and plural
+                  enumerator/determiner; eg: (orth "kue").</desc>
+               
+               <desc>GOLD: <ref>NumberProperty</ref> is the class of properties that concern the grammatical encoding of quantity.
+                  It is often found on nouns, pronouns, and verbs and expresses count distinctions--such as 'one' or 
+                  'more than one'. The count distinctions typically, but not always, correspond to the actual count of 
+                  the referents of the marked noun or Pronoun. [Crystal 1980: 245; Hartmann and Stork 1972: 155]</desc>
+               
+               <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3351" type="NumberProperty">
+                  <f name="singular" xml:id="SG" dcr:datcat="http://www.isocat.org/datcat/DC-252">
+                     <string>sg</string>
+                  </f><!-- Sue Ellen Wright; The form of a term or word (usually of a noun) used to designate one object. -->
+                  <f name="plural" xml:id="PL" dcr:datcat="http://www.isocat.org/datcat/DC-253">
+                     <string>pl</string>
+                  </f><!--Sue Ellen Wright; The form of a term or word (usually of a noun) used to designate more than one object.  -->
+                  <f name="unmarked-NUM" xml:id="NUM-Ø"><default/></f>
+                  <!-- This occurs where the verb is not inflected for person or number, usually where there is an explicit concrete noun (corresponding to PERS), and an explicit enumerator (corresponding to NUM) -->
+               </fs>
+            </div>
+
+            <div xml:id="Register-MIX">
+               <fs xml:id="register" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-423">
+                  
+                  <f name="informal" xml:id="INF">
+                     <string>inf</string>
+                  </f>
+                  <f name="formal" xml:id="FORM">
+                     <string>form</string>
+                  </f>
+                  
+               </fs>
+               
+            </div>
+            <div>
+               
+                  <fs type="first-person" xml:id="pers1" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/><!-- Francopoulo, Gil; First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker;www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsFirstPersonDeixis.htm -->
+               
+                  <fs type="second-person" xml:id="pers2" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/><!--Francopoulo, Gil;Second person deixis is deictic reference to a person or persons identified as addressee.  -->
+               
+                  <fs type="third-person" xml:id="pers3" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/><!--  Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.; www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsThirdPersonDeixis.htm-->
+                  <fs type="unmarked-person" xml:id="persØ"/>
+               
+               
+                  <fs type="Inclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044"/><!--(Wesseling, Franca) First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
+               
+                  <fs type="Exclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045"></fs><!-- (Wesseling, Franca) First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
+               
+               
+               
+            <label>Personal Inflections</label><lb/>
+            
+            <p>As discussed by Hills (1990) regarding the pronominal units in <lang>Ayutla Mixtec</lang>, <lang>Mixtepec-Mixtec</lang> features the rather utilitarian strategy for expressing different syntactic and semantic functions by simply adding a modular personal inflection to various lexical categories, and thus it isn’t possible to distinguish their grammatical function independent of the syntactic and semantic context in which they are applied.  While previous studies in other Mixtec varieties refer to these lexical units as “pronouns”, in this analysis of <abbr>MIX</abbr>, these are referred as “personal inflections”, or “personal inflection markers” to dissociate these units from some of the less dynamic pronominal markers often encountered in many languages.</p><lb/> 
+               
+               <p>In the aforementioned unmarked MIX constructions, the (A) or (U) argument is characterized by a personal inflection that will alter at least some part of the offset portion of the verbal argument (for this reason, these case will henceforth be represented in this discussion as “-(A)”, “-(U)”). In “unmarked” constructions, this will appear in one of the following ways;</p>
+               
+               <p><num>i)</num> The personal markers may act as a clitic, attaching itself intact to the offset side of the base or gloss form of a given lexical unit:</p>
+               
+               <label>Verbs:</label>
+               <eg>
+                  <seg><seg>ká.ʔà</seg> <c>-</c><seg>jù</seg> <seg>sã́.ʔã̀ sa.ví</seg></seg>
+                  <seg><seg>speak</seg><c>-</c><seg>1s</seg> <seg>Mixtepec-Mixtec</seg></seg>
+               </eg><lb/>
+               
+               <label>Nouns (Marking Possessive):</label>
+               <fs></fs>
+               <p>These markers are attached to nouns to express possession; </p>
+              <eg>
+                 <seg>maː</seg> <seg type="translation" rend="italic" xml:lang="eng">mother</seg>
+                 <seg><seg>maː</seg> <c>-</c><seg>jù</seg></seg>
+                 <seg style="igt" ana="#igt"><seg>mother</seg><c>-</c><seg ana="#pers1 #SG">1s</seg></seg> 
+                 <seg type="translation" rend="italic" xml:lang="eng">my mother</seg>
+              </eg>
+               
+               <label>Adjectives = (Stative Construction):</label>
+               
+               <p>When attached to adjectives, this creates a stative construction. In accordance with Van Valin 2005,
+               we can thus represent the logical structure of these constructions as:</p>
+               
+               <ab><formula notation="fol">be’ ( x, [ADJ’])</formula></ab><!-- this may be definable in ODD if you find a url for a system of first order logic -->
+               
+               <eg>
+                  <seg>sú.kù</seg>
+                  <seg type="translation" rend="italic" xml:lang="en">tall</seg><lb/>
+                  <seg><seg>sú.kù</seg> <c>-</c><seg>jù</seg></seg>	<seg type="translation" rend="italic" xml:lang="eng">I am tall</seg>
+                  <seg><seg>sú.kù</seg> <c>-</c><seg>ní</seg></seg> 	<seg type="translation" rend="italic" xml:lang="eng">you are tall (2s.form)</seg>
+               </eg>
+               <lb/>
+            
+               <p>ii) In the context of certain phonetic and phonological characteristics in a given verb, the person markers may
+               sometimes be realized by replacing the final ((V)+tone) portion of the verb:
+                  <eg>
+                     <seg>nʤè.ʔé	</seg>
+                     <seg>V.(Gloss) ’see’</seg>
+                  <lb/>
+                     <seg><seg>a</seg> <seg>nʤè.ʔ<seg>ú</seg></seg>  <seg>méé</seg></seg>
+                     <seg>(Y-N)Q.mkr.- V.see.-(2s.inf= (V(u) + rising tone )).  1s.ii.</seg>
+                     <seg type="translation" rend="italic" xml:lang="eng">‘do you see me’</seg>
+                  </eg>
+               </p><lb/>
+               
+               <note>In accordance with the Leipzig Glossing Rules for interlinear glossed text, the use of the backslash character '<c>\</c>' is used to express the presence of a morpho-phonological change, that is not segmentable in the typical linear manner. 
+                  In MIX, this is used to represent tonal alterations.</note>
+               
+               <p>iii) The third realization of personal inflection in MIX is a phonological process in which the lexical tone associated with the personal marker is transposed over the final lexical tone of the predicating core argument:
+               <eg>
+                  <seg>ske ta</seg>	    <seg>ske tà</seg>
+                  <seg>run (Gloss)</seg>		<seg>V.’run’-(1s.inf = falling tone)</seg>
+               <lb/>
+                  <seg>ske ta</seg>	>     <seg>ske tà</seg>
+                  <seg>run(Gloss)</seg>		<seg>V.’run’-(2s.inf = low tone)</seg>
+               </eg>
+               </p><lb/>
+            
+               <p>iii.b) Where the aforementioned offset lexical tone of the predicating argument is non-level and non-high the the lexical tone associated with the personal marker is combined with the former:
+               <eg>
+                  Nouns (=Possessive):
+                  <seg>kʷì.ʔí</seg>	<seg>kʷì.ʔí<c>-</c><seg>ì</seg></seg>
+                  <seg>fruit</seg>	<seg>fruit-<seg>1s</seg></seg>
+                  <seg rend="italic" type="translation" xml:lang="eng">my fruit</seg>
+               </eg>
+               </p> <lb/>
+            
+               <p>iv) Where the “person”, or argument in a Unmarked Transitive construction is an Undergoer, personal marker may be placed in -(U) position in the “Unmarked Transitive Template above [ V-(A), -(U) ]:
+               
+               As Undergoer of V(trans):
+               <eg>
+                  <seg><seg>V-INTRANS</seg> </seg>
+                  <seg><seg>nʤé.ʔ</seg><c>-</c><seg>è</seg> <c>-</c><seg>ɣú</seg></seg>
+                  <seg>see<c>\</c>(1s=falling tone) <seg>2s.inf</seg></seg>
+                  <seg rend="italic" type="translation" xml:lang="eng">‘I see you’</seg>
+               </eg>
+
+               </p><lb/>
+            
+               <label>Zero Argument (A-Transitive) Constructions</label>
+               <p> In every MIX A-transitive construction thus far observed, the core verbal argument is a combination of the Copula ‘ku˥˩’ with another lexical unit. </p>
+               </div>
+            
+         </div>
+         
+         <div xml:id="Negation-MIX"><label>Negation</label><lb/>
+            <desc>
+               
+            </desc>
+            <p>The strategies for negation in various Mixtec systems have been examined at length by Macaulay (1990). At least with respect to the ten varieties of Mixtec considered in the aforementioned study, and
+               whose negative markers are displayed in the table (below), MIX appears to present a somewhat unique in how it marks negation, making use of several different negation markers, some corresponding to those below, and some unique.idi We will start by discussing the two negative adverbial markers that appear to not have any cognates in (at least the 10) other Mixtec systems. From the observations of the negative constructions we have collected thus far, the manner in which these forms are used in MIX syntax can be said to correspond rather nicely with the English negation adverbs “no” and “not”.</p>
+     
+            <label>Negation Markers (i), (ii) : <seg>[ʔà.ʔà]</seg> ‘<seg rend="italic">no</seg>’; <seg>[kʷɛ]́</seg> ‘<seg rend="italic">not</seg>’</label><lb/>
+            
+            <fs type="NegationOperator" xml:id="NEG-OPRTR" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3334"/>
+            
+            <desc>(ISOcat definition; from GOLD) NegationOperator is a negative-marking phrase located in scope position of the verb (specifier or adjoined position). Also called a "negation particle", it is normally associated with the main verb of the clause but may also be a clause-level clitic.[Payne 2007:284; Haegeman 1995: 107, 286]</desc>
+          
+            
+            <p> The negative adverb translating as ‘no’ optionally occurs in sentence initial position, in response to a Y-N question, and in such contexts, as in English, it may co-occur with the negation marker which translates as ‘not’ ‘kwɛ ˩˥’, which may occur as the only marker of negation in a response to a ‘Y-N’ question.</p>
+            
+            <label>(Y-N Question):</label>
+            <eg>
+               <seg style="ipa" xml:lang="mix"><seg>a</seg> <seg>kã̰.ʔ<seg>mṹ</seg></seg> <seg>sã́.ʔã̀ sà.vì</seg></seg>
+               <seg style="orth" xml:lang="eng" rend="italic">do you speak <lang>Mixtepec-Mixtec</lang></seg>
+            </eg>
+            
+            <label>(Negative Response (i) to Y-N Question i)</label>
+            
+           <eg>
+              <seg style="ipa"><seg>ʔà.ʔà</seg> <seg>kʷɛ́</seg> <seg>kã.ʔã <seg>jù</seg></seg>  <seg>sã́.ʔã̀ sà.vì</seg></seg>
+              <seg style="orth" xml:lang="eng" rend="italic">‘No, I don't speak <lang>Mixtepec-Mixtec</lang>’</seg>
+           </eg><lb/>
+            
+            <p>The form ‘<seg>kʷɛ́</seg>’ may also occur in negative Declarative constructions:</p>
+            <eg>
+               <seg><seg>kʷɛ́</seg> <seg>jɛ̀ː</seg> <c>-</c><seg>ɣà</seg> <seg>tã́.ʔà</seg> <c>-</c><seg>jù</seg> <c>-</c><seg>ɣà</seg> <seg>βɛ̀.ʔɛ́</seg></seg>
+               <seg><seg>adv-neg</seg> <seg>live(at)</seg>  <c>-</c><seg>tpc</seg> <seg>sibling</seg> <c>-</c><seg>1s(=POSS)</seg>  <seg>home</seg></seg>
+            </eg><lb/>
+            
+            <label>Potentive Negation Marker: [ ma ]</label><lb/><!-- fs: #PRTCL #NEG #POT(INCMPL?) -->
+            
+            <p>At this juncture in our data processing, we only have one example of the negation marker ‘ma-’ ; the syntactic context in which it appears is sentence-initial. Macuaulay shows that this form has cognates in four of the ten Mixtec varieties sampled in that study.
+               The sentence type (Illocutionary Force) in which our example occurs in, is Declarative (see below).</p>
+            <eg>
+               <seg style="ipa"><seg rend="bold">mà</seg> <seg>skú.ʧì</seg> <seg>tí.nà</seg> <seg>jù</seg></seg>
+               <seg ana="#igt" style="igt"><seg>NEG/POT</seg> <seg>wash</seg> <c>/</c><seg>1s</seg> <seg>dog</seg><c>-</c><seg>1s</seg></seg>
+               <seg ana="#transl" type="translation" rend="italic" xml:lang="eng">I will not wash my dog</seg>
+               <ref target="#S_wash_1st_sg_FUT_NEG_dog_1st_sg_01_spkrTS"/>
+            </eg><lb/>
+
+            <label>Negation Mkr (iv): Tone Change</label><lb/>
+            
+            <fs xml:id="NEG-POT-TONE" feats="#NEG #POT #TONL-OPRTR"/>
+               
+            
+<p>The lone attestation of a tone change to mark the negative shown in the table above is discussed by Hills (1990) in that author’s study of <lang><placeName>Ayutla</placeName> Mixtec</lang>.
+   In that study, Hills describes the usage of the negative “marker” as a mid-low-mid tone contour which may occur only in the following phrase types: content verb phrases,equative verb phrases, and stative verb phrases (Ibid).
+   The limitations of its occurrence in Ayutla Mixtec are as follows:</p>
+   <list>
+      <head>The negated constituent:</head>
+      <item>may only be realized on a single constituent of the sentence;</item>
+      <item>must be within the verb phrase;</item>
+      <item>must be sentence initial;</item>
+   </list>
+<p>
+   According to Hills, if the word has two syllables, the mid-low portion of the contour are realized on the first syllable, and the final mid portion is realized on the second. Where there are three syllables, the tri-part contour is realized evenly M-L-M (Ibid).Hills presents examples of certain negated lexical items in which in addition to the transposition of the Mid-Low-Mid tone contour, a glottal stop is also realized on the offset vowel (Ibid). 
+   Upon further investigation of this phenomena, evidence collected from a second speaker points to this kind of construction being applicable where the negated predicate is in the future tense.</p>
+<p>
+   When comparing some of the AM examples to the MIX negative adverb translating to ‘no’[a˥˩ ʔa˩˥], it is hard not to entertain the possibility that the mid-low-mid (or ‘falling-rising’)  tonal contour and the glottal stop may be related to that negative adverbial, or a cognate ancestor of both forms. Below is a constituent and operator projection of the negative version of the ditransitive construction displayed in the previous section “...give money to Jack”). In this negative construction the only difference from the aforementioned is in fact the initial portion of the tone contour which in this construction is “Falling-Rising” (actual F0 plot from utterance in red).
+</p>
+            
+         </div>
+         
+         <div xml:id="Valence-Transitivity-MIX">
+            <label>Valence and Transitivity</label><lb/>
+            <desc>these are the transitivity features that occur in the MIX verb system; it is significant that certain verb categories described above will automatically take certain transitivity values (this needs to be specified in the declaration at some point, perhaps using 'fConstraints' and/or conditionals</desc>
+   
+            <fs xml:id="VALNCY" type="valency" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1410"><!--  Declerck, Thierry; The number of arguments controlled by a verbal predicate. -->
+               <f name="VAL-GRM0" xml:id="VAL-0"/><!-- Contains neither Actor or Undergoer -->
+               <f name="VAL-GRM1" xml:id="VAL-1"/><!-- Contains only Actor or Undergoer -->
+               <f name="VAL-GRM1" xml:id="VAL-2"/><!-- Contains Actor and Undergoer -->
+               <f name="VAL-GRM1" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
+            </fs>
+            
+            
+            
+            <fs xml:id="ATRANS" feats="#VAL-0"/><!-- verbs that take 0 macro-role arguments such as weather verbs -->
+            
+            <fs xml:id="INTRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-1"/><!-- http://purl.org/linguistics/gold/IntransitiveVerb --> <!-- def:An intransitive verb is a verb that cannot take a direct object, and describes a property, state, or situation involving only one participant [Crystal 1997: 397; Payne 1997: 171].-->
+             
+            <fs xml:id="TRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-2"/>
+            <!-- def:A transitive verb is a verb that takes a direct object, and describes a relation between two participants [Crystal 1997: 397; Payne 1997: 171];		src: gold "http://purl.org/linguistics/gold/TransitiveVerb" -->
+             
+            <fs xml:id="DITRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275" feats="#VAL-3"/>
+            <!-- def: Ditransitivity (or Bitransitivity) is a term which describes a verb or clause which takes two objects.	src: "www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsDitransitivity.htm" -->
+            
+            <div xml:id="A-TransitiveVerbs-MIX">
+            <figure><graphic url=""/></figure><lb/>
+            <label>Copula + N(weather)</label>
+               <p>As is the case in other Mixtec varieties, the addition of the copula '<seg rend="italic" style="ipa" ana="#ipa">kũ̀ũ̀</seg>' to a nominal lexical unit having to do with natural elements creates a LS such as the following: do’ ([(N>V’])</p>
+               
+               <eg>
+                  <seg>sa.ví</seg>
+                  <seg><seg>N</seg> <seg>rain</seg></seg><lb/>
+               </eg><lb/>
+               <eg>
+                  <seg>ĩ́ĩ́</seg>
+                  <seg><seg>N</seg> <seg>hail</seg></seg><lb/>
+               </eg><lb/>
+               <eg>
+                  <seg>kũ̀ũ̀</seg>
+                  <seg rend="caps">cop <certainty locus="value"/></seg><lb/>
+               </eg><lb/>
+               <eg>
+                  <seg><seg>kũ̀ũ̀</seg> <seg>sa.ví</seg></seg>
+                  <seg style="translation" xml:lang="eng" rend="italic"><seg>it<pc>’</pc><seg>s</seg> <seg>raining</seg></seg></seg>
+                  <ref target="../MIX-Transcriptions-OriginalLR.xml#v-atrns-be.raining.01"/>
+               </eg><lb/>
+               <eg>
+                  <seg><seg><seg>kùù</seg>.<seg>kũ̀ũ̀</seg></seg> <seg>sa.ví</seg></seg>
+                  <seg><seg><seg>cop-incomp</seg>.<seg>cop-</seg></seg> <seg>rain</seg></seg>
+                  <seg style="translation" xml:lang="eng" rend="italic"><seg rend="italic">it will rain</seg></seg>
+               </eg><lb/>
+               <eg>
+                  <seg><seg>kũ̀ũ̀</seg> <seg>ĩ́ĩ́</seg></seg>
+                  <seg style="igt" ana="#igt"><seg>cop-<certainty locus="value"/></seg></seg>
+                  <seg style="translation" xml:lang="eng" rend="italic">it<pc>’</pc>s hailing</seg>
+               </eg><lb/>
+               
+               <label><seg>V[MR=0]</seg> <c>+</c> <seg>ADV-TEMP</seg></label><lb/>     
+               <desc>In the zero macro-role “weather constructions, the default order is maintained and since there is no expectation of any additional core arguments in an A-transitive construction, the adverbial can be placed directly following the stative verb.</desc>
+               
+               <eg>
+                  <seg><seg>V</seg> <seg>ADV-TEMP</seg></seg>
+                  <seg style="ipa"><seg>nì</seg><seg>kũ̀ũ̀</seg><seg>sà.vì</seg> <seg>ta.ku.ni</seg></seg>
+                  <seg style="igt" ana="#igt"><seg>cmpl</seg><c>-</c> <c>rain</c>=Ø <seg>adv-temp</seg></seg>
+                  <seg style="translation" xml:lang="eng" rend="italic">it rained last night</seg>
+                  <ref target="../MIX-Transcriptions-OriginalLR.xml#S_DEC_rain_COMPL_last_night_03_spkrTS"/>
+               </eg><lb/>
+               <eg>
+                  <seg><seg>V</seg> <seg>ADV</seg></seg>
+                  <seg style="ipa"><seg>kũ̀.kũ̀ũ̀</seg> <seg>sà.vì</seg> <seg>ʃʧã̀ã̀</seg></seg>
+                  <ref target="../MIX-Transcriptions-OriginalLR.xml#S_DEC_rain_FUT_tomorrow_03_spkrTS"/>
+               </eg><lb/>
+               
+               <label>(FUT.i)-V. rain=Ø  ADV(temporal) ’tomorrow’</label><lb/>
+               
+               <label>Completive Marker + Copula</label><lb/>            
+               <desc>When the completive marker “nì” is combined with the copula, the result translates as ‘happened';</desc>
+               <eg>
+                  <seg>kùù</seg>	<seg>Incompletive Copula</seg>
+                  <seg>nì</seg>	<seg>Completive (past) prefix</seg>
+               </eg><lb/>
+               <eg>
+                  <seg><seg>nʤìì</seg> <seg><seg>nì</seg> <seg>kùù</seg></seg></seg>
+                  <seg ana="#igt" style="igt">Q WH-PRED ((CMPL)+(COP))=‘happen’[MR=Ø]</seg>
+               </eg><lb/>
+            
+         </div>  
+            <div xml:id="IntransitiveConstructions-MIX">
+               <label>Intransitive Constructions</label><lb/>
+               <p>In constructions in which there is only one verbal argument, whether that be an Actor or Undergoer (i.e.;(‘x’ argument)), the standard information structure is V(x).</p><lb/>
+               
+               <label>i) (V)intransitive-(A):</label><lb/>
+               
+               <p>In this example due to the fact that there is only a single core argument (we jí), the verb ‘eat’ (tsá.tsí) is realized, and apparently, comprehensible to a listener as an intransitive activity verb. </p>
+               
+               <table cols="3">
+                  <row>
+                     <cell><label>i.a)</label></cell>
+                     <cell><formula notation="fol">do’ (3rd.pl, [tsá.tsí’ (x, (y=Ø))])</formula></cell>
+                  </row>
+                  <row>
+                     <cell/>
+                     <cell><seg>V</seg>-<seg>(A)</seg></cell>
+                  </row>
+                  <row>
+                     <cell/>
+                     <cell><seg xml:lang="mix" style="ipa"><seg>tsá.tsí</seg> <seg>we</seg> <seg>jí</seg></seg></cell>
+                  </row>
+                  <row>
+                     <cell/>
+                     <cell><seg style="igt" ana="#igt">eat-pl-3.inf</seg></cell>
+                  </row>
+                  <row>
+                     <cell/>
+                     <cell><seg rend="italic">they are eating</seg></cell>
+                  </row>
+               </table><lb/>
+
+               <p>In contrast to the above, it is not possible to use a verb which is usually transitive such as “eat” with any other elements in the construction such as an adverbial. According to our speaker TS, the following unmarked construction is not acceptable due to the semblance that the Undergoer of the verb (inflected for 1st sg+future tense, (ku ga˥ tsi˥˩)) is in fact the temporal adverb “tomorrow”. </p>
+               <p>
+                  i.b) <formula>do’ (1st,sg, [tsá.tsí‘ (x, *(y=ADV))]) and INGR consumed’ (ADV)</formula>
+                  <eg>
+                     <seg>V	-(A)	*ADV</seg> 
+                     <seg>ku-ga˥  tsi-(˥˩)   ʃãː˥˩</seg>
+                     <seg>FUT-V’eat’(?)-(1s) *tomorrow</seg>
+                     <seg>*I(Actor) will eat tomorrow(*Undergoer)”:</seg>
+                  </eg>
+               </p>
+               <p>To understand the reason for the fact that the first example is acceptable while this latter is not, we can analyze the aformentioned according to the explanation offered by Van Valin (2005) in which that author examines a grammatically similar case in English. Herein Van Valin asserts that a distinction should be made between the basic lexical meaning of a verb and the meaning of that verb in a given context (Ibid). 
+                  To demonstrate this latter point, Van Valin shows the logical structure (LS) of the verb ‘drink’ as an Activity “ do’ (x, [drink’ (x,y)]), is different from that the same verb as an Active Accomplishment “ do’ (x, [drink’ (x,y)]) + INGR consumed‘ (y)” (Ibid). This LS is also true in the case of the MIX construction; to avoid this ambiguity, the adverbial element can be fronted to the onset position of the construction.</p>
+               
+               <label>ii) (V)intransitive-(A)+ADV(temporal):</label><lb/>
+               
+               <label> iii) (V)intransitive-(A)+PP(Locative):</label><lb/>
+               
+               <label>MIX Prepositional Oblique Structure</label><lb/>
+            </div>
+            
+            <div xml:id="TransitiveConstructions-MIX">
+               <label>Transitive Constructions</label><lb/>
+               <p>In unmarked MIX transitive-declarative constructions, as we see in intransitive constructions where the subject or Actor is presupposed, that (x) argument is identifiable using the relevant personal inflection marker discussed above. Where this is the case, the information structure is: V-(A)U (see examples);</p>
+               <p>
+                  <eg>
+                     <seg>(V)    -(A)  (U)</seg>
+                     <seg>tsá.tsi-à    ìí</seg>
+                     <seg>V.eat-(3s.form) salt</seg>          
+                     <seg type="translation" rend="italic" xml:lang="eng">‘he/she(polite) eats salt’</seg>
+                     
+                     <seg><seg>kù</seg>-<seg>nʧè.ʔé</seg></seg>
+                     ‘see’ (uninflected gloss form (with COP-POT prefixed stem)
+                     
+                     
+                     <seg>(V)    -(A)  (U)</seg>
+                     <seg>nʤé.ʔè   -ɣú</seg>
+                     <seg>V.see/1s (falling/low tone)  -2s.inf</seg>
+                     <seg type="translation" rend="italic" xml:lang="eng">‘I see you(familiar)’</seg>
+                  </eg>
+               </p>
+               
+               <label>Ditransitive Constructions</label><lb/>
+               <p> In MIX, as modeled in the opening section, ditransitive constructions take: ‘x’, ‘y’, ‘z’ arguments, and the unmarked information structure is (V)-(A), U, (Oblique). The internal structure of MIX obliques consist of a prepositional directional marker (derived from body parts (see Macaulay 1996)) which are the head of the oblique substructure, and can be represented as a PP. Below we show RRG constituent projections for three such MIX Oblique PP’s as observed in at least one of our recorded speech utterances.
+               </p>
+         </div>
+         
+         
+         
+         <div xml:id="VerbalAspect-MIX">
+            <figure><graphic url="../diagrams-original/LexicalFeature_Diagrams-mix-Aspect_Mood_Tense_00.jpg"/></figure>
+            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3089" type="AspectProperty">
+               
+               <f name="CompletiveAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3125" xml:id="CMPL">
+                  <string>CMPL</string>
+               </f>
+               <!-- 	def: A term used to denote verbal aspect that focuses on the conclusion of a process or action. [Brown and Miller 1999: 424]; This concept is part of the General Ontology for Linguistic Description (GOLD). It is a child concept of http://purl.org/linguistics/gold/AspectProperty. For other relationships among the concepts see: http://linguistics-ontology.org/gold.src: gold "http://purl.org/linguistics/gold/CompletiveAspect" -->
+               <f name="PotentialAspect" xml:id="POT">
+                  <string>POT</string>      
+               </f>
+               <f name="IncompletiveAspect" xml:id="INCMPL">
+                  <string>INCMPL</string>
+               </f>
+               <f name="HabitualAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3232" xml:id="HAB">
+                  <string>HAB</string>
+               </f>
+               
+               <f name="ImperfectAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3246" xml:id="IMPERF">
+                  <string>IMPRF</string>
+               </f>
+               <!-- GOLD:A value of Aspect Property assigned to the designated element in the clause when the meaning selected for the clause is that which indicates that the event spoken about is to be looked at from inside, from within its temporal boundaries; imperfective aspect is crucially concerned with the internal temporal structure of the event [Comrie 1976: 16ff]. Typically, for an aspect value to be labelled as Imperfective, the aspectual meaning has to minimally express the imperfective viewpoint, although it may additionally express other temporal, aspectual, or modal meanings, or actionality distinctions. Imperfective aspectual meaning can be further subdivided into two types: habitual meaning and continuous meaning. These two aspectual meanings may or may not be grammaticalised as separate aspect values. [Kibort 2008c: 7] -->
+               
+               <f name="SemelfactiveAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3470" xml:id="SEMEL">
+                  <string>SEMEL</string></f><!-- GOLD:Momentaneous, without an inherent end-point, as sneeze [Michaelis 1998: xvi]. -->
+               
+               <f name="IterativeAspect"  xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3282">
+                  <string>RPTV</string><!-- occurs as prefix "tsí-" -->
+               </f><!--GOLD; IterativeAspect, also called repetitive, encodes a number of events of the same type that are repeated on a particular occasion. The time interval which is relevant to the iterative is relatively shorter than in the case of the habitual [Bybee 1985: 150; Bybee, Perkins and Pagliuca 1994: 127]. Portrays events repeated on the same occasion (like the iterative knocking on the door) [Bhat 1999: 53]. -->
+               
+               <f name="QuantificationalAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3438"/>
+               <!--GOLD; A speaker may report an event as occurring once only (semelfactive) or several times (iterative); he may view it as a specific event or as part of a general habit of carrying out similar events; he may also differentiate between different degrees of frequency with which the event occurs. The markers that a given language provides for one or more of these meaning distinctions can be grouped under a subcategory called “quantificational aspect”, as all of them refer to the quantitative aspect of the event concerned. [Bhat 1999: 53] -->
+               
+               <f name="SimultaneousAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3478" xml:id="SIMUL">
+                  <string>SIMUL</string>
+               </f>
+               <!-- GOLD:A temporal relation in which the events or states of proposition(s) are communicated as occurring at the same time. [SIL International 2004] -->
+            </fs>
+         </div>
+
+         <div xml:id="Conjunctions-MIX">
+            <label>Conjunctions</label>
+            <desc></desc>
+            <fs>
+               <f name="Conjunction-Basic" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"><default/></f> <!-- in mix(ipa), this corresponds to the item "ɾa"  ;A term used in the grammatical classification of words to refer to an item or a process whose primary function is to connect words or other constructions. The conventional subclassification of these 'connective' items distinguishes co-ordinating conjunctions (e.g. and, or, but) and subordinating conjunctions (e.g. because, when, unless)  also referred to as 'co-ordinators' and 'subordinators' respectively. [Crystal 2008: 101] -->                      
+               <f name="Conjunction-Temporal" xml:id="CONJ-TEMP"/><!-- MAY NEED REVISION -->
+               <f name="Conjunction-Causative" xml:id="CONJ-CAUS"/><!-- in mix(ipa), this corresponds to the item "sàʔá", which is one of the more abstracted polysemous extensions of the mix concrete, body part noun for "foot"  -->  
+               <f name="Conjunction-Enumerative" xml:id="CONJ-ENUM"/><!-- eg, 'both', -->
+               <f name="Conjunction-Sequential" xml:id="CONJ-SEQ"/>
+               
+               <f name="Conjunction-Coordinating" xml:id="CONJ-COORD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1262"/><!-- def:Conjunction that links constituents;	src:MAF -->
+               
+               <f name="SubordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/><!-- def:Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. '..when', '…if…' '…therefore...';src:MAF -->
+               <!-- in mix(ipa), this corresponds to the item "sa.ɾa" which is a compound of the basic 'conj' marker and the (temporal particle?) 'sa' ;
+   can be considered to function and have similar semantics to (X happened 'then' Y happened)   -->
+            </fs>
+         </div>
+         
+         
+         
+         <div xml:id="GrammaticalGender-MIX">
+            <desc>(GOLD)<ref>GenderProperty</ref> is the class of properties that are assigned to nouns on the basis of their inherent properties by an AssignmentSystem and required by the syntax to appear on the target in an AgreementSystem. Gender may but need not be assigned on the basis of sex [Corbett 1991].</desc>
+            
+            
+            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3217" type="GenderProperty">
+               
+               <f name="masculineGender" xml:id="MASC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3312">
+                  <string>masc</string>
+               </f>
+               <!-- A gender property established on the basis of agreement, to which nouns may be assigned based on semantic or formal criteria. In semantic gender systems, nouns belonging to the masculine gender typically denote male humans as well as nouns meeting certain physical criteria. Some gender systems differentiate masculine nouns from all other nouns (e.g. masculine/other or male human/other), while others differentiate masculine, feminine and neuter nouns or several different gender classes. [Corbett 1991: 30] -->
+               
+               <f name="feminineGender" xml:id="FEM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3197">
+                  <string>fem</string>
+               </f>
+               <!--GOLD; A gender property established on the basis of agreement, to which nouns may be assigned if 1) they inherently denote females. Additionally, but not necessarily, nouns may be assigned this value if: 2) their formal properties (morphological or phonological) lead them to be assigned to the same agreement pattern as other nouns within the language that have female denotation. 3) they are arbitrarily assigned to the same agreement pattern as other nouns in the language that have female denotation. [Corbett 1991] -->
+               
+               <f name="animalGender" xml:id="ANML"><!-- ADD ANIMAL GENDER ISO CAT URI!!!--></f>
+               
+               <f name="unmarked-GENDR"><default/></f><!-- HE/SHE/IT (CROSS-REFERENCE: FORMALITY) -->
+            </fs>
+         </div>
+         
+         <div xml:id="GrammaticalInclusivity-MIX">  
+            <desc>In Mixtepec-Mixtec, the feature 'inclusivity' may be marked where a verb, pronoun, noun (possession), or adjective (VADJ) distinguishing the following:
+               
+               i) 1st person plural:
+               - excl (default)
+               - all
+               
+               ii) 3rd person plural:
+               -excl
+               -all
+            </desc>
+            <!-- MUST OCCUR WITH FEATURES: (PLURAL (1ST | 3RD)) -->
+            
+            <fs>
+               <f name="inclusive" xml:id="INCL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044">
+                  <string>incl</string>
+               </f><!--Wesseling, Franca; First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
+               
+               <f name="exclusive" xml:id="EXCL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045">
+                  <string>excl</string>
+               </f><!--Wesseling, Franca; First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
+            </fs>
+            
+         </div>
+         
+         
+         
+         <div xml:id="InformationStructure-MIX"><label>Information Structure</label><lb/>
+            
+            <p>Past studies examining the information structure of other forms of Mixtec provide fairly
+               consistent evidence that points to a more or less common default, or minimal constituent
+               ordering in related Mixtec forms which feature a (VSO) ordering in transitive
+               constructions, and (VS) in intransitive constructions. A few works in which the
+               aforementioned subject matter are discussed are; <ref>(Macaulay, 1996); Chalcatongo</ref>,
+               <ref>(Eberhardt, 1999); Octopec</ref>, <ref>(Farris, 1992); Yosóndua</ref>, <ref>(Hills, 1990); Ayutla</ref> ,
+               <ref>(Williams, 2008); Tezoátlan</ref>, <ref>(Kuiper and Oram, 1991); Diuxi-Tilantongo</ref>.</p><lb/>
+            
+            <p>In MIX, if there is a pragmatic presupposition as to active status of a topical referent,
+               then the information structure is in line with the aforementioned previous studies describing
+               various permutations of the Mixtecan language as “VSO” languages. In this study, an important 
+               specification to put forth is that due to the possibility that in certain construction,
+               the applicability of the concepts of “Subject” and “Object” may not be sufficient to characterize certain grammatical patterns, unless other distinctions are specifically pointed out and detailed, we will distinguish
+               (A=Actor, U=Undergoer) both of which may appear as the argument traditionally referred to as “S”.
+               Where also referring to the “V” in a construction in which either “A” or “U” occur,
+               we will specify between no fewer than four verbal predicate categories, 
+               which are, “V(intrans)”, ”V(atrans)”, “V(trans)”, “V(ditrans)”. </p><lb/>
+               
+            <desc>(pointer/link), (description of concepts) VanValin(RRG), 2.4.2 ; Actor and Undergoer are used where traditional linguistic terminology may use 'subject' and 'object';
+               The choice was made non-arbitrarily and is more accurate in certain non-transitive phrases in which what would traditionally be the subject is the EXPERIENCER.</desc>
+            
+            <fs xml:id="MacroRoles">
+               <f name="actor" xml:id="A"/>
+               <f name="undergoer" xml:id="U"/>
+               <f name="oblique" xml:id="OBLQ"/>
+            </fs>
+                
+               <p>Below we give a basic summary of MIX word ordering in unmarked constructions as thus far observed;  
+               Where the default word ordering for constructions in which the topic is already established is as follows:</p><lb/>
+               
+            <ab><label>“Unmarked” MIX Intransitive Constructions:</label><lb/>
+               <eg>
+                  Where ARG(V)=Actor:	 	V-(A)
+                  Where ARG(V)=Undergoer: 		V-(U)
+               </eg>
+            </ab><lb/>
+            
+            <ab><label>“Unmarked” MIX Transitive Constructions:</label><lb/>
+               <eg>V-(A), U </eg>
+            </ab><lb/>
+            
+            <ab><label>“Unmarked” MIX Ditransitive Constructions:</label><lb/>
+               <eg>
+                  V-(A), U, (Oblique)
+                  ARG(V)=(x),(y)
+                  ARG(OBLQ)=(z)             
+               </eg>
+            </ab>
+         </div><lb/>
+            
+         <div xml:id="Focus-Topic-MIX">   
+            <label>Focus and Topic in Mixtepec-Mixtec:</label><lb/>
+            
+            <label>Fronting/Focus Shift</label><lb/>
+            <fs type="focus" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3047" xml:id="FOC"/>
+            <desc>Focus refers to information that is put in focus. This information is either new or contrastive. In both cases it is of high communicative interest. New information typically occurs late in the sentence. Contrastive focus expresses a contrast with another element in the discourse.</desc>
+   
+           <p> 
+            “Williams 2008” explores and discusses the issue of Fronting in the <lang>Tezoatlan Mixtec</lang> variety (TM) two sentence level tree diagrams presented in the study: (left) shows a modeling of TM Narrow Focus structure;
+              (right)  shows a model of the second phenomena in which an argument is fronted as “Fronted Topic” which is given as the sentence structure in constructions in which a new topic is introduced to the discourse. 
+            </p>
+
+            <label>Fronted Focus</label><lb/>
+           <p> In MIX Focus Shifting constructions, the information structure also seems to correspond to that of (TM) as described by “Williams (2008)” based on the characterization of sentence topic described by “Lambrecht (1986)”. In MIX, where the primary argument of verb is being introduced to the discourse is fronted, there is no obligation to mark that argument with the respective post-verbal pronoun (referred to here as the MIX “personal marker”).
+            </p>
+        <!--    
+            Fronted Topics
+            In MIX, the strategy for marking the introduction of a new topic to the discourse corresponds to the same phenomenon described by “Williams (2008)” which occurs in parallel pragmatic context as TM . In these constructions, neither Mixtec variety marks the predicate verb with the personal markers.		
+            (A) Fronting (V)intransitive:
+            (A)		(V)
+            saː ˥˩  kwaʔa tsi kwãː  tsi ta
+            N’bird’  ADJ’red’ CONJ’and’ ADJ ‘yellow’ (V’sing’=GLOSS )
+            
+            (A)	       (V)   	(U)	
+            iː ˥˩  ĩː˥˩˩˥      tsa˥ tsi˥      iː ˥˩˩˥
+            ((DET=NUM.nine  N.husband(s)PL=DET (V.eat=GLOSS )   N.salt)
+            “nine husbands eat salt”	
+            
+            (A) Fronting (V)transitive:
+            (no examples yet found in data set)
+            
+            <label>Interrogatives</label>
+            Interrogative constructions in MIX are formed in several ways depending on the type of interrogative construction; there are two general categories for these questions which are: “Yes-No” questions, and “WH”-questions. In each case the question particle is placed in the fronted position.
+            
+            ‘Y-N’ Questions: a-
+            \is by placing the question marker ‘a ˥˩’ # in sentence initial position, this has several clear cognates in at least six other Mixtec varieties (see table below from Macaulay (1996)).
+            
+            
+            Examples (Y-N) questions:
+            a ˥˩ - kã̰˥  ʔmũ˩˥    sãː˩˥ sa ˥˩ vi˩˥
+            (Y-N)Question.mkr. - V.’speak’(-2s.)  (Mixtec))
+            
+            a ˥˩ - ku˥˩. sa.ví.
+            (Y-N)Question.mkr. - ((COP.’be’ + (‘rain.’)= “be” raining)
+            ‘is it raining’
+            
+            
+            Narrow Focus:
+            
+            MIX Interrogative Method II. ‘WH’
+           <label> The other options for marking a question in MIX is with a sentence initial interrogative “WH” pronoun, or locative “WH” adverb. In these constructions, the “WH” element, as discussed by Van Valin (2005) are always focal elements, examples of such can be found below, in our overview of MIX Focus structure.</label>
+            
+            Marked Narrow Focus:
+            
+            
+            Completive Narrow Focus:
+            
+            
+            Narrow Focus: Fronting with Multi Adjectival NP’s:
+            -
+            
+            
+            Broad Focus:
+            
+            
+            
+            Sentence Focus
+            The example below in which the Focus, Operator, and Constituent projections are laid out for the MIX sentence translating to “my car broke down” literally, “broke down, car, (my)”, This construction does presuppose a pre-established  topic in that the person who asked the initial question, suspected that something happened. The fact that the responder's car is not fronted is evidence that there is pragmatic licence within the discourse to maintain the default information structure of V(-U), as we saw in the previous example, but due to the fact that the specific undergoer (the responder’s car) had not yet been pre-established, it becomes necessary therefore to specify that argument within the standard word ordering of (V)intrans-((U)-1s)=POSS).
+        --> </div>
+         </div>
+         
+         
+         <div xml:id="Interrogatives-MIX">
+            <desc> For each interrogative category/question type, there is an (expected) corresponding answer counterpart;
+               eg. in a  (Jurrafsky and Martin, 2009: 780)  </desc>    
+            
+            
+            <fs type="InterrogativeOperator" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3271" xml:id="INTROG-OP"/>
+            <desc>(From GOLD ontology)Also referred to as a 'question particle', an interrogative operator is a category whose members signal a yes/no question [Payne 1997: 296].</desc>
+            
+            <fs type="inverted-question-mark" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2088"/>
+            <desc>(From ISOcat entry) Punctuation used in certain languages at the beginning of an interrogative sentence.</desc>
+            <!-- 
+	(TOPIC=>DISCOURSE!!!)
+'topic'
+      http://www.isocat.org/datcat/DC-2503
+      Describes the knowledge domain of the resource.
+      CLARIN
+      -->
+            
+            <label>Yes-No Question</label>
+            <desc>In the ISOcat entry (from MAF), the interrogative particle is defined as follows:"Particle used to express a question."
+               In MIX, 'Yes-No' questions are marked by the interrogative particle "<foreign>a</foreign>" at the beggining of the sentence.</desc> 
+            
+            <fs type="interrogative-particle" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1921" feats="#Q-YN" xml:id="Q"/><!-- (typeOf: 'lexical item'; typeOf: 'particle') --><!-- this is MIX specific -->
+            
+            
+            
+            
+            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1319" xml:id="Q"><!-- Interrogative? -->
+               
+               <f name="yes-no-question" xml:id="Q-YN" dcr:datcat="http://www.isocat.org/datcat/DC-2297">
+                  <string>Q-YN</string>
+               </f>
+               
+               <f name=""></f>
+               
+               <f name="wh-questions" dcr:datcat="http://www.isocat.org/datcat/DC-2296" xml:id="Q-WH"><!-- REVIEW: LOOK FOR ISO; FIGURE OUT WHERE TO PUT ID; DEFINE CLAUSE, SENTENCE LEVEL STRUCTURE AND CONDITIONS-->
+                  
+                  <fs type="WH-actor-focus" xml:id="WH-A" feats="#Q-WH #FOC #A"/>
+                  
+                  <fs type="WH-undergoer-focus" xml:id="WH-U" feats="#Q-WH #FOC #U"/><!-- 'who got hit?', 'who died' -->
+                    
+                  <fs type="WH-predicate-focus" xml:id="WH-PRED" feats="#Q-WH #FOC #PRED"/><!-- 'what are you doing?'Predicate Focus
+            In the MIX example of Broad Predicate Focus below, the topic of (the car ) is already established in the question, “what happened to your car?”, this fact allows the speaker to refer to that clearly pre-established topic, which is the verb’s only argument by maintaining the the default information structure: V(-U), and by using just the 3rd singular informal personal marking at the end of the verb “break down”.    -->
+                  
+                  <fs type="WH-locative-focus" xml:id="WH-LOC"  feats="#Q-WH #FOC #LOC"/><!-- 'where' --><!-- THIS MAY NEED TO BE CONCEPTUALLY DISTINGUISHED FROM 'CONFIG' -->
+
+                  <fs type="WH-temporal-focus" xml:id="WH-TEMP" feats="#Q-WH #FOC #TEMP"/><!-- 'when' or 'what time' (may be further defined in context of other lexical info) -->
+                       
+                  <fs type="WH-means-stative-focus" xml:id="WH-HOW"  feats="#Q-WH #FOC #HOW"/><!-- 'how' (means focus); i.e. 'how did he do that?' -->
+                        
+                  <fs type="WH-causative-focus" xml:id="WH-CAUS" feats="#Q-WH #FOC #CAUS"/><!-- 'why' -->
+                  
+                  <fs type="wh-quantity-focus" xml:id="WH-QNTY"  feats="#Q-WH #FOC #QNTY"/><!-- 'how much/many' --> 
+                  
+                  <!-- 'which' (as in 'which one of these ...') -->
+               </f>
+            </fs>
+            
+            <fs>
+               
+            </fs>
+            
+         </div>
+         
+      </body>
+   </text>
+</TEI>

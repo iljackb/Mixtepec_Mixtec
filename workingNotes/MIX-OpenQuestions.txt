@@ -1,0 +1,411 @@
+NEEDED:
+
+- <seg> vs <s> (in transcription files output)
+  > Note: not all utterances are <s>, in which cases should we delete? (how would this affect searches)
+
+- Eventually add @xml:lang=“mix-x-YCNY” for all relevant speaker sources, make others as needed for other places in region
+
+- Need to extract speaker for each utterance file from the file name of source .wav file!!
+
+
+- Change tones from (L,M,H,R,F,etc..) to IPA chars (later?)
+  > (or) add to attribute of phonetic unit to which it applies?
+  >>> How to get it from the format in utterance to the dictionary format?
+
+- Decide on orthographic conventions!
+  e.g.
+  	(?) Capitalize 1st word of sentence? 
+	(?) Use periods, question marks (both sentence initial & final as per mixtec orthographic conventions)
+  
+- How to link a single utterance to a source sound file when taken outside the context of the entire file (the source file names are in the header)
+
+
+
+- ALWAYS add @type to <spanGrp> to distinguish between ‘gloss’ (which should be distinguished as being the Praat TextGrid source and is not the final glossing or annotation) and other future spanGrps.
+ > the use of <spanGrp> inside the <annotationBlock> is so that in a database search, this information comes up along with associated transcriptions
+
+
+- What to do/how to tag words in orthography tier as “nui”
+	 e.g. 
+		<w>nu</w><w>i</w> (NOTE! Can re-segment textgrid only for vowels, as long as the tone is synched (implicitly or explicitly)
+
+
+
+- Where/how to annotate adjective that only applies to animate nouns? 
+  > should this be classified as a type of adjective?
+
+- Add pointer to speaker list in header
+
+- How to handle alternate translations?
+
+- USING @cert TO MARK EXAMPLES TO COME BACK TO!!!
+
+ >> Add @cert to all cases of <c function=“tone”>T</c> (USE XSLT) or Replace tones w/ value “T” with <c cert=“low”/>
+
+
+- ADD <resp>Annotation or something similar to files I annotate!
+
+- Need to add @synch to all <c function=“tone”> and @xml:id for preceding vowel!!
+
+- where I’m currently putting in full uri’s for concepts(sense) and domains as value of @corresp, later may need to change to @ana
+
+- How/whether to combine complex phones currently in separate <c>’s? eg. “nd”, “kw”, “ndʒ”,..etc..
+
+
+- Decide on governing priciple regarding which of the transcriptions are annotated and how to automatically process and extract their data (for when needed)
+	> (idea) only put <spanGrp @type=“praatGloss”> on the ones annotated and then you only need to search for <annotationBlock>’s that have that to extract data from
+		>> this will allow script to skip unannotated files! (as there are some duplicates that I don’t want to waste my time with)
+
+- need to normalized annotation of multi-sense words (in isolation) and how we annotate that in @type=“semantics” and @type=“translation” 
+
+- Do I need to formally define the relationship between the orthgraphic and ipa transcriptions in the annotations? (currently this is only marked by the fact that they both point to the same point on timeline w/ @synch)
+
+- Eventually will want to change directory path for utterance soundfiles from “file:/Users/jackbowers/Desktop/test/“
+
+- Currently I am using <span type=“semanticRel”> for expressing trajector-landmark relations, may eventually want to rename to something more precise
+
+-(?) should I use/tag “phrase” to mark stuff like “inkaa yu” which literally is “COP-LOC PTCL-1SG” = “where I am”?
+	>>YES!! Tag in “gram” <spanGrp> as <span type=“phrase” ana=“#NP-LOC(?!)>(CHECK RRG LABEL OF THIS!)
+
+- (?) future improvement; link translations to wiktionary entries!!?
+
+- Resolve the domain in body part terms! make some label that I can refer to BPT in general without the broadness implied by using simply “…/Anatomy”
+
+- (?) Create special or find existing ISOcat feature for tonal contours! 
+	>need to make tag so that all instances of this are searchable!!! (current system is adding @xml:id’s to <c function=“tone”>)
+
+- Make consistant policy over use of term “PRON”, so far I’ve used “PTCL” for person markers, but “PRON” is more appropriate for demonstratives such as “ñaka” 
+
+- #DEM #DET vs #DEM-DET !?
+
+- May need to make a systematic tag for the <seg> to distinguish all unique types of content because accurate automatic extraction will likely need this
+  (eg, distinguish “DGTS_1-10_01_spkrTS” is multiple separate words (numbers) in a sequence, whereas an example such as one with an inflected verb or possessed noun, greeting “GRT_hello-how_are_you-form_01_spkrTS.xml” etc. is not a full sentence but should be extracted accordingly
+
+- Decide on convention for explicit inclusion of domain as human readable text, or just include URI’s as value of @corresp and deal with later!?
+
+- Figure out how to express where the Mixtec term has multiple translations (possibly different senses) in English and Spanish, but where there is only one sense in Mixtec!?
+
+- Literal translations of lexicalized phrases?!? (that are good for knowing but not for usage)
+
+	>how about (w/in “translation”) as @type=“component”!?
+
+- Should I come up with better taxonomymy for greetings, salutations, thanks (and their responses!?)
+
+	>Greetings and responses should be labeled as <seg …type=“phrase“> even single words!!
+	> always tag at <seg> level
+	> can tag individual components for specific grammatical features such as person, number, register, etc. (eg. “taku ni” “taku” should not be tagged at <w> level, only the phrase and the “ni”)
+
+		>> (now need to figure out how to label interrogatives -conflict with non-greeting interrogative utterances, which are labeled as <seg… type=“interrogative”>)
+
+	>
+	> In TEI dict, should “response” be labeled in <usg>!?
+
+- Should utterances transcribed directly from speech (not from timeline denoted recordings) be processed in same system? The lack of a timeline with which to synchronize the orth and ipa transcriptions may pose a major complication for scripting!
+
+- What value of @type for tagging phrases? (currently using @type=“phrase”)
+	> Need to decide of theoretical typology for phrasal categories!!
+
+	> type of N, V, etc. phrases!? (#NP #POSS) or just NP!?
+		>>currently putting #POSS
+
+		>> Where phrase is marked with tone contour, the function of the tone contour should be marked in @ana along with “#TONE”, e.g: 
+	              <span type="morph" target="#d1e56" ana="#TONE #POSS"/>
+
+-Where tone marks morphological inflection (e.g. possession);
+	>>What parts of the form should be pointed to in tagging (person, number, etc.)? 
+		>since the orth form is not segmented beyond full word, it is one of the targets
+
+		>>Currently I am pointing to the full ‘orth’ and only the tone within the ‘pron’
+
+- Files containing only inflected (including possessed, N’s, etc) should be typed at the <seg> level as type=“phrase” then specs given in “gram” <spanGrp> as <span type=“phrase”>
+
+	>>Need consistent rule for marking inflected items that doesn’t conflict when item is occuring alone vs when it occurs in sentence context! 
+	(Currently (w/ tagging it on <seg type=“phrase”> this means that extracting it will be different if found in sentence context where it is only the larger <w> and its annotation!!)
+
+	>(Current w/inflected verbs and nouns): when tagging phrase type (verb/noun, etc.) point to id of <seg type=“phrase”>, tag forms on the <w> and <c> levels where necessary
+
+
+- Tag compounds with <seg…type=“compound”> (using same tagging strategy and principles as ‘phrase’)e.g. label as:
+	<seg xml:id="d1e39" function="utterance" notation="orth" type="compound">
+
+	>Grammatical and (non-decompositional) annotations in <span> should point to id of <seg>
+
+-Formalize markup of DECOMPOSITION!!
+	>> 
+
+- Current means of tagging tonal marking of lexical features (person, polartity, tense, aspect, accompanyment, etc.) will be in <spanGrp type=“gram”><span type=“morph”…ana=“#TONE”>, only pointing to IPA segment (need to give id’s!)
+
+-EVENTUALLY: Add explicit domain labels, especially in MIXTEC for human consumption!!!
+
+- How to deal with where there are spelling variants (in files you have already transcribed one way in praat)? (e.g. “ni kuu” & “nikuu”)? 
+
+- Where item has 2+ senses but they are in the same domain, should domain be repeted w/number (as are translations and <span type=“sense”> or not!? 
+	>Currently I am including this (remove later if needed)
+
+-(?) How to use uri’s where MIX item’s sense comprises of multiple concepts (with distinct uri’s)? Thus they are not unique sense, but are components of the items profile?
+   >>(review, edit) “ADJ_sacred_01_02_03_04_JS.xml”
+
+- How to deal w/ use of wiktionary links in translation where there are multiple gloss/synonyms possible?
+   >(possibility 1) create multiple, unique translations for given language (do not number though!! lack of number can indicate that they are for the same sense rather than distinct senses)
+	>>>USING THIS (starting with “N_husband_02_spkrJS”)
+
+   >(possibility 2) choose one only, let info in wiktionary entry (“synonyms”, etc) contain the alternate possible translations
+
+
+- Decide on how to reference pre-existing (or potentially pre-existing) lemmas within a compound when annotating decomposition!! (prime example is “N_nothing_01_spkrTS”)
+
+- What to call translations where there isn’t a specific translation (e.g mix (female turkey) ;?
+
+- #ART-INDEF or #ART #INDEF (current use similar to how I tag copula) !!!???
+
+- translate phrase components in “translation” as @type=“component”
+  >> (later) when “decomposition” <spanGrp> is added, uris and semantics can be added therein;  
+  >>>However, putting the type=“component” in the same section as “translation” makes searching for translation need to specify NOT @type=“component” when seeking main translation;
+	>Benefit of keeping in “translation” makes it so all new items can be found in same place…
+
+-Where to put #TM & #LM tags? (semantics or decomposition)??
+
+
+- How to include definitions!? 
+
+- Will need to add the revised orthography of words with tone marked!!
+  >>HOW best to do this in utterance transcriptions??!!!??
+
+-Distinguish between CARDINAL and ORDINAL NUMBERS!???
+  >>FIND OUT IF THEY HAVE A DISTINCTION!!
+
+
+-Should the article “in” be tagged as “pos” “#ARTCL #INDEF” or separately, using type=“definitenesss” “#INDEF”? (currently using “#ARTCL #INDEF” and then number=“#SG” separately)
+
+- Where encoundering (or annotating) textgrid with multiple utterances (of differing meaning) that are not segmented into their own <seg>, add a new boundary to the “Tokens” tier!!
+  >>CHANGE other files that work (such as “DGTS_1-10..”) because when the item is a compound, there is no distinction in the segs
+
+
+-HOW & WHERE to add vocabulary from just word of mouth and/or sources you don’t want to make into XML!?
+
+-Where NUM used to mark plural in (NP), add span with number:#PL to its grammatical profile
+
+
+- Where a compound/phrase occurs w/in a larger phrase (e.g. “five chicken eggs”) you will need to use a context specific means of tagging and extacting that information as you cannot use <seg type=“compound/phrase”!!!
+  >>currently using w/in <spanGrp type=“gram”>: using span @type=“compound” or “phrase” (depending)
+
+-Should I consider using N-N Phrase tag type also?
+
+
+- (NOTE IN JADH PAPER)Time alignment between tones and phones doesn’t work perfectly unless the offset of preceeding consonant is not simultaneous with the onset of the tone segment
+
+
+- (IN NEXT TAGGING ROUND) ADD IGT TO ANNOTATIONS!
+	> One option for this could be to modify the ‘praatGloss’ into IGT as they are already based on that system
+		Would need to:
+			> remove “N.” before nouns,..
+
+
+- Make rule about applying “#IN/ANIM” tags, (?) in gram and/or semantics!? (case against is “thin” (as in thin green fruit); case for is “nothing” vs “nobody”
+
+-  Tagging possession marked by tone: in orth maybe just tag with #N!? (PERSON AND NUMBER TAGGED by pointing to both phon and orth as usual!?
+
+	>>KEY POINT (if you want to search for the pron’ form of the possessive, you will still need to associate the full <w> with that feature, so it should point to that!!
+
+ you can use the ‘morph’ @ana=“#TONE #POSS” as the means to point out it is expressed by tone!!!
+
+	>> Don’t need to tag @ana=“#N #POSS” because when it is possessive, either case will still have: 
+		‘phrase’ @ana=“#NP #POSS” 
+			and
+ 
+It will be marked with either in the:
+
+ 		‘morph’ @ana=“#TONE #POSS” (in the case of tonal marking)
+			 or
+		‘pos’ @ana=“#PRON” (in the case of the pronoun marker)
+
+
+	(IF YOU DO THE ABOVE, YOU WILL HAVE TO DO THE SAME WHERE TONE MARKS THE ARGUMENT OF THE VERB! e.g. 
+ 		‘morph’ @ana=“#TONE #A” or ‘morph’ @ana=“#TONE #1PERS #SG” 
+
+	>>This is not necessary and is inefficient!!
+
+
+	ALTERNATIVE WAYS OF MARKING #TONE #POSS:
+		(1)
+		 <span type="morph" target="#d1e77 #d1e85" ana="#TONE"/>
+		 <span type=“tone” target="#d1e77 #d1e85" ana=“#POSS”/>
+
+		(2)
+		 <span type="morph" target="#d1e77 #d1e85" ana="#TONE"/>
+		 <span type=“(OTHERLABEL)” target="#d1e77 #d1e85" ana=“#POSS”/>
+
+
+- Come up with more specific sets of tags to mark the given types of issues/questions that are key in annotation system!!!
+
+
+
+>>(ADD <c @xml:id> ON ORTH UNITS MARKED FOR MORPHOLOGICAL INFLECTION!!! (directly in xml) - marks parallel phenomena as tone’s <c function=“tone”> (should/need not be changed in praat textgrid files!!!)
+
+- should the gram info associated with morph: #TONE #POSS (#TNS, etc) point to the @xmlid of the <c> or the @xmlid of the greater <w> within which it is realized?
+
+- (FUTURE CHANGE (?)) un-embed “#DIST” & “#PROX”, etc., in the pos tags of DEMONSTRATIVES!
+	> ADD CAT eg., <span type=“deixis”..ana=“#PROX”>
+
+
+-tagging TPC marker <span type=“pragmatics” ana=“#TPC”/>
+
+- (XSLT CHANGE) Eventually normalize the use of “d”“ʒ”, “d””ʃ”; make sure that all are in same <c>
+
+- (FUTURE ADDITIONS) Institute a way to include tags according to other expert sources if terminology differs (eventually you can decide whether or not to unify tags system after considering functionality & theoretical implications)
+
+
+- In tagging gram feature subtypes (e.g. ‘emphatic pronoun’); should I use: “#PRON #EMPH”
+or “#PRON-EMPH”;
+  > ‘emphatic’ doesn’t exist independently of pronoun in old ISOcats;
+  >>Currently using #PRON #EMPH (can always change using XSLT)
+  >>(?) Should the tagging for where these are reflexive be “#PRON #EMPH #RFLX” or “#PRON #RFLX”? 
+  (Wiktionary English categorizes them as #PRON #EMPH & #PRON #RFLX)
+
+- DECIDE ON NORMALIZATION OF TERM “Particle” in pos classification of what SIL call “enclitics” (?) XSLT : CHANGE (all?) “#PTCL” to “#ENCLT”
+	(yu, ku, ni,… etc.)
+  
+-HONORIFIC: “ni”
+  >currently marking as:      
+          <span type="pos" target="#d1e34 #d1e37" ana="#PTCL #HON"/>
+
+- tagging coreference demonstrative pronouns:
+               <span type="pos" target="#d1e45 #d1e48" ana="#PRON #DEM"/>
+               <span type="discourse" target="#d1e45 #d1e48" ana="#COREF"/>
+
+- Should I change convention of marking formal markers from type=“register” …ana=“#FORM” to include the term “Honorific”? (in this case #HON would imply “formal”)
+
+- Change tags of gender to #M & #F? (in accordance with IGT tags?)
+
+- (LATER STEP) Consider GUM ONTOLOGY FOR GROUNDING SEMANTIC PROFILES OF SPATIAL LANGUAGE, LEXICAL ITEMS AND SENSES
+
+- (LATER NEED) Make way to systematically specify whether a compound should have a white space in orthography or not!!
+  
+- Need to make systematic distinction or at least organization of components of an items semantic profile and how they relate to/comprise of the sense and/or domain
+
+
+- Adding UNKNOWN TAG “#UNK” in @ana on <annotationBlock> in files you are putting aside mid-annotation;
+ > (could add more specifics if needed)
+ > If processing data before these are resolved, will need to include a condition to not process files containing contains(., “//annotationBlock[@ana=“#UNK”]”)
+
+- Test “decomposition” tagging on “N_nothing_01_spkrTS”
+
+
+- Marking semantic content not from URI’s:
+   Some grammatical markers have important semantics in their profiles;
+	 e.g. “nti’i” - ‘everything’
+   Its POS is a PRON but it semantically functions as a means to quantify (QNTF) and applies only to inanimate entities (#INAN)
+	
+	>Currently, tagging in “gram” as: 
+               <span type="pos" target="#d1e38 #d1e41" ana="#PRON #QNTF"/>
+
+	> Currently (temporary until final solution is decided upon) using @type=“profile”:
+               <span type="profile" target="#d1e38 #d1e41" ana="#INAN"/>
+
+	>Also relevant to “few’ (Xoo), not grammatically plural but conceptually?
+
+  	>> (AFTER FIGURE OUT @TYPE VALUE) (in line with precedent started where tagging trajector-landmark, which also have no URI basis, these categories will be tagged as hashed values of @ana in “semantics”!
+
+
+- Need to decide on where and how to tag phrase/information structure for sentences with sub-structures!! (may need to reconcile/reformat how I’ve been tagging phrases w/in “gram” as <span type=“phrase”> to conform with comprehensive system)
+
+	> e.g. Should I have a <spanGrp type=“infoStructure>? in which I put macro-roles (Actor,Undergoer), and tag phrase structure?
+
+	>(Currently) putting actor #A and undergoer #U in:
+	 <spanGrp type=“gram”>
+		….
+               <span type="macrorole" target="#d1e49 #d1e67" ana="#A"/>
+               <span type="macrorole" target="#d1e51 #d1e74" ana="#U"/>
+	</spanGrp>
+
+- Should #DEF & #INDEF have their own category (eg. “definiteness”?) or should they just be put in the “pos” values?
+  >(Currently) putting in “pos” value; e.g.
+               <span type="pos" n="1" target="#d1e60 #d1e63" ana="#PRON #QNTF #INDEF"/>
+
+
+- For verb typologies (e.g. Motion/Arrival verbs) (& Home focus), 
+
+  > (Currently) including #MTN & (arrival/departure) in w/ #V:
+	       <span type="pos" target="#d1e166 #d1e177" ana="#V #MTN #ARVL"/>
+               <span type=“goal” target="#d1e166 #d1e177" ana="#HM"/>
+
+- Tagging verbal aspect:
+  > all verbal aspects should be tagged explicitly, thus standard ‘present’ tense (incompletive aspect) is tagged as: 
+		 <span type="aspect" target="#d1e166 #d1e177" ana="#INCMPL"/>
+
+- (Feature to consider adding) VALENCY!! SEMANTIC & SYNTACTIC 
+
+- Vowels marking verbal inflection and that are the needed target of a pointer annotating that feature and that aren’t marked in Praat should be encoded in <c> and given @xml:id (as are tones and the orthographic conventions marking it)!
+
+- How should I label sentences? (currently only indirectly lablleing them by specifying their typology, putting <seg function=“utterance” type=“declarative”> 
+
+-Check to see if “3pl_form_f” data is mislabeled and should just be 3pl? (form)?
+
+- Tagging phrases w/in sentences:
+	(Currently) doing it within “gram”: tagging main phrase type (e.g. #NP, #VP, etc.) and other info that is relevant to structure (e.g. #NP #POSS; #VP #TRANS; etc.)
+		
+               <span type="phrase" target="#d1e47 #d1e54 #d1e49 #d1e67" ana="#VP #TRANS"/>
+
+	(note) person, number, etc. is not tagged in phrase; 
+
+- (PHRASES) When marking VP do you have to have all the arguments? e.g in a transitive VP do you have to also include/point to the #A & #U!?
+
+- (Gloss & isolated verbs) 
+	>Do I need to put #TRANS on verbs that I have in isolation or should I just tag this as observed in context?
+
+- change type=“morph” to “morpho-semantics”?
+
+- (FUTURE ADDITIONS) Fill in semantic profile details to sentences
+ 
+-How to categorize POTENTIVE ASPECT MARKER “kuun”!?
+ > it is a Prefix…
+ 
+- How to tag “gloss forms” of verbs (they are usually 3s.inf!?)
+	>(Currently) in “gram” as:               
+		 <span type="form" target="#d1e47 #d1e51" ana="#GLS"/>
+		>>EVENTUALLY REPLACE WITH ACTUAL GRAMMATICAL PROFILES!
+		 (Can do it automatically since they are all going to be from the same form)
+
+- Delete empty <w/>’s in <seg>’s to prevent problems with extraction in scripts
+
+- (GOAL FOR FILLING IN MISSING INFLECTED DATA) Make templates, fill out what you have and guess at what you don’t, get speakers to correct it
+
+- For verbs that are motion related but not part of the “come/go/arrive” set, tagging @ana=“#MTN” in sense in semantics block…
+	> May want to consider doing that for all motion verbs even the aforementioned
+
+-How to classify “hello”, “goodbye”, etc.!?
+
+-Currently marking “Imperative” as “#CMND” (may want to change eventually to “#IMPER”)
+
+-(FIGURE OUT: consult literature & Mille) what aspect to label ‘gloss’ verbs (verb nuclei?)
+
+-Should I mark verb as transitive when annotating just an inflected form of a transitive verb? (e.g. it includes just the V and the A)
+
+- In annotation description section for “Translation”; make one section for how to annotate original translations e.g. <spanGrp type=“translation”> and another for annotating/linking translations that are already provided in text resource (<linkGrp>)
+
+-(FILE ORGANIZATION) Should I put all XML in same file? (that would enable more succinct searching in Oxygen)
+
+-(DECIDE) How to tag #WH words? (do I need to assign a traditional POS!? It seems arbitrary as (in english and spanish for example) they all differ in the labeling (sometimes called ‘adverbial’, ‘pronoun’, ‘interrogative pronoun’, etc.)
+ > I could call it a particle e.g. #PTCL #WH (#LOC | #TEMP |etc..)
+	>>(Currently using)
+		- nchi (what) <span type="pos" target="#d1e37 #d1e41" cert="low" ana="#WH"/>
+		- nchii (where) <span type="pos" target="#d1e37 #d1e41" ana="#WH #LOC"/> (w/ @ana=“#LOC” also in semantics
+		- nchi (kii|hora|..) (when/what (day|time|…) 
+		- ana (who) <span type="pos" target="#d1e37 #d1e41" ana="#WH #PRON"/>
+		
+
+
+- Decide on consitant target for wiktionary glosses,
+ > general entry or specific pos!?
+
+- Where to put “usage”? (gram | semantics | other…)?!!
+
+- How to translate context based meanings (where no lexicalized item permanantly exists in lexicon)?
+	> (he’s approaching fast)
+
+- tagging “complementizer” as “#CMTZR”
+
+- Need to make sure the whitespace between <w>’s is maintained in sentence and phrase utterances!!!
+ >> But need to be careful not to overgeneralize and you do need to maintain NO SPACE in items like “nikana” and “kunkatsi” where the prefix is written orthographically attached to item
+
+

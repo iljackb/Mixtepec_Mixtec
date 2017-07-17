@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L104-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L104-00-01">
+                  <seg xml:id="L104-00-01-01" type="LexItem">Ntantuku</seg> 
+                  <seg xml:id="L104-00-01-02" type="LexItem">Ichi</seg>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L104-00-02">
+                  <seg xml:id="L104-00-02-01" type="LexItem">Buscando</seg> 
+                  <seg xml:id="L104-00-02-02" type="LexItem">el</seg> 
+                  <seg xml:id="L104-00-02-03" type="LexItem">camino</seg>
+               </seg>
+            </title>
+            <editor>Gisela Beckmann</editor>
+            <editor>María M. Nieves</editor>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <name>Jack T. Bowers</name>  
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
+            archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix).
+            Encoded documents used with the permission of original authors.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L104">
+               <title>Ntantuku ichi</title> 
+               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2007</date>. <edition>(2nd ed.)</edition>. <publisher>Instituto Lingüístico de Verano, A.C.</publisher> 
+               <pubPlace>Tlalpan, D.F., México</pubPlace> Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L104-Laberintos-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textDesc>
+            <channel mode="m">@mode:'m' means that there are multiple ways of utilising this document which is of the 'pedigogical-interactive' category, which are the combination of the following:
+               reading it's written descriptions/instructions; looking at the mazes in the imgs; excercises are completed by drawing the line through the path in the maze imgs;</channel>
+            <constitution type="single"/>
+            <derivation type="original">this document is labeled "original" because the XML-TEI markup of it's contents have not made any alterations to the original content;</derivation>
+            <domain type="armadillo"/>
+            <factuality type="fiction"/>
+            <interaction type="none"/>
+            <preparedness type="NA">not applicable</preparedness>
+            <purpose type="entertain"/>
+         </textDesc>
+      </profileDesc>
+      <encodingDesc>
+         <p>
+            <list>
+               <item>
+                  <label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                        <list>
+                           <item>i) the entire sentences from original document (first level);</item>
+                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
+                        </list>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>character</label>
+                  <elementSpec ident="c">
+                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
+                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
+                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>  
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>division</label>
+                  <elementSpec ident="div">
+                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
+                  </elementSpec>
+                  
+               </item>
+            </list>
+         </p>
+         <projectDesc>
+            <p>project description to come</p>
+         </projectDesc>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <projectDesc>
+            <p>
+               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+               The encoding of this portion of the MIX Language resources can be divided into the following components:
+               <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                     
+                     <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                     <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+   </teiHeader>
+   <text decls="#pedagogical-inter" xml:lang="mix"> 
+      <body>
+         <div xml:id="L104-01">
+            <p>
+               <graphic url="L104-01.png"/>
+               <seg xml:id="L104-01-01" type="S">
+                  <seg xml:id="L104-01-01-01" type="LexItem">Tina</seg> 
+                  <seg xml:id="L104-01-01-02" type="LexItem">yo'o</seg> 
+                  <seg xml:id="L104-01-01-03" type="LexItem">tsito</seg> 
+                  <seg xml:id="L104-01-01-04" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-01-05" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-01-01-06" type="LexItem">kunkii</seg> 
+                  <seg xml:id="L104-01-01-07" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-01-08" type="LexItem">staa</seg> 
+                  <seg xml:id="L104-01-01-09" type="LexItem">inkaa</seg> 
+                  <seg xml:id="L104-01-01-10" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-01-01-11" type="LexItem">ini</seg> 
+                  <seg xml:id="L104-01-01-12" type="LexItem">yo'o</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-01-02" type="S">
+                  <seg xml:id="L104-01-02-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-01-02-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-01-02-03" type="LexItem">linia</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L104-01-02-04" type="LexItem">nakaka</seg> 
+                  <seg xml:id="L104-01-02-05" type="LexItem">tina</seg> 
+                  <seg xml:id="L104-01-02-06" type="LexItem">ka</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-01-03" type="S">
+                  <seg xml:id="L104-01-03-01" type="LexItem">Ku'un</seg> 
+                  <seg xml:id="L104-01-03-02" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-03-03" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-01-03-04" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-01-03-05" type="LexItem">kantu'u</seg> 
+                  <seg xml:id="L104-01-03-06" type="LexItem">staa</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>                   
+            <p>
+               <graphic url="L104-02.png"/>
+               <seg xml:id="L104-01-04" type="S">
+                  <seg xml:id="L104-01-04-01" type="LexItem">Choko</seg> 
+                  <seg xml:id="L104-01-04-02" type="LexItem">yo'o</seg> 
+                  <seg xml:id="L104-01-04-03" type="LexItem">nikee</seg> 
+                  <seg xml:id="L104-01-04-04" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-04-05" type="LexItem">kua</seg> 
+                  <seg xml:id="L104-01-04-06" type="LexItem">ntuku</seg> 
+                  <seg xml:id="L104-01-04-07" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-04-08" type="LexItem">ña</seg> 
+                  <seg xml:id="L104-01-04-09" type="LexItem">katsi</seg> 
+                  <seg xml:id="L104-01-04-10" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-04-11" type="LexItem">ra</seg> 
+                  <seg xml:id="L104-01-04-12" type="LexItem">ntane'e</seg> 
+                  <seg xml:id="L104-01-04-13" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-04-14" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-01-04-15" type="LexItem">tukui'i</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-01-05" type="S">
+                  <seg xml:id="L104-01-05-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-01-05-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-01-05-03" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-01-05-04" type="LexItem">ña</seg> 
+                  <seg xml:id="L104-01-05-05" type="LexItem">choko</seg> 
+                  <seg xml:id="L104-01-05-06" type="LexItem">yo'o</seg> 
+                  <seg xml:id="L104-01-05-07" type="LexItem">naku'un</seg> 
+                  <seg xml:id="L104-01-05-08" type="LexItem">ti</seg> 
+                  <seg xml:id="L104-01-05-09" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-01-05-10" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-01-05-11" type="LexItem">inkaa</seg> 
+                  <seg xml:id="L104-01-05-12" type="LexItem">kui'i</seg> 
+                  <seg xml:id="L104-01-05-13" type="LexItem">luu</seg> 
+                  <seg xml:id="L104-01-05-14" type="LexItem">yo'o</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L104-02">
+            <p>
+               <graphic url="L104-03.png"/>
+               <seg xml:id="L104-02-01" type="S">
+                  <seg xml:id="L104-02-01-01" type="LexItem">Yo'o</seg> 
+                  <seg xml:id="L104-02-01-02" type="LexItem">ra</seg> 
+                  <seg xml:id="L104-02-01-03" type="LexItem">tsini</seg> 
+                  <seg xml:id="L104-02-01-04" type="LexItem">ñu'u</seg> 
+                  <seg xml:id="L104-02-01-05" type="LexItem">ntantuku</seg> 
+                  <seg xml:id="L104-02-01-06" type="LexItem">ku</seg> 
+                  <seg xml:id="L104-02-01-07" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-02-01-08" type="LexItem">takua</seg> 
+                  <seg xml:id="L104-02-01-09" type="LexItem">saan</seg> 
+                  <seg xml:id="L104-02-01-10" type="LexItem">kitsau</seg> 
+                  <seg xml:id="L104-02-01-11" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-02-01-12" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-02-01-13" type="LexItem">nti'i</seg> 
+                  <seg xml:id="L104-02-01-14" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-02-01-15" type="LexItem">yo'o</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-02-02" type="S">
+                  <seg xml:id="L104-02-02-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-02-02-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-02-02-03" type="LexItem">linia</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+            <p>
+               <graphic url="L104-04.png"/>
+               <seg xml:id="L104-02-03" type="S">
+                  <seg xml:id="L104-02-03-01" type="LexItem">Tsini</seg> 
+                  <seg xml:id="L104-02-03-02" type="LexItem">ñu'u</seg> 
+                  <seg xml:id="L104-02-03-03" type="LexItem">ki'vu</seg> 
+                  <seg xml:id="L104-02-03-04" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-02-03-05" type="LexItem">yo'o</seg> 
+                  <seg xml:id="L104-02-03-06" type="LexItem">sara</seg> 
+                  <seg xml:id="L104-02-03-07" type="LexItem">ntantuku</seg> 
+                  <seg xml:id="L104-02-03-08" type="LexItem">ku</seg> 
+                  <seg xml:id="L104-02-03-09" type="LexItem">nixi</seg> 
+                  <seg xml:id="L104-02-03-10" type="LexItem">kee</seg> 
+                  <seg xml:id="L104-02-03-11" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-02-03-12" type="LexItem">ku</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-02-04" type="S">
+                  <seg xml:id="L104-02-04-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-02-04-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-02-04-03" type="LexItem">linia</seg> 
+                  <seg xml:id="L104-02-04-04" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-02-04-05" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-02-04-06" type="LexItem">kee</seg> 
+                  <seg xml:id="L104-02-04-07" type="LexItem">ichi</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L104-03">
+            <p>
+               <graphic url="L104-05.png"/>
+               <seg xml:id="L104-03-01" type="S">
+                  <seg xml:id="L104-03-01-01" type="LexItem">Tsini</seg> 
+                  <seg xml:id="L104-03-01-02" type="LexItem">ñu'u</seg> 
+                  <seg xml:id="L104-03-01-03" type="LexItem">ki'vu</seg> 
+                  <seg xml:id="L104-03-01-04" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-03-01-05" type="LexItem">yo'o</seg> 
+                  <seg xml:id="L104-03-01-06" type="LexItem">sara</seg> 
+                  <seg xml:id="L104-03-01-07" type="LexItem">ntantuku</seg> 
+                  <seg xml:id="L104-03-01-08" type="LexItem">ku</seg> 
+                  <seg xml:id="L104-03-01-09" type="LexItem">nixi</seg> 
+                  <seg xml:id="L104-03-01-10" type="LexItem">kee</seg> 
+                  <seg xml:id="L104-03-01-11" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-03-01-12" type="LexItem">ku</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-03-02" type="S">
+                  <seg xml:id="L104-03-02-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-03-02-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-03-02-03" type="LexItem">linia</seg> 
+                  <seg xml:id="L104-03-02-04" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-03-02-05" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-03-02-06" type="LexItem">kee</seg> 
+                  <seg xml:id="L104-03-02-07" type="LexItem">ichi</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+            <p>
+               <graphic url="L104-06.png"/>
+               <seg xml:id="L104-03-03" type="S">
+                  <seg xml:id="L104-03-03-01" type="LexItem">Yo'o</seg> 
+                  <seg xml:id="L104-03-03-02" type="LexItem">ra</seg> 
+                  <seg xml:id="L104-03-03-03" type="LexItem">tsini</seg> 
+                  <seg xml:id="L104-03-03-04" type="LexItem">ñu'u</seg> 
+                  <seg xml:id="L104-03-03-05" type="LexItem">ntantuku</seg> 
+                  <seg xml:id="L104-03-03-06" type="LexItem">ku</seg> 
+                  <seg xml:id="L104-03-03-07" type="LexItem">nchii</seg> 
+                  <seg xml:id="L104-03-03-08" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-03-03-09" type="LexItem">ki'vu</seg> 
+                  <seg xml:id="L104-03-03-10" type="LexItem">takua</seg> 
+                  <seg xml:id="L104-03-03-11" type="LexItem">saan</seg> 
+                  <seg xml:id="L104-03-03-12" type="LexItem">kuu</seg> 
+                  <seg xml:id="L104-03-03-13" type="LexItem">ntasatutu</seg> 
+                  <seg xml:id="L104-03-03-14" type="LexItem">nti'u</seg> 
+                  <seg xml:id="L104-03-03-15" type="LexItem">ntivi</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-03-04" type="S">
+                  <seg xml:id="L104-03-04-01" type="LexItem">Cha</seg> 
+                  <seg xml:id="L104-03-04-02" type="LexItem">vichi</seg> 
+                  <seg xml:id="L104-03-04-03" type="LexItem">ra</seg> 
+                  <seg xml:id="L104-03-04-04" type="LexItem">kee</seg> 
+                  <seg xml:id="L104-03-04-05" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-03-04-06" type="LexItem">ku</seg> 
+                  <seg xml:id="L104-03-04-07" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-03-04-08" type="LexItem">kua'a</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>                  
+         </div>
+         <div xml:id="L104-04">
+            <p>
+               <graphic url="L104-07.png"/>
+               <seg xml:id="L104-04-01" type="S">
+                  <pc>¿</pc>
+                  <seg xml:id="L104-04-01-01" type="LexItem">A</seg> 
+                  <seg xml:id="L104-04-01-02" type="LexItem">kuu</seg> 
+                  <seg xml:id="L104-04-01-03" type="LexItem">chika</seg> 
+                  <seg xml:id="L104-04-01-04" type="LexItem">se'e</seg> 
+                  <seg xml:id="L104-04-01-05" type="LexItem">chaka</seg> 
+                  <seg xml:id="L104-04-01-06" type="LexItem">kuachi</seg> 
+                  <seg xml:id="L104-04-01-07" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-04-01-08" type="LexItem">chaka</seg> 
+                  <seg xml:id="L104-04-01-09" type="LexItem">ka'nu</seg>
+                  <pc>?</pc>
+               </seg>             
+               <seg xml:id="L104-04-02" type="S">
+                  <seg xml:id="L104-04-02-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-04-02-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-04-02-03" type="LexItem">linia</seg> 
+                  <seg xml:id="L104-04-02-04" type="LexItem">nchii</seg> 
+                  <seg xml:id="L104-04-02-05" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-04-02-06" type="LexItem">kunki'vu</seg> 
+                  <seg xml:id="L104-04-02-07" type="LexItem">cha</seg> 
+                  <seg xml:id="L104-04-02-08" type="LexItem">nchii</seg> 
+                  <seg xml:id="L104-04-02-09" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-04-02-10" type="LexItem">kunkeu</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-04-03" type="S">
+                  <pc>¿</pc>
+                  <seg xml:id="L104-04-03-01" type="LexItem">Nisa</seg> 
+                  <seg xml:id="L104-04-03-02" type="LexItem">chaka</seg> 
+                  <seg xml:id="L104-04-03-03" type="LexItem">kuu</seg>
+                  <pc>?</pc>
+               </seg>
+               <seg xml:id="L104-04-04" type="S">
+                  <seg xml:id="L104-04-04-01" type="LexItem">Yee</seg> 
+                  <seg xml:id="L104-04-04.01" type="LexItem"> ___________</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+            <p>
+               <graphic url="L104-08.png"/>
+               <seg xml:id="L104-04-05" type="S">
+                  <seg xml:id="L104-04-05-01" type="LexItem">Tsini</seg> 
+                  <seg xml:id="L104-04-05-02" type="LexItem">ñu'u</seg> 
+                  <seg xml:id="L104-04-05-03" type="LexItem">ki'vu</seg> 
+                  <seg xml:id="L104-04-05-04" type="LexItem">ichi</seg> 
+                  <seg xml:id="L104-04-05-05" type="LexItem">yo'o</seg> 
+                  <seg xml:id="L104-04-05-06" type="LexItem">sara</seg> 
+                  <seg xml:id="L104-04-05-07" type="LexItem">ntantuku</seg> 
+                  <seg xml:id="L104-04-05-08" type="LexItem">ku</seg> 
+                  <seg xml:id="L104-04-05-09" type="LexItem">nixi</seg> 
+                  <seg xml:id="L104-04-05-10" type="LexItem">kee</seg> 
+                  <seg xml:id="L104-04-05-11" type="LexItem">tsio</seg> 
+                  <seg xml:id="L104-04-05-12" type="LexItem">ku</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L104-04-06" type="S">
+                  <seg xml:id="L104-04-06-01" type="LexItem">Ntana'a</seg> 
+                  <seg xml:id="L104-04-06-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L104-04-06-03" type="LexItem">linia</seg> 
+                  <seg xml:id="L104-04-06-04" type="LexItem">mancha</seg> 
+                  <seg xml:id="L104-04-06-05" type="LexItem">nuu</seg> 
+                  <seg xml:id="L104-04-06-06" type="LexItem">kunkee</seg> 
+                  <seg xml:id="L104-04-06-07" type="LexItem">ichi</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

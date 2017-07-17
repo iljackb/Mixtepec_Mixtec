@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L100-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L100-00-01">
+                  <w xml:id="L100-00-01-01">Tu'un</w>
+                  <w xml:id="L100-00-01-02">Sa'an Ntavi</w>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L100-00-02">
+                  <w xml:id="L100-00-02-01">Palabras</w>
+                  <w xml:id="L100-00-02-02">en</w>
+                  <w xml:id="L100-00-02-03">el</w>
+                  <w xml:id="L100-00-02-04">Mixteco de Mixtepec</w>
+               </seg>
+            </title>
+            <editor>Gisela Beckmann</editor>
+            <editor>María M. Nieves</editor>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <name>Jack T. Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
+                  archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix).
+                  Encoded documents used with the permission of original authors. Minor modifications have been made to some 
+                  of the images corresponding to items in the vocabulary in order to align the text with the representation 
+                  of the aforementioned vocab items.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L100">
+               <title>Tu'un Sa'an Ntavi</title>
+               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2007</date>. <edition>(2nd ed.)</edition>. <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Tlalpan, D.F., México</pubPlace> Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L100-Palabras-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textDesc>
+            <channel mode="m">@mode:'m' means that there are multiple means of utilising this document which include: a) reading an item's written form; b) understanding the meaning of the written form through association of the visual img of a given entity with the written vocab item </channel>
+            <constitution type="single"/>
+            <derivation type="original">this document is labeled "original" because the XML-TEI markup of it's contents have not made any alterations to the original content;</derivation>
+            <domain type="vocabulary-mix">Mixtecpec-Mixtec Vocabulary</domain>
+            <factuality type="fact"/>
+            <interaction type="none"/>
+            <preparedness type="NA">not applicable</preparedness>
+            <purpose type="inform"/>
+         </textDesc>
+      </profileDesc>
+      <encodingDesc>
+         <p>
+            <list>
+               <item>
+                  <label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                           <list>
+                           <item>i) the entire sentences from original document (first level);</item>
+                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
+                        </list>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>character</label>
+                  <elementSpec ident="c">
+                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
+                           In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
+                              (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>division</label>
+                  <elementSpec ident="div">
+                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
+                  </elementSpec>
+               </item>
+            </list>
+         </p>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <projectDesc>
+            <p>
+                  This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+                  The encoding of this portion of the MIX Language resources can be divided into the following components:
+                  <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                        
+                        <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                        <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+   </teiHeader>
+   <text decls="#pedagogical-ref">
+      <body>
+         <div xml:id="L100-01">
+            <p>
+               <graphic xml:id="L100-01-01-img" url="L100-sling-basket.png"/>
+               <w xml:id="L100-01-01" corresp="#L100-01-01-img">nto'o</w>
+               <graphic xml:id="L100-01-02-img" url="L100-crock-pot.png"/>
+               <w xml:id="L100-01-02">titsa'an</w>
+               <graphic xml:id="L100-01-03-img" url="L100-bundle-sticks.png"/>
+               <w xml:id="L100-01-03">tutu</w>
+               <graphic xml:id="L100-01-04-img" url="L100-cooking_woman-yoso-yatsi-tsio.png"/>
+               <w xml:id="L100-01-04">yoso</w>
+               <w xml:id="L100-01-05">yatsi</w>
+               <w xml:id="L100-01-06">tsio</w>
+               <graphic xml:id="L100-01-05-img" url="L100-cooking_girl-pot-smoke.png"/>
+               <w xml:id="L100-01-07">kisi</w>
+               <w xml:id="L100-01-08">ñu'u</w>
+            </p>
+         </div>
+         <div xml:id="L100-02">
+            <p>
+               <graphic xml:id="L100-02-01-img" url="L100-cat.png"/>
+               <w xml:id="L100-02-01">vilu</w>
+               <graphic xml:id="L100-02-02-img" url="L100-goat.png"/>
+               <w xml:id="L100-02-02">ntucha</w>
+               <graphic xml:id="L100-02-03-img" url="L100-baby_goat.png"/>
+               <w xml:id="L100-02-03">litu</w>
+               <graphic xml:id="L100-02-04-img" url="L100-sheep-lamb.png"/>
+               <w xml:id="L100-02-04">ntikachi</w>
+               <w xml:id="L100-02-05">le'lu</w>
+               <graphic xml:id="L100-02-06-img" url="L100-rooster-hen_unk.png"/>
+               <w xml:id="L100-02-06">to'lo</w>
+               <w xml:id="L100-02-07">chata</w>
+            </p>
+         </div>
+         <div xml:id="L100-03">
+            <p>
+               <w xml:id="L100-03-01">nii</w>
+               <graphic xml:id="L100-03-01-img" url="L100-corn_on_cob-corn_kernals.png"/>
+               <w xml:id="L100-03-02">nuni</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-03-03-img" url="L100-corn_w_husk.png"/>
+               <w xml:id="L100-03-03">ntixi</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-03-04-img" url="L100-cob.png"/>
+               <w xml:id="L100-03-04">saiin</w>
+            </p>
+            <p>
+               <w xml:id="L100-03-05">isu</w>
+               <graphic xml:id="L100-03-05-img"
+                        url="L100-corn_stalk_unharvested-corn_unharvested.png"/>
+               <w xml:id="L100-03-06">itu</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-03-06-img" url="L100-corn_stalk-harvested.png"/>
+               <w xml:id="L100-03-07">ntayo'o</w>
+            </p>
+         </div>
+         <div xml:id="L100-04">
+            <p>
+               <graphic xml:id="L100-04-01-img" url="L100-banana.png"/>
+               <w xml:id="L100-04-01">nchika</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-04-02-img" url="L100-berry-unk.png"/>
+               <w xml:id="L100-04-02">ntoko</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-04-03-img" url="L100-maguei.png"/>
+               <w xml:id="L100-04-03">chiki</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-04-04-img" url="L100-pineapple.png"/>
+               <w xml:id="L100-04-04">vitsi</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-04-05-img" url="L100-oranges.png"/>
+               <w xml:id="L100-04-05">tikuaa</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-04-06-img" url="L100-pomegranite-unk.png"/>
+               <w xml:id="L100-04-06">tintixi</w>
+            </p>
+         </div>
+         <div xml:id="L100-05">
+            <p>
+               <w xml:id="L100-05-01">kimi</w>
+               <graphic xml:id="L100-05-01-img" url="L100-stars.png"/>
+               <graphic xml:id="L100-05-02-img" url="L100-moon.png"/>
+               <w xml:id="L100-05-02">yoo</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-05-03-img" url="L100-sun.png"/>
+               <w xml:id="L100-05-03">nikanchii</w>
+            </p>
+            <p>
+               <w xml:id="L100-05-04">viko</w>
+               <graphic xml:id="L100-05-04-5-img" url="L100-clouds-lightning.png"/>
+               <w xml:id="L100-05-05">tsantucha</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-05-06-img" url="L100-rainbow.png"/>
+               <w xml:id="L100-05-06">sko ncha'ncha</w>
+            </p>
+            <p>
+               <graphic xml:id="L100-05-07-img" url="L100-rain.png"/>
+               <w xml:id="L100-05-07">savi</w>
+            </p>
+         </div>
+         <div xml:id="L100-06">
+            <p>
+               <graphic xml:id="L100-06-01-img" url="L100-owl.png"/>
+               <w xml:id="L100-06-01">chumi</w>
+               <graphic xml:id="L100-06-02-img" url="L100-hawk.png"/>
+               <w xml:id="L100-06-02">xi'a</w>
+               <graphic xml:id="L100-06-03-img" url="L100-swallow.png"/>
+               <w xml:id="L100-06-03">tixikua</w>
+               <graphic xml:id="L100-06-04-img" url="L100-woodpecker.png"/>
+               <w xml:id="L100-06-04">taka</w>
+               <graphic xml:id="L100-06-05-img" url="L100-blackbird.png"/>
+               <w xml:id="L100-06-05">saa ncha'i</w>
+               <graphic xml:id="L100-06-06-img" url="L100-mourning_dove.png"/>
+               <w xml:id="L100-06-06">lakuku</w>
+            </p>
+         </div>
+         <div xml:id="L100-07">
+            <p>
+               <graphic xml:id="L100-07-01-img" url="L100-bee.png"/>
+               <w xml:id="L100-07-01">ñuni</w>
+               <graphic xml:id="L100-07-02-img" url="L100-wasp-or-hive.png"/>
+               <w xml:id="L100-07-02">chu'ma</w>
+               <graphic xml:id="L100-07-03-img" url="L100-spider-or-web_unk.png"/>
+               <w xml:id="L100-07-03">tintoo</w>
+               <graphic xml:id="L100-07-04-img" url="L100-mosquito.png"/>
+               <w xml:id="L100-07-04">tikuain</w>
+               <graphic xml:id="L100-07-05-img" url="L100-fly.png"/>
+               <w xml:id="L100-07-05">ntikama</w>
+               <graphic xml:id="L100-07-06-img" url="L100-cockroach.png"/>
+               <w xml:id="L100-07-06">ntiche'e</w>
+               <graphic xml:id="L100-07-07-img" url="L100-ant.png"/>
+               <w xml:id="L100-07-07">choko</w>
+            </p>
+         </div>
+         <div xml:id="L100-08">
+            <p>
+               <graphic url="L100-bat.png"/>
+               <w xml:id="L108-08-01">ntikuchi</w>
+               <graphic url="L100-fox.png"/>
+               <w xml:id="L108-08-02">nkuii</w>
+               <graphic url="L100-squirrel.png"/>
+               <w xml:id="L108-08-03">ntikuain</w>
+               <graphic url="L100-armadillo.png"/>
+               <w xml:id="L108-08-04">yakui</w>
+               <graphic url="L100-deer.png"/>
+               <w xml:id="L108-08-05">isu</w>
+               <graphic url="L100-turtle-tortois.png"/>
+               <w xml:id="L108-08-06">ntintsitsa</w>
+            </p>
+         </div>
+         <div xml:id="L100-09">
+            <p>
+               <graphic url="L100-tuxichi.png"/>
+               <w xml:id="L100-09-01">tuxichi</w>
+               <graphic url="L100-ntoo.png"/>
+               <w xml:id="L100-09-02">ntoo</w>
+               <graphic url="L100-yavi.png"/>
+               <w xml:id="L100-09-03">yavi</w>
+               <graphic url="L100-inu_cha-a.png"/>
+               <w xml:id="L100-09-04">iñu cha'a</w>
+               <graphic url="L100-tumi-ncha.png"/>
+               <w xml:id="L100-09-05">tumi'ncha</w>
+            </p>
+         </div>
+         <div xml:id="L100-10">
+            <p>
+               <graphic url="L100-avocado.png"/>
+               <w xml:id="L100-10-01">tichi</w>
+               <graphic url="L100-iki.png"/>
+               <w xml:id="L100-10-02">iki</w>
+               <graphic url="L100-green_beans.png"/>
+               <w xml:id="L100-10-03">nchichi</w>
+               <graphic url="L100-tinana_soo.png"/>
+               <w xml:id="L100-10-04">tinana soo</w>
+               <graphic url="L100-nana.png"/>
+               <w xml:id="L100-10-05">naña</w>
+               <graphic url="L100-mushroom.png"/>
+               <w xml:id="L100-10-06">tsi'i</w>
+            </p>
+         </div>
+         <div xml:id="L100-11">
+            <p>
+               <graphic url="L100-ring.jpg"/>
+               <w xml:id="L100-11-01">xe'e</w>
+               <graphic url="L100-slingshot.jpg"/>
+               <w xml:id="L100-11-02">uli</w>
+               <graphic url="L100-broom.jpg"/>
+               <w xml:id="L100-11-03">ntaku</w>
+               <graphic url="L100-fruit_basket-unk.png"/>
+               <w xml:id="L100-11-04">tsikavichi</w>
+               <graphic url="L100-carpet.png"/>
+               <w xml:id="L100-11-05">yuvi</w>
+               <graphic url="L100-money.png"/>
+               <w xml:id="L100-11-06">xu'un</w>
+               <graphic url="L100-nail.jpg"/>
+               <w xml:id="L100-11-07">ntuyukaa</w>
+            </p>
+         </div>
+         <div xml:id="L100-12">
+            <head>
+               <seg xml:id="L100-12-00">sa'ma</seg>
+            </head>
+            <p>
+               <graphic url="L100-clothing_man-hat-pants-sandals.png"/>
+               <w xml:id="L100-12-01">xini</w>
+               <w xml:id="L100-12-02">tsatu</w>
+               <w xml:id="L100-12-03">ntsitsa</w>
+               <graphic url="L100-clothing_woman-su-nu-pain-xio.png"/>
+               <w xml:id="L100-12-04">su'nu</w>
+               <w xml:id="L100-12-05">pain</w>
+               <w xml:id="L100-12-06">xio</w>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

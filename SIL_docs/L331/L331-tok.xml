@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L331-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L331-00-01">
+                  <w xml:id="L331-00-01-01">Ntusu</w>
+                  <w xml:id="L331-00-01-02">Sa'an Savi</w>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L331-00-02">
+                  <w xml:id="L331-00-02-01">Alfabeto</w>
+                  <w xml:id="L331-00-02-02">del</w>
+                  <w xml:id="L331-00-02-03">Mixteco de Mixtepec</w>
+               </seg>
+            </title>
+            <editor>Gisela Beckmann</editor>
+            <editor>María M. Nieves</editor>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <name>Jack T. Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
+               archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix).
+               Encoded documents used with the permission of original authors.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L331">
+               <title>Ntusu Sa'an Savi</title>
+               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2011</date>. <pubPlace>Tlalpan, D.F., México</pubPlace>:<publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <edition/>
+               Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L331-Alfabeto-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textDesc>
+            <channel mode="w">@mode:'w' means that the primary means of utilising this document is by reading it's written form; </channel>
+            <constitution type="single"/>
+            <derivation type="original">this document is labeled "original" because the XML-TEI markup of it's contents have not made any alterations to the original content;</derivation>
+            <domain type="rooster"/>
+            <factuality type="fiction"/>
+            <interaction type="none"/>
+            <preparedness type="NA">not applicable</preparedness>
+            <purpose type="entertain"/>
+         </textDesc>
+      </profileDesc>
+      <encodingDesc>
+         <p>
+            The term "orthographic unit" is used to represent any unit presented in original document and in the Mixtepec-Mixtec
+            working orthographic conventions that corresponds to a phonetic (and/or) phonological unit or sequence;
+            The content of the original document is represented as a series of lists 
+            in which the category of the phonetic classification type (Vowel, Consonant, 
+            Complex Consonants, Non-Native sounds) represented by the orthographic convention
+            are all contained within the "item" element.
+         </p>
+         <p>
+            <list>
+               <item>
+                  <label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                        <list>
+                           <item>i) examples of words containing the orthographic unit in MIX;</item>
+                           <item>ii) Spanish translations of the MIX words containing the orthographic unit;;</item>
+                        </list>
+                        The attributes within the "seg" element are as follows:
+                        '<att>xml:lang</att>="(<val>mix</val>|<val>esp</val>)"' is again to declare that the language is MIX or Spanish;
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>character</label>
+                  <elementSpec ident="c">
+                     <desc>The "character" element (represented as: "c") in which the orthographic unit is present;
+                        The attributes within the "c" element are as follows:
+                        "@<att>xml:id</att>" is given to elements so that in further searching/modeling of the language and conceptual data contained therein may be uniquely identified;
+                        '@<att>type</att>="<val>orth</val>"' is to declare that the style is orthographic;
+                        '@<att>xml:lang</att>="<val>mix</val>"' is to declare that the language is MIX; (although this will likely be changed in later encodings so that it is only necessary to do once)
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>column break</label>
+                  <elementSpec ident="cb">
+                     <desc>This is a formatting element that will likely be replaced at a later time with either CSS or XSL</desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>division</label>
+                  <elementSpec ident="div">
+                     <desc> The "div" element contains each separate list;</desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>head</label>
+                  <elementSpec ident="head">
+                     <desc>The headers from original document are represented as the "head" element of each list:</desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>graphic</label>
+                  <elementSpec ident="graphic">
+                     <desc>All images from SIL-Mexico publications are encoded in TEI 'graphic' elements. Each is identified in attribute: @'<att>url</att>. In final output, the goal is to annotate/encode image and the semantic contents represented according to one or more Linked Open Data compatible metadata markup formats.</desc>
+                  </elementSpec>
+               </item>
+            </list>
+         </p>
+         <p>
+            Note: from the alphabet defined herein a FSD document will be created for this alphabetic system and characters. 
+            These features will be linked to the phonetic and phonological FSD for this language which at a future time could form the basis for a system of automatic 
+            transcription of Mixtepec Mixtec speech in phonetic and/or orthographic form.
+         </p>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <projectDesc>
+            <p>
+               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+               The encoding of this portion of the MIX Language resources can be divided into the following components:
+               <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                     
+                     <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                     <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+   </teiHeader>
+   <text decls="#pedagogical-ref">
+      <body>
+         <div xml:id="L331-01">
+            <p>
+               <list type="gloss">
+                  <head>
+                     <seg xml:id="L331-01-00">Vocales</seg>
+                  </head>
+                  <item xml:id="L331-01-01">
+                     <c>a</c>
+                     <!-- change @ identifying 'orthography' to ISOcat -->
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-01-01">anua</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-01-02">corazón</w>
+                     <graphic url="L331-heart.png"/>
+                  </item>
+                  <item xml:id="L331-01-02">
+                     <c>an</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-02-01">xi'an</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-02-02">gavilán</w>
+                     <graphic url="L331-hawk.png"/>
+                  </item>
+                  <item xml:id="L331-01-03">
+                     <c>aa</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-03-01">saa</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-03-02">pájaro</w>
+                     <graphic url="L331-bird.png"/>
+                  </item>
+                  <item xml:id="L331-01-04">
+                     <c>a'a</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-04-01">ya'a</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-04-02">chile</w>
+                     <graphic url="L331-chile.png"/>
+                  </item>
+                  <item xml:id="L331-01-05">
+                     <c>e</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-05-01">le'lu</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-05-02">borreguito</w>
+                     <graphic url="L331-lamb.png"/>
+                  </item>
+                  <item xml:id="L331-01-06">
+                     <c>en</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-06-01">teen</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-06-02">sudor</w>
+                     <graphic url="L331-sweat.png"/>
+                  </item>
+                  <item xml:id="L331-01-07">
+                     <c>ee</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-07-01">skee</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-07-02">pizcando</w>
+                     <graphic url="L331-harvest-pick.png"/>
+                  </item>
+                  <item xml:id="L331-01-08">
+                     <c>e'e</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-08-01">ve'e</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-08-02">casa</w>
+                     <graphic url="L331-house.png"/>
+                  </item>
+                  <item xml:id="L331-01-09">
+                     <c>i</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-09-01">ita</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-09-02">flor</w>
+                     <graphic url="L331-flower.png"/>
+                  </item>
+                  <item xml:id="L331-01-10">
+                     <c>in</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-10-01">ntikua'in</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-10-02">ardilla</w>
+                     <graphic url="L331-squirrel.png"/>
+                  </item>
+                  <item xml:id="L331-01-11">
+                     <c>ii</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-11-01">chikuii</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-11-02">agua</w>
+                     <graphic url="L331-water.png"/>
+                  </item>
+                  <item xml:id="L331-01-12">
+                     <c>i'i</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-12-01">tsi'i</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-12-02">hongo</w>
+                     <graphic url="L331-mushroom.png"/>
+                  </item>
+                  <item xml:id="L331-01-13">
+                     <c>o</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-13-01">oko</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-13-02">vente</w>
+                     <w xml:id="L331-01-13-03">20</w>
+                  </item>
+                  <item xml:id="L331-01-14">
+                     <c>on</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-14-01">sachoon</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-14-02">trabajamos</w>
+                     <graphic url="L331-work.png"/>
+                  </item>
+                  <item xml:id="L331-01-15">
+                     <c>oo</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-15-01">koo</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-15-02">culebra</w>
+                     <graphic url="L331-snake.png"/>
+                  </item>
+                  <item xml:id="L331-01-16">
+                     <c>o'o</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-16-01">ncho'o</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-16-02">colibrí</w>
+                     <graphic url="L331-hummingbird.png"/>
+                  </item>
+                  <item xml:id="L331-01-17">
+                     <c>u</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-17-01">uli</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-17-02">resortera</w>
+                     <graphic url="L331-slingshot.png"/>
+                  </item>
+                  <item xml:id="L331-01-18">
+                     <c>un</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-18-01">xu'un</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-18-02">dinero</w>
+                     <graphic url="L331-money.png"/>
+                  </item>
+                  <item xml:id="L331-01-19">
+                     <c>uu</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-19-01">kañuu</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-19-02">codorniz</w>
+                     <graphic url="L331-quail.png"/>
+                  </item>
+                  <item xml:id="L331-01-20">
+                     <c>u'u</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-01-20-01">yu'u</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-01-20-02">boca</w>
+                     <graphic url="L331-mouth.png"/>
+                  </item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="L331-02">
+            <p>
+               <list>
+                  <head>
+                     <seg xml:id="L331-02-00">Consonantes</seg>
+                  </head>
+                  <item xml:id="L331-02-01">
+                     <c>k</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-01-01">kiti</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-01-02">caballo</w>
+                     <cb/>
+                     <graphic url="L331-horse.png"/>
+                  </item>
+                  <item xml:id="L331-02-02">
+                     <c>l</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-02-01">lakuku</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-02-02">tortolita</w>
+                     <cb/>
+                     <graphic url="L331-mourning_dove.png"/>
+                  </item>
+                  <item xml:id="L331-02-03">
+                     <c>m</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-03-01">ma'a</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-03-02">mapache</w>
+                     <cb/>
+                     <graphic url="L331-racoon.png"/>
+                  </item>
+                  <item xml:id="L331-02-04">
+                     <c>n</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-04-01">nuni</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-04-02">maiz</w>
+                     <cb/>
+                     <graphic url="L331-corn_kernals.png"/>
+                  </item>
+                  <item xml:id="L331-02-05">
+                     <c>ñ</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-05-01">ñuñu</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-05-02">red</w>
+                     <cb/>
+                     <graphic url="L331-net.png"/>
+                  </item>
+                  <item xml:id="L331-02-06">
+                     <c>r</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-06-01">skuleru</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-06-02">maestro</w>
+                     <cb/>
+                     <graphic url="L331-teacher.png"/>
+                  </item>
+                  <item xml:id="L331-02-07">
+                     <c>s</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-07-01">savi</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-07-02">lluvia</w>
+                     <cb/>
+                     <graphic url="L331-rain.png"/>
+                  </item>
+                  <item xml:id="L331-02-08">
+                     <c>t</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-08-01">tikaka</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-08-02">curvo</w>
+                     <cb/>
+                     <graphic url="L331-crow.png"/>
+                  </item>
+                  <item xml:id="L331-02-09">
+                     <c>v</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-09-01">vitsi</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-09-02">piña</w>
+                     <cb/>
+                     <graphic url="L331-pineapple.png"/>
+                  </item>
+                  <item xml:id="L331-02-10">
+                     <c>x</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-10-01">xio</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-10-02">falda</w>
+                     <cb/>
+                     <graphic url="L331-skirt.png"/>
+                  </item>
+                  <item xml:id="L331-02-11">
+                     <c>y</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-11-01">yakui</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-11-02">armadillo</w>
+                     <cb/>
+                     <graphic url="L331-armadillo.png"/>
+                  </item>
+                  <item xml:id="L331-02-12">
+                     <c>'</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-02-12-01">to'lo</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-02-12-02">gallo</w>
+                     <cb/>
+                     <graphic url="L331-rooster.png"/>
+                  </item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="L331-03">
+            <p>
+               <list>
+                  <head>
+                     <seg xml:id="L331-03-00">Consonantes compuestas</seg>
+                  </head>
+                  <item xml:id="L331-03-01">
+                     <c>ch</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-01-01">chaka</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-01-02">pez</w>
+                     <cb/>
+                     <graphic url="L331-fish.png"/>
+                  </item>
+                  <item xml:id="L331-03-02">
+                     <c>nch</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-02-01">nchichi</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-02-02">ejote</w>
+                     <cb/>
+                     <graphic url="L331-green_beans.png"/>
+                  </item>
+                  <item xml:id="L331-03-03">
+                     <c>nk</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-03-01">nkuii</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-03-02">zorra</w>
+                     <cb/>
+                     <cb/>
+                     <graphic url="L331-fox.png"/>
+                  </item>
+                  <item xml:id="L331-03-04">
+                     <c>nt</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-04-01">ntixi</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-04-02">elote</w>
+                     <cb/>
+                     <graphic url="L331-corn_on_cob_w-husk.png"/>
+                  </item>
+                  <item xml:id="L331-03-05">
+                     <c>nts</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-05-01">ntsitsi</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-05-02">ala</w>
+                     <cb/>
+                     <graphic url="L331-wing.png"/>
+                  </item>
+                  <item xml:id="L331-03-06">
+                     <c>ts</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-06-01">tsatu</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-06-02">pantalón</w>
+                     <cb/>
+                     <graphic url="L331-pants.png"/>
+                  </item>
+                  <item xml:id="L331-03-07">
+                     <c>xch</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-03-07-01">xchacha</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-03-07-02">pelos de maíz</w>
+                     <cb/>
+                     <graphic url="L331-corn_on_cob_w-husk.png"/>
+                  </item>
+               </list>
+            </p>
+         </div>
+         <div xml:id="L331-04">
+            <p>
+               <list>
+                  <head>
+                     <seg xml:lang="es" xml:id="L331-04-00">Las letras d, f, g, j, p, rr solamente se usan en palabras tomadas del español.</seg>
+                  </head>
+                  <item xml:id="L331-04-01">
+                     <c>d</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-04-01-01">soldado</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-04-01-02">soldado</w>
+                  </item>
+                  <item xml:id="L331-04-02">
+                     <c>f</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-04-02-01">cafe</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-04-02-02">café</w>
+                  </item>
+                  <item xml:id="L331-04-03">
+                     <c>g</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-04-03-01">amigu</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-04-03-02">amigo</w>
+                  </item>
+                  <item xml:id="L331-04-04">
+                     <c>j</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-04-04-01">juevixi</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-04-04-02">jueves</w>
+                  </item>
+                  <item xml:id="L331-04-05">
+                     <c>p</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-04-05-01">paa</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-04-05-02">pan</w>
+                  </item>
+                  <item xml:id="L331-04-06">
+                     <c>rr</c>
+                     <cb/>
+                     <w xml:lang="mix" xml:id="L331-04-06-01">lurru</w>
+                     <cb/>
+                     <w xml:lang="es" xml:id="L331-04-06-02">burro</w>
+                  </item>
+               </list>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

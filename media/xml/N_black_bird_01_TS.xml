@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_black_bird_01_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_black_bird_01_TS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.06"/>
+            <when xml:id="T2" interval="0.24"/>
+            <when xml:id="T3" interval="0.32"/>
+            <when xml:id="T4" interval="0.51"/>
+            <when xml:id="T5" interval="0.60"/>
+            <when xml:id="T6" interval="0.68"/>
+            <when xml:id="T7" interval="0.74"/>
+            <when xml:id="T8" interval="0.84"/>
+            <when xml:id="T9" interval="0.86"/>
+            <when xml:id="T10" interval="0.49"/>
+            <when xml:id="T11" interval="1.00"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e40" n="1" start="0" end="1.15">
+               <seg xml:id="d1e41" function="utterance" notation="orth" type="compound">
+                  <w xml:id="d1e42" synch="#T1">saa</w>
+                  <w xml:id="d1e44" synch="#T4">ncha'i</w>
+               </seg>
+               <seg xml:id="d1e46" function="utterance" notation="ipa" type="compound">
+                  <w xml:id="d1e47" synch="#T1">
+                     <c>s</c>
+                     <c>a:</c>
+                     <c function="tone">F</c>
+                  </w>
+                  <w xml:id="d1e54" synch="#T4">
+                     <c>n</c>
+                     <c>ʤ</c>
+                     <c function="tone">H</c>
+                     <c>a</c>
+                     <c>ʔ</c>
+                     <c>i</c>
+                     <c function="tone">L</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T10">N.bird</span>
+               <span from="#T4" to="#T11">ADJ.black</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e41 #d1e46" ana="#N"/>             
+            </spanGrp>
+            
+            <!-- if wanted, can add a "decomposition" block and tag components as #N and #ADJ -->
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e41 #d1e46" corresp="http://dbpedia.org/resource/Blackbird"/>
+               <!-- is_a:Bird -->
+               <span type="domain" target="#d1e41 #d1e46" corresp="http://dbpedia.org/resource/Bird"/>
+          
+            </spanGrp>
+            
+            <spanGrp type="translation">               
+               <span target="#d1e41 #d1e46" xml:lang="en">blackbird</span>
+               <span target="#d1e41 #d1e46" xml:lang="es">zanate</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

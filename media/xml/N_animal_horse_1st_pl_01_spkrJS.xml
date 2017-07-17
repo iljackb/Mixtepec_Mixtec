@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_animal_horse_1st_pl_01_spkrJS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_animal_horse_1st_pl_01_spkrJS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.08"/>
+            <when xml:id="T2" interval="0.18"/>
+            <when xml:id="T3" interval="0.19"/>
+            <when xml:id="T4" interval="0.44"/>
+            <when xml:id="T5" interval="0.50"/>
+            <when xml:id="T6" interval="0.51"/>
+            <when xml:id="T7" interval="0.63"/>
+            <when xml:id="T8" interval="0.68"/>
+            <when xml:id="T9" interval="0.69"/>
+            <when xml:id="T10" interval="0.89"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e39" n="1" start="0" end="1.14">
+               <seg xml:id="d1e40" function="utterance" notation="orth" type="phrase">
+                  <w xml:id="d1e41" synch="#T1">kiti</w>
+                  <w xml:id="d1e43" synch="#T7">ko</w>
+               </seg>
+               <seg xml:id="d1e45" function="utterance" notation="ipa" type="phrase">
+                  <w xml:id="d1e46" synch="#T1">
+                     <c>k</c>
+                     <c>i</c>
+                     <c function="tone">F</c>
+                     <c>t̪</c>
+                     <c>i</c>
+                     <c function="tone">L</c>
+                  </w>
+                  <w xml:id="d1e59" synch="#T7">
+                     <c>ɣ</c>
+                     <c>o</c>
+                     <c function="tone">R</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T7">N.animal-horse</span>
+               <span from="#T7" to="#T10">1PL</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">             
+               <span type="phrase" target="#d1e40 #d1e45" ana="#NP #POSS"/>
+               
+               <span type="pos" target="#d1e41 #d1e46" ana="#N"/>
+               
+               <span type="pos" target="#d1e43 #d1e59" ana="#PTCL"/>
+               <span type="person" target="#d1e43 #d1e59" ana="#1PERS"/>
+               <span type="number" target="#d1e43 #d1e59" ana="#PL"/>
+               <span type="inclusivity" target="#d1e43 #d1e59" ana="#EXCL"/>            
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" n="1" target="#d1e41 #d1e46" corresp="http://dbpedia.org/resource/Animal"/>
+               <!-- is_a:LivingBeing -->
+               <span type="domain" n="1" target="#d1e41 #d1e46" cert="low" corresp="http://dbpedia.org/resource/Living_being"/><!-- need to confirm uri, dbpedia server down at time of annotation-->
+               
+               <span type="sense" n="2" target="#d1e41 #d1e46" corresp="http://dbpedia.org/resource/Horse"/>
+               <!-- is_a:Animal -->
+               <span type="domain" n="2" target="#d1e41 #d1e46" corresp="http://dbpedia.org/resource/Animal"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span n="1" target="#d1e40 #d1e45" xml:lang="en">our horse</span>
+               <span n="1" target="#d1e40 #d1e45" xml:lang="es">nuestro caballo</span>
+               
+               <span n="2" target="#d1e40 #d1e45" xml:lang="en">our animal</span>
+               <span n="2" target="#d1e40 #d1e45" xml:lang="es">nuestro animal</span>
+
+               <span n="1" type="component" target="#d1e41 #d1e46" xml:lang="en">animal</span>
+               <span n="1" type="component" target="#d1e41 #d1e46" xml:lang="es">animal</span>
+               
+               <span n="2" type="component" target="#d1e43 #d1e59" xml:lang="en">nuestro</span>
+               <span n="2" type="component" target="#d1e43 #d1e59" xml:lang="es">nuestro</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

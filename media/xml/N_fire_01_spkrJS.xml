@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_fire_01_spkrJS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_fire_01_spkrJS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.24"/>
+            <when xml:id="T2" interval="0.34"/>
+            <when xml:id="T3" interval="0.35"/>
+            <when xml:id="T4" interval="0.51"/>
+            <when xml:id="T5" interval="0.71"/>
+            <when xml:id="T6" interval="0.72"/>
+            <when xml:id="T7" interval="0.97"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e36" n="1" start="0" end="1.17">
+               <seg xml:id="d1e37" function="utterance" notation="orth">
+                  <w xml:id="d1e38" synch="#T1">ñu'un</w>
+               </seg>
+               <seg xml:id="d1e40" function="utterance" notation="ipa">
+                  <w xml:id="d1e41" synch="#T1">
+                     <c>ɲ</c>
+                     <c>ũ</c>
+                     <c function="tone">H</c>
+                     <c>ʔ</c>
+                     <c>õ</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T7">N.fire</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e38 #d1e41" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics" cert="unknown">
+               <span type="sense" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Fire"/>
+               
+               <!-- is_a:Conceptual_Prime -->
+               <!-- domain!? -->
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e38 #d1e41" xml:lang="en" corresp="https://en.wiktionary.org/wiki/fire">fire</span>
+               <span target="#d1e38 #d1e41" xml:lang="es" corresp="https://es.wiktionary.org/wiki/fuego">fuego</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

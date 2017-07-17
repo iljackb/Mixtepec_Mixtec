@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L163-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L163-00-01">
+                  <w xml:id="L163-00-01-01">Ma</w>
+                  <w xml:id="L163-00-01-02">sana</w>
+                  <w xml:id="L163-00-01-03">ino</w>
+                  <w xml:id="L163-00-01-04">sa'an</w>
+                  <w xml:id="L163-00-01-05">ko</w>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L163-00-02">
+                  <w xml:id="L163-00-02-01">No</w>
+                  <w xml:id="L163-00-02-02">olvidemos</w>
+                  <w xml:id="L163-00-02-03">nuestro</w>
+                  <w xml:id="L163-00-02-04">idioma</w>
+               </seg>
+            </title>
+            <editor>Gisela Beckmann</editor>
+            <editor>María M. Nieves</editor>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <name>Jack T. Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
+                  archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix)<pc>.</pc>
+                  Encoded documents used with the permission of original authors<pc>.</pc>
+            </p>
+         </publicationStmt>
+         <notesStmt>
+            <note xml:id="L163-resumen" xml:lang="es">
+                  Nuestro idioma es precioso y con él podemos expresar
+                  todo lo que pensamos<pc>.</pc> Debemos enseñárselo a nuestros
+                  hijos para que no se pierda<pc>.</pc>
+            </note>
+         </notesStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L163">
+               <title>Ma sana ino sa'an ko</title>
+               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2008</date>. <edition>(2nd ed.)</edition>.<pubPlace>Tlalpan, D.F., México</pubPlace>:<publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+                  Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L163-NuestraLengua-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textDesc>
+            <channel mode="w">@mode:'w' means that the primary means of utilising this document is by reading it's written form; </channel>
+            <constitution type="single"/>
+            <derivation type="original">this document is labeled "original" because the XML-TEI markup of it's contents have not made any alterations to the original content;</derivation>
+            <domain type="rooster"/>
+            <factuality type="fiction"/>
+            <interaction type="none"/>
+            <preparedness type="NA">not applicable</preparedness>
+            <purpose type="entertain"/>
+         </textDesc>
+      </profileDesc>
+      <encodingDesc>
+         <p>
+            <list>
+               <item>
+                  <label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                           <list>
+                           <item>i) the entire sentences from original document (first level);</item>
+                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
+                        </list>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>character</label>
+                  <elementSpec ident="c">
+                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
+                           In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
+                              (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>division</label>
+                  <elementSpec ident="div">
+                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
+                  </elementSpec>
+               </item>
+            </list>
+         </p>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <projectDesc>
+            <p>
+                  This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+                  The encoding of this portion of the MIX Language resources can be divided into the following components:
+                  <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                        
+                        <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                        <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+   </teiHeader>
+   <text decls="#pedigogical" xml:lang="mix">
+      <body>
+         <div xml:id="L163-01">
+            <head>
+               <graphic url="L163-01.png"/>
+            </head>
+            <p>
+               <s xml:id="L163-01-01">Nachaaranaka'vosaranaka'antokosa'anko.</s>
+               <s xml:id="L163-01-02">Masanainoñavarikuiiinña'ava'akasuusaansa'anxchila,varisa'ankorakuuntakanonti'isoñaka'anko,varisaxchilarayeetu'unkuekuuka'an.</s>
+               <s xml:id="L163-01-03">Tsa'añanaka'ansa'anko,makuntasoña,varitatunasanainoñarantootonoiinsaantoñu'u,tonoiinntikachikoosto'osaratsaakanakavatonoiinchakanuuñunu.</s>
+            </p>
+         </div>
+         <div xml:id="L163-02">
+            <head>
+               <graphic url="L163-02.png"/>
+            </head>
+            <p>
+               <s xml:id="L163-02-01">Tsa'añamasanainosa'ankovarikuiñava'aka.</s>
+               <s xml:id="L163-02-02">Tatunakuuinoñatsiniñu'unaskua'akochaaña,rakueekuenikukootonoiinyutuinkaanuuñu'uva'a,ñatakiitakiikuankua'nukatu.</s>
+               <s xml:id="L163-02-03">Tsa'añanasna'asa'ankonuukueñakuachi,takuanakutu'ika'insa'anko,takuasaanramanaasa'ankovarikuiñava'aka.</s>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

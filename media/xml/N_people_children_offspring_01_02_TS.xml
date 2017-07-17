@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_people_children_offspring_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_people_children_offspring_01_02_TS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.11"/>
+            <when xml:id="T2" interval="0.31"/>
+            <when xml:id="T3" interval="0.32"/>
+            <when xml:id="T4" interval="0.36"/>
+            <when xml:id="T5" interval="0.54"/>
+            <when xml:id="T6" interval="0.57"/>
+            <when xml:id="T7" interval="1.02"/>
+            <when xml:id="T8" interval="1.22"/>
+            <when xml:id="T9" interval="1.23"/>
+            <when xml:id="T10" interval="1.27"/>
+            <when xml:id="T11" interval="1.42"/>
+            <when xml:id="T12" interval="1.43"/>
+            <when xml:id="T13" interval="0.77"/>
+            <when xml:id="T14" interval="1.57"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e44" n="1" start="0" end="0.89">
+               <seg xml:id="d1e45" function="utterance" notation="orth">
+                  <w xml:id="d1e46" synch="#T1">se'e</w>
+               </seg>
+               <seg xml:id="d1e48" function="utterance" notation="ipa">
+                  <w xml:id="d1e49" synch="#T1">
+                     <c>s</c>
+                     <c>ɛ̰</c>
+                     <c function="tone">T</c>
+                     <c>ʔ</c>
+                     <c>ɛ</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T13">N.people-children-offspring</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e46 #d1e49" ana="#N"/><!-- single pos necessarily applies to all senses -->
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e46 #d1e49" corresp="http://dbpedia.org/resource/People" n="1"/>
+               <span type="domain" target="#d1e46 #d1e49" corresp="http://dbpedia.org/resource/Living_being" n="1"/>
+               
+               <span type="sense" target="#d1e46 #d1e49" corresp="http://dbpedia.org/resource/Child" n="2"/> 
+               <span type="domain" target="#d1e46 #d1e49" cert="unknown" n="2"/><!-- domain of "Child"!? -->
+               
+               <span type="sense" target="#d1e46 #d1e49" corresp="http://dbpedia.org/resource/Offspring" n="3"/> 
+               <span type="domain" target="#d1e46 #d1e49" corresp="http://dbpedia.org/resource/Biology" n="3"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e46 #d1e49" xml:lang="en" corresp="https://en.wiktionary.org/wiki/people" n="1">people</span>
+               <span target="#d1e46 #d1e49" xml:lang="es" corresp="https://es.wiktionary.org/wiki/gente" n="1">gente</span>
+               <span target="#d1e46 #d1e49" xml:lang="es" corresp="https://es.wiktionary.org/wiki/pueblo" n="1">pueblo</span>
+               
+               <span target="#d1e46 #d1e49" xml:lang="en" corresp="https://en.wiktionary.org/wiki/child" n="2">child</span>
+               <span target="#d1e46 #d1e49" xml:lang="es" corresp="https://es.wiktionary.org/wiki/niño" n="2">niño</span>
+               
+               <span target="#d1e46 #d1e49" xml:lang="en" corresp="https://en.wiktionary.org/wiki/offspring" n="3">offspring</span>
+               <span target="#d1e46 #d1e49" xml:lang="es" n="3" cert="unknown"/><!-- span translation of "offspring" -->
+            </spanGrp>
+         </annotationBlock>
+         <annotationBlock>
+            <u xml:id="d1e66" n="2" start="0.89" end="1.77">
+               <seg xml:id="d1e67" function="utterance" notation="orth">
+                  <w xml:id="d1e68" synch="#T7">se'e</w>
+               </seg>
+               <seg xml:id="d1e70" function="utterance" notation="ipa">
+                  <w xml:id="d1e71" synch="#T7">
+                     <c>s</c>
+                     <c>ɛ̰</c>
+                     <c function="tone">T</c>
+                     <c>ʔ</c>
+                     <c>ɛ</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp>
+               <span from="#T7" to="#T14">N.people-children-offspring</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

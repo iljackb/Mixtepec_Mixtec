@@ -1,0 +1,2285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="mix-phono-fsd">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Inventory of Mixtepec-Mixtec Phonetic and Phonological Features</title>
+            <author>Jack T. Bowers</author>
+         </titleStmt>
+         <editionStmt>
+            <edition>1st working edition<date when="2014-09-04">2014-09-04</date></edition>
+         </editionStmt>
+         <publicationStmt>
+            <p>This language resource document for the Mixtepec-Mixtec language variety;the first
+               publication released as part of the TAPAS project;<ptr target="http://tapas.neu.edu/"
+               /></p>
+            <p>This resource may be freely used by members of the Mixtepec-Mixtec community for any
+               purpose. Currently the speaker consultants Juan "Tisu'ma" Salazar and Yavanni Salazar
+               are granted the rights to represent the Mixtepec-Mixtec community in any decisions as
+               to who may exercise the rights of a community member as per the permissions of this
+               publication. The content of this document may be changed by the author at the
+               suggestion of members of the community in the case that incorrect data is included;
+               until further notice I only ask that the author be notified before any changes are
+               made so that appropriate consultations of the need for alterations can be carried
+               out.Should the appropriate interest and capacity within the community exist, full
+               rights of ownership to the curation, alteration and reproduction of these contents
+               will be transferred to the community.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p> The phonetic terminology used herein is based on: - the combined terminology of the
+               latest IPA
+               (2005);<!-- and into a descriptive terminology for any phonetic, phonological features functional analyses in phonetics. ..-->
+               - terminology used in Functional phonetics, and/or phonology literature; Any term
+               used to describe a given phone, or group of phonetic grouping of any kind can be
+               connected to one or more corresponding acoustic, or articulatory phonetic attributes
+               which support the term and grouping. </p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change><date when-iso="2014-09-17"/>First version published to TAPAS without examples of
+            lexical items demonstrating phonetic and phonological features defined herein</change>
+         <change><date when-iso="2014-09-17"/>Modifications made to table cells and several 'title'
+            elements</change>
+         <change><date when-iso="2014-09-17"/>Phonetic feature 'short' defined, common feature found
+            in MIX defined for reduced or 'short-glide' for 'alveo-palatal' and 'labio-velar'
+            glides; IPA character defined as 'string' within the 'f' element; i.e. [ʲ], [ʷ]</change>
+         <change><date when-iso="2014-09-17"/>Additional phonetic and transcription variants added
+            for several phonetic items;</change>
+         <change><date when-iso="2014-09-27"/>Attribute 'corresp' in the 'c' element changed to
+            'ana'</change>
+         <change><date when-iso="2014-11-13">Deleted Mixtec Soundfiles from
+               '<gi>recordingStmnt</gi>' and SIL Mexico publications from '<gi>listbibl</gi>' in
+               header as they are not necessary;</date></change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <fs type="PhonologicalSystem" xmlns:dcr="http://www.isocat.org/ns/dcr"
+               dcr:datcat="http://www.isocat.org/datcat/DC-3392" xml:id="PHONO-SYST"/>
+            <desc>(GOLD) The set of consonant and vowel units that make up the words of a language
+               or language variety, a phonological system is a list of contrastive sounds used in a
+               language that are capable of distinguishing between two words with different meanings
+               together with the ranges of variety each sound has and where those variants are
+               found. [Ball and Mueller 2005: 120]</desc>
+         </div>
+
+         <div type="phonetic-features">
+            <desc>The features represent those included by the International Phonetic Association
+               and by the literature in the field. This set of features are sufficient to defining
+               the characteristics represented by any symbol in the IPA inventory for use in the
+               transcription of human speech in any language. However, these features are mostly
+               articulatorily based, and are not exhaustive with regards to all of the potential
+               features relevant to all aspects of linguistic phonetics; specifically, they don't
+               include any of the acoustic measures used to model and measure human speech signals,
+               nor are any auditory features taken into account. </desc>
+         </div>
+
+         <div xml:id="voice">
+            <desc>Phones may have voiced or voiceless quality, some items may have semi-voiced
+               quality</desc>
+
+            <fs>
+               <f name="voiced" xml:id="vc" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3552">
+                  <string>̬</string>
+               </f>
+               <!-- "Voiced" http://www.isocat.org/datcat/DC-3552  (GOLD) Definition: A fundamental term used in the phonetic classification of speech sounds, referring to the auditory result of the vibration of the vocal cords. Sounds produced while the vocal cords are vibrating are voiced. [Crystal 1985: 329]-->
+               <f name="breathy-voice" xml:id="breathy-vc"/>
+               <!-- not currently used in any of my language inventories  -->
+               <f name="semi-voiced" xml:id="semi-vc"/>
+               <!-- this is somewhere in the range between the prior and the following features; non-phonologically contrastive; IPA characters on otherwise voiced or voiceless items express this: eg.: k̬  -->
+               <f name="creaky-voice" xml:id="crky-vc" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3146">
+                  <string>̰</string>
+               </f>
+               <!-- @sameAs "#V-ckry" can occur with neighboring nasals and(instance of) -->
+               <!-- "Creaky" http://www.isocat.org/datcat/DC-3146 (GOLD) definition:A term referring to a vocal quality in phonetic sound classification in which only one end of the vocal cords vibrates, and does so very slowly. This is a permanent feature of some speakers' voices. [Crystal 1980: 97]-->
+               <f name="voiceless" xml:id="vcls" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3553"/>
+               <!--"Voiceless" http://www.isocat.org/datcat/DC-3553  GOLD: definition:A fundamental term used in the phonetic classification of speech sounds, referring to the auditory result of the vibration of the vocal cords. Sounds produced while the vocal cords are not vibrating are voiceless. [Crystal 1985: 329]-->
+            </fs>
+         </div>
+
+         <div xml:id="energy-source">
+            <fs>
+               <f name="pulmonic" xml:id="pulmonic"><default/></f>
+               <f name="non-pulmonic" xml:id="non-pulmonic"/>
+            </fs>
+         </div>
+
+         <div xml:id="manner-of-articulation">
+            <desc>manner of articulation</desc>
+            <fs>
+               <f name="stop" xml:id="stp" sameAs="#plos"/>
+               <f name="plosive" xml:id="plos" sameAs="#stp"/>
+               <!-- this may not always be true... unreleased stops are not plosives... -->
+               <f name="trill" xml:id="trll"/>
+               <!-- in Mix-->
+               <f name="tap-flap" xml:id="tap-flap"/>
+               <!-- in many languages, (MIX included) the tap and flap are not contrastive and will occur in free variation -->
+               <f name="fricative" xml:id="fric"/>
+               <f name="lateral-fricative" xml:id="lat-fric"/>
+               <!-- can be defined as cmbining the two manner of articulation features: #lat, #fric -->
+               <f name="affricate" xml:id="affrc"/>
+               <!-- have complex internal feature/attributes (2 manners of articulation; (stop, fricative) can be in either order (eg: [sk] [ʧ]; possibly also place of articulation) -->
+               <f name="double-articulation" xml:id="dbl-artic"/>
+               <!-- can have 1 or more manners of articulations and 1 or more places of articulation -->
+               <f name="nasal" xml:id="nas"/>
+               <f name="lateral" xml:id="lat"/>
+               <!-- "lateral" sameAs "lateral-approximate"; and "lateral" hasAttribute "approximate" -->
+               <f name="glide" xml:id="gld" sameAs="#semi-V"/>
+               <!-- hasAttribute "approximate" -->
+               <f name="semi-vowel" xml:id="semi-V" sameAs="#gld"/>
+               <!-- hasAttribute "approximate"; has multiple places of articulation and a single glides articulation and acoustic signal will vary to different degrees depending on the onset and offset contexts (utterance/ sentence context and places of articulation) -->
+               <f name="vowel" xml:id="V"><symbol value="V"/></f>
+               <!--  less typical types of articulation -->
+               <f name="click" xml:id="clk"/>
+               <!-- #energy-source #non-pulmonic -->
+               <f name="ejective" xml:id="ejctv"/>
+               <!-- #energy-source #non-pulmonic -->
+               <f name="voiced-implosve" xml:id="vcd-implsv"/>
+               <!-- #energy-source #non-pulmonic -->
+            </fs>
+         </div>
+
+         <div xml:id="place-of-articulation">
+            <fs>
+               <f name="bilabial" xml:id="bilab"/>
+               <f name="linguo-labial" xml:id="linguo-lab"/>
+               <f name="labio-dental" xml:id="lab-dent"/>
+               <f name="dental" xml:id="dent"/>
+               <!-- this should be linked to the definitions of the IPA and ZSAMPA characters eg:" ̪" "_d" respectively -->
+               <f name="alveo-dental" xml:id="alv-dent"/>
+               <f name="alveolar" xml:id="alv"/>
+               <f name="post-alveolar" xml:id="post-alv"/>
+               <!-- <f name="retroflex" xml:id="retro-flx"/> not in MIX -->
+               <f name="palatal" xml:id="palat"/>
+               <f name="velar" xml:id="velar"/>
+               <!-- shares similar acoustic and articulatory properties with velar (tongue position,location) and bi-labials (rounding);  eventually point to, or refine feature definition by connecting to acoustic  (and articulatory features) eg. 'velar pinch' F3 path...etc... -->
+               <f name="uvular" xml:id="uvlr"/>
+               <!--  <f name="pharyngeal" xml:id="phryngl"/> -->
+               <f name="glottal" xml:id="glot"/>
+               <!-- <f name="epiglottal" xml:id="epiglot"/> -->
+            </fs>
+         </div>
+
+         <div xml:id="offset-release-features">
+            <fs>
+               <f name="aspiration" xml:id="asp" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3090"/>
+               <!-- only may occur with stops although all fricatives and affricates inherantly have this property -->
+               <!-- "Aspirated" http://www.isocat.org/datcat/DC-3090  (GOLD) Definition: A sound is described as 'aspirated' when it has a greater rate of airflow than occurs in modal voice for a period of time before or after a stricture. It often accompanies a consonant which precedes a vowel, the beginning of which is unvoiced. [Ladefoged and Maddieson 1996: 48] Source [Ladefoged and Maddieson 1996: 48] -->
+               <f name="un-aspirated" xml:id="un-asp" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3539"/>
+               <!-- "Unaspirated" http://www.isocat.org/datcat/DC-3539 (GOLD) Definition: Unaspirated refers to the configuration of glottal opening, release at the oral stricture, and vocal fold vibration in which the glottal opening gesture begins at the moment that the oral closure is made, but the maximum width of the glottal opening is reached at about the mid-point of the oral closure duration and the vocal folds return to a voicing position at about the moment of release. This typically results in a weak sounding release which lacks the burst of air characteristic of aspirated phonemes. [Ladefoged and Maddieson 1996: 66-70] Source	[Ladefoged and Maddieson 1996: 66-70] -->
+               <f name="un-released" xml:id="unrelsd"/>
+               <!-- major in US Engl -->
+               <!--  not immediately needed offset features 
+                  <f name="nasal-release" xml:id="nas-release"/>
+                  <f name="lateral-release" xml:id="lat-release"/> -->
+            </fs>
+         </div>
+
+         <div xml:id="frontness">
+            <desc>'Frontness' is associated with "place of stricture" in what is a rough equivalent
+               description of "place-of-articulation" in vowels; This terminology is somewhat vague
+               and requires additional elaboration of articulatory specifics</desc>
+            <!-- eventually link the terms of V 'frontness' to the relative articulation places in the oral and glottal articulation space -->
+            <fs>
+               <f name="front" xml:id="frnt"/>
+               <f name="central" xml:id="cntrl"/>
+               <f name="back" xml:id="bk"/>
+
+               <f name="advanced-toungue-root" xml:id="advncd"/>
+               <!-- very minor features -->
+               <f name="centralized" xml:id="cntrlzd"/>
+               <!-- very minor features -->
+               <f name="mid-centralized" xml:id="md-cntrlized"/>
+               <!-- very minor features -->
+               <f name="retracted-toungue-root" xml:id="retrctd"/>
+               <!-- very minor features -->
+            </fs>
+         </div>
+
+         <div xml:id="height">
+            <desc>term commonly associated with 'degree of stricture' in what is a rough equivalent
+               description of "place-of-articulation" in vowels; This terminology is somewhat vague
+               and requires additional elaboration of articulatory specifics</desc>
+            <fs>
+               <f name="close" xml:id="V-cls" sameAs="#V-hi"/>
+               <f name="high" xml:id="V-hi" sameAs="#V-cls"/>
+               <f name="close-mid" xml:id="V-cls-md"/>
+               <f name="open-mid" xml:id="V-opn-md"/>
+               <f name="open" xml:id="V-opn" sameAs="#V-lo"/>
+               <f name="low" xml:id="V-lo" sameAs="#V-opn"/>
+
+               <f name="raised" xml:id="raised"/>
+               <!-- very minor features -->
+               <f name="lowered" xml:id="lowered"/>
+               <!-- very minor features -->
+               <f name="apical" xml:id="apcl"/>
+               <!-- very minor features -->
+               <f name="laminal" xml:id="lmnl"/>
+               <!-- very minor features -->
+               <f name="rhoticity" xml:id="rhtcty"/>
+               <!-- found in UK Engl in words with offset open vowels; -->
+            </fs>
+         </div>
+
+         <div xml:id="rounding">
+            <desc>Rounding is mostly used in describing variation in vowel articulation features,
+               although there are numerous instances of non-vowels that have this feature, eg.:
+               labio-velar glide "w" </desc>
+            <fs>
+               <f name="rounded" xml:id="rnd"/>
+               <!-- shares articulatory, auditory and acoustic properties with all 'labials'; -->
+               <f name="more-rounded" xml:id="X-rnd"/>
+               <!-- -->
+               <f name="less-rounded" xml:id="L-rnd"/>
+            </fs>
+         </div>
+
+         <div xml:id="nasalization">
+            <desc/>
+            <fs>
+               <!-- ? ADD "pre-nasalization" to this section? -->
+               <f name="nasalized" xml:id="Nas" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3329">
+                  <!-- GOLD: is_a /SupraLaryngealProperty; The class of properties that describe the degree to which the velum or soft palate is raised or lowered, allowing or prohibiting air from escaping through the nose. [Kenstowicz 1994: 143] Source; [Kenstowicz 1994: 143]-->
+                  <string>̃</string>
+               </f>
+               <!-- in MIX nasalization is both phonetic and phonological; can occur phonetically on vowels and glides; phonologically it occurs with vowels and can be observed co-occurring with glottalization in vowels as well  -->
+            </fs>
+         </div>
+
+         <div xml:id="glottalization">
+            <desc/>
+            <fs>
+               <!-- ? ADD/link "pre-glottalization" to this section? -->
+               <f name="creaky" xml:id="crky" sameAs="#lryng"
+                  xmlns:dcr="http://www.isocat.org/ns/dcr"
+                  dcr:datcat="http://www.isocat.org/datcat/DC-3146"/>
+               <!--  glottalization in MIX vowel is has an intermediate phonetic and phonological status as it can signifiy in the vowel what whould otherwise be signaled with a full glottal stop; phonologically it occurs simultaneously with vowels and can be observed co-occurring with nasalization in vowels as well -->
+               <f name="laryngeal" xml:id="lryng" sameAs="#crky"/>
+            </fs>
+         </div>
+
+         <div xml:id="duration">
+            <!-- corresponds in higher level terms to conceptual primitive domain TIME -->
+            <desc/>
+            <fs>
+               <f name="extra-short" xml:id="X-short"/>
+               <f name="short" xml:id="short"/>
+               <f name="single"><default/></f>
+               <f name="long" xml:id="long">
+                  <string/>
+               </f>
+               <!-- expressed in; mixtec orthography as: VV; in; IPA as: (vv | vː); in ZSAMPA as: (v:) -->
+               <f name="geminate" xml:id="gem" sameAs="#long"/>
+               <f name="half-long" xml:id="hlf-long"/>
+            </fs>
+         </div>
+
+         <div type="complex-types">
+            <desc>These features are for phones in which more than one articulation place and/or
+               manner is involved. Many of these features can co-occur.</desc>
+            <!-- Affricates: Define potential ordering -->
+
+
+            <div xml:id="onset-features">
+               <desc>"Onset" phonetic features that occur in the onset position of a given complex
+                  phonetic unit; This inventory is non-exhastive</desc>
+
+               <fs>
+                  <f name="pre-nasalization" xml:id="pre-Nas"/>
+                  <f name="pre-glottalized" xml:id="pre-Glot"/>
+                  <f name="pre-spirantized" xml:id="pre-Sprnt"/>
+                  <!-- 'spirant' used as an alternative term for 'fricative' -->
+               </fs>
+            </div>
+
+            <div xml:id="glide-features">
+               <desc><!-- cite from 'Ohala-Lorentz-1977' and 'OConnor-et-Alii-1957' --> Most glides
+                  are voiced; the default feature status should thus be assumed to have voicing; All
+                  glides contain two places of articulation (although these only represent the start
+                  and endpoint of the gesture; the core of the acoustic signal is produced in
+                  between these two points); The two primary places of articulation in a glide are
+                  expressed in the linguistic terminology for the particular phone: eg. 'labio-velar
+                  glide', 'alveo-palatal glide', etc. However, the ordering of the two places of
+                  articulation are not inherantly expressed in how we refer to these items as
+                  depending on the surrounding phonetic context, such as the place of articulation
+                  of the previous and following phones, or whether they occur in including utterance
+                  initial, final contexts, the order in which the glides two places are articulated
+                  will change in any language. </desc>
+               <fs>
+                  <!-- MAKE DEFAULT GLIDE THIS FS AND HAVE MORE SPECIFIC VERSIONS CONTAINED WITHIN? -->
+                  <f name="glide" corresp="#semi-V"><default/></f>
+                  <!-- -->
+                  <f name="forward-glide" xml:id="G-fwd"/>
+                  <!-- -->
+                  <f name="back-glide" xml:id="G-bk"/>
+                  <!--  -->
+               </fs>
+            </div>
+
+            <div xml:id="affricate-features">
+               <desc>(DESCRIPTION OF AFFRICATE FEATURES)</desc>
+               <fs feats="#affric">
+                  <f name="affricate-stop-fricative" xml:id="affric-stp-fric"/>
+                  <!-- eg: [ts],[dz],[ʧ],[ʤ], etc. -->
+                  <f name="affricate-fricative-stop" xml:id="affric-fric-stp"/>
+                  <!-- eg: [st], [sk] -->
+                  <!-- figure out how to include features that distinguish the order in which the places of articulation occur; eg. [sk] (alv > velar)  -->
+               </fs>
+            </div>
+
+            <div xml:id="complex-vocalic-features">
+               <desc>In a dipthong, a phone has two vowel articulations, likewise, a trithong has
+                  three vowel articulations. The duration of each portion of both of these may be
+                  reduced from norm in which single portion occurs in isolation. The transitions
+                  between certain vowels with different front-back features, height, and/or
+                  roundness may create glide-like qualities, which can give rise to what is often
+                  referred to as an 'epentheic' glide.</desc>
+               <fs>
+                  <f name="diphthongs" xml:id="V-diphthng"/>
+                  <!--    -->
+                  <f name="trithong" xml:id="V-trithng"/>
+                  <!-- , duration of each may be reduced from norm in which single portion occurs in isolation. The transitions between certain vowels may create glide-like quality.   -->
+               </fs>
+            </div>
+
+            <!-- DO I NEED TO INCLUDE 'FDECL' FOR "DOUBLE ARTICULATIONS" & "AFFRICATES" ? -->
+            <div xml:id="complex-offset">
+               <desc/>
+               <fs>
+                  <f name="labial-offset" xml:id="off-G-lab"/>
+                  <!-- MIX "kw"; "w" has feature "#rounded"   -->
+                  <f name="palatal-offset" xml:id="off-G-palat"/>
+                  <f name="velarized-offset" xml:id="off-velar"/>
+                  <f name="pharyngealized-offset" xml:id="off-phryngl"/>
+                  <!-- very minor features -->
+               </fs>
+            </div>
+         </div>
+
+         <div type="pitch-based-features">
+            <desc/>
+            <div xml:id="level-tones">
+               <desc/>
+               <fs>
+                  <f name="low" xml:id="L"/>
+                  <!-- ZSAMPA: "_L"; IPA: "V̀"; Pastor & Azcona style: "V̀"; Orth: (not represented) -->
+                  <f name="mid" xml:id="M" sameAs="#Ø"><default/></f>
+                  <!-- ZSAMPA: "_M"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
+                  <f name="unmarked" xml:id="Ø" sameAs="#M"/>
+                  <!-- ZSAMPA: "_M"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
+                  <f name="high" xml:id="H"/>
+                  <!-- ZSAMPA: "_H"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
+                  <f name="extra-low" xml:id="XL"/>
+                  <!-- not in MIX; only for other languages and to map to IPA-->
+                  <f name="extra-high" xml:id="XH"/>
+                  <!-- not in MIX; only for other languages and to map to IPA-->
+               </fs>
+            </div>
+
+            <div xml:id="contour-tones">
+               <desc/>
+               <fs>
+                  <f name="falling" xml:id="F"/>
+                  <!--Phonologically considered to be equivalent to "L"; (Falling features 2 contrasting pitch levels) ZSAMPA: "_F"; IPA: "V̀"; Pastor & Azcona style: "V̀"; Orth: (not represented) -->
+                  <f name="rising" xml:id="R"/>
+                  <!-- Phonologically considered to be equivalent to "H"; (Rising features 2 contrasting pitch levels) ZSAMPA: "_R"; IPA: "V́"; Pastor & Azcona style: "V́"; Orth: (not represented) -->
+                  <f name="falling-rising" xml:id="F_R"/>
+                  <!-- (Falling-Rising features 3 contrasting pitch levels) ZSAMPA: "_F_R"; IPA: "V̀V́"; Pastor & Azcona style: "V̀V́"; Orth: (only multiple vowels represented (length) -->
+                  <f name="rising-falling" xml:id="R_F"/>
+                  <!-- (Rising-Falling features 3 contrasting pitch levels) ZSAMPA: "_R_F"; IPA: "V́V̀"; Pastor & Azcona style: "V́V̀"; Orth: (only multiple vowels represented (length) -->
+                  <f name="high-rising" xml:id="HR"/>
+                  <!-- not in MIX; only for other languages and to map to IPA-->
+                  <f name="low-rising" xml:id="LR"/>
+                  <!-- not in MIX; only for other languages and to map to IPA-->
+               </fs>
+            </div>
+
+            <div xml:id="lexical-stress">
+               <desc>In non-tonal languages, lexical stress is expressed through pitch alterations
+                  in a lexical item. Emotional, discourse and utterance contexts may also effect the
+                  way in which this is expressed. In US English, this often also has effects on the
+                  vocalic forms of given lexical items.</desc>
+               <fs>
+                  <f name="primary-lexical-stress" xml:id="stress1"/>
+                  <f name="secondary-lexical-stress" xml:id="stress2"/>
+               </fs>
+            </div>
+
+            <div xml:id="pitch-alternations">
+               <!-- (prosody / emotion /discourse) -based alterations -->
+               <desc/>
+               <fs>
+                  <f name="downstep" xml:id="dwnstp"/>
+                  <f name="upstep" xml:id="upstp"/>
+                  <f name="global-rise" xml:id="R-glbl"/>
+                  <f name="global-fall" xml:id="F-glbl"/>
+               </fs>
+            </div>
+         </div>
+
+
+
+
+
+         <div xml:id="mix-phones" type="mix-phono-inventory">
+            <desc>All phonetic features included herein are observed in the spoken MIX languge
+               dataset and include all phones that are phonologically contrastive as well as
+               conditioned and unconditioned variants of the aforementioned. Feature structues are
+               defined in terms of the basic features of which they are comprised, all of which are
+               individually defined in the previous 'fsdDecl'. For each feature, the IPA and ZSAMPA
+               (based) transcription strings are declared in this section. </desc>
+
+            <div xml:id="vowels-mix">
+               <desc>all vowels are voiced; phonologically vowels can be either "oral" or "nasal";
+                  phonetically vowels can feature "oral", "nasalized", or "creaky"."Creakyness" is
+                  conditioned e.g.( (V,Ṽ) ->(V̰,Ṽ̰)/[+glottal]) and non contrastive in the presence
+                  of a glottal stop, creakness may co-occur with oral or nasalized vowels</desc>
+
+
+               <fs feats="#V">
+                  <!-- '#V' tagged because all features contained have descriptive @'vowel' -->
+
+                  <f name="vowels-oral-MIX" xml:id="V-MIX">
+                     <fs feats="#V-cls #V-hi #frnt" xml:id="V-hi-frnt-MIX">
+                        <f name="ipa">
+                           <string>i</string>
+                        </f>
+                        <f name="zsampa">
+                           <string>i</string>
+                        </f>
+                     </fs><!-- i -->
+                     <fs feats="#V-cls #V-hi #frnt #crky" xml:id="V-hi-frnt-crky-MIX">
+                        <f name="ipa">
+                           <string>ḭ</string>
+                        </f>
+                        <f name="zsampa">
+                           <string>i_k</string>
+                        </f>
+                     </fs><!-- ḭ -->
+                     <fs feats="#V-cls #V-hi #frnt #V-cls #long" xml:id="V-hi-frnt-long-MIX">
+                        <f name="ipa"><string>ii</string></f>
+                        <f name="ipa"><string>iː</string></f>
+                        <f name="zsampa"><string>i:</string></f>
+                     </fs><!-- ii, iː, i: -->
+                     <fs feats="#V-cls #V-hi #frnt #crky #long" xml:id="V-hi-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ḭḭ</string></f>
+                        <f name="ipa"><string>ḭː</string></f>
+                        <f name="zsampa"><string>i:_k</string></f>
+                     </fs><!-- ḭḭ, ḭː, ḭ: -->
+                     <fs feats="#V-cls-md #frnt" xml:id="V-cls-md-frnt-MIX">
+                        <f name="ipa"><string>e</string></f>
+                        <f name="zsampa"><string>e</string></f>
+                     </fs><!-- e ; ZSAMPA: e -->
+                     <fs feats="#V-cls-md #frnt #crky" xml:id="V-cls-md-frnt-crky-MIX">
+                        <f name="ipa"><string>ḛ</string></f>
+                        <f name="zsampa"><string>e_k</string></f>
+                     </fs><!-- ḛ ; ZSAMPA: e_k-->
+                     <fs feats="#V-opn-md #frnt" xml:id="V-opn-md-frnt-MIX">
+                        <f name="ipa"><string>ɛ</string></f>
+                        <f name="zsampa"><string>E</string></f>
+                     </fs><!-- ɛ ; ZSAMPA: E ; Unicode-025B; UTF8- C9 9B; (variant of "e") -->
+                     <fs feats="#V-opn-md #frnt #crky" xml:id="V-opn-md-frnt-crky-MIX">
+                        <f name="ipa"><string>ɛ̰</string></f>
+                        <f name="zsampa"><string>E_k</string></f>
+                     </fs><!-- ɛ̰̰̰̰̰ɛ̰  ; ZSAMPA: E_k ; Unicode-025B; UTF8- C9 9B; (variant of "e") -->
+                     <fs feats="#V-cls-md #frnt #long" xml:id="V-cls-md-frnt-long-MIX">
+                        <f name="ipa"><string>ee</string></f>
+                        <f name="ipa"><string>eː</string></f>
+                        <f name="zsampa"><string>e:</string></f>
+                     </fs><!-- ee, eː, e:  ZSAMPA e: -->
+                     <fs feats="#V-cls-md #frnt #long #crky" xml:id="V-cls-md-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ḛḛ</string></f>
+                        <f name="ipa"><string>ḛː</string></f>
+                        <f name="zsampa"><string>e:_k</string></f>
+                     </fs><!-- ḛḛ, ḛː, ḛ:  ZSAMPA: e:_k -->
+                     <fs feats="#V-opn-md #frnt #long" xml:id="V-opn-md-frnt-long-MIX">
+                        <f name="ipa"><string>ɛɛ</string></f>
+                        <f name="ipa"><string>ɛː</string></f>
+                        <f name="zsampa"><string>E:</string></f>
+                     </fs><!-- ɛɛ, ɛː, ɛ: ; ZSAMPA: E: (variant of "ee, eː, e:") -->
+                     <fs feats="#V-opn-md #frnt #crky #long" xml:id="V-opn-md-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ɛ̰ɛ̰</string></f>
+                        <f name="ipa"><string>ɛ̰ː</string></f>
+                        <f name="zsampa"><string>E:_k</string></f>
+                     </fs><!--ɛ̰ɛ̰, ɛ̰ː, ɛ̰:  ZSAMPA: E:_k ; Unicode-025B; UTF8- C9 9B; (variant of "e") -->
+                     <fs feats="#V-opn #V-lo #frnt" xml:id="V-opn-lo-frnt-MIX">
+                        <f name="ipa"><string>a</string></f>
+                        <f name="zsampa"><string>a</string></f>
+                     </fs><!-- a -->
+                     <fs feats="#V-opn #V-lo #frnt #crky" xml:id="V-opn-lo-frnt-crky-MIX">
+                        <f name="ipa"><string>a̰</string></f>
+                        <f name="zsampa"><string>a_k</string></f>
+                     </fs><!-- (conditioned variant of [a]); a̰̰ ; ZSAMPA: a_k-->
+                     <fs feats="#V-opn #V-lo #frnt #long" xml:id="V-opn-lo-frnt-long-MIX">
+                        <f name="ipa"><string>aː</string></f>
+                        <f name="ipa"><string>aa</string></f>
+                        <f name="zsampa"><string>a:</string></f>
+                     </fs><!-- a, aː, a:  ZSAMPA: a: -->
+                     <fs feats="#V-opn #V-lo #frnt #long #crky" xml:id="V-opn-lo-frnt-long-crky-MIX">
+                        <f name="ipa"><string>a̰ː</string></f>
+                        <f name="ipa"><string>a̰a̰</string></f>
+                        <f name="zsampa"><string>a:_k</string></f>
+                     </fs><!-- a̰ː(conditioned variant of [a̰̰:]); a, aː, a: ZSAMPA: a:_k  -->
+                     <fs feats="#V-hi #bk #rnd" xml:id="V-hi-bk-rnd-MIX">
+                        <f name="ipa"><string>u</string></f>
+                        <f name="zsampa"><string>u</string></f>
+                     </fs><!-- u -->
+                     <fs feats="#V-hi #bk #rnd #crky" xml:id="V-hi-bk-rnd-crky-MIX">
+                        <f name="ipa"><string>ṵ</string></f>
+                        <f name="zsampa"><string>u_k</string></f>
+                     </fs><!-- (conditioned variant of [u]);  IPA [ṵ] -->
+                     <fs feats="#V-hi #bk #rnd #long" xml:id="V-hi-bk-rnd-long-MIX">
+                        <f name="ipa"><string>uː</string></f>
+                        <f name="ipa"><string>uu</string></f>
+                        <f name="zsampa">u:<string/></f>
+                     </fs><!-- uu, uː, u: ; ZSAMPA: u: -->
+                     <fs feats="#V-hi #bk #rnd #long #crky" xml:id="V-hi-bk-rnd-long-crky-MIX">
+                        <f name="ipa"><string>ṵː</string></f>
+                        <f name="ipa"><string>ṵṵ</string></f>
+                        <f name="zsampa">u:_k<string/></f>
+                     </fs><!-- (conditioned variant of [uu]); ZSAMPA: u:_k -->
+                     <fs feats="#V-cls-md #bk #rnd" xml:id="V-cls-md-bk-rnd-MIX">
+                        <f name="ipa"><string>o</string></f>
+                        <f name="zsampa"><string>o</string></f>
+                     </fs><!-- o -->
+                     <fs feats="#V-cls-md #bk #rnd #crky" xml:id="V-cls-md-bk-rnd-ckry-MIX">
+                        <f name="ipa"><string>o̰</string></f>
+                        <f name="zsampa"><string>o_k</string></f>
+                     </fs><!-- o̰̰ ; ZSAMPA: o_k -->
+                     <fs feats="#V-cls-md #bk #rnd #long" xml:id="V-cls-md-bk-rnd-long-MIX">
+                        <f name="ipa"><string>ɔ̰ɔ̰</string></f>
+                        <f name="zsampa"><string>O:</string></f>
+                     </fs><!-- (has non-contrastive, non-conditioned variants in vowel quality  [ɔ], and conditioned, semi-contrastive variants due to neighboring laryngels causing creaky variants) -->
+                     <fs feats="#V-cls-md #bk #rnd #long #crky"
+                        xml:id="V-cls-md-bk-rnd-long-crky-MIX">
+                        <f name="ipa"><string>ɔ̰ː</string></f>
+                        <f name="ipa"><string>ɔ̰ɔ̰</string></f>
+                        <f name="zsampa"><string>O:_k</string></f>
+                     </fs><!-- (conditioned variant of [oo]); ZSAMPA: o:_k -->
+                     <fs feats="#V-opn-md #bk #rnd" xml:id="V-opn-md-bk-rnd-MIX">
+                        <f name="ipa"><string>ɔ</string></f>
+                        <f name="zsampa"><string>O</string></f>
+                     </fs><!-- ɔ  (variant of "o"); LATIN SMALL LETTER OPEN O; UNICODE: 0254; UTF8: C9 94 ; ZSAMPA: O  -->
+                     <fs feats="#V-opn-md #bk #rnd #crky" xml:id="V-opn-md-bk-rnd-ckry-MIX">
+                        <f name="ipa"><string>ɔ̰</string></f>
+                        <f name="zsampa"><string>O_k</string></f>
+                     </fs><!-- ɔ  (conditioned variant of "o"); LATIN SMALL LETTER OPEN O; UNICODE: 0254; UTF8: C9 94 ; ZSAMPA: O  -->
+                     <fs feats="#V-opn-md #bk #rnd #long" xml:id="V-opn-md-bk-rnd-long-MIX">
+                        <f name="ipa"><string>ɔ</string></f>
+                        <f name="ipa"><string>ɔɔ</string></f>
+                        <f name="zsampa"><string>OO</string></f>
+                     </fs><!-- (variant of "oo, oː, o:") ɔɔ, ɔː, ɔ: ; ZSAMPA: O: -->
+                     <fs feats="#V-opn-md #bk #rnd #long #crky"
+                        xml:id="V-opn-md-bk-rnd-long-crky-MIX">
+                        <f name="ipa"><string>ɔ̰</string></f>
+                        <f name="ipa"><string>ɔ̰ɔ̰</string></f>
+                        <f name="zsampa"><string>O:_K</string></f>
+                     </fs><!-- ɔɔ, ɔː, ɔ: ; ZSAMPA: O:_k(variant of "oo, oː, o:")-->
+                  </f>
+
+                  <f name="vowels-nasal-MIX" xml:id=" Ṽ-MIX"><!-- combining tilde; UNICODE: 0303; UTF8 CC 83 -->
+                     <fs feats="#V-cls #Nas #V-hi #frnt" xml:id="V-nas-hi-frnt-MIX">
+                        <f name="ipa"><string>ĩ</string></f>
+                        <f name="zsampa"><string>i_n</string></f>
+                     </fs><!-- ĩ ; LATIN SMALL LETTER I WITH TILDE; UNICODE 0129; UTF8 C4 A9-->
+                     <fs feats="#V-cls #Nas #V-hi #frnt #crky" xml:id="V-nas-hi-frnt-crky-MIX">
+                        <f name="ipa"><string>ḭ̃</string></f>
+                        <f name="zsampa"><string>i_n_k</string></f>
+                     </fs><!-- ḭ̰̰̃ -->
+                     <fs feats="#V-cls #Nas #V-hi #frnt #V-cls #long"
+                        xml:id="V-nas-hi-frnt-long-MIX">
+                        <f name="ipa"><string>ĩĩ</string><string>ĩː</string></f>
+                        <f name="zsampa"><string>i:_n</string></f>
+                     </fs><!-- ĩĩ, ĩː, ĩ: -->
+                     <fs feats="#V-cls #Nas #V-hi #frnt #V-cls #long #crky"
+                        xml:id="V-nas-hi-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ḭ̃ḭ̃</string></f>
+                        <f name="zsampa"><string>i:_n_k</string></f>
+                     </fs><!-- ĩĩ, ĩː, ĩ: -->
+                     <fs feats="#V-cls-md #Nas #frnt" xml:id="V-nas-cls-md-frnt-MIX">
+                        <f name="ipa"><string>ẽ</string></f>
+                        <f name="zsampa"><string>ẽ</string></f>
+                     </fs><!-- ẽ -->
+                     <fs feats="#V-cls-md #Nas #frnt #crky" xml:id="V-nas-cls-md-frnt-crky-MIX">
+                        <f name="ipa"><string>ḛ̃</string></f>
+                        <f name="zsampa"><string>e_n_k</string></f>
+                     </fs><!-- ḛ̃ -->
+                     <fs feats="#V-opn-md #Nas #frnt" xml:id="V-nas-opn-md-frnt-MIX">
+                        <f name="ipa"><string>ɛ̃</string></f>
+                        <f name="zsampa"><string>E_n</string></f>
+                     </fs><!-- (variant of "ẽ") ɛ̃  Unicode-025B; UTF8- C9 9B; -->
+                     <fs feats="#V-opn-md #Nas #frnt #crky" xml:id="V-nas-opn-md-frnt-crky-MIX">
+                        <f name="ipa"><string>ɛ̰̃</string></f>
+                        <f name="zsampa"><string>E_n_k</string></f>
+                     </fs><!-- (conditioned variant of "ẽ") ɛ̃  Unicode-025B; UTF8- C9 9B; -->
+                     <fs feats="#V-cls-md #Nas #frnt #long" xml:id="V-nas-cls-md-frnt-long-MIX">
+                        <f name="ipa"><string>ẽẽ</string><string>ẽː</string></f>
+                        <f name="zsampa"><string>e:_n</string></f>
+                     </fs><!-- ẽẽ, ẽː, ẽ: -->
+                     <fs feats="#V-cls-md #Nas #frnt #long #crky"
+                        xml:id="V-nas-cls-md-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ḛ̃ḛ̃</string><string>ḛ̃ː</string></f>
+                        <f name="zsampa"><string>e:_n_k</string></f>
+                     </fs><!--(conditioned variant of "ḛ̃ḛ̃") ẽẽ, ẽː, ẽ: -->
+                     <fs feats="#V-opn-md #Nas #frnt #long" xml:id="V-nas-opn-md-frnt-long-MIX">
+                        <f name="ipa"><string>ɛ̃ɛ̃</string><string>ɛ̃ː</string></f>
+                        <f name="zsampa"><string/></f>
+                     </fs><!-- , ɛ̃ː, ɛ̃: Unicode-025B; UTF8- C9 9B; (variant of "ẽẽ, ẽː, ẽ:") -->
+                     <fs feats="#V-opn-md #Nas #frnt #long #crky"
+                        xml:id="V-nas-opn-md-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ɛ̰̃ɛ̰̃</string><string>ɛ̰̃ː</string></f>
+                        <f name="zsampa"><string>E:_n_k</string></f>
+                     </fs><!-- ɛ̃ɛ̃, ɛ̃ː, ɛ̃: Unicode-025B; UTF8- C9 9B; (variant of "ẽẽ, ẽː, ẽ:") -->
+                     <fs feats="#V-opn #V-lo #Nas #frnt" xml:id="V-nas-opn-lo-frnt-MIX">
+                        <f name="ipa"><string>ã</string></f>
+                        <f name="zsampa"><string>a_n</string></f>
+                     </fs><!-- ã -->
+                     <fs feats="#V-opn #V-lo #Nas #frnt #crky" xml:id="V-nas-opn-lo-frnt-crky-MIX">
+                        <f name="ipa"><string>ã̰</string></f>
+                        <f name="zsampa"><string>a_n_k</string></f>
+                     </fs><!--(conditioned variant of [ã̰̰] -->
+                     <fs feats="#V-opn #V-lo #Nas #frnt #long" xml:id="V-nas-opn-lo-frnt-long-MIX">
+                        <f name="ipa"><string>ãã</string><string>ãː</string></f>
+                        <f name="zsampa"><string>a:_n</string></f>
+                     </fs><!-- , ã:  -->
+                     <fs feats="#V-opn #V-lo #Nas #frnt #long #crky"
+                        xml:id="V-nas-opn-lo-frnt-long-crky-MIX">
+                        <f name="ipa"><string>ã̰ã̰</string><string>ã̰ː</string></f>
+                        <f name="zsampa"><string>a:_n_k</string></f>
+                     </fs><!--(conditioned variant of [ã̰̰ã̰̰] ãã, ãː, ã:  -->
+                     <fs feats="#V-hi #bk #Nas #rnd" xml:id="V-nas-hi-bk-rnd-MIX">
+                        <f name="ipa"><string>ũ</string></f>
+                        <f name="zsampa"><string>u_n</string></f>
+                     </fs><!-- ũ -->
+                     <fs feats="#V-hi #bk #Nas #rnd #crky" xml:id="V-nas-hi-bk-rnd-crky-MIX">
+                        <f name="ipa"><string>ṵ̃</string></f>
+                        <f name="zsampa"><string>u_n_k</string></f>
+                     </fs><!-- ṵ̃ -->
+                     <fs feats="#V-hi #bk #Nas #rnd #long" xml:id="V-nas-hi-bk-rnd-long-MIX">
+                        <f name="ipa"><string>ũũ</string><string>ũː</string></f>
+                        <f name="zsampa"><string>u:_n</string></f>
+                     </fs><!-- ũũ, ũː, ũ: -->
+                     <fs feats="#V-hi #bk #Nas #rnd #long #crky"
+                        xml:id="V-nas-hi-bk-rnd-long-crky-MIX">
+                        <f name="ipa"><string>ṵ̃ṵ̃</string><string>ṵ̃ː</string></f>
+                        <f name="zsampa"><string>u:_n_k</string></f>
+                     </fs><!-- ṵ̃ṵ̃, ṵ̃ː, ṵ̃: -->
+                     <fs feats="#V-cls-md #Nas #bk #rnd" xml:id="V-nas-cls-md-bk-rnd-MIX">
+                        <f name="ipa"><string>õ</string></f>
+                        <f name="zsampa"><string>o_n</string></f>
+                     </fs><!-- õ -->
+                     <fs feats="#V-cls-md #Nas #bk #rnd #crky" xml:id="V-nas-cls-md-bk-rnd-crky-MIX">
+                        <f name="ipa"><string>õ̰</string></f>
+                        <f name="zsampa"><string>o_n_k</string></f>
+                     </fs><!-- (conditioned variant of [õ̰] -->
+                     <fs feats="#V-opn-md #Nas #bk #rnd" xml:id="V-nas-opn-md-bk-rnd-MIX">
+                        <f name="ipa"><string>ɔ̃</string></f>
+                        <f name="zsampa"><string>O_n</string></f>
+                     </fs><!-- ɔ̃  (unconditioned variant of [õ])-->
+                     <fs feats="#V-opn-md #Nas #bk #rnd #crky" xml:id="V-nas-opn-md-bk-rnd-crky-MIX">
+                        <f name="ipa"><string>ɔ̰̃</string></f>
+                        <f name="zsampa"><string>O_n_k</string></f>
+                     </fs><!--(conditioned variant of [õ]) ɔ̃  -->
+                     <fs feats="#V-cls-md #Nas #bk #rnd #long" xml:id="V-nas-cls-md-bk-rnd-long-MIX">
+                        <f name="ipa"><string>õõ</string><string>õː</string></f>
+                        <f name="zsampa"><string>o:_n</string></f>
+                     </fs><!-- õõ, õː, õ: -->
+                     <fs feats="#V-cls-md #Nas #bk #rnd #long #crky"
+                        xml:id="V-nas-cls-md-bk-rnd-long-crky-MIX">
+                        <f name="ipa"><string>õ̰õ̰</string><string>õ̰ː</string></f>
+                        <f name="zsampa"><string>o:_n_k</string></f>
+                     </fs><!-- (conditioned variant of [õõ], õː, õ: -->
+                     <fs feats="#V-opn-md #Nas #bk #rnd #long" xml:id="V-nas-opn-md-bk-rnd-long-MIX">
+                        <f name="ipa"><string>ɔ̃ɔ̃</string><string>ɔ̃ː</string></f>
+                        <f name="zsampa"><string>O:_n</string></f>
+                     </fs><!-- ɔ̃ɔ̃, ɔ̃ː, ɔ̃: (unconditioned variant of "õõ, õː, õ:")-->
+                     <fs feats="#V-opn-md #Nas #bk #rnd #long #crky"
+                        xml:id="V-nas-opn-md-bk-rnd-long-crky-MIX">
+                        <f name="ipa"><string>ɔ̰̃ɔ̰̃</string><string>ɔ̰̃ː</string></f>
+                        <f name="zsampa"><string>O:_n_k</string></f>
+                     </fs><!-- ɔ̃ɔ̃, ɔ̃ː, ɔ̃: (conditioned variant of õõ, õː, õ:")-->
+                  </f>
+               </fs>
+
+            </div>
+
+            <div xml:id="consonants-MIX">
+
+
+               <fs>
+                  <f name="stops-MIX" xml:id="Stp-MIX"><!-- all instances have feature STOP (#stp) -->
+                     <fs feats="#vc #bilab #stp" xml:id="vc-bilab-stp-MIX">
+                        <f name="ipa">b</f>
+                        <f name="zsampa"><string>b</string></f>
+                     </fs><!-- b (has unconditioned labial-fricative variants: IPA: "β"; "v")-->
+                     <fs feats="#vcls #bilab #stp" xml:id="vcls-bilab-stp-MIX">
+                        <f name="ipa">p</f>
+                        <f name="zsampa"><string>p</string></f>
+                     </fs><!-- p (only occurs in words of foreign orgins: eg:  [paa] 'father'; [pãː] 'bread' (from span. ['pan]) -->
+                     <fs feats="#vcls #alv #stp" xml:id="vcls-alv-stp-MIX">
+                        <f name="ipa">t</f>
+                        <f name="zsampa"><string>t</string></f>
+                     </fs><!-- t (can occur in variation forms: [tʰ] or [t̪])  -->
+                     <fs feats="#vcls #alv #stp #asp" xml:id="vcls-alv-stp-asp-MIX">
+                        <f name="ipa">tʰ</f>
+                        <f name="zsampa"><string>t_h</string></f>
+                     </fs><!-- variant of 't'; IPA: [tʰ];  -->
+                     <fs feats="#semi-vc #alv #stp #asp" xml:id="semi-vc-alv-stp-asp-MIX">
+                        <f name="ipa">t̬</f>
+                        <f name="zsampa"><string>t_v</string></f>
+                     </fs><!-- occurs as non-contrastive, but patterned variant of 't'; IPA: [t];  -->
+                     <fs feats="#vcls #alv #stp #dent" xml:id="vcls-alv-stp-dent-MIX">
+                        <f name="ipa">t̪</f>
+                        <f name="zsampa"><string>t_d</string></f>
+                     </fs><!-- variant of 't'; IPA: [t̪] -->
+                     <fs feats="#vc #alv #stp" xml:id="vc-alv-stp-MIX">
+                        <f name="ipa">d</f>
+                        <f name="zsampa"><string>d</string></f>
+                     </fs><!-- d (non-contrastive phonetic variant of [t] occuring in voiced environments; [d̪])  -->
+                     <fs feats="#vcls #velar #stp" xml:id="vcls-velar-stp-MIX">
+                        <f name="ipa">k</f>
+                        <f name="zsampa"><string>k</string></f>
+                     </fs><!-- IPA: "k" (has two non-contrastive variants) -->
+                     <fs feats="#vcls #velar #stp #semi-vc" xml:id="semi-vc-velar-stp-MIX">
+                        <f name="ipa"><string>k̬</string></f>
+                        <f name="zsampa"><string>k_v</string></f>
+                     </fs><!-- k̬ (this is non-phonologically contrastive but occurs regularly in certain lexical items; eg. IPA: [k̬à] 'tpc-mkr')-->
+                     <fs feats="#vc #velar #stp" xml:id="vc-velar-stp-MIX">
+                        <f name="ipa"><string>g</string></f>
+                        <f name="zsampa"><string>g</string></f>
+                     </fs><!--conditioned variant of 'k'; IPA: [g] -->
+                     <fs feats="#vcls #glot #stp" xml:id="vcls-glot-stp-MIX">
+                        <f name="ipa"><string>ʔ</string></f>
+                        <f name="zsampa"><string>?</string></f>
+                     </fs><!-- ʔ (LATIN LETTER GLOTTAL STOP; UNICODE 0294; UTF8: CA 94) Varition occurs when laryngealization leaks onto surrounding vowels -->
+                     <fs feats="#semi-vc #glot #stp" xml:id="semi-vc-glot-stp-MIX">
+                        <f name="ipa"><string>ʔ</string></f>
+                        <f name="zsampa"><string>?</string></f>
+                     </fs>
+                  </f>
+                  <f name="trill-tap-flap-MIX" xml:id="trill-tap-flap-MIX">
+                     <fs feats="#alv #tap-flap" xml:id="alv-tap-flap-MIX">
+                        <f name="ipa">ɾ</f>
+                        <f name="zsampa"><string>r</string></f>
+                     </fs><!-- IPA: the tap [ɾ] occurs in native and non-native items; trill is found only in words imported from Spanish in which there are 'rr' sequences;(ZSAMPA (original format had: '4' as the symbol for both tap and flap- I have not been following this in the XML transcriptions however-->
+                     <fs feats="#alv #trll" xml:id="alv-trll-MIX">
+                        <f name="ipa">r</f>
+                        <f name="zsampa"><string>r</string></f>
+                     </fs><!-- IPA: [r]; MIX phonological units [ɾ] and [r] are non-phonologically distinct however the trill is found only in words imported from Spanish in which there are 'rr' sequences; eg. [ká.ru] 'car', [lùù.ru] 'donkey', [sa.lùù.ru] 'rabbit/hare' (ZSAMPA (original format had: '4' as the symbol for both tap and flap- I have not been following this in the XML transcriptions however.... -->
+                  </f>
+                  <f name="fricatives-MIX" xml:id="Fric-MIX"><!-- all instances have feature FRICATIVE (#fric) -->
+                     <fs feats="#bilab #vc #fric" xml:id="vc-bilab-fric-MIX">
+                        <f name="ipa"><string>β</string></f>
+                        <f name="zsampa"><string>B</string></f>
+                     </fs><!-- IPA: [β] ; variant of [v] -->
+                     <fs feats="#lab-dent #vc #fric" xml:id="vc-lab-dent-fric-MIX">
+                        <f name="ipa"><string>v</string></f>
+                        <f name="zsampa"><string>v</string></f>
+                     </fs><!-- IPA: [v] ; has variants: [b], [β], [b] -->
+                     <fs feats="#lab-dent #vcls #fric" xml:id="vcls-lab-dent-fric-MIX">
+                        <f name="ipa"><string>f</string></f>
+                        <f name="zsampa"><string>f</string></f>
+                     </fs><!-- IPA: [f] ; only in foreign originated words (spanish): eg 'café'-->
+                     <fs feats="#alv #vcls #fric" xml:id="vcls-alv-fric-MIX">
+                        <f name="ipa"><string>s</string></f>
+                        <f name="zsampa"><string>s</string></f>
+                     </fs><!-- IPA: [s]  -->
+                     <fs feats="#post-alv #vcls #fric" xml:id="vcls-post-alv-fric-MIX">
+                        <f name="ipa"><string>ʃ</string></f>
+                        <f name="zsampa"><string>ʃ</string></f>
+                     </fs><!-- IPA: [ʃ]  -->
+                     <fs feats="#vc #velar #fric" xml:id="vc-velar-fric-MIX">
+                        <f name="ipa"><string/>ɣ</f>
+                        <f name="zsampa"><string>G</string></f>
+                     </fs><!-- IPA: [ɣ] ; patterned variant of [k] -->
+                     <fs feats="#vc #velar #fric #short" xml:id="vc-velar-fric-short-MIX">
+                        <f name="ipa"><string>ˠ</string></f>
+                     </fs><!-- IPA: [ˠ] ; patterned variant of [k],[k̬],[ɣ] ; currently no ZSAMPA form for this (non-phonologically contrastive) distinction;-->
+                  </f>
+                  <f name="nasals-MIX" xml:id="Nas-MIX">
+                     <fs feats="#nas #bilab" xml:id="nas-bilab-MIX">
+                        <f name="ipa"><string>m</string></f>
+                        <f name="zsampa"><string>m</string></f>
+                     </fs><!--IPA: [m] -->
+                     <fs feats="#nas #alv" xml:id="nas-alv-MIX">
+                        <f name="ipa"><string>n</string></f>
+                        <f name="zsampa"><string>n</string></f>
+                     </fs><!--IPA: [n] (has conditioned variant: alv > velar; IPA: [ŋ] -->
+                     <fs feats="#nas #palat" xml:id="nas-palat-MIX">
+                        <f name="ipa"><string>ɲ</string></f>
+                        <f name="zsampa"><string>J</string></f>
+                     </fs><!--IPA: [ɲ] -->
+                     <fs feats="#nas #velar" xml:id="nas-velar-MIX">
+                        <f name="ipa"><string>ŋ</string></f>
+                        <f name="zsampa"><string>N</string></f>
+                     </fs><!--IPA: [ŋ] (conditioned variant of alveolar nasal IPA: [n] -->
+                  </f>
+                  <f name="lateral-MIX" xml:id="Lat-MIX">
+                     <fs feats="#alv #lat" xml:id="lat-alv-MIX">
+                        <f name="ipa"><string>l</string></f>
+                        <f name="zsampa"><string>l</string></f>
+                     </fs><!-- IPA: [l] -->
+                  </f>
+               </fs>
+
+            </div>
+            <div xml:id="complex-phones-mix">
+               <desc>This inventory includes any phone which involves multiple manners and/or places
+                  of articulation as part of a phonologically contrastive unit.</desc>
+
+               <fs>
+                  <f name="glides-MIX" xml:id="semi-V-MIX">
+                     <fs feats="#semi-V #alv #palat" xml:id="G-alv-palat-MIX">
+                        <f name="ipa"><string>j</string></f>
+                        <f name="zsampa"><string>j</string></f>
+                     </fs>
+                     <fs feats="#semi-V #alv #palat #short" xml:id="G-alv-palat-short-MIX">
+                        <f name="ipa"><string>ʲ</string></f>
+                     </fs><!--NEED TO DEFINE 'SHORT' Currently no way of representing the reduced version in ZSAMPA -->
+                     <!-- Can have 3 types: unmarked, forward (palat>alv) or back (alv>palat); directionality depends on surrounding context, frequency regulated by MIX phonotactic patterning-->
+                     <fs feats="#semi-V #velar #bilab #rnd" xml:id="G-lab-vel-MIX">
+                        <f name="ipa"><string>w</string></f>
+                        <f name="zsampa"><string>w</string></f>
+                     </fs>
+                     <fs feats="#semi-V #velar #bilab #rnd #short" xml:id="G-lab-vel-short-MIX">
+                        <f name="ipa"><string>ʷ</string></f>
+                     </fs><!-- NEED TO DEFINE 'SHORT'; Currently no way of representing the reduced version in ZSAMPA -->
+                     <!-- Can have 3 types: unmarked, forward (alv>velar) or back (velar>alv);-->
+                  </f>
+
+                  <f name="affricates-MIX" xml:id="Affric-MIX"><!-- need to further define feature in Affricates to disctinguish: 1) order of manner (stop-fric | fric-stop); 2) place gesture (1), place gesture (2); -->
+                     <fs feats="#affric-stp-fric #alv #post-alv #vc"
+                        xml:id="affric-stp-fric-vc-alv-post-alv-MIX">
+                        <f name="ipa"><string>ʤ</string></f>
+                        <f name="zsampa"><string>(dZ)</string></f>
+                     </fs><!-- IPA: [ʤ]; ZSAMPA: (dZ) ; (has semi-conditioned voiceless phonetic variant: [ʧ])-->
+                     <fs feats="#affric-stp-fric #alv #post-alv #vcls"
+                        xml:id="affric-stp-fric-vcls-alv-post-alv-MIX">
+                        <f name="ipa"><string>ʧ</string></f>
+                        <f name="zsampa"><string>(tS)</string></f>
+                     </fs><!-- IPA: [ʧ]; ZSAMPA: (tZ) (semi-conditioned voiceless phonetic variantOf: [ʤ])-->
+                     <fs feats="#affric-stp-fric #alv #vcls" xml:id="affric-stp-fric-vcls-alv-MIX">
+                        <f name="ipa"><string>ts</string></f>
+                        <f name="zsampa"><string>ts</string></f>
+                     </fs>
+                     <!-- IPA: [ts]; ZSAMPA: (ts)  (has semi-conditioned voiced variants [dz], may also be realized as [tz])-->
+                     <fs feats="#affric-stp-fric #alv #semi-vc"
+                        xml:id="affric-stp-fric-semi-vc-alv-MIX">
+                        <f name="ipa"><string>tz</string></f>
+                        <f name="zsampa"><string>tz</string></f>
+                     </fs>
+                     <!-- IPA: [tz]; ZSAMPA: (tz)  (conditioned voiced variants of [ts])-->
+                     <fs feats="#affric-stp-fric #alv vc" xml:id="affric-stp-fric-vc-alv-MIX">
+                        <f name="ipa"><string>dz</string></f>
+                        <f name="zsampa"><string>dz</string></f>
+                     </fs>
+                     <!-- IPA: [dz]; ZSAMPA: (dz)  (conditioned voiced variants of [ts])-->
+                     <fs feats="#affric-fric-stp #alv #vcls" xml:id="affric-fric-stp-vcls-alv-MIX">
+                        <f name="ipa"><string>st</string></f>
+                        <f name="zsampa"><string>st</string></f>
+                     </fs>
+                     <!-- IPA: [st]; ZSAMPA: st -->
+                     <fs feats="#affric-fric-stp #alv #velar #vcls"
+                        xml:id="affric-fric-stp-vcls-alv-velar-MIX">
+                        <f name="ipa"><string>sk</string></f>
+                        <f name="zsampa"><string>sk</string></f>
+                     </fs>
+                     <!-- IPA: [sk]; ZSAMPA: sk -->
+                  </f>
+
+                  <f name="pre-glottalized-phones-MIX" xml:id="pre-Glot-MIX">
+                     <!-- Pre-glottalized fricative -->
+                     <fs feats="#pre-Glot #vc-lab-dent-fric-MIX"
+                        xml:id="pre-Glot-vc-lab-dent-fric-MIX">
+                        <f name="ipa"><string>ʔv</string></f>
+                        <f name="zsampa"><string>? v</string></f>
+                     </fs><!-- IPA: [ʔv] ; --><!-- eg:  [ka.ʔvì]  'read'-->
+                     <!-- Pre-glottalized nasals (and nasalized vowels) -->
+                     <fs feats="#pre-Glot #nas-bilab-MIX" xml:id="pre-Glot-nas-bilab-MIX">
+                        <f name="ipa"><string>ʔm</string></f>
+                        <f name="zsampa"><string>? m</string></f>
+                     </fs><!-- IPA: [ʔm]; ZSAMPA (GET!); (has unconditioned non-contrastive phonetic variants; [ʔũ], [ʔṵ̃] -->
+                     <fs feats="#pre-Glot #V-nas-hi-bk-rnd-MIX"
+                        xml:id="pre-Glot-V-Nas-hi-bk-rnd-MIX">
+                        <f name="ipa"><string>ʔũ</string></f>
+                        <f name="zsampa"><string>? u:_n</string></f>
+                     </fs><!-- IPA: [ʔũ]; ZSAMPA (GET!); (unconditioned non-contrastive phonetic variant of [ʔm] ~ [ʔṵ̃] )-->
+                     <fs feats="#pre-Glot #V-hi-bk-rnd-crky-MIX"
+                        xml:id="pre-Glot-V-cls-md-bk-rnd-crky-MIX">
+                        <f name="ipa"><string>ʔõ̰̰</string></f>
+                        <f name="zsampa"><string>? o:_n_k</string></f>
+                     </fs><!-- IPA: [ʔõ̰̰]; ZSAMPA (GET!); (unconditioned non-contrastive phonetic variant of [ʔm] ~ [ʔṵ̃] )-->
+                     <fs feats="#pre-Glot #nas-alv-MIX" xml:id="pre-Glot-nas-alv-MIX">
+                        <f name="ipa"><string>ʔn</string></f>
+                        <f name="zsampa"><string>? n</string></f>
+                     </fs><!-- IPA: [ʔn]; ZSAMPA (GET!) -->
+                     <!-- Pre-glottalized lateral -->
+                     <fs feats="#pre-Glot #lat-alv-MIX" xml:id="pre-Glot-alv-lat-MIX">
+                        <f name="ipa"><string>ʔl</string></f>
+                        <f name="zsampa"><string>l_?\</string></f>
+                     </fs>
+                     <!-- IPA: [ʔl] --><!-- eg: 'booger/mucus' 	[la.ʔla] -->
+                     <!-- Pre-Glottalized affricates -->
+                     <fs feats="#pre-Glot affric-stp-fric-vcls-alv-post-alv-MIX"
+                        xml:id="pre-Glot-affric-stp-fric-vcls-alv-post-alv-MIX">
+                        <f name="ipa"><string>ʔʧ</string></f>
+                        <f name="zsampa"><string>(tZ)_?\</string></f>
+                     </fs><!-- IPA: [ʔʧ]; ZSAMPA: (tZ)_?\; (pre-glottalized affricate has no conditioned voiceless variant as is the case with the non-pre-glottalized versions of affricate [ʧ]); eg:  [skʷá.ʔʧì]  'cut '  -->
+                  </f>
+
+                  <f name="pre-nasalized-phones-MIX" xml:id="pre-Nas-MIX">
+                     <!-- Pre-nasalized stops -->
+                     <!-- Note: (define formally); MIX pre-nasals assimilate to the place of the following phone to which it is 'attached' -->
+                     <fs feats="#pre-Nas #nas-bilab-MIX #vc-bilab-stp-MIX"
+                        xml:id="pre-Nas-vc-bilab-stp-MIX">
+                        <f name="ipa"><string>mb</string></f>
+                        <f name="ipa"><string>ᵐb</string></f>
+                        <f name="zsampa"><string>b_m\</string></f>
+                     </fs><!-- IPA: [mb] (or) [ᵐb] ;  -->
+                     <!-- [ᵐ] UNICODE 1D50, NAME: MODIFIED SMALL LETTER M; UTF8 E1 B5 90-->
+                     <fs feats="#pre-Nas #vcls-alv-stp-MIX" xml:id="pre-Nas-vcls-alv-stp-MIX">
+                        <f name="ipa"><string>nt</string></f>
+                        <f name="ipa"><string>ⁿt</string></f>
+                        <f name="zsampa"><string>t_n\</string></f>
+                     </fs><!-- IPA: [nt] (or) [ⁿt] ;  (has conditioned (by nasal) voiced variant: [nd])-->
+                     <!-- [ⁿ] UNICODE 207F, SUPERSCRIPT SMALL LETTER N; UTF8 E2 81 BF -->
+                     <fs feats="#pre-Nas #vc-alv-stp-MIX" xml:id="pre-Nas-vc-alv-stp-MIX">
+                        <f name="ipa"><string>nd</string></f>
+                        <f name="ipa"><string>ⁿd</string></f>
+                        <f name="zsampa"><string>d_n\</string></f>
+                     </fs><!-- IPA: [nd] ;  (conditioned voiced variant of [nt])-->
+                     <fs feats="#pre-Nas #vc-velar-stp-MIX" xml:id="pre-Nas-vc-velar-stp-MIX">
+                        <f name="ipa"><string>ŋg</string></f>
+                        <f name="ipa"><string>ᵑg</string></f>
+                        <f name="zsampa"><string>N g</string></f>
+                     </fs><!-- IPA: [ŋg] (OR) [ᵑg] (voiced velar stop itself is a conditioned variant of the voiceless velar stop [k]) -->
+                     <!-- [ᵑ] UNICODE 1D51, NAME: MODIFIED SMALL ENG; UTF8 E1 B5 91 -->
+                     <fs feats="#pre-Nas #semi-vc-velar-stp-MIX"
+                        xml:id="pre-Nas-semi-vc-velar-stp-MIX">
+                        <f name="ipa"><string>ŋk̬</string></f>
+                        <f name="ipa"><string>ᵑk̬</string></f>
+                        <f name="zsampa"><string>N k_v</string></f>
+                     </fs><!-- IPA: [ŋk̬] (semi-voiced velar stop itself is a conditioned variant of the voiceless velar stop [k]) -->
+                     <fs feats="#pre-Nas #vcls-velar-stp-MIX" xml:id="pre-Nas-vcls-velar-stp-MIX">
+                        <f name="ipa"><string>ŋk</string></f>
+                        <f name="ipa"><string>ᵑk</string></f>
+                        <f name="zsampa"><string>N k</string></f>
+                     </fs><!-- IPA: [ŋk] (has variants (above) -->
+                     <!-- Pre-nasalized affricates  -->
+                     <fs feats="#pre-Nas #affric-stp-fric-vcls-alv-post-alv-MIX"
+                        xml:id="pre-Nas-affric-stp-fric-vcls-alv-post-alv-MIX">
+                        <f name="ipa"><string>nʧ</string><string>ⁿʧ</string></f>
+                        <f name="zsampa"><string>(tS)_n\</string></f>
+                     </fs><!-- IPA: [nʧ];   -->
+                     <fs feats="#pre-Nas #affric-stp-fric-vc-alv-post-alv-MIX"
+                        xml:id="pre-Nas-affric-stp-fric-vc-alv-post-alv-MIX">
+                        <f name="ipa"><string>nʤ</string><string>ⁿʤ</string></f>
+                        <f name="zsampa"><string>(dZ)_n\</string></f>
+                     </fs><!-- IPA: [nʤ]; (conditioned variant of [nʧ])  -->
+                     <fs feats="#pre-Nas #affric-stp-fric-vcls-alv-MIX"
+                        xml:id="pre-Nas-affric-stp-fric-vcls-alv-MIX">
+                        <f name="ipa"><string>nts</string><string>ⁿts</string></f>
+                        <f name="zsampa"><string>(ts)_n\</string></f>
+                     </fs><!-- IPA: [nts] -->
+                     <fs feats="#pre-Nas #affric-stp-fric-semi-vc-alv-MIX"
+                        xml:id="pre-Nas-affric-stp-fric-semi-vc-alv-MIX">
+                        <f name="ipa"><string>ntz</string><string>ⁿtz</string></f>
+                        <f name="zsampa"><string>(tz)_n\</string></f>
+                     </fs><!-- IPA: [ntz] -->
+                     <fs feats="#pre-Nas #affric-stp-fric-vc-alv-MIX"
+                        xml:id="pre-Nas-affric-stp-vc-alv-MIX">
+                        <f name="ipa"><string>ndz</string><string>ⁿtz</string></f>
+                        <f name="zsampa"><string>(dz)_n\</string></f>
+                     </fs><!-- IPA: [ndz] -->
+                  </f>
+
+                  <!-- Labialized phones; (labial offset) -->
+                  <f name="labialized-phones-MIX" xml:id="off-G-lab-MIX">
+                     <!-- "ʷ" UNICODE  0287; UTF8 CA B7; (or) "w" UNICODE 0077; UTF8 77 -->
+                     <!-- labialized stops -->
+                     <fs feats="#vcls-velar-stp-MIX #off-G-lab"
+                        xml:id="vcls-velar-stp-off-G-lab-MIX">
+                        <f name="ipa"><string>kʷ</string><string>kw</string></f>
+                        <f name="zsampa"><string>k_w</string></f>
+                     </fs><!-- IPA: [kʷ]; (has conditioned voiced and semi-voiced variants) -->
+                     <fs feats="#semi-vc-velar-stp-MIX #off-G-lab"
+                        xml:id="semi-vc-velar-stp-off-G-lab-MIX">
+                        <f name="ipa"><string>k̬ʷ</string><string>k̬w</string></f>
+                        <f name="zsampa"><string>k_v_w</string></f>
+                     </fs><!-- IPA: [k̬ʷ] (conditioned voiced variant of [kʷ] -->
+                     <fs feats="#vc-velar-stp-MIX #off-G-lab" xml:id="vc-velar-stp-off-G-lab-MIX">
+                        <f name="ipa"><string>gʷ</string><string>gw</string></f>
+                        <f name="zsampa"><string>g_w</string></f>
+                     </fs><!-- IPA: [gʷ]; (conditioned voiced variant of [kʷ]) -->
+                     <!-- labialized-pre-nasalized stops -->
+                     <fs feats="pre-Nas #semi-vc-velar-stp-MIX #off-G-lab"
+                        xml:id="pre-Nas-vcls-velar-stp-off-G-lab-MIX">
+                        <f name="ipa"><string>ᵑkʷ</string><string>ᵑkw</string></f>
+                        <f name="zsampa"><string>N k_w</string></f>
+                     </fs><!-- IPA: [ŋk̬ʷ] (or) [ᵑk̬ʷ] (conditioned voiced variant of [kʷ] -->
+                     <fs feats="#pre-Nas #vc-velar-stp-MIX #off-G-lab"
+                        xml:id="pre-Nas-semi-vc-velar-stp-off-G-lab-MIX">
+                        <f name="ipa"><string>ŋk̬ʷ</string><string>ᵑk̬w</string></f>
+                        <f name="zsampa"><string>N k_v_w</string></f>
+                     </fs><!-- IPA: [ŋgʷ] (or) [ᵑgʷ];; (conditioned voiced variant of [kʷ]) -->
+                     <fs feats="#pre-Nas #vc-velar-stp-MIX #off-G-lab"
+                        xml:id="pre-Nas-vc-velar-stp-off-G-lab-MIX">
+                        <f name="ipa"><string>ŋgʷ</string><string>ᵑgw</string></f>
+                        <f name="zsampa"><string>N g_w</string></f>
+                     </fs><!-- IPA: [ŋgʷ] (or) [ᵑgʷ];; (conditioned voiced variant of [ᵑkʷ]) -->
+                     <!-- labialized affricates -->
+                     <fs feats="#affric-fric-stp-vcls-alv-velar-MIX #off-G-lab"
+                        xml:id="affric-fric-stp-vcls-alv-velar-MIX-off-G-lab">
+                        <f name="ipa"><string>skʷ</string><string>skw</string></f>
+                        <f name="zsampa"><string>sk_w</string></f>
+                     </fs><!-- IPA: [skʷ] (or) [skw]; ZSAMPA: sk_w ; eg:  [skʷá.ʔʧì]  'cut '-->
+                  </f>
+
+                  <!-- Pre-spirantized phones: -->
+                  <!-- note: (define formally); the MIX pre-spirant is by default an alveolar fricative [s], however it has been observed as a post-alveolar variant [ʃ] -->
+                  <f name="pre-spirantized-phones-MIX" xml:id="pre-Sprnt-MIX">
+                     <!-- Pre-spirantized stops (same as "affricates [sk], [st]); pre-spirantization is possibly a way in which these affricates were formed.. -->
+                     <fs feats="#pre-Sprnt #vcls-alv-stp-MIX" xml:id="pre-Sprnt-vcls-alv-stp-MIX"
+                        sameAs="#affric-fric-stp-vcls-alv-MIX">
+                        <f name="ipa"><string>sk</string></f>
+                        <f name="zsampa"><string>(sk)</string></f>
+                     </fs><!-- IPA [st]; (phonologically this is the same as "affricates [st]) -->
+                     <fs feats="#pre-Sprnt #vcls-velar-stp-MIX"
+                        xml:id="pre-Sprnt-vcls-velar-stp-MIX"
+                        sameAs="#affric-fric-stp-vcls-alv-velar-MIX"/><!-- IPA [sk]; (phonologically this is the same as "affricates [st]) -->
+                     <!-- Pre-spirantized affricates -->
+                     <fs feats="#pre-Sprnt #alv #affric-stp-fric-vcls-alv-post-alv-MIX"
+                        xml:id="pre-Sprnt-alv-affric-stp-fric-vcls-alv-post-alv-MIX">
+                        <f name="ipa"><string>sʧ</string></f>
+                        <f name="zsampa"><string>(tS)_s\</string></f>
+                     </fs><!-- IPA: [sʧ] ; ZSAMPA: (tS)_s ; ORTH: "xch";  eg: [sʧó.ʔò] 'boil' (pre-spirant portion of phone has semi-conditioned variant: [ʃʧ])  -->
+                     <fs feats="#pre-Sprnt #palat #affric-stp-fric-vcls-alv-post-alv-MIX"
+                        xml:id="pre-Sprnt-palat-affric-stp-fric-vcls-alv-post-alv-MIX">
+                        <f name="ipa"><string>ʃʧ</string></f>
+                        <f name="zsampa"><string>(tS)_S\</string></f>
+                     </fs><!-- IPA: [ʃʧ] ; ZSAMPA: (tS)_S ; ORTH" "xch"; eg: xchacha 'pelos de maiz' (pre-spirant portion of phone has semi-conditioned variant: [ʃʧ])  -->
+                     <!-- Pre-spirantized nasal -->
+                     <fs feats="#pre-Sprnt #nas-alv-MIX" xml:id="pre-Sprnt-nas-alv-MIX"
+                        sameAs="#pre-Sprnt-palat-affric-stp-fric-vcls-alv-post-alv-MIX">
+                        <f name="ipa"><string>sn</string></f>
+                        <f name="zsampa"><string>s_n\</string></f>
+                     </fs><!-- IPA: [sn] ;eg: [snũ.bi.ku] (has palatalized variants) [ʃnũ.bi.ku]  -->
+                     <fs feats="#pre-Sprnt #palat #nas-alv-MIX" xml:id="pre-Sprnt-palat-nas-alv-MIX">
+                        <f name="ipa"><string>ʃn</string></f>
+                        <f name="zsampa"><string>S_n\</string></f>
+                     </fs><!-- IPA: [ʃn]  -->
+                     <fs feats="#pre-Sprnt #palat #nas-palat-MIX"
+                        xml:id="pre-Sprnt-palat-nas-palat-MIX">
+                        <f name="ipa"><string>ʃɲ</string></f>
+                        <f name="zsampa"><string>S_J\</string></f>
+                     </fs><!-- IPA: [ʃɲ]  -->
+                  </f>
+               </fs>
+
+            </div>
+            <div xml:id="foreign-phones-MIX">
+               <desc>Phonetic and phonological units found in non-native lexical items that have
+                  been adopted into the MIX lexicon. Most/all of these will of course be from
+                  Spanish.</desc>
+
+               <fs>
+                  <f name="foreign-phones-MIX">
+                     <fs feats="#V-diphthng #V-cls-md-frnt-MIX #V-hi-bk-rnd-MIX"
+                        xml:id="V-diph-eu-MIX">
+                        <f name="ipa"><string>eu</string></f>
+                        <f name="zsampa"><string>eu</string></f>
+                     </fs><!--[eu] as in: [eu.ró.pà] -->
+                     <fs feats="#vcls #bilab #stp" sameAs="#vcls-bilab-stp-MIX"/><!-- [p] as in: IPA: [pãã] 'bread' (from Spanish: IPA: ['pan], ['pa.drɛ] 'father')-->
+                     <fs feats="#vcls-lab-dent-fric-MIX" sameAs="#vc-lab-dent-fric-MIX"/><!-- [f] as in: IPA: [ká.fe] -->
+                     <fs feats="#alv-trll-MIX"/><!--[ [r] as in: IPA [lú.ru]; (from Spanish: IPA: ['bu.ro]) -->
+                     <!-- others? -->
+                  </f>
+               </fs>
+
+            </div>
+
+            <div xml:id="lexical-tone-MIX">
+               <desc>The Mixtepec-Mixtec tone system features the following: three level tones:
+                  high, mid (mid tone considered 'unmarked'), low; two bi-level contour tones:
+                  rising, falling; and two tri-level tones: falling-rising, rising-falling. I assert
+                  that the 'high' and 'rising' tones, and the 'low' and 'falling' tones are
+                  phonologically non-contrastive. For this reason in the IPA transcriptions there is
+                  no difference in the way these aformentioned tones are marked. The ZSAMPA-based
+                  transcription system does however mark the specific difference in 'low/high' vs
+                  'falling/rising' and this allows the transcriptions corpus to maintain a maximally
+                  detailed record of the phonetics which could be usefull in any number of ways. In
+                  the IPA, mid tones are not marked and thus just the vowel is used with no tonal
+                  diacritics, again the ZSAMPA system does explicitly mark the mid tone. There are
+                  however some nuances to this having to do with phonological vowel length and
+                  natural acoustic variation that occurs in running speech, In addition to marking
+                  purely phonology-based lexical distinctions, tone in MIX can be used to expresses
+                  morpho-syntactic, morpho-semantic and adverbial functions. (negation, personal
+                  inflections for: V-adj, etc..). Phonological tone in certain phonetic and lexical
+                  context lexical tones may be realized over multiple phonetic units, including non
+                  vowels, specifically it can be observed as occurring with regularity with glides
+                  and nasals.</desc>
+
+               <fs>
+                  <f name="level-tones-MIX">
+                     <fs feats="#L" xml:id="L-MIX">
+                        <f name="ipa"><string>̀</string></f>
+                        <f name="zsampa"><string>_L</string></f>
+                     </fs>
+                     <fs feats="#M" xml:id="M-MIX" sameAs="#Ø">
+                        <f name="zsampa"><string>_M</string></f>
+                     </fs>
+                     <fs feats="#Ø" xml:id="Ø-MIX" sameAs="#M-MIX"/>
+                     <fs feats="#H" xml:id="H-MIX">
+                        <f name="ipa"><string>́</string></f>
+                        <f name="zsampa"><string>_H</string></f>
+                     </fs>
+                  </f>
+                  <f name="contour-tones-MIX">
+                     <fs feats="#F" xml:id="F-MIX">
+                        <f name="ipa"><string>̀</string></f>
+                        <f name="zsampa"><string>_F</string></f>
+                     </fs>
+                     <fs feats="#R" xml:id="R-MIX">
+                        <f name="ipa"><string>́</string></f>
+                        <f name="zsampa"><string>_R</string></f>
+                     </fs>
+                     <fs feats="#F_R" xml:id="F_R-MIX">
+                        <f name="ipa"><string>̀ ́</string></f>
+                        <f name="zsampa"><string>_F_R</string></f>
+                     </fs>
+                     <fs feats="#R_F" xml:id="R_F-MIX">
+                        <f name="ipa"><string>́ ̀</string></f>
+                        <f name="zsampa"><string>_R_F</string></f>
+                     </fs>
+                  </f>
+               </fs>
+
+            </div>
+
+
+
+
+
+            <div>
+               <head>Mixtepec-Mixtec Phonetic Inventory of Consonants (IPA): (Includes
+                  non-contrastive phonetic variants)</head>
+               <div>
+                  <p><title>Inventory of Non-Complex Phonetic Units</title><table cols="12">
+                        <row>
+                           <cell>
+                              <table>
+                                 <row>
+                                    <cell/>
+                                    <cell><ref target="#bilab"/><label>Bilabial</label></cell>
+                                    <cell><ref target="#lab-dent"
+                                       /><label>Labio-Dental</label></cell>
+                                    <cell><ref target="#alv-dent"
+                                       /><label>Alveo-Dental</label></cell>
+                                    <cell><ref target="#alv"/><label>Alveolar</label></cell>
+                                    <cell><ref target="#post-alv"
+                                       /><label>Post-Alveolar</label></cell>
+                                    <cell><ref target="#palat"/><label>Palatal</label></cell>
+                                    <cell><ref target="#velar"/><label>Velar</label></cell>
+                                    <cell><ref target="#glot"/><label>Glottal</label></cell>
+                                 </row>
+                                 <row>
+                                    <cell><ref target="#Stp-MIX"><label>Stop</label></ref></cell>
+                                    <cell><ref target="#vcls-bilab-stp-MIX"><c>p</c></ref>
+                                       <ref target="#vc-bilab-stp-MIX"><c>b</c></ref></cell>
+                                    <cell/>
+                                    <cell><c ana="#vcls-alv-stp-MIX">t</c> ~<c type="variant"
+                                          ana="#vc-alv-stp-MIX">d</c></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#vcls-velar-stp-MIX">k</c> ~<c type="variant"
+                                          ana="#vc-velar-stp-MIX">g</c></cell>
+                                    <cell><c ana="#vcls-glot-stp-MIX">ʔ</c></cell>
+                                 </row>
+                                 <row>
+                                    <cell><ref target="#Nas-MIX"><label>Nasal</label></ref></cell>
+                                    <cell><c ana="#nas-bilab-MIX">m</c></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#nas-alv-MIX">n</c></cell>
+                                    <cell/>
+                                    <cell><c ana="#nas-palat-MIX">ɲ</c></cell>
+                                    <cell><c ana="#nas-velar-MIX">ŋ</c></cell>
+                                 </row>
+                                 <row>
+                                    <cell><ref target="#trill-tap-flap-MIX"
+                                          ><label>Trill</label></ref></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#alv-trll-MIX">r</c></cell>
+                                 </row>
+                                 <row>
+                                    <cell><ref target="#trill-tap-flap-MIX"><label>Tap or
+                                             Flap</label></ref></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#alv-tap-flap-MIX">ɾ</c></cell>
+                                 </row>
+                                 <row>
+                                    <cell><label><ref target="#Fric-MIX"
+                                       >Fricatives</ref></label></cell>
+                                    <cell><c ana="#vc-bilab-fric-MIX">β</c></cell>
+                                    <cell><c ana="#vc-lab-dent-fric-MIX">v</c></cell>
+                                    <cell/>
+                                    <cell><c ana="#vcls-alv-fric-MIX">s</c></cell>
+                                    <cell><c ana="#vcls-post-alv-fric-MIX">ʃ</c></cell>
+                                    <cell/>
+                                    <cell><c ana="#vc-velar-fric-MIX" type="variant">ɣ</c></cell>
+                                 </row>
+                                 <row>
+                                    <cell><label>Lateral approximant</label></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#lat-alv-MIX">l</c></cell>
+                                 </row>
+                              </table>
+                           </cell>
+                        </row>
+                     </table><lb/></p>
+                  <p>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>p</label></cell>
+                           <cell>[<hi rend="bold">p</hi>ã́ã] 'bread' (from Spanish: [pán])</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>b</label></cell>
+                           <!-- should be diplayed in grey and/or italics to indicate this is not a completely distinct phone -->
+                           <cell>[<hi rend="bold">b</hi>ì.lù] 'cat'</cell>
+                           <cell>([b] is variant of [β] ~ [v])</cell>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>t</label></cell>
+                           <cell>[<hi rend="bold">t</hi>ì.jù.tsá] 'tree'</cell>
+                           <cell>[t̪]; [d̪]; [d]; </cell>
+                           <cell>[<hi rend="bold">t̪</hi>ì.kú.ʧì] 'bat'; </cell>
+                        </row>
+                        <row>
+                           <cell><label>k</label></cell>
+                           <cell>[βí.<hi rend="bold">k</hi>ò] 'cloud'</cell>
+                           <cell>[kʰ]</cell>
+                           <cell>[<hi rend="bold">kʰ</hi>í.ʃì] 'sleep'</cell>
+                        </row>
+                        <row>
+                           <cell><label>[k̬]</label></cell>
+                           <cell>[<hi rend="bold">k</hi>ò] 'cloud'</cell>
+                           <cell>[ɣ]</cell>
+                           <cell>[<hi rend="bold">ɣ</hi>á] 'topic marker'</cell>
+                        </row>
+                        <row>
+                           <cell><label>ʔ</label></cell>
+                           <cell>[nd̪à̰.<hi rend="bold">ʔ</hi>á̰] 'cornfield'</cell>
+                           <cell>can be realized as laryngealized (creaky) vowels; eg. [VʔV] >
+                              [V̰̰V̰]</cell>
+                           <cell>[nd̪<hi rend="bold">à̰á̰</hi>] 'cornfield'</cell>
+                        </row>
+                     </table><lb/>
+                  </p>
+
+                  <p>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>m</label></cell>
+                           <cell>[<hi rend="bold">m</hi>ì.ʧũ̀.nì] 'right now'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>n</label></cell>
+                           <cell>[ká.<hi rend="bold">n</hi>ì] 'long' (distance)</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ɲ</label></cell>
+                           <cell>[<hi rend="bold">ɲ</hi>á.ʔà] 'woman'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ŋ</label></cell>
+                           <!-- display in different font/color -->
+                           <cell>(<hi rend="italic">only occurs in context of pre-nasalized velar
+                                 stop;</hi> [ŋk̬])</cell>
+                           <!-- make italic -->
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+
+                  <p>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>r</label></cell>
+                           <cell>[ká.<hi rend="bold">r</hi>u] 'car'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ɾ</label></cell>
+                           <cell>[<hi rend="bold">ɾ</hi>a] 'conjunction'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>l</label></cell>
+                           <cell>[<hi rend="bold">l</hi>ùù] 'small'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+
+
+                  <p><label>Fricatives</label>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>β</label></cell>
+                           <!-- can reference source soundfile: S_the_little_kid_put_the_cat_up_in_the_tree_01_spkrTS; S_the_little_kid_put_the_cat_up_in_the_tree_02_spkrTS -->
+                           <cell>[<hi rend="bold">β</hi>ì.lù] 'cat'</cell>
+                           <cell>[v]</cell>
+                           <cell>[<hi rend="bold">v</hi>ì.lù] 'cat'</cell>
+                           <!-- can reference source soundfile: S_the_little_kid_put_the_cat_up_in_the_tree_03_spkrTS -->
+                        </row>
+                        <row>
+                           <cell><label>s</label></cell>
+                           <cell>[<hi rend="bold">s</hi>á.ʧũ̀ː] 'work'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ʃ</label></cell>
+                           <cell>[<hi rend="bold">ʃ</hi>í.nì] 'head'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ɣ</label></cell>
+                           <cell>[<hi rend="bold">ɣ</hi>á] 'topic marker'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+
+               </div>
+               <div>
+                  <p><title>Inventory of (simple) Affricates</title>
+                     <table cols="5">
+                        <row>
+                           <cell/>
+                           <cell><label>(affricate type)</label></cell>
+                           <cell><label>Alveolar</label></cell>
+                           <cell><label>Post-Alveolar</label></cell>
+                           <cell><label>Alveolar > Velar</label>
+                           </cell>
+                        </row>
+                        <row>
+                           <cell/>
+                           <cell><label>(Fric > Stop)</label></cell>
+                           <cell><c ana="#affric-fric-stp-vcls-alv-MIX">st</c></cell>
+                           <cell/>
+                           <cell><c ana="#affric-fric-stp-vcls-alv-velar-MIX">sk</c></cell>
+                        </row>
+                        <row>
+                           <cell><label><ref target="#affricates-MIX"
+                              >Affricates</ref></label></cell>
+                           <cell><label>(Stop > Fric)</label></cell>
+                           <cell><c ana="#affric-stp-fric-vc-alv-MIX">dz</c> ~<c
+                                 ana="#affric-stp-fric-vcls-alv-MIX">ts</c></cell>
+                           <cell><c ana="#affric-stp-fric-vcls-alv-post-alv-MIX">ʧ</c> ~<c
+                                 ana="#affric-stp-fric-vc-alv-post-alv-MIX">ʤ</c></cell>
+                        </row>
+                     </table><lb/>
+                  </p>
+                  <p><label>Affricates</label>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value (IPA)</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>st</label></cell>
+                           <cell>[<hi rend="bold">st</hi>áá] 'tortilla'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>sk</label></cell>
+                           <cell>[<hi rend="bold">sk</hi>e.t̪a] 'run' (gloss)</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ts</label></cell>
+                           <cell>[<hi rend="bold">ts</hi>ì.kà] 'far'</cell>
+                           <cell>[dz]</cell>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ʧ</label></cell>
+                           <cell>[<hi rend="bold">ʧ</hi>àà] 'man'</cell>
+                           <cell>[ʤ]</cell>
+                           <cell>[<hi rend="bold"
+                              >ʤ</hi><?oxy_comment_start author="jackbowers" timestamp="20161224T154018-0800" comment="check tones!"?>ò.ʔá<?oxy_comment_end?>]
+                              'very', (degree adverbial)</cell>
+                        </row>
+
+                     </table><lb/>
+                  </p>
+               </div>
+
+               <div>
+                  <p><title>Inventory of Glide/Semi-Vowels:</title>
+                     <table cols="2">
+                        <row>
+                           <cell><label>Alveo-Palatal</label></cell>
+                           <cell><label>Labio-Velar</label></cell>
+                        </row>
+                        <row>
+                           <cell><c ana="#G-alv-palat-MIX">j</c></cell>
+                           <cell><c ana="#G-lab-vel-MIX">w</c></cell>
+                        </row>
+                     </table><lb/>
+                  </p>
+                  <p><label>Glides/Semi-Vowels</label>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>j</label></cell>
+                           <cell>[<hi rend="bold">j</hi>ù] '1sg marker'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>w</label></cell>
+                           <cell>[<hi rend="bold">w</hi>e] 'plural marker'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+               </div>
+
+               <div>
+                  <label>Inventory of Pre-Nasalized Phonetic Units</label>
+                  <p>
+                     <table cols="12">
+                        <row>
+                           <cell>
+                              <table cols="6">
+                                 <row>
+                                    <cell/>
+                                    <cell><label>Bilabial</label></cell>
+                                    <cell><label>Alveo-Dental</label></cell>
+                                    <cell><label>Alveolar</label></cell>
+                                    <cell><label>Post-Alveolar</label></cell>
+                                    <cell><label>Velar</label></cell>
+                                 </row>
+                                 <row>
+                                    <cell><label>Stop</label></cell>
+                                    <cell><?oxy_comment_start author="jackbowers" timestamp="20161224T154112-0800" comment="this probably shouldn&apos;t be here because it is just passive...
+"?><c
+                                          ana="#pre-Nas-vc-bilab-stp-MIX"
+                                       >mb</c><?oxy_comment_end?></cell>
+                                    <!-- mixtec orthography: mb -->
+                                    <cell><!--<c corresp="#pre-Nas-vcls-alv-stp-MIX">nt̪</c> ~ <c>nd̪</c></cell>--></cell>
+                                    <cell><c ana="#pre-Nas-vcls-alv-stp-MIX">nt</c> ~<c
+                                          ana="#pre-Nas-semi-vc-alv-stp-MIX">nt̬</c> ~<c
+                                          ana="#pre-Nas-vc-alv-stp-MIX" type="variant"
+                                          subtype="conditioned">nd</c></cell>
+                                    <!-- mixtec orthography: nt -->
+                                    <cell/>
+                                    <cell><c ana="#pre-Nas-semi-vc-velar-stp-MIX" type="variant"
+                                          subtype="conditioned">ŋk̬</c> ~<c type="variant"
+                                          subtype="conditioned" ana="#pre-Nas-vcls-velar-stp-MIX"
+                                          >ŋg</c></cell>
+                                    <!-- mixtec orthography: ink -->
+                                 </row>
+                                 <row>
+                                    <cell><label>Affricate</label></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#pre-Nas-affric-stp-fric-vcls-alv-MIX">nts</c> ~<c
+                                          ana="pre-Nas-affric-stp-fric-vc-alv-MIX" type="variant"
+                                          subtype="conditioned">ndz</c></cell>
+                                    <cell><c ana="pre-Nas-affric-stp-fric-vcls-alv-post-alv-MIX"
+                                          >ntʃ</c> ~<c
+                                          ana="#pre-Nas-affric-stp-fric-vc-alv-post-alv-MIX"
+                                       >nʤ</c></cell>
+                                 </row>
+                              </table>
+                           </cell>
+                        </row>
+                     </table><lb/>
+                  </p>
+                  <p>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>mb</label></cell>
+                           <cell>(prenasalization of labials is a non-phonological variation)</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>nt</label></cell>
+                           <cell>(pre-nasalization of stop creates voicing)</cell>
+                           <cell>[nt̬̪] [nd̪]</cell>
+                           <cell>[<hi rend="bold">nt̪̬</hi>á.và] 'fly' </cell>
+                        </row>
+                        <row>
+                           <cell><label>ŋk̬</label></cell>
+                           <cell>[<hi rend="bold">ŋk̬</hi>àà]</cell>
+                           <cell>ŋg</cell>
+                           <cell>[<hi rend="bold">ŋg</hi>àà]</cell>
+                        </row>
+                        <row>
+                           <cell><label>nts</label></cell>
+                           <cell>[<hi rend="bold">nts</hi>á.ʔmù] 'smell (2s.inf)'</cell>
+                           <cell>[ndz]</cell>
+                           <cell>[<hi rend="bold">ndz</hi>ì.tzì.jò] 'across'</cell>
+                        </row>
+                        <row>
+                           <cell><label>ntʃ</label></cell>
+                           <cell>(pre-nasalization of affricate creates voicing)</cell>
+                           <cell><label>nʤ</label></cell>
+                           <cell>[<hi rend="bold">nʤ</hi>áá] 'blue'</cell>
+                        </row>
+                     </table><lb/>
+                  </p>
+               </div>
+
+               <div>
+                  <p><title>Inventory of Pre-Glottalized Phonetic Units</title><table cols="12">
+                        <row>
+                           <cell>
+                              <table cols="4">
+                                 <row>
+                                    <cell/>
+                                    <cell><label>Bilabial</label></cell>
+                                    <cell><label>Labio-Dental</label></cell>
+                                    <cell><label>Alveolar</label></cell>
+                                 </row>
+                                 <row>
+                                    <cell><label>Nasal</label></cell>
+                                    <cell><c ana="#pre-Glot-nas-bilab-MIX">ʔm</c> ~<c
+                                          ana="#pre-Glot-V-Nas-hi-bk-rnd-MIX">ʔũ</c></cell>
+                                    <!-- mixtec orthography: 'un -->
+                                    <cell/>
+                                    <cell><c ana="#pre-Glot-nas-alv-MIX">ʔn</c></cell>
+                                    <!-- mixtec orthography: 'n -->
+                                 </row>
+                                 <row>
+                                    <cell><label>Fricative</label></cell>
+                                    <cell/>
+                                    <cell><c ana="#pre-Glot-vc-lab-dent-fric-MIX">ʔv</c></cell>
+                                    <!-- mixtec orthography: 'v -->
+                                    <cell/>
+                                 </row>
+                                 <row>
+                                    <cell><label>Affricate</label></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell/>
+                                 </row>
+                                 <row>
+                                    <cell><label>Lateral</label></cell>
+                                    <cell/>
+                                    <cell/>
+                                    <cell><c ana="#pre-Glot-alv-lat-MIX">ʔl</c></cell>
+                                    <!-- mixtec orthography: 'l -->
+                                 </row>
+                              </table>
+                           </cell>
+                        </row>
+                     </table><lb/></p>
+                  <p><label>Pre-Glottalized Phones</label>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>ʔm</label></cell>
+                           <cell>[ũ̀.<hi rend="bold">ʔm̹̀</hi>] 'five'</cell>
+                           <!-- [ti.sù.ʔmà] -->
+                           <cell>[ʔũ]; [ʔõ]</cell>
+                           <cell>[ũ̀.<hi rend="bold">ʔũ̀</hi>]; [õ̀.<hi rend="bold">ʔõ̰̀</hi>]
+                              'five'</cell>
+                        </row>
+                        <row>
+                           <cell><label>ʔn</label></cell>
+                           <cell>[ʧà.tsá.<hi rend="bold">ʔn</hi>ù] 'elders'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ʔv</label></cell>
+                           <cell>[ka.<hi rend="bold">ʔv</hi>i] 'read'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>ʔl</label></cell>
+                           <cell>[tò.<hi rend="bold">ʔl</hi>ó] 'rooster'</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+               </div>
+               <div>
+                  <p><title>Inventory of Labialized Phonetic Units</title><table cols="12">
+                        <row>
+                           <cell>
+                              <table cols="3">
+                                 <row>
+                                    <cell/>
+                                    <cell><label>Alveolar >Velar</label></cell>
+                                    <cell><label>Velar</label></cell>
+                                 </row>
+                                 <row>
+                                    <cell><label>Stop</label></cell>
+                                    <cell/>
+                                    <cell><c ana="#vcls-velar-stp-off-G-lab-MIX">kʷ</c> ~<c
+                                          ana="#semi-vc-velar-stp-off-G-lab-MIX">k̬ʷ</c> ~<c
+                                          ana="#vc-velar-stp-off-G-lab-MIX">gʷ</c></cell>
+                                    <!-- mixtec orthography: ku -->
+                                 </row>
+                                 <row>
+                                    <cell><label>Affricate</label></cell>
+                                    <cell><c ana="#affric-fric-stp-vcls-alv-velar-MIX-off-G-lab"
+                                          >skʷ</c></cell>
+                                    <!-- mixtec orthography: sku -->
+                                 </row>
+                              </table>
+                           </cell>
+                        </row>
+                     </table></p>
+                  <lb/>
+                  <p><label>Labialized Phones</label>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label>kʷ</label></cell>
+                           <cell>[<hi rend="bold">kʷ</hi>ã́ã́] 'yellow'</cell>
+                           <cell>[k̬ʷ]</cell>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label>[skʷ]</label></cell>
+                           <cell>[<hi rend="bold">skʷ</hi>á.ʔʧì] 'cut.3s.inf '</cell>
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+               </div>
+
+               <div>
+                  <p><title>Inventory of Pre-Spirantized Phonetic Units</title><table cols="12">
+                        <row>
+                           <cell>
+                              <table cols="5">
+                                 <row>
+                                    <cell/>
+                                    <cell><label>Alveolar Pre-Spirant- Palatal Nasal</label></cell>
+                                    <cell><label>Alveolar Pre-Spirant - Alveolar
+                                       Nasal</label></cell>
+                                    <cell><label>Post-Alveolar
+                                       Pre-Spirant-Alveo-Palatal</label></cell>
+                                    <cell><label>Post-Alveolar Pre-Spirant-Palatal</label></cell>
+                                 </row>
+                                 <row>
+                                    <cell><label>Pre-Spirantized Nasal</label></cell>
+                                    <cell/>
+                                    <cell><c ana="#pre-Sprnt-nas-alv-MIX" type="variant">sn</c>
+                                       ~</cell>
+                                    <!-- mixtec orthography: xn -->
+                                    <cell/>
+                                    <cell><c ana="#pre-Sprnt-palat-nas-alv-MIX">ʃn</c>~<c
+                                          ana="#pre-Sprnt-palat-nas-palat-MIX" type="variant"
+                                       >ʃɲ</c></cell>
+                                    <!-- mixtec orthography: xn -->
+                                 </row>
+                                 <row>
+                                    <cell><label>Pre-Spirantized Affricate</label></cell>
+                                    <cell><c
+                                          ana="#pre-Sprnt-alv-affric-stp-fric-vcls-alv-post-alv-MIX"
+                                          type="variant">stʃ</c> ~</cell>
+                                    <!-- mixtec orthography: xch -->
+                                    <cell/>
+                                    <cell>~<c
+                                          ana="#pre-Sprnt-palat-affric-stp-fric-vcls-alv-post-alv-MIX"
+                                          >ʃtʃ</c></cell>
+                                    <!-- mixtec orthography: xch -->
+                                 </row>
+                              </table>
+                           </cell>
+                        </row>
+                     </table><lb/></p>
+                  <p><label>Pre-spirantized Phones</label>
+                     <table cols="4">
+                        <row>
+                           <cell><label>Phonetic Value</label></cell>
+                           <cell><label>Example</label></cell>
+                           <cell><label>Variant(s)</label></cell>
+                           <cell><label>Example(s)</label></cell>
+                        </row>
+                        <row>
+                           <cell><label/></cell>
+                           <cell/>
+                           <cell/>
+                           <cell/>
+                        </row>
+                        <row>
+                           <cell><label/></cell>
+                           <cell/>
+                           <cell/>
+                           <cell/>
+                        </row>
+                     </table><lb/>
+                  </p>
+               </div>
+               <!-- 
+            sn
+            ʃn
+            ʃɲ
+            stʃ
+            ʃtʃ
+            -->
+            </div>
+            <div>
+               <head>Mixtepec-Mixtec Vowels</head>
+               <p>
+                  <title>Oral Vowels (singleton)</title>
+                  <table cols="4">
+                     <row>
+                        <cell/>
+                        <cell><label>Front</label></cell>
+                        <cell><label>Central</label></cell>
+                        <cell><label>Back</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close</label></cell>
+                        <cell><c ana="#V-hi-frnt-MIX">i</c></cell>
+                        <cell/>
+                        <cell><c ana="#V-hi-bk-rnd-MIX">u</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close-mid</label></cell>
+                        <cell><c ana="#V-cls-md-frnt-MIX">e</c></cell>
+                        <cell/>
+                        <cell><c ana="#V-cls-md-bk-rnd-MIX">o</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open-mid</label></cell>
+                        <cell>~ <c ana="#V-opn-md-frnt-MIX" type="variant">ɛ</c></cell>
+                        <!-- [ɛ] is a non-contrastive variant of [e]-->
+                        <cell/>
+                        <cell>~ <c type="variant" ana="#V-opn-md-bk-rnd-MIX">ɔ</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open</label></cell>
+                        <cell/>
+                        <cell><c ana="#V-opn-lo-frnt-MIX">a</c>
+                        </cell>
+                        <cell/>
+                     </row>
+                  </table><lb/>
+               </p>
+               <p>
+                  <table cols="4">
+                     <row>
+                        <cell><label>Phonetic Value</label></cell>
+                        <cell><label>Example</label></cell>
+                        <cell><label>Variant(s)</label></cell>
+                        <cell><label>Example(s)</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>i</label></cell>
+                        <cell>[<hi rend="bold">í</hi>.t̪à] 'flower'; [kw<hi rend="bold">i</hi>.lí]
+                           'Scrub Jay'</cell>
+                        <cell>[ɪ], [ɛ]; (variants occur only in certain non-onset contexts) </cell>
+                        <cell>[kw<hi rend="bold">ɪ</hi>.lí]; [kw<hi rend="bold">ɛ</hi>.lí] 'Scrub
+                           Jay'</cell>
+                     </row>
+                     <row>
+                        <cell><label>u</label></cell>
+                        <cell>[s<hi rend="bold">ú</hi>.l<hi rend="bold">ù</hi>] 'child'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>e</label></cell>
+                        <cell>[v<hi rend="bold">é</hi>.ʔ<hi rend="bold">è</hi>] 'house'</cell>
+                        <cell>ɛ</cell>
+                        <cell>[v<hi rend="bold">ɛ́</hi>.ʔ<hi rend="bold">ɛ̀</hi>] 'house'</cell>
+                     </row>
+                     <row>
+                        <cell><label>o</label></cell>
+                        <cell>[k<hi rend="bold">ó</hi>.ʧi] 'fat'</cell>
+                        <cell>ɔ</cell>
+                        <cell>[k<hi rend="bold">ɔ́</hi>.ʧi] 'fat'</cell>
+                     </row>
+                     <row>
+                        <cell><label>a</label></cell>
+                        <cell>[k<hi rend="bold">a</hi>.nd̪ì] 'he/she/it jumps'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+
+                  </table><lb/>
+               </p>
+               <p>
+                  <title>Oral Vowels (gemminate)</title>
+                  <table cols="4">
+                     <row>
+                        <cell/>
+                        <cell><label>Front</label></cell>
+                        <cell><label>Central</label></cell>
+                        <cell><label>Back</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close</label></cell>
+                        <cell><c ana="#V-hi-frnt-long-MIX">iː</c></cell>
+                        <cell/>
+                        <cell><c ana="#V-hi-bk-rnd-long-MIX">uː</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close-mid</label></cell>
+                        <cell><c ana="#V-cls-md-frnt-long-MIX">eː</c></cell>
+                        <cell/>
+                        <cell><c ana="#V-cls-md-bk-rnd-long-MIX">oː</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open-mid</label></cell>
+                        <cell>~ <c ana="#V-opn-md-frnt-long-MIX" type="variant">ɛː</c></cell>
+                        <cell/>
+                        <cell>~ <c ana="#V-opn-md-bk-rnd-long-MIX" type="variant">ɔː</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open</label></cell>
+                        <cell/>
+                        <cell><c ana="#V-opn-lo-frnt-long-MIX">aː</c></cell>
+                        <cell/>
+                     </row>
+                  </table></p>
+               <lb/>
+               <p>
+                  <table cols="4">
+                     <row>
+                        <cell><label>Phonetic Value</label></cell>
+                        <cell><label>Example</label></cell>
+                        <cell><label>Variant(s)</label></cell>
+                        <cell><label>Example(s)</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>iː</label></cell>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>uː</label></cell>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>eː</label></cell>
+                        <cell/>
+                        <cell>ɛː</cell>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>oː</label></cell>
+                        <cell>[k<hi rend="bold">oo</hi>.ndò] 'frog'</cell>
+                        <cell>ɔː</cell>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>aː</label></cell>
+                        <cell>[j<hi rend="bold">àà</hi>] 'white'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+
+                  </table><lb/>
+               </p>
+            </div>
+
+            <div>
+               <head>Mixtepec-Mixtec Nasalized Vowels</head>
+               <p>
+                  <title>Nasal Vowels (single)</title>
+                  <table cols="4">
+                     <row>
+                        <cell/>
+                        <cell><label>Front</label></cell>
+                        <cell><label>Central</label></cell>
+                        <cell><label>Back</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close</label></cell>
+                        <cell><c>ĩ</c></cell>
+                        <cell/>
+                        <cell><c>ũ</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close-mid</label></cell>
+                        <cell><c>ẽ</c></cell>
+                        <cell/>
+                        <cell><c>õ</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open-mid</label></cell>
+                        <cell>~<c>ɛ̃</c></cell>
+                        <cell/>
+                        <cell>~<c>ɔ̃</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open</label></cell>
+                        <cell/>
+                        <cell><c>ã</c></cell>
+                        <cell/>
+                     </row>
+                  </table><lb/>
+                  <table cols="4">
+                     <row>
+                        <cell><label>Phonetic Value</label></cell>
+                        <cell><label>Example</label></cell>
+                        <cell><label>Variant(s)</label></cell>
+                        <cell><label>Example(s)</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>ĩ</label></cell>
+                        <cell>[kù.ʃã.ʔ<hi rend="bold">ĩ̀</hi>] '<seg>he/she/it eats
+                           dinner</seg>'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>ũ</label></cell>
+                        <cell/>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>ẽ</label></cell>
+                        <cell/>
+                        <cell>ɛ̃</cell>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>õ</label></cell>
+                        <cell/>
+                        <cell>ɔ̃</cell>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>ã</label></cell>
+                        <cell>[k<hi rend="bold">ã</hi>́.ʔ<hi rend="bold">ã</hi>̀]
+                           '<seg>speak</seg>'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+
+                  </table><lb/>
+               </p>
+               <p>
+                  <title>Nasal Vowels (gemminate)</title>
+                  <table cols="4">
+                     <row>
+                        <cell/>
+                        <cell><label>Front</label></cell>
+                        <cell><label>Central</label></cell>
+                        <cell><label>Back</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close</label></cell>
+                        <cell><c>ĩː</c></cell>
+                        <cell/>
+                        <cell><c>ũː</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Close-mid</label></cell>
+                        <cell><c>ẽː</c></cell>
+                        <cell/>
+                        <cell><c>õː</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open-mid</label></cell>
+                        <cell>~<c>ɛ̃ː</c></cell>
+                        <cell/>
+                        <cell>~<c>ɔ̃ː</c></cell>
+                     </row>
+                     <row>
+                        <cell><label>Open</label></cell>
+                        <cell/>
+                        <cell><c>ãː</c></cell>
+                        <cell/>
+                     </row>
+                  </table><lb/>
+                  <table cols="4">
+                     <row>
+                        <cell><label>Phonetic Value</label></cell>
+                        <cell><label>Example</label></cell>
+                        <cell><label>Variant(s)</label></cell>
+                        <cell><label>Example(s)</label></cell>
+                     </row>
+                     <row>
+                        <cell><label>ĩː</label></cell>
+                        <cell>[<hi rend="bold">ĩ́ĩ́</hi>] 'one'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>ũː</label></cell>
+                        <cell>[n<hi rend="bold">ũ̀ũ̀</hi>] '<seg>face</seg>'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>ẽː</label></cell>
+                        <cell/>
+                        <cell>ɛ̃ː</cell>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>õː</label></cell>
+                        <cell/>
+                        <cell>ɔ̃ː</cell>
+                        <cell/>
+                     </row>
+                     <row>
+                        <cell><label>ãː</label></cell>
+                        <cell>[<hi rend="bold">ã́ã́</hi>] 'yes'</cell>
+                        <cell/>
+                        <cell/>
+                     </row>
+                  </table><lb/>
+               </p>
+            </div>
+            <div xml:id="TONES-MIX">
+               <label>Mixtepec-Mixtec Tones</label>
+               <table cols="3">
+                  <row>
+                     <cell><label>Level</label></cell>
+                     <cell><label>Contour</label></cell>
+                     <cell><label>Complex-Contour</label></cell>
+                  </row>
+                  <row>
+                     <cell>High</cell>
+                     <cell>Rising</cell>
+                     <cell>Falling-Rising</cell>
+                  </row>
+                  <row>
+                     <cell>Mid (unmarked)</cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell>Low</cell>
+                     <cell>Falling</cell>
+                     <cell>Rising-Falling</cell>
+                  </row>
+               </table>
+               <lb/>
+               <table cols="3">
+                  <row>
+                     <cell><label>Tone</label></cell>
+                     <cell><label>example</label></cell>
+                     <cell><label>example</label></cell>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+                  <row>
+                     <cell><label/></cell>
+                     <cell/>
+                     <cell/>
+                  </row>
+               </table>
+            </div>
+         </div>
+      </body>
+   </text>
+
+   <!--Tonal Adaptation of Stress Patterns in Foreign Lexical Items  -->
+   <!-- 
+In MIX, the lexical item [á.nà] 'heart' is a borrowing from Spanish ['á.ni.ma]' ('soul'); this import is also found in Chalcatongo Mixtec (Macaulay (1996). 
+The lexical H tone in Mixtec on the 1st vowel, and a F tone, as in another such borrowing from Spanish 'carro', which also has a (H, F) tone patterning. 
+When we consider the tone patterning on other imported items from Spanish, ....
+
+
+the lexical stress on both of these lexical items occurs on the first vowel,
+thus resulting in the H tone, and the F tone on the second, which is less auditorily salient due to reduced intensity on the offset portion of the lexical item.
+
+Spanish	MIX
+ká ro	          kárù
+ká.fe	         ká.fè
+pán	          pã́ã
+
+
+
+   
+   -->
+
+
+   <!-- 
+   Notes: Phonotactics
+
+Much of the semi-started topics in all areas of the language has significant framework which could be ready for presentation in a relatively short amount of time with the help of an interested co-author. I would say that the fact that I have so much of this language already surveyed, it could potentially be worked on by interested researchers from any specialized linguistic subfield...
+
+morpho-phonology: (mix) minimal phono-semantic componants are indeed a very important aspect of what I have uncovered in this language as there are a finite set of minimal phono-semantic strings that in many cases* are clearly
+
+*nũ̀, nì, nà, kù, kà, kòó, tà, sà, tsì, tsà, ʧì, ɲà, ʔà, ……
+
+Give examples of observations of this in action
+
+-->
+
+
+   <!--
+
+ 
+Negation:
+
+V(ditrans)\A(V)  U(ditrans)	TR	LM
+
+ŋ̀- k̬wá.ʔà	   ʧṹũ̀	     nũ̀ũ̀	Jack
+
+POT\NEG-give\1s	   money     face	Jack
+
+'I will not give money to Jack'
+
+
+
+V(ditrans)\A(V)  U(ditrans)   TR	LM
+
+ŋ́- k̬wá.ʔà	  ʧṹũ̀	     nũ̀ũ̀	Jack
+
+POT\AFFRM-give\1s money      face	Jack
+
+'I won't give money to Jack'
+
+
+
+Notes:
+   (transcribed speech doc)  i) ILG: the backslash "\" in the glosses & tags represent the use of the tonal contour (CITE: IGT paper)
+
+
+     ii) Potential (further) Grammaticalization in Progress
+	
+	However in the case of the variant of the potentive prefix's prena *(ũ̀- ~ ŋ̀-)
+
+	'kù-' > 'kũ̀-'/_nasal > 'ũ̀-' > 'ŋ̀-'/_velar
+
+
+     iii) SYNTACTIC-SEMANTIC COMPONENT TEMPLATE for (VP(DITRANS))
+
+	has: V(DITRANS),A(V(DITRANS)),U(V(DITRANS)),OBLIQUE(SEMANTIC ROLE)
+
+
+	iv) COGNITIVE-LEXICAL INTERFACE
+
+		U(V(DITRANS))= Trajector (TR), OBLIQUE(SEMANTIC ROLE)= Landmark (LM)
+
+		
+
+   -->
+</TEI>

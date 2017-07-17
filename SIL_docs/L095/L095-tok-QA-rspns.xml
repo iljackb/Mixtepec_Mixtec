@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="L095-tok-w-A"
+     xml:base="L095-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L095-00-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-00-01-01">Nchii</seg>
+                  <seg xml:id="L095-00-01-02">inkaa</seg>
+                  <seg xml:id="L095-00-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L095-00-02">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-00-02-01">Dondé</seg>
+                  <seg xml:id="L095-00-02-02">está</seg>
+                  <seg xml:id="L095-00-03">el</seg>
+                  <seg xml:id="L095-00-04">gato</seg>
+                  <pc>?</pc>
+               </seg>
+            </title>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is an XML-TEI markup of the original publications by SIL Mexico for the
+               purposes of: archival and for the creation of a body of Mixtepec-Mixtec language
+               resources (LR) (ISO: mix). Encoded documents used with the permission of original
+               authors.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L095">
+               <editor>Gisela Beckmann</editor>
+               <editor>María M.
+                  Nieves</editor>
+               <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Tlalpan, D.F.,
+                  México</pubPlace>
+               <edition>second</edition>
+               <date>2007</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person xml:id="TS" sex="m">
+               <persName>Juan "Tisu'ma" Salazar</persName>
+               <residence notAfter="1994">
+                  <country key="MEX">Mexico</country>
+                  <region type="state">Oaxaca</region>
+                  <district>Juxtlahuaca</district>
+                  <settlement>Yucanani</settlement>
+               </residence>
+            </person>
+         </particDesc>
+         <textDesc>
+            <channel mode="m">the excersizes in document can be used in multiple ways (eg. "m"
+               (mixed)); i) The question prompt can be done in multiple ways: a) by someone speaking
+               the question while pointing to the given img; b) a single user can read the question
+               and look at the img themselves; ii) The answer can be given by: a) speaking it orally
+               to another speaker such as a classmate or instructor; b) writing it in the spavce
+               privided under the image and question; </channel>
+            <constitution type="single"/>
+            <derivation type="original">this document is labeled "original" because the XML-TEI
+               markup of it's contents have not made any alterations to the original
+               content;</derivation>
+            <domain type="spatial_configuration"/>
+            <!-- add 'cat'? -->
+            <factuality type="inapplicable"/>
+            <interaction type="partial">@"type": "partial" means that while the document is
+               interactive in that while learners will interact with content by responding to the
+               question (¿'Nchii inkaa vilu'? ; eng: 'where is the cat?') that could be spoken aloud
+               by someone else or read by user; the questions and answers are always going to be the
+               same, thus the range of possible inter-activity will be limited by this fact; </interaction>
+            <preparedness type="scripted">All questions and answers in document are always going to
+               be the same and in the same order, thus 'scripted'</preparedness>
+            <purpose type="inform"/>
+         </textDesc>
+      </profileDesc>
+      <encodingDesc>
+         <p> 1) In this document (and in all others) the 'seg' element is used to encapsulate: 1.i)
+            the entire sentences from original document (first level); 1.ii) the individual lexical
+            items contained within the sentences (second level); 1.iii) blank spaces for user to
+            write the answers to questions; each one of these contains @"type" with value of "blank"
+            (this is in order to avoid getting these mixed up with actually language content when
+            extracting the vocabulary from "seg" elements). 2) Within the sentence level "seg"
+            (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are
+            encapsulated in the "c" (character) element; 3) Where the page divisions in the original
+            documents are, this encoding uses "div" (division) elements; this is to separate the
+            linguistic, and knowledge data from formatting; Notes on potential future changes to the
+            encoding; &gt; (1.iii) I hope to replace this formatting in the future with either a more
+            appropriate element in TEI or perhaps using CSS; &gt; (1) Since the type of sentence can
+            sometimes be determined automatically by just the presence of certain punctuation marks
+            (e.g. character elements "c") as the first contents of the sentence, I may add further
+            info to each item such as: "¿" (@type: "question" @subtype:"init") &gt; (2) Future versions
+            of this corpus will include separate documents in CSS language that contain the
+            formatting info; &gt; (other) Given that the question and all 12 of the "seg" elements are
+            linguistically identical, I am looking to find the best way to include this in the
+            annotations, possible in an attribute; the reason I have not chosen to use the TEI
+            "@sameAs" is due to the amount of space it would take up inserting the lengthy "@xml:id"
+            of the other eight into every one of the (sentence level) "seg" elements; Currently I am
+            exploring means to achieve this using some kind of standoff notation; </p>
+         <p>
+            For first version of this document, all answers to the questions are encoded in the following way:
+            
+               - the speaker responses are separted from original content in the SIL publications with:
+                  "ab" (anonymous block) elements;
+            
+            - inside of which the segments
+               
+            - the responses and questions (specifically the segments labeled with the attribute "@blank")
+            are linked with the element "link" by tagging the two within the attribute "@pointer";
+            
+           </p>
+         <p>
+            Future revisions of encoding may include adding attribute "@xml:id" to the imgs to which
+            the question and answers correspond.
+            
+            
+         </p>
+         <projectDesc>
+            <p>Ideas for potential future use of encoded resource in the interest of the
+               Mixtepec-Mixtec language community: Potential applications of the contents document
+               for speakers and/or potential learners of the material covered herein and/or the
+               Mixtepec-Mixtec language, This, along with the other documents in this corpus of the
+               category "pedigogical: interactive" can fairly easily be converted into interactive
+               software applications in which the correct answers are supplied and the user has to
+               provide the correct content. Of the original language content, the: images and
+               questions supplied in original publications the forms/worksheets could be made into a
+               program that can automatically bring up a question from the pedigocical - interactive
+               documents (in any order) and the user can supply the answer by typing the appropriate
+               answer the same way they would write it in. However since L095 doesn't have the
+               complete answer supplied for any of the 12 questions, in order to make this
+               application we would have to add new language content to that from the published data
+               by including the expected answers. This could be done in a number of ways, including
+               in accordance with the suggestions of the original authors, consultants, and/or
+               according to one or more other native speakers (such as those who have participated
+               in project begun at SJSU in the US). In such a scenario, any products produced
+               through the pursuite of these proposed ideas would be make freely available to the
+               community and not be for any finantial gain on the part of those who may work on it;
+               Expanding upon the original questions/contents could create a much larger, and
+               dynamic version of the application; This could include any one or all of the
+               following components: i) an expanded variety of images relative configurations
+               between what Langacker (1978) calls the 'trajector' (tr) (eg. the cat), and the
+               'landmark' (lm) (eg. the neigboring object(s)), ii) we could create and integrate
+               recordings of the question prompt spoken by a native speaker.. iii) (contingent upon
+               the expansion of the img inventory), we could also expand upon the vocabulary
+               utilized in excercise by using more than just "vilu" (eng "cat") as the stimulus;
+               This would be a good way to integrate, and re-enforce the use other vocabulary items
+               contained in the set of publications (and/or other sources). Were funding to be
+               secured, such an application could be made for desktop/laptop computers, mobile
+               and/or tablet devices for local schools to make use of; </p>
+         </projectDesc>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:lang="mix" decls="#pedigogical-inter">
+      <body>
+         <div xml:id="L095-01">
+            <p>
+               <seg xml:id="L095-01-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-01-01-01">Nchii</seg>
+                  <seg xml:id="L095-01-01-02">inkaa</seg>
+                  <seg xml:id="L095-01-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-01.png"/>
+               <seg xml:id="L095-01-02">
+                  <seg xml:id="L095-01-02-01">Vilu</seg>
+                  <seg xml:id="L095-01-02-02">inkaa</seg>
+                  <seg type="blank" xml:id="L095-01-02-00">_________</seg>
+               </seg>
+            </p>
+            <!-- speaker responses to question: orthography, modification made by encoder (to be discussed with speaker) changed *'ga' to 'ka' to conform with usage of lexical item in other documents published in MIX working orthography-->
+            <ab>
+               <seg resp="#TS" xml:id="L095-01-A01">
+                  <seg xml:id="L095-01-A01-1">xiin</seg>
+                  <seg xml:id="L095-01-A01-2">cha</seg>
+                  <seg xml:id="L095-01-A01-3">ka</seg>
+               </seg>
+            </ab>
+            <link targets="#L095-01-A01 #L095-01-02-00"/>
+         </div>
+         <div xml:id="L095-02">
+            <p>
+               <seg xml:id="L095-02-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-02-01-01">Nchii</seg>
+                  <seg xml:id="L095-02-01-02">inkaa</seg>
+                  <seg xml:id="L095-02-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-02.png"/>
+               <seg type="blank" xml:id="L095-02-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-02-02-A01">
+                  <seg xml:id="L095-02-02-A01-1">ini</seg>
+                  <seg xml:id="L095-02-02-A01-2">nto'o</seg>
+                  <seg xml:id="L095-02-02-A01-3">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-02-02-A01 #L095-02-02"/>
+         </div>
+         <div xml:id="L095-03">
+            <p>
+               <seg xml:id="L095-03-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-03-01-01">Nchii</seg>
+                  <seg xml:id="L095-03-01-02">inkaa</seg>
+                  <seg xml:id="L095-03-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-03.png"/>
+               <seg type="blank" xml:id="L095-03-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-03-02-A01">
+                  <seg xml:id="L095-03-02-A01-1">inkai</seg>
+                  <seg xml:id="L095-03-02-A01-2">titzi</seg>
+                  <seg xml:id="L095-03-02-A01-3">mesa</seg>
+               </seg>
+            </ab>
+            <link target="#L095-03-02-A01 #L095-03-02"/>
+         </div>
+         <div xml:id="L095-04">
+            <p>
+               <seg xml:id="L095-04-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-04-01-01">Nchii</seg>
+                  <seg xml:id="L095-04-01-02">inkaa</seg>
+                  <seg xml:id="L095-04-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-04.png"/>
+               <seg type="blank" xml:id="L095-04-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-04-02-A01">
+                  <seg xml:id="L095-04-02-A01-1">chi</seg>
+                  <seg xml:id="L095-04-02-A01-2">sata</seg>
+                  <seg xml:id="L095-04-02-A01-3">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-04-02-A01 #L095-04-02"/>
+         </div>
+         <div xml:id="L095-05">
+            <p>
+               <seg xml:id="L095-05-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-05-01-01">Nchii</seg>
+                  <seg xml:id="L095-05-01-02">inkaa</seg>
+                  <seg xml:id="L095-05-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-05.png"/>
+               <seg type="blank" xml:id="L095-05-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-05-02-A01">
+                  <seg xml:id="L095-05-02-A01-1">chi</seg>
+                  <seg xml:id="L095-05-02-A01-2">sata</seg>
+                  <seg xml:id="L095-05-02-A01-3">chaa</seg>
+                  <seg xml:id="L095-05-02-A01-4">ka</seg>
+                  <seg xml:id="L095-05-02-A01-5">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-05-02-A01 #L095-05-02"/>
+         </div>
+         <div xml:id="L095-06">
+            <p>
+               <seg xml:id="L095-06-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-06-01-01">Nchii</seg>
+                  <seg xml:id="L095-06-01-02">inkaa</seg>
+                  <seg xml:id="L095-06-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-06.png"/>
+               <seg type="blank" xml:id="L095-06-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-06-02-A01">
+                  <seg xml:id="L095-06-02-A01-1">titzi</seg>
+                  <seg xml:id="L095-06-02-A01-2">sa'amo</seg>
+                  <seg xml:id="L095-06-02-A01-3">ka</seg>
+                  <seg xml:id="L095-06-02-A01-4">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-06-02-A01 #L095-06-02"/>
+         </div>
+         <div xml:id="L095-07">
+            <p>
+               <seg xml:id="L095-07-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-07-01-01">Nchii</seg>
+                  <seg xml:id="L095-07-01-02">inkaa</seg>
+                  <seg xml:id="L095-07-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-07.png"/>
+               <seg type="blank" xml:id="L095-07-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-07-02-A01">
+                  <seg xml:id="L095-07-02-A01-1">ini</seg>
+                  <seg xml:id="L095-07-02-A01-2">tito'on</seg>
+                  <seg xml:id="L095-07-02-A01-3">ka</seg>
+                  <seg xml:id="L095-07-02-A01-4">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-07-02 #L095-07-02-A01"/>
+         </div>
+         <div xml:id="L095-08">
+            <p>
+               <seg xml:id="L095-08-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-01-08-01">Nchii</seg>
+                  <seg xml:id="L095-01-08-02">inkaa</seg>
+                  <seg xml:id="L095-01-08-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-08.png"/>
+               <seg type="blank" xml:id="L095-08-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-08-02-A01a">
+                  <seg xml:id="L095-08-02-A01a-1">sata</seg>
+                  <seg xml:id="L095-08-02-A01a-2">nu'un</seg>
+                  <seg xml:id="L095-08-02-A01a-3">ka</seg>
+                  <seg xml:id="L095-08-02-A01a-4">inkai</seg>
+               </seg>
+               <seg resp="#TS" xml:id="L095-08-02-A01b">
+                  <seg xml:id="L095-08-02-A01b-1">xiin</seg>
+                  <seg xml:id="L095-08-02-A01b-2">nu'un</seg>
+                  <seg xml:id="L095-08-02-A01b-3">ka</seg>
+                  <seg xml:id="L095-08-02-A01b-4">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-08-02 #L095-08-02-A01a #L095-08-02-A01b"/>
+         </div>
+         <div xml:id="L095-09">
+            <p>
+               <seg xml:id="L095-09-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-09-01-0">Nchii</seg>
+                  <seg xml:id="L095-09-01-02">inkaa</seg>
+                  <seg xml:id="L095-09-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-09.png"/>
+               <seg type="blank" xml:id="L095-09-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-09-02-A01a">
+                  <seg xml:id="L095-09-02-A01a-1">sata</seg>
+                  <seg xml:id="L095-09-02-A01a-2">ña'an</seg>
+                  <seg xml:id="L095-09-02-A01a-3">ka</seg>
+                  <seg xml:id="L095-09-02-A01a-4">inkai</seg>
+               </seg>
+               <lb/>
+               <seg resp="#TS" xml:id="L095-09-02-A01b">
+                  <seg xml:id="L095-09-02-A01b-1">xiin</seg>
+                  <seg xml:id="L095-09-02-A01b-2">ña'an</seg>
+                  <seg xml:id="L095-09-02-A01b-3">ka</seg>
+                  <seg xml:id="L095-09-02-A01b-4">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-09-02 #L095-09-02-A01a #L095-09-02-A01b"/>
+         </div>
+         <div xml:id="L095-10">
+            <p>
+               <seg xml:id="L095-10-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-10-01-01">Nchii</seg>
+                  <seg xml:id="L095-10-01-02">inkaa</seg>
+                  <seg xml:id="L095-10-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-10.png"/>
+               <seg type="blank" xml:id="L095-10-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-10-02-A01">
+                  <seg xml:id="L095-10-02-A01-1">nu</seg>
+                  <seg xml:id="L095-10-02-A01-2">tza</seg>
+                  <seg xml:id="L095-10-02-A01-3">ña'an</seg>
+                  <seg xml:id="L095-10-02-A01-4">ka</seg>
+                  <seg xml:id="L095-10-02-A01-5">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-10-02-A01 #L095-10-02"/>
+         </div>
+         <div xml:id="L095-11">
+            <p>
+               <seg xml:id="L095-11-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-11-01-01">Nchii</seg>
+                  <seg xml:id="L095-11-01-02">inkaa</seg>
+                  <seg xml:id="L095-11-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-11.png"/>
+               <seg type="blank" xml:id="L095-11-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-11-02-A01">
+                  <seg xml:id="L095-11-02-A01-1">sata</seg>
+                  <seg xml:id="L095-11-02-A01-2">tiuza</seg>
+                  <seg xml:id="L095-11-02-A01-3">ka</seg>
+                  <seg xml:id="L095-11-02-A01-4">inkai</seg>
+               </seg>
+            </ab>
+            <link target="#L095-11-01-02 #L095-11-02-A01"/>
+         </div>
+         <div xml:id="L095-12">
+            <p>
+               <seg xml:id="L095-12-01">
+                  <pc>¿</pc>
+                  <seg xml:id="L095-12-01-01">Nchii</seg>
+                  <seg xml:id="L095-12-01-02">inkaa</seg>
+                  <seg xml:id="L095-12-01-03">vilu</seg>
+                  <pc>?</pc>
+               </seg>
+               <graphic url="L095-12.png"/>
+               <seg type="blank" xml:id="L095-12-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-12-02-A01">
+                  <seg xml:id="L095-12-02-A01-1">inkai</seg>
+                  <seg xml:id="L095-12-02-A01-2">sata</seg>
+                  <seg xml:id="L095-12-02-A01-3">ña'an</seg>
+                  <seg xml:id="L095-12-02-A01-4">ka</seg>
+               </seg>
+            </ab>
+            <link target="#L095-12-02 #L095-12-02-A01"/>
+         </div>
+      </body>
+   </text>
+</TEI>

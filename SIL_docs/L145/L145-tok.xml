@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L145-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L145-00-01">
+                  <w xml:id="L145-00-01-01">Tutu</w>
+                  <w xml:id="L145-00-01-02">ña</w>
+                  <w xml:id="L145-00-01-03">sna'a</w>
+                  <w xml:id="L145-00-01-04">nixi</w>
+                  <w xml:id="L145-00-01-06">skua'a</w>
+                  <w xml:id="L145-00-01-08">ñayivi</w>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L145-00-02">
+                  <w xml:id="L145-00-02-01">Cómo</w>
+                  <w xml:id="L145-00-02-02">estudiar</w>
+                  <w xml:id="L145-00-02-03">acerca</w>
+                  <w xml:id="L145-00-02-04">del</w>
+                  <w xml:id="L145-00-02-05">mundo</w>
+               </seg>
+            </title>
+            <editor>Gisela Beckmann</editor>
+            <editor>María M. Nieves</editor>
+            <respStmt>
+               <resp>Linguistic Consultation</resp>
+               <name>Marina Ramos López</name>
+               <name>Prof. Wilfrido López Hernández</name>
+               <name>Prof. Mendoza Santiago, Francisco</name>
+            </respStmt>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <name>Jack T. Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is a tokenized version of the XML-TEI markup of the original publications by SIL Mexico for the purposes of: archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix). Encoded documents used with the permission of original authors.Tokenized version made for purpose of enabling standoff annotations.</p>
+         </publicationStmt>
+         <notesStmt>
+            <note xml:id="L145-resumen" xml:lang="es">Este libro trata acerca de algunos conceptos básicos y generales de cómo es el mundo y su forma, cuando éste está dibujado en un planisferio. También incluye una descripción básica sobre países y continentes, conceptos como los puntos cardinales y cómo éstos se usan en el estudio de los mapas.</note>
+         </notesStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L145">
+               <title>Tutu ña sna'a nixi sku'a ñayivi</title>
+               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2009</date>. <edition>(2nd ed.)</edition>. <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Tlalpan, D.F., México</pubPlace>
+               <respStmt>
+                  <resp>linguistic consultation</resp>
+                  <name>Marina Ramos López</name>
+                  <name>Prof. Wilfrido López Hernández</name>
+                  <name>Prof. Mendoza Santiago, Francisco</name>
+               </respStmt>
+               Obtained from: <ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L145-EstudiarMundo-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+            <list>
+               <item>
+                  <label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                        <list>
+                           <item>i) the entire sentences from original document (first level);</item>
+                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
+                        </list>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>character</label>
+                  <elementSpec ident="c">
+                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
+                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
+                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <elementSpec ident="num">
+                     <desc> In this document as well as the others in the document set that have numbers in their digit form, digits ([0-9] etc.) are encapsulated in the "num" (number) element to most accurately express the semantic contents;
+                        The "num" elements in the TEI-XML markup of these documets may be given the following attributes:
+                        
+                        '@<att>value</att>'
+                        (used to provide info for the exact numeric value, (this is redundant to the contents of element and may not be necessary and later versions of this encoding may not include this).
+                        
+                        '@<att>corresp</att>'
+                        (given that many of the exercises in this document include numeric and prose presentations of the same problems, the @'corresp' is used to provide link between the written (orthographic) form of the number and the digit it represents;)
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>division</label>
+                  <elementSpec ident="div">
+                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>graphic</label>
+                  <elementSpec ident="graphic">
+                     <desc>All images from SIL-Mexico publications are encoded in TEI 'graphic' elements. Each is identified in attribute: @'<att>url</att>. In final output, the goal is to annotate/encode image and the semantic contents represented according to one or more Linked Open Data compatible metadata markup formats.</desc>
+                  </elementSpec>
+               </item>
+            </list>
+         </p>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <projectDesc>
+            <p>
+               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+               The encoding of this portion of the MIX Language resources can be divided into the following components:
+               <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                     
+                     <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                     <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+      <revisionDesc>
+         <change when-iso="2014-11-05">Added the abstract in Spanish which is included in the publications but was originally left out of the XML encoding.</change>
+      </revisionDesc>
+   </teiHeader>
+   <text decls="#pedagogical-ref">
+      <front xml:lang="es">
+         <ab>Este libro trata acerca de algunos conceptos básicos y generales de cómo es el mundo y su forma, cuando éste está dibujado en un planisferio.También incluye una descripción básica sobre países y continentes, conceptos como los puntos cardinales y cómo éstos se usan en el estudio de los mapas.</ab>
+      </front>
+      <body xml:lang="mix">
+         <div xml:id="L145-01">
+            <head>
+               <s xml:id="L145-01-00">
+                  <w xml:id="L145-01-00-01">Ntantuku</w>
+                  <w xml:id="L145-01-00-02">nuu</w>
+                  <w xml:id="L145-01-00-03">inkaa</w>
+                  <w xml:id="L145-01-00-04">nta'a</w>
+                  <w xml:id="L145-01-00-05">tutu</w>
+                  <w xml:id="L145-01-00-06">ña</w>
+                  <w xml:id="L145-01-00-07">kunu</w>
+                  <w xml:id="L145-01-00-08">ka'vu</w>
+               </s>
+            </head>
+            <list type="ordered">
+               <item>
+                     <w xml:id="L145-01-01-01">Kava</w>
+                     <w xml:id="L145-01-01-02a">Ñu'u</w>
+                     <w xml:id="L145-01-01-02b">Ncha'i</w>
+                  <spanGrp type="semantics">
+                     <span/>
+                  </spanGrp>  
+                  <spanGrp type="gram">
+                     <span/>
+                  </spanGrp>  
+               </item>
+               <item>
+                  <seg xml:id="L145-01-02a">Ntikumi</seg>
+                  <seg xml:id="L145-01-02b">tsio</seg>
+               </item>
+               <item>
+                     <w xml:id="L145-01-03-01">Nixi</w>
+                     <w xml:id="L145-01-03-02">na'a</w>
+                     <w xml:id="L145-01-03-03">ntikumi tsio</w>       
+               </item>
+               <item>
+                  <seg xml:id="L145-01-04">
+                     <w xml:id="L145-01-04-01">Ña</w>
+                     <w xml:id="L145-01-04-02">tsa'ncha</w>
+                     <w xml:id="L145-01-04-03">ma'in</w>
+                     <w xml:id="L145-01-04-04">sava</w>
+                     <w xml:id="L145-01-04-05">ntaa</w>
+                     <w xml:id="L145-01-04-06">Ñu'u Ncha'i</w>
+                     <w xml:id="L145-01-04-07">ña</w>
+                     <w xml:id="L145-01-04-08">chi kuchi</w>
+                     <w xml:id="L145-01-04-09">tsi</w>
+                     <w xml:id="L145-01-04-10">ninu</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-05">
+                     <w xml:id="L145-01-05-01">Hemisferios</w>
+                     <w xml:id="L145-01-05-02">chi Kuchi</w>
+                     <w xml:id="L145-01-05-03">cha</w>
+                     <w xml:id="L145-01-05-05">chi Ninu</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-06">
+                     <w xml:id="L145-01-06-01">Ña</w>
+                     <w xml:id="L145-01-06-02">tsa'ncha</w>
+                     <w xml:id="L145-01-06-03">ma'in</w>
+                     <w xml:id="L145-01-06-04">sava</w>
+                     <w xml:id="L145-01-06-05">ntaa</w>
+                     <w xml:id="L145-01-06-06">Ñu'u Ncha'i</w>
+                     <w xml:id="L145-01-06-07">tsio kua'a</w>
+                     <w xml:id="L145-01-06-08">tsi</w>
+                     <w xml:id="L145-01-06-09">tsio sachi</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-07">
+                     <w xml:id="L145-01-07-01">Hemisferios</w>
+                     <w xml:id="L145-01-07-02">Kua'a</w>
+                     <w xml:id="L145-01-07-03">tsi</w>
+                     <w xml:id="L145-01-07-04">Sachi</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-08">
+                     <w xml:id="L145-01-08-01">Ñu'u Ncha'i</w>
+                     <w xml:id="L145-01-08-02">ka</w>
+                     <w xml:id="L145-01-08-03">tsiko</w>
+                     <w xml:id="L145-01-08-04">nui</w>
+                  </seg>
+               </item>
+               <item>
+                  <pc>¿</pc>
+                  <seg xml:id="L145-01-09">
+                     <w xml:id="L145-01-09-01">Chanu</w>
+                     <w xml:id="L145-01-09-02">va'a</w>
+                     <w xml:id="L145-01-09-03">yee</w>
+                     <w xml:id="L145-01-09-04">ntuu</w>
+                     <w xml:id="L145-01-09-05">tsi</w>
+                     <w xml:id="L145-01-09-06">tsikuaa</w>
+                  </seg>
+                  <pc>?</pc>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-10">
+                     <w xml:id="L145-01-10-01">Ñu'u</w>
+                     <w xml:id="L145-01-10-02">ka</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-11">Hemisferio Sachi</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-12">Hemisferio Kua'a</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-13">Ñu'u Nkoyo</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-14">Ñu'u Ntua</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-15">
+                     <w xml:id="L145-01-15-01">Kue</w>
+                     <w xml:id="L145-01-15-02">ñuu</w>
+                     <w xml:id="L145-01-15-03">inkaa</w>
+                     <w xml:id="L145-01-15-04">chi Kuchi</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-01-16">
+                     <w xml:id="L145-01-16-01">Kue</w>
+                     <w xml:id="L145-01-16-02">ñuu</w>
+                     <w xml:id="L145-01-16-03">inkaa</w>
+                     <w xml:id="L145-01-16-04">chi Ninu</w>
+                  </seg>
+               </item>
+            </list>
+         </div>
+         <div xml:id="L145-02" xml:lang="es">
+            <head>
+               <seg xml:id="L145-O2-00" xml:lang="es">Índice</seg>
+            </head>
+            <list type="ordered">
+               <item>
+                  <seg xml:id="L145-02-01">
+                     <w xml:id="L145-02-01-01">Eje</w>
+                     <w xml:id="L145-02-01-02">de</w>
+                     <w xml:id="L145-02-01-03">la</w>
+                     <w xml:id="L145-02-01-04">tierra</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-02">
+                     <w xml:id="L145-02-02-01">Los</w>
+                     <w xml:id="L145-02-02-02">cuatro</w>
+                     <w xml:id="L145-02-02-03">puntos</w>
+                     <w xml:id="L145-02-02-04">cardinales</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-03">
+                     <w xml:id="L145-02-03-01">Cómo</w>
+                     <w xml:id="L145-02-03-02">podemos</w>
+                     <w xml:id="L145-02-03-03">ubicar</w>
+                     <w xml:id="L145-02-03-04">los</w>
+                     <w xml:id="L145-02-03-05">cuatro</w>
+                     <w xml:id="L145-02-03-06">puntos</w>
+                     <w xml:id="L145-02-03-07">cardinales</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-04">
+                     <w xml:id="L145-02-04-01">La</w>
+                     <w xml:id="L145-02-04-02">línea</w>
+                     <w xml:id="L145-02-04-03">del</w>
+                     <w xml:id="L145-02-04-04">ecuador</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-05">
+                     <w xml:id="L145-02-05-01">Hemisferios</w>
+                     <w xml:id="L145-02-05-02">norte</w>
+                     <w xml:id="L145-02-05-03">y</w>
+                     <w xml:id="L145-02-05-04">sur</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-06">Primer meridiano</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-07">
+                     <w xml:id="L145-02-07-01">Hemisferios</w>
+                     <w xml:id="L145-02-07-02">oriental</w>
+                     <w xml:id="L145-02-07-03">y</w>
+                     <w xml:id="L145-02-07-04">occidental</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-08">
+                     <w xml:id="L145-02-08-01">Movimiento</w>
+                     <w xml:id="L145-02-08-02">de</w>
+                     <w xml:id="L145-02-08-03">traslación</w>
+                     <w xml:id="L145-02-08-04">de</w>
+                     <w xml:id="L145-02-08-05">la</w>
+                     <w xml:id="L145-02-08-06">tierra</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-09">
+                     <pc>¿</pc>
+                     <w xml:id="L145-02-09-01">Por qué</w>
+                     <w xml:id="L145-02-09-02">hay</w>
+                     <w xml:id="L145-02-09-03">día</w>
+                     <w xml:id="L145-02-09-04">y</w>
+                     <w xml:id="L145-02-09-05">noche</w>
+                     <pc>?</pc>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-10">
+                     <w xml:id="L145-02-10-01">La</w>
+                     <w xml:id="L145-02-10-02">Tierra</w>
+                     <c>(</c>
+                     <w xml:id="L145-02-10-03">el</w>
+                     <w xml:id="L145-02-10-04">mundo</w>
+                     <c>)</c>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-11">Hemisferio occidental</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-12">Hemisferio oriental</seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-13">
+                     <w xml:id="L145-02-13-01">Mapa</w>
+                     <w xml:id="L145-02-13-02">de</w>
+                     <w xml:id="L145-02-13-03">la</w>
+                     <w xml:id="L145-02-13-04">República Mexicana</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-14">
+                     <w xml:id="L145-02-14-01">Mapa</w>
+                     <w xml:id="L145-02-14-02">del</w>
+                     <w xml:id="L145-02-14-03">Estado de Oaxaca</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-15">
+                     <w xml:id="L145-02-15-01">Mapa</w>
+                     <w xml:id="L145-02-15-02">de</w>
+                     <w xml:id="L145-02-15-03">América del Norte</w>
+                  </seg>
+               </item>
+               <item>
+                  <seg xml:id="L145-02-16">
+                     <w xml:id="L145-02-16-01">Mapa</w>
+                     <w xml:id="L145-02-16-02">de</w>
+                     <w xml:id="L145-02-16-03">América del Sur</w>
+                  </seg>
+               </item>
+            </list>
+         </div>
+         <div xml:id="L145-03">
+            <head>
+               <seg xml:id="L145-03-00">
+                  <w xml:id="L145-03-00-01">Kava</w>
+                  <w xml:id="L145-03-00-02">Ñu'u Ncha'i</w>
+               </seg>
+            </head>
+            <head>
+               <graphic url="L145_01.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-03-01">
+                  <w xml:id="L145-03-01-01">Ñu'u Ñcha'i</w>
+                  <w xml:id="L145-03-01-02">ka</w>
+                  <w xml:id="L145-03-01-03">kai</w>
+                  <w xml:id="L145-03-01-04">tono</w>
+                  <w xml:id="L145-03-01-05">iin</w>
+                  <w xml:id="L145-03-01-06">tikuaa</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-03-02">
+                  <w xml:id="L145-03-02-01">Saan</w>
+                  <w xml:id="L145-03-02-02">so</w>
+                  <w xml:id="L145-03-02-03">kavi</w>
+                  <w xml:id="L145-03-02-04">nuu</w>
+                  <w xml:id="L145-03-02-05">ña'a</w>
+                  <w xml:id="L145-03-02-06">tee</w>
+                  <w xml:id="L145-03-02-07">ntui</w>
+                  <w xml:id="L145-03-02-08">ra</w>
+                  <w xml:id="L145-03-02-09">koi</w>
+                  <w xml:id="L145-03-02-10">yee</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-03-02-11">cha</w>
+                  <w xml:id="L145-03-02-12">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-03-02-13">eje</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-03-03">
+                  <w xml:id="L145-03-03-01">Na'i</w>
+                  <w xml:id="L145-03-03-02">tono</w>
+                  <w xml:id="L145-03-03-03">iin</w>
+                  <w xml:id="L145-03-03-04">yutu</w>
+                  <w xml:id="L145-03-03-05">ntaa</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+            <p>
+               <s xml:id="L145-03-04">
+                  <seg xml:id="L145-03-04-01">Cha</seg>
+                  <seg xml:id="L145-03-04-02">nuu</seg>
+                  <seg xml:id="L145-03-04-03">ntsinu</seg>
+                  <seg xml:id="L145-03-04-04">iin</seg>
+                  <seg xml:id="L145-03-04-05">tsio</seg>
+                  <seg xml:id="L145-03-04-06">iin</seg>
+                  <pc>"</pc>
+                  <seg xml:id="L145-03-04-07">eje</seg>
+                  <pc>"</pc>
+                  <seg xml:id="L145-03-04-08">nania</seg>
+                  <pc>"</pc>
+                  <seg xml:id="L145-03-04-09">Polo</seg>
+                  <seg xml:id="L145-03-04-10">chi Kuchi</seg>
+                  <pc>"</pc>
+                  <pc>,</pc>
+                  <seg xml:id="L145-03-04-11">sara</seg>
+                  <seg xml:id="L145-03-04-12">nuu</seg>
+                  <seg xml:id="L145-03-04-13">tsinu</seg>
+                  <seg xml:id="L145-03-04-14">inka</seg>
+                  <seg xml:id="L145-03-04-15">tsio</seg>
+                  <seg xml:id="L145-03-04-16">inka</seg>
+                  <seg xml:id="L145-03-04-17">eje</seg>
+                  <seg xml:id="L145-03-04-18">nania</seg>
+                  <pc>"</pc>
+                  <seg xml:id="L145-03-04-19">Polo</seg>
+                  <seg xml:id="L145-03-04-20">chi Ninu</seg>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-04">
+            <head>
+               <seg xml:id="L145-04-00">Ntikumi tsio</seg>
+            </head>
+            <head>
+               <graphic url="L145_02.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-04-01">
+                  <w xml:id="L145-04-01-01">Ño'o</w>
+                  <w xml:id="L145-04-01-02">kuu</w>
+                  <w xml:id="L145-04-01-03">iin</w>
+                  <w xml:id="L145-04-01-04">ña'a</w>
+                  <w xml:id="L145-04-01-05">luu</w>
+                  <w xml:id="L145-04-01-06">ña</w>
+                  <w xml:id="L145-04-01-07">sna'a</w>
+                  <w xml:id="L145-04-01-08">ntikumi tsio</w>
+                  <w xml:id="L145-04-01-09">tono</w>
+                  <w xml:id="L145-04-01-10">chi Kuchi</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-04-01-11">chi Ninu</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-04-01-12">chi Kua'a</w>
+                  <w xml:id="L145-04-01-13">tsi</w>
+                  <w xml:id="L145-04-01-14">chi Sachi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-04-02">
+                  <w xml:id="L145-04-02-01">Vichi</w>
+                  <pc>,</pc>
+                  <pc>¿</pc>
+                  <w xml:id="L145-04-02-02">nchii</w>
+                  <w xml:id="L145-04-02-03">tsio</w>
+                  <w xml:id="L145-04-02-04">sna'i</w>
+                  <w xml:id="L145-04-02-05">nuu</w>
+                  <w xml:id="L145-04-02-06">ko</w>
+                  <pc>?</pc>
+               </s>
+               <s xml:id="L145-04-03">
+                  <w xml:id="L145-04-03-01">Kunchee</w>
+                  <w xml:id="L145-04-03-02">nixi</w>
+                  <w xml:id="L145-04-03-03">na'a</w>
+                  <w xml:id="L145-04-03-04">ntikumi tsio</w>
+                  <w xml:id="L145-04-03-05">nuu</w>
+                  <w xml:id="L145-04-03-06">inka</w>
+                  <w xml:id="L145-04-03-07">nta'a</w>
+                  <w xml:id="L145-04-03-08">tutu</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-05">
+            <head>
+               <seg xml:id="L145-05-00">
+                  <w xml:id="L145-05-00-01">Nixi</w>
+                  <w xml:id="L145-05-00-02">na'a</w>
+                  <w xml:id="L145-05-00-03">ntikumi tsio</w>
+               </seg>
+            </head>
+            <head>
+               <graphic url="L145_03.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-05-01">
+                  <w xml:id="L145-05-01-01">Su'a</w>
+                  <w xml:id="L145-05-01-02">na'a</w>
+                  <w xml:id="L145-05-01-03">ntikumi tsio</w>
+                  <w xml:id="L145-05-01-04">tono</w>
+                  <w xml:id="L145-05-01-05">chi Kuchi</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-05-01-06">chi Ninu</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-05-01-07">chi Kua'a</w>
+                  <w xml:id="L145-05-01-08">tsi</w>
+                  <w xml:id="L145-05-01-09">chi Sachi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-05-02">
+                  <w xml:id="L145-05-02-01">Nikanchii</w>
+                  <w xml:id="L145-05-02-02">ka</w>
+                  <w xml:id="L145-05-02-03">tsinui</w>
+                  <w xml:id="L145-05-02-04">tsio</w>
+                  <w xml:id="L145-05-02-05">kua'a</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+            <p>
+               <s xml:id="L145-05-03">
+                  <w xml:id="L145-05-03-01">Kunchee</w>
+                  <w xml:id="L145-05-03-02">ñasuii</w>
+                  <w xml:id="L145-05-03-03">luu</w>
+                  <w xml:id="L145-05-03-04">ka</w>
+                  <w xml:id="L145-05-03-05">ña</w>
+                  <w xml:id="L145-05-03-06">inkai</w>
+                  <w xml:id="L145-05-03-07">ma'i</w>
+                  <w xml:id="L145-05-03-08">ntikumi tsio</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-05-04">
+                  <w xml:id="L145-05-04-01">Tsio</w>
+                  <w xml:id="L145-05-04-02">tsito</w>
+                  <w xml:id="L145-05-04-03">nuu</w>
+                  <w xml:id="L145-05-04-04">ñasuii</w>
+                  <w xml:id="L145-05-04-05">yo'o</w>
+                  <w xml:id="L145-05-04-06">nania</w>
+                  <w xml:id="L145-05-04-07">chi kuchi</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-05-04-08">cha</w>
+                  <w xml:id="L145-05-04-09">chi Ninu</w>
+                  <w xml:id="L145-05-04-10">inkaa</w>
+                  <w xml:id="L145-05-04-11">sata</w>
+                  <w xml:id="L145-05-04-12">tsi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-05-05"> 
+                  <w xml:id="L145-05-05-01">Cha</w>
+                  <w xml:id="L145-05-05-02">nche'e</w>
+                  <w xml:id="L145-05-05-03">ko</w>
+                  <w xml:id="L145-05-05-04">tuku</w>
+                  <w xml:id="L145-05-05-05">ña</w>
+                  <w xml:id="L145-05-05-06">chi Kua'a</w>
+                  <w xml:id="L145-05-05-07">inkaa</w>
+                  <w xml:id="L145-05-05-08">nikanchii</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-05-05-09">ra</w>
+                  <w xml:id="L145-05-05-10">chi Sachi</w>
+                  <w xml:id="L145-05-05-11">inkaa</w>
+                  <w xml:id="L145-05-05-12">nta'a</w>
+                  <w xml:id="L145-05-05-13">tsi</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-06">
+            <head>
+               <seg xml:id="L145-06-00">
+                  <w xml:id="L145-06-00-01">Ña</w>
+                  <w xml:id="L145-06-00-02">tsa'ncha</w>
+                  <w xml:id="L145-06-00-03">ma'in</w>
+                  <w xml:id="L145-06-00-04">sava</w>
+                  <w xml:id="L145-06-00-05">ntaa</w>
+                  <lb/>
+                  <w xml:id="L145-06-00-06">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-06-00-07">ña</w>
+                  <w xml:id="L145-06-00-08">chi kuchi</w>
+                  <w xml:id="L145-06-00-09">tsi</w>
+                  <w xml:id="L145-06-00-10">ninu</w>
+               </seg>
+            </head>
+            <head>
+               <graphic url="L145_04.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-06-01">
+                  <w xml:id="L145-06-01-01">Ntuku'un</w>
+                  <w xml:id="L145-06-01-02">inu</w>
+                  <w xml:id="L145-06-01-03">ña</w>
+                  <w xml:id="L145-06-01-04">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-06-01-05">ka</w>
+                  <w xml:id="L145-06-01-06">kui</w>
+                  <w xml:id="L145-06-01-07">tono</w>
+                  <w xml:id="L145-06-01-08">iin</w>
+                  <w xml:id="L145-06-01-09">tikuaa</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-06-02">
+                  <pc>"</pc>
+                  <w xml:id="L145-06-02-01">Ecuador</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-06-02-02">kuu</w>
+                  <w xml:id="L145-06-02-03">ña</w>
+                  <w xml:id="L145-06-02-04">tsa'ncha</w>
+                  <w xml:id="L145-06-02-05">sava</w>
+                  <w xml:id="L145-06-02-06">ntaa</w>
+                  <w xml:id="L145-06-02-07">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-06-02-08">chi Kuchi</w>
+                  <w xml:id="L145-06-02-09">tsi</w>
+                  <w xml:id="L145-06-02-10">chi Ninu</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-06-03">
+                  <w xml:id="L145-06-03-01">Cha</w>
+                  <w xml:id="L145-06-03-02">kacho</w>
+                  <w xml:id="L145-06-03-03">ña'a</w>
+                  <w xml:id="L145-06-03-04">ntui</w>
+                  <w xml:id="L145-06-03-05">ra</w>
+                  <w xml:id="L145-06-03-06">koi</w>
+                  <w xml:id="L145-06-03-07">yee</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-06-04">
+                  <w xml:id="L145-06-04-01">Sava</w>
+                  <w xml:id="L145-06-04-02">ntaa</w>
+                  <w xml:id="L145-06-04-03">chi Kuchi</w>
+                  <w xml:id="L145-06-04-04">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-06-04-05">Hemisferio Kuchi</w>
+                  <pc>"</pc>
+                  <pc>,</pc>
+                  <w xml:id="L145-06-04-06">cha</w>
+                  <w xml:id="L145-06-04-07">sava</w>
+                  <w xml:id="L145-06-04-08">ntaa</w>
+                  <w xml:id="L145-06-04-09">chi Ninu</w>
+                  <w xml:id="L145-06-04-10">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-06-04-11">Hemisferio</w>
+                  <w xml:id="L145-06-04-12">Ninu</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-07">
+            <head>
+               <seg xml:id="L145-07-00">
+                  <w xml:id="L145-07-00-01">Hemisferios</w>
+                  <w xml:id="L145-07-00-02">chi Kuchi</w>
+                  <w xml:id="L145-07-00-03">cha</w>
+                  <w xml:id="L145-07-00-04">chi Ninu</w>
+               </seg>
+            </head>
+            <head>
+               <graphic url="L145_05.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-07-01">
+                  <w xml:id="L145-07-01-01">Kunchee</w>
+                  <w xml:id="L145-07-01-02">ña</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-01-03">Polo</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-01-04">tsi</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-01-05">Hemisferio</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-01-06">siin siin</w>
+                  <w xml:id="L145-07-01-07">kui</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-07-02">
+                  <pc>"</pc>
+                  <w xml:id="L145-07-02-01">Polo</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-02-02">kunia</w>
+                  <w xml:id="L145-07-02-03">kachia</w>
+                  <w xml:id="L145-07-02-04">nuu</w>
+                  <w xml:id="L145-07-02-05">tsinu</w>
+                  <w xml:id="L145-07-02-06">iin</w>
+                  <w xml:id="L145-07-02-07">eje</w>
+                  <c>(</c>
+                  <w xml:id="L145-07-02-08">ka'vi</w>
+                  <w xml:id="L145-07-02-09">nta'a</w>
+                  <w xml:id="L145-07-02-10">tutu</w>
+                  <num xml:id="L145-07-02-11">5</num>
+                  <c>)</c>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-07-03">
+                  <w xml:id="L145-07-03-01">Cha</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-03-02">Hemisferio</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-07-03-03">kunia</w>
+                  <w xml:id="L145-07-03-04">kachia</w>
+                  <w xml:id="L145-07-03-05">sava</w>
+                  <w xml:id="L145-07-03-06">Ñu'u Ncha'i</w>
+                  <c>(</c>
+                  <w xml:id="L145-07-03-07">ka'vi</w>
+                  <w xml:id="L145-07-03-08">nta'a</w>
+                  <w xml:id="L145-07-03-09">tutu</w>
+                  <num xml:id="L145-07-03-10">8</num>
+                  <c>)</c>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-08">
+            <head>
+               <seg xml:id="L145-08-00">
+                  <w xml:id="L145-08-00-01">Ña</w>
+                  <w xml:id="L145-08-00-02">tsa'ncha</w>
+                  <w xml:id="L145-08-00-03">ma'i</w>
+                  <w xml:id="L145-08-00-04">sava</w>
+                  <w xml:id="L145-08-00-05">ntaa</w>
+                  <w xml:id="L145-08-00-06">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-08-00-07">tsio kua'a</w>
+                  <w xml:id="L145-08-00-08">tsi</w>
+                  <w xml:id="L145-08-00-09">tsio sachi</w>
+               </seg>
+            </head>
+            <head>
+               <graphic url="L145_06.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-08-01">
+                  <w xml:id="L145-08-01-01">Ña</w>
+                  <w xml:id="L145-08-01-02">tsan'cha</w>
+                  <w xml:id="L145-08-01-03">ma'i</w>
+                  <w xml:id="L145-08-01-04">sava</w>
+                  <w xml:id="L145-08-01-05">ntaa</w>
+                  <w xml:id="L145-08-01-06">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-08-01-07">tsio kua'a</w>
+                  <w xml:id="L145-08-01-08">tsi</w>
+                  <w xml:id="L145-08-01-09">tsio sachi</w>
+                  <w xml:id="L145-08-01-10">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-08-01-11">Meridiano</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-08-02">
+                  <w xml:id="L145-08-02-01">Cha</w>
+                  <w xml:id="L145-08-02-02">kacho</w>
+                  <w xml:id="L145-08-02-03">ña'a</w>
+                  <w xml:id="L145-08-02-04">ntui</w>
+                  <w xml:id="L145-08-02-05">ra</w>
+                  <w xml:id="L145-08-02-06">koi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-08-03">
+                  <w xml:id="L145-08-03-01">Kitsai</w>
+                  <w xml:id="L145-08-03-02">chi kuchi</w>
+                  <w xml:id="L145-08-03-03">cha</w>
+                  <w xml:id="L145-08-03-04">tsai</w>
+                  <w xml:id="L145-08-03-05">mancha</w>
+                  <w xml:id="L145-08-03-06">chi ninu</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-08-04"> 
+                  <w xml:id="L145-08-04-01">Tsio kua'a</w>
+                  <w xml:id="L145-08-04-02">nani</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-08-04-03">Hemisferio Kua'a</w>
+                  <pc>"</pc>
+                  <pc>,</pc>
+                  <w xml:id="L145-08-04-04">cha</w>
+                  <w xml:id="L145-08-04-05">tsio sachi</w>
+                  <w xml:id="L145-08-04-06">nani</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-08-04-07">Hemisferio Sachi</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-09">
+            <head>
+               <seg xml:id="L145-09-00">
+                  <w xml:id="L145-09-00-01">Hemisferios</w>
+                  <w xml:id="L145-09-00-02">Kua'a</w>
+                  <w xml:id="L145-09-00-03">tsi</w>
+                  <w xml:id="L145-09-00-04">Sachi</w>
+               </seg>
+            </head>
+            <head>
+               <graphic url="L145_07.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-09-01">
+                  <w xml:id="L145-09-01-01">Su'a</w>
+                  <w xml:id="L145-09-01-02">na'a</w>
+                  <w xml:id="L145-09-01-03">ntintuu</w>
+                  <w xml:id="L145-09-01-05">tsio</w>
+                  <pc>;</pc>
+                  <w xml:id="L145-09-01-06">tsio kua'a</w>
+                  <w xml:id="L145-09-01-07">tsi</w>
+                  <w xml:id="L145-09-01-08">tsio sachi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-09-02">
+                  <w xml:id="L145-09-02-01">Kunchee</w>
+                  <w xml:id="L145-09-02-02">ko</w>
+                  <w xml:id="L145-09-02-03">ña</w>
+                  <w xml:id="L145-09-02-04">yee</w>
+                  <w xml:id="L145-09-02-05">uvi</w>
+                  <w xml:id="L145-09-02-06">tsio</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-09-03">
+                  <w xml:id="L145-09-03-01">Inkaa</w>
+                  <w xml:id="L145-09-03-02">ñu'u</w>
+                  <w xml:id="L145-09-03-03">ña</w>
+                  <w xml:id="L145-09-03-04">América</w>
+                  <w xml:id="L145-09-03-05">tsio sachi</w>
+                  <c>(</c>
+                  <w xml:id="L145-09-03-06">Hemisferio sachi</w>
+                  <c>)</c>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-09-04"> 
+                  <w xml:id="L145-09-04-01">Cha</w>
+                  <w xml:id="L145-09-04-02">ñu'u</w>
+                  <w xml:id="L145-09-04-03">África</w>
+                  <w xml:id="L145-09-04-04">tsi</w>
+                  <w xml:id="L145-09-04-05">Ñu'u</w>
+                  <w xml:id="L145-09-04-06">Europa</w>
+                  <w xml:id="L145-09-04-07">inkai</w>
+                  <w xml:id="L145-09-04-08">tsio kua'a</w>
+                  <c>(</c>
+                  <w xml:id="L145-09-04-09">Hemisferio kua'a</w>
+                  <c>)</c>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-10">
+            <head>
+               <w xml:id="L145-10-00">
+                  <w xml:id="L145-10-00-01">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-10-00-02">ka</w>
+                  <w xml:id="L145-10-00-03">tsiko</w>
+                  <w xml:id="L145-10-00-04">nui</w>
+               </w>
+            </head>
+            <head>
+               <graphic url="L145_08.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-10-01">
+                  <w xml:id="L145-10-01-01">Cha</w>
+                  <w xml:id="L145-10-01-02">su'a</w>
+                  <w xml:id="L145-10-01-03">kuu</w>
+                  <w xml:id="L145-10-01-04">ña</w>
+                  <w xml:id="L145-10-01-05">kaa</w>
+                  <w xml:id="L145-10-01-06">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-10-01-07">nuu</w>
+                  <w xml:id="L145-10-01-08">tsiko</w>
+                  <w xml:id="L145-10-01-09">nui</w>
+                  <w xml:id="L145-10-01-10">nikanchii</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-10-02">
+                  <w xml:id="L145-10-02-01">Cha</w>
+                  <w xml:id="L145-10-02-02">tsiko</w>
+                  <w xml:id="L145-10-02-03">nui</w>
+                  <w xml:id="L145-10-02-04">iin</w>
+                  <w xml:id="L145-10-02-05">kuia</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-12">
+            <head>
+               <w xml:id="L145-12-00">
+                  <pc>¿</pc>
+                  <w xml:id="L145-12-00-01">Chanu</w>
+                  <w xml:id="L145-12-00-02">va'a</w>
+                  <w xml:id="L145-12-00-03">yee</w>
+                  <w xml:id="L145-12-00-04">ntuu</w>
+                  <w xml:id="L145-12-00-05">tsi</w>
+                  <w xml:id="L145-12-00-06">tsikuaa</w>
+                  <pc>?</pc>
+               </w>
+            </head>
+            <head>
+               <graphic url="L145_09.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-12-01">
+                  <w xml:id="L145-12-01-01">Tsa</w>
+                  <w xml:id="L145-12-01-02">tsino</w>
+                  <w xml:id="L145-12-01-03">ña</w>
+                  <w xml:id="L145-12-01-04">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-12-01-05">yo'o</w>
+                  <w xml:id="L145-12-01-06">kui</w>
+                  <w xml:id="L145-12-01-07">tono</w>
+                  <w xml:id="L145-12-01-08">iin</w>
+                  <w xml:id="L145-12-01-09">tikuaa</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-12-02">
+                  <w xml:id="L145-12-02-01">Tsio</w>
+                  <w xml:id="L145-12-02-02">kani</w>
+                  <w xml:id="L145-12-02-03">nikanchii</w>
+                  <w xml:id="L145-12-02-04">kui</w>
+                  <w xml:id="L145-12-02-05">ntuu</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-12-02-06">cha</w>
+                  <w xml:id="L145-12-02-07">tsio</w>
+                  <w xml:id="L145-12-02-08">sa'vi</w>
+                  <w xml:id="L145-12-02-09">nikanchii</w>
+                  <w xml:id="L145-12-02-10">kui</w>
+                  <w xml:id="L145-12-02-11">tsikuaa</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-13">
+            <head>
+               <w xml:id="L145-13-00-01a">Ñu'u</w><!-- noun (compound component(i))-->
+               <w xml:id="L145-13-00-01b">Ncha'i</w><!-- noun (compound component(ii))-->
+               <w xml:id="L145-13-00-02">ka</w><!-- topicMarker = Particle --> 
+               
+               <spanGrp type="semantics">
+                  <span type="sense" target="#L145-13-00-01a #L145-13-00-01b" corresp="http://dbpedia.org/resource/Earth"/>
+               </spanGrp>       
+               
+               <spanGrp type="gram">
+                  <span type="pos" target="#L145-13-00-01a #L145-13-00-01b" ana="#N #LOC"/>
+                  <span type="pos" target="#L145-13-00-02" ana="#PTCL #TPC"/>
+               </spanGrp>   
+            </head>
+                     
+            <head>
+               <graphic url="L145_10.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-13-01">
+                  <w xml:id="L145-13-01-01">Yee</w><!-- existential copula -->
+                  <w xml:id="L145-13-01-02">ñu'u</w><!-- noun -->
+                  <w xml:id="L145-13-01-03">tsi</w><!-- coordinatingConj-->
+                  <w xml:id="L145-13-01-04">chikuii</w><!-- noun-->
+                  <w xml:id="L145-13-01-05">nuu</w><!-- relationalNoun/(relational)adposition -->
+                  <w xml:id="L145-13-01-06a">Ñu'u</w><!-- noun (compound component(i))-->
+                  <w xml:id="L145-13-01-06b">Ncha'i</w><!-- noun (compound component(ii))-->
+                  <pc>.</pc>
+               </s>
+               
+               <spanGrp>
+                  <span></span>
+               </spanGrp>
+               <s xml:id="L145-13-02">
+                  <w xml:id="L145-13-02-01">Yee</w>
+                  <w xml:id="L145-13-02-02">kua'a</w>
+                  <w xml:id="L145-13-02-03">ka</w>
+                  <w xml:id="L145-13-02-04">chikuii</w>
+                  <w xml:id="L145-13-02-05">cha</w>
+                  <w xml:id="L145-13-02-06">xoo</w>
+                  <w xml:id="L145-13-02-07">ka</w>
+                  <w xml:id="L145-13-02-08">ñu'u</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-13-03">
+                  <w xml:id="L145-13-03-01">Yee</w>
+                  <w xml:id="L145-13-03-02">ñu'u</w>
+                  <w xml:id="L145-13-03-03">luu</w>
+                  <w xml:id="L145-13-03-04">ka</w>
+                  <w xml:id="L145-13-03-05">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-13-03-06">islas</w>
+                  <pc>"</pc>
+                  <pc>,</pc>
+                  <w xml:id="L145-13-03-07">cha</w><!-- coref -->
+                  <w xml:id="L145-13-03-08">inkai</w>
+                  <w xml:id="L145-13-03-09">ma'i</w>
+                  <w xml:id="L145-13-03-10">chikuii</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-13-04">
+                  <w xml:id="L145-13-04-01">Cha</w><!-- coref/conj -->
+                  <w xml:id="L145-13-04-02">ñu'u</w>
+                  <w xml:id="L145-13-04-03">ka'nu</w>
+                  <w xml:id="L145-13-04-04">ka</w>
+                  <w xml:id="L145-13-04-05">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-13-04-06">continente</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-13-05">
+                  <w xml:id="L145-13-05-01">Yee</w>
+                  <w xml:id="L145-13-05-02">iñu</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-13-05-03">continente</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-13-05-04">nania</w>
+                  <pc>:</pc>
+                  <w xml:id="L145-13-05-05">África</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-13-05-06">América</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-13-05-07">Antártida</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-13-05-08">Asia</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-13-05-09">Europa</w>
+                  <w xml:id="L145-13-05-10">tsi</w>
+                  <w xml:id="L145-13-05-11">Oceanía</w>
+                  <pc>.</pc>
+               </s>
+               <spanGrp type="sense"><!-- e.g. concept-->
+                  <span target="" corresp="http://dbpedia.org/resource/Earth"/> <!-- point to id of components or annotation <span> declairing the 2 components as compound? -->
+                  <span target="#L145-13-01-03" corresp="http://dbpedia.org/resource/Continent"/>
+                  <span target="#L145-13-01-04" corresp="http://dbpedia.org/resource/Water"/>
+                  <span target="#L145-13-05-08" corresp="http://dbpedia.org/resource/Asia"/>
+                  <!-- others -->
+               </spanGrp>
+                 <spanGrp type="translation"><!-- need translation typology; should all individual words be translated here also? -->
+                  <span target="# L145-13-01" xml:lang="en">There is land and water on the Earth.</span>
+                  <!-- others here -->
+                  <span target="#L145-13-05" xml:lang="en">There are six continents, they are called: "Africa", "America"</span>
+               </spanGrp>
+            </p>
+         </div>
+         <div xml:id="L145-14">
+            <head>
+               <w xml:id="L145-14-00">Hemisferio Sachi</w>
+            </head>
+            <head>
+               <graphic url="L145_11.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-14-01">
+                  <w xml:id="L145-14-01-01">Inkaa</w>
+                  <w xml:id="L145-14-01-02">iin</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-14-01-03">continente</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-14-01-04">nani</w>
+                  <w xml:id="L145-14-01-05">América</w>
+                  <w xml:id="L145-14-01-06">nuu</w>
+                  <w xml:id="L145-14-01-07">Hemisferio Sachi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-14-02">
+                  <w xml:id="L145-14-02-01">Cha</w>
+                  <w xml:id="L145-14-02-02">continente</w>
+                  <w xml:id="L145-14-02-03">yo</w>
+                  <w xml:id="L145-14-02-04">savi</w>
+                  <w xml:id="L145-14-02-05">inkaa</w>
+                  <w xml:id="L145-14-02-06">chi kuchi</w>
+                  <w xml:id="L145-14-02-07">tsi</w>
+                  <w xml:id="L145-14-02-08">ninu</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-14-03">
+                  <w xml:id="L145-14-03-01">Koo</w>
+                  <w xml:id="L145-14-03-02">kue</w>
+                  <w xml:id="L145-14-03-03">nivi</w>
+                  <w xml:id="L145-14-03-04">Yee</w>
+                  <w xml:id="L145-14-03-05">continente</w>
+                  <w xml:id="L145-14-03-06">Antártida</w>
+                  <w xml:id="L145-14-03-07">vari</w>
+                  <w xml:id="L145-14-03-08">yee</w>
+                  <w xml:id="L145-14-03-09">kua'a</w>
+                  <w xml:id="L145-14-03-10">xeen</w>
+                  <w xml:id="L145-14-03-11">yu'a</w>
+                  <w xml:id="L145-14-03-12">cha</w>
+                  <w xml:id="L145-14-03-13">vitsi</w>
+                  <w xml:id="L145-14-03-14">xeen</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-15">
+            <head>
+               <w xml:id="L145-15-00">Hemisferio Kua'a</w>
+            </head>
+            <head>
+               <graphic url="L145_12.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-15-01">
+                  <w xml:id="L145-15-01-01">Inkaa</w>
+                  <w xml:id="L145-15-01-02">kumi</w>
+                  <w xml:id="L145-15-01-03">continente</w>
+                  <w xml:id="L145-15-01-04">tsi</w>
+                  <w xml:id="L145-15-01-05">Hemisferio Kua'a</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-15-02">
+                  <w xml:id="L145-15-02-01">Cha</w>
+                  <w xml:id="L145-15-02-02">kue</w>
+                  <w xml:id="L145-15-02-03">ño'o</w>
+                  <w xml:id="L145-15-02-04">kuu</w>
+                  <w xml:id="L145-15-02-05">Europa</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-15-02-06">África</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-15-02-07">Asia</w>
+                  <w xml:id="L145-15-02-08">tsi</w>
+                  <w xml:id="L145-15-02-09">Oceanía</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-15-03">
+                  <w xml:id="L145-15-03-01">Kuna'u</w>
+                  <w xml:id="L145-15-03-02">ña</w>
+                  <w xml:id="L145-15-03-03">iin</w>
+                  <w xml:id="L145-15-03-04">continente</w>
+                  <w xml:id="L145-15-03-05">kui</w>
+                  <w xml:id="L145-15-03-06">iin</w>
+                  <w xml:id="L145-15-03-07">ñu'u</w>
+                  <w xml:id="L145-15-03-08">ka'nu</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-16">
+            <head>
+               <w xml:id="L145-16-00">Ñu'u Nko'yo</w>
+            </head>
+            <head>
+               <graphic url="L145_13.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-16-01">
+                     <w xml:id="L145-16-01-01">Cha</w>
+                     <w xml:id="L145-16-01-02">Yee</w>
+                     <w xml:id="L145-16-01-03">oko utsi iin</w>
+                     <w xml:id="L145-16-01-04">ñuu</w>
+                     <w xml:id="L145-16-01-05">ka'nu</w>
+                     <w xml:id="L145-16-01-06">nania</w>
+                     <pc>"</pc>
+                     <w xml:id="L145-16-01-07">estado</w>
+                     <pc>"</pc>
+                     <w xml:id="L145-16-01-08">nuu</w>
+                     <w xml:id="L145-16-01-09">Nko'yo</w>
+                     <pc>.</pc>
+               </s>
+               <s xml:id="L145-16-02">
+                  <w xml:id="L145-16-02-01">Cha</w>
+                  <w xml:id="L145-16-02-02">Yee</w>
+                  <w xml:id="L145-16-02-03">tuku</w>
+                  <w xml:id="L145-16-02-04">utsi uni</w>
+                  <w xml:id="L145-16-02-05">ñu'u</w>
+                  <w xml:id="L145-16-02-06">kuachi</w>
+                  <w xml:id="L145-16-02-07">ma'i</w>
+                  <w xml:id="L145-16-02-08">chikuii</w>
+                  <w xml:id="L145-16-02-09">yachi</w>
+                  <w xml:id="L145-16-02-10">Baja California</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-17">
+            <head>
+               <w xml:id="L145-17-00">Ñu'u Ntua</w>
+            </head>
+            <head>
+               <graphic url="L145_14.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-17-01">
+                  <w xml:id="L145-17-01-01">Nuu</w>
+                  <w xml:id="L145-17-01-02">Ñu'u Ncha'i</w>
+                  <w xml:id="L145-17-01-03">kantu'u</w>
+                  <w xml:id="L145-17-01-04">nuu</w>
+                  <w xml:id="L145-17-01-05">Ñuu Ntua</w>
+                  <w xml:id="L145-17-01-06">ita'in</w>
+                  <w xml:id="L145-17-01-07">tsi</w>
+                  <w xml:id="L145-17-01-08">sava</w>
+                  <w xml:id="L145-17-01-09">ka</w>
+                  <w xml:id="L145-17-01-10">kue</w>
+                  <w xml:id="L145-17-01-12">Ñuu</w>
+                  <w xml:id="L145-17-01-13">na'nu</w>
+                  <w xml:id="L145-17-01-14">tsio</w>
+                  <w xml:id="L145-17-01-15">tsinu</w>
+                  <w xml:id="L145-17-01-16">nikanchii</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-17-02"> 
+                  <w xml:id="L145-17-02-01">Ita'in</w>
+                  <w xml:id="L145-17-02-02">tsi</w>
+                  <w xml:id="L145-17-02-03">Ñuu</w>
+                  <w xml:id="L145-17-02-04">nani</w>
+                  <w xml:id="L145-17-02-05">Chiapas</w>
+                  <w xml:id="L145-17-02-06">tsi</w>
+                  <w xml:id="L145-17-02-07">Veracruz</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-17-03">
+                  <w xml:id="L145-17-03-01">Nuu</w>
+                  <w xml:id="L145-17-03-02">inkaa</w>
+                  <w xml:id="L145-17-03-03">tsio</w>
+                  <w xml:id="L145-17-03-04">keta</w>
+                  <w xml:id="L145-17-03-05">nikanchii</w>
+                  <w xml:id="L145-17-03-06">kantu'u</w>
+                  <w xml:id="L145-17-03-07">Ñu'u</w>
+                  <w xml:id="L145-17-03-09">ita'an</w>
+                  <w xml:id="L145-17-03-10">tuku</w>
+                  <w xml:id="L145-17-03-11">tsi</w>
+                  <w xml:id="L145-17-03-12">ñuu</w>
+                  <w xml:id="L145-17-03-13">nania</w>
+                  <w xml:id="L145-17-03-14">Yucha Ncho'o</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-17-04">
+                  <w xml:id="L145-17-04-01">Ichi</w>
+                  <w xml:id="L145-17-04-02">ninu</w>
+                  <w xml:id="L145-17-04-03">inkaa</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-17-04-04">mar</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-17-04-05">nani</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-17-04-06">Océano Pacífico</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-17-05">
+                  <w xml:id="L145-17-05-01">Ño'o</w>
+                  <w xml:id="L145-17-05-02">kuu</w>
+                  <w xml:id="L145-17-05-03">ntikumi tsio</w>
+                  <w xml:id="L145-17-05-04">kue</w>
+                  <w xml:id="L145-17-05-05">ña</w>
+                  <w xml:id="L145-17-05-06">ita'an</w>
+                  <w xml:id="L145-17-05-07">tsi</w>
+                  <w xml:id="L145-17-05-08">ñuu Ntua</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-18">
+            <head>
+               <w xml:id="L145-18-00">
+                  <w xml:id="L145-18-00-01">Kue</w>
+                  <w xml:id="L145-18-00-02">ñuu</w>
+                  <w xml:id="L145-18-00-03">inkaa</w>
+                  <w xml:id="L145-18-00-04">chi Kuchi</w>
+               </w>
+            </head>
+            <head>
+               <graphic url="L145_15.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-18-01">
+                  <w xml:id="L145-18-01-01">Kunchee</w>
+                  <w xml:id="L145-18-01-02">ña</w>
+                  <w xml:id="L145-18-01-03">Canadá</w>
+                  <w xml:id="L145-18-01-04">tsi</w>
+                  <w xml:id="L145-18-01-05">Estados Unidos</w>
+                  <w xml:id="L145-18-01-06">inkaa</w>
+                  <w xml:id="L145-18-01-07">kui</w>
+                  <w xml:id="L145-18-01-08">chi kuchi</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-18-02">
+                  <w xml:id="L145-18-02-01">Cha</w>
+                  <w xml:id="L145-18-02-02">Nko'yo</w>
+                  <w xml:id="L145-18-02-03">inkai</w>
+                  <w xml:id="L145-18-02-04">chi ninu</w>
+                  <w xml:id="L145-18-02-05">ñuu</w>
+                  <w xml:id="L145-18-02-06">Estados Unidos</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-18-03">
+                  <w xml:id="L145-18-03-01">Yee</w>
+                  <w xml:id="L145-18-03-02">uxiko utsi</w>
+                  <w xml:id="L145-18-03-03">kue</w>
+                  <w xml:id="L145-18-03-04">estado</w>
+                  <w xml:id="L145-18-03-05">nuu</w>
+                  <w xml:id="L145-18-03-06">Estados Unidos</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-18-04">
+                  <w xml:id="L145-18-04-01">Ika</w>
+                  <w xml:id="L145-18-04-02">kua'a</w>
+                  <w xml:id="L145-18-04-03">nchu'a</w>
+                  <w xml:id="L145-18-04-04">na</w>
+                  <w xml:id="L145-18-04-05">ñoo</w>
+                  <w xml:id="L145-18-04-06">ntee</w>
+                  <w xml:id="L145-18-04-07">tsi</w>
+                  <w xml:id="L145-18-04-08">kue</w>
+                  <w xml:id="L145-18-04-09">se'e</w>
+                  <w xml:id="L145-18-04-10">na</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-18-05">
+                  <w xml:id="L145-18-05-01">Kua'an</w>
+                  <w xml:id="L145-18-05-02">na</w>
+                  <w xml:id="L145-18-05-03">ntuku</w>
+                  <w xml:id="L145-18-05-04">na</w>
+                  <w xml:id="L145-18-05-05">xu'un</w>
+                  <w xml:id="L145-18-05-06">takua</w>
+                  <w xml:id="L145-18-05-07">na</w>
+                  <w xml:id="L145-18-05-08">koo</w>
+                  <w xml:id="L145-18-05-09">va'a</w>
+                  <w xml:id="L145-18-05-10">kuena</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-18-06">
+                  <w xml:id="L145-18-06-01">Cha</w>
+                  <w xml:id="L145-18-06-02">kua'an</w>
+                  <w xml:id="L145-18-06-03">na</w>
+                  <w xml:id="L145-18-06-04">ntisaan</w>
+                  <w xml:id="L145-18-06-05">so</w>
+                  <w xml:id="L145-18-06-06">kue</w>
+                  <w xml:id="L145-18-06-07">ñuu</w>
+                  <w xml:id="L145-18-06-08">Estados Unidos</w>
+                  <w xml:id="L145-18-06-09">ka</w>
+                  <w xml:id="L145-18-06-10">yee</w>
+                  <w xml:id="L145-18-06-11">kuena</w>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <div xml:id="L145-19">
+            <head>
+               <w xml:id="L145-19-00">
+                  <w xml:id="L145-19-00-01">Kue</w>
+                  <w xml:id="L145-19-00-02">ñuu</w>
+                  <w xml:id="L145-19-00-03">inkaa</w>
+                  <w xml:id="L145-19-00-04">chi Ninu</w>
+               </w>
+            </head>
+            <head>
+               <graphic url="L145_16.jpeg"/>
+            </head>
+            <p>
+               <s xml:id="L145-19-01">
+                  <w xml:id="L145-19-01-01">Yee</w>
+                  <w xml:id="L145-19-01-02-01">utsi uni</w>
+                  <w xml:id="L145-19-01-02-02">ñuu</w>
+                  <w xml:id="L145-19-01-03">nuu</w>
+                  <w xml:id="L145-19-01-04">Ñu'u chi Ninu</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-19-02">
+                  <w xml:id="L145-19-02-01">Ika</w>
+                  <w xml:id="L145-19-02-02">ka'an</w>
+                  <w xml:id="L145-19-02-03">na</w>
+                  <w xml:id="L145-19-02-04">siin siin</w>
+                  <w xml:id="L145-19-02-05">sa'an</w>
+                  <w xml:id="L145-19-02-06">tono</w>
+                  <w xml:id="L145-19-02-07">sa'an xchila</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-19-02-08">portugués</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-19-02-09">francés</w>
+                  <pc>,</pc>
+                  <w xml:id="L145-19-02-10">quechua</w>
+                  <w xml:id="L145-19-02-11">tsi</w>
+                  <w xml:id="L145-19-02-12">inka</w>
+                  <w xml:id="L145-19-02-13">ka</w>
+                  <w xml:id="L145-19-02-14">kue</w>
+                  <w xml:id="L145-19-02-15">sa'an</w>
+                  <pc>.</pc>
+               </s>
+               <s xml:id="L145-19-03">
+                  <w xml:id="L145-19-03-01">Yee</w>
+                  <w xml:id="L145-19-03-02">iin</w>
+                  <w xml:id="L145-19-03-03">yucha</w>
+                  <w xml:id="L145-19-03-04">ka'nu</w>
+                  <w xml:id="L145-19-03-05">nchu'a</w>
+                  <w xml:id="L145-19-03-06">ka</w>
+                  <w xml:id="L145-19-03-07">nuu</w>
+                  <w xml:id="L145-19-03-08">nii</w>
+                  <w xml:id="L145-19-03-09">Ñu'u Nchai</w>
+                  <w xml:id="L145-19-03-10">nania</w>
+                  <pc>"</pc>
+                  <w xml:id="L145-19-03-11">Amazonas</w>
+                  <pc>"</pc>
+                  <pc>.</pc>
+               </s>
+            </p>
+         </div>
+         <linkGrp type="translation" xml:id="translations-L145"><!-- this is only the translation of Spanish & Mixtec phrases and items that are present in this document -->
+            <link target="#L145-00-01 #L145-00-02"/>
+            <!-- title -->
+            <link target="#L145-00-01-01 #L145-02-01"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-02 #L145-02-02"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-03 #L145-02-03"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-04 #L145-02-04"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-05 #L145-02-05"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-06 #L145-02-06"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-07 #L145-02-07"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-08 #L145-02-08"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-09 #L145-02-09"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-10 #L145-02-10"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-11 #L145-02-11"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-12 #L145-02-12"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-13 #L145-02-13"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-14 #L145-02-14"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-15 #L145-02-15"/>
+            <!-- section index heading -->
+            <link target="#L145-00-01-16 #L145-02-16"/>
+            <!-- section index heading -->
+         </linkGrp>
+      </body>
+   </text>
+</TEI>

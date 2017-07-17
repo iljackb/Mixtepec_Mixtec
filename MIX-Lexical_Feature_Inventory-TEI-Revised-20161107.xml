@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec Feature Structures</title>
+            <author>Jack T. Bowers</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div>
+            <label>Interrogatives</label>
+            <desc></desc>
+            <fs>
+               
+            </fs>
+            <fs type="WH-actor-focus" xml:id="WH-A" feats="#Q-WH #FOC #A"/><!-- 'who ate tortillas' -->        
+            
+            <fs type="WH-undergoer-focus" xml:id="WH-U" feats="#Q-WH #FOC #U"/><!-- 'who got hit?', 'who died' -->
+            
+            <fs type="WH-predicate-focus" xml:id="WH-PRED" feats="#Q-WH #FOC #PRED"/><!-- 'what are you doing?'
+            In the MIX example of Broad Predicate Focus below, the topic of (the car ) is already established in the question, “what happened to your car?”, this fact allows the speaker to refer to that clearly pre-established topic, which is the verb’s only argument by maintaining the the default information structure: V(-U), and by using just the 3rd singular informal personal marking at the end of the verb “break down”.    -->
+            
+            <fs type="WH-locative-focus" xml:id="WH-LOC"  feats="#Q-WH #FOC #LOC"/><!-- 'where' --><!-- THIS MAY NEED TO BE CONCEPTUALLY DISTINGUISHED FROM 'CONFIG' -->
+            
+            <fs type="WH-temporal-focus" xml:id="WH-TEMP" feats="#Q-WH #FOC #TEMP"/><!-- 'when' or 'what time' (may be further defined in context of other lexical info) -->
+            
+            <fs type="WH-means-stative-focus" xml:id="WH-HOW"  feats="#Q-WH #FOC #HOW"/><!-- 'how' (means focus); i.e. 'how did he do that?' -->
+            
+            <fs type="WH-causative-focus" xml:id="WH-CAUS" feats="#Q-WH #FOC #CAUS"/><!-- 'why' -->
+            
+            <fs type="wh-quantity-focus" xml:id="WH-QNTY"  feats="#Q-WH #FOC #QNTY"/><!-- 'how much/many' --> 
+         </div>
+         
+         <div>
+            <label>Particles</label>
+            <desc>There are multiple particles carrying out a number of different functions in MIX, the feature structures representing each will all thus be defined as a combination of 'particle' and the respective lexico-semantic funtionality</desc>
+            
+            <fs>
+               
+            </fs>
+            
+            
+         </div>
+         
+         <div>
+            <label>Focus</label>    
+            <fs type="focus" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3047" xml:id="FOC"/>
+         </div>
+         
+         <div>
+            <label>Pronouns</label>
+            <desc>Mixtepec-Mixtec has X different ways of marking person... </desc>
+            
+            <!-- Emphatic Pronouns: http://www.isocat.org/datcat/DC-1941 -->
+            <fs>
+               
+            </fs>
+            
+         </div>
+      </body>
+  </text>
+</TEI>

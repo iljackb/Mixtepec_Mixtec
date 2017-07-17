@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+            <respStmt>
+               <resp resp="#JS">Speaker</resp>
+               <name>Geremaia Salazar</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/ADJ_tall_1st_sg_01_JS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/ADJ_tall_1st_sg_01_JS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.005"/>
+            <when xml:id="T2" interval="0.11"/>
+            <when xml:id="T3" interval="0.25"/>
+            <when xml:id="T4" interval="0.31"/>
+            <when xml:id="T5" interval="0.32"/>
+            <when xml:id="T6" interval="0.38"/>
+            <when xml:id="T7" interval="0.40"/>
+            <when xml:id="T8" interval="0.41"/>
+            <when xml:id="T9" interval="0.62"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e38" n="1" start="0" end="0.71">
+               <seg xml:id="d1e39" function="utterance" notation="orth" type="declarative">
+                  <w xml:id="d1e40" synch="#T1">suku</w>
+                  <w xml:id="d1e42" synch="#T6">yu</w>
+               </seg>
+               <seg xml:id="d1e44" function="utterance" notation="ipa" type="declarative">
+                  <w xml:id="d1e45" synch="#T1">
+                     <c>s</c>
+                     <c>u</c>
+                     <c function="tone">H</c>
+                     <c>k</c>
+                     <c>u</c>
+                     <c function="tone">F</c>
+                  </w>
+                  <w xml:id="d1e58" synch="#T6">
+                     <c>j</c>
+                     <c>u</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T6">ADJ.tall</span>
+               <span from="#T6" to="#T9">-1S</span>
+            </spanGrp>
+            <spanGrp type="gram" cert="unknown">
+               <span type="pos" target="#d1e40 #d1e45" ana="#ADJ"/>
+               <span type="usage" target="#d1e40 #d1e45" cert="unknown" ana="#PRED"/>
+               <span type="pos" target="#d1e42 #d1e58" ana="#PTCL"/>
+               <span type="person" target="#d1e42 #d1e58" ana="#1PERS"/><!-- SHOULD THIS JUST BE 1PERS OR KEEP EXPLICIT 'SG'!?-->
+               <span type="number" target="#d1e42 #d1e58" ana="#SG"/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="domain" target="#d1e40 #d1e45">HEIGHT</span>
+            </spanGrp>
+            <!-- First order logic (in semantics?)-->
+            <!-- 
+            <spanGrp type="">
+               <span type="" target="#d1e42 #d1e49"></span>
+               <span type="" target="#d1e44 #d1e62"></span>
+               <span type="" target="#d1e46 #d1e69"></span>
+            </spanGrp>
+             -->
+            <!--  
+            <spanGrp type="igt" cert="unknown">
+               <span target="#d1e42 #d1e49">tall</span><pc>-</pc>
+               <span target="#d1e44 #d1e62">PL</span><pc>-</pc>
+               <span target="#d1e46 #d1e69">1.EXCL</span>
+            </spanGrp>
+            -->
+            <spanGrp type="translation">
+               <span xml:lang="en" target="#d1e39 #d1e44">I am tall</span>
+               <span xml:lang="es" target="#d1e39 #d1e44">Soy alto</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/ADV_only_01_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/ADV_only_01_spkrTS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.11"/>
+            <when xml:id="T2" interval="0.22"/>
+            <when xml:id="T3" interval="0.41"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e32" n="1" start="0" end="0.64">
+               <seg xml:id="d1e33" function="utterance" notation="orth">
+                  <w xml:id="d1e34" synch="#T1">ni</w>
+               </seg>
+               <seg xml:id="d1e36" function="utterance" notation="ipa">
+                  <w xml:id="d1e37" synch="#T1">
+                     <c>n</c>
+                     <c>iː</c>
+                     <c function="tone">L</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T3">ADV.only</span>
+            </spanGrp>
+            <spanGrp type="gram" cert="medium">
+               <span type="pos" target="#d1e34 #d1e37" ana="#ADV"/>
+               <!-- need to further classify this, it functions as a quantifier and also -->
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e34 #d1e37" xml:lang="en">only</span>
+               <span target="#d1e34 #d1e37" xml:lang="es">solamente</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

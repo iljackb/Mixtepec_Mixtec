@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L094-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L094-00-01">
+                  <seg xml:id="L094-00-01-01">Kunchau</seg>
+                  <seg xml:id="L094-00-01-02">hora</seg>
+                  <seg xml:id="L094-00-01-03">ka</seg>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L094-00-02">
+                  <seg xml:id="L094-00-02-01">Escribe</seg>
+                  <seg xml:id="L094-00-02-02">la</seg>
+                  <seg xml:id="L094-00-02-03">hora</seg>
+               </seg>
+            </title>
+            <editor>Gisela Beckmann</editor>
+            <editor>María Gómez Hernández</editor>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <name>Jack T. Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
+            archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix).
+            Encoded documents used with the permission of original authors.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L094">
+               <title>Kunchau hora ka</title>
+               <editor>Beckmann, Gisela</editor>; <editor>Gómez Hernández, María</editor>. <date>2007</date>. <edition>(2nd ed.)</edition>. <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Tlalpan, D.F., México</pubPlace> Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L094-EscribeHora-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textDesc>
+            <channel mode="m">the exercises in document can be used in multiple ways  (e.g.. 'reading'/'spoken'/'listening'; 'writing'/'spoken': thus '@mode': "m" (mixed)); 
+              i) The question prompt can be done in multiple ways:
+                  a) by someone speaking the question while pointing to, or describing the state of the analogue clock to another person;
+                  b) a single user can read the question and look at the clock themselves;        
+               ii) The answer can be given by writing in space provided (e.g. in empty "seg" element) and/or by speaking it orally to another speaker such as a classmate or instructor;               
+            </channel>
+            <constitution type="single"/>
+            <derivation type="original">this document is labeled "original" because the XML-TEI markup of it's contents have not made any alterations to the original content;</derivation>
+            <domain type="time">telling time on analogue clocks</domain>
+            <factuality type="inapplicable"/>
+            <interaction type="partial">@"type": "partial" means that while the document is interactive in that while learners will potentially interact with content by responding to the combination of the image of the clock and someone's reading of the questions (¿'Nchii hora kui'? ; eng: 'what time is it'); given that the questions and answers are always the same, the range of possible inter-activity will be limited; </interaction>
+            <preparedness type="scripted">All questions and answers in document are always going to be the same and in the same order, thus 'scripted'</preparedness>
+            <purpose type="inform"/>
+         </textDesc>
+      </profileDesc>
+      <encodingDesc><!--<p>
+            <list>
+               <item><label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                        <list>
+                           <item>i) the entire sentences from original document (first level);</item>
+                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
+                        </list>
+                        However in this document, and others that have space designated as lines onto which the user/student is to write the answer to a question, the 
+                        'seg' element is also being used for such lines: e.g.. "________". This is a makeshift format that will be changed in future versions of this and other such documents; 
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item><label>character</label>
+                  <elementSpec ident="c">
+                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
+                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
+                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>  
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item><label>division</label>
+                  <elementSpec ident="div">
+                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
+                  </elementSpec>
+               </item>
+            </list>
+         </p>-->
+         <projectDesc>
+            <p>
+               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+               The encoding of this portion of the MIX Language resources can be divided into the following components:
+               <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                     
+                     <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                     <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+            <p>Ideas for future use in the interest of the Mixtepec-Mixtec language community:
+               
+               Potential applications of the contents document for speakers and/or potential learners of the material covered herein and/or the Mixtepec-Mixtec language,
+               This, along with the other documents in this corpus of the category "pedagogical: interactive" can easily be converted into interactive software applications 
+               in which the correct answers are supplied and the user has to provide the correct content. 
+               
+               Such applications could be done in one of two ways (L093-L094): 
+               
+                  1)  Using the original language content only: (images, questions and answers already supplied in original publications) the forms/worksheets could be made into a program that can automatically bring up a question
+                 from the pedagogical - interactive documents (in any order) and the user can supply the answer by typing the appropriate answer the same way they would write it in.
+               
+                  2) This second way should be prefaced with the acknowledgement that any products produced through the pursuit of these proposed ideas would be make freely available to the community and not be for any financial gain on the part of those who may work on it; 
+                    &gt; Expanding upon the original questions/contents could create a much larger, and dynamic version of the application;
+                      This could include any one or all of the following components:
+                      
+                          i) we could create a program that can randomly generate any time configurations using analogue as well as digital clocks. 
+                             Thus we could expand the range of the exact times users are learning from 9 different times to 720 with the analogue clock (any time with 12 hr clock), and 1,440 with the digital 24 hr clock) 
+               
+               Were funding to be secured, such an application could be made for desktop/laptop computers, mobile and/or tablet devices for local schools to make use of;
+            </p>
+         </projectDesc>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="mix">Mixtepec-Mixtec</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when-iso="2014-09-18">'ProfileDesc' and 'langUsage' elements added to header. </change>
+         <change when-iso="2014-10-07">To make up for the lack of image display capacity on the TAPAS Project website, the time which is originaly displayed in the image on the analogue clock was added in digital form within the 'time' element, embedded within 'label'. </change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div xml:id="L094-01">
+            <head>
+               <graphic url="L094-1-600.png"/>
+            </head>
+            <label>
+               <time>6:00</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-01-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-01-01-01">Nchii</seg>
+                  <seg xml:id="L094-01-01-02">hora</seg>
+                  <seg xml:id="L094-01-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-01-02" type="blank" ana="#S">_____________</seg>
+            </p>
+            <!-- 
+                  "answer"
+	fVal="http://www.isocat.org/datcat/DC-1498"
+	def:Answer' is the communicative function of a dialogue act where the speaker has the goal to provide information to the addresse that he believes the addressee want to obtain. -->
+         </div>
+         <div xml:id="L094-02">
+            <head>
+               <graphic url="L094-2-300.png"/>
+            </head>
+            <label>
+               <time>3:00</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-02-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-02-01-01">Nchii</seg>
+                  <seg xml:id="L094-02-01-02">hora</seg>
+                  <seg xml:id="L094-02-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-02-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-03">
+            <head>
+               <graphic url="L094-3-645.png"/>
+            </head>
+            <label>
+               <time>6:45</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-03-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-03-01-01">Nchii</seg>
+                  <seg xml:id="L094-03-01-02">hora</seg>
+                  <seg xml:id="L094-03-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-03-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-04">
+            <head>
+               <graphic url="L094-4-430.png"/>
+            </head>
+            <label>
+               <time>4:30</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-04-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-04-01-01">Nchii</seg>
+                  <seg xml:id="L094-04-01-02">hora</seg>
+                  <seg xml:id="L094-04-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-04-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-05">
+            <head>
+               <graphic url="L094-5-915.png"/>
+            </head>
+            <label>
+               <time>9:15</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-05-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-05-01-01">Nchii</seg>
+                  <seg xml:id="L094-05-01-02">hora</seg>
+                  <seg xml:id="L094-05-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-05-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-06">
+            <head>
+               <graphic url="L094-6-435.png"/>
+            </head>
+            <label>
+               <time>4:35</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-06-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-06-01-01">Nchii</seg>
+                  <seg xml:id="L094-06-01-02">hora</seg>
+                  <seg xml:id="L094-06-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-06-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-07">
+            <head>
+               <graphic url="L094-7-1130.png"/>
+            </head>
+            <label>
+               <time>11:30</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-07-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-07-01-01">Nchii</seg>
+                  <seg xml:id="L094-07-01-02">hora</seg>
+                  <seg xml:id="L094-07-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-07-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-08">
+            <head>
+               <graphic url="L094-8-110.png"/>
+            </head>
+            <label>
+               <time>1:10</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-08-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-08-01-01">Nchii</seg>
+                  <seg xml:id="L094-08-01-02">hora</seg>
+                  <seg xml:id="L094-08-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-08-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+         <div xml:id="L094-09">
+            <head>
+               <graphic url="L094-9-1200.png"/>
+            </head>
+            <label>
+               <time>12:00</time>
+            </label>
+            <lb/>
+            <p>
+               <seg xml:id="L094-09-01" ana="#S">
+                  <c>¿</c>
+                  <seg xml:id="L094-09-01-01">Nchii</seg>
+                  <seg xml:id="L094-09-01-02">hora</seg>
+                  <seg xml:id="L094-09-01-03">kui</seg>
+                  <c>?</c>
+               </seg>
+               <seg xml:id="L094-09-02" type="blank" ana="#S">_____________</seg>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         
+         <entry xml:id="bird-mourning_dove">
+            <form type="lemma">
+               <orth>lakuku</orth>
+               <pron notation="ipa">la.kú.kù</pron><!-- include each unique pronunciation (at least until incidental outliers are identifiable)-->
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+            </form>
+            <sense corresp="http://dbpedia.org/resource/Mourning_dove"><!-- this may be best as a pointer to fs with concept -->
+               <usg type="dom" corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
+               <cit type="translation" xml:lang="en">
+                  <quote>mourning dove</quote>
+               </cit>
+               <cit type="translation" xml:lang="es">
+                  <quote>tortolita</quote>
+               </cit>
+            </sense>
+            <cit type="example" corresp="/SIL_docs/L152/L152-tok.xml#L152-01-01">
+               <quote>Iin kii ra iin <oRef>lakuku</oRef> kunia tanta'i tsi iin ncho'o, cha koo xu'in sa'i viko.</quote>
+            </cit>
+            <ref type="speech" target="N_mourning_dove_01_TS.wav"/>
+            <!-- could also include references to images (where available) -->
+         </entry>
+      </body>
+  </text>
+</TEI>

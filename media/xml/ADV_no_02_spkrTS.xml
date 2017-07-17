@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/ADV_no_02_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/ADV_no_02_spkrTS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.10"/>
+            <when xml:id="T2" interval="0.13"/>
+            <when xml:id="T3" interval="0.20"/>
+            <when xml:id="T4" interval="0.29"/>
+            <when xml:id="T5" interval="0.35"/>
+            <when xml:id="T6" interval="0.53"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e35" n="1" start="0" end="0.60">
+               <seg xml:id="d1e36" function="utterance" notation="orth">
+                  <w xml:id="d1e37" synch="#T1">a'an</w>
+               </seg>
+               <seg xml:id="d1e39" function="utterance" notation="ipa">
+                  <w xml:id="d1e40" synch="#T1">
+                     <c>a̰</c>
+                     <c function="tone">T</c>
+                     <c>ʔ</c>
+                     <c>a̰</c>
+                     <c function="tone">R_F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T6">ADV-YN.no</span>
+            </spanGrp>
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e37 #d1e40" ana="#ADV"/>
+               <span type="polarity" target="#d1e37 #d1e40" ana="#NEG"/>
+            </spanGrp>
+            <spanGrp type="usage" cert="medium">
+               <span type="context" target="#d1e37 #d1e40" ana="#RESP #Q-YN"/><!-- better more specific label than "context"? -->
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e37 #d1e40" xml:lang="en">no</span>
+               <span target="#d1e37 #d1e40" xml:lang="es">no</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

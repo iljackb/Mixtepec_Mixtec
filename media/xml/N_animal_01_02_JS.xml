@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_animal_01_02_JS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_animal_01_02_JS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.17"/>
+            <when xml:id="T2" interval="0.24"/>
+            <when xml:id="T3" interval="0.25"/>
+            <when xml:id="T4" interval="0.45"/>
+            <when xml:id="T5" interval="0.53"/>
+            <when xml:id="T6" interval="0.56"/>
+            <when xml:id="T7" interval="1.21"/>
+            <when xml:id="T8" interval="1.28"/>
+            <when xml:id="T9" interval="1.50"/>
+            <when xml:id="T10" interval="1.58"/>
+            <when xml:id="T11" interval="1.60"/>
+            <when xml:id="T12" interval="0.74"/>
+            <when xml:id="T13" interval="1.76"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e43" n="1" start="0" end="0.94">
+               <seg xml:id="d1e44" function="utterance" notation="orth">
+                  <w xml:id="d1e45" synch="#T1">kiti</w>
+               </seg>
+               <seg xml:id="d1e47" function="utterance" notation="ipa">
+                  <w xml:id="d1e48" synch="#T1">
+                     <c>k</c>
+                     <c>i</c>
+                     <c function="tone">F</c>
+                     <c>t̪</c>
+                     <c>i</c>
+                     <c function="tone">R</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T12">N.animal-horse</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e45 #d1e48" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" n="1" target="#d1e45 #d1e48" corresp="http://dbpedia.org/resource/Animal"/>
+               <span type="domain" n="1" target="#d1e45 #d1e48" cert="low" corresp="http://dbpedia.org/resource/Living_being"/><!-- need to confirm uri, dbpedia server down at time of annotation-->
+               
+               <span type="sense" n="2" target="#d1e45 #d1e48" corresp="http://dbpedia.org/resource/Horse"/>
+               <!-- is_a:Animal -->
+               <span type="domain" n="2" target="#d1e45 #d1e48" corresp="http://dbpedia.org/resource/Animal"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span n="1" target="#d1e45 #d1e48" xml:lang="en">animal</span>
+               <span n="1" target="#d1e45 #d1e48" xml:lang="es">animal</span>
+               
+               <span n="2" target="#d1e45 #d1e48" xml:lang="en">horse</span>
+               <span n="2" target="#d1e45 #d1e48" xml:lang="es">caballo</span>
+            </spanGrp>
+         </annotationBlock>
+         <annotationBlock>
+            <u xml:id="d1e65" n="2" start="0.94" end="1.96">
+               <seg xml:id="d1e66" function="utterance" notation="orth">
+                  <w xml:id="d1e67" synch="#T7">kiti</w>
+               </seg>
+               <seg xml:id="d1e69" function="utterance" notation="ipa">
+                  <w xml:id="d1e70" synch="#T7">
+                     <c>k</c>
+                     <c function="tone">F</c>
+                     <c>i</c>
+                     <c>t̪</c>
+                     <c>i</c>
+                     <c function="tone">R</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp>
+               <span from="#T7" to="#T13">N.animal-horse</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/BPT_face_01_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/BPT_face_01_TS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.10"/>
+            <when xml:id="T2" interval="0.20"/>
+            <when xml:id="T3" interval="0.21"/>
+            <when xml:id="T4" interval="0.50"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e33" n="1" start="0" end="0.62">
+               <seg xml:id="d1e34" function="utterance" notation="orth">
+                  <w xml:id="d1e35" synch="#T1">nuu</w>
+               </seg>
+               <seg xml:id="d1e37" function="utterance" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">
+                     <c>n</c>
+                     <c>ũː</c>
+                     <c function="tone">F_R</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T4">N.face</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e35 #d1e38" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics" cert="medium">
+               <!-- REVIEW ALL SENSES OF "nuu"; and include only those that are spelled with "uu" (others should be tagged, annotated and given etymological info in the observed context -->
+               <span type="sense" target="http://dbpedia.org/resource/Face"/>
+               <!-- is_partOf:Body -->
+               <span type="domain" cert="low" target="http://dbpedia.org/resource/Anatomy"/>
+               <!-- is_prominantFeatureOf:Human_body -->
+               <span type="domain" cert="low" target="http://dbpedia.org/resource/Human_body"/>
+               <!-- Future additions to Semantic/Ontological KB profile:-->
+               <!-- prominantFeature(FrontPart, BODY)  -->
+               <!-- Can specify grammatical and other metaphorical uses in separate entries, as they appear in examples -->
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e35 #d1e38" xml:lang="en" corresp="https://en.wiktionary.org/wiki/face">face</span>
+               <span target="#d1e35 #d1e38" xml:lang="es" corresp="https://es.wiktionary.org/wiki/cara">cara</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

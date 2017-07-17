@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_mother_01_spkrJS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_mother_01_spkrJS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.20"/>
+            <when xml:id="T2" interval="0.28"/>
+            <when xml:id="T3" interval="0.30"/>
+            <when xml:id="T4" interval="0.57"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e33" n="1" start="0" end="0.82">
+               <seg xml:id="d1e34" function="utterance" notation="orth">
+                  <w xml:id="d1e35" synch="#T1">maa</w>
+               </seg>
+               <seg xml:id="d1e37" function="utterance" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">
+                     <c>m</c>
+                     <c>aː</c>
+                     <c function="tone">M</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T4">N.mother</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e35 #d1e38" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e35 #d1e38" corresp="http://dbpedia.org/resource/Mother"/>
+               <!-- is_a:Parent -->
+               <span type="domain" target="#d1e35 #d1e38" corresp="http://dbpedia.org/resource/Parent"/>
+               <!-- part_of:Family -->
+               <span type="domain" target="#d1e35 #d1e38" corresp="http://dbpedia.org/resource/Family"/>
+            </spanGrp>
+            
+            <!-- etym: borrowing -->
+            
+            <spanGrp type="translation">
+               <span target="#d1e35 #d1e38" xml:lang="en" corresp="https://en.wiktionary.org/wiki/mother">mother</span>
+               <span target="#d1e35 #d1e38" xml:lang="en" corresp="https://en.wiktionary.org/wiki/mother">mom</span>
+               <span target="#d1e35 #d1e38" xml:lang="es" corresp="https://es.wiktionary.org/wiki/madre">madre</span>
+               <span target="#d1e35 #d1e38" xml:lang="es" corresp="https://es.wiktionary.org/wiki/mamá">mamá</span>
+               <span target="#d1e35 #d1e38" xml:lang="es" corresp="https://es.wiktionary.org/wiki/mami">mami</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

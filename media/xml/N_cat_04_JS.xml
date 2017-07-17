@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_cat_04_JS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_cat_04_JS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.06"/>
+            <when xml:id="T2" interval="0.14"/>
+            <when xml:id="T3" interval="0.15"/>
+            <when xml:id="T4" interval="0.28"/>
+            <when xml:id="T5" interval="0.41"/>
+            <when xml:id="T6" interval="0.43"/>
+            <when xml:id="T7" interval="0.64"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e36" n="1" start="0" end="0.77">
+               <seg xml:id="d1e37" function="utterance" notation="orth">
+                  <w xml:id="d1e38" synch="#T1">vilu</w>
+               </seg>
+               <seg xml:id="d1e40" function="utterance" notation="ipa">
+                  <w xml:id="d1e41" synch="#T1">
+                     <c>β</c>
+                     <c>i</c>
+                     <c function="tone">H</c>
+                     <c>l</c>
+                     <c>uː</c>
+                     <c function="tone">H</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T7">N.cat</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e38 #d1e41" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Cat"/>
+               <!-- is_a: Animal -->
+               <!-- feline -->
+               <!-- house pet -->
+               <span type="domain" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Animal"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e38 #d1e41" xml:lang="en" corresp="https://en.wiktionary.org/wiki/cat">cat</span>
+               <span target="#d1e38 #d1e41" xml:lang="es" corresp="https://es.wiktionary.org/wiki/gato">gato</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

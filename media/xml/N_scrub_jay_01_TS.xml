@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_scrub_jay_01_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_scrub_jay_01_TS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.02"/>
+            <when xml:id="T2" interval="0.20"/>
+            <when xml:id="T3" interval="0.21"/>
+            <when xml:id="T4" interval="0.22"/>
+            <when xml:id="T5" interval="0.31"/>
+            <when xml:id="T6" interval="0.43"/>
+            <when xml:id="T7" interval="0.55"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e36" n="1" start="0" end="0.69">
+               <seg xml:id="d1e37" function="utterance" notation="orth">
+                  <w xml:id="d1e38" synch="#T1">kuilu</w>
+               </seg>
+               <seg xml:id="d1e40" function="utterance" notation="ipa">
+                  <w xml:id="d1e41" synch="#T1">
+                     <c>k</c>
+                     <c>w</c>
+                     <c>ɪ</c>
+                     <c function="tone">R</c>
+                     <c>l</c>
+                     <c>i</c>
+                     <c function="tone">M</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T7">N.scrub_jay</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e38 #d1e41" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e38 #d1e41" corresp="http://dbpedia.org/page/Aphelocoma"/>
+               <!-- is_a:Bird -->
+               <span type="domain" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Bird"/>
+               <!-- is_a:Animal -->
+               <span type="domain" target="#d1e38 #d1e41" corresp="http://dbpedia.org/resource/Animal"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e38 #d1e41" xml:lang="en">scrub jay</span>
+               <span target="#d1e38 #d1e41" xml:lang="es">chara azuleja</span>
+               <span target="#d1e38 #d1e41" xml:lang="es">chara pechirrayada</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

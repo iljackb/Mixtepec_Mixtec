@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_mother_1st_sg_01_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_mother_1st_sg_01_spkrTS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.03"/>
+            <when xml:id="T2" interval="0.14"/>
+            <when xml:id="T3" interval="0.17"/>
+            <when xml:id="T4" interval="0.25"/>
+            <when xml:id="T5" interval="0.33"/>
+            <when xml:id="T6" interval="0.36"/>
+            <when xml:id="T7" interval="0.46"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e36" n="1" start="0" end="2.18">
+               <seg xml:id="d1e37" function="utterance" notation="orth" type="phrase">
+                  <w xml:id="d1e38" synch="#T1">maa</w>
+                  <w xml:id="d1e40" synch="#T4">yu</w>
+               </seg>
+               <seg xml:id="d1e42" function="utterance" notation="ipa" type="phrase">
+                  <w xml:id="d1e43" synch="#T1">
+                     <c>m</c>
+                     <c>ãː</c>
+                     <c function="tone">M</c>
+                  </w>
+                  <w xml:id="d1e50" synch="#T4">
+                     <c>j</c>
+                     <c>u</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T4">N.mother</span>
+               <span from="#T4" to="#T7">-1S</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="phrase" target="#d1e37 #d1e42" ana="#NP #POSS"/>
+               <span type="pos" target="#d1e38 #d1e43" ana="#N"/>
+               <span type="pos" target="#d1e40 #d1e50" ana="#PTCL"/>
+               <span type="person" target="#d1e40 #d1e50" ana="#1PERS"/>
+               <span type="number" target="#d1e40 #d1e50" ana="#SG"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e38 #d1e43" corresp="http://dbpedia.org/resource/Mother"/>
+               <!-- is_a:Parent -->
+               <span type="domain" target="#d1e38 #d1e43" corresp="http://dbpedia.org/resource/Parent"/>
+               <!-- part_of:Family -->
+               <span type="domain" target="#d1e38 #d1e43" corresp="http://dbpedia.org/resource/Family"/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e37 #d1e42" xml:lang="en">my mother</span>
+               <span target="#d1e37 #d1e42" xml:lang="es">mi madre</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

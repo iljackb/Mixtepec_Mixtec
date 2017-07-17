@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/BPT_body_01_02_03_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/BPT_body_01_02_03_spkrTS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.09"/>
+            <when xml:id="T2" interval="0.12"/>
+            <when xml:id="T3" interval="0.17"/>
+            <when xml:id="T4" interval="0.18"/>
+            <when xml:id="T5" interval="0.40"/>
+            <when xml:id="T6" interval="0.44"/>
+            <when xml:id="T7" interval="0.87"/>
+            <when xml:id="T8" interval="0.93"/>
+            <when xml:id="T9" interval="0.98"/>
+            <when xml:id="T10" interval="1.00"/>
+            <when xml:id="T11" interval="1.20"/>
+            <when xml:id="T12" interval="1.22"/>
+            <when xml:id="T13" interval="1.72"/>
+            <when xml:id="T14" interval="1.79"/>
+            <when xml:id="T15" interval="1.80"/>
+            <when xml:id="T16" interval="1.84"/>
+            <when xml:id="T17" interval="2.06"/>
+            <when xml:id="T18" interval="2.09"/>
+            <when xml:id="T19" interval="0.60"/>
+            <when xml:id="T20" interval="1.39"/>
+            <when xml:id="T21" interval="2.23"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e51" n="1" start="0" end="0.69">
+               <seg xml:id="d1e52" function="utterance" notation="orth">
+                  <w xml:id="d1e53" synch="#T1">kuñu</w>
+               </seg>
+               <seg xml:id="d1e55" function="utterance" notation="ipa">
+                  <w xml:id="d1e56" synch="#T1">
+                     <c>k</c>
+                     <c>ũ</c>
+                     <c function="tone">R</c>
+                     <c>ɲ</c>
+                     <c>ũ</c>
+                     <c function="tone">T</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp>
+               <span from="#T1" to="#T19">N.body</span>
+            </spanGrp>
+         </annotationBlock>
+         <annotationBlock>
+            <u xml:id="d1e73" n="2" start="0.69" end="1.54">
+               <seg xml:id="d1e74" function="utterance" notation="orth">
+                  <w xml:id="d1e75" synch="#T7">kuñu</w>
+               </seg>
+               <seg xml:id="d1e77" function="utterance" notation="ipa">
+                  <w xml:id="d1e78" synch="#T7">
+                     <c>k</c>
+                     <c>ũ</c>
+                     <c function="tone">R</c>
+                     <c>ɲ</c>
+                     <c>ũ</c>
+                     <c function="tone">F</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T7" to="#T20">N.body</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e75 #d1e78" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" n="1" target="#d1e75 #d1e78" corresp="http://dbpedia.org/resource/Human_body"/>           
+               <span type="sense" n="2" target="#d1e75 #d1e78" corresp="http://dbpedia.org/resource/Muscle"/>         
+               <span type="sense" n="3" target="#d1e75 #d1e78" corresp="http://dbpedia.org/resource/Meat"/>
+                       
+               <span type="domain" n="1" target="#d1e75 #d1e78" corresp="http://dbpedia.org/resource/Anatomy"/>
+               <!-- (Human_body) should I have more domain concepts for this? -->
+               <span type="domain" n="2" target="#d1e75 #d1e78" corresp="http://dbpedia.org/resource/Anatomy"/>
+               
+               <span type="domain" n="3" target="#d1e75 #d1e78" corresp="http://dbpedia.org/resource/Food"/>
+               
+               <!-- need semantic relations also!? i.e. (is_a) (part_of), etc...  -->
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <!-- these are different concepts in spanish and english, should there be separate translations? -->
+               <!-- Do these need to formally point to the "sense" uri or is the @n att-value pair enough? -->
+               <span target="#d1e75 #d1e78" n="1" xml:lang="en" corresp="https://en.wiktionary.org/wiki/body">body</span>
+               <span target="#d1e75 #d1e78" n="1" xml:lang="es" corresp="https://es.wiktionary.org/wiki/cuerpo">cuerpo</span>
+               
+               <span target="#d1e75 #d1e78" n="2" xml:lang="en" corresp="https://en.wiktionary.org/wiki/muscle">muscle</span>
+               <span target="#d1e75 #d1e78" n="2" xml:lang="es" corresp="https://es.wiktionary.org/wiki/músculo">músculo</span>
+               
+               <span target="#d1e75 #d1e78" n="3" xml:lang="en" corresp="https://en.wiktionary.org/wiki/meat">meat</span>
+               <span target="#d1e75 #d1e78" n="3" xml:lang="es" corresp="https://es.wiktionary.org/wiki/carne">carne</span>
+            </spanGrp>
+            
+         </annotationBlock>
+         <annotationBlock>
+            <u xml:id="d1e95" n="3" start="1.54" end="2.38">
+               <seg xml:id="d1e96" function="utterance" notation="orth">
+                  <w xml:id="d1e97" synch="#T13">kuñu</w>
+               </seg>
+               <seg xml:id="d1e99" function="utterance" notation="ipa">
+                  <w xml:id="d1e100" synch="#T13">
+                     <c>k</c>
+                     <c>ũ</c>
+                     <c function="tone">R</c>
+                     <c>ɲ</c>
+                     <c>ũ</c>
+                     <c function="tone">T</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp>
+               <span from="#T13" to="#T21">N.body</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

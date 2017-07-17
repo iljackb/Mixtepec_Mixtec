@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L146-tok">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">
+               <seg xml:id="L146-00-01">
+                  <seg xml:id="L146-00-01-01" type="LexItem">Ña</seg> 
+                  <seg xml:id="L146-00-01-02" type="LexItem">niyu'u</seg> 
+                  <seg xml:id="L146-00-01-03" type="LexItem">nchu'a</seg>
+               </seg>
+            </title>
+            <title xml:lang="es">
+               <seg xml:id="L146-00-02">
+                  <seg xml:id="L146-00-02-01" type="LexItem">El</seg> 
+                  <seg xml:id="L146-00-02-02" type="LexItem">niño</seg> 
+                  <seg xml:id="L146-00-02-03" type="LexItem">que</seg> 
+                  <seg xml:id="L146-00-02-04" type="LexItem">se</seg> 
+                  <seg xml:id="L146-00-02-05" type="LexItem">asustó</seg> 
+                  <seg xml:id="L146-00-02-06" type="LexItem">mucho</seg>
+               </seg>
+            </title>
+         </titleStmt>
+         <publicationStmt>
+            <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
+               archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix).
+               Encoded documents used with the permission of original authors.</p>
+         </publicationStmt>
+         <notesStmt>
+            <note xml:id="L146-resumen" xml:lang="es">Este cuento relata cómo a un niño se le quitaron
+               las ganas de matar pájaros.
+            </note>
+         </notesStmt>
+         <sourceDesc>
+            <bibl xml:id="bibl.L146">
+               <author>María Gómez Hernández</author>
+               <editor>Gisela Beckmann</editor>
+               <editor>María M. Nieves</editor>
+               <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Tlalpan, D.F., México</pubPlace>
+               <edition>second</edition>
+               <date>2008</date>
+               Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L146-NinoAsusto-mix.htm"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>
+            <list>
+               <item>
+                  <label>segment</label>
+                  <elementSpec ident="seg">
+                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
+                        <list>
+                           <item>i) the entire sentences from original document (first level);</item>
+                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
+                        </list>
+                        Since the segments are not all orthographic/prose in nature, as many contain mathematical word problems, or completely numerical equations (some contain a mixture of both), 
+                        the segments in this document that are not entirely in prose are given the xml-tei attributes: 
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>character</label>
+                  <elementSpec ident="c">
+                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
+                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
+                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
+                     </desc>
+                  </elementSpec>
+               </item>
+               <item>
+                  <label>division</label>
+                  <elementSpec ident="div">
+                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
+                  </elementSpec>     
+               </item>
+            </list>
+         </p>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+         <projectDesc>
+            <p>
+               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
+               The encoding of this portion of the MIX Language resources can be divided into the following components:
+               <list>
+                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
+                  
+                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
+                     
+                     <list>
+                        <item>glossing of orthographical lexical items;</item>
+                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
+                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
+                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
+                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
+                     </list>
+                  </item>
+                  
+                  <item>iii) Classification of Document Types and Ontology Linking;
+                     <list>
+                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
+                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
+                     </list>
+                  </item>
+               </list>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+   </teiHeader>
+   <text decls="#fiction-realistic">
+      <body>
+         <div xml:id="L146-01">
+            <head>
+               <graphic url="L146-01.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-01-01" type="S">
+                  <seg xml:id="L146-01-01-01" type="LexItem">Iin</seg> 
+                  <seg xml:id="L146-01-01-02" type="LexItem">kii</seg> 
+                  <seg xml:id="L146-01-01-03" type="LexItem">ntsio</seg> 
+                  <seg xml:id="L146-01-01-04" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-01-01-05" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-01-01-06" type="LexItem">luu</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L146-01-02" type="S">
+                  <seg xml:id="L146-01-02-01" type="LexItem">Saan</seg> 
+                  <seg xml:id="L146-01-02-02" type="LexItem">so</seg> 
+                  <seg xml:id="L146-01-02-03" type="LexItem">ta'an</seg> 
+                  <seg xml:id="L146-01-02-04" type="LexItem">ta</seg> 
+                  <seg xml:id="L146-01-02-05" type="LexItem">inia</seg> 
+                  <seg xml:id="L146-01-02-06" type="LexItem">ka'nia</seg> 
+                  <seg xml:id="L146-01-02-07" type="LexItem">saa</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L146-01-03" type="S">
+                  <seg xml:id="L146-01-03-01" type="LexItem">Ta</seg> 
+                  <seg xml:id="L146-01-03-02" type="LexItem">ntsinia</seg> 
+                  <seg xml:id="L146-01-03-03" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-01-03-04" type="LexItem">saa</seg> 
+                  <seg xml:id="L146-01-03-05" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-01-03-06" type="LexItem">ntanai</seg> 
+                  <seg xml:id="L146-01-03-07" type="LexItem">ti</seg> 
+                  <seg xml:id="L146-01-03-08" type="LexItem">kua'in</seg> 
+                  <seg xml:id="L146-01-03-09" type="LexItem">saan</seg> 
+                  <seg xml:id="L146-01-03-10" type="LexItem">ni</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L146-01-04" type="S">
+                  <seg xml:id="L146-01-04-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-01-04-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-01-04-03" type="LexItem">kii</seg> 
+                  <seg xml:id="L146-01-04-04" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-01-04-05" type="LexItem">ntsinia</seg> 
+                  <seg xml:id="L146-01-04-06" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-01-04-07" type="LexItem">saa</seg> 
+                  <seg xml:id="L146-01-04-08" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-01-04-09" type="LexItem">vii</seg> 
+                  <seg xml:id="L146-01-04-10" type="LexItem">ta</seg> 
+                  <seg xml:id="L146-01-04-11" type="LexItem">tumi</seg> 
+                  <seg xml:id="L146-01-04-12" type="LexItem">ti</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-01-04-13" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-01-04-14" type="LexItem">ntantuki</seg> 
+                  <seg xml:id="L146-01-04-15" type="LexItem">uli</seg> 
+                  <seg xml:id="L146-01-04-16" type="LexItem">ña</seg> 
+                  <seg xml:id="L146-01-04-17" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-01-04-18" type="LexItem">nikitsai</seg> 
+                  <seg xml:id="L146-01-04-19" type="LexItem">ki'nia</seg> 
+                  <seg xml:id="L146-01-04-20" type="LexItem">ti</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L146-02">
+            <head>
+               <graphic url="L146-02.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-02-01" type="S">
+                  <seg xml:id="L146-02-01-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-02-01-02" type="LexItem">saa</seg> 
+                  <seg xml:id="L146-02-01-03" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-02-01-04" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-02-01-05" type="LexItem">ntava</seg> 
+                  <seg xml:id="L146-02-01-06" type="LexItem">ti</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-02-01-07" type="LexItem">ntsikuntu'u</seg> 
+                  <seg xml:id="L146-02-01-08" type="LexItem">ti</seg> 
+                  <seg xml:id="L146-02-01-09" type="LexItem">nta'a</seg> 
+                  <seg xml:id="L146-02-01-10" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-02-01-11" type="LexItem">yutu</seg> 
+                  <seg xml:id="L146-02-01-12" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-02-01-13" type="LexItem">ntsa'an</seg> 
+                  <seg xml:id="L146-02-01-14" type="LexItem">tuku</seg> 
+                  <seg xml:id="L146-02-01-15" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-02-01-16" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-02-01-17" type="LexItem">ka</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-02-01-18" type="LexItem">niki'ni</seg> 
+                  <seg xml:id="L146-02-01-19" type="LexItem">tuki</seg> 
+                  <seg xml:id="L146-02-01-20" type="LexItem">ti</seg> 
+                  <seg xml:id="L146-02-01-21" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-02-01-22" type="LexItem">niyu'u</seg> 
+                  <seg xml:id="L146-02-01-23" type="LexItem">saa</seg> 
+                  <seg xml:id="L146-02-01-24" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-02-01-25" type="LexItem">ka</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L146-03">
+            <head>
+               <graphic url="L146-03.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-03-01" type="S">
+                  <seg xml:id="L146-03-01-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-03-01-02" type="LexItem">ntava</seg> 
+                  <seg xml:id="L146-03-01-03" type="LexItem">ti</seg> 
+                  <seg xml:id="L146-03-01-04" type="LexItem">saan</seg> 
+                  <seg xml:id="L146-03-01-05" type="LexItem">ni</seg> 
+                  <seg xml:id="L146-03-01-06" type="LexItem">mancha</seg> 
+                  <seg xml:id="L146-03-01-07" type="LexItem">yuku</seg> 
+                  <seg xml:id="L146-03-01-08" type="LexItem">sara</seg> 
+                  <seg xml:id="L146-03-01-09" type="LexItem">ntanaa</seg> 
+                  <seg xml:id="L146-03-01-10" type="LexItem">tuku</seg> 
+                  <seg xml:id="L146-03-01-11" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-03-01-12" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-03-01-13" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-03-01-14" type="LexItem">saan</seg> 
+                  <seg xml:id="L146-03-01-15" type="LexItem">ni</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L146-04">
+            <head>
+               <graphic url="L146-04.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-04-01" type="S">
+                  <seg xml:id="L146-04-01-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-04-01-02" type="LexItem">kunkuaa</seg> 
+                  <seg xml:id="L146-04-01-03" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-04-01-04" type="LexItem">saa</seg> 
+                  <seg xml:id="L146-04-01-05" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-04-01-06" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-04-01-07" type="LexItem">ntava</seg> 
+                  <seg xml:id="L146-04-01-08" type="LexItem">ti</seg> 
+                  <seg xml:id="L146-04-01-09" type="LexItem">kua'an</seg> 
+                  <seg xml:id="L146-04-01-10" type="LexItem">ti</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L146-04-02" type="S">
+                  <seg xml:id="L146-04-02-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-04-02-02" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-04-02-03" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-04-02-04" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-04-02-05" type="LexItem">nikintoi</seg> 
+                  <seg xml:id="L146-04-02-06" type="LexItem">ika</seg> 
+                  <seg xml:id="L146-04-02-07" type="LexItem">ñantu'i</seg> 
+                  <seg xml:id="L146-04-02-08" type="LexItem">nta'ia</seg> 
+                  <seg xml:id="L146-04-02-09" type="LexItem">vari</seg> 
+                  <seg xml:id="L146-04-02-10" type="LexItem">nikuaa</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L146-05">
+            <head>
+               <graphic url="L146-05.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-05-01" type="S">
+                  <seg xml:id="L146-05-01-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-05-01-02" type="LexItem">ta</seg> 
+                  <seg xml:id="L146-05-01-03" type="LexItem">ntuu</seg> 
+                  <seg xml:id="L146-05-01-04" type="LexItem">kii</seg> 
+                  <seg xml:id="L146-05-01-05" type="LexItem">xchaan</seg> 
+                  <seg xml:id="L146-05-01-06" type="LexItem">nta'i</seg> 
+                  <seg xml:id="L146-05-01-07" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-05-01-08" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-05-01-09" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-05-01-10" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-05-01-11" type="LexItem">ñantu'i</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L146-05-02" type="S">
+                  <seg xml:id="L146-05-02-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-05-02-02" type="LexItem">iin</seg> 
+                  <seg xml:id="L146-05-02-03" type="LexItem">chaa</seg> 
+                  <seg xml:id="L146-05-02-04" type="LexItem">ntuku</seg> 
+                  <seg xml:id="L146-05-02-05" type="LexItem">tutu</seg> 
+                  <seg xml:id="L146-05-02-06" type="LexItem">ntsini</seg> 
+                  <seg xml:id="L146-05-02-07" type="LexItem">so'o</seg> 
+                  <seg xml:id="L146-05-02-08" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-05-02-09" type="LexItem">ña</seg> 
+                  <seg xml:id="L146-05-02-10" type="LexItem">nta'ia</seg> 
+                  <seg xml:id="L146-05-02-11" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-05-02-12" type="LexItem">ntsa'an</seg> 
+                  <seg xml:id="L146-05-02-13" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-05-02-14" type="LexItem">ntsanche'e</seg> 
+                  <seg xml:id="L146-05-02-15" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-05-02-16" type="LexItem">nuu</seg> 
+                  <seg xml:id="L146-05-02-17" type="LexItem">ñantu'i</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L146-06">
+            <head>
+               <graphic url="L146-06.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-06-01" type="S">
+                  <seg xml:id="L146-06-01-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-06-01-02" type="LexItem">nikachi</seg> 
+                  <seg xml:id="L146-06-01-03" type="LexItem">ra</seg>:</seg>
+               <seg xml:id="L146-06-02" type="S">
+                  <pc>—</pc>
+                  <pc>¿</pc>
+                  <seg xml:id="L146-06-02-01" type="LexItem">Nchii</seg> 
+                  <seg xml:id="L146-06-02-02" type="LexItem">sa'u</seg> 
+                  <seg xml:id="L146-06-02-03" type="LexItem">ña</seg> 
+                  <seg xml:id="L146-06-02-04" type="LexItem">nta'iu</seg>
+                  <pc>?</pc>
+               </seg>
+               <seg xml:id="L146-06-03" type="S">
+                  <seg xml:id="L146-06-03-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-06-03-02" type="LexItem">nikachi</seg> 
+                  <seg xml:id="L146-06-03-03" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-06-03-04" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-06-03-05" type="LexItem">ka</seg>:</seg>
+               <seg xml:id="L146-06-04" type="S">
+                  <pc>—</pc>
+                  <seg xml:id="L146-06-04-01" type="LexItem">Nta'i</seg> 
+                  <seg xml:id="L146-06-04-02" type="LexItem">yu</seg> 
+                  <seg xml:id="L146-06-04-03" type="LexItem">vari</seg> 
+                  <seg xml:id="L146-06-04-04" type="LexItem">niyu'u</seg> 
+                  <seg xml:id="L146-06-04-05" type="LexItem">ta</seg> 
+                  <seg xml:id="L146-06-04-06" type="LexItem">yu</seg>
+                  <pc>.</pc>
+               </seg>
+               <seg xml:id="L146-06-05" type="S">
+                  <seg xml:id="L146-06-05-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-06-05-02" type="LexItem">nikachi</seg> 
+                  <seg xml:id="L146-06-05-03" type="LexItem">ñachaa</seg> 
+                  <seg xml:id="L146-06-05-04" type="LexItem">ka</seg>:</seg>
+               <seg xml:id="L146-06-06" type="S">
+                  <pc>—</pc>
+                  <seg xml:id="L146-06-06-01" type="LexItem">Ma</seg> 
+                  <seg xml:id="L146-06-06-02" type="LexItem">nta'iu</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-06-06-03" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-06-06-04" type="LexItem">michu'mi</seg> 
+                  <seg xml:id="L146-06-06-05" type="LexItem">naka'ncha</seg> 
+                  <seg xml:id="L146-06-06-06" type="LexItem">yu</seg> 
+                  <seg xml:id="L146-06-06-07" type="LexItem">tutu</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-06-06-08" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-06-06-09" type="LexItem">nano'o</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-06-06-10" type="LexItem">naku'un</seg> 
+                  <seg xml:id="L146-06-06-11" type="LexItem">yu</seg> 
+                  <seg xml:id="L146-06-06-12" type="LexItem">kuntasya'a</seg> 
+                  <seg xml:id="L146-06-06-13" type="LexItem">yo</seg> 
+                  <seg xml:id="L146-06-06-14" type="LexItem">ve'u</seg>
+                  <pc>,</pc> 
+                  <seg xml:id="L146-06-06-15" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-06-06-16" type="LexItem">miki</seg> 
+                  <seg xml:id="L146-06-06-17" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-06-06-18" type="LexItem">kaku</seg> 
+                  <seg xml:id="L146-06-06-19" type="LexItem">ka'nu</seg> 
+                  <seg xml:id="L146-06-06-20" type="LexItem">saa</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+         <div xml:id="L146-07">
+            <head>
+               <graphic url="L146-07.png"/>
+            </head>
+            <p>
+               <seg xml:id="L146-07-01" type="S">
+                  <seg xml:id="L146-07-01-01" type="LexItem">Sara</seg> 
+                  <seg xml:id="L146-07-01-02" type="LexItem">ñasuii</seg> 
+                  <seg xml:id="L146-07-01-03" type="LexItem">luu</seg> 
+                  <seg xml:id="L146-07-01-04" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-07-01-05" type="LexItem">niyu'u</seg> 
+                  <seg xml:id="L146-07-01-06" type="LexItem">xiin</seg> 
+                  <seg xml:id="L146-07-01-07" type="LexItem">ra</seg> 
+                  <seg xml:id="L146-07-01-08" type="LexItem">miki</seg> 
+                  <seg xml:id="L146-07-01-09" type="LexItem">ka</seg> 
+                  <seg xml:id="L146-07-01-10" type="LexItem">nitsa'in</seg> 
+                  <seg xml:id="L146-07-01-11" type="LexItem">ka'nia</seg> 
+                  <seg xml:id="L146-07-01-12" type="LexItem">saa</seg>
+                  <pc>.</pc>
+               </seg>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

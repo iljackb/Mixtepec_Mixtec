@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/PRON_1s_01_JS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/PRON_1s_01_JS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.07"/>
+            <when xml:id="T2" interval="0.17"/>
+            <when xml:id="T3" interval="0.18"/>
+            <when xml:id="T4" interval="0.53"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e33" n="1" start="0" end="0.56">
+               <seg xml:id="d1e34" function="utterance" notation="orth">
+                  <w xml:id="d1e35" synch="#T1">mee</w>
+               </seg>
+               <seg xml:id="d1e37" function="utterance" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">
+                     <c>m</c>
+                     <c>ɛː</c>
+                     <c function="tone">R</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T4">PRON-1S</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" n="1" target="#d1e35 #d1e38" ana="#PRON #EMPH" cert="medium"/>
+               <span type="person" target="#d1e35 #d1e38" ana="#1PERS"/>
+               <span type="number" target="#d1e35 #d1e38" ana="#SG"/>
+               <span type="pos" n="2" target="#d1e35 #d1e38" ana="#PRON #RFLX" cert="medium"/>
+               <!-- What are cases in which it is not reflexive!? -->
+               <!-- ADD USG INFO AFTER MORE STUDY OF USAGE: e.g. UNDERGOER,.. -->
+            </spanGrp>
+            
+            <!-- etymology: borrowing (es: 'me') ?-->
+            
+            <spanGrp type="translation">
+               <span xml:lang="en" target="#d1e35 #d1e38" corresp="https://en.wiktionary.org/wiki/myself">myself</span>
+               <span xml:lang="es" target="#d1e35 #d1e38" n="1" corresp="https://es.wiktionary.org/wiki/mí" cert="unknown">mí</span>
+               <span xml:lang="es" target="#d1e35 #d1e38" n="2"  corresp="https://es.wiktionary.org/wiki/me" cert="unknown">me</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

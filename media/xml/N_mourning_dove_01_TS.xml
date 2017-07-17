@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This file was converted from the source file <ptr target="file:/Users/jackbowers/Desktop/test/N_mourning_dove_01_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ptr target="file:/Users/jackbowers/Desktop/test/N_mourning_dove_01_TS.wav"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T1" interval="0.11"/>
+            <when xml:id="T2" interval="0.15"/>
+            <when xml:id="T3" interval="0.18"/>
+            <when xml:id="T4" interval="0.22"/>
+            <when xml:id="T5" interval="0.34"/>
+            <when xml:id="T6" interval="0.35"/>
+            <when xml:id="T7" interval="0.41"/>
+            <when xml:id="T8" interval="0.59"/>
+            <when xml:id="T9" interval="0.60"/>
+            <when xml:id="T10" interval="0.74"/>
+         </timeline>
+         <annotationBlock>
+            <u xml:id="d1e39" n="1" start="0" end="0.91">
+               <seg xml:id="d1e40" function="utterance" notation="orth">
+                  <w xml:id="d1e41" synch="#T1">lakuku</w>
+                  <!-- needs @xml:id -->
+               </seg>
+               <seg xml:id="d1e44" function="utterance" notation="ipa">
+                  <w xml:id="d1e45" synch="#T1"><!-- needs @xml:id --><!-- want to display in Dictionary and be able to search without <c> -->
+                     <c>l</c>
+                     <c>a</c>
+                     <c function="tone">L</c>
+                     <c>k</c>
+                     <c>u</c>
+                     <c function="tone">H</c>
+                     <c>k</c>
+                     <c>uː</c>
+                     <c function="tone">T</c>
+                  </w>
+               </seg>
+            </u>
+            <spanGrp type="praatGloss">
+               <span from="#T1" to="#T10">N.mourning_dove</span>
+            </spanGrp>
+            
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e41 #d1e45" ana="#N"/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e41 #d1e45" corresp="http://dbpedia.org/resource/Mourning_dove"/>
+               <!-- is_a:Bird -->
+               <span type="domain" target="#d1e41 #d1e45" corresp="http://dbpedia.org/resource/Bird"/>
+               <!-- is_a:Animal-->
+               <span type="domain" target="#d1e41 #d1e45" corresp="http://dbpedia.org/resource/Animal"/>
+               <!-- 
+               <span type="semanticRel"
+                     corresp="http://dbpedia.org/resource/Category:Bird_genera">typeOf:Bird</span>
+                -->
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e41 #d1e45" xml:lang="en" corresp="https://en.wiktionary.org/wiki/mourning_dove">mourning dove</span>
+               <span target="#d1e41 #d1e45" xml:lang="es" corresp="https://es.wiktionary.org/wiki/tortolita">tortolita</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>
