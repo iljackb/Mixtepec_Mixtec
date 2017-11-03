@@ -83,104 +83,127 @@
                quality</desc>
 
             <fs>
-               <f name="voiced" xml:id="vc" xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3552">
-                  <string>̬</string>
+               <f name="voice">
+                  <vAlt>
+                     <symbol value="voiced" xml:id="vc" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3552"/>          
+                     <!-- "Voiced" http://www.isocat.org/datcat/DC-3552  (GOLD) Definition: A fundamental term used in the phonetic classification of speech sounds, referring to the auditory result of the vibration of the vocal cords. Sounds produced while the vocal cords are vibrating are voiced. [Crystal 1985: 329]-->
+                     <symbol value="breathy-voice" xml:id="breathy-vc"/>
+                     <!-- not currently used in any of my language inventories  -->
+                     <symbol value="semi-voiced" xml:id="semi-vc"/>
+                     <!-- this is somewhere in the range between the prior and the following features; non-phonologically contrastive; IPA characters on otherwise voiced or voiceless items express this: eg.: k̬  -->
+                     <symbol value="creaky-voice" xml:id="crky-vc" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3146"/>
+                     <!-- @sameAs "#V-ckry" can occur with neighboring nasals and(instance of) -->
+                     <!-- "Creaky" http://www.isocat.org/datcat/DC-3146 (GOLD) definition:A term referring to a vocal quality in phonetic sound classification in which only one end of the vocal cords vibrates, and does so very slowly. This is a permanent feature of some speakers' voices. [Crystal 1980: 97]-->
+                     <symbol value="voiceless" xml:id="vcls" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3553"/>
+                     <!--"Voiceless" http://www.isocat.org/datcat/DC-3553  GOLD: definition:A fundamental term used in the phonetic classification of speech sounds, referring to the auditory result of the vibration of the vocal cords. Sounds produced while the vocal cords are not vibrating are voiceless. [Crystal 1985: 329]-->
+                  </vAlt>
                </f>
-               <!-- "Voiced" http://www.isocat.org/datcat/DC-3552  (GOLD) Definition: A fundamental term used in the phonetic classification of speech sounds, referring to the auditory result of the vibration of the vocal cords. Sounds produced while the vocal cords are vibrating are voiced. [Crystal 1985: 329]-->
-               <f name="breathy-voice" xml:id="breathy-vc"/>
-               <!-- not currently used in any of my language inventories  -->
-               <f name="semi-voiced" xml:id="semi-vc"/>
-               <!-- this is somewhere in the range between the prior and the following features; non-phonologically contrastive; IPA characters on otherwise voiced or voiceless items express this: eg.: k̬  -->
-               <f name="creaky-voice" xml:id="crky-vc" xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3146">
-                  <string>̰</string>
-               </f>
-               <!-- @sameAs "#V-ckry" can occur with neighboring nasals and(instance of) -->
-               <!-- "Creaky" http://www.isocat.org/datcat/DC-3146 (GOLD) definition:A term referring to a vocal quality in phonetic sound classification in which only one end of the vocal cords vibrates, and does so very slowly. This is a permanent feature of some speakers' voices. [Crystal 1980: 97]-->
-               <f name="voiceless" xml:id="vcls" xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3553"/>
-               <!--"Voiceless" http://www.isocat.org/datcat/DC-3553  GOLD: definition:A fundamental term used in the phonetic classification of speech sounds, referring to the auditory result of the vibration of the vocal cords. Sounds produced while the vocal cords are not vibrating are voiceless. [Crystal 1985: 329]-->
             </fs>
          </div>
 
          <div xml:id="energy-source">
             <fs>
-               <f name="pulmonic" xml:id="pulmonic"><default/></f>
-               <f name="non-pulmonic" xml:id="non-pulmonic"/>
+               <f name="energy-source">
+                  <vAlt>
+                     <symbol value="pulmonic" xml:id="pulmonic"/>
+                     <symbol value="non-pulmonic" xml:id="non-pulmonic"/>
+                  </vAlt>
+               </f>
             </fs>
          </div>
-
          <div xml:id="manner-of-articulation">
             <desc>manner of articulation</desc>
-            <fs>
-               <f name="stop" xml:id="stp" sameAs="#plos"/>
-               <f name="plosive" xml:id="plos" sameAs="#stp"/>
-               <!-- this may not always be true... unreleased stops are not plosives... -->
-               <f name="trill" xml:id="trll"/>
-               <!-- in Mix-->
-               <f name="tap-flap" xml:id="tap-flap"/>
-               <!-- in many languages, (MIX included) the tap and flap are not contrastive and will occur in free variation -->
-               <f name="fricative" xml:id="fric"/>
-               <f name="lateral-fricative" xml:id="lat-fric"/>
-               <!-- can be defined as cmbining the two manner of articulation features: #lat, #fric -->
-               <f name="affricate" xml:id="affrc"/>
-               <!-- have complex internal feature/attributes (2 manners of articulation; (stop, fricative) can be in either order (eg: [sk] [ʧ]; possibly also place of articulation) -->
-               <f name="double-articulation" xml:id="dbl-artic"/>
-               <!-- can have 1 or more manners of articulations and 1 or more places of articulation -->
-               <f name="nasal" xml:id="nas"/>
-               <f name="lateral" xml:id="lat"/>
-               <!-- "lateral" sameAs "lateral-approximate"; and "lateral" hasAttribute "approximate" -->
-               <f name="glide" xml:id="gld" sameAs="#semi-V"/>
-               <!-- hasAttribute "approximate" -->
-               <f name="semi-vowel" xml:id="semi-V" sameAs="#gld"/>
-               <!-- hasAttribute "approximate"; has multiple places of articulation and a single glides articulation and acoustic signal will vary to different degrees depending on the onset and offset contexts (utterance/ sentence context and places of articulation) -->
-               <f name="vowel" xml:id="V"><symbol value="V"/></f>
-               <!--  less typical types of articulation -->
-               <f name="click" xml:id="clk"/>
-               <!-- #energy-source #non-pulmonic -->
-               <f name="ejective" xml:id="ejctv"/>
-               <!-- #energy-source #non-pulmonic -->
-               <f name="voiced-implosve" xml:id="vcd-implsv"/>
-               <!-- #energy-source #non-pulmonic -->
-            </fs>
+            <fvLib>
+               <fs>
+                  <f name="manner">
+                     <vAlt>
+                        <symbol value="stop" xml:id="stp" sameAs="#plos"/>
+
+                        <symbol value="plosive" xml:id="plos" sameAs="#stp"/>
+                        <!-- this may not always be true... unreleased stops are not plosives... -->
+                        <symbol value="trill" xml:id="trll"/>
+                        <!-- in Mix-->
+                        <symbol value="tap-flap" xml:id="tap-flap"/>
+                        <!-- in many languages, (MIX included) the tap and flap are not contrastive and will occur in free variation -->
+                        <symbol value="fricative" xml:id="fric"/>
+                        <symbol value="lateral-fricative" xml:id="lat-fric"/>
+                        <!-- can be defined as cmbining the two manner of articulation features: #lat, #fric -->
+                        <symbol value="affricate" xml:id="affrc"/>
+                        <!-- have complex internal feature/attributes (2 manners of articulation; (stop, fricative) can be in either order (eg: [sk] [ʧ]; possibly also place of articulation) -->
+                        <symbol value="double-articulation" xml:id="dbl-artic"/>
+                        <!-- can have 1 or more manners of articulations and 1 or more places of articulation -->
+                        <symbol value="nasal" xml:id="nas"/>
+                        <symbol value="lateral" xml:id="lat"/>
+                        <!-- "lateral" sameAs "lateral-approximate"; and "lateral" hasAttribute "approximate" -->
+                        <symbol value="glide" xml:id="gld" sameAs="#semi-V"/>
+                        <!-- hasAttribute "approximate" -->
+                        <symbol value="semi-vowel" xml:id="semi-V" sameAs="#gld"/>
+                        <!-- hasAttribute "approximate"; has multiple places of articulation and a single glides articulation and acoustic signal will vary to different degrees depending on the onset and offset contexts (utterance/ sentence context and places of articulation) -->
+                        <symbol value="vowel" xml:id="v"/>
+                        <!--  less typical types of articulation -->
+                        <symbol value="click" xml:id="clk"/>
+                        <!-- #energy-source #non-pulmonic -->
+                        <symbol value="ejective" xml:id="ejctv"/>
+                        <!-- #energy-source #non-pulmonic -->
+                        <symbol value="voiced-implosve" xml:id="vcd-implsv"/>
+                        <!-- #energy-source #non-pulmonic -->
+                     </vAlt>
+                  </f>
+               </fs>
+               <!-- other feature structures here -->
+            </fvLib>
+
          </div>
 
          <div xml:id="place-of-articulation">
             <fs>
-               <f name="bilabial" xml:id="bilab"/>
-               <f name="linguo-labial" xml:id="linguo-lab"/>
-               <f name="labio-dental" xml:id="lab-dent"/>
-               <f name="dental" xml:id="dent"/>
-               <!-- this should be linked to the definitions of the IPA and ZSAMPA characters eg:" ̪" "_d" respectively -->
-               <f name="alveo-dental" xml:id="alv-dent"/>
-               <f name="alveolar" xml:id="alv"/>
-               <f name="post-alveolar" xml:id="post-alv"/>
-               <!-- <f name="retroflex" xml:id="retro-flx"/> not in MIX -->
-               <f name="palatal" xml:id="palat"/>
-               <f name="velar" xml:id="velar"/>
-               <!-- shares similar acoustic and articulatory properties with velar (tongue position,location) and bi-labials (rounding);  eventually point to, or refine feature definition by connecting to acoustic  (and articulatory features) eg. 'velar pinch' F3 path...etc... -->
-               <f name="uvular" xml:id="uvlr"/>
-               <!--  <f name="pharyngeal" xml:id="phryngl"/> -->
-               <f name="glottal" xml:id="glot"/>
-               <!-- <f name="epiglottal" xml:id="epiglot"/> -->
+               <f name="place-of-articulation">
+                  <vAlt>
+                     <symbol value="bilabial" xml:id="bilab"/>
+                     <symbol value="linguo-labial" xml:id="linguo-lab"/>
+                     <symbol value="labio-dental" xml:id="lab-dent"/>
+                     <symbol value="dental" xml:id="dent"/>
+                     <!-- this should be linked to the definitions of the IPA and ZSAMPA characters eg:" ̪" "_d" respectively -->
+                     <symbol value="alveo-dental" xml:id="alv-dent"/>
+                     <symbol value="alveolar" xml:id="alv"/>
+                     <symbol value="post-alveolar" xml:id="post-alv"/>
+                     <!-- <f name="retroflex" xml:id="retro-flx"/> not in MIX -->
+                     <symbol value="palatal" xml:id="palat"/>
+                     <symbol value="velar" xml:id="velar"/>
+                     <!-- shares similar acoustic and articulatory properties with velar (tongue position,location) and bi-labials (rounding);  eventually point to, or refine feature definition by connecting to acoustic  (and articulatory features) eg. 'velar pinch' F3 path...etc... -->
+                     <symbol value="uvular" xml:id="uvlr"/>
+                     <!--  <f name="pharyngeal" xml:id="phryngl"/> -->
+                     <symbol value="glottal" xml:id="glot"/>
+                     <!-- <f name="epiglottal" xml:id="epiglot"/> -->
+                  </vAlt>
+               </f>
             </fs>
          </div>
 
          <div xml:id="offset-release-features">
             <fs>
-               <f name="aspiration" xml:id="asp" xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3090"/>
-               <!-- only may occur with stops although all fricatives and affricates inherantly have this property -->
-               <!-- "Aspirated" http://www.isocat.org/datcat/DC-3090  (GOLD) Definition: A sound is described as 'aspirated' when it has a greater rate of airflow than occurs in modal voice for a period of time before or after a stricture. It often accompanies a consonant which precedes a vowel, the beginning of which is unvoiced. [Ladefoged and Maddieson 1996: 48] Source [Ladefoged and Maddieson 1996: 48] -->
-               <f name="un-aspirated" xml:id="un-asp" xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3539"/>
-               <!-- "Unaspirated" http://www.isocat.org/datcat/DC-3539 (GOLD) Definition: Unaspirated refers to the configuration of glottal opening, release at the oral stricture, and vocal fold vibration in which the glottal opening gesture begins at the moment that the oral closure is made, but the maximum width of the glottal opening is reached at about the mid-point of the oral closure duration and the vocal folds return to a voicing position at about the moment of release. This typically results in a weak sounding release which lacks the burst of air characteristic of aspirated phonemes. [Ladefoged and Maddieson 1996: 66-70] Source	[Ladefoged and Maddieson 1996: 66-70] -->
-               <f name="un-released" xml:id="unrelsd"/>
-               <!-- major in US Engl -->
-               <!--  not immediately needed offset features 
-                  <f name="nasal-release" xml:id="nas-release"/>
-                  <f name="lateral-release" xml:id="lat-release"/> -->
+               <f name="offset-release-features">
+                  <vAlt>
+                     <symbol value="aspiration" xml:id="asp"
+                        xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3090"/>
+                     <!-- only may occur with stops although all fricatives and affricates inherantly have this property -->
+                     <!-- "Aspirated" http://www.isocat.org/datcat/DC-3090  (GOLD) Definition: A sound is described as 'aspirated' when it has a greater rate of airflow than occurs in modal voice for a period of time before or after a stricture. It often accompanies a consonant which precedes a vowel, the beginning of which is unvoiced. [Ladefoged and Maddieson 1996: 48] Source [Ladefoged and Maddieson 1996: 48] -->
+                     <symbol value="un-aspirated" xml:id="un-asp"
+                        xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3539"/>
+                     <!-- "Unaspirated" http://www.isocat.org/datcat/DC-3539 (GOLD) Definition: Unaspirated refers to the configuration of glottal opening, release at the oral stricture, and vocal fold vibration in which the glottal opening gesture begins at the moment that the oral closure is made, but the maximum width of the glottal opening is reached at about the mid-point of the oral closure duration and the vocal folds return to a voicing position at about the moment of release. This typically results in a weak sounding release which lacks the burst of air characteristic of aspirated phonemes. [Ladefoged and Maddieson 1996: 66-70] Source	[Ladefoged and Maddieson 1996: 66-70] -->
+                     <symbol value="un-released" xml:id="unrelsd"/>
+                     <!-- major in US Engl -->
+                     <!--  not immediately needed offset features  -->
+                     <symbol value="nasal-release" xml:id="nas-release"/>
+                     <symbol value="lateral-release" xml:id="lat-release"/>
+                  </vAlt>
+               </f>
+
             </fs>
          </div>
 
@@ -190,18 +213,22 @@
                and requires additional elaboration of articulatory specifics</desc>
             <!-- eventually link the terms of V 'frontness' to the relative articulation places in the oral and glottal articulation space -->
             <fs>
-               <f name="front" xml:id="frnt"/>
-               <f name="central" xml:id="cntrl"/>
-               <f name="back" xml:id="bk"/>
+               <f name="frontness">
+                  <vAlt>
+                     <symbol value="front" xml:id="frnt"/>
+                     <symbol value="central" xml:id="cntrl"/>
+                     <symbol value="back" xml:id="bk"/>
+                     <symbol value="advanced-toungue-root" xml:id="advncd"/>
+                     <!-- very minor features -->
+                     <symbol value="centralized" xml:id="cntrlzd"/>
+                     <!-- very minor features -->
+                     <symbol value="mid-centralized" xml:id="md-cntrlized"/>
+                     <!-- very minor features -->
+                     <symbol value="retracted-toungue-root" xml:id="retrctd"/>
+                     <!-- very minor features -->
+                  </vAlt>
+               </f>
 
-               <f name="advanced-toungue-root" xml:id="advncd"/>
-               <!-- very minor features -->
-               <f name="centralized" xml:id="cntrlzd"/>
-               <!-- very minor features -->
-               <f name="mid-centralized" xml:id="md-cntrlized"/>
-               <!-- very minor features -->
-               <f name="retracted-toungue-root" xml:id="retrctd"/>
-               <!-- very minor features -->
             </fs>
          </div>
 
@@ -210,23 +237,28 @@
                description of "place-of-articulation" in vowels; This terminology is somewhat vague
                and requires additional elaboration of articulatory specifics</desc>
             <fs>
-               <f name="close" xml:id="V-cls" sameAs="#V-hi"/>
-               <f name="high" xml:id="V-hi" sameAs="#V-cls"/>
-               <f name="close-mid" xml:id="V-cls-md"/>
-               <f name="open-mid" xml:id="V-opn-md"/>
-               <f name="open" xml:id="V-opn" sameAs="#V-lo"/>
-               <f name="low" xml:id="V-lo" sameAs="#V-opn"/>
+               <f name="height">
+                  <vAlt>
+                     <symbol value="close" xml:id="V-cls" sameAs="#V-hi"/>
+                     <symbol value="high" xml:id="V-hi" sameAs="#V-cls"/>
+                     <symbol value="close-mid" xml:id="V-cls-md"/>
+                     <symbol value="open-mid" xml:id="V-opn-md"/>
+                     <symbol value="open" xml:id="V-opn" sameAs="#V-lo"/>
+                     <symbol value="low" xml:id="V-lo" sameAs="#V-opn"/>
 
-               <f name="raised" xml:id="raised"/>
-               <!-- very minor features -->
-               <f name="lowered" xml:id="lowered"/>
-               <!-- very minor features -->
-               <f name="apical" xml:id="apcl"/>
-               <!-- very minor features -->
-               <f name="laminal" xml:id="lmnl"/>
-               <!-- very minor features -->
-               <f name="rhoticity" xml:id="rhtcty"/>
-               <!-- found in UK Engl in words with offset open vowels; -->
+                     <symbol value="raised" xml:id="raised"/>
+                     <!-- very minor features -->
+                     <symbol value="lowered" xml:id="lowered"/>
+                     <!-- very minor features -->
+                     <symbol value="apical" xml:id="apcl"/>
+                     <!-- very minor features -->
+                     <symbol value="laminal" xml:id="lmnl"/>
+                     <!-- very minor features -->
+                     <symbol value="rhoticity" xml:id="rhtcty"/>
+                     <!-- found in UK Engl in words with offset open vowels; -->
+                  </vAlt>
+               </f>
+
             </fs>
          </div>
 
@@ -235,36 +267,47 @@
                although there are numerous instances of non-vowels that have this feature, eg.:
                labio-velar glide "w" </desc>
             <fs>
-               <f name="rounded" xml:id="rnd"/>
-               <!-- shares articulatory, auditory and acoustic properties with all 'labials'; -->
-               <f name="more-rounded" xml:id="X-rnd"/>
-               <!-- -->
-               <f name="less-rounded" xml:id="L-rnd"/>
+               <f name="rounding">
+                  <vAlt>
+                     <symbol value="rounded" xml:id="rnd"/>
+                     <!-- shares articulatory, auditory and acoustic properties with all 'labials'; -->
+                     <symbol value="more-rounded" xml:id="X-rnd"/>
+                     <!-- -->
+                     <symbol value="less-rounded" xml:id="L-rnd"/>
+                  </vAlt>
+               </f>
             </fs>
          </div>
 
          <div xml:id="nasalization">
             <desc/>
             <fs>
-               <!-- ? ADD "pre-nasalization" to this section? -->
-               <f name="nasalized" xml:id="Nas" xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3329">
-                  <!-- GOLD: is_a /SupraLaryngealProperty; The class of properties that describe the degree to which the velum or soft palate is raised or lowered, allowing or prohibiting air from escaping through the nose. [Kenstowicz 1994: 143] Source; [Kenstowicz 1994: 143]-->
-                  <string>̃</string>
+               <f name="nasalization">
+                     <symbol value="nasalized" xml:id="Nas" xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3329"/>
+                     <!-- GOLD: is_a /SupraLaryngealProperty; The class of properties that describe the degree to which the velum or soft palate is raised or lowered, allowing or prohibiting air from escaping through the nose. [Kenstowicz 1994: 143] Source; [Kenstowicz 1994: 143]-->
+                     <!-- in MIX nasalization is both phonetic and phonological; can occur phonetically on vowels and glides; phonologically it occurs with vowels and can be observed co-occurring with glottalization in vowels as well  -->
+                  
                </f>
-               <!-- in MIX nasalization is both phonetic and phonological; can occur phonetically on vowels and glides; phonologically it occurs with vowels and can be observed co-occurring with glottalization in vowels as well  -->
+
+               
             </fs>
          </div>
 
          <div xml:id="glottalization">
             <desc/>
             <fs>
+               <f name="glotalization">
+                  <vAlt>
+                     <symbol value="creaky" xml:id="crky" sameAs="#lryng"
+                        xmlns:dcr="http://www.isocat.org/ns/dcr"
+                        dcr:datcat="http://www.isocat.org/datcat/DC-3146"/>
+                     <!--  glottalization in MIX vowel is has an intermediate phonetic and phonological status as it can signifiy in the vowel what whould otherwise be signaled with a full glottal stop; phonologically it occurs simultaneously with vowels and can be observed co-occurring with nasalization in vowels as well -->
+                     <symbol value="laryngeal" xml:id="lryng" sameAs="#crky"/>
+                  </vAlt>
+               </f>
                <!-- ? ADD/link "pre-glottalization" to this section? -->
-               <f name="creaky" xml:id="crky" sameAs="#lryng"
-                  xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3146"/>
-               <!--  glottalization in MIX vowel is has an intermediate phonetic and phonological status as it can signifiy in the vowel what whould otherwise be signaled with a full glottal stop; phonologically it occurs simultaneously with vowels and can be observed co-occurring with nasalization in vowels as well -->
-               <f name="laryngeal" xml:id="lryng" sameAs="#crky"/>
+               
             </fs>
          </div>
 
@@ -272,15 +315,17 @@
             <!-- corresponds in higher level terms to conceptual primitive domain TIME -->
             <desc/>
             <fs>
-               <f name="extra-short" xml:id="X-short"/>
-               <f name="short" xml:id="short"/>
-               <f name="single"><default/></f>
-               <f name="long" xml:id="long">
-                  <string/>
+               <f name="duration">
+                  <vAlt>
+                     <symbol value="extra-short" xml:id="X-short"/>
+                     <symbol value="short" xml:id="short"/>
+                     <symbol value="single"/>
+                     <symbol value="long" xml:id="long"/>
+                     <!-- expressed in; mixtec orthography as: VV; in; IPA as: (vv | vː); in ZSAMPA as: (v:) -->
+                     <symbol value="geminate" xml:id="gem" sameAs="#long"/>
+                     <symbol value="half-long" xml:id="hlf-long"/>
+                  </vAlt>
                </f>
-               <!-- expressed in; mixtec orthography as: VV; in; IPA as: (vv | vː); in ZSAMPA as: (v:) -->
-               <f name="geminate" xml:id="gem" sameAs="#long"/>
-               <f name="half-long" xml:id="hlf-long"/>
             </fs>
          </div>
 
@@ -295,10 +340,14 @@
                   phonetic unit; This inventory is non-exhastive</desc>
 
                <fs>
-                  <f name="pre-nasalization" xml:id="pre-Nas"/>
-                  <f name="pre-glottalized" xml:id="pre-Glot"/>
-                  <f name="pre-spirantized" xml:id="pre-Sprnt"/>
-                  <!-- 'spirant' used as an alternative term for 'fricative' -->
+                  <f name="onset-features">
+                     <vAlt>
+                        <symbol value="pre-nasalization" xml:id="pre-Nas"/>
+                        <symbol value="pre-glottalized" xml:id="pre-Glot"/>
+                        <symbol value="pre-spirantized" xml:id="pre-Sprnt"/>
+                        <!-- 'spirant' used as an alternative term for 'fricative' -->
+                     </vAlt>
+                  </f>
                </fs>
             </div>
 
@@ -316,19 +365,23 @@
                   initial, final contexts, the order in which the glides two places are articulated
                   will change in any language. </desc>
                <fs>
+                  <f name="glide-features">
+                     <vAlt>
+                        <symbol value="glide" corresp="#semi-V"/>
+                        <!-- -->
+                        <symbol value="forward-glide" xml:id="G-fwd"/>
+                        <!-- -->
+                        <symbol value="back-glide" xml:id="G-bk"/>
+                        <!--  -->
+                     </vAlt>
+                  </f>
                   <!-- MAKE DEFAULT GLIDE THIS FS AND HAVE MORE SPECIFIC VERSIONS CONTAINED WITHIN? -->
-                  <f name="glide" corresp="#semi-V"><default/></f>
-                  <!-- -->
-                  <f name="forward-glide" xml:id="G-fwd"/>
-                  <!-- -->
-                  <f name="back-glide" xml:id="G-bk"/>
-                  <!--  -->
                </fs>
             </div>
 
             <div xml:id="affricate-features">
                <desc>(DESCRIPTION OF AFFRICATE FEATURES)</desc>
-               <fs feats="#affric">
+               <fs feats="#affric" cert="low">
                   <f name="affricate-stop-fricative" xml:id="affric-stp-fric"/>
                   <!-- eg: [ts],[dz],[ʧ],[ʤ], etc. -->
                   <f name="affricate-fricative-stop" xml:id="affric-fric-stp"/>
@@ -345,10 +398,14 @@
                   roundness may create glide-like qualities, which can give rise to what is often
                   referred to as an 'epentheic' glide.</desc>
                <fs>
-                  <f name="diphthongs" xml:id="V-diphthng"/>
-                  <!--    -->
-                  <f name="trithong" xml:id="V-trithng"/>
-                  <!-- , duration of each may be reduced from norm in which single portion occurs in isolation. The transitions between certain vowels may create glide-like quality.   -->
+                  <f name="complex-vocalic-features">
+                     <vAlt>
+                        <symbol value="diphthongs" xml:id="V-diphthng"/>
+                        <!--    -->
+                        <symbol value="trithong" xml:id="V-trithng"/>
+                        <!-- , duration of each may be reduced from norm in which single portion occurs in isolation. The transitions between certain vowels may create glide-like quality.   -->
+                     </vAlt>
+                  </f>    
                </fs>
             </div>
 
@@ -356,51 +413,69 @@
             <div xml:id="complex-offset">
                <desc/>
                <fs>
-                  <f name="labial-offset" xml:id="off-G-lab"/>
-                  <!-- MIX "kw"; "w" has feature "#rounded"   -->
-                  <f name="palatal-offset" xml:id="off-G-palat"/>
-                  <f name="velarized-offset" xml:id="off-velar"/>
-                  <f name="pharyngealized-offset" xml:id="off-phryngl"/>
-                  <!-- very minor features -->
+                  <f name="complex-offset">
+                     <vAlt>
+                        <symbol value="labial-offset" xml:id="off-G-lab"/>
+                        <!-- MIX "kw"; "w" has feature "#rounded"   -->
+                        <symbol value="palatal-offset" xml:id="off-G-palat"/>
+                        <symbol value="velarized-offset" xml:id="off-velar"/>
+                        <symbol value="pharyngealized-offset" xml:id="off-phryngl"/>
+                        <!-- very minor features -->
+                     </vAlt>
+                  </f>
+
                </fs>
             </div>
          </div>
 
          <div type="pitch-based-features">
             <desc/>
+            <fs>
+               <f name="tone">
+                  <symbol value="lexical-tone" xml:id="TONE"/><!-- GET URI (IF EXISITS!) -->
+               </f>
+            </fs>
             <div xml:id="level-tones">
                <desc/>
-               <fs>
-                  <f name="low" xml:id="L"/>
-                  <!-- ZSAMPA: "_L"; IPA: "V̀"; Pastor & Azcona style: "V̀"; Orth: (not represented) -->
-                  <f name="mid" xml:id="M" sameAs="#Ø"><default/></f>
-                  <!-- ZSAMPA: "_M"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
-                  <f name="unmarked" xml:id="Ø" sameAs="#M"/>
-                  <!-- ZSAMPA: "_M"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
-                  <f name="high" xml:id="H"/>
-                  <!-- ZSAMPA: "_H"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
-                  <f name="extra-low" xml:id="XL"/>
-                  <!-- not in MIX; only for other languages and to map to IPA-->
-                  <f name="extra-high" xml:id="XH"/>
-                  <!-- not in MIX; only for other languages and to map to IPA-->
+               <fs feats="#TONE">
+                  <f name="level-tones">
+                     <vAlt>
+                        <symbol value="low" xml:id="L"/>
+                        <!-- ZSAMPA: "_L";IPA: "V̀" V˩; Pastor & Azcona style: "V̀"; Orth: (not represented) -->
+                        <symbol value="mid" xml:id="M" sameAs="#Ø"/>
+                        <!-- ZSAMPA: "_M"; IPA: "V˧"; Pastor & Azcona style: "V"; Orth: (not represented) -->
+                        <symbol value="unmarked" xml:id="Ø" sameAs="#M"/>
+                        <!-- ZSAMPA: "_M"; IPA: "V"; Pastor & Azcona style: "V"; Orth: (not represented) -->
+                        <symbol value="high" xml:id="H"/>
+                        <!-- ZSAMPA: "_H"; IPA: "V˥"; Pastor & Azcona style: "V"; Orth: (not represented) -->
+                        <symbol value="extra-low" xml:id="XL"/>
+                        <!-- not in MIX; only for other languages and to map to IPA-->
+                        <symbol value="extra-high" xml:id="XH"/>
+                        <!-- not in MIX; only for other languages and to map to IPA-->
+                     </vAlt>
+                  </f>
                </fs>
             </div>
 
             <div xml:id="contour-tones">
                <desc/>
                <fs>
-                  <f name="falling" xml:id="F"/>
-                  <!--Phonologically considered to be equivalent to "L"; (Falling features 2 contrasting pitch levels) ZSAMPA: "_F"; IPA: "V̀"; Pastor & Azcona style: "V̀"; Orth: (not represented) -->
-                  <f name="rising" xml:id="R"/>
-                  <!-- Phonologically considered to be equivalent to "H"; (Rising features 2 contrasting pitch levels) ZSAMPA: "_R"; IPA: "V́"; Pastor & Azcona style: "V́"; Orth: (not represented) -->
-                  <f name="falling-rising" xml:id="F_R"/>
-                  <!-- (Falling-Rising features 3 contrasting pitch levels) ZSAMPA: "_F_R"; IPA: "V̀V́"; Pastor & Azcona style: "V̀V́"; Orth: (only multiple vowels represented (length) -->
-                  <f name="rising-falling" xml:id="R_F"/>
-                  <!-- (Rising-Falling features 3 contrasting pitch levels) ZSAMPA: "_R_F"; IPA: "V́V̀"; Pastor & Azcona style: "V́V̀"; Orth: (only multiple vowels represented (length) -->
-                  <f name="high-rising" xml:id="HR"/>
-                  <!-- not in MIX; only for other languages and to map to IPA-->
-                  <f name="low-rising" xml:id="LR"/>
-                  <!-- not in MIX; only for other languages and to map to IPA-->
+                  <f name="contour-tones">
+                     <vAlt>
+                        <symbol value="falling" xml:id="F"/>
+                        <!--Phonologically considered to be equivalent to "L"; (Falling features 2 contrasting pitch levels) ZSAMPA: "_F"; IPA: "V̀"; Pastor & Azcona style: "V̀"; Orth: (not represented) -->
+                        <symbol value="rising" xml:id="R"/>
+                        <!-- Phonologically considered to be equivalent to "H"; (Rising features 2 contrasting pitch levels) ZSAMPA: "_R"; IPA: "V́"; Pastor & Azcona style: "V́"; Orth: (not represented) -->
+                        <symbol value="falling-rising" xml:id="F_R"/>
+                        <!-- (Falling-Rising features 3 contrasting pitch levels) ZSAMPA: "_F_R"; IPA: "V̀V́"; Pastor & Azcona style: "V̀V́"; Orth: (only multiple vowels represented (length) -->
+                        <symbol value="rising-falling" xml:id="R_F"/>
+                        <!-- (Rising-Falling features 3 contrasting pitch levels) ZSAMPA: "_R_F"; IPA: "V́V̀"; Pastor & Azcona style: "V́V̀"; Orth: (only multiple vowels represented (length) -->
+                        <symbol value="high-rising" xml:id="HR"/>
+                        <!-- not in MIX; only for other languages and to map to IPA-->
+                        <symbol value="low-rising" xml:id="LR"/>
+                        <!-- not in MIX; only for other languages and to map to IPA-->
+                     </vAlt>
+                  </f>
                </fs>
             </div>
 
@@ -410,8 +485,12 @@
                   way in which this is expressed. In US English, this often also has effects on the
                   vocalic forms of given lexical items.</desc>
                <fs>
-                  <f name="primary-lexical-stress" xml:id="stress1"/>
-                  <f name="secondary-lexical-stress" xml:id="stress2"/>
+                  <f name="lexical-stress">
+                     <vAlt>
+                        <symbol value="primary-lexical-stress" xml:id="stress1"/>
+                        <symbol value="secondary-lexical-stress" xml:id="stress2"/>
+                     </vAlt>
+                  </f>
                </fs>
             </div>
 
@@ -419,10 +498,15 @@
                <!-- (prosody / emotion /discourse) -based alterations -->
                <desc/>
                <fs>
-                  <f name="downstep" xml:id="dwnstp"/>
-                  <f name="upstep" xml:id="upstp"/>
-                  <f name="global-rise" xml:id="R-glbl"/>
-                  <f name="global-fall" xml:id="F-glbl"/>
+                  <f name="pitch-alternation">
+                     <vAlt>
+                        <symbol value="downstep" xml:id="dwnstp"/>
+                        <symbol value="upstep" xml:id="upstp"/>
+                        <symbol value="global-rise" xml:id="R-glbl"/>
+                        <symbol value="global-fall" xml:id="F-glbl"/>
+                     </vAlt>
+                  </f>
+                  
                </fs>
             </div>
          </div>
@@ -445,9 +529,9 @@
                   conditioned e.g.( (V,Ṽ) ->(V̰,Ṽ̰)/[+glottal]) and non contrastive in the presence
                   of a glottal stop, creakness may co-occur with oral or nasalized vowels</desc>
 
-
-               <fs feats="#V">
                   <!-- '#V' tagged because all features contained have descriptive @'vowel' -->
+               <fs feats="#V">
+
 
                   <f name="vowels-oral-MIX" xml:id="V-MIX">
                      <fs feats="#V-cls #V-hi #frnt" xml:id="V-hi-frnt-MIX">
@@ -1531,10 +1615,7 @@
                                  </row>
                                  <row>
                                     <cell><label>Stop</label></cell>
-                                    <cell><?oxy_comment_start author="jackbowers" timestamp="20161224T154112-0800" comment="this probably shouldn&apos;t be here because it is just passive...
-"?><c
-                                          ana="#pre-Nas-vc-bilab-stp-MIX"
-                                       >mb</c><?oxy_comment_end?></cell>
+                                    <cell><c ana="#pre-Nas-vc-bilab-stp-MIX">mb</c></cell>
                                     <!-- mixtec orthography: mb -->
                                     <cell><!--<c corresp="#pre-Nas-vcls-alv-stp-MIX">nt̪</c> ~ <c>nd̪</c></cell>--></cell>
                                     <cell><c ana="#pre-Nas-vcls-alv-stp-MIX">nt</c> ~<c
@@ -1743,7 +1824,7 @@
                </div>
 
                <div>
-                  <p><title>Inventory of Pre-Spirantized Phonetic Units</title><table cols="12">
+                  <p><title><label>Inventory of Pre-Spirantized Phonetic Units</label></title><table cols="12">
                         <row>
                            <cell>
                               <table cols="5">

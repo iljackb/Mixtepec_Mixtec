@@ -269,13 +269,7 @@ Prefix
                           (GOLD); (adj./n.) In languages which express grammatical relationships by means of inflections, this term refers to the form taken by a noun phrase
                           (often a single noun or pronoun), when it typically expresses the idea of location of an entity or action. Structures which express locational 
                           meaning may also be referred to as locative, e.g. in 'The woman was standing at a bus stop', 'at a bus stop' could be called a locative phrase. [Crystal 2008: 288] -->
-                      
-                       <f name="copula-attributive" xml:id="COP-ATTRIB">
-                          <string>COP-ATTRB</string>
-                       </f>
-                       <!-- (mix) "copulaAttributive" in MIX is for the mix adjectives that are verbalized through the attatchment
-                          of a PERSON and possibly a combination of: NUMBER, FORMALITY, GENDER markers;
-                          Can also be considered to be an instance of process "verbalization"-->                      
+                                 
                        <f name="copula-realis" xml:id="COP-REAL">
                           <string>COP-REAL</string>
                        </f>
@@ -601,35 +595,7 @@ negator
             
          </fs>
          <div>
-            <!-- 
-            #this series of pronouns is not the primary system used in marking most #verbs for the primary argument. 
-            Their observations in the dataset are #limited, and don't appear to be correlated with Actor - Undergoer...
-
-(1.s) mee, méé, m e:_R
-(1.pl.form.ex) meeko, mèè.k̬ó, m e:_n_F k_v o_R
-(1.pl.form.all) mee we, mẽ́ẽ́.we, m e:_n_H w e_M
-
-	(2.s.inf) meeun, mẽ̀ẽ̀.ṹ, m e:_n_L u_n_R
-
-	(2.s.form) ni, ní, n i_R
-
-(3.s.m) chaka, ʧà.k̬á, (tS) a_F k_v a_R
-
-(3.s.f) ñaka, ɲà.k̬á, J a_F k_v a_R
-
-
-(2.pl.all) mee we yuu, mẽ́ẽ́.we.ju, m e:_n_H w e_M j u_M
-
-(2.pl.all.form) mee we ni, mẽ́ẽ́ we ní, m e:_n_H w e_M n i_R
-
-(3.pl.form.fem) ñaka, ɲá.k̬á, J a_R k_v a_R
-
-(3.pl.inf) kuena,
-
-(3.pl.form.all) naka, nà.k̬á, n a_F k_v a_R
-	
-            
-            -->
+ 
             <div xml:id="Adjectives-MIX">
                <desc>Adjectives are also sematically subject to the ontological domain to which they themselves belong (eg. COLOR, SIZE, TIME, etc) and thus these too will be connected to the higher level ontologies in the final corpus output</desc>
                
@@ -653,48 +619,73 @@ negator
                   It is often found on nouns, pronouns, and verbs and expresses count distinctions--such as 'one' or 
                   'more than one'. The count distinctions typically, but not always, correspond to the actual count of 
                   the referents of the marked noun or Pronoun. [Crystal 1980: 245; Hartmann and Stork 1972: 155]</desc>
-               
-               <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3351" type="NumberProperty">
-                  <f name="singular" xml:id="SG" dcr:datcat="http://www.isocat.org/datcat/DC-252">
-                     <string>sg</string>
-                  </f><!-- Sue Ellen Wright; The form of a term or word (usually of a noun) used to designate one object. -->
-                  <f name="plural" xml:id="PL" dcr:datcat="http://www.isocat.org/datcat/DC-253">
-                     <string>pl</string>
-                  </f><!--Sue Ellen Wright; The form of a term or word (usually of a noun) used to designate more than one object.  -->
-                  <f name="unmarked-NUM" xml:id="NUM-Ø"><default/></f>
-                  <!-- This occurs where the verb is not inflected for person or number, usually where there is an explicit concrete noun (corresponding to PERS), and an explicit enumerator (corresponding to NUM) -->
-               </fs>
+               <!--  
+               <fvLib n="number">
+                  <fs>
+                     <f name="singular" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-252">
+                        <symbol value="SG"/>
+                     </f>
+                  </fs>
+                  <fs>
+                     <f name="plural" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-253">
+                        <symbol value="PL"/>
+                     </f>
+                  </fs>
+               </fvLib>
+               -->
+               <fvLib>
+                  <fs>
+                     <f name="number" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3351">
+                        <vAlt>
+                           <symbol xml:id="SG" value="singular" dcr:datcat="http://www.isocat.org/datcat/DC-252"/>
+                           <symbol xml:id="PL" value="plural" dcr:datcat="http://www.isocat.org/datcat/DC-253"/>
+                        </vAlt>  
+                     </f>
+                  </fs>            
+                  <!-- other feature structures here -->
+               </fvLib>
             </div>
 
             <div xml:id="Register-MIX">
-               <fs xml:id="register" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-423">
-                  
-                  <f name="informal" xml:id="INF">
-                     <string>inf</string>
-                  </f>
-                  <f name="formal" xml:id="FORM">
-                     <string>form</string>
-                  </f>
-                  
-               </fs>
+               <desc></desc>
+               <fvLib>
+                  <fs>
+                     <f name="register" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-423">
+                       <vAlt>
+                          <symbol xml:id="FORM" value="informal"/>
+                          <symbol xml:id="INF" value="formal"/>
+                       </vAlt>
+                     </f>
+                  </fs>
+               </fvLib>         
                
             </div>
+            
             <div>
-               
-                  <fs type="first-person" xml:id="pers1" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/><!-- Francopoulo, Gil; First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker;www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsFirstPersonDeixis.htm -->
-               
-                  <fs type="second-person" xml:id="pers2" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/><!--Francopoulo, Gil;Second person deixis is deictic reference to a person or persons identified as addressee.  -->
-               
-                  <fs type="third-person" xml:id="pers3" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/><!--  Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.; www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsThirdPersonDeixis.htm-->
-                  <fs type="unmarked-person" xml:id="persØ"/>
-               
-               
-                  <fs type="Inclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044"/><!--(Wesseling, Franca) First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
-               
-                  <fs type="Exclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045"></fs><!-- (Wesseling, Franca) First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
-               
-               
-               
+               <desc></desc>
+               <fvLib>
+                  <fs>
+                     <f name="person">
+                        <vAlt>
+                           <symbol xml:id="1PERS" value="" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/><!-- Francopoulo, Gil; First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker;www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsFirstPersonDeixis.htm -->
+                           <symbol xml:id="2PERS" value="" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/><!--Francopoulo, Gil;Second person deixis is deictic reference to a person or persons identified as addressee.  -->
+                           <symbol xml:id="3PERS" value="" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/><!--  Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.; www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsThirdPersonDeixis.htm-->
+                        </vAlt>
+                     </f>
+                  </fs>
+               </fvLib>
+                
+                <fvLib>
+                   <fs>
+                      <f name="inclusivity">
+                         <vAlt>
+                            <symbol xml:id="INCL" value="Inclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044"/><!--(Wesseling, Franca) First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
+                            <symbol xml:id="EXCL" value="Exclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045"/><!-- (Wesseling, Franca) First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
+                         </vAlt>
+                      </f>
+                   </fs>
+                </fvLib>
+
             <label>Personal Inflections</label><lb/>
             
             <p>As discussed by Hills (1990) regarding the pronominal units in <lang>Ayutla Mixtec</lang>, <lang>Mixtepec-Mixtec</lang> features the rather utilitarian strategy for expressing different syntactic and semantic functions by simply adding a modular personal inflection to various lexical categories, and thus it isn’t possible to distinguish their grammatical function independent of the syntactic and semantic context in which they are applied.  While previous studies in other Mixtec varieties refer to these lexical units as “pronouns”, in this analysis of <abbr>MIX</abbr>, these are referred as “personal inflections”, or “personal inflection markers” to dissociate these units from some of the less dynamic pronominal markers often encountered in many languages.</p><lb/> 
@@ -866,6 +857,24 @@ negator
                <f name="VAL-GRM1" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
             </fs>
             
+            <fvLib n="transitivity">     
+               <fs>
+                  <f name="transitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275">
+                     <symbol value="TRANS"/>
+                  </f>
+               </fs>
+               <fs>
+                  <f name="intransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275">
+                     <symbol value="INTRANS"/>
+                  </f>
+               </fs>
+               <fs>
+                  <f name="ditransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275">
+                     <symbol value="DITRANS"/>
+                  </f>
+               </fs>
+               
+            </fvLib>
             
             
             <fs xml:id="ATRANS" feats="#VAL-0"/><!-- verbs that take 0 macro-role arguments such as weather verbs -->
@@ -1114,17 +1123,7 @@ negator
                -all
             </desc>
             <!-- MUST OCCUR WITH FEATURES: (PLURAL (1ST | 3RD)) -->
-            
-            <fs>
-               <f name="inclusive" xml:id="INCL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044">
-                  <string>incl</string>
-               </f><!--Wesseling, Franca; First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
-               
-               <f name="exclusive" xml:id="EXCL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045">
-                  <string>excl</string>
-               </f><!--Wesseling, Franca; First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
-            </fs>
-            
+
          </div>
          
          

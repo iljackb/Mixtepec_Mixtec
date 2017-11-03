@@ -39,28 +39,47 @@
          </timeline>
          <annotationBlock>
             <u xml:id="d1e43" n="1" start="0" end="0.62">
-               <seg xml:id="d1e44" function="utterance" notation="orth">
-                  <w xml:id="d1e45" synch="#T1">tsi'i yu</w>
+               <seg xml:id="d1e44" function="utterance" notation="orth" type="phrase">
+                  <w xml:id="d1e45" synch="#T1">tsi'<c xml:id="d1e46">i̠</c></w>
                </seg>
-               <seg xml:id="d1e47" function="utterance" notation="ipa">
+               <seg xml:id="d1e47" function="utterance" notation="ipa" type="phrase">
                   <w xml:id="d1e48" synch="#T1">
                      <c>ts</c>
                      <c>i</c>
                      <c function="tone">H</c>
                      <c>ʔ</c>
-                     <c>i</c>
-                     <c function="tone">F</c>
+                     <c xml:id="d1e49">i</c>
+                     <c  xml:id="d1e50" function="tone" synch="#d1e45">F</c>
                   </w>
                </seg>
             </u>
-            <spanGrp>
+            <spanGrp type="praatGloss">
                <span from="#T1" to="#T12">V.drink\1S</span>
+            </spanGrp>
+            <spanGrp type="gram">
+               <span type="phrase" target="#d1e44 #d1e47" ana="#VP"/>
+               <span type="pos" target="#d1e45 #d1e48" ana="#V"/>
+               <span type="aspect" target="#d1e45 #d1e48" ana="#INCMPL"/>
+               <span type="morph" target="#d1e46 #d1e50" ana="#TONE"/>
+               <span type="person" target="#d1e46 #d1e50" ana="#1PERS"/>
+               <span type="number" target="#d1e46 #d1e50" ana="#SG"/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <!-- 
+               <span type="" target="" corresp="" ana=""/>
+               <span type="" target="" corresp="" ana=""/>
+                -->
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e44 #d1e47" xml:lang="en">I'm drinking</span>
+               <span target="#d1e44 #d1e47" xml:lang="es">bebo</span>
+               <span target="#d1e44 #d1e47" xml:lang="es">estoy bebiendo</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
             <u xml:id="d1e65" n="2" start="0.62" end="1.21">
                <seg xml:id="d1e66" function="utterance" notation="orth">
-                  <w xml:id="d1e67" synch="#T7">tsi'i yu</w>
+                  <w xml:id="d1e67" synch="#T7">tsi'<c xml:id="d1e68">i̠</c></w>
                </seg>
                <seg xml:id="d1e69" function="utterance" notation="ipa">
                   <w xml:id="d1e70" synch="#T7">
@@ -68,8 +87,8 @@
                      <c>i</c>
                      <c function="tone">H</c>
                      <c>ʔ</c>
-                     <c function="tone">F</c>
                      <c>i</c>
+                     <c function="tone">F</c>
                   </w>
                </seg>
             </u>

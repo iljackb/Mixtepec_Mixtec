@@ -5,26 +5,28 @@
          <titleStmt>
             <title xml:lang="mix">
                <seg xml:id="L160-00-01">
-                  <seg xml:id="L160-00-01-01" type="LexItem">Nti u'un</seg> 
-                  <seg xml:id="L160-00-01-02" type="LexItem">lurru</seg>
+                  <w xml:id="d1e7">Nti u'un</w>
+                  <w xml:id="d1e9">lurru</w>
                </seg>
             </title>
             <title xml:lang="es">
                <seg xml:id="L160-00-02">
-                  <seg xml:id="L160-00-02-01" type="LexItem">Los</seg> 
-                  <seg xml:id="L160-00-02-02" type="LexItem">cinco</seg> 
-                  <seg xml:id="L160-00-02-03" type="LexItem">burros</seg>
+                  <w xml:id="d1e13">Los</w>
+                  <w xml:id="d1e15">cinco</w>
+                  <w xml:id="d1e17">burros</w>
                </seg>
             </title>
             <editor>Gisela Beckmann</editor>
             <editor>María M. Nieves</editor>
             <respStmt>
-               <resp>Linguistic consultation</resp>
+               <resp xml:lang="es">Elaboracíon</resp>
+               <resp xml:lang="en">Linguistic consultation</resp>
+               <name xml:lang="es">Varios hablantes del Mixteco de Mixtepec</name>
                <name>multiple unnamed Mixtepec-Mixtec speakers</name>
             </respStmt>
             <respStmt>
                <resp>TEI Encoding</resp>
-               <name>Jack T. Bowers</name>  
+               <name>Jack T. Bowers</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -42,10 +44,10 @@
          </notesStmt>
          <sourceDesc>
             <bibl xml:id="bibl.L160">
-               <title>Ntiu'un lurru</title> 
-               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2008</date>. <edition>(2nd ed.)</edition>.<pubPlace>Tlalpan, D.F., México</pubPlace>:<publisher>Instituto Lingüístico de Verano, A.C.</publisher> 
-               <respStmt> 
-                  <resp>linguistic consultation</resp> 
+               <title>Ntiu'un lurru</title>
+               <editor>Beckmann, Gisela</editor>; <editor>Nieves, María M.</editor>. <date>2008</date>. <edition>(2nd ed.)</edition>.<pubPlace>Tlalpan, D.F., México</pubPlace>:<publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <respStmt>
+                  <resp>linguistic consultation</resp>
                   <name>multiple unnamed Mixtepec-Mixtec speakers</name>
                </respStmt>
                Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L160-CincoBurros-mix.htm"/>
@@ -83,7 +85,7 @@
                   <elementSpec ident="c">
                      <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
                         In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>  
+                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
                      </desc>
                   </elementSpec>
                </item>
@@ -92,7 +94,6 @@
                   <elementSpec ident="div">
                      <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
                   </elementSpec>
-                  
                </item>
             </list>
          </p>
@@ -127,7 +128,6 @@
                The encoding of this portion of the MIX Language resources can be divided into the following components:
                <list>
                   <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
-                  
                   <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
                      
                      <list>
@@ -138,7 +138,6 @@
                         <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
                      </list>
                   </item>
-                  
                   <item>iii) Classification of Document Types and Ontology Linking;
                      <list>
                         <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
@@ -158,34 +157,60 @@
             </head>
             <p>
                <seg xml:id="L160-01-01" type="S">
-                  <seg xml:id="L160-01-01-01" type="LexItem">Iin</seg> 
-                  <seg xml:id="L160-01-01-02" type="LexItem">kii</seg> 
-                  <seg xml:id="L160-01-01-03" type="LexItem">iin</seg> 
-                  <seg xml:id="L160-01-01-04" type="LexItem">chaa</seg> 
-                  <seg xml:id="L160-01-01-05" type="LexItem">ntsa'an</seg> 
-                  <seg xml:id="L160-01-01-06" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-01-01-07" type="LexItem">nuya'vi</seg>
+                  <w xml:id="d1e171">Iin</w>
+                  <w xml:id="d1e173">kii</w>
+                  <w xml:id="d1e175">iin</w>
+                  <w xml:id="d1e177">chaa</w>
+                  <w xml:id="d1e179">ntsa'an</w><!-- went to -->
+                  <w xml:id="d1e181">ra</w>
+                  <w xml:id="d1e183">nuya'vi</w><!-- plaza -->
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-01-01" xml:lang="en">One day a man went to the plaza.</span>
+                  <span target="#L160-01-01" xml:lang="es">Un día un hombre fue a la plaza.</span>
+                  
+                  <span target="#d1e179 #d1e181" xml:lang="en">he went</span>
+                  <span target="#d1e179 #d1e181" xml:lang="es">él fue</span>
+                  
+                  <span target="#d1e183" xml:lang="en">plaza</span>
+                  <span target="#d1e183" xml:lang="es">plaza</span>
+               </spanGrp>
                <seg xml:id="L160-01-02" type="S">
-                  <seg xml:id="L160-01-02-01" type="LexItem">Cha</seg> 
-                  <seg xml:id="L160-01-02-02" type="LexItem">ntakuaan</seg> 
-                  <seg xml:id="L160-01-02-03" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-01-02-04" type="LexItem">kumi</seg> 
-                  <seg xml:id="L160-01-02-05" type="LexItem">lurru</seg>
+                  <w xml:id="d1e188">Cha</w>
+                  <w xml:id="d1e190">ntakuaan</w><!-- buy/bought (iterative) (present, but means past) -->
+                  <w xml:id="d1e192">ra</w>
+                  <w xml:id="d1e194">kumi</w>
+                  <w xml:id="d1e196">lurru</w>
                   <pc>.</pc>
                </seg>
-                  <seg xml:id="L160-01-03" type="S">
-                  <seg xml:id="L160-01-03-01" type="LexItem">Sara</seg> 
-                  <seg xml:id="L160-01-03-02" type="LexItem">ntanchiko</seg> 
-                  <seg xml:id="L160-01-03-03" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-01-03-04" type="LexItem">ve'e</seg> 
-                  <seg xml:id="L160-01-03-05" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-01-03-06" type="LexItem">kuacha</seg> 
-                  <seg xml:id="L160-01-03-07" type="LexItem">nchu'a</seg> 
-                  <seg xml:id="L160-01-03-08" type="LexItem">ra</seg>
+               <spanGrp type="translation">
+                  <span target="#L160-01-02" xml:lang="en">And he brought four donkeys.</span>
+                  <span target="#L160-01-02" xml:lang="es">Y él compró cuatro burros.</span>
+                  
+                  <span target="#d1e190 #d1e192" xml:lang="en">he buys</span>
+                  <span target="#d1e190 #d1e192" xml:lang="en">he is buying</span>
+                  <span target="#d1e190 #d1e192" xml:lang="es">él compra</span>
+                  <span target="#d1e190 #d1e192" xml:lang="es">está comprando</span>
+               </spanGrp>
+               <seg xml:id="L160-01-03" type="S">
+                  <w xml:id="d1e201">Sara</w>
+                  <w xml:id="d1e203">ntanchiko</w><!--returned (form is present)  -->
+                  <w xml:id="d1e205">ra</w>
+                  <w xml:id="d1e207">ve'e</w><!-- home -->
+                  <w xml:id="d1e209">ra</w>
+                  <w xml:id="d1e211">kuacha</w><!-- very happy -->
+                  <w xml:id="d1e213">nchu'a</w>
+                  <w xml:id="d1e215">ra</w><!-- him -->
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-01-03" xml:lang="en">He then returned home very happy.</span>
+                  <span target="#L160-01-03" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-02">
@@ -194,62 +219,96 @@
             </head>
             <p>
                <seg xml:id="L160-02-01" type="S">
-                  <seg xml:id="L160-02-01-01" type="LexItem">Sara</seg> 
-                  <seg xml:id="L160-02-01-02" type="LexItem">ntsoo</seg> 
-                  <seg xml:id="L160-02-01-03" type="LexItem">so</seg> 
-                  <seg xml:id="L160-02-01-04" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-01-05" type="LexItem">iin</seg> 
-                  <seg xml:id="L160-02-01-06" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-02-01-07" type="LexItem">cha</seg> 
-                  <seg xml:id="L160-02-01-08" type="LexItem">tatsi</seg> 
-                  <seg xml:id="L160-02-01-09" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-01-10" type="LexItem">uni</seg> 
-                  <seg xml:id="L160-02-01-11" type="LexItem">lurru</seg>
+                  <w xml:id="d1e224">Sara</w>
+                  <w xml:id="d1e226">ntsoo</w><!-- ntsoo so "he rode" (tense/form?) -->
+                  <w xml:id="d1e228">so</w>
+                  <w xml:id="d1e230">ra</w>
+                  <w xml:id="d1e232">iin</w>
+                  <w xml:id="d1e234">lurru</w>
+                  <w xml:id="d1e236">cha</w>
+                  <w xml:id="d1e238" cert="medium">tatsi</w><!-- chase? -->
+                  <w xml:id="d1e240">ra</w>
+                  <w xml:id="d1e242">uni</w>
+                  <w xml:id="d1e244">lurru</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-02-01" xml:lang="en"></span>
+                  <span target="#L160-02-01" xml:lang="es"></span>
+                  
+                  <span target="#d1e226 #d1e228 #d1e230" xml:lang="en">he rides</span>
+                  <span target="#d1e226 #d1e228 #d1e230" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-02-02" type="S">
-                  <seg xml:id="L160-02-02-01" type="LexItem">Ta</seg> 
-                  <seg xml:id="L160-02-02-02" type="LexItem">ntsaa</seg> 
-                  <seg xml:id="L160-02-02-03" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-02-04" type="LexItem">sava</seg> 
-                  <seg xml:id="L160-02-02-05" type="LexItem">ichi</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-02-02-06" type="LexItem">cha</seg> 
-                  <seg xml:id="L160-02-02-07" type="LexItem">nikitsaa</seg> 
-                  <seg xml:id="L160-02-02-08" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-02-09" type="LexItem">ntaka'vi</seg> 
-                  <seg xml:id="L160-02-02-10" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-02-11" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-02-02-12" type="LexItem">ka</seg>
+                  <w xml:id="d1e250">Ta</w>
+                  <w xml:id="d1e252">ntsaa</w><!-- ta ntsaa = when he arrived/got  -->
+                  <w xml:id="d1e254">ra</w>
+                  <w xml:id="d1e256">sava</w><!-- half way -->
+                  <w xml:id="d1e258">ichi</w> <!-- path  -->
+                  <pc>,</pc>
+                  <w xml:id="d1e262">cha</w>
+                  <w xml:id="d1e264">nikitsaa</w><!-- began -->
+                  <w xml:id="d1e266">ra</w>
+                  <w xml:id="d1e268">ntaka'vi</w><!-- count -->
+                  <w xml:id="d1e270">ra</w>
+                  <w xml:id="d1e273">lurru</w><!-- (JB: why is there no plural marker?) -->
+                  <w xml:id="d1e275">ka</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-02-02" xml:lang="en">When he was half way along the path, he began to count the donkeys.</span>
+                  <span target="#L160-02-02" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-02-03" type="S">
-                  <seg xml:id="L160-02-03-01" type="LexItem">Cha</seg> 
-                  <seg xml:id="L160-02-03-02" type="LexItem">kuu</seg> 
-                  <seg xml:id="L160-02-03-03" type="LexItem">uni</seg> 
-                  <seg xml:id="L160-02-03-04" type="LexItem">ntaa</seg> 
-                  <seg xml:id="L160-02-03-05" type="LexItem">ti</seg> 
-                  <seg xml:id="L160-02-03-06" type="LexItem">ntsinche'e</seg> 
-                  <seg xml:id="L160-02-03-07" type="LexItem">ra</seg>
+                  <w xml:id="d1e280">Cha</w>
+                  <w xml:id="d1e282">kuu</w><!-- cop? (why not "yee"?) -->
+                  <w xml:id="d1e284">uni</w>
+                  <w xml:id="d1e286">ntaa</w><!-- exactly? -->
+                  <w xml:id="d1e288">ti</w>
+                  <w xml:id="d1e290">ntsinche'e</w><!-- he saw/was seeing (ntsi-) imperfect?!-->
+                  <w xml:id="d1e292">ra</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-02-03" xml:lang="en">And he saw that there were (exactly?) three of them.</span>
+                  <span target="#L160-02-03" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-02-04" type="S">
-                  <seg xml:id="L160-02-04-01" type="LexItem">Sara</seg> 
-                  <seg xml:id="L160-02-04-02" type="LexItem">nika'an</seg> 
-                  <seg xml:id="L160-02-04-03" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-04-04" type="LexItem">ña</seg> 
-                  <seg xml:id="L160-02-04-05" type="LexItem">kumani</seg> 
-                  <seg xml:id="L160-02-04-06" type="LexItem">iin</seg> 
-                  <seg xml:id="L160-02-04-07" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-02-04-08" type="LexItem">ra</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-02-04-09" type="LexItem">sara</seg> 
-                  <seg xml:id="L160-02-04-10" type="LexItem">nikitsaa</seg> 
-                  <seg xml:id="L160-02-04-11" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-02-04-12" type="LexItem">tsaku</seg> 
-                  <seg xml:id="L160-02-04-13" type="LexItem">ra</seg>
+                  <w xml:id="d1e297">Sara</w>
+                  <w xml:id="d1e299" cert="medium">nika'an</w><!-- thought or said? (realized?) -->
+                  <w xml:id="d1e301">ra</w>
+                  <w xml:id="d1e303">ña</w><!-- that -->
+                  <w xml:id="d1e305">kumani</w><!-- missing -->
+                  <w xml:id="d1e307">iin</w>
+                  <w xml:id="d1e309">lurru</w>
+                  <w xml:id="d1e311">ra</w>
+                  <pc>,</pc>
+                  <w xml:id="d1e315">sara</w>
+                  <w xml:id="d1e317">nikitsaa</w><!-- started -->
+                  <w xml:id="d1e320">ra</w>
+                  <w xml:id="d1e322">tsaku</w><!-- crying -->
+                  <w xml:id="d1e324">ra</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-02-04" xml:lang="en">Then he thought that one donkey was missing, he then started to cry.</span>
+                  <span target="#L160-02-04" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-03">
@@ -258,41 +317,61 @@
             </head>
             <p>
                <seg xml:id="L160-03-01" type="S">
-                  <seg xml:id="L160-03-01-01" type="LexItem">Ta</seg> 
-                  <seg xml:id="L160-03-01-02" type="LexItem">ntatsaa</seg> 
-                  <seg xml:id="L160-03-01-03" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-03-01-04" type="LexItem">ve'e</seg> 
-                  <seg xml:id="L160-03-01-05" type="LexItem">ra</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-03-01-06" type="LexItem">cha</seg> 
-                  <seg xml:id="L160-03-01-07" type="LexItem">nikachi</seg> 
-                  <seg xml:id="L160-03-01-08" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-03-01-09" type="LexItem">nuu</seg> 
-                  <seg xml:id="L160-03-01-10" type="LexItem">ñasi'i</seg> 
-                  <seg xml:id="L160-03-01-11" type="LexItem">ra</seg>
+                  <w xml:id="d1e333">Ta</w><!-- when -->
+                  <w xml:id="d1e335">ntatsaa</w><!-- arrived (why "nta-") -->
+                  <w xml:id="d1e337">ra</w>
+                  <w xml:id="d1e339">ve'e</w>
+                  <w xml:id="d1e341">ra</w>
+                  <pc>,</pc>
+                  <w xml:id="d1e345">cha</w>
+                  <w xml:id="d1e347">nikachi</w><!--  said -->
+                  <w xml:id="d1e349">ra</w>
+                  <w xml:id="d1e351">nuu</w><!-- to  -->
+                  <w xml:id="d1e353">ñasi'i</w><!-- wife -->
+                  <w xml:id="d1e356">ra</w><!-- his 3sg.form -->
                   <pc>:</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-03-01" xml:lang="en">When he arrived home he said to his wife:</span>
+                  <span target="#L160-03-01" xml:lang="es">Quando llegó a casa, él dijó a su esposa:</span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-03-02" type="S">
                   <pc>—</pc>
-                  <seg xml:id="L160-03-02-01" type="LexItem">Ntakuaan</seg> 
-                  <seg xml:id="L160-03-02-02" type="LexItem">yu</seg> 
-                  <seg xml:id="L160-03-02-03" type="LexItem">kumi</seg> 
-                  <seg xml:id="L160-03-02-04" type="LexItem">lurru</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-03-02-05" type="LexItem">cha</seg> 
-                  <seg xml:id="L160-03-02-06" type="LexItem">vichi</seg> 
-                  <seg xml:id="L160-03-02-07" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-03-02-08" type="LexItem">vaa</seg> 
-                  <seg xml:id="L160-03-02-09" type="LexItem">uni</seg> 
-                  <seg xml:id="L160-03-02-10" type="LexItem">ti</seg> 
-                  <seg xml:id="L160-03-02-11" type="LexItem">kuu</seg> 
-                  <seg xml:id="L160-03-02-12" type="LexItem">vari</seg> 
-                  <seg xml:id="L160-03-02-13" type="LexItem">skuina</seg> 
-                  <seg xml:id="L160-03-02-14" type="LexItem">na</seg> 
-                  <seg xml:id="L160-03-02-15" type="LexItem">iin</seg> 
-                  <seg xml:id="L160-03-02-16" type="LexItem">ti</seg>
+                  <w xml:id="d1e363">Ntakuaan</w><!-- I bought (form=present) -->
+                  <w xml:id="d1e365">yu</w><!-- 1sg -->
+                  <w xml:id="d1e367">kumi</w><!-- four -->
+                  <w xml:id="d1e369">lurru</w>
+                  <pc>,</pc>
+                  <w xml:id="d1e373">cha</w>
+                  <w xml:id="d1e375">vichi</w>
+                  <w xml:id="d1e377">ra</w>
+                  <w xml:id="d1e379">vaa</w><!-- only -->
+                  <w xml:id="d1e381">uni</w>
+                  <w xml:id="d1e384">ti</w>
+                  <w xml:id="d1e386">kuu</w>
+                  <w xml:id="d1e388">vari</w><!-- because -->
+                  <w xml:id="d1e390">skuina</w><!-- stole (form = present) -->
+                  <w xml:id="d1e392">na</w>
+                  <w xml:id="d1e394">iin</w>
+                  <w xml:id="d1e396">ti</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-03-02" xml:lang="en">I bought four donkeys and now there are only three of them because they stole one.</span>
+                  <span target="#L160-03-02" xml:lang="es">Yo compré cuatro burros y ahora hay solamente tres porqué me robaron uno de ellos.</span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-04">
@@ -301,50 +380,78 @@
             </head>
             <p>
                <seg xml:id="L160-04-01" type="S">
-                  <seg xml:id="L160-04-01-01" type="LexItem">Cha</seg> 
-                  <seg xml:id="L160-04-01-02" type="LexItem">ntsakui</seg> 
-                  <seg xml:id="L160-04-01-03" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-04-01-04" type="LexItem">vari</seg> 
-                  <seg xml:id="L160-04-01-05" type="LexItem">ntsinia</seg> 
-                  <seg xml:id="L160-04-01-06" type="LexItem">ña</seg> 
-                  <seg xml:id="L160-04-01-07" type="LexItem">inkaa</seg> 
-                  <seg xml:id="L160-04-01-08" type="LexItem">kumi</seg> 
-                  <seg xml:id="L160-04-01-09" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-04-01-10" type="LexItem">ka</seg> 
-                  <seg xml:id="L160-04-01-11" type="LexItem">kuu</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-04-01-12" type="LexItem">sara</seg> 
-                  <seg xml:id="L160-04-01-13" type="LexItem">nikachia</seg>
+                  <w xml:id="d1e405">Cha</w>
+                  <w xml:id="d1e407">ntsakui</w><!-- ? -->
+                  <w xml:id="d1e409">ra</w>
+                  <w xml:id="d1e411">vari</w>
+                  <w xml:id="d1e413">ntsinia</w><!--  -->
+                  <w xml:id="d1e415">ña</w>
+                  <w xml:id="d1e417">inkaa</w>
+                  <w xml:id="d1e419">kumi</w>
+                  <w xml:id="d1e421">lurru</w>
+                  <w xml:id="d1e423">ka</w>
+                  <w xml:id="d1e425">kuu</w>
+                  <pc>,</pc>
+                  <w xml:id="d1e430">sara</w>
+                  <w xml:id="d1e432">nikachia</w>
                   <pc>:</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-04-01" xml:lang="en"></span>
+                  <span target="#L160-04-01" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-04-02" type="S">
                   <pc>—</pc>
                   <pc>¡</pc>
-                  <seg xml:id="L160-04-02-01" type="LexItem">Vaii</seg>
+                  <w xml:id="d1e441" cert="unknown">Vaii</w>
                   <pc>!</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-04-02" xml:lang="en"></span>
+                  <span target="#L160-04-02" xml:lang="es"></span>
+                  
+               </spanGrp>
                <seg xml:id="L160-04-03" type="S">
-                  <seg xml:id="L160-04-03-01" type="LexItem">Mee</seg> 
-                  <seg xml:id="L160-04-03-02" type="LexItem">ra</seg> 
-                  <seg xml:id="L160-04-03-03" type="LexItem">nche'e</seg> 
-                  <seg xml:id="L160-04-03-04" type="LexItem">u'un</seg> 
-                  <seg xml:id="L160-04-03-05" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-04-03-06" type="LexItem">vari</seg> 
-                  <seg xml:id="L160-04-03-07" type="LexItem">iin</seg> 
-                  <seg xml:id="L160-04-03-08" type="LexItem">ti</seg> 
-                  <seg xml:id="L160-04-03-09" type="LexItem">yosu</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-04-03-10" type="LexItem">cha</seg> 
-                  <seg xml:id="L160-04-03-11" type="LexItem">uni</seg> 
-                  <seg xml:id="L160-04-03-12" type="LexItem">ti</seg> 
-                  <seg xml:id="L160-04-03-13" type="LexItem">tatsu</seg> 
-                  <seg xml:id="L160-04-03-14" type="LexItem">cha</seg> 
-                  <seg xml:id="L160-04-03-15" type="LexItem">meu</seg> 
-                  <seg xml:id="L160-04-03-16" type="LexItem">kuu</seg> 
-                  <seg xml:id="L160-04-03-17" type="LexItem">u'un</seg> 
-                  <seg xml:id="L160-04-03-18" type="LexItem">ti</seg>
+                  <w xml:id="d1e446">Mee</w>
+                  <w xml:id="d1e448">ra</w>
+                  <w xml:id="d1e450" cert="medium">nche'e</w><!-- I see? -->
+                  <w xml:id="d1e452">u'un</w>
+                  <w xml:id="d1e454">lurru</w>
+                  <w xml:id="d1e456">vari</w><!-- because -->
+                  <w xml:id="d1e458">iin</w>
+                  <w xml:id="d1e460">ti</w>
+                  <w xml:id="d1e462" cert="unknown">yosu</w><!--  -->
+                  <pc>,</pc>
+                  <w xml:id="d1e466">cha</w>
+                  <w xml:id="d1e469">uni</w><!-- 3 -->
+                  <w xml:id="d1e471">ti</w>
+                  <w xml:id="d1e473" cert="unknown">tatsu</w><!--  -->
+                  <w xml:id="d1e475">cha</w>
+                  <w xml:id="d1e477">meu</w><!-- you  -->
+                  <w xml:id="d1e479">kuu</w><!-- are -->
+                  <w xml:id="d1e481">u'un</w><!-- five -->
+                  <w xml:id="d1e483">ti</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-04-03" xml:lang="en"></span>
+                  <span target="#L160-04-03" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-05">
@@ -353,56 +460,77 @@
             </head>
             <p>
                <seg xml:id="L160-05-01" type="S">
-                  <seg xml:id="L160-05-01-01" type="LexItem">Ntaa</seg> 
-                  <seg xml:id="L160-05-01-02" type="LexItem">xeen</seg> 
-                  <seg xml:id="L160-05-01-03" type="LexItem">ka'an</seg> 
-                  <seg xml:id="L160-05-01-04" type="LexItem">kue</seg> 
-                  <seg xml:id="L160-05-01-05" type="LexItem">nivi</seg>
+                  <w xml:id="d1e492">Ntaa</w>
+                  <w xml:id="d1e494">xeen</w>
+                  <w xml:id="d1e496">ka'an</w>
+                  <w xml:id="d1e498">kue</w>
+                  <w xml:id="d1e500">nivi</w>
                   <pc>:</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-05-01" xml:lang="en"></span>
+                  <span target="#L160-05-01" xml:lang="es"></span>
+                  
+                  <span target="#d1e492 #d1e494" xml:lang="en"></span>
+                  <span target="#d1e492 #d1e494" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-05-02" type="S">
                   <pc>—</pc>
-                  <seg xml:id="L160-05-02-01" type="LexItem">Kuena</seg> 
-                  <seg xml:id="L160-05-02-02" type="LexItem">chacha</seg> 
-                  <seg xml:id="L160-05-02-03" type="LexItem">su'a</seg> 
-                  <seg xml:id="L160-05-02-04" type="LexItem">nto'i</seg>
-                  <pc>,</pc> 
-                  <seg xml:id="L160-05-02-05" type="LexItem">tono</seg> 
-                  <seg xml:id="L160-05-02-06" type="LexItem">kaa</seg> 
-                  <seg xml:id="L160-05-02-07" type="LexItem">kiti</seg> 
-                  <seg xml:id="L160-05-02-08" type="LexItem">ka</seg> 
-                  <seg xml:id="L160-05-02-09" type="LexItem">ña</seg> 
-                  <seg xml:id="L160-05-02-10" type="LexItem">koo</seg> 
-                  <seg xml:id="L160-05-02-11" type="LexItem">xini</seg> 
-                  <seg xml:id="L160-05-02-12" type="LexItem">ti</seg> 
-                  <seg xml:id="L160-05-02-13" type="LexItem">saan</seg> 
-                  <seg xml:id="L160-05-02-14" type="LexItem">kai</seg>
+                  <w xml:id="d1e507">Kuena</w>
+                  <w xml:id="d1e509" cert="low">chacha</w><!-- ? -->
+                  <w xml:id="d1e511">su'a</w><!-- like so/así -->
+                  <w xml:id="d1e513" cert="medium">nto'i</w><!-- happened to him? (-i) -->
+                  <pc>,</pc>
+                  <w xml:id="d1e517">tono</w>
+                  <w xml:id="d1e519">kaa</w>
+                  <w xml:id="d1e521">kiti</w>
+                  <w xml:id="d1e523">ka</w>
+                  <w xml:id="d1e525">ña</w>
+                  <w xml:id="d1e528">koo</w>
+                  <w xml:id="d1e530">xini</w>
+                  <w xml:id="d1e532">ti</w>
+                  <w xml:id="d1e534">saan</w>
+                  <w xml:id="d1e536">kai</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-05-02" xml:lang="en"></span>
+                  <span target="#L160-05-02" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-06" decls="#pedagogical-inter">
             <head>
                <seg xml:id="L160-06-00">
-                  <seg xml:id="L160-06-00-01" type="LexItem">Na</seg> 
-                  <seg xml:id="L160-06-00-02" type="LexItem">ntaka'vi</seg> 
-                  <seg xml:id="L160-06-00-03" type="LexItem">ko</seg>
+                  <w xml:id="d1e543">Na</w>
+                  <w xml:id="d1e545">ntaka'vi</w><!-- count -->
+                  <w xml:id="d1e547">ko</w>
                </seg>
             </head>
             <p>
                <seg xml:id="L160-06-01" function="equation" style="verbal" type="S">
                   <pc>¿</pc>
-                  <seg xml:id="L160-06-01-01" type="LexItem">Nisa</seg> 
-                  <seg xml:id="L160-06-01-02" type="LexItem">yoo</seg> 
-                  <seg xml:id="L160-06-01-03" type="LexItem">nchiso</seg> 
-                  <seg xml:id="L160-06-01-04" type="LexItem">lurru</seg>
+                  <w xml:id="d1e553">Nisa</w><!-- how many  -->
+                  <w xml:id="d1e555" cert="medium">yoo</w><!-- sacks? -->
+                  <w xml:id="d1e557">nchiso</w><!-- carrying (on his back) -->
+                  <w xml:id="d1e559">lurru</w>
                   <pc>?</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-06-01" xml:lang="en">How many sacks is the donkey carrying?</span>
+                  <span target="#L160-06-01" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
                <seg xml:id="L160-06-02" type="S">
-                  <seg xml:id="L160-06-02-01" type="LexItem">Nchiso</seg> 
-                  <seg xml:id="L160-06-02-02" type="LexItem">ti</seg> 
-                  <seg xml:id="L160-06-02-00" type="LexItem">_____________</seg> 
-                  <seg xml:id="L160-06-02-03" type="LexItem">yoo</seg>
+                  <w xml:id="d1e564">Nchiso</w>
+                  <w xml:id="d1e566">ti</w>
+                  <w xml:id="d1e568">_____________</w>
+                  <w xml:id="d1e570">yoo</w>
                   <pc>.</pc>
                </seg>
             </p>
@@ -412,19 +540,19 @@
             <p>
                <seg xml:id="L160-06-03" type="S">
                   <pc>¿</pc>
-                  <seg xml:id="L160-06-03-01" type="LexItem">Nisa</seg> 
-                  <seg xml:id="L160-06-03-02" type="LexItem">yoo</seg> 
-                  <seg xml:id="L160-06-03-03" type="LexItem">kantu'u</seg> 
-                  <seg xml:id="L160-06-03-04" type="LexItem">nuu</seg> 
-                  <seg xml:id="L160-06-03-05" type="LexItem">ñu'u</seg>
+                  <w xml:id="d1e580">Nisa</w>
+                  <w xml:id="d1e582" cert="medium">yoo</w>
+                  <w xml:id="d1e584">kantu'u</w>
+                  <w xml:id="d1e586">nuu</w>
+                  <w xml:id="d1e588">ñu'u</w>
                   <pc>?</pc>
                </seg>
                <seg xml:id="L160-06-04" type="S">
-                  <seg xml:id="L160-06-04-01" type="LexItem">Kantu'u</seg> 
-                  <seg xml:id="L160-06-04-00" type="LexItem"> ______</seg> 
-                  <seg xml:id="L160-06-04-03" type="LexItem">yoo</seg> 
-                  <seg xml:id="L160-06-04-04" type="LexItem">nuu</seg> 
-                  <seg xml:id="L160-06-04-05" type="LexItem">ñu'u</seg>
+                  <w xml:id="d1e593">Kantu'u</w>
+                  <w xml:id="d1e595"> ______</w>
+                  <w xml:id="d1e597">yoo</w>
+                  <w xml:id="d1e599">nuu</w>
+                  <w xml:id="d1e601">ñu'u</w>
                   <pc>.</pc>
                </seg>
             </p>
@@ -435,17 +563,17 @@
             </head>
             <p>
                <seg xml:id="L160-07-01" function="equation" style="verbal" type="S">
-                  <seg xml:id="L160-07-01-01" type="LexItem">Uvi</seg> 
-                  <seg xml:id="L160-07-01-02" type="LexItem">tsi</seg> 
-                  <seg xml:id="L160-07-01-03" type="LexItem">iñu</seg>
-                  <pc>,</pc> 
+                  <w xml:id="d1e611">Uvi</w>
+                  <w xml:id="d1e613">tsi</w>
+                  <w xml:id="d1e615">iñu</w>
+                  <pc>,</pc>
                   <pc>¿</pc>
-                  <seg xml:id="L160-07-01-04" type="LexItem">nisa</seg> 
-                  <seg xml:id="L160-07-01-05" type="LexItem">kui</seg>
+                  <w xml:id="d1e621">nisa</w>
+                  <w xml:id="d1e623">kui</w>
                   <pc>?</pc>
                </seg>
                <seg xml:id="L160-07-02" type="S">
-                  <seg xml:id="L160-07-02-01" type="LexItem">Kui</seg> 
+                  <w xml:id="d1e628">Kui</w>
                   <seg xml:id="L160-07-02-00" type="blank"> ____________</seg>
                   <pc>.</pc>
                </seg>
@@ -455,31 +583,31 @@
                     type="S">
                   <num value="2" corresp="#L160-07-01-01">2</num>
                   <c>+</c>
-                  <num value="6" corresp="#L160-07-01-03">6</num> 
-                  <c>=</c> 
+                  <num value="6" corresp="#L160-07-01-03">6</num>
+                  <c>=</c>
                   <seg xml:id="L160-07-03-00" type="blank"> ____________</seg>
-               </seg>                         
-            </p>                 
+               </seg>
+            </p>
          </div>
          <div xml:id="L160-08" decls="#pedagogical-inter">
             <head>
                <seg xml:id="L160-08-00">
-                  <seg xml:id="L160-08-00-01" type="LexItem">Na</seg> 
-                  <seg xml:id="L160-08-00-02" type="LexItem">ntaka'vi</seg> 
-                  <seg xml:id="L160-08-00-03" type="LexItem">ko</seg>
+                  <w xml:id="d1e648">Na</w>
+                  <w xml:id="d1e650">ntaka'vi</w>
+                  <w xml:id="d1e652">ko</w>
                </seg>
             </head>
             <p>
                <seg xml:id="L160-08-01" function="equation" style="verbal" type="S">
-                  <seg xml:id="L160-08-01-0" type="LexItem">Uni</seg> 
-                  <seg xml:id="L160-08-01-02" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-08-01-03" type="LexItem">tsi</seg> 
-                  <seg xml:id="L160-08-01-04" type="LexItem">u'un</seg> 
-                  <seg xml:id="L160-08-01-05" type="LexItem">lurru</seg>
-                  <pc>,</pc> 
+                  <w xml:id="d1e656">Uni</w>
+                  <w xml:id="d1e658">lurru</w>
+                  <w xml:id="d1e660">tsi</w>
+                  <w xml:id="d1e662">u'un</w>
+                  <w xml:id="d1e664">lurru</w>
+                  <pc>,</pc>
                   <pc>¿</pc>
-                  <seg xml:id="L160-08-01-06" type="LexItem">nisa</seg> 
-                  <seg xml:id="L160-08-01-07" type="LexItem">kui</seg>
+                  <w xml:id="d1e670">nisa</w>
+                  <w xml:id="d1e672">kui</w>
                   <pc>?</pc>
                </seg>
             </p>
@@ -488,12 +616,11 @@
             </p>
             <p>
                <seg xml:id="L160-08-02" type="S">
-                  <seg xml:id="L160-08-02-01" type="LexItem">Kui</seg> 
+                  <w xml:id="d1e680">Kui</w>
                   <seg xml:id="L160-08-02-00" type="blank"> ____________</seg>
                   <pc>.</pc>
                </seg>
             </p>
-            
          </div>
          <div xml:id="L160-09" decls="#pedagogical-inter">
             <head>
@@ -504,19 +631,19 @@
             </head>
             <p>
                <seg xml:id="L160-09-01" function="equation" style="verbal" type="S">
-                  <seg xml:id="L160-09-01-01" type="LexItem">Iin</seg> 
-                  <seg xml:id="L160-09-01-02" type="LexItem">lurru</seg> 
-                  <seg xml:id="L160-09-01-03" type="LexItem">tsi</seg> 
-                  <seg xml:id="L160-09-01-04" type="LexItem">u'un</seg> 
-                  <seg xml:id="L160-09-01-05" type="LexItem">lurru</seg>
-                  <pc>,</pc>  
+                  <w xml:id="d1e694">Iin</w>
+                  <w xml:id="d1e696">lurru</w>
+                  <w xml:id="d1e698">tsi</w>
+                  <w xml:id="d1e700">u'un</w>
+                  <w xml:id="d1e702">lurru</w>
+                  <pc>,</pc>
                   <pc>¿</pc>
-                  <seg xml:id="L160-09-01-06" type="LexItem">nisa</seg> 
-                  <seg xml:id="L160-09-01-07" type="LexItem">kui</seg>
+                  <w xml:id="d1e708">nisa</w>
+                  <w xml:id="d1e710">kui</w>
                   <pc>?</pc>
                </seg>
                <seg xml:id="L160-09-02" type="S">
-                  <seg xml:id="L160-09-02-01" type="LexItem">Kui</seg> 
+                  <w xml:id="d1e715">Kui</w>
                   <seg xml:id="L160-09-02-00" type="blank"> ____________</seg>
                   <pc>.</pc>
                </seg>
@@ -526,10 +653,10 @@
                     type="S">
                   <num value="1" corresp="#L160-09-01-01">1</num>
                   <c>+</c>
-                  <num value="5" corresp="#L160-09-01-04">5</num> 
+                  <num value="5" corresp="#L160-09-01-04">5</num>
                   <c>=</c>
                   <seg xml:id="L160-09-03-00" type="blank"> ____________</seg>
-               </seg> 
+               </seg>
             </p>
          </div>
       </body>

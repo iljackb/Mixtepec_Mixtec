@@ -49,14 +49,21 @@
             </spanGrp>
             
             <spanGrp type="gram">
-               <span type="pos" target="#d1e37 #d1e41" ana=""/>
-               
-               <!-- usg: Q (interrogative) -->
-               <!-- usg: PRED -->
+               <span type="pos" target="#d1e37 #d1e41" cert="low" ana="#WH #INAN"/>
+               <!-- usg: interrogative; 
+                  can be focus on predicate (e.g. "what happened" nchi ni kuu?)
+                  or focus on undergoer(?) (e.g. "what is that"?)
+               -->
             </spanGrp>
             
-            <spanGrp type="">
-               <span target=""></span>
+            <spanGrp type="semantics">
+               <span type="profile" target="#d1e37 #d1e41" ana="#INAN"/>
+               <!-- should i use another tag besides "domain"? -->        
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e37 #d1e41" xml:lang="en" corresp="https://en.wiktionary.org/wiki/what">what</span>
+               <span target="#d1e37 #d1e41" xml:lang="es" corresp="https://es.wiktionary.org/wiki/qué">qué</span>
             </spanGrp>
          </annotationBlock>
       </body>

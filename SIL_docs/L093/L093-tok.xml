@@ -163,6 +163,7 @@
          <change when-iso="2014-10-02">replaced element 'c' to 'pc' to more accurately represent the differences between 'punctuation character' and 'character'; each 'pc' value in the LR shall be specified in the TEI documentation</change>
          <change when-iso="2014-10-07">To make up for the lack of image display capacity on the TAPAS Project website, the time which is originaly displayed in the image on the analogue clock was added in digital form within the 'time' element, embedded within 'label'. </change>
          <change when-iso="2014-10-14">segmentation changed to encapulate compound number lexical items within a commmon segment</change>
+         <change when-iso="2017-09-01">All occurences of "<oRef>ka</oRef>" (stative copula) changed to "kaa" to reflect the updated orthography and distinguish from the topic marker.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:lang="mix" decls="#pedagogical">
@@ -180,13 +181,12 @@
                   <pc>¿</pc>
                   <w xml:id="d1e163">Nchii</w>
                   <w xml:id="d1e165">hora</w>
-                  <w xml:id="d1e167">ku<c xml:id="d1e169">i</c>
-                  </w>
+                  <w xml:id="d1e167">kui</w>
                   <pc>?</pc>
                </s>
                <lb/>
-               <s xml:id="d1e174" type="declarative"><!-- #RESP #Q #WH #TEMP -->
-                  <w xml:id="d1e175">Kaa</w>
+               <s xml:id="d1e174" type="declarative"><!-- "discourse": #RESP #Q #WH #TEMP -->
+                  <w xml:id="d1e175">Kaa</w><!-- #COP #REAL : form changed from "ka" -->
                   <w xml:id="d1e177">iñu</w>
                   <w xml:id="d1e179">ntaa</w>
                   <pc>.</pc>
@@ -194,22 +194,52 @@
             </p>
             <annotationBlock><!-- for question -->
                <spanGrp type="gram">
-                  <span type="" target="" ana=""/><!-- sentence:  #Q #WH #TEMP -->
-                  <span type="" target="" ana=""/><!-- Nchii:  #PTCL #WH #TEMP -->
-                  <span type="" target="" ana=""/><!-- hora:  #N #TEMP -->
-                  <span type="" target="" ana=""/><!-- ku-:  #COP #INCMPL -->
-                  <span type="" target="" ana=""/><!-- -i:  # -->
+                  <span type="sentence" target="#d1e160" ana="#Q #WH #TEMP"/>
+                  <span type="phrase" target="#d1e163 #d1e165" ana="#ADVP #WH #TEMP"/>
+                  <span type="pos" target="#d1e167" ana="#COP #INCMPL"/><!-- ku-:  #COP #INCMPL -->
+                  <span type="aspect" target="#d1e167" ana="#INCMPL"/><!-- ku-:  #INCMPL -->
+                  <span type="person" target="#d1e169" ana="#3PERS"/><!-- -i:  # -->
+                  <span type="number" target="#d1e169" ana="#SG"/><!-- -i:  # -->
+               </spanGrp>
+               
+               <spanGrp type="semantics">
+                  <span type="domain" target="#d1e160" corresp="http://dbpedia.org/resource/Horology"/>
+               </spanGrp>
+               
+               <spanGrp type="translation">
+                  <span target="#d1e160" xml:lang="en">What time is it?</span>
+                  <span target="#d1e160" xml:lang="es">¿Qué hora son?</span>
                </spanGrp>
                
                <spanGrp type="igt">
-                  <span target="">wh</span>
-                  <span target="">time</span>
-                  <span target="">cop-incmpl;3s</span>
+                  <span target="#d1e163">wh</span>
+                  <span target="#d1e165">time</span>
+                  <span target="#d1e167">cop-incmpl;<span target="#d1e169">3s</span></span>
                </spanGrp>
             </annotationBlock>
             
             <annotationBlock><!-- for answer -->
+               <spanGrp type="gram">
+                  <span type="sentence" target="#d1e174" ana="#RESP #Q #WH #TEMP"/><!-- sentence: #RESP #Q #WH #TEMP -->
+                  <span type="pos" target="#d1e175" ana="#COP #REAL"/><!-- #COP #REAL -->
+                  <!-- ASPECT AND TENSE WHEN USING "REALIS COPULA"!?  -->
+                  <span type="phrase" target="#d1e177 #d1e179" ana="#ADVP #TEMP"/><!-- #ADVP #TEMP -->
+               </spanGrp>
                
+               <spanGrp type="semantics">
+                  <span type="domain" target="#d1e174" corresp="http://dbpedia.org/resource/Horology"/>
+               </spanGrp>
+               
+               <spanGrp type="translation">
+                  <span target="#d1e174" xml:lang="en">It's six o'clock</span>
+                  <span target="#d1e174" xml:lang="es">Son las seis</span>
+               </spanGrp>
+               
+               <spanGrp type="igt">
+                  <span target="#d1e175">cop-real</span>
+                  <span target="#d1e177">six</span>
+                  <span target="#d1e179">o'clock</span>
+               </spanGrp>
             </annotationBlock>
          </div>
          <div xml:id="L093-02">
@@ -256,13 +286,13 @@
                   <pc>?</pc>
                </s>
                <lb/>
-               <s xml:id="d1e236">
-                  <w xml:id="d1e237">Tsa'un</w>
+               <s xml:id="d1e236"><!-- a quarter to six (kaa ra kuu ka=minus?) -->
+                  <w xml:id="d1e237">Tsa'un</w><!-- 15 -->
                   <w xml:id="d1e239">kaa</w>
                   <w xml:id="d1e241">ra</w>
                   <w xml:id="d1e243">kuu</w>
                   <w xml:id="d1e245">ka</w>
-                  <w xml:id="d1e247">iñu</w>
+                  <w xml:id="d1e247">iñu</w><!-- 6 -->
                   <pc>.</pc>
                </s>
             </p>
@@ -288,7 +318,7 @@
                <s xml:id="d1e273">
                   <w xml:id="d1e274">Kaa</w>
                   <w xml:id="d1e276">kumi</w>
-                  <w xml:id="d1e278">sava</w>
+                  <w xml:id="d1e278">sava</w><!-- half (= "four and a half") -->
                   <pc>.</pc>
                </s>
             </p>
@@ -313,8 +343,8 @@
                <lb/>
                <s xml:id="d1e304">
                   <w xml:id="d1e305">Kaa</w>
-                  <w xml:id="d1e307">iin</w>
-                  <w xml:id="d1e309">tsa'un</w>
+                  <w xml:id="d1e307">iin</w><!-- nine -->
+                  <w xml:id="d1e309">tsa'un</w><!-- fifteen -->
                   <pc>.</pc>
                </s>
             </p>
@@ -337,7 +367,7 @@
                   <pc>?</pc>
                </s>
                <lb/>
-               <s xml:id="d1e335">
+               <s xml:id="d1e335"><!-- twenty five to five -->
                   <w xml:id="d1e336">Oko</w>
                   <w xml:id="d1e338">u'un</w>
                   <w xml:id="d1e340">kaa</w>
@@ -369,9 +399,9 @@
                <lb/>
                <s xml:id="d1e374">
                   <w xml:id="d1e375">Kaa</w>
-                  <w xml:id="d1e377">utsi</w>
-                  <w xml:id="d1e379">in</w>
-                  <w xml:id="d1e381">sava</w>
+                  <w xml:id="d1e377">utsi</w><!-- ten -->
+                  <w xml:id="d1e379">in</w><!-- one (ten+one=11) -->
+                  <w xml:id="d1e381">sava</w><!-- half-->
                   <pc>.</pc>
                </s>
             </p>
@@ -396,8 +426,8 @@
                <lb/>
                <s xml:id="d1e407">
                   <w xml:id="d1e408">Kaa</w>
-                  <w xml:id="d1e410">in</w>
-                  <w xml:id="d1e412">utsi</w>
+                  <w xml:id="d1e410">in</w><!-- one -->
+                  <w xml:id="d1e412">utsi</w><!-- ten -->
                   <pc>.</pc>
                </s>
             </p>
@@ -421,8 +451,8 @@
                </s>
                <lb/>
                <s xml:id="d1e438">
-                  <w xml:id="d1e439">Kotsuu</w>
-                  <w xml:id="d1e441">Ñuu</w>
+                  <w xml:id="d1e439">Kotsuu</w><!-- ? -->
+                  <w xml:id="d1e441">Ñuu</w><!-- ? -->
                </s>
             </p>
          </div>

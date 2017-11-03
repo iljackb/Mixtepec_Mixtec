@@ -36,11 +36,11 @@
          </timeline>
          <annotationBlock>
             <u n="1" start="0" end="0.78">
-               <seg xml:id="d1e40" function="utterance" notation="orth" type="phrase">
+               <seg xml:id="d1e40" function="utterance" notation="orth" type="MWE">
                   <w xml:id="d1e41" synch="#T2">nchi</w>
                   <w xml:id="d1e43" synch="#T6">kii</w>
                </seg>
-               <seg xml:id="d1e45" function="utterance" notation="ipa" type="phrase">
+               <seg xml:id="d1e45" function="utterance" notation="ipa" type="MWE">
                   <w xml:id="d1e47" synch="#T2">
                      <c>n</c>
                      <c>ʤ</c>
@@ -58,9 +58,18 @@
                <span from="#T1" to="#T10">WH-TEMP.when</span>
             </spanGrp>
             
-            <spanGrp type="">
-               <span type="" target="" ana="#ADVP #TEMP"/>
+            <spanGrp type="gram">
+               <span type="phrase" target="#d1e40 #d1e47" ana="#ADVP #TEMP"/>
                <span type="" target="" ana=""/>
+            </spanGrp>
+            
+            <spanGrp type="semantics">
+               <span type="domain" target="#d1e40 #d1e47" ana="#TIME" corresp=""/>
+            </spanGrp>
+            
+            <spanGrp type="translation">
+               <span target="#d1e40 #d1e47" xml:lang="en" corresp=""></span>
+               <span target="#d1e40 #d1e47" xml:lang="es" corresp=""></span>
             </spanGrp>
          </annotationBlock>
       </body>

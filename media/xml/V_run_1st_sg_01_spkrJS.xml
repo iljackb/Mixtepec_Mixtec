@@ -33,22 +33,38 @@
          </timeline>
          <annotationBlock>
             <u xml:id="d1e36" n="1" start="0" end="0.97">
-               <seg xml:id="d1e37" function="utterance" notation="orth">
-                  <w xml:id="d1e38" synch="#T1">sketa yu</w>
+               <seg xml:id="d1e37" function="utterance" notation="orth" type="phrase">
+                  <w xml:id="d1e38" synch="#T1">sket<m xml:id="d1e39">a̠</m></w>
                </seg>
-               <seg xml:id="d1e40" function="utterance" notation="ipa">
+               <seg xml:id="d1e40" function="utterance" notation="ipa" type="phrase">
                   <w xml:id="d1e41" synch="#T1">
                      <c>sk</c>
                      <c>ɛ</c>
                      <c function="tone">M</c>
                      <c>t</c>
-                     <c>a</c>
-                     <c function="tone">F</c>
+                     <c xml:id="d1e42">a</c>
+                     <c xml:id="d1e43" function="tone" synch="#d1e42">F</c>
                   </w>
                </seg>
             </u>
-            <spanGrp>
+            <spanGrp type="praatGloss">
                <span from="#T1" to="#T7">V-MTN.run\1S</span>
+            </spanGrp>
+            <spanGrp type="gram">
+               <span type="phrase" target="#d1e37 #d1e40" ana="#VP"/>
+               <span type="pos" target="#d1e38 #d1e41" ana="#V"/>
+               <span type="aspect" target="#d1e38 #d1e41" ana="#INCMPL"/>
+               <span type="morph" target="#d1e39 #d1e43" ana="#TONE"/>
+               <span type="person" target="#d1e39 #d1e43" ana="#1PERS"/>
+               <span type="number" target="#d1e39 #d1e43" ana="#SG"/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="domain" target="#d1e38 #d1e41" ana="#MTN"/>
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e37 #d1e40" xml:lang="en">I'm running</span>
+               <span target="#d1e37 #d1e40" xml:lang="es">corro</span>
+               <span target="#d1e37 #d1e40" xml:lang="es">estoy corriendo</span>
             </spanGrp>
          </annotationBlock>
       </body>
