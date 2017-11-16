@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtec data collected from JS and TTS on <date>2017.05.28</date></title>
+            <respStmt>
+               <name>Jack T. Bowers</name>
+               <resp>Transcription</resp>
+               <resp>Data Modeling</resp>
+               <resp>Speaker Consultation</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>source of data is Jerry and (Traveso) Salazar, utterances were transcribed orthographically from speech by speakers on <date>2017.05.28</date>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body><!-- 
+         (TTS)
+iií	dolor
+iiín	sal
+ííín	9	(incorrect tone)
+iiin	cuero
+
+
+nchicaaá	pecho
+nchicaaá	platano
+
+
+Na’a ni katsi staa	“let’s eat”	(lit: “let’s go eat tortillas”)
+
+Kua’an kueni	vayan (go 2pl.form)
+         -->
+         <annotationBlock>
+            <u who="#JS">
+               <seg xml:id="d1e24" function="utterance" notation="orth" cert="low">
+                  <w xml:id="d1e25">nchikaa</w>
+               </seg>
+            </u>
+            <spanGrp type="gram">
+               <span type="pos" target="#d1e25" ana="#N"/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="sense" target="#d1e25" corresp="http://dbpedia.org/resource/Plantain"/>
+               <!-- is_a:fruit -->
+               <span type="domain" target="#d1e25" corresp="http://dbpedia.org/resource/Fruit"/>
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e25" xml:lang="en" corresp="https://en.wiktionary.org/wiki/plantain">plantain</span>
+               <span target="#d1e25" xml:lang="es" corresp="https://es.wiktionary.org/wiki/plátano">plátano</span>
+            </spanGrp>
+         </annotationBlock>
+         <annotationBlock>
+            <u who="#JS">
+               <seg xml:id="d1e36" function="utterance" notation="orth" type="imperative" cert="medium">
+                  <w xml:id="d1e37">na'a</w>
+                  <w xml:id="d1e39">katsi'<m xml:id="d1e44">ni</m></w>
+                  <w xml:id="d1e43">staa</w>
+               </seg>
+            </u>
+            <spanGrp type="gram">
+               <span type="" target="" ana=""/>
+               <span type="" target="" ana=""/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="" target="" ana=""/>
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e36" xml:lang="en">Let's go eat</span>
+               <span target="#d1e36" xml:lang="en">Let's eat</span>
+               <span target="#d1e36" xml:lang="es">Vamos comer</span>
+            </spanGrp>
+         </annotationBlock>
+         <annotationBlock>
+            <u who="#JS">
+               <seg xml:id="d1e66" function="utterance" notation="orth" type="imperative">
+                  <w xml:id="d1e67">na'a</w>
+                  <w xml:id="d1e69">kats<m xml:id="d1e64">u</m></w>
+                  <w xml:id="d1e63">staa</w>
+               </seg>
+            </u>
+            <spanGrp type="gram">
+               <span type="" target="" ana=""/>
+               <span type="" target="" ana=""/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="" target="" ana=""/>
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e66" xml:lang="en">Let's go eat</span>
+               <span target="#d1e66" xml:lang="en">Let's eat</span>
+               <span target="#d1e66" xml:lang="es">Vamos comer</span>
+            </spanGrp>
+         </annotationBlock>
+         <annotationBlock>
+            <u who="#JS">
+               <seg xml:id="d1e54" function="utterance" notation="orth" type="phrase">
+                  <w xml:id="d1e55">kua'an</w>
+                  <w xml:id="d1e57">kueni</w>
+               </seg>
+            </u>
+            <spanGrp type="gram">
+               <span type="phrase" target="#d1e54" ana="#VP #MTN"/>
+               <span type="pos" target="#d1e55" ana="#V #MTN" cert="medium"/><!-- focus, type? -->
+               <span type="aspect" target="#d1e55" ana="#INCMPL"/>
+               <span type="pos" target="#d1e57" ana="#PTCL #HON"/>
+               <span type="person" target="#d1e57" ana="#2PERS"/>
+               <span type="number" target="#d1e57" ana="#PL"/>
+               <span type="register" target="#d1e57" ana="#FORM"/>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="" target="" ana=""/>
+            </spanGrp>
+            <spanGrp type="translation">
+               <span target="#d1e54" xml:lang="en">you are going</span>
+               <span target="#d1e54" xml:lang="es" cert="medium">Ustedes vayan</span>
+               <span target="#d1e54" xml:lang="es" cert="medium">Ustedes están indo</span>
+            </spanGrp>
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>
