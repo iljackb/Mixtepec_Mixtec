@@ -8,10 +8,6 @@ NEEDED:
 - Need to extract speaker for each utterance file from the file name of source .wav file!!
 
 
-- Change tones from (L,M,H,R,F,etc..) to IPA chars (later?)
-  > (or) add to attribute of phonetic unit to which it applies?
-  >>> How to get it from the format in utterance to the dictionary format?
-
 - Decide on orthographic conventions!
   e.g.
   	(?) Capitalize 1st word of sentence? 
@@ -34,9 +30,8 @@ NEEDED:
 - Where/how to annotate adjective that only applies to animate nouns? 
   > should this be classified as a type of adjective?
 
-- Add pointer to speaker list in header
-
 - How to handle alternate translations?
+	>@n
 
 - USING @cert TO MARK EXAMPLES TO COME BACK TO!!!
 
@@ -167,12 +162,10 @@ NEEDED:
 
 
 - How to include definitions!? 
+	> Do once in dictionary
 
 - Will need to add the revised orthography of words with tone marked!!
   >>HOW best to do this in utterance transcriptions??!!!??
-
--Distinguish between CARDINAL and ORDINAL NUMBERS!???
-  >>FIND OUT IF THEY HAVE A DISTINCTION!!
 
 
 -Should the article “in” be tagged as “pos” “#ARTCL #INDEF” or separately, using type=“definitenesss” “#INDEF”? (currently using “#ARTCL #INDEF” and then number=“#SG” separately)
@@ -374,6 +367,7 @@ or “#PRON-EMPH”;
 	> May want to consider doing that for all motion verbs even the aforementioned
 
 -How to classify “hello”, “goodbye”, etc.!?
+	> phrase (domain = GRT)
 
 -Currently marking “Imperative” as “#CMND” (may want to change eventually to “#IMPER”)
 
