@@ -41,9 +41,6 @@ end of element "data"
     
     -->
     
-    
-
-    
     <xsl:variable name="teiHeader">
         <teiHeader>
             <fileDesc>
@@ -71,7 +68,9 @@ end of element "data"
                     <note>add note</note>
                 </notesStmt>
                 <sourceDesc>
-                    <p>Information about the source(ADD POINTER TO SOURCE FILE) </p>
+                    <p>Information about the source(ADD POINTER TO SOURCE FILE)
+                    <!-- ADD POINTER TO <fs> INVENTORY WHERE TAGS ARE!! -->
+                    </p>
                 </sourceDesc>
             </fileDesc>
         </teiHeader>
@@ -113,7 +112,6 @@ end of element "data"
                 <!-- 
                 <xsl:sort select="if (tier eq 'Tokens') then 1 else if (tier eq 'Orth') then 2 else 3"/>
                  -->
-                <!-- <Tokens start="3.76" end="5.33">3</Tokens>	  -->
                 <xsl:element name="{tier}">
                     <xsl:attribute name="start" select="start"/>
                     <xsl:attribute name="end" select="end"/>
@@ -124,65 +122,78 @@ end of element "data"
     </xsl:variable>
     
     <xsl:template match="/">
+        <!--  
+        <xsl:message><xsl:value-of select="praat-parsed[2]/*/@start"/></xsl:message>
+        -->
         <xsl:result-document href="{replace($input,'\.txt$','.xml')}">
             <TEI>
                 <xsl:sequence select="$teiHeader"/>
                 <!--<xsl:sequence select="$lines-into-tabs"/>-->
                 <text>
                     <body>
-                        <xsl:for-each-group select="$praat-parsed" group-starting-with="Tokens">
-                            
+                        
+                        <timeline>
+                           <!-- when @xml:id @interval -->
+                            <xsl:for-each select=" distinct-values($praat-parsed/@start | $praat-parsed/@end)">
+                                <when xml:id="{concat('T',.)}" interval="{.}"/>
+                            </xsl:for-each>
+                           
+                        </timeline>
+                                               
+                            <xsl:for-each-group select="$praat-parsed" group-starting-with="Tokens">
                             <!-- DEFINED VARIABLES FOR TIMEPOINTS IN TIMELINE -->
+                                
                             <xsl:variable name="whens" as="element()*">
-                                <xsl:for-each select="distinct-values((current-group()[self::Orth|self::Pron|self::Esp|self::Eng]/@start, current-group()[self::Esp|self::Eng]/@end))">
+                                
+                                <xsl:for-each select="
+                                    distinct-values(
+                                    (current-group()[self::Orth|self::Pron|self::Esp|self::Eng]/@start, current-group()[self::Esp]/@end)
+                                    )">
                                     <when xml:id="T{position()}" interval="{.}"/>
                                 </xsl:for-each>
                             </xsl:variable>
-                            
-                            <timeline>
-                                <xsl:sequence select="$whens"/>
-                            </timeline>
-                            
+                        
                             <annotationBlock>
-                                <u n="{current-group()[1]}" xml:id="{generate-id(.)}"><!-- generate-id() ok here?-->
+                                <u n="{current-group()[1]}" xml:id="{generate-id(.)}"><!-- ID's ok-->
                                     <xsl:copy-of select="current-group()[1]/(@start, @end)"/>
                                     
                                     <!-- output content from "Orth" -->
-                                    <seg function="utterance" notation="orth" xml:id="{generate-id(.)}">
+                                    <seg function="utterance" notation="orth" xml:id="{concat('T','-seg-orth-',@start)}"><!--concat(tier+timestamp) -->
                                         <xsl:for-each select="current-group()/self::Orth">
                                             <xsl:variable name="start" select="@start"/>
-                                            <w synch="#{$whens[@interval = $start]/@xml:id}" xml:id="{generate-id(.)}">
+                                            <w synch="{concat('#T',@start)}" xml:id="{concat('T','-orth',@start)}">
                                                 <xsl:value-of select="."/>
                                             </w>
                                         </xsl:for-each>
                                     </seg>
                                     
                                     <!-- output content from "Pron" -->
-                                    <seg function="utterance" notation="ipa" xml:id="{generate-id(.)}">
+                                    <seg function="utterance" notation="ipa" xml:id="{concat('T','-seg-pron-',@start)}">
                                         <xsl:for-each select="current-group()/self::Pron">
                                             <xsl:variable name="start" select="@start"/>
-                                            <w synch="#{$whens[@interval = $start]/@xml:id}" xml:id="{generate-id(.)}">
+                                            <w synch="{concat('#T',@start)}" xml:id="{concat('T','-pron',@start)}">
                                                 <xsl:value-of select="."/>
                                             </w>
                                         </xsl:for-each>
                                     </seg>
                                 </u>
-                            </annotationBlock>
-                    
+
                             <spanGrp type="translation">
-                                <xsl:for-each select="current-group()/self::Esp">
-                          
-                                    <!-- (change) to match:
-                                           for each <w> (both orth and pron)
-                                    -->
+
+                                <xsl:for-each select="current-group()/self::Esp">            
                                     <span xml:lang="es" target="# #">
                                         <xsl:value-of select="."/>
+                                        <!-- for each additional <w> in <seg>:
+                                                add another <span xml:lang="es" target="# #">
+                                        -->
                                     </span>
-  
                                 </xsl:for-each>
                                 <xsl:for-each select="current-group()/self::Eng">
                                     <span xml:lang="en" target="# #">
                                         <xsl:value-of select="."/>
+                                        <!-- for each additional <w> in <seg>:
+                                                add another <span xml:lang="es" target="# #">
+                                        -->
                                     </span>
                                 </xsl:for-each>
                             </spanGrp>
@@ -190,7 +201,9 @@ end of element "data"
                             <!-- add //spanGrp[@type="gram"] -->
                             
                             <!-- add //spanGrp[@type="semantics"] -->
-                            
+                                
+                            <!-- add //spanGrp[@type="igt"] -->
+                            </annotationBlock>
                         </xsl:for-each-group>
                         
                     </body>

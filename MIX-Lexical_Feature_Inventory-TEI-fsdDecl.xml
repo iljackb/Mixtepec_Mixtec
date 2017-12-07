@@ -667,9 +667,12 @@ negator
                   <fs>
                      <f name="person">
                         <vAlt>
-                           <symbol xml:id="1PERS" value="" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/><!-- Francopoulo, Gil; First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker;www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsFirstPersonDeixis.htm -->
-                           <symbol xml:id="2PERS" value="" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/><!--Francopoulo, Gil;Second person deixis is deictic reference to a person or persons identified as addressee.  -->
-                           <symbol xml:id="3PERS" value="" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/><!--  Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.; www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsThirdPersonDeixis.htm-->
+                           <symbol xml:id="1PERS" value="firstPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/>
+                           <!-- Francopoulo, Gil; First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker;www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsFirstPersonDeixis.htm -->
+                           <symbol xml:id="2PERS" value="secondPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/>
+                           <!--Francopoulo, Gil;Second person deixis is deictic reference to a person or persons identified as addressee.  -->
+                           <symbol xml:id="3PERS" value="thirdPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/>
+                           <!--  Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.; www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsThirdPersonDeixis.htm-->
                         </vAlt>
                      </f>
                   </fs>
@@ -679,8 +682,10 @@ negator
                    <fs>
                       <f name="inclusivity">
                          <vAlt>
-                            <symbol xml:id="INCL" value="Inclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044"/><!--(Wesseling, Franca) First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
-                            <symbol xml:id="EXCL" value="Exclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045"/><!-- (Wesseling, Franca) First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
+                            <symbol xml:id="INCL" value="Inclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3044"/>
+                            <!--(Wesseling, Franca) First person plural inclusive refers to the first person plural including the addressee(s). Inclusivity can be marked on a pronoun and/or on a verb. -->
+                            <symbol xml:id="EXCL" value="Exclusive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3045"/>
+                            <!-- (Wesseling, Franca) First person plural exclusive refers to the first person plural excluding the addressee(s). Exclusivity can be marked on a pronoun and/or on a verb. -->
                          </vAlt>
                       </f>
                    </fs>
@@ -850,11 +855,16 @@ negator
             <label>Valence and Transitivity</label><lb/>
             <desc>these are the transitivity features that occur in the MIX verb system; it is significant that certain verb categories described above will automatically take certain transitivity values (this needs to be specified in the declaration at some point, perhaps using 'fConstraints' and/or conditionals</desc>
    
-            <fs xml:id="VALNCY" type="valency" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1410"><!--  Declerck, Thierry; The number of arguments controlled by a verbal predicate. -->
-               <f name="VAL-GRM0" xml:id="VAL-0"/><!-- Contains neither Actor or Undergoer -->
-               <f name="VAL-GRM1" xml:id="VAL-1"/><!-- Contains only Actor or Undergoer -->
-               <f name="VAL-GRM1" xml:id="VAL-2"/><!-- Contains Actor and Undergoer -->
-               <f name="VAL-GRM1" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
+            <fs><!--  Declerck, Thierry; The number of arguments controlled by a verbal predicate. -->
+               <f xml:id="VALNCY" name="valency" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1410">
+                  <vAlt>
+                     <symbol value="VAL-GRM0" xml:id="VAL-0"/><!-- Contains neither Actor or Undergoer -->
+                     <symbol value="VAL-GRM1" xml:id="VAL-1"/><!-- Contains only Actor or Undergoer -->
+                     <symbol value="VAL-GRM1" xml:id="VAL-2"/><!-- Contains Actor and Undergoer -->
+                     <symbol value="VAL-GRM1" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
+                  </vAlt>
+               </f>
+               
             </fs>
             
             <fvLib n="transitivity">     
@@ -879,7 +889,8 @@ negator
             
             <fs xml:id="ATRANS" feats="#VAL-0"/><!-- verbs that take 0 macro-role arguments such as weather verbs -->
             
-            <fs xml:id="INTRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-1"/><!-- http://purl.org/linguistics/gold/IntransitiveVerb --> <!-- def:An intransitive verb is a verb that cannot take a direct object, and describes a property, state, or situation involving only one participant [Crystal 1997: 397; Payne 1997: 171].-->
+            <fs xml:id="INTRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-1"/>
+            <!-- http://purl.org/linguistics/gold/IntransitiveVerb --> <!-- def:An intransitive verb is a verb that cannot take a direct object, and describes a property, state, or situation involving only one participant [Crystal 1997: 397; Payne 1997: 171].-->
              
             <fs xml:id="TRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-2"/>
             <!-- def:A transitive verb is a verb that takes a direct object, and describes a relation between two participants [Crystal 1997: 397; Payne 1997: 171];		src: gold "http://purl.org/linguistics/gold/TransitiveVerb" -->
@@ -1053,11 +1064,14 @@ negator
                <!-- GOLD:A value of Aspect Property assigned to the designated element in the clause when the meaning selected for the clause is that which indicates that the event spoken about is to be looked at from inside, from within its temporal boundaries; imperfective aspect is crucially concerned with the internal temporal structure of the event [Comrie 1976: 16ff]. Typically, for an aspect value to be labelled as Imperfective, the aspectual meaning has to minimally express the imperfective viewpoint, although it may additionally express other temporal, aspectual, or modal meanings, or actionality distinctions. Imperfective aspectual meaning can be further subdivided into two types: habitual meaning and continuous meaning. These two aspectual meanings may or may not be grammaticalised as separate aspect values. [Kibort 2008c: 7] -->
                
                <f name="SemelfactiveAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3470" xml:id="SEMEL">
-                  <string>SEMEL</string></f><!-- GOLD:Momentaneous, without an inherent end-point, as sneeze [Michaelis 1998: xvi]. -->
+                  <string>SEMEL</string></f>
+               <!-- GOLD:Momentaneous, without an inherent end-point, as sneeze [Michaelis 1998: xvi]. -->
                
                <f name="IterativeAspect"  xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3282">
-                  <string>RPTV</string><!-- occurs as prefix "tsí-" -->
-               </f><!--GOLD; IterativeAspect, also called repetitive, encodes a number of events of the same type that are repeated on a particular occasion. The time interval which is relevant to the iterative is relatively shorter than in the case of the habitual [Bybee 1985: 150; Bybee, Perkins and Pagliuca 1994: 127]. Portrays events repeated on the same occasion (like the iterative knocking on the door) [Bhat 1999: 53]. -->
+                  <string>RPTV</string>
+                  <!-- occurs as prefix "tsí-" -->
+               </f>
+               <!--GOLD; IterativeAspect, also called repetitive, encodes a number of events of the same type that are repeated on a particular occasion. The time interval which is relevant to the iterative is relatively shorter than in the case of the habitual [Bybee 1985: 150; Bybee, Perkins and Pagliuca 1994: 127]. Portrays events repeated on the same occasion (like the iterative knocking on the door) [Bhat 1999: 53]. -->
                
                <f name="QuantificationalAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3438"/>
                <!--GOLD; A speaker may report an event as occurring once only (semelfactive) or several times (iterative); he may view it as a specific event or as part of a general habit of carrying out similar events; he may also differentiate between different degrees of frequency with which the event occurs. The markers that a given language provides for one or more of these meaning distinctions can be grouped under a subcategory called “quantificational aspect”, as all of them refer to the quantitative aspect of the event concerned. [Bhat 1999: 53] -->
@@ -1073,7 +1087,8 @@ negator
             <label>Conjunctions</label>
             <desc></desc>
             <fs>
-               <f name="Conjunction-Basic" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"><default/></f> <!-- in mix(ipa), this corresponds to the item "ɾa"  ;A term used in the grammatical classification of words to refer to an item or a process whose primary function is to connect words or other constructions. The conventional subclassification of these 'connective' items distinguishes co-ordinating conjunctions (e.g. and, or, but) and subordinating conjunctions (e.g. because, when, unless)  also referred to as 'co-ordinators' and 'subordinators' respectively. [Crystal 2008: 101] -->                      
+               <f name="Conjunction-Basic" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"><default/></f> 
+               <!-- in mix(ipa), this corresponds to the item "ɾa"  ;A term used in the grammatical classification of words to refer to an item or a process whose primary function is to connect words or other constructions. The conventional subclassification of these 'connective' items distinguishes co-ordinating conjunctions (e.g. and, or, but) and subordinating conjunctions (e.g. because, when, unless)  also referred to as 'co-ordinators' and 'subordinators' respectively. [Crystal 2008: 101] -->                      
                <f name="Conjunction-Temporal" xml:id="CONJ-TEMP"/><!-- MAY NEED REVISION -->
                <f name="Conjunction-Causative" xml:id="CONJ-CAUS"/><!-- in mix(ipa), this corresponds to the item "sàʔá", which is one of the more abstracted polysemous extensions of the mix concrete, body part noun for "foot"  -->  
                <f name="Conjunction-Enumerative" xml:id="CONJ-ENUM"/><!-- eg, 'both', -->
@@ -1081,7 +1096,8 @@ negator
                
                <f name="Conjunction-Coordinating" xml:id="CONJ-COORD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1262"/><!-- def:Conjunction that links constituents;	src:MAF -->
                
-               <f name="SubordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/><!-- def:Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. '..when', '…if…' '…therefore...';src:MAF -->
+               <f name="SubordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
+               <!-- def:Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. '..when', '…if…' '…therefore...';src:MAF -->
                <!-- in mix(ipa), this corresponds to the item "sa.ɾa" which is a compound of the basic 'conj' marker and the (temporal particle?) 'sa' ;
    can be considered to function and have similar semantics to (X happened 'then' Y happened)   -->
             </fs>
@@ -1092,23 +1108,21 @@ negator
          <div xml:id="GrammaticalGender-MIX">
             <desc>(GOLD)<ref>GenderProperty</ref> is the class of properties that are assigned to nouns on the basis of their inherent properties by an AssignmentSystem and required by the syntax to appear on the target in an AgreementSystem. Gender may but need not be assigned on the basis of sex [Corbett 1991].</desc>
             
-            
-            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3217" type="GenderProperty">
-               
-               <f name="masculineGender" xml:id="MASC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3312">
-                  <string>masc</string>
+            <fs>
+               <f xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3217" name="gender">
+                  <vAlt>
+                     <symbol value="masculine" xml:id="MASC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3312"/>
+                      <symbol value="feminine" xml:id="FEM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3197"/>
+                     <symbol value="animal" xml:id="ANML"/>
+                  </vAlt>
                </f>
+            </fs>
+          
+        
                <!-- A gender property established on the basis of agreement, to which nouns may be assigned based on semantic or formal criteria. In semantic gender systems, nouns belonging to the masculine gender typically denote male humans as well as nouns meeting certain physical criteria. Some gender systems differentiate masculine nouns from all other nouns (e.g. masculine/other or male human/other), while others differentiate masculine, feminine and neuter nouns or several different gender classes. [Corbett 1991: 30] -->
                
-               <f name="feminineGender" xml:id="FEM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3197">
-                  <string>fem</string>
-               </f>
                <!--GOLD; A gender property established on the basis of agreement, to which nouns may be assigned if 1) they inherently denote females. Additionally, but not necessarily, nouns may be assigned this value if: 2) their formal properties (morphological or phonological) lead them to be assigned to the same agreement pattern as other nouns within the language that have female denotation. 3) they are arbitrarily assigned to the same agreement pattern as other nouns in the language that have female denotation. [Corbett 1991] -->
                
-               <f name="animalGender" xml:id="ANML"><!-- ADD ANIMAL GENDER ISO CAT URI!!!--></f>
-               
-               <f name="unmarked-GENDR"><default/></f><!-- HE/SHE/IT (CROSS-REFERENCE: FORMALITY) -->
-            </fs>
          </div>
          
          <div xml:id="GrammaticalInclusivity-MIX">  
@@ -1150,11 +1164,14 @@ negator
                
             <desc>(pointer/link), (description of concepts) VanValin(RRG), 2.4.2 ; Actor and Undergoer are used where traditional linguistic terminology may use 'subject' and 'object';
                The choice was made non-arbitrarily and is more accurate in certain non-transitive phrases in which what would traditionally be the subject is the EXPERIENCER.</desc>
-            
-            <fs xml:id="MacroRoles">
-               <f name="actor" xml:id="A"/>
-               <f name="undergoer" xml:id="U"/>
-               <f name="oblique" xml:id="OBLQ"/>
+            <fs>
+               <f name="MacroRoles">
+                  <vAlt>
+                     <symbol value="actor" xml:id="A"/>
+                     <symbol value="undergoer" xml:id="U"/>
+                     <symbol value="oblique" xml:id="OBLQ"/>
+                  </vAlt>
+               </f>
             </fs>
                 
                <p>Below we give a basic summary of MIX word ordering in unmarked constructions as thus far observed;  
@@ -1184,7 +1201,12 @@ negator
             <label>Focus and Topic in Mixtepec-Mixtec:</label><lb/>
             
             <label>Fronting/Focus Shift</label><lb/>
-            <fs type="focus" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3047" xml:id="FOC"/>
+            <fs>
+               <f name="focus">
+                  <symbol value="focus" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3047" xml:id="FOC"/>
+               </f>
+            </fs>
+        
             <desc>Focus refers to information that is put in focus. This information is either new or contrastive. In both cases it is of high communicative interest. New information typically occurs late in the sentence. Contrastive focus expresses a contrast with another element in the discourse.</desc>
    
            <p> 
