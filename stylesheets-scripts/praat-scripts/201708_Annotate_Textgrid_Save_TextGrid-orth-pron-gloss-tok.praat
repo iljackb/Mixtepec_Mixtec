@@ -70,15 +70,13 @@ for ifile to numberOfFiles
 
 	Write to text file... 'directory$''object_name$'.TextGrid
 
-	#Write to text file... 'directory$''object_name$'"_gloss".TextGrid
-
 
 # CREATE TEXTFILE WITH TEXTGRID DATA#
 # CHANGE DIRECTORY TO THAT INTO WHICH YOU WANT TO SAVE THE RESULTING TAB-SEP FILES#
 
 	select TextGrid 'object_name$'
 	
-	Down to Table... no 2 NO no
+	Down to Table... no 2 no no
 
 	select Table 'object_name$'
 

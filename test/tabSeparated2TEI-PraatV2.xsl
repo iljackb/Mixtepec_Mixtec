@@ -25,6 +25,15 @@
     
     <!-- input files mush have iso 639 code (if exists) as header of collumn) -->
     
+    
+    <xsl:param name="fileName">	
+        <xsl:value-of select="tokenize(substring-before(base-uri(),'-clnd09.xml'),'/')[last()]"/>
+    </xsl:param>  
+    
+    <xsl:param name="Spkr">	
+        <xsl:value-of select="tokenize(substring-after(base-uri(),'_', substring-before(base-uri(),'.txt'))[last()]"/>
+    </xsl:param>  
+    
     <!-- PSEUDO CODE
         
 element "data"
@@ -45,7 +54,7 @@ end of element "data"
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>Test TEI output for Tab separated bilingual text files</title>
+                    <title>TEI output for tab separated bilingual text files exported from file <!-- insert filename here!! --></title>
                     <respStmt>
                         <resp>Annotation</resp>
                         <resp>Encoding</resp>
@@ -56,7 +65,8 @@ end of element "data"
                         <name>
                             <!-- ADD FROM END OF FILENAME STRING!! -->
                             <!-- CREATE VARIABLES FOR EACH SPEAKER
-                                & ASSIGN DESIGNATED INITIALS AS VALUE OF @xml:id
+                                & ASSIGN DESIGNATED INITIALS AS VALUE 
+                                OF @xml:id
                             -->
                         </name>
                     </respStmt>
@@ -68,8 +78,9 @@ end of element "data"
                     <note>add note</note>
                 </notesStmt>
                 <sourceDesc>
-                    <p>Information about the source(ADD POINTER TO SOURCE FILE)
-                    <!-- ADD POINTER TO <fs> INVENTORY WHERE TAGS ARE!! -->
+                    <p>Information about the source(ADD POINTER TO SOURCE FILE) <ptr target="{base-uri()}"/>
+                        <!--
+                   ADD POINTER TO <fs> INVENTORY WHERE TAGS ARE!! -->
                     </p>
                 </sourceDesc>
             </fileDesc>
@@ -109,9 +120,6 @@ end of element "data"
     <xsl:variable name="praat-parsed" as="element()*">
         <xsl:for-each-group select="$lines-into-tabs" group-by="start">
             <xsl:for-each select="current-group()">
-                <!-- 
-                <xsl:sort select="if (tier eq 'Tokens') then 1 else if (tier eq 'Orth') then 2 else 3"/>
-                 -->
                 <xsl:element name="{tier}">
                     <xsl:attribute name="start" select="start"/>
                     <xsl:attribute name="end" select="end"/>
@@ -181,7 +189,7 @@ end of element "data"
                             <spanGrp type="translation">
 
                                 <xsl:for-each select="current-group()/self::Esp">            
-                                    <span xml:lang="es" target="# #">
+                                    <span xml:lang="es" target="">
                                         <xsl:value-of select="."/>
                                         <!-- for each additional <w> in <seg>:
                                                 add another <span xml:lang="es" target="# #">
@@ -189,7 +197,7 @@ end of element "data"
                                     </span>
                                 </xsl:for-each>
                                 <xsl:for-each select="current-group()/self::Eng">
-                                    <span xml:lang="en" target="# #">
+                                    <span xml:lang="en" target="">
                                         <xsl:value-of select="."/>
                                         <!-- for each additional <w> in <seg>:
                                                 add another <span xml:lang="es" target="# #">
@@ -199,8 +207,11 @@ end of element "data"
                             </spanGrp>
                             
                             <!-- add //spanGrp[@type="gram"] -->
-                            
-                            <!-- add //spanGrp[@type="semantics"] -->
+                            <spanGrp type="gram">
+                                <span type="" target="#" ana="#"/>
+                                <span type="" target="#" ana="#"/>
+                            </spanGrp>
+                                <!-- add //spanGrp[@type="semantics"] -->
                                 
                             <!-- add //spanGrp[@type="igt"] -->
                             </annotationBlock>
