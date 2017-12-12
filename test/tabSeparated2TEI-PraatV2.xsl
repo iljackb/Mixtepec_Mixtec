@@ -6,6 +6,9 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
+    
+    <!-- version 2017-12-09 -->
+    
     <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
     
     <xsl:strip-space elements="*"/>
