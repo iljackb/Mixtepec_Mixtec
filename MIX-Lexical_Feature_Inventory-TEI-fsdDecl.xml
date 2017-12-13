@@ -270,9 +270,7 @@ Prefix
                        <!-- 
                           LocativeCase
                           http://www.isocat.org/datcat/DC-3306
-                          (GOLD); (adj./n.) In languages which express grammatical relationships by means of inflections, this term refers to the form taken by a noun phrase
-                          (often a single noun or pronoun), when it typically expresses the idea of location of an entity or action. Structures which express locational 
-                          meaning may also be referred to as locative, e.g. in 'The woman was standing at a bus stop', 'at a bus stop' could be called a locative phrase. [Crystal 2008: 288] -->
+                          (GOLD); (adj./n.) In languages which express grammatical relationships by means of inflections, this term refers to the form taken by a noun phrase  (often a single noun or pronoun), when it typically expresses the idea of location of an entity or action. Structures which express locational meaning may also be referred to as locative, e.g. in 'The woman was standing at a bus stop', 'at a bus stop' could be called a locative phrase. [Crystal 2008: 288] -->
                                  
                        <f name="copula-realis" xml:id="COP-REAL">
                           <string>COP-REAL</string>
@@ -407,24 +405,6 @@ Prefix
                  </vRange>
               </fDecl>
              
-              <!-- numberProperty; http://www.isocat.org/datcat/DC-78 -->
-
-
-<!-- (ISO:) http://www.isocat.org/datcat/DC-2305 ("relation of one grammatical unit upon another with different restrictions in the scope")
-                 These features all share the function of modifying some aspect of the major components, the main difference between them is what they modify
-                 and in what kind of verbal/predicate semantic contexts they occur.
-
-              
- Determiners and Enumerators do the same thing grammatically and semantically; need to decide on how to unify them -->
-              
-
-              
-
-        
-
-        
-      
-        <!-- PROJECT WORKFLOW TAGS -->
            </fsDecl>
         </fsdDecl>
      </encodingDesc>
@@ -434,17 +414,31 @@ Prefix
       <body>
          <div xml:id="Nouns-MIX">
             <desc></desc>
-            <fs><!-- THIS SHOULD BE MAPPED TO EXTERNAL ONTOLOGY'-->
-               <f name="Noun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3347"><string>noun</string></f><!-- gold -->
-               <f name="massNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2277" xml:id="N-MASS"><string>massNoun</string></f><!-- (Francopoulo, Gil) Designation of a term or word that is not countable and cannot generally be used with the indefinite article or in the plural. -->
-               <f name="countNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-485" xml:id="N-COUNT"><string>countNoun</string></f><!-- (Wright, Sue Ellen); a common noun that can be modified by a numeral and occur in both singular and plural form, as well as co-occurring with quantificational determiners like every, each, several, etc.-->
-               <f name="ConcreteNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1505" xml:id="N-CNCRT"><string>concreteNoun</string></f>
-               <f name="categoricalNoun" xml:id="N-CAT"><string>categoricalNoun</string></f><!-- may be able to use massNoun? -->
-               <f name="abstractNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1504" xml:id="N-ABS"><string>abstractNoun</string></f>
-               <f name="relationalNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2226" xml:id="N-RLTNL"><string>relationalNoun</string></f><!-- src: can link to 'Adposition' -->
-               <f name="collectiveNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1511" xml:id="N-CLTV"><string>collectiveNoun</string></f>
-               <f name="placeNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3857" xml:id="N-LOC"><string>placeNoun</string></f><!-- if there is a url for 'location' link to this -->
-               <f name="mannerNoun" xml:id="N-MNNR" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3854"><string>mannerNoun</string></f>
+            <fs>
+               <f name="nouns"><!-- Look into using the wordNet categories -->
+                  <vAlt>
+                     <symbol xml:id="N" value="noun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3347"/>
+                     
+                     <symbol xml:id="N-MASS" value="massNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2277"/><!-- (Francopoulo, Gil) Designation of a term or word that is not countable and cannot generally be used with the indefinite article or in the plural. -->
+                     
+                     <symbol xml:id="N-CNT" value="countNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-485"/><!-- (Wright, Sue Ellen); a common noun that can be modified by a numeral and occur in both singular and plural form, as well as co-occurring with quantificational determiners like every, each, several, etc.-->
+                     
+                     <symbol xml:id="N-CNCRT" value="concreteNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1505"/>
+                     
+                     <symbol xml:id="N-REL" value="relationalNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2226"/><!-- in MIX this is often the same as "ADPOS" -->
+                     
+                     <symbol xml:id="LOC" value="placeNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3857"/>
+                     
+                     <symbol xml:id="N-ABS" value="abstractNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1504"/>
+                     
+                     <symbol xml:id="N-COLL" value="collectiveNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1511"/>
+                     
+                     <symbol xml:id="N-MANR" value="mannerNoun" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3854"/>                 
+                     
+                     <!-- would like "categorical noun" -->
+                  </vAlt>
+               </f>
+               
             </fs>
          </div>
          <div xml:id="Pronouns-MIX">
@@ -702,7 +696,7 @@ negator
                <p>When attached to adjectives, this creates a stative construction. In accordance with Van Valin 2005,
                we can thus represent the logical structure of these constructions as:</p>
                
-               <ab><formula notation="fol">be’ ( x, [ADJ’])</formula></ab><!-- this may be definable in ODD if you find a url for a system of first order logic -->
+               <ab><formula notation="fol">be’ ( x, [ADJ’])</formula></ab>
                
                <eg>
                   <seg>sú.kù</seg>
@@ -848,38 +842,31 @@ negator
                </f>
                
             </fs>
+            <fs>
+               <f name="transitivity">
+                  <vAlt>
+                     <symbol xml:id="TRANS" value="transitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275"/>
+                     <symbol xml:id="INTRANS" value="intransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275"/>
+                     <symbol xml:id="DITRANS" value="ditransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275"/>
+                  </vAlt>
+               </f>
+            </fs>
+
+            <!-- verbs that take 0 macro-role arguments such as weather verbs -->
             
-            <fvLib n="transitivity">     
-               <fs>
-                  <f name="transitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275">
-                     <symbol value="TRANS"/>
-                  </f>
-               </fs>
-               <fs>
-                  <f name="intransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275">
-                     <symbol value="INTRANS"/>
-                  </f>
-               </fs>
-               <fs>
-                  <f name="ditransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275">
-                     <symbol value="DITRANS"/>
-                  </f>
-               </fs>
-               
-            </fvLib>
-            
-            
-            <fs xml:id="ATRANS" feats="#VAL-0"/><!-- verbs that take 0 macro-role arguments such as weather verbs -->
-            
-            <fs xml:id="INTRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-1"/>
             <!-- http://purl.org/linguistics/gold/IntransitiveVerb --> <!-- def:An intransitive verb is a verb that cannot take a direct object, and describes a property, state, or situation involving only one participant [Crystal 1997: 397; Payne 1997: 171].-->
-             
-            <fs xml:id="TRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-2"/>
             <!-- def:A transitive verb is a verb that takes a direct object, and describes a relation between two participants [Crystal 1997: 397; Payne 1997: 171];		src: gold "http://purl.org/linguistics/gold/TransitiveVerb" -->
-             
-            <fs xml:id="DITRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275" feats="#VAL-3"/>
             <!-- def: Ditransitivity (or Bitransitivity) is a term which describes a verb or clause which takes two objects.	src: "www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsDitransitivity.htm" -->
             
+            <!--  
+            <fs xml:id="ATRANS" feats="#VAL-0"/>
+            
+            <fs xml:id="INTRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-1"/>
+   
+            <fs xml:id="TRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-2"/>
+                 
+            <fs xml:id="DITRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275" feats="#VAL-3"/>      
+            -->
             <div xml:id="A-TransitiveVerbs-MIX">
             <figure><graphic url=""/></figure><lb/>
             <label>Copula + N(weather)</label>
@@ -1024,64 +1011,61 @@ negator
          
          <div xml:id="VerbalAspect-MIX">
             <figure><graphic url="../diagrams-original/LexicalFeature_Diagrams-mix-Aspect_Mood_Tense_00.jpg"/></figure>
-            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3089" type="AspectProperty">
-               
-               <f name="CompletiveAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3125" xml:id="CMPL">
-                  <string>CMPL</string>
+            <fs>
+               <f name="AspectProperty" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3089">
+                  <vAlt>
+                     <symbol xml:id="INCMPL" value="incompletiveAspect"/><!-- present tense -->
+                     <symbol xml:id="CMPL" value="completiveAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3125"/><!-- past tense -->
+                     <symbol xml:id="POT" value="potentialAspect"/><!-- future tense -->
+                     <symbol xml:id="HAB" value="habitualAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3232"/>
+                     <symbol xml:id="IMPERF" value="imperfectAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3246"/><!-- check the tag usage in content -->
+                     <symbol xml:id="SEMEL" value="semelfactiveAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3470"/>
+                     <symbol xml:id="REPET" value="iterativeAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3282"/>
+                     <symbol xml:id="SIMUL" value="simultaneousAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3478"/>
+                  </vAlt>
                </f>
+            </fs>
+            
                <!-- 	def: A term used to denote verbal aspect that focuses on the conclusion of a process or action. [Brown and Miller 1999: 424]; This concept is part of the General Ontology for Linguistic Description (GOLD). It is a child concept of http://purl.org/linguistics/gold/AspectProperty. For other relationships among the concepts see: http://linguistics-ontology.org/gold.src: gold "http://purl.org/linguistics/gold/CompletiveAspect" -->
-               <f name="PotentialAspect" xml:id="POT">
-                  <string>POT</string>      
-               </f>
-               <f name="IncompletiveAspect" xml:id="INCMPL">
-                  <string>INCMPL</string>
-               </f>
-               <f name="HabitualAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3232" xml:id="HAB">
-                  <string>HAB</string>
-               </f>
-               
-               <f name="ImperfectAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3246" xml:id="IMPERF">
-                  <string>IMPRF</string>
-               </f>
+           
                <!-- GOLD:A value of Aspect Property assigned to the designated element in the clause when the meaning selected for the clause is that which indicates that the event spoken about is to be looked at from inside, from within its temporal boundaries; imperfective aspect is crucially concerned with the internal temporal structure of the event [Comrie 1976: 16ff]. Typically, for an aspect value to be labelled as Imperfective, the aspectual meaning has to minimally express the imperfective viewpoint, although it may additionally express other temporal, aspectual, or modal meanings, or actionality distinctions. Imperfective aspectual meaning can be further subdivided into two types: habitual meaning and continuous meaning. These two aspectual meanings may or may not be grammaticalised as separate aspect values. [Kibort 2008c: 7] -->
-               
-               <f name="SemelfactiveAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3470" xml:id="SEMEL">
-                  <string>SEMEL</string></f>
+
                <!-- GOLD:Momentaneous, without an inherent end-point, as sneeze [Michaelis 1998: xvi]. -->
-               
-               <f name="IterativeAspect"  xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3282">
-                  <string>RPTV</string>
-                  <!-- occurs as prefix "tsí-" -->
-               </f>
+
+                  <!-- ITERATIVE occurs as prefix "tsí-" -->
+
                <!--GOLD; IterativeAspect, also called repetitive, encodes a number of events of the same type that are repeated on a particular occasion. The time interval which is relevant to the iterative is relatively shorter than in the case of the habitual [Bybee 1985: 150; Bybee, Perkins and Pagliuca 1994: 127]. Portrays events repeated on the same occasion (like the iterative knocking on the door) [Bhat 1999: 53]. -->
-               
-               <f name="QuantificationalAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3438"/>
+
                <!--GOLD; A speaker may report an event as occurring once only (semelfactive) or several times (iterative); he may view it as a specific event or as part of a general habit of carrying out similar events; he may also differentiate between different degrees of frequency with which the event occurs. The markers that a given language provides for one or more of these meaning distinctions can be grouped under a subcategory called “quantificational aspect”, as all of them refer to the quantitative aspect of the event concerned. [Bhat 1999: 53] -->
                
-               <f name="SimultaneousAspect" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3478" xml:id="SIMUL">
-                  <string>SIMUL</string>
-               </f>
-               <!-- GOLD:A temporal relation in which the events or states of proposition(s) are communicated as occurring at the same time. [SIL International 2004] -->
-            </fs>
+
          </div>
 
          <div xml:id="Conjunctions-MIX">
             <label>Conjunctions</label>
             <desc></desc>
             <fs>
-               <f name="Conjunction-Basic" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"><default/></f> 
-               <!-- in mix(ipa), this corresponds to the item "ɾa"  ;A term used in the grammatical classification of words to refer to an item or a process whose primary function is to connect words or other constructions. The conventional subclassification of these 'connective' items distinguishes co-ordinating conjunctions (e.g. and, or, but) and subordinating conjunctions (e.g. because, when, unless)  also referred to as 'co-ordinators' and 'subordinators' respectively. [Crystal 2008: 101] -->                      
-               <f name="Conjunction-Temporal" xml:id="CONJ-TEMP"/><!-- MAY NEED REVISION -->
-               <f name="Conjunction-Causative" xml:id="CONJ-CAUS"/><!-- in mix(ipa), this corresponds to the item "sàʔá", which is one of the more abstracted polysemous extensions of the mix concrete, body part noun for "foot"  -->  
-               <f name="Conjunction-Enumerative" xml:id="CONJ-ENUM"/><!-- eg, 'both', -->
-               <f name="Conjunction-Sequential" xml:id="CONJ-SEQ"/>
+               <f name="conjunctions">
+                  <vAlt>
+                     
+                     <symbol value="conjunction" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"/><!-- generic for minimal encoding to be enhanced later -->
+                     
+                     <symbol value="coordinatingConjunction" xml:id="CONJ-COORD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1262"/><!-- def:Conjunction that links constituents;	src:MAF -->
+                     
+                     <symbol value="subordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
+                     
+                     <!-- def:Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. '..when', '…if…' '…therefore...';src:MAF -->
+                     <!-- in mix(ipa), this corresponds to the item "saɾa" which is a compound of the basic 'conj' marker and the (temporal particle?) 'sa' ; can be considered to function and have similar semantics to (X happened 'then' Y happened)   -->
+
+                  </vAlt>
+               </f>
+               <!-- in future revisions could add more varieties (intergrating sematics) with proper linguistic /theoritical literary definitions; could possibly add:
+               "temporal conjunction"
+               "causative conjunction"
+               "enumerative conjunction" (eg, 'both')
+               -->
                
-               <f name="Conjunction-Coordinating" xml:id="CONJ-COORD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1262"/><!-- def:Conjunction that links constituents;	src:MAF -->
-               
-               <f name="SubordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
-               <!-- def:Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. '..when', '…if…' '…therefore...';src:MAF -->
-               <!-- in mix(ipa), this corresponds to the item "sa.ɾa" which is a compound of the basic 'conj' marker and the (temporal particle?) 'sa' ;
-   can be considered to function and have similar semantics to (X happened 'then' Y happened)   -->
+               <!-- in mix(ipa), this corresponds to the item "ɾa"  ;A term used in the grammatical classification of words to refer to an item or a process whose primary function is to connect words or other constructions. The conventional subclassification of these 'connective' items distinguishes co-ordinating conjunctions (e.g. and, or, but) and subordinating conjunctions (e.g. because, when, unless)  also referred to as 'co-ordinators' and 'subordinators' respectively. [Crystal 2008: 101] -->                                
             </fs>
          </div>
          
@@ -1264,8 +1248,7 @@ negator
             <fs type="InterrogativeOperator" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3271" xml:id="INTROG-OP"/>
             <desc>(From GOLD ontology)Also referred to as a 'question particle', an interrogative operator is a category whose members signal a yes/no question [Payne 1997: 296].</desc>
             
-            <fs type="inverted-question-mark" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2088"/>
-            <desc>(From ISOcat entry) Punctuation used in certain languages at the beginning of an interrogative sentence.</desc>
+           
             <!-- 
 	(TOPIC=>DISCOURSE!!!)
 'topic'
