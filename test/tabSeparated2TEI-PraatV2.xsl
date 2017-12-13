@@ -34,7 +34,7 @@
     </xsl:param>  
     
     <xsl:param name="Spkr">	
-        <xsl:value-of select="tokenize(substring-after(base-uri(),'_', substring-before(base-uri(),'.txt'))[last()]"/>
+        <xsl:value-of select="tokenize(substring-after(base-uri(),'_', ,'.txt'))[last()]"/>
     </xsl:param>  
     
     <!-- PSEUDO CODE

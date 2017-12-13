@@ -184,9 +184,13 @@ Prefix
               <fDecl name="DeclarativeUtterance-MIX">
                  <vRange>
                     <fs>
-                       <f name="declarative" xml:id="DECL"><default/></f>
-                       <f name="affirmativeDeclarative" xml:id="DECL-AFFIRM"/>
-                       <f name="negativeDeclarative" xml:id="DECL-NEG"/>
+                       <f name="utteranceType">
+                          <vAlt>
+                             <symbol value="declarative" xml:id="DECL"/>
+                             <symbol value="affirmativeDeclarative" xml:id="DECL-AFFIRM"/>
+                             <symbol value="negativeDeclarative" xml:id="DECL-NEG"/>
+                          </vAlt>
+                       </f>
                     </fs>
                  </vRange>
               </fDecl>
@@ -392,15 +396,11 @@ Prefix
                  </fDescr>
                  <vRange>
                     <fs>
-                       <f name="realis" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393" xml:id="REALIS"><default/>
-                          <string>REAL</string>
-                       </f>
-                       <f name="DeonticModality" xml:id="DEONTIC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3155">
-                          <string>DEON</string>
-                       </f>
-                       <f name="modal" xml:id="MOD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1329">
-                          <string>MOD</string>
-                       </f><!-- Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention. -->
+                       <f name="realis" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393" xml:id="REALIS"/>
+                       
+                       <f name="DeonticModality" xml:id="DEONTIC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3155"/>
+                       <f name="modal" xml:id="MOD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1329"/>
+                       <!-- Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention. -->
                        
                        <f name="counterFactual"></f>
                     </fs>
@@ -423,21 +423,7 @@ Prefix
         
 
         
-        
-
-        <!-- 
-
-              "LexicalItem"
-	fVal="http://www.isocat.org/datcat/DC-3294"
-	gold: A unit of the vocabulary of a language such as a word, phrase or term as listed in a dictionary.
-	It usually has a pronounceable or graphic form, fulfils a grammatical role in a sentence, and carries semantic meaning.
-	[Hartmann and Stork 1972: 128] 
-           
-           'lexical unit'
-	"http://www.isocat.org/datcat/DC-2486"
-	source: Athens Core
-           
-           -->
+      
         <!-- PROJECT WORKFLOW TAGS -->
            </fsDecl>
         </fsdDecl>
@@ -468,9 +454,14 @@ Prefix
                person marking system in MIX.
             </desc>
             <fs type="pronoun" xml:id="PRON">
-               <f name="attributivePron" xml:id="PRON-ATTRIB"/>
-               <f name="posessivePron" xml:id="POSS"/><!-- possessive particle; http://www.isocat.org/datcat/DC-1895; Particle expressing ownship. -->
-               <f name="ReciprocalPronoun" xml:id="PRON-RECIP" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3445"/><!-- IN MIX a polysemous extension of the lexical item extended from 'face' (eg. orth 'nuu') is used in the role of Reciprocal Pronoun.  -->
+               <f name="pronouns">
+                  <vAlt>
+                     <symbol value="attributivePron" xml:id="PRON-ATTRIB"/>
+                     <symbol value="posessivePron" xml:id="POSS"/>
+                     <symbol value="reciprocalPronoun" xml:id="PRON-RECIP" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3445"/>
+                     <!-- IN MIX a polysemous extension of the lexical item extended from 'face' (eg. orth 'nuu') is used in the role of Reciprocal Pronoun.  -->
+                  </vAlt>
+               </f>         
             </fs>
          </div>
          
@@ -478,23 +469,25 @@ Prefix
          <div xml:id="Adverbials-MIX">
             <desc></desc>
             <fs>
-               <f name="adverb" xml:id="ADV"><default/></f>
-               <f name="adverbTemporal" xml:id="ADV-TEMP"/>
-               <f name="adverbEnumerative" xml:id="ADV-ENUM"/>
-               <f name="adverbManner" xml:id="ADV-MNR"/>
-               <f name="adverbAffirmative" xml:id="ADV-AFRM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2787">
-                  <!--  <fs/> (NEED TO FINISH ADDING UTTERANCE TYPES: Q-Y-N)-->
+               <f name="adverbs">
+                  <vAlt>
+                     <symbol value="adverb" xml:id="ADV"/>
+                     <symbol value="adverbTemporal" xml:id="ADV-TEMP"/>
+                     <symbol value="adverbEnumerative" xml:id="ADV-ENUM"/>
+                     <symbol value="adverbManner" xml:id="ADV-mnr"/>
+                     <symbol value="adverbAffirmative" xml:id="ADV-AFRM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2787"/>
+                        <symbol value="adverbNegative" xml:id="ADV-NEG" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1839"/>
+                     <symbol value="adverbDegree" xml:id="ADV-DEG"/>
+                  </vAlt>
                </f>
+              
                
                <!-- negative
                   http://www.isocat.org/datcat/DC-1839
                   negative   Type: complex/closed   Origin:    Profile: Morphosyntax
                   Definition: denotes the negation or the absence
-               -->
-               <f name="adverbNegative" xml:id="ADV-NEG">
-                  <!--  <fs/> adverbNegativePotential (NEED TO FINISH ADDING UTTERANCE TYPES: #Q-YN #RESP xml:id="ADV-NEG-POT")-->
-                  <!--  <fs/> (NEED TO FINISH ADDING UTTERANCE TYPES: DECL)-->
-                  <!-- 
+          
+
                              
 NegationOperator
 	http://www.isocat.org/datcat/DC-3334
@@ -505,9 +498,7 @@ NegationOperator
 negator
 	http://www.isocat.org/datcat/DC-4202
 -->
-               </f>
             </fs>
-            <fs feats="#ADV #DEG" type="DegreeADV"/>
          </div>
          
          <div xml:id="Quantifiers-MIX">
@@ -600,8 +591,12 @@ negator
                <desc>Adjectives are also sematically subject to the ontological domain to which they themselves belong (eg. COLOR, SIZE, TIME, etc) and thus these too will be connected to the higher level ontologies in the final corpus output</desc>
                
                <fs>
-                  <f name="ADJ" xml:id="ADJ"><default/></f>
-                  <f name="adjectiveAttribute" xml:id="ADJ-ATTRIB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-5242"/>
+                  <f name="adjectives">
+                     <vAlt>
+                        <symbol value="adjective" xml:id="ADJ"/>
+                        <symbol value="adjectiveAttribute" xml:id="ADJ-ATTRIB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-5242"/><!-- decide whether to use (2017/12/12) -->
+                     </vAlt>
+                  </f>
                </fs>
                
             </div><lb/>
@@ -619,20 +614,7 @@ negator
                   It is often found on nouns, pronouns, and verbs and expresses count distinctions--such as 'one' or 
                   'more than one'. The count distinctions typically, but not always, correspond to the actual count of 
                   the referents of the marked noun or Pronoun. [Crystal 1980: 245; Hartmann and Stork 1972: 155]</desc>
-               <!--  
-               <fvLib n="number">
-                  <fs>
-                     <f name="singular" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-252">
-                        <symbol value="SG"/>
-                     </f>
-                  </fs>
-                  <fs>
-                     <f name="plural" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-253">
-                        <symbol value="PL"/>
-                     </f>
-                  </fs>
-               </fvLib>
-               -->
+              
                <fvLib>
                   <fs>
                      <f name="number" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3351">
@@ -856,7 +838,7 @@ negator
             <desc>these are the transitivity features that occur in the MIX verb system; it is significant that certain verb categories described above will automatically take certain transitivity values (this needs to be specified in the declaration at some point, perhaps using 'fConstraints' and/or conditionals</desc>
    
             <fs><!--  Declerck, Thierry; The number of arguments controlled by a verbal predicate. -->
-               <f xml:id="VALNCY" name="valency" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1410">
+               <f name="valency" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1410">
                   <vAlt>
                      <symbol value="VAL-GRM0" xml:id="VAL-0"/><!-- Contains neither Actor or Undergoer -->
                      <symbol value="VAL-GRM1" xml:id="VAL-1"/><!-- Contains only Actor or Undergoer -->
