@@ -11,6 +11,7 @@
             <editor>Gisela Beckmann</editor>
             <respStmt>
                <resp>TEI Encoding</resp>
+               <resp>Annotation</resp>
                <name>Jack T. Bowers</name>
             </respStmt>
          </titleStmt>
@@ -44,7 +45,7 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
          Ask author about the variants! if they are location related or other!!
          -->
       </fileDesc>
-   </teiHeader>
+   </teiHeader><!-- after all annotations finished convert all //seg[@type="compound"]/* to //w[@type="compound"]/* -->
    <text>
       <body>
          <div><!-- p3 -->
@@ -63,11 +64,21 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e46">tecolote</w>
                      <w xml:id="d1e48">zancón</w>
                   </seg>
+                  <spanGrp type="translation">
+                     <span target="#d1e35" xml:lang="en">Guadalupe Burrowing Owl</span>
+                     <span target="#d1e35" xml:lang="en">Marie Galante Burrowing Owl</span>
+                     <span target="#d1e35" xml:lang="la">Athene cunicularia</span>
+                  </spanGrp>
                   <linkGrp type="translation">
                      <link target="#d1e35 #d1e40"/>
                      <link target="#d1e35 #d1e45"/>
                   </linkGrp>
-                  <!-- https://www.wikidata.org/wiki/Q1897132 -->
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e35" corresp="https://www.wikidata.org/wiki/Q1897132"/>
+                     <!--  
+                     <span type=""  target="" corresp=""></span>
+                     -->
+                  </spanGrp>               
                </item>
                <item>
                   <graphic url="Aves-02.png"/>
@@ -76,7 +87,7 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e56">xini</w>
                      <w xml:id="d1e58">kaꞌnu</w>
                   </seg>
-                  <seg xml:id="d1e60" xml:lang="es" type="compound">
+                  <seg xml:id="d1e60" xml:lang="es">
                      <w xml:id="d1e61">tecolote</w>
                   </seg>
                   <seg xml:id="d1e63" xml:lang="es" type="compound">
@@ -88,38 +99,55 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e53 #d1e63"/>
                   </linkGrp>
                   <spanGrp type="translation">
-                     <span target="#d1e53 #d1e60"/>
-                     <span target="#d1e53 #d1e63"/>
+                     <span xml:lang="en" target="#d1e53">Great Horned Owl</span>
                   </spanGrp>
-                  <!-- GH Owl
-                  https://www.wikidata.org/wiki/Q81515
-                  -->
+                  <spanGrp type="semantics">
+                     <span type="sense" corresp="https://www.wikidata.org/wiki/Q81515" target="#d1e53"/>
+
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-03.png"/>
-                  <seg xml:id="d1e71" xml:lang="mix">
+                  <seg xml:id="d1e71" xml:lang="mix" type="compound">
                      <w xml:id="d1e72">chumi</w>
                      <w xml:id="d1e74">sai</w>
                   </seg>
                   <seg xml:id="d1e76" xml:lang="es">
                      <w xml:id="d1e77">tecolotito</w>
                   </seg>
-                  <!-- Northern Saw-whet Owl
-                     https://www.wikidata.org/wiki/Q638019 -->
+                  <spanGrp type="translation">
+                     <span target="#d1e71" xml:lang="en">Northern Saw-whet Owl</span>                 
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e71 #d1e76"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" corresp="https://www.wikidata.org/wiki/Q638019" target="#d1e53"/>
+                     <span type="domain" target="#d1e71" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e71" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-04.png"/>
-                  <seg xml:id="d1e82" xml:lang="mix">
+                  <seg xml:id="d1e82" xml:lang="mix" type="compound">
                      <w xml:id="d1e83">kasa</w>
                      <w xml:id="d1e85">kutu</w>
                   </seg>
-                  <seg xml:id="d1e87" xml:lang="es">
+                  <seg xml:id="d1e87" xml:lang="es" type="compound">
                      <w xml:id="d1e88">tecolote</w>
                      <w xml:id="d1e90">rítmico</w>
                   </seg>
-                  <!-- Whiskered screech owl
-                     https://www.wikidata.org/wiki/Q1147207
-                  -->
+                  <spanGrp type="translation">
+                     <span target="#d1e82" xml:lang="en">Whiskered screech owl</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e82 #d1e87"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e82" corresp="https://www.wikidata.org/wiki/Q1147207"/>
+                     <span type="domain" target="#d1e82" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e82" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-05.png"/>
@@ -129,16 +157,22 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e98" xml:lang="es">
                      <w xml:id="d1e99">tapacamino</w>
                   </seg>
-                  <!-- 
-
-                  ? Nyctibius jamaicensis
-                  https://www.wikidata.org/wiki/Q930457
-                  
-                  ? Phalaenoptilus nuttallii
-                  Common Poorwill
-                  (Tapacamino tevii,
-                  https://www.wikidata.org/wiki/Q930457
-                  -->
+                  <spanGrp type="translation">
+                     <span target="#d1e95" xml:lang="en">Common Poorwill</span>
+                     <span xml:lang="la" target="#d1e95">Nyctibius jamaicensis</span>
+                     <span xml:lang="la" target="#d1e95">Phalaenoptilus nuttallii</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e95 #d1e98"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span cert="medium" type="sense" target="#d1e95" corresp="https://www.wikidata.org/wiki/Q930457"/>
+                     <span type="domain" target="#d1e95" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e95" corresp="http://dbpedia.org/resource/Animal"/>
+                     <!-- 
+                     <span type="domain" target="#" corresp=""/>
+                      -->
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -146,35 +180,36 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-06.png"/>
-                  <seg xml:id="d1e107" xml:lang="mix">
+                  <seg xml:id="d1e107" xml:lang="mix" type="compound">
                      <w xml:id="d1e108">kiti</w>
                      <w xml:id="d1e110">yaꞌa</w>
                   </seg>
                   <!-- synonyms or regional difference? -->
-                  <seg xml:id="d1e113" xml:lang="mix">
+                  <seg xml:id="d1e113" xml:lang="mix" type="compound">
                      <w xml:id="d1e114">yaꞌa</w>
                      <w xml:id="d1e116">naꞌnu</w>
                   </seg>
                   <!-- synonyms or regional difference? -->
-                  <seg xml:id="d1e119" xml:lang="es">
+                  <seg xml:id="d1e119" xml:lang="es" type="compound">
                      <w xml:id="d1e120">águila</w>
                      <w xml:id="d1e122">real</w>
                   </seg>
-                  <!-- Golden Eagle
-                  https://www.wikidata.org/wiki/Q41181
-                  -->
-                  <!-- TEST ANNOTATION-->
-                  <linkGrp type="translation"><!-- TRANSLATION LABELING (why don't links show up as valid in Author mode?)-->
+                  <spanGrp type="translation">
+                     <span target="#d1e107 #d1e113" xml:lang="en">Golden Eagle</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
                      <link target="#d1e77 #d1e83"/>
                      <link target="#d1e80 #d1e83"/>
                   </linkGrp>
-                  <linkGrp type="semantics" target="https://www.wikidata.org/wiki/Q41181">
-                     <link target="#d1e77 #d1e83 #d1e80"/>
-                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" corresp="https://www.wikidata.org/wiki/Q41181" target="#d1e107 #d1e113"/>
+                     <span type="domain" target="#d1e107 #d1e113" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e107 #d1e113" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-07.png"/>
-                  <seg xml:id="d1e135" xml:lang="mix">
+                  <seg xml:id="d1e135" xml:lang="mix" type="compound">
                      <w xml:id="d1e136">tasu</w>
                      <w xml:id="d1e138">lunchi</w>
                   </seg>
@@ -187,28 +222,43 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e146">litsi</w>
                   </seg>
                   <!-- synonyms or regional difference? -->
-                  <seg xml:id="d1e149" xml:lang="es">
+                  <seg xml:id="d1e149" xml:lang="es" type="compound">
                      <w xml:id="d1e150">halcón</w>
                      <w xml:id="d1e152">cernícalo</w>
                   </seg>
-                  <!-- 
-                  American Kestral
-                  https://www.wikidata.org/wiki/Q651545
-                  -->
+                  <linkGrp type="translation">
+                     <link target="#d1e135 #d1e141 #d1e145 #d1e149"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e135 #d1e141 #d1e145" xml:lang="en">American Kestral</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e135 #d1e141 #d1e145" corresp="https://www.wikidata.org/wiki/Q651545"/>
+                     <span type="domain" target="#d1e135 #d1e141 #d1e145" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e135 #d1e141 #d1e145" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>                            
                </item>
                <item>
                   <graphic url="Aves-08.png"/>
-                  <seg xml:id="d1e157" xml:lang="mix">
+                  <seg xml:id="d1e157" xml:lang="mix" type="compound">
                      <w xml:id="d1e158">yaꞌa</w>
                      <w xml:id="d1e160">choko</w>
                   </seg>
-                  <seg xml:id="d1e162" xml:lang="es">
+                  <seg xml:id="d1e162" xml:lang="es" type="compound">
                      <w xml:id="d1e163">aguililla</w>
                      <w xml:id="d1e165">colicorta</w>
                   </seg>
-                  <!-- Short-tailed Hawk
-                     https://www.wikidata.org/wiki/Q586194
-                  -->
+                  <spanGrp type="translation">
+                     <span target="#d1e157" xml:lang="en">Short-tailed Hawk</span>
+                  </spanGrp>
+                  <linkGrp type="translation"><!-- get spanish trans by checking value of @xml:lang in target id's -->
+                     <link target="#d1e162 #d1e157"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e157" corresp="https://www.wikidata.org/wiki/Q586194"/>
+                     <span type="domain" target="#d1e157" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e157" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-09.png"/>
@@ -218,10 +268,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e173" xml:lang="es">
                      <w xml:id="d1e174">halcón</w>
                   </seg>
-                  <!-- 
-                  Falcon
-                  https://www.wikidata.org/wiki/Q43489
-                  -->
+                  <linkGrp type="translation">
+                     <link target="#d1e170 #d1e173"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e170" xml:lang="en">Falcon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e170" corresp="https://www.wikidata.org/wiki/Q43489"/>
+                     <span type="domain" target="#d1e170" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e170" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -229,90 +286,135 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-10.png"/>
-                  <seg xml:id="d1e182" xml:lang="mix">
+                  <seg xml:id="d1e182" xml:lang="mix" type="compound">
                      <w xml:id="d1e183">xiꞌan</w>
                      <w xml:id="d1e185">lunchi</w>
                   </seg>
-                  <seg xml:id="d1e187" xml:lang="es">
+                  <seg xml:id="d1e187" xml:lang="es" type="compound">
                      <w xml:id="d1e188">gavilán</w>
                      <w xml:id="d1e190">pechirufo</w>
                      <w xml:id="d1e192">menor</w>
                   </seg>
-                  <seg xml:id="d1e194" xml:lang="es">
+                  <seg xml:id="d1e194" xml:lang="es" type="compound">
                      <w xml:id="d1e195">gavilán</w>
                      <w xml:id="d1e197">pajarero</w>
                   </seg>
-                  <!-- 
-                     Sharp-shinned hawk
-                  https://www.wikidata.org/wiki/Q386569
-                  -->
+                  <linkGrp type="translation">
+                     <link target="#d1e182 #d1e187"/>
+                     <link target="#d1e182 #d1e194"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e182" xml:lang="en">Sharp-shinned hawk</span>                
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e182" corresp="https://www.wikidata.org/wiki/Q386569"/>
+                     <span type="domain" target="#d1e182" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e182" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-11.png"/>
-                  <seg xml:id="d1e202" xml:lang="mix">
+                  <seg xml:id="d1e202" xml:lang="mix" type="compound">
                      <w xml:id="d1e203">ñaꞌmi</w>
                      <w xml:id="d1e205">yucha</w>
                   </seg>
-                  <seg xml:id="d1e207" xml:lang="es">
+                  <seg xml:id="d1e207" xml:lang="es" type="compound">
                      <w xml:id="d1e208">aguililla</w>
                      <w xml:id="d1e210">negra</w>
                      <w xml:id="d1e212">menor</w>
                   </seg>
-                  <!-- Common Black Hawk
-                     https://www.wikidata.org/wiki/Q1267120
-                  -->
+                  <linkGrp type="translation">
+                     <link target="#d1e202 #d1e207"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e202" xml:lang="en">Common Black Hawk</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e202" corresp="https://www.wikidata.org/wiki/Q1267120"/>
+                     <span type="domain" target="#d1e202" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e202" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-12.png"/>
-                  <seg xml:id="d1e217" xml:lang="mix">
+                  <seg xml:id="d1e217" xml:lang="mix" type="compound">
                      <w xml:id="d1e218">xiꞌan</w>
                      <w xml:id="d1e220">tintuyu</w>
                      <w xml:id="d1e222">lunchi</w>
                   </seg>
-                  <seg xml:id="d1e224" xml:lang="es">
+                  <seg xml:id="d1e224" xml:lang="es" type="compound">
                      <w xml:id="d1e225">halcón</w>
                      <w xml:id="d1e227">esmerejón</w>
                   </seg>
-                  <!-- 
-                  Merlin
-                  https://www.wikidata.org/wiki/Q131918
-                  -->
+                  <linkGrp type="translation">
+                     <link target="#d1e217 #d1e224"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e217" xml:lang="en">Merlin</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e217" corresp="https://www.wikidata.org/wiki/Q131918"/>
+                     <span type="domain" target="#d1e217" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e217" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-13.png"/>
-                  <seg xml:id="d1e232" xml:lang="mix">
+                  <seg xml:id="d1e232" xml:lang="mix" type="compound">
                      <w xml:id="d1e233">xiꞌan</w>
                      <w xml:id="d1e235">tintuyu</w>
                   </seg>
-                  <seg xml:id="d1e237" xml:lang="es">
+                  <seg xml:id="d1e237" xml:lang="es" type="compound">
                      <w xml:id="d1e238">halcón</w>
                      <w xml:id="d1e240">peregrino</w>
                   </seg>
-                  <seg xml:id="d1e242" xml:lang="es">
+                  <seg xml:id="d1e242" xml:lang="es" type="compound">
                      <w xml:id="d1e243">halcón</w>
                      <w xml:id="d1e245">pollero</w>
                   </seg>
-                  <!-- alternate species!? -->
-                  <!--  Peregrin Falcon ?
-                     https://www.wikidata.org/wiki/Q30535
-                  -->
+                  <linkGrp type="translation">
+                     <link target="#d1e232 #d1e237"/>
+                     <link target="#d1e232 #d1e242"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e232" xml:lang="en">Peregrin Falcon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span cert="medium" type="sense" target="#d1e232" corresp="https://www.wikidata.org/wiki/Q30535"/>
+                     <span type="domain" target="#d1e232" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e232" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-14.png"/>
-                  <seg xml:id="d1e251" xml:lang="mix">
+                  <seg xml:id="d1e251" xml:lang="mix" type="compound">
                      <w xml:id="d1e252">xiꞌan</w>
                      <w xml:id="d1e254">ñuꞌu</w>
                   </seg>
-                  <seg xml:id="d1e256" xml:lang="es">
+                  <seg xml:id="d1e256" xml:lang="es" type="compound">
                      <w xml:id="d1e257">aguililla</w>
                      <w xml:id="d1e259">gris</w>
                   </seg>
-                  <!--Grey Hawk  https://www.wikidata.org/wiki/Q1260070-->
-                  <seg xml:id="d1e262" xml:lang="es">
+                  
+                  <seg xml:id="d1e262" xml:lang="es" type="compound">
                      <w xml:id="d1e263">gavilán</w>
                      <w xml:id="d1e265">barrado</w>
                   </seg>
-                  <!-- Barred Hawk https://www.wikidata.org/wiki/Q1270132 -->
+                  
+                  <spanGrp type="translation">
+                     <span n="1" target="#d1e251" xml:lang="en">Grey Hawk</span>             
+                     <span n="2" target="#d1e251" xml:lang="en">Barred Hawk</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e251 #d1e262"/>
+                     <link target="#d1e251 #d1e256"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span n="1" cert="medium" type="sense" target="#" corresp="https://www.wikidata.org/wiki/Q1260070"/>
+                     <span n="2" cert="medium" type="sense" target="#" corresp="https://www.wikidata.org/wiki/Q1270132"/>
+                     <span type="domain" target="#d1e262" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e262" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -320,46 +422,90 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-15.png"/>
-                  <seg xml:id="d1e273" xml:lang="mix">
+                  <seg xml:id="d1e273" xml:lang="mix" type="compound">
                      <w xml:id="d1e274">lochi</w>
                      <w xml:id="d1e276">nii</w>
                   </seg>
-                  <seg xml:id="d1e278" xml:lang="es">
+                  <seg xml:id="d1e278" xml:lang="es" type="compound">
                      <w xml:id="d1e279">aura</w>
                      <w xml:id="d1e281">cabecirroja</w>
                   </seg>
+                  <spanGrp type="translation">
+                     <span target="#d1e273" xml:lang="en">Turkey Vulture</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e273 #d1e278"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e273" corresp="https://www.wikidata.org/wiki/Q245181"/>
+                     <span type="domain" target="#d1e273" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e273" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-16.png"/>
-                  <seg xml:id="d1e285" xml:lang="mix">
+                  <seg xml:id="d1e285" xml:lang="mix" type="compound">
                      <w xml:id="d1e286">lochi</w>
                      <w xml:id="d1e288">nchaꞌi</w>
                   </seg>
-                  <seg xml:id="d1e290" xml:lang="es">
+                  <seg xml:id="d1e290" xml:lang="es" type="compound">
                      <w xml:id="d1e291">zopilote</w>
                      <w xml:id="d1e293">negro</w>
                   </seg>
+                  <spanGrp type="translation">
+                     <span target="#d1e285" xml:lang="en">Black Vulture</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e285 #d1e290"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e285" corresp="https://www.wikidata.org/wiki/Q213366"/>
+                     <span type="domain" target="#d1e285" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e285" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-17.png"/>
                   <seg xml:id="d1e297" xml:lang="mix">
                      <w xml:id="d1e298">tsikoꞌo</w>
                   </seg>
-                  <seg xml:id="d1e300" xml:lang="es">
+                  <seg xml:id="d1e300" xml:lang="es" type="compound">
                      <w xml:id="d1e301">caracara</w>
                      <w xml:id="d1e303">quebranta</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e297 #d1e300"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e297" xml:lang="en">Crested Caracara</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e297" corresp="https://www.wikidata.org/wiki/Q40455928"/>
+                     <span type="domain" target="#d1e297" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e297" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-18.png"/>
-                  <seg xml:id="d1e307" xml:lang="mix">
+                  <seg xml:id="d1e307" xml:lang="mix" type="compound">
                      <w xml:id="d1e308">tsatu</w>
                      <w xml:id="d1e310">yaa</w>
                   </seg>
-                  <seg xml:id="d1e312" xml:lang="es">
+                  <seg xml:id="d1e312" xml:lang="es" type="compound">
                      <w xml:id="d1e313">aguililla</w>
                      <w xml:id="d1e315">coliblanca</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e307 #d1e312"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e307" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e307" corresp=""/>
+                     <span type="domain" target="#d1e307" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e307" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -370,32 +516,65 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e322" xml:lang="mix">
                      <w xml:id="d1e323">tikunchi</w>
                   </seg>
-                  <seg xml:id="d1e325" xml:lang="es">
+                  <seg xml:id="d1e325" xml:lang="es" type="compound">
                      <w xml:id="d1e326">tordo</w>
                      <w xml:id="d1e328">ojirojo</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e322 #d1e325"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e322" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e322" corresp=""/>
+                     <span type="domain" target="#d1e322" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e322" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-20.png"/>
-                  <seg xml:id="d1e332" xml:lang="mix">
+                  <seg xml:id="d1e332" xml:lang="mix" type="compound">
                      <w xml:id="d1e333">tikunchi</w>
                      <w xml:id="d1e335">soko</w>
                      <w xml:id="d1e337">kuaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e339" xml:lang="es">
+                  <seg xml:id="d1e339" xml:lang="es" type="compound">
                      <w xml:id="d1e340">tordo</w>
                      <w xml:id="d1e342">sargento</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e332 #d1e339"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e332" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e332" corresp=""/>
+                     <span type="domain" target="#d1e332" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e332" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-21.png"/>
-                  <seg xml:id="d1e346" xml:lang="mix">
+                  <seg xml:id="d1e346" xml:lang="mix" type="compound">
                      <w xml:id="d1e347">saa</w>
-                     <w xml:id="d1e349">ncha</w>'<w xml:id="d1e352">i</w>
+                     <w xml:id="d1e349">ncha'i</w>
                   </seg>
                   <seg xml:id="d1e354" xml:lang="es">
                      <w xml:id="d1e355">zanate</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e346 #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e346" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e346" corresp=""/>
+                     <span type="domain" target="#d1e346" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e346" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-22.png"/>
@@ -405,21 +584,44 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e362" xml:lang="es">
                      <w xml:id="d1e363">cuervo</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e359 #d1e362"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e359" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e359" corresp=""/>
+                     <span type="domain" target="#d1e359" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e359" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-23.png"/>
-                  <seg xml:id="d1e367" xml:lang="mix">
+                  <seg xml:id="d1e367" xml:lang="mix" type="compound">
                      <w xml:id="d1e368">saa</w>
                      <w xml:id="d1e370">tiꞌla</w>
                   </seg>
-                  <seg xml:id="d1e372" xml:lang="mix">
+                  <seg xml:id="d1e372" xml:lang="mix" type="compound">
                      <w xml:id="d1e373">saa</w>
                      <w xml:id="d1e375">tuli</w>
                   </seg>
-                  <seg xml:id="d1e377" xml:lang="es">
+                  <seg xml:id="d1e377" xml:lang="es" type="compound">
                      <w xml:id="d1e378">garrapatero</w>
                      <w xml:id="d1e380">pijuy</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e367 #"/>
+                     <link target="#d1e367 #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e367" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e367" corresp=""/>
+                     <span type="domain" target="#d1e367" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e367" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -430,38 +632,60 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e387" xml:lang="mix">
                      <w xml:id="d1e388">sata</w>
                   </seg>
-                  <seg xml:id="d1e390" xml:lang="es">
+                  <seg xml:id="d1e390" xml:lang="es" type="compound">
                      <w xml:id="d1e391">paloma</w>
                      <w xml:id="d1e393">doméstic</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp="" ana="#"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-25.png"/>
-                  <seg xml:id="d1e397" xml:lang="mix">
+                  <seg xml:id="d1e397" xml:lang="mix" type="compound">
                      <w xml:id="d1e398">nchuu</w>
                      <w xml:id="d1e400">nukuaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e402" xml:lang="mix">
+                  <seg xml:id="d1e402" xml:lang="mix" type="compound">
                      <w xml:id="d1e403">nchuu</w>
                      <w xml:id="d1e405">tsaꞌa</w>
                      <w xml:id="d1e407">kuaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e409" xml:lang="es">
+                  <seg xml:id="d1e409" xml:lang="es" type="compound">
                      <w xml:id="d1e410">paloma</w>
                      <w xml:id="d1e412">perdiz</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp="" ana="#"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-26.png"/>
-                  <seg xml:id="d1e416" xml:lang="mix">
+                  <seg xml:id="d1e416" xml:lang="mix" type="compound">
                      <w xml:id="d1e417">nchuu</w>
                      <w xml:id="d1e419">yuku</w>
                   </seg>
-                  <seg xml:id="d1e421" xml:lang="mix">
+                  <seg xml:id="d1e421" xml:lang="mix" type="compound">
                      <w xml:id="d1e422">nchuu</w>
                      <w xml:id="d1e424">yaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e426" xml:lang="es">
+                  <seg xml:id="d1e426" xml:lang="es" type="compound">
                      <w xml:id="d1e427">paloma</w>
                      <w xml:id="d1e429">arroyera</w>
                   </seg>
@@ -469,6 +693,21 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e432">paloma</w>
                      <w xml:id="d1e434">turca</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-27.png"/>
@@ -478,17 +717,41 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e441" xml:lang="es">
                      <w xml:id="d1e442">tortolita</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-28.png"/>
-                  <seg xml:id="d1e446" xml:lang="mix">
+                  <seg xml:id="d1e446" xml:lang="mix" type="compound">
                      <w xml:id="d1e447">nchuu</w>
                      <w xml:id="d1e449">lunchi</w>
                   </seg>
-                  <seg xml:id="d1e451" xml:lang="es">
+                  <seg xml:id="d1e451" xml:lang="es" type="compound">
                      <w xml:id="d1e452">tórtola</w>
                      <w xml:id="d1e454">común</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -496,55 +759,115 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-29.png"/>
-                  <seg xml:id="d1e461" xml:lang="mix">
+                  <seg xml:id="d1e461" xml:lang="mix" type="compound">
                      <w xml:id="d1e462">nchuu</w>
                      <w xml:id="d1e464">kava</w>
                   </seg>
-                  <seg xml:id="d1e466" xml:lang="es">
+                  <seg xml:id="d1e466" xml:lang="es" type="compound">
                      <w xml:id="d1e467">paloma</w>
                      <w xml:id="d1e469">morada</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-30.png"/>
-                  <seg xml:id="d1e473" xml:lang="mix">
+                  <seg xml:id="d1e473" xml:lang="mix" type="compound">
                      <w xml:id="d1e474">nchuu</w>
                      <w xml:id="d1e476">kuꞌu</w>
                   </seg>
-                  <seg xml:id="d1e478" xml:lang="mix">
+                  <seg xml:id="d1e478" xml:lang="mix" type="compound">
                      <w xml:id="d1e479">nchuu</w>
                      <w xml:id="d1e481">nuu</w>
                      <w xml:id="d1e483">kuꞌu</w>
                   </seg>
-                  <seg xml:id="d1e485" xml:lang="es">
+                  <seg xml:id="d1e485" xml:lang="es" type="compound">
                      <w xml:id="d1e486">paloma</w>
                      <w xml:id="d1e488">huilota</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-31.png"/>
-                  <seg xml:id="d1e492" xml:lang="mix">
+                  <seg xml:id="d1e492" xml:lang="mix" type="compound">
                      <w xml:id="d1e493">nchuu</w>
                      <w xml:id="d1e495">xchila</w>
                   </seg>
-                  <seg xml:id="d1e497" xml:lang="es">
+                  <seg xml:id="d1e497" xml:lang="es" type="compound">
                      <w xml:id="d1e498">paloma</w>
                      <w xml:id="d1e500">doméstica</w>
                      <w xml:id="d1e502">con</w>
                      <w xml:id="d1e504">collar</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-32.png"/>
-                  <seg xml:id="d1e508" xml:lang="mix">
+                  <seg xml:id="d1e508" xml:lang="mix" type="compound">
                      <w xml:id="d1e509">nchuu</w>
                      <w xml:id="d1e511">ntsitsi</w>
                   </seg>
-                  <seg xml:id="d1e513" xml:lang="es">
+                  <seg xml:id="d1e513" xml:lang="es" type="compound">
                      <w xml:id="d1e514">pintu</w>
                      <w xml:id="d1e516">paloma</w>
                      <w xml:id="d1e518">aliblanca</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -552,14 +875,29 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-33.png"/>
-                  <seg xml:id="d1e525" xml:lang="mix">
+                  <seg xml:id="d1e525" xml:lang="mix" type="compound">
                      <w xml:id="d1e526">koni</w>
                      <w xml:id="d1e528">yuku</w>
                   </seg>
-                  <seg xml:id="d1e530" xml:lang="es">
+                  <seg xml:id="d1e530" xml:lang="es" type="compound">
                      <w xml:id="d1e531">pava</w>
                      <w xml:id="d1e533">cojolita</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-34.png"/>
@@ -569,38 +907,94 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e540" xml:lang="es">
                      <w xml:id="d1e541">chachalaca</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-35.png"/>
                   <seg xml:id="d1e545" xml:lang="mix">
                      <w xml:id="d1e546">kañuu</w>
                   </seg>
-                  <seg xml:id="d1e548" xml:lang="es">
+                  <seg xml:id="d1e548" xml:lang="es" type="compound">
                      <w xml:id="d1e549">codorniz</w>
                      <w xml:id="d1e551">arlequín</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-36.png"/>
                   <seg xml:id="d1e555" xml:lang="mix">
                      <w xml:id="d1e556">kañuu</w>
                   </seg>
-                  <seg xml:id="d1e558" xml:lang="es">
+                  <seg xml:id="d1e558" xml:lang="es" type="compound">
                      <w xml:id="d1e559">codorniz</w>
                      <w xml:id="d1e561">cotuí</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-37.png"/>
-                  <seg xml:id="d1e565" xml:lang="mix">
+                  <seg xml:id="d1e565" xml:lang="mix" type="compound">
                      <w xml:id="d1e566">chuun</w>
                      <w xml:id="d1e568">yuku</w>
                   </seg>
-                  <seg xml:id="d1e570" xml:lang="es">
+                  <seg xml:id="d1e570" xml:lang="es" type="compound">
                      <w xml:id="d1e571">gallina</w>
                      <w xml:id="d1e573">del</w>
                      <w xml:id="d1e575">monte</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
             </list>
          </div>
@@ -608,21 +1002,32 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-38.png"/>
-                  <seg xml:id="d1e582" xml:lang="mix">
+                  <seg xml:id="d1e582" xml:lang="mix" type="compound">
                      <w xml:id="d1e583">saa</w>
                      <w xml:id="d1e585">miꞌncha</w>
                   </seg>
                   <seg xml:id="d1e587" xml:lang="es">
                      <w xml:id="d1e588">cuitlacoche</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="# #"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#" xml:lang="en"></span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#" corresp=""/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-39.png"/>
-                  <seg xml:id="d1e592" xml:lang="mix">
+                  <seg xml:id="d1e592" xml:lang="mix" type="compound">
                      <w xml:id="d1e593">saa</w>
                      <w xml:id="d1e595">ñuꞌma</w>
                   </seg>
-                  <seg xml:id="d1e597" xml:lang="es">
+                  <seg xml:id="d1e597" xml:lang="es" type="compound">
                      <w xml:id="d1e598">primavera</w>
                      <w xml:id="d1e600">zorzal</w>
                   </seg>
@@ -641,21 +1046,21 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e612" xml:lang="mix">
                      <w xml:id="d1e613">lasimi</w>
                   </seg>
-                  <seg xml:id="d1e615" xml:lang="es">
+                  <seg xml:id="d1e615" xml:lang="es" type="compound">
                      <w xml:id="d1e616">rascador</w>
                      <w xml:id="d1e618">oaxaqueño</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-42.png"/>
-                  <seg xml:id="d1e622" xml:lang="mix">
+                  <seg xml:id="d1e622" xml:lang="mix" type="compound">
                      <w xml:id="d1e623">saa</w>
                      <w xml:id="d1e625">ntaka</w>
                   </seg>
                   <seg xml:id="d1e627" xml:lang="mix">
                      <w xml:id="d1e628">lasimi</w>
                   </seg>
-                  <seg xml:id="d1e630" xml:lang="es">
+                  <seg xml:id="d1e630" xml:lang="es" type="compound">
                      <w xml:id="d1e631">rascador</w>
                      <w xml:id="d1e633">pardo</w>
                   </seg>
@@ -669,80 +1074,80 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e640" xml:lang="mix">
                      <w xml:id="d1e641">kuili</w>
                   </seg>
-                  <seg xml:id="d1e643" xml:lang="es">
+                  <seg xml:id="d1e643" xml:lang="es" type="compound">
                      <w xml:id="d1e644">chara</w>
                      <w xml:id="d1e646">azuleja</w>
                   </seg>
-                  <seg xml:id="d1e648" xml:lang="es">
+                  <seg xml:id="d1e648" xml:lang="es" type="compound">
                      <w xml:id="d1e649">chara</w>
                      <w xml:id="d1e651">pechirrayada</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-44.png"/>
-                  <seg xml:id="d1e655" xml:lang="mix">
+                  <seg xml:id="d1e655" xml:lang="mix" type="compound">
                      <w xml:id="d1e656">saa</w>
                      <w xml:id="d1e658">ntakuatu</w>
                   </seg>
-                  <seg xml:id="d1e660" xml:lang="mix">
+                  <seg xml:id="d1e660" xml:lang="mix" type="compound">
                      <w xml:id="d1e661">saa</w>
                      <w xml:id="d1e663">veñuꞌu</w>
                   </seg>
-                  <seg xml:id="d1e665" xml:lang="es">
+                  <seg xml:id="d1e665" xml:lang="es" type="compound">
                      <w xml:id="d1e666">cenzontle</w>
                      <w xml:id="d1e668">aliblanco</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-45.png"/>
-                  <seg xml:id="d1e672" xml:lang="mix">
+                  <seg xml:id="d1e672" xml:lang="mix" type="compound">
                      <w xml:id="d1e673">saa</w>
                      <w xml:id="d1e675">nchaa</w>
                      <w xml:id="d1e677">yuku</w>
                   </seg>
-                  <seg xml:id="d1e679" xml:lang="es">
+                  <seg xml:id="d1e679" xml:lang="es" type="compound">
                      <w xml:id="d1e680">chara</w>
                      <w xml:id="d1e682">copetona</w>
                   </seg>
-                  <seg xml:id="d1e684" xml:lang="es">
+                  <seg xml:id="d1e684" xml:lang="es" type="compound">
                      <w xml:id="d1e685">chara</w>
                      <w xml:id="d1e687">crestada</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-46.png"/>
-                  <seg xml:id="d1e691" xml:lang="mix">
+                  <seg xml:id="d1e691" xml:lang="mix" type="compound">
                      <w xml:id="d1e692">saa</w>
                      <w xml:id="d1e694">vilu</w>
                   </seg>
-                  <seg xml:id="d1e696" xml:lang="es">
+                  <seg xml:id="d1e696" xml:lang="es" type="compound">
                      <w xml:id="d1e697">mímido</w>
                      <w xml:id="d1e699">gris</w>
                   </seg>
-                  <seg xml:id="d1e701" xml:lang="es">
+                  <seg xml:id="d1e701" xml:lang="es" type="compound">
                      <w xml:id="d1e702">pájaro</w>
                      <w xml:id="d1e704">gato</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-47.png"/>
-                  <seg xml:id="d1e708" xml:lang="mix">
+                  <seg xml:id="d1e708" xml:lang="mix" type="compound">
                      <w xml:id="d1e709">saa</w>
                      <w xml:id="d1e711">nuu</w>
                      <w xml:id="d1e713">nchaa</w>
                   </seg>
-                  <seg xml:id="d1e715" xml:lang="mix">
+                  <seg xml:id="d1e715" xml:lang="mix" type="compound">
                      <w xml:id="d1e716">saa</w>
                      <w xml:id="d1e718">nchaa</w>
                   </seg>
-                  <seg xml:id="d1e720" xml:lang="emix">
+                  <seg xml:id="d1e720" xml:lang="mix" type="compound">
                      <w xml:id="d1e721">tsili</w>
                   </seg>
-                  <seg xml:id="d1e723" xml:lang="es">
+                  <seg xml:id="d1e723" xml:lang="es" type="compound">
                      <w xml:id="d1e724">cenzontle</w>
                      <w xml:id="d1e726">azul</w>
                   </seg>
-                  <seg xml:id="d1e728" xml:lang="es">
+                  <seg xml:id="d1e728" xml:lang="es" type="compound">
                      <w xml:id="d1e729">mulato</w>
                      <w xml:id="d1e731">común</w>
                   </seg>
@@ -753,19 +1158,19 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-48.png"/>
-                  <seg xml:id="d1e738" xml:lang="mix">
+                  <seg xml:id="d1e738" xml:lang="mix" type="compound">
                      <w xml:id="d1e739">saa</w>
                      <w xml:id="d1e741">kuun</w>
                      <w xml:id="d1e743">savi</w>
                   </seg>
-                  <seg xml:id="d1e745" xml:lang="es">
+                  <seg xml:id="d1e745" xml:lang="es" type="compound">
                      <w xml:id="d1e746">tengofrío</w>
                      <w xml:id="d1e748">grande</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-49.png"/>
-                  <seg xml:id="d1e752" xml:lang="mix">
+                  <seg xml:id="d1e752" xml:lang="mix" type="compound">
                      <w xml:id="d1e753">xini</w>
                      <w xml:id="d1e755">nkava</w>
                   </seg>
@@ -775,21 +1180,21 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-50.png"/>
-                  <seg xml:id="d1e762" xml:lang="mix">
+                  <seg xml:id="d1e762" xml:lang="mix" type="compound">
                      <w xml:id="d1e763">saa</w>
                      <w xml:id="d1e765">friu</w>
                   </seg>
-                  <seg xml:id="d1e767" xml:lang="es">
+                  <seg xml:id="d1e767" xml:lang="es" type="compound">
                      <w xml:id="d1e768">papamoscas</w>
                      <w xml:id="d1e770">copetón</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-51.png"/>
-                  <seg xml:id="d1e774" xml:lang="mix">
+                  <seg xml:id="d1e774" xml:lang="mix" type="compound">
                      <w xml:id="d1e775">tixiñu</w>
                   </seg>
-                  <seg xml:id="d1e777" xml:lang="mix">
+                  <seg xml:id="d1e777" xml:lang="mix" type="compound">
                      <w xml:id="d1e778">saa</w>
                      <w xml:id="d1e780">kula</w>
                   </seg>
@@ -799,7 +1204,7 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-52.png"/>
-                  <seg xml:id="d1e787" xml:lang="mix">
+                  <seg xml:id="d1e787" xml:lang="mix" type="compound">
                      <w xml:id="d1e788">saa</w>
                      <w xml:id="d1e790">xini</w>
                      <w xml:id="d1e792">tachi</w>
@@ -814,7 +1219,7 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-53.png"/>
-                  <seg xml:id="d1e803" xml:lang="mix">
+                  <seg xml:id="d1e803" xml:lang="mix" type="compound">
                      <w xml:id="d1e804">tixikua</w>
                      <w xml:id="d1e806">naꞌnu</w>
                   </seg>
@@ -845,34 +1250,34 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-55.png"/>
-                  <seg xml:id="d1e833" xml:lang="mix">
+                  <seg xml:id="d1e833" xml:lang="mix" type="compound">
                      <w xml:id="d1e834">saa</w>
                      <w xml:id="d1e836">kuaan</w>
                      <w xml:id="d1e838">ntipintu</w>
                   </seg>
-                  <seg xml:id="d1e840" xml:lang="es">
+                  <seg xml:id="d1e840" xml:lang="es" type="compound">
                      <w xml:id="d1e841">picogrueso</w>
                      <w xml:id="d1e843">amarillo</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-56.png"/>
-                  <seg xml:id="d1e847" xml:lang="mix">
+                  <seg xml:id="d1e847" xml:lang="mix" type="compound">
                      <w xml:id="d1e848">stiꞌin</w>
                      <w xml:id="d1e850">kuaan</w>
                   </seg>
-                  <seg xml:id="d1e852" xml:lang="es">
+                  <seg xml:id="d1e852" xml:lang="es" type="compound">
                      <w xml:id="d1e853">picogrueso</w>
                      <w xml:id="d1e855">pechicafé</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-57.png"/>
-                  <seg xml:id="d1e859" xml:lang="mix">
+                  <seg xml:id="d1e859" xml:lang="mix" type="compound">
                      <w xml:id="d1e860">stiꞌin</w>
                      <w xml:id="d1e862">nchaa</w>
                   </seg>
-                  <seg xml:id="d1e864" xml:lang="es">
+                  <seg xml:id="d1e864" xml:lang="es" type="compound">
                      <w xml:id="d1e865">picogrueso</w>
                      <w xml:id="d1e867">azul</w>
                   </seg>
@@ -895,17 +1300,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e882" xml:lang="mix">
                      <w xml:id="d1e883">letsa</w>
                   </seg>
-                  <seg xml:id="d1e885" xml:lang="mix">
+                  <seg xml:id="d1e885" xml:lang="mix" type="compound">
                      <w xml:id="d1e886">saa</w>
                      <w xml:id="d1e888">kuaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e890" xml:lang="mix">
+                  <seg xml:id="d1e890" xml:lang="mix" type="compound">
                      <w xml:id="d1e891">saa</w>
                      <w xml:id="d1e893">kusu</w>
                      <w xml:id="d1e895">kiti</w>
                      <w xml:id="d1e897">luu</w>
                   </seg>
-                  <seg xml:id="d1e899" xml:lang="es">
+                  <seg xml:id="d1e899" xml:lang="es" type="compound">
                      <w xml:id="d1e900">mosquero</w>
                      <w xml:id="d1e902">cardenalito</w>
                   </seg>
@@ -918,35 +1323,35 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e909" xml:lang="mix">
                      <w xml:id="d1e910">tivatsa</w>
                   </seg>
-                  <seg xml:id="d1e912" xml:lang="es">
+                  <seg xml:id="d1e912" xml:lang="es" type="compound">
                      <w xml:id="d1e913">golondrina</w>
                      <w xml:id="d1e915">cariblanca</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-61.png"/>
-                  <seg xml:id="d1e919" xml:lang="mix">
+                  <seg xml:id="d1e919" xml:lang="mix" type="compound">
                      <w xml:id="d1e920">saa</w>
                      <w xml:id="d1e922">kuaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e924" xml:lang="mix">
+                  <seg xml:id="d1e924" xml:lang="mix" type="compound">
                      <w xml:id="d1e925">saa</w>
                      <w xml:id="d1e927">chaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e929" xml:lang="es">
+                  <seg xml:id="d1e929" xml:lang="es" type="compound">
                      <w xml:id="d1e930">tangara</w>
                      <w xml:id="d1e932">roja</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-62.png"/>
-                  <seg xml:id="d1e936" xml:lang="mix">
+                  <seg xml:id="d1e936" xml:lang="mix" type="compound">
                      <w xml:id="d1e937">saa</w>
                      <w xml:id="d1e939">kuaan</w>
                      <w xml:id="d1e941">xini</w>
                      <w xml:id="d1e943">kuaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e945" xml:lang="es">
+                  <seg xml:id="d1e945" xml:lang="es" type="compound">
                      <w xml:id="d1e946">tangara</w>
                      <w xml:id="d1e948">aliblanco</w>
                   </seg>
@@ -960,48 +1365,48 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <seg xml:id="d1e955" xml:lang="mix">
                      <w xml:id="d1e956">xchio</w>
                   </seg>
-                  <seg xml:id="d1e958" xml:lang="mix">
+                  <seg xml:id="d1e958" xml:lang="mix" type="compound">
                      <w xml:id="d1e959">saa</w>
                      <w xml:id="d1e961">kuaan</w>
                   </seg>
-                  <seg xml:id="d1e963" xml:lang="es">
+                  <seg xml:id="d1e963" xml:lang="es" type="compound">
                      <w xml:id="d1e964">semillerito</w>
                      <w xml:id="d1e966">collarejo</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-64.png"/>
-                  <seg xml:id="d1e970" xml:lang="mix">
+                  <seg xml:id="d1e970" xml:lang="mix" type="compound">
                      <w xml:id="d1e971">saa</w>
                      <w xml:id="d1e973">krista</w>
                   </seg>
-                  <seg xml:id="d1e975" xml:lang="mix">
+                  <seg xml:id="d1e975" xml:lang="mix" type="compound">
                      <w xml:id="d1e976">saa</w>
                      <w xml:id="d1e978">lirru</w>
                   </seg>
-                  <seg xml:id="d1e980" xml:lang="es">
+                  <seg xml:id="d1e980" xml:lang="es" type="compound">
                      <w xml:id="d1e981">pavito</w>
                      <w xml:id="d1e983">aliblanco</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-65.png"/>
-                  <seg xml:id="d1e987" xml:lang="mix">
+                  <seg xml:id="d1e987" xml:lang="mix" type="compound">
                      <w xml:id="d1e988">saa</w>
                      <w xml:id="d1e990">pintu</w>
                   </seg>
-                  <seg xml:id="d1e992" xml:lang="es">
+                  <seg xml:id="d1e992" xml:lang="es" type="compound">
                      <w xml:id="d1e993">chipe</w>
                      <w xml:id="d1e995">negriamarillo</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-66.png"/>
-                  <seg xml:id="d1e999" xml:lang="mix">
+                  <seg xml:id="d1e999" xml:lang="mix" type="compound">
                      <w xml:id="d1e1000">saa</w>
                      <w xml:id="d1e1002">tirriti</w>
                   </seg>
-                  <seg xml:id="d1e1004" xml:lang="mix">
+                  <seg xml:id="d1e1004" xml:lang="mix" type="compound">
                      <w xml:id="d1e1005">chipe</w>
                      <w xml:id="d1e1007">grupidorado</w>
                   </seg>
@@ -1011,34 +1416,34 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-67.png"/>
-                  <seg xml:id="d1e1014" xml:lang="mix">
+                  <seg xml:id="d1e1014" xml:lang="mix" type="compound">
                      <w xml:id="d1e1015">saa</w>
                      <w xml:id="d1e1017">tsika</w>
                      <w xml:id="d1e1019">nuu</w>
                      <w xml:id="d1e1021">saꞌa</w>
                      <w xml:id="d1e1023">kuaan</w>
                   </seg>
-                  <seg xml:id="d1e1025" xml:lang="mix">
+                  <seg xml:id="d1e1025" xml:lang="mix" type="compound">
                      <w xml:id="d1e1026">saa</w>
                      <w xml:id="d1e1028">nuu</w>
                      <w xml:id="d1e1030">saꞌa</w>
                   </seg>
-                  <seg xml:id="d1e1032" xml:lang="es">
+                  <seg xml:id="d1e1032" xml:lang="es" type="compound">
                      <w xml:id="d1e1033">monjita</w>
                      <w xml:id="d1e1035">elegante</w>
                   </seg>
-                  <seg xml:id="d1e1037" xml:lang="es">
+                  <seg xml:id="d1e1037" xml:lang="es" type="compound">
                      <w xml:id="d1e1038">eufonia</w>
                      <w xml:id="d1e1040">gorriazul</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-68.png"/>
-                  <seg xml:id="d1e1044" xml:lang="mix">
+                  <seg xml:id="d1e1044" xml:lang="mix" type="compound">
                      <w xml:id="d1e1045">chariki</w>
                      <w xml:id="d1e1047">kuaan</w>
                   </seg>
-                  <seg xml:id="d1e1049" xml:lang="es">
+                  <seg xml:id="d1e1049" xml:lang="es" type="compound">
                      <w xml:id="d1e1050">chipe</w>
                      <w xml:id="d1e1052">corona</w>
                      <w xml:id="d1e1054">negra</w>
@@ -1050,18 +1455,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-69.png"/>
-                  <seg xml:id="d1e1061" xml:lang="mix">
+                  <seg xml:id="d1e1061" xml:lang="mix" type="compound">
                      <w xml:id="d1e1062">saa</w>
                      <w xml:id="d1e1064">tika</w>
                      <w xml:id="d1e1066">yoko</w>
                      <w xml:id="d1e1068">itu</w>
                   </seg>
-                  <seg xml:id="d1e1070" xml:lang="mix">
+                  <seg xml:id="d1e1070" xml:lang="mix" type="compound">
                      <w xml:id="d1e1071">saa</w>
                      <w xml:id="d1e1073">kuaan</w>
                   </seg>
                   <!-- ambig with bolsero -->
-                  <seg xml:id="d1e1076" xml:lang="es">
+                  <seg xml:id="d1e1076" xml:lang="es" type="compound">
                      <w xml:id="d1e1077">jilguero</w>
                      <w xml:id="d1e1079">dorsioscuro</w>
                   </seg>
@@ -1071,11 +1476,11 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-70.png"/>
-                  <seg xml:id="d1e1086" xml:lang="mix">
+                  <seg xml:id="d1e1086" xml:lang="mix" type="compound">
                      <w xml:id="d1e1087">saa</w>
                      <w xml:id="d1e1089">tusava</w>
                   </seg>
-                  <seg xml:id="d1e1091" xml:lang="mix">
+                  <seg xml:id="d1e1091" xml:lang="mix" type="compound">
                      <w xml:id="d1e1092">saa</w>
                      <w xml:id="d1e1094">kuaan</w>
                   </seg>
@@ -1089,40 +1494,40 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-71.png"/>
-                  <seg xml:id="d1e1105" xml:lang="mix">
+                  <seg xml:id="d1e1105" xml:lang="mix" type="compound">
                      <w xml:id="d1e1106">saa</w>
                      <w xml:id="d1e1108">nuu</w>
                      <w xml:id="d1e1110">kuꞌu</w>
                   </seg>
-                  <seg xml:id="d1e1112" xml:lang="mix">
+                  <seg xml:id="d1e1112" xml:lang="mix" type="compound">
                      <w xml:id="d1e1113">saa</w>
                      <w xml:id="d1e1115">kuaan</w>
                   </seg>
-                  <seg xml:id="d1e1117" xml:lang="es">
+                  <seg xml:id="d1e1117" xml:lang="es" type="compound">
                      <w xml:id="d1e1118">vireo</w>
                      <w xml:id="d1e1120">dorado</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-72.png"/>
-                  <seg xml:id="d1e1124" xml:lang="mix">
+                  <seg xml:id="d1e1124" xml:lang="mix" type="compound">
                      <w xml:id="d1e1125">saa</w>
                      <w xml:id="d1e1127">nuu</w>
                      <w xml:id="d1e1129">ntika</w>
                   </seg>
-                  <seg xml:id="d1e1131" xml:lang="es">
+                  <seg xml:id="d1e1131" xml:lang="es" type="compound">
                      <w xml:id="d1e1132">chipe</w>
                      <w xml:id="d1e1134">negrigris</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-73.png"/>
-                  <seg xml:id="d1e1138" xml:lang="mix">
+                  <seg xml:id="d1e1138" xml:lang="mix" type="compound">
                      <w xml:id="d1e1139">saa</w>
                      <w xml:id="d1e1141">ntiki</w>
                      <w xml:id="d1e1143">luu</w>
                   </seg>
-                  <seg xml:id="d1e1145" xml:lang="es">
+                  <seg xml:id="d1e1145" xml:lang="es" type="compound">
                      <w xml:id="d1e1146">chipe</w>
                      <w xml:id="d1e1148">rey</w>
                      <w xml:id="d1e1150">mexicano</w>
@@ -1130,12 +1535,12 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                </item>
                <item>
                   <graphic url="Aves-74.png"/>
-                  <seg xml:id="d1e1154" xml:lang="mix">
+                  <seg xml:id="d1e1154" xml:lang="mix" type="compound">
                      <w xml:id="d1e1155">saa</w>
                      <w xml:id="d1e1157">ntiki</w>
                      <w xml:id="d1e1159">naꞌnu</w>
                   </seg>
-                  <seg xml:id="d1e1161" xml:lang="es">
+                  <seg xml:id="d1e1161" xml:lang="es" type="compound">
                      <w xml:id="d1e1162">papamoscas</w>
                      <w xml:id="d1e1164">rayado</w>
                   </seg>
@@ -1146,26 +1551,26 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
             <list>
                <item>
                   <graphic url="Aves-75.png"/>
-                  <seg xml:id="d1e1171" xml:lang="mix">
+                  <seg xml:id="d1e1171" xml:lang="mix" type="compound">
                      <w xml:id="d1e1172">saa</w>
                      <w xml:id="d1e1174">ntitsaꞌin</w>
                   </seg>
-                  <seg xml:id="d1e1176" xml:lang="es">
+                  <seg xml:id="d1e1176" xml:lang="es" type="compound">
                      <w xml:id="d1e1177">paro</w>
                      <w xml:id="d1e1179">embozalado</w>
                   </seg>
                </item>
                <item>
                   <graphic url="Aves-76.png"/>
-                  <seg xml:id="d1e1183" xml:lang="mix">
+                  <seg xml:id="d1e1183" xml:lang="mix" type="compound">
                      <w xml:id="d1e1184">saa</w>
                      <w xml:id="d1e1186">yaꞌa</w>
                   </seg>
-                  <seg xml:id="d1e1188" xml:lang="mix">
+                  <seg xml:id="d1e1188" xml:lang="mix" type="compound">
                      <w xml:id="d1e1189">saa</w>
                      <w xml:id="d1e1191">kava</w>
                   </seg>
-                  <seg xml:id="d1e1193" xml:lang="es">
+                  <seg xml:id="d1e1193" xml:lang="es" type="compound">
                      <w xml:id="d1e1194">troglodita</w>
                      <w xml:id="d1e1196">saltapared</w>
                   </seg>

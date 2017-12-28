@@ -389,12 +389,12 @@ or “#PRON-EMPH”;
 		
 
 
-- Decide on consitant target for wiktionary glosses,
+- Decide on consistent target for wiktionary glosses,
  > general entry or specific pos!?
 
 - Where to put “usage”? (gram | semantics | other…)?!!
 
-- How to translate context based meanings (where no lexicalized item permanantly exists in lexicon)?
+- How to translate context based meanings (where no lexicalized item perminately exists in lexicon)?
 	> (he’s approaching fast)
 
 - tagging “complementizer” as “#CMTZR”
@@ -419,3 +419,29 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 - Improve XSLT scripts used to extract and display annotated content
 
 - Add the ability to look for translations from <linkGrp> contents in script as well!
+
+- MWE in standoff tag as <span type=“phrase” ana=“#MWE”> 
+  > How to handle when they are interrogative in nature?
+
+- Use of LATIN SMALL LETTER SALTILLO “ꞌ”  - (Unicode: U+A78C, UTF-8: EA 9E 8C) vs APOSTROPHE “‘“ (Unicode: U+0027, UTF-8: 27)
+  > DISCUSS with Mille 
+
+- Need to add @orig to <w> in order to deal with 
+
+- Make ODD for Utterance files allowing:
+ 	> @orig to <w> in order to deal with
+	> @notation in <seg> 
+
+- On what level should greetings and salutations be tagged?
+  - How do we make those that are single word and phrasal in nature are included in the same category? 
+	> Can we have #GRT in both type=“pos” and (type=“discourse” or type=“phrase” or type=“sentence”)?
+
+	>>(Current method for “how are you”?)
+               <seg xml:id="d1e90" xml:lang="mix" function="utterance" notation="orth" type="interrogative">
+
+		….
+               <spanGrp type="gram">
+              	 <span type="sentence" target="#d1e90" ana="#GRT #Q"/>
+
+- Decide, should I tag yes-no question as #Q #YN or #Q-YN?
+	> Currently using #Q-YN

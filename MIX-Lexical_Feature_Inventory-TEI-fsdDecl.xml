@@ -108,25 +108,6 @@ Types of concept relation can include:
 	mix:
  -->
         <!-- 
-        
-"InterlinearGlossedText"
-	fVal="http://www.isocat.org/datcat/DC-3268"
-	gold: Interlinear glossed text (IGT) is a linguistic data structure meant to display morphosyntactic structure: 
-	morphemes, morpheme boundaries, morpheme types (clitics, prefixes, reduplicated forms), morphosyntactic features/values and part of speech information. 
-	At a minimum, an instance of IGT includes a single line of source language followed by a translation line. 
-
-Often, a second gloss line is included to show detailed morphosyntactic structure using both words and phrases from the target language
-and various labels, or 'grams', that indicate morphosyntactic features/values, etc. It is possible to include separate lines for the 
-orthographic form, phonetic form, and phonological form.
- Standards for IGT include the Leipzig Glossing Rules
-
-
-"transcribed form"
-	fVal="http://www.isocat.org/datcat/DC-322"
-
-	A form of a term or lexeme resulting from an operation whereby the characters of one writing system are represented by characters 
-	from another writing system, taking into account the pronunciation of the characters converted.
-
 
 'lexical unit'
 	"http://www.isocat.org/datcat/DC-2486"
@@ -144,18 +125,12 @@ Prefix
 'discourseUnit'
 	'http://www.isocat.org/datcat/DC-4577' 
 	
-
-	
 'Repetitive'	
 	<f name="Repetitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3457" xml:id="REPET"/> 
 	GOLD: A derivational unit that derives transitives from other transitive or intransitive stems adding the meaning of repetition to the resulting form. [concept mentioned in Kibort 2008c: 9]
  -->
         <!-- Higher Level Features (Cognitive)-->
         <!-- CONCEPTUAL-LEXICAL INTERFACE
- 
- 
- 
- Etymology @type:
  
 "LexicalizedConcept"
 	fVal="http://www.isocat.org/datcat/DC-3295"
@@ -198,8 +173,7 @@ Prefix
               <fDecl name="HearsayUtterances-MIX">
                  <!-- Hearsay utterances can be semantically intended to infer a question, or can be used in a more delarative way such as a means to provide evidence for something.
          May occur with MODAL marker in MIX. Many or all observations of this in the dataset so far have all been using the predicate + BPT 'ndakánì-na nũ̀ṹ....' which can be translated as "someone told me..." 
-         Category akin to subjunctive but the latter isn't currently being chosen because of the syntactic implications of the terminology which doesn't best fit for MIX.. However given the lack of official 
-         category for term in ISOcat registry, this category may be changed if a pre-existing DataCat which fits comparably is found -->
+         Category akin to subjunctive but the latter isn't currently being chosen because of the syntactic implications of the terminology which doesn't best fit for MIX.. However given the lack of official category for term in ISOcat registry, this category may be changed if a pre-existing DataCat which fits comparably is found -->
                  <vRange>
                     <fs>
                        <f name="hearsay" xml:id="HRSY"/>
@@ -208,7 +182,6 @@ Prefix
                  </vRange>
               </fDecl>
               
-
               
               <fDecl name="ResponseUtterances">
                  <fDescr>Responses will vary take the appropriate form according to the specific FOCUS TYPE of the QUESTION 
@@ -251,10 +224,7 @@ Prefix
                     <desc>(gold) <ref>Copula</ref>
                     <quote>Indicates a relationship of equivalency between the subject and predicate or complement of a clause. 
                     Verbal copulas have essentially the same morphosyntactic properties as verbs: English 'be', Spanish 'ser', and Russian 'byt’' are illustrations of this class.
-                    Nonverbal copular items include the the pro-copula - a demonstrative or personal pronoun which serves as the linker between subject and predicate nominal,
-                    and which is obligatory in nominal predication - and particle copulas, which have their origin in a variety of markers of discourse-oriented phenomena such
-                    as topicalization, backgrounding, or contrastive focus for subjects or predicates. Zero copula refers to a construction in which the relation between a subject
-                    and a nominal predicate is not marked by an overt item. Zero copula is mandatory in some languages, such as Sinhalese, whereas it is conditional or restricted in other languages, such as Russian. [Stassen 2008]</quote>
+                    Nonverbal copular items include the the pro-copula - a demonstrative or personal pronoun which serves as the linker between subject and predicate nominal, and which is obligatory in nominal predication - and particle copulas, which have their origin in a variety of markers of discourse-oriented phenomena such as topicalization, backgrounding, or contrastive focus for subjects or predicates. Zero copula refers to a construction in which the relation between a subject and a nominal predicate is not marked by an overt item. Zero copula is mandatory in some languages, such as Sinhalese, whereas it is conditional or restricted in other languages, such as Russian. [Stassen 2008]</quote>
                     
                     </desc>
                  </fDescr>
@@ -332,14 +302,6 @@ Prefix
                     -->
                  </vRange>
               </fDecl>
-              <!-- 
-              
-                 
-
-	
-	
-              
-              -->
 
            
               <fDecl name="Tense" xml:id="TENSE">
@@ -394,10 +356,19 @@ Prefix
                  </fDescr>
                  <vRange>
                     <fs>
+                       <f name="mood">
+                          <symbol value="realis" xml:id="REAL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
+                          <symbol value="modal" xml:id="MOD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1329"/>
+                          <symbol value="" xml:id=""/>
+                          <symbol value="" xml:id=""/>
+                          <!-- others?
+                          counter factual
+                          -->
+                       </f>
                        <f name="realis" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393" xml:id="REALIS"/>
                        
                        <f name="DeonticModality" xml:id="DEONTIC" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3155"/>
-                       <f name="modal" xml:id="MOD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1329"/>
+
                        <!-- Verb form that is usually used with another verb to express ideas such as possibilities, permission, or intention. -->
                        
                        <f name="counterFactual"></f>
@@ -496,43 +467,55 @@ negator
          </div>
          
          <div xml:id="Quantifiers-MIX">
-            <desc><label>Quantifiers</label>All members of category conceptual base is rooted in the primitive cognitive knowledge of QUANTITY; Quantifiers can be applied on the grammatical and or lexical/cognitive level...In MIX, this feature system should perhaps be unified with the 'number' feature system declared above as they share many of the same lexical (phonological) particals and components in their surface structure. This is likey due to these lexical items deing derrived from common conceptual sources.</desc>
-            
-            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3439" xml:id="QNTF"><!-- this corresponds to higher level ontological features -->
-               <f name="cardinalNumber" xml:id="NUM-CRDNL"></f>
-               <f name="quantifierEnumerative" xml:id="QNTF-ENUM"/><!-- where a specific number (other than 1) is given as the quantifier: MIX: IPA)  ĩ̀ĩ̀ tí.nà	'nine dogs' -->
-               <f name="quantifierALL" xml:id="QNTF-ALL"/> <!-- where the quantifier is THE ENTIRE population of the item in question-->
-               <f name="quantifierMajority" xml:id="QNTF-MAJ"/> <!-- where the quantifier is THE MAJORITY of the population or quantity of the item in question-->                      
-               <f name="quantifierPart" xml:id="QNTF-PART"/><!-- this should be modified and refined to allow for part-many vs part-paucal -->
-               <f name="quantifierHalf" xml:id="QNTF-HLF"/> <!-- Where the quantifier is HALF of the population or quantity of the entity in question; Where occurs with 'countableNoun' 'half' is also countable	-->
-               <f name="quantifierMany" xml:id="QNTF-INDEF"/> 
-               <f name="quantifierPaucal" xml:id="QNTF-PAUC" dcr:datcat="http://www.isocat.org/datcat/DC-3379"/><!--(gold) A category of number denoting the concept 'a few', more than two and usually less than seven, but the exact number varies widely according to context. Prototypically, it refers to a class of three to five individuals and is always restricted to humans.  -->
-               <f name="quantifierNone" xml:id="QNTF-Ø"/>      <!-- where the quantifier is NONE of the population of the item in question-->
-               <f name="quantifierSG" xml:id="QNTF-SG"/>    <!-- (sameAs: (art-indef) in mix, this corresponds to the item: (ipa) "ĩ́ː" (sampa) "i:_n_H" (orth) "iin";Note: this is syntactically and semantically equivalent to a "DETERMINER" or "INDEF ART" as it corresponds to the number "one"-->
-               <!-- sameAs "indefinte article" -->
-               <f name="quantifierPL" xml:id="QNTF-PL"/>    <!-- Note: this is referring to the mix plural marker (ipa) "we" (sampa) "w e_M" (orth) we,  which is non-specific in terms of number (e.g. NOT="ALL"/4, 5 etc..)-->                     
+            <desc><label>Quantifiers</label>All members of category conceptual base is rooted in the primitive cognitive knowledge of QUANTITY; Quantifiers can be applied on the grammatical and or lexical/cognitive level...In MIX, this feature system should perhaps be unified with the 'number' feature system declared above as they share many of the same lexical (phonological) particals and components in their surface structure. This is likey due to these lexical items deing derrived from common conceptual sources.</desc>       
+            <fs>
+               <f name="quantifier">
+                  <symbol value="quanitifier" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3439"  xml:id="QNTF"/>
+               </f>
             </fs>
+            
+            
+              <!-- where a specific number (other than 1) is given as the quantifier: MIX: IPA)  ĩ̀ĩ̀ tí.nà	'nine dogs' -->
+               <!-- where the quantifier is THE ENTIRE population of the item in question-->
+               <!-- where the quantifier is THE MAJORITY of the population or quantity of the item in question-->                      
+               <!-- this should be modified and refined to allow for part-many vs part-paucal -->
+               <!-- Where the quantifier is HALF of the population or quantity of the entity in question; Where occurs with 'countableNoun' 'half' is also countable	-->
+               
+<!--http://www.isocat.org/datcat/DC-3379(gold) A category of number denoting the concept 'a few', more than two and usually less than seven, but the exact number varies widely according to context. Prototypically, it refers to a class of three to five individuals and is always restricted to humans.  -->
+               <!-- where the quantifier is NONE of the population of the item in question-->
+               <!-- (sameAs: (art-indef) in mix, this corresponds to the item: (ipa) "ĩ́ː" (sampa) "i:_n_H" (orth) "iin";Note: this is syntactically and semantically equivalent to a "DETERMINER" or "INDEF ART" as it corresponds to the number "one"-->
+               <!-- sameAs "indefinte article" -->
+              <!-- Note: this is referring to the mix plural marker (ipa) "we" (sampa) "w e_M" (orth) we,  which is non-specific in terms of number (e.g. NOT="ALL"/4, 5 etc..)-->                     
          </div>
          
          <div xml:id="Demonstratives-MIX">
             <figure><graphic url="../diagrams-original/LexicalFeature_Diagram-Demonstratives-mix_01.png"/></figure>
-            <desc><label>Demonstratives</label>A demonstrative is a determiner that is used deictically to indicate a referent's spatial, temporal, or discourse location.
-            A demonstrative functions as a modifier of a noun, or a pronoun [Crystal 1997: 312].
+            <desc><label>Demonstratives</label>A demonstrative is a determiner that is used deictically to indicate a referent's spatial, temporal, or discourse location. A demonstrative functions as a modifier of a noun, or a pronoun [Crystal 1997: 312].
          </desc>
          </div>
          
-         <fs type="demonstrative" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3153">
-            <f name="demonstrativeDistal" xml:id="DEM-DIST"/><!-- THIS INVOLVES CO-OCCURRANCE OF MULTIPLE HIGHER AND SAME LEVEL FEATURES (CONFIG-NUMBER)-->
-            <f name="demonstrativeProximal" xml:id="DEM-PROX"/><!-- THIS INVOLVES CO-OCCURRANCE OF MULTIPLE HIGHER AND SAME LEVEL FEATURES (CONFIG-NUMBER)-->
-            <f name="demonstrativeDeictic" xml:id="DEM-DEIC"/><!-- THIS INVOLVES CO-OCCURRANCE OF MULTIPLE HIGHER AND SAME LEVEL FEATURES (CONFIG-NUMBER)-->
-            <f name="demonstrativeDiscourse" xml:id="DEM-DISC"/>
+         <fs>
+            <f name="demonstrative">
+               <symbol value="demonstrative" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3153" xml:id="DEM"/>
+            </f>
+         </fs>
+         
             <!--	DISCOURSE; "-DISC-" eng: "the aforementioned", "the former", "the latter"; MIX: "inka", ?"ñaka"-->
             
-            <f name="demonstrativeTemporal" xml:id="DEM-TEMP"/>
             <!-- TEMPORAL; "-TEMP" (@"#ADV-TEMP)
 			"-DEIC"	eng: "(right) now";	MIX: "michuni", 
 			"-DIST"	eng: "then", "at that time", "when" , "last(x)"; MIX: "ta" 
  		-->    
+         
+         <fs>
+            <f name="configuration">
+               <vAlt>
+                  <symbol value="distal" xml:id="DIST"/>
+                  <symbol value="distal" xml:id="PROX"/>
+                  <symbol value="distal" xml:id="DEIC"/>              
+               </vAlt>
+
+            </f>
          </fs>
         
          <div xml:id="Determiners-MIX">
@@ -541,18 +524,22 @@ negator
                b) Number: 'singular', 'plural';             
                c) Spatial Reference: 'distal', 'proximal', 'deictic';
             </desc> 
-            <fs type="determiner" xml:id="DET">
-               <f name="demonstrativeDeterminer" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1269"/><!--demonstrative determiner:  Determiner used to point to an entity in the situation or elsewhere in a sentence.	(Crystal 2003) -->
-               
-               <f name="relativeDeterminer" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1379"/><!-- relativeDeterminer :Determiner related to a referent.	(src:MAF) -->
+            
+            <fs>
+               <f name="determiners">
+                  <vAlt>
+                     <symbol value="determiner" xml:id="DET"/>
+                  </vAlt>
+               </f>
             </fs>
             
+<!--http://www.isocat.org/datcat/DC-1269 demonstrative determiner:  Determiner used to point to an entity in the situation or elsewhere in a sentence.	(Crystal 2003) -->
+               
+<!--http://www.isocat.org/datcat/DC-1379 relativeDeterminer :Determiner related to a referent.	(src:MAF) -->
+
             <!-- Determiners have their own internal agreement feature structure eg:, (sg|pl),(distal|proximal),optional(gender),'this'|'that', 'these'|'those', -->       
             
          </div>
-         
-         
-
          
          <div xml:id="Adpositions-MIX">
             <desc><label>Adpositions</label> As per Langacker (1978) Adpositions/propositions etc. will always semantically occur as the 'Trajector'
@@ -574,6 +561,10 @@ negator
                   <fs xml:id="ADPOS-DIR" feats="#ADPOS #DIR #V-MTN"/>
                </f>
             </fs>
+            
+            
+            
+            
             
          </div>
          <fs>
@@ -673,84 +664,9 @@ negator
                
                <p>In the aforementioned unmarked MIX constructions, the (A) or (U) argument is characterized by a personal inflection that will alter at least some part of the offset portion of the verbal argument (for this reason, these case will henceforth be represented in this discussion as “-(A)”, “-(U)”). In “unmarked” constructions, this will appear in one of the following ways;</p>
                
-               <p><num>i)</num> The personal markers may act as a clitic, attaching itself intact to the offset side of the base or gloss form of a given lexical unit:</p>
-               
-               <label>Verbs:</label>
-               <eg>
-                  <seg><seg>ká.ʔà</seg> <c>-</c><seg>jù</seg> <seg>sã́.ʔã̀ sa.ví</seg></seg>
-                  <seg><seg>speak</seg><c>-</c><seg>1s</seg> <seg>Mixtepec-Mixtec</seg></seg>
-               </eg><lb/>
-               
-               <label>Nouns (Marking Possessive):</label>
-               <fs></fs>
-               <p>These markers are attached to nouns to express possession; </p>
-              <eg>
-                 <seg>maː</seg> <seg type="translation" rend="italic" xml:lang="eng">mother</seg>
-                 <seg><seg>maː</seg> <c>-</c><seg>jù</seg></seg>
-                 <seg style="igt" ana="#igt"><seg>mother</seg><c>-</c><seg ana="#pers1 #SG">1s</seg></seg> 
-                 <seg type="translation" rend="italic" xml:lang="eng">my mother</seg>
-              </eg>
-               
-               <label>Adjectives = (Stative Construction):</label>
-               
-               <p>When attached to adjectives, this creates a stative construction. In accordance with Van Valin 2005,
-               we can thus represent the logical structure of these constructions as:</p>
-               
-               <ab><formula notation="fol">be’ ( x, [ADJ’])</formula></ab>
-               
-               <eg>
-                  <seg>sú.kù</seg>
-                  <seg type="translation" rend="italic" xml:lang="en">tall</seg><lb/>
-                  <seg><seg>sú.kù</seg> <c>-</c><seg>jù</seg></seg>	<seg type="translation" rend="italic" xml:lang="eng">I am tall</seg>
-                  <seg><seg>sú.kù</seg> <c>-</c><seg>ní</seg></seg> 	<seg type="translation" rend="italic" xml:lang="eng">you are tall (2s.form)</seg>
-               </eg>
-               <lb/>
-            
-               <p>ii) In the context of certain phonetic and phonological characteristics in a given verb, the person markers may
-               sometimes be realized by replacing the final ((V)+tone) portion of the verb:
-                  <eg>
-                     <seg>nʤè.ʔé	</seg>
-                     <seg>V.(Gloss) ’see’</seg>
-                  <lb/>
-                     <seg><seg>a</seg> <seg>nʤè.ʔ<seg>ú</seg></seg>  <seg>méé</seg></seg>
-                     <seg>(Y-N)Q.mkr.- V.see.-(2s.inf= (V(u) + rising tone )).  1s.ii.</seg>
-                     <seg type="translation" rend="italic" xml:lang="eng">‘do you see me’</seg>
-                  </eg>
-               </p><lb/>
-               
-               <note>In accordance with the Leipzig Glossing Rules for interlinear glossed text, the use of the backslash character '<c>\</c>' is used to express the presence of a morpho-phonological change, that is not segmentable in the typical linear manner. 
-                  In MIX, this is used to represent tonal alterations.</note>
-               
-               <p>iii) The third realization of personal inflection in MIX is a phonological process in which the lexical tone associated with the personal marker is transposed over the final lexical tone of the predicating core argument:
-               <eg>
-                  <seg>ske ta</seg>	    <seg>ske tà</seg>
-                  <seg>run (Gloss)</seg>		<seg>V.’run’-(1s.inf = falling tone)</seg>
-               <lb/>
-                  <seg>ske ta</seg>	>     <seg>ske tà</seg>
-                  <seg>run(Gloss)</seg>		<seg>V.’run’-(2s.inf = low tone)</seg>
-               </eg>
-               </p><lb/>
-            
-               <p>iii.b) Where the aforementioned offset lexical tone of the predicating argument is non-level and non-high the the lexical tone associated with the personal marker is combined with the former:
-               <eg>
-                  Nouns (=Possessive):
-                  <seg>kʷì.ʔí</seg>	<seg>kʷì.ʔí<c>-</c><seg>ì</seg></seg>
-                  <seg>fruit</seg>	<seg>fruit-<seg>1s</seg></seg>
-                  <seg rend="italic" type="translation" xml:lang="eng">my fruit</seg>
-               </eg>
-               </p> <lb/>
-            
-               <p>iv) Where the “person”, or argument in a Unmarked Transitive construction is an Undergoer, personal marker may be placed in -(U) position in the “Unmarked Transitive Template above [ V-(A), -(U) ]:
-               
-               As Undergoer of V(trans):
-               <eg>
-                  <seg><seg>V-INTRANS</seg> </seg>
-                  <seg><seg>nʤé.ʔ</seg><c>-</c><seg>è</seg> <c>-</c><seg>ɣú</seg></seg>
-                  <seg>see<c>\</c>(1s=falling tone) <seg>2s.inf</seg></seg>
-                  <seg rend="italic" type="translation" xml:lang="eng">‘I see you’</seg>
-               </eg>
+             
 
-               </p><lb/>
+        <lb/>
             
                <label>Zero Argument (A-Transitive) Constructions</label>
                <p> In every MIX A-transitive construction thus far observed, the core verbal argument is a combination of the Copula ‘ku˥˩’ with another lexical unit. </p>
@@ -867,67 +783,7 @@ negator
                  
             <fs xml:id="DITRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275" feats="#VAL-3"/>      
             -->
-            <div xml:id="A-TransitiveVerbs-MIX">
-            <figure><graphic url=""/></figure><lb/>
-            <label>Copula + N(weather)</label>
-               <p>As is the case in other Mixtec varieties, the addition of the copula '<seg rend="italic" style="ipa" ana="#ipa">kũ̀ũ̀</seg>' to a nominal lexical unit having to do with natural elements creates a LS such as the following: do’ ([(N>V’])</p>
-               
-               <eg>
-                  <seg>sa.ví</seg>
-                  <seg><seg>N</seg> <seg>rain</seg></seg><lb/>
-               </eg><lb/>
-               <eg>
-                  <seg>ĩ́ĩ́</seg>
-                  <seg><seg>N</seg> <seg>hail</seg></seg><lb/>
-               </eg><lb/>
-               <eg>
-                  <seg>kũ̀ũ̀</seg>
-                  <seg rend="caps">cop <certainty locus="value"/></seg><lb/>
-               </eg><lb/>
-               <eg>
-                  <seg><seg>kũ̀ũ̀</seg> <seg>sa.ví</seg></seg>
-                  <seg style="translation" xml:lang="eng" rend="italic"><seg>it<pc>’</pc><seg>s</seg> <seg>raining</seg></seg></seg>
-                  <ref target="../MIX-Transcriptions-OriginalLR.xml#v-atrns-be.raining.01"/>
-               </eg><lb/>
-               <eg>
-                  <seg><seg><seg>kùù</seg>.<seg>kũ̀ũ̀</seg></seg> <seg>sa.ví</seg></seg>
-                  <seg><seg><seg>cop-incomp</seg>.<seg>cop-</seg></seg> <seg>rain</seg></seg>
-                  <seg style="translation" xml:lang="eng" rend="italic"><seg rend="italic">it will rain</seg></seg>
-               </eg><lb/>
-               <eg>
-                  <seg><seg>kũ̀ũ̀</seg> <seg>ĩ́ĩ́</seg></seg>
-                  <seg style="igt" ana="#igt"><seg>cop-<certainty locus="value"/></seg></seg>
-                  <seg style="translation" xml:lang="eng" rend="italic">it<pc>’</pc>s hailing</seg>
-               </eg><lb/>
-               
-               <label><seg>V[MR=0]</seg> <c>+</c> <seg>ADV-TEMP</seg></label><lb/>     
-               <desc>In the zero macro-role “weather constructions, the default order is maintained and since there is no expectation of any additional core arguments in an A-transitive construction, the adverbial can be placed directly following the stative verb.</desc>
-               
-               <eg>
-                  <seg><seg>V</seg> <seg>ADV-TEMP</seg></seg>
-                  <seg style="ipa"><seg>nì</seg><seg>kũ̀ũ̀</seg><seg>sà.vì</seg> <seg>ta.ku.ni</seg></seg>
-                  <seg style="igt" ana="#igt"><seg>cmpl</seg><c>-</c> <c>rain</c>=Ø <seg>adv-temp</seg></seg>
-                  <seg style="translation" xml:lang="eng" rend="italic">it rained last night</seg>
-                  <ref target="../MIX-Transcriptions-OriginalLR.xml#S_DEC_rain_COMPL_last_night_03_spkrTS"/>
-               </eg><lb/>
-               <eg>
-                  <seg><seg>V</seg> <seg>ADV</seg></seg>
-                  <seg style="ipa"><seg>kũ̀.kũ̀ũ̀</seg> <seg>sà.vì</seg> <seg>ʃʧã̀ã̀</seg></seg>
-                  <ref target="../MIX-Transcriptions-OriginalLR.xml#S_DEC_rain_FUT_tomorrow_03_spkrTS"/>
-               </eg><lb/>
-               
-               <label>(FUT.i)-V. rain=Ø  ADV(temporal) ’tomorrow’</label><lb/>
-               
-               <label>Completive Marker + Copula</label><lb/>            
-               <desc>When the completive marker “nì” is combined with the copula, the result translates as ‘happened';</desc>
-               <eg>
-                  <seg>kùù</seg>	<seg>Incompletive Copula</seg>
-                  <seg>nì</seg>	<seg>Completive (past) prefix</seg>
-               </eg><lb/>
-               <eg>
-                  <seg><seg>nʤìì</seg> <seg><seg>nì</seg> <seg>kùù</seg></seg></seg>
-                  <seg ana="#igt" style="igt">Q WH-PRED ((CMPL)+(COP))=‘happen’[MR=Ø]</seg>
-               </eg><lb/>
+            <div xml:id="A-TransitiveVerbs-MIX">   
             
          </div>  
             <div xml:id="IntransitiveConstructions-MIX">
