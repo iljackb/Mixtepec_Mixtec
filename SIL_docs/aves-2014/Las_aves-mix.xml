@@ -18,7 +18,8 @@
          <publicationStmt>
             <p>Publication Information</p>
          </publicationStmt>
-         <sourceDesc><!-- 
+         <sourceDesc>
+            <!-- 
             © 2014 por el Instituto Lingüístico de Verano, A.C. Derechos reservados conforme a la ley.
 Las siguientes imágenes provienen de la colección de arte
 para ilustraciones de la Universidad del Sur de Florida, "http://etc.usf.edu/clipart", y son usadas con permiso:
@@ -47,7 +48,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
          <!-- 
          After all have uri's, write program to retrieve and add latin names for each from the wikidata source
          -->
+         <!--
+         May in later step create a subtypology to distinguish that (domain) Bird is subclass of (domain) Animal
+         -->
       </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            
+         </editorialDecl>
+         <segmentation>
+            <p>In the standoff annotation markup, in this document, since there are only single lexical items (simplex, or compound) the pointers in the standoff <tag>span</tag> <att>target</att> will be the <att>xml:id</att> value of the <tag>seg</tag>. This is in contrast to the utterance files where in the case of a single lexical item the value of the<att>xml:id</att> value of the <tag>w</tag> (or all <tag>w</tag> components of a compound/complex lexical item) is pointed to due to the need for consistancy as in those files there is the possibility that the full <tag>seg</tag> may need to be pointed to in order to annotate a full phrase or sentence. Thus this file cannot re-use any extraction scripts that are created for the utterance files without making the needed adaptations to the structural details described above.</p>
+         </segmentation>
+      </encodingDesc>
    </teiHeader><!-- after all annotations finished convert all //seg[@type="compound"]/* to //w[@type="compound"]/* -->
    <text>
       <body>
@@ -871,13 +883,13 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e533">cojolita</w>
                   </seg>
                   <linkGrp type="translation">
-                     <link target="# #"/>
+                     <link target="#d1e525 #d1e530"/>
                   </linkGrp>
                   <spanGrp type="translation">
-                     <span target="#" xml:lang="en"></span>
+                     <span target="#d1e525" xml:lang="en">Crested Guan</span>
                   </spanGrp>
                   <spanGrp type="semantics">
-                     <span type="sense" target="#" corresp=""/>
+                     <span type="sense" target="#" corresp="https://www.wikidata.org/wiki/Q848140"/>
                      <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
                      <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -891,15 +903,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e541">chachalaca</w>
                   </seg>
                   <linkGrp type="translation">
-                     <link target="# #"/>
+                     <link target="#d1e537 #d1e540"/>
                   </linkGrp>
                   <spanGrp type="translation">
-                     <span target="#" xml:lang="en"></span>
+                     <span target="#d1e537" xml:lang="en">Chachalaca</span>
                   </spanGrp>
                   <spanGrp type="semantics">
-                     <span type="sense" target="#" corresp=""/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                     <span type="sense" target="#d1e537" corresp="http://dbpedia.org/resource/Chachalaca"/>
+                     <span type="sense" target="#d1e537" cert="low" corresp="https://en.wikipedia.org/wiki/Chachalaca"/>
+                     <!-- not sure of specific variety of 'chachalaca'-->
+                     <span type="domain" target="#d1e537" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e537" corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
                </item>
                <item>
@@ -912,19 +926,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e551">arlequín</w>
                   </seg>
                   <linkGrp type="translation">
-                     <link target="# #"/>
-                     <link target="# #"/>
-                     <link target="# #"/>
-                     <link target="# #"/>
+                     <link target="#1e545 #d1e548"/>
                   </linkGrp>
                   <spanGrp type="translation">
-                     <span target="#" xml:lang="en"></span>
-                     <span target="#" xml:lang="en"></span>
+                     <span target="#1e545" xml:lang="en">Montezuma Quail</span>
                   </spanGrp>
                   <spanGrp type="semantics">
-                     <span type="sense" target="#" corresp=""/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                     <span type="sense" target="#1e545" corresp="https://www.wikidata.org/wiki/Q1093509"/>
+                     <span type="sense" target="#1e545" corresp="http://dbpedia.org/resource/Montezuma_quail"/>
+                     <span type="domain" target="#1e545" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#1e545" corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
                </item>
                <item>
@@ -937,19 +948,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e561">cotuí</w>
                   </seg>
                   <linkGrp type="translation">
-                     <link target="# #"/>
-                     <link target="# #"/>
-                     <link target="# #"/>
-                     <link target="# #"/>
+                     <link target="#d1e555 #d1e558"/>
                   </linkGrp>
                   <spanGrp type="translation">
-                     <span target="#" xml:lang="en"></span>
-                     <span target="#" xml:lang="en"></span>
+                     <span target="#d1e555" xml:lang="en">Northern Bobwhite</span>
                   </spanGrp>
                   <spanGrp type="semantics">
-                     <span type="sense" target="#" corresp=""/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                     <span type="sense" target="#d1e555" corresp="https://www.wikidata.org/wiki/Q142651"/>
+                     <span type="sense" target="#d1e555" corresp="http://dbpedia.org/resource/Northern_bobwhite"/>
+                     <span type="domain" target="#d1e555" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e555" corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
                </item>
                <item>
@@ -964,19 +972,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <w xml:id="d1e575">monte</w>
                   </seg>
                   <linkGrp type="translation">
-                     <link target="# #"/>
-                     <link target="# #"/>
-                     <link target="# #"/>
-                     <link target="# #"/>
+                     <link target="#d1e565 #d1e570"/>
                   </linkGrp>
                   <spanGrp type="translation">
-                     <span target="#" xml:lang="en"></span>
-                     <span target="#" xml:lang="en"></span>
+                     <span target="#d1e565" xml:lang="en" cert="medium">Buffy-crowned wood partridge</span>
                   </spanGrp>
                   <spanGrp type="semantics">
-                     <span type="sense" target="#" corresp=""/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain" target="#" corresp="http://dbpedia.org/resource/Animal"/>
+                     <span type="sense" cert="medium" target="#d1e565" corresp="https://www.wikidata.org/wiki/Q1268985"/>
+                     <span type="sense" cert="medium" target="#d1e565" corresp="http://dbpedia.org/resource/Buffy-crowned_wood_partridge"/>                  
+                     <span type="domain" target="#d1e565" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e565" corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
                </item>
             </list>
