@@ -164,7 +164,7 @@
          <change when-iso="2014-10-02">replaced element 'c' to 'pc' to more accurately represent the differences between 'punctuation character' and 'character'; each 'pc' value in the LR shall be specified in the TEI documentation</change>
          <change when-iso="2014-10-07">To make up for the lack of image display capacity on the TAPAS Project website, the time which is originaly displayed in the image on the analogue clock was added in digital form within the 'time' element, embedded within 'label'. </change>
          <change when-iso="2014-10-14">segmentation changed to encapulate compound number lexical items within a commmon segment</change>
-         <change when-iso="2017-09-01">All occurences of "<oRef>ka</oRef>" (stative copula) changed to "kaa" to reflect the updated orthography and distinguish from the topic marker.</change>
+         <change when-iso="2017-09-01">All occurences of "<oRef>ka</oRef>" (stative copula) changed to "kaa" to reflect the updated orthography and distinguish from the topic marker. Original values included as the value of @orig (original). Custom schema will be associated with document to allow for this change to the TEI.</change>
       </revisionDesc>
    </teiHeader>
    <text xml:lang="mix" decls="#pedagogical">
@@ -187,7 +187,7 @@
                </s>
                <lb/>
                <s xml:id="d1e174" type="declarative"><!-- "discourse": #RESP #Q #WH #TEMP -->
-                  <w xml:id="d1e175">Kaa</w><!-- #COP #REAL : form changed from "ka" -->
+                  <w xml:id="d1e175" orig="ka">Kaa</w><!-- #COP #REAL : form changed from "ka" -->
                   <w xml:id="d1e177">iñu</w>
                   <w xml:id="d1e179">ntaa</w>
                   <pc>.</pc>
@@ -261,7 +261,7 @@
                </s>
                <lb/>
                <s xml:id="d1e205">
-                  <w xml:id="d1e206">Kaa</w>
+                  <w xml:id="d1e206" orig="ka">Kaa</w>
                   <w xml:id="d1e208">uni</w>
                   <w xml:id="d1e210">ntaa</w>
                   <pc>.</pc>
@@ -316,7 +316,7 @@
                </s>
                <lb/>
                <s xml:id="d1e273">
-                  <w xml:id="d1e274">Kaa</w>
+                  <w xml:id="d1e274" orig="ka">Kaa</w>
                   <w xml:id="d1e276">kumi</w>
                   <w xml:id="d1e278">sava</w><!-- half (= "four and a half") -->
                   <pc>.</pc>
@@ -342,7 +342,7 @@
                </s>
                <lb/>
                <s xml:id="d1e304">
-                  <w xml:id="d1e305">Kaa</w>
+                  <w xml:id="d1e305" orig="ka">Kaa</w>
                   <w xml:id="d1e307">iin</w><!-- nine -->
                   <w xml:id="d1e309">tsa'un</w><!-- fifteen -->
                   <pc>.</pc>
@@ -398,9 +398,11 @@
                </s>
                <lb/>
                <s xml:id="d1e374">
-                  <w xml:id="d1e375">Kaa</w>
-                  <w xml:id="d1e377">utsi</w><!-- ten -->
-                  <w xml:id="d1e379">in</w><!-- one (ten+one=11) -->
+                  <w xml:id="d1e375" orig="ka">Kaa</w>
+                  <w xml:id="d1e376">
+                     <w xml:id="d1e377">utsi</w><!-- ten -->
+                     <w xml:id="d1e379" orig="iin">in</w><!-- one (ten+one=11) -->
+                  </w>
                   <w xml:id="d1e381">sava</w><!-- half-->
                   <pc>.</pc>
                </s>
@@ -425,8 +427,8 @@
                </s>
                <lb/>
                <s xml:id="d1e407">
-                  <w xml:id="d1e408">Kaa</w>
-                  <w xml:id="d1e410">in</w><!-- one -->
+                  <w xml:id="d1e408" orig="ka">Kaa</w>
+                  <w xml:id="d1e410" orig="iin">in</w><!-- one -->
                   <w xml:id="d1e412">utsi</w><!-- ten -->
                   <pc>.</pc>
                </s>
