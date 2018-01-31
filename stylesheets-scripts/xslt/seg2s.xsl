@@ -16,26 +16,27 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="//seg[@type='S']">
-        <s xml:id="{generate-id(.)}" type="interrogative">
+    <xsl:template match="p/seg[@type='S']">
+        <s xml:id="{generate-id(.)}" type="multiWordExpression">
+            <xsl:copy-of select="@xml:lang"/>
             <xsl:apply-templates select="node()"/>
-        </s>
-        <spanGrp type="translation">
-            <span target="#" xml:lang="en">Which animal's foot is this?</span>
-            <span target="#" xml:lang="es">¿De qué animales son las patas?</span>        
-        </spanGrp>
+        </s>     
     </xsl:template>
     
+    <xsl:template match="//seg/seg[@type='LexItem']">
+        <w xml:id="{generate-id(.)}">
+            <!-- <xsl:copy-of select="@* except(@ana)"/> -->
+            <xsl:value-of select="."/>
+        </w>
+    </xsl:template>
+    
+    <!-- 
     <xsl:template match="//p/w">
         <s xml:id="{generate-id(.)}" type="declarative">
             <w xml:id="{generate-id(.)}">
                 <xsl:value-of select="."/>
             </w>
         </s>
-        <spanGrp type="translation">
-            <span target="#" xml:lang="en"></span>
-            <span target="#" xml:lang="es"></span>        
-        </spanGrp>
     </xsl:template>
-    
+     -->
 </xsl:stylesheet>
