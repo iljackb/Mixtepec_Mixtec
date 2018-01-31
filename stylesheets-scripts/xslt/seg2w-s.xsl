@@ -25,7 +25,7 @@
     
     
      -->
-    <xsl:template match="seg[@type='LexItem']">
+    <xsl:template match="//seg[@type='LexItem']">
         <w xml:id="{generate-id(.)}">
             <!-- <xsl:copy-of select="@* except(@ana)"/> -->
             <xsl:value-of select="."/>
