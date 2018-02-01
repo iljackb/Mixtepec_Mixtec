@@ -27,11 +27,17 @@
             </title>
             <author>María Gómez Hernández</author>
             <editor>Gisela Beckmann</editor>
-            <editor>María M. Nieves</editor>
+            <editor xml:id="MN">María M. Nieves</editor>
             <respStmt>
                <resp>TEI Encoding</resp>
                <resp>Annotation</resp>
-               <name>Jack Bowers</name>
+               <resp>Translation</resp>
+               <name xml:id="JB">Jack Bowers</name>
+            </respStmt>
+            <respStmt>
+               <resp>Language Consultation</resp>
+               <resp>Translation</resp>
+               <name xml:id="TS">Tisu'ma Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -71,48 +77,7 @@
       </profileDesc>
       <encodingDesc>
          <p>
-            <list>
-               <item>
-                  <label>
-                     <w xml:id="d1e94">segment</w>
-                  </label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg'
-                        element is used to encapsulate: <list>
-                           <item>i) the entire sentences from original document (first
-                              level);</item>
-                           <item>ii) the individual lexical items contained within the sentences
-                              (second level);</item>
-                        </list>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>
-                     <w xml:id="d1e106">character</w>
-                  </label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation
-                        characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c"
-                        (character) element; In future stages of the project, each of these
-                        punctuation characters will be formally linked with the linguistic
-                        categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type
-                           "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>
-                     <w xml:id="d1e115">division</w>
-                  </label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding
-                        uses "div" (division) elements; this is to separate the linguistic, and
-                        knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
+            
          </p>
          <projectDesc>
             <p>project description to come<date when-iso="2014-08-30"/>
@@ -216,37 +181,64 @@
                   <w xml:id="d1e204">yakui</w>
                   <w xml:id="d1e206">ntivixi</w><!-- cold (nti-) always (predicating adjective phrase (..'who was (always cold)')-->
                   <pc>,</pc>
-                  <w xml:id="d1e210">yii</w><!-- lived -->
+                  <w xml:id="d1e210" cert="low">yii</w><!-- lived --><!-- why is this spelled with "-ii"? (not "yee"?) -->
                   <w xml:id="d1e212">yuku</w>
                   <w xml:id="d1e214">koo</w><!-- w/o -->
                   <w xml:id="d1e216">sa'mi</w><!-- sa'ma + -i (possessive) (why not "-ti"!?) -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-01-01" xml:lang="en">One day there was  a cold armadillo that lived in the woods without clothes.</span>               
-                  <span target="#L098-01-01" xml:lang="es"></span>
+                  <span target="#L098-01-01" xml:lang="en">One day there was a cold armadillo who lived in the woods without clothes and was always cold.</span>               
+                  <span target="#L098-01-01" xml:lang="es" resp="#JB" cert="medium">Érase una vez un armadillo frío que vivía en el bosque sín ropas.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e196 #d1e198 #d1e200" xml:lang="en">once upon a time there was</span>
+                  <span target="#d1e196 #d1e198 #d1e200" xml:lang="en">one day there lived</span>
+                  <span target="#d1e196 #d1e198 #d1e200" xml:lang="es">érase una vez</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e206" xml:lang="en">always cold</span>
+                  <span target="#d1e206" xml:lang="es">siempre frío</span>
+                  
+                  <span target="#d1e204" xml:lang="en">armadillo</span>
+                  <span target="#d1e204" xml:lang="es">armadillo</span>
+                  
+                  <span target="#d1e210" xml:lang="en" cert="low">lives</span><!-- what tense, person should I translate this to? -->
+                  <span target="#d1e210" xml:lang="es" cert="low">vive</span>
+                  
+                  <span target="#d1e212" xml:lang="en">woods</span>
+                  <span target="#d1e212" xml:lang="es">bosque</span>
+                  
+                  <span target="#d1e214" xml:lang="en">without</span>
+                  <span target="#d1e214" xml:lang="es">sin</span>
+                  
+                  <span target="#d1e216" xml:lang="en">it's clothes</span>
+                  <span target="#d1e216" xml:lang="es">su ropas</span>
                   
                </spanGrp>
                <seg xml:id="L098-01-02" type="S">
                   <w xml:id="d1e222">Sara</w>
-                  <w xml:id="d1e224">ntakaninia</w><!-- worried  (JB: not thinking about)? -->
+                  <w xml:id="d1e224">ntakaninia</w><!-- (TS) worried  (JB: thinking about)? -->
                   <w xml:id="d1e226">nixi</w><!-- about how -->
                   <w xml:id="d1e228">sava'i</w><!-- make -->
                   <w xml:id="d1e230">sa'mi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-01-02" xml:lang="en">Then he was thinking about how to make (his?) clothes.</span>
-                  <span target="#L098-01-02" xml:lang="es"></span>
+                  <span target="#L098-01-02" xml:lang="en">Then he was thinking about how to make clothes.</span>
+                  <span target="#L098-01-02" xml:lang="es">Pues él pensaba en cómo hacerse ropas.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e224" xml:lang="en" resp="#JB">he was thinking about</span>
+                  <span target="#d1e224" xml:lang="en" resp="#TS" cert="medium">he was worrying about</span>
+                  <span target="#d1e224" xml:lang="es">pensaba de</span>                
+                  <span target="#d1e224" xml:lang="es" cert="medium">se preocupaba de</span>
+                  
+                  <span target="#d1e226" xml:lang="en">how</span>
+                  <span target="#d1e226" xml:lang="es">cómo</span>
+                  
+                  <span target="#d1e228" xml:lang="en">he makes</span>
+                  <span target="#d1e228" xml:lang="es">hace</span>
+                  
+                  <span target="#d1e230" xml:lang="en">his clothes</span>
+                  <span target="#d1e230" xml:lang="es">sus ropas</span>
                   
                </spanGrp>
                <seg xml:id="L098-01-03" type="S">
@@ -259,10 +251,22 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-01-03" xml:lang="en">He found thread then began to sew.</span>
-                  <span target="#L098-01-03" xml:lang="es"></span>
+                  <span target="#L098-01-03" xml:lang="es">Encontró el hilo y empezó a coser.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e235" xml:lang="en">he found</span>
+                  <span target="#d1e235" xml:lang="es">encontró</span>
+                  
+                  <span target="#d1e237" xml:lang="en">thread</span>
+                  <span target="#d1e237" xml:lang="es">hilo</span>
+                  
+                  <span target="#d1e239" xml:lang="en">then</span>
+                  <span target="#d1e239" xml:lang="es">pues</span>
+                  
+                  <span target="#d1e241" xml:lang="en">he began</span>
+                  <span target="#d1e241" xml:lang="es">empezó</span>
+                  
+                  <span target="#d1e243" xml:lang="en">he sews</span>
+                  <span target="#d1e243" xml:lang="es">cose</span>
                   
                </spanGrp>
                <seg xml:id="L098-01-04" type="S">
@@ -270,18 +274,29 @@
                   <w xml:id="d1e250">xeen</w><!-- kiku xeen (threading) -->
                   <w xml:id="d1e252">kiku</w><!-- sewing -->
                   <w xml:id="d1e254">nchu'i</w><!-- a lot -->
-                  <w xml:id="d1e256">ñantu'i</w><!-- sitting (ask Mille) (ña +intu'i?)-->
+                  <w xml:id="d1e256" cert="low">ñantu'i</w><!-- sitting (ask Mille) (ña +intu'i?)-->
                   <w xml:id="d1e258">yuku</w><!-- in the woods -->
-                  <w xml:id="d1e260">ka</w>
+                  <w xml:id="d1e260">ka</w><!-- why "ka" for the location? -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-01-04" xml:lang="en">He was sitting in the woods, sewing tediously.</span>
-                  <span target="#L098-01-04" xml:lang="es"></span>
+                  <span target="#L098-01-04" xml:lang="en">He was sitting in the woods, threading and sewing vigorously.</span>
+                  <span target="#L098-01-04" xml:lang="es">Estaba en el bosque enhebrando y cosendo enérgeticamente.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e248 #d1e250" xml:lang="en">he/she/it threads</span>
+                  <span target="#d1e248 #d1e250" xml:lang="en">he/she/it is threading</span>
+                  <span target="#d1e248 #d1e250" xml:lang="es">enhebra</span>
+                  <span target="#d1e248 #d1e250" xml:lang="es">está enhebrando</span>
                   
+                  <span target="#d1e252 #d1e254" xml:lang="en">he/she/it sews vigorously</span>
+                  <span target="#d1e252 #d1e254" xml:lang="en">he/she/it is sewing vigorously</span>
+                  <span target="#d1e252 #d1e254" xml:lang="es">cose enérgeticamente</span>
+                  
+                  <span target="#d1e254" xml:lang="en">sitting</span>
+                  <span target="#d1e254" xml:lang="es">sentado</span>
+                  
+                  <span target="#d1e256" xml:lang="en">the woods</span>
+                  <span target="#d1e256" xml:lang="es">el bosque</span>
                </spanGrp>
                <seg xml:id="L098-01-05" type="S">
                   <w xml:id="d1e265">Nikitsaa</w>
@@ -295,6 +310,19 @@
                <spanGrp type="translation">
                   <span target="#L098-01-05" xml:lang="en">A possum arrived then he said this:</span>
                   <span target="#L098-01-05" xml:lang="es">Llegó una zarigüeya y dijó así:</span>
+                  
+                  <span target="#d1e265" xml:lang="en">arrived</span>
+                  <span target="#d1e265" xml:lang="es">llegó</span>
+                  
+                  <span target="#d1e269" xml:lang="en">possum</span>
+                  <span target="#d1e269" xml:lang="en">opossum</span>
+                  <span target="#d1e269" xml:lang="es">zarigüeya</span>       
+                  
+                  <span target="#d1e273" xml:lang="en">said</span>
+                  <span target="#d1e273" xml:lang="es">dijó</span>
+                  
+                  <span target="#d1e275" xml:lang="en">the following</span>
+                  <span target="#d1e275" xml:lang="es">así</span>
                </spanGrp>
                <seg xml:id="L098-01-06" type="S">
                   <pc>¿</pc>
@@ -309,14 +337,21 @@
                   <span target="#L098-01-06" xml:lang="en">What are you doing little compadre?</span>
                   <span target="#L098-01-06" xml:lang="es">¿Qué estas haciendo compadrito?</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e282 #d1e284" xml:lang="en">what are you doing?</span>
+                  <span target="#d1e282 #d1e284" xml:lang="es">¿qué estas haciendo?</span>
+                  <span target="#d1e282 #d1e284" xml:lang="es">¿qué haces?</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e282" xml:lang="en">what</span>
+                  <span target="#d1e282" xml:lang="es">qué</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e284" xml:lang="en">you do</span>
+                  <span target="#d1e284" xml:lang="es">haces</span>
+                  
+                  <span target="#d1e288" xml:lang="en">compadre</span>
+                  <span target="#d1e288" xml:lang="es">compadre</span>
+                  
+                  <span target="#d1e290" xml:lang="en">small</span>
+                  <span target="#d1e290" xml:lang="es">pequeño</span>
                   
                </spanGrp>
                <seg xml:id="L098-01-07" type="S">
@@ -327,14 +362,14 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-01-07" xml:lang="en">I'm sewing clothes.</span>
-                  <span target="#L098-01-07" xml:lang="es"></span>
+                  <span target="#L098-01-07" xml:lang="es">Estoy cosendo ropas.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e297" xml:lang="en">I'm sewing</span>
+                  <span target="#d1e297" xml:lang="es">coso</span>
+                  <span target="#d1e297" xml:lang="es">estoy cosendo</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
+                  <span target="#d1e299" xml:lang="en">clothes</span>
+                  <span target="#d1e299" xml:lang="es">ropas</span>  
                </spanGrp>
                <seg xml:id="L098-01-07b" type="S">
                   <w xml:id="d1e301">nikachi</w>
@@ -344,7 +379,7 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-01-07b" xml:lang="en">said the armadillo.</span>
-                  <span target="#L098-01-07b" xml:lang="es"></span>            
+                  <span target="#L098-01-07b" xml:lang="es">dijó el armadillo.</span>            
                </spanGrp>
                <seg xml:id="L098-01-08" type="S">
                   <pc>-</pc>
@@ -359,8 +394,8 @@
                   <span target="#L098-01-08" xml:lang="es">Pues, la zarigüeya dijó:</span>
                </spanGrp>
                <seg xml:id="L098-01-09" type="S">
-                  <w xml:id="d1e323">Kua'a</w><!-- give (me) -->
-                  <w xml:id="d1e325">sa'mu</w><!-- the clothese -->
+                  <w xml:id="d1e323" cert="medium">Kua'a</w><!-- give (me) --><!-- is the person indicated in the tone or is it inferred? -->
+                  <w xml:id="d1e325">sa'mu</w><!-- your clothes -->
                   <pc>,</pc>
                   <w xml:id="d1e329">nakiku</w><!-- sew (subj) (speaker intention) -->
                   <w xml:id="d1e331">nachinchee</w><!-- help -->
@@ -371,8 +406,20 @@
                   <span target="#L098-01-09" xml:lang="en">Give me the clothes, I can help you sew.</span>
                   <span target="#L098-01-09" xml:lang="es">Dame la ropa, puedo ayudarte coser.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e323" xml:lang="en" cert="medium">give</span>
+                  <span target="#d1e323" xml:lang="es" cert="medium">da</span>
+                  
+                  <span target="#d1e325" xml:lang="en">your clothes</span>
+                  <span target="#d1e325" xml:lang="es">tus ropas</span>
+                  
+                  <span target="#d1e329" xml:lang="en">so that I can sew</span>
+                  <span target="#d1e329" xml:lang="es">para qué yo cosa</span>
+                  
+                  <span target="#d1e331" xml:lang="en">so that I can help</span>
+                  <span target="#d1e331" xml:lang="es">para qué yo ayude</span>
+                  
+                  <span target="#d1e333" xml:lang="en">you</span>
+                  <span target="#d1e333" xml:lang="es">tú</span>
                   
                </spanGrp>
                <seg xml:id="L098-01-10" type="S">
@@ -385,12 +432,19 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-01-10" xml:lang="en">When the clothes are done, let's go to a party.</span>
-                  <span target="#L098-01-10" xml:lang="es"></span>
+                  <span target="#L098-01-10" xml:lang="es">Una vez qué las ropas son terminadas, vamos a la fiesta.</span>
 
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e338" xml:lang="en">when you are done</span>
+                  <span target="#d1e338" xml:lang="es">una vez qué termines</span>
                   
-
+                  <span target="#d1e340" xml:lang="en">your clothes</span>
+                  <span target="#d1e340" xml:lang="es">tus ropas</span>
+                  
+                  <span target="#d1e344" xml:lang="en">let's go</span>
+                  <span target="#d1e344" xml:lang="es">vamos</span>
+                  
+                  <span target="#d1e346" xml:lang="en">party</span>
+                  <span target="#d1e346" xml:lang="es">fiesta</span>
                </spanGrp>
             </p>
          </div>
@@ -412,8 +466,8 @@
                   <span target="#L098-02-01" xml:lang="en">Then the possum helped the armadillo.</span>
                   <span target="#L098-02-01" xml:lang="es">Pues la zarigüeya ayudó el armadillo.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e357" xml:lang="en">he/she/it helped</span>
+                  <span target="#d1e357" xml:lang="es">ayudó</span>
                   
                </spanGrp>
                <seg xml:id="L098-02-02" type="S">
@@ -429,10 +483,20 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#" xml:lang="en">They sewed because the armadillo had no clothes.</span><!-- ? -->
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#" xml:lang="es">Coseron porqué el armadillo no tenía ropas.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e370 #d1e372" xml:lang="en" cert="medium">they sewed</span><!-- is this in past? -->
+                  <span target="#d1e370 #d1e372" xml:lang="es">coseron</span>
+                  
+                  <span target="#d1e374" xml:lang="en">because</span>
+                  <span target="#d1e374" xml:lang="es">porqué</span>
+                  
+                  <span target="#" xml:lang="en">no</span>
+                  <span target="#" xml:lang="en">none</span>
+                  <span target="#" xml:lang="es">ninguna</span>
+                  
+                  <span target="#" xml:lang="en">his clothes</span>
+                  <span target="#" xml:lang="es">sus ropas</span>
                  
                </spanGrp>
                <seg xml:id="L098-02-03" type="S">
@@ -441,17 +505,29 @@
                   <w xml:id="d1e393">tsoko</w>
                   <w xml:id="d1e395">ka</w>
                   <w xml:id="d1e397">kikui</w><!-- sew (-i) -->
-                  <w xml:id="d1e399">tiku</w><!-- tiku nani - thread  -->
+                  <w xml:id="d1e399">tiku</w><!-- tiku nani - thread (gloss form?)"tiku nana"? -->
                   <w xml:id="d1e401">nani</w><!-- ? -->
                   <w xml:id="d1e403">nchu'a</w><!-- a long time -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-02-03" xml:lang="en">And so the possum began to sew and thread for a while.</span>
-                  <span target="#L098-02-03" xml:lang="es"></span>
+                  <span target="#L098-02-03" xml:lang="en" cert="medium">And so the possum began to sew and thread for a while.</span>
+                  <span target="#L098-02-03" xml:lang="es" cert="medium">Y pues la zarigüeya empezó coser y enhebrar un rato.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e389" xml:lang="en">and so</span>
+                  <span target="#d1e389" xml:lang="es">y pues</span>
+                  
+                  <span target="#d1e391" xml:lang="en">he began</span>
+                  <span target="#d1e391" xml:lang="es">empezó</span>
+                  
+                  <span target="#d1e397" xml:lang="en">he sewed</span>
+                  <span target="#d1e397" xml:lang="es">cosó</span>
+                  
+                  <span target="#1e399 #d1e401" xml:lang="en" cert="low">threaded</span>
+                  <span target="#1e399 #d1e401" xml:lang="es" cert="low">enhebró</span>
+                  
+                  <span target="#d1e403" xml:lang="en">a while</span>
+                  <span target="#d1e403" xml:lang="es">un rato</span>
                   
                </spanGrp>
                <seg xml:id="L098-02-04" type="S">
@@ -463,12 +539,8 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-02-04" xml:lang="en">Then the armadillo said:</span>
-                  <span target="#L098-02-04" xml:lang="es">Y el armadillo dijó:</span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-               </spanGrp>
+                  <span target="#L098-02-04" xml:lang="es">Y el armadillo dijó:</span>     
+               </spanGrp>             
                <seg xml:id="L098-02-05" type="S">
                   <w xml:id="d1e419">Kue</w><!-- neg -->
                   <w xml:id="d1e421">va'a</w><!-- well/good -->
@@ -476,14 +548,21 @@
                   <w xml:id="d1e425">ku</w><!-- 2sg.inf -->
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
+               <spanGrp type="translation">                  
+                  <span target="#L098-02-05" xml:lang="en">You're not sewing well.</span>
+                  <span target="#L098-02-05" xml:lang="es">No estás cosendo bien.</span>
+                  <!-- JB: could this have a dual interpretation of a posessive nominalization "your sewing isn't good"?-->
                   
-                  <span target="#L098-02-05" xml:lang="en">You're sewing badly.</span>
-                  <span target="#L098-02-05" xml:lang="es"></span>
+                  <span target="#d1e419" xml:lang="en">not</span>
+                  <span target="#d1e419" xml:lang="es">no</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-
+                  <span target="#d1e421" xml:lang="en">good</span>
+                  <span target="#d1e421" xml:lang="es">bien</span>
+                  
+                  <span target="#d1e423 #d1e425" xml:lang="en">you sew</span>
+                  <span target="#d1e423 #d1e425" xml:lang="en">you're sewing</span>
+                  <span target="#d1e423 #d1e425" xml:lang="es">coses</span>
+                  <span target="#d1e423 #d1e425" xml:lang="es">estás cosendo</span>
                </spanGrp>
                <seg xml:id="L098-02-06" type="S">
                   <w xml:id="d1e430">Kini</w><!-- kini xeen (very bad) -->
@@ -495,10 +574,19 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-02-06" xml:lang="en">The clothes you're making are looking bad.</span>
-                  <span target="#L098-02-06" xml:lang="es"></span>
+                  <span target="#L098-02-06" xml:lang="es">Las ropas qué estás haciendo se veen muy malo.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e430 #d1e432" xml:lang="en">very bad</span>
+                  <span target="#d1e430 #d1e432" xml:lang="es">muy malo</span>
+                  
+                  <span target="#d1e434" xml:lang="en">look</span>
+                  <span target="#d1e434" xml:lang="es">verse</span>
+                  
+                  <span target="#d1e436" xml:lang="en">clothes</span>
+                  <span target="#d1e436" xml:lang="es">las ropas</span>
+                  
+                  <span target="#d1e438" xml:lang="en">you are making</span>
+                  <span target="#d1e438" xml:lang="es">estás haciendo</span>
                   
                </spanGrp>
                <seg xml:id="L098-02-07" type="S">
@@ -511,11 +599,23 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-02-07" xml:lang="en">He took the clothes and began to sew it happily.</span>
-                  <span target="#L098-02-07" xml:lang="es"></span>
+                  <span target="#L098-02-07" xml:lang="en">He took the clothes and he began to sew it happily.</span>
+                  <span target="#L098-02-07" xml:lang="es">Agarró las ropas y él empezó coserlo felizmente.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e443" xml:lang="en">he grabbed</span>
+                  <span target="#d1e443" xml:lang="es">agrarró</span>
+                  
+                  <span target="#d1e445" xml:lang="en">his clothes</span>
+                  <span target="#d1e445" xml:lang="es">sus ropas</span>
+                  
+                  <span target="#d1e447" xml:lang="en">he sewed</span>
+                  <span target="#d1e447" xml:lang="es">cosó</span>
+                  
+                  <span target="#d1e449" xml:lang="en">he</span>
+                  <span target="#d1e449" xml:lang="es">él</span>
+                  
+                  <span target="#d1e451 #d1e453" xml:lang="en">hapily</span>
+                  <span target="#d1e451 #d1e453" xml:lang="es">felizmente</span>
                   
                </spanGrp>
                <seg xml:id="L098-02-08" type="S">
@@ -525,17 +625,24 @@
                   <w xml:id="d1e464">nikuu</w><!-- got  (nikuu yakua ="got dirty"; kuu yakua ="get dirty" (?))-->
                   <w xml:id="d1e466">yakua</w><!-- dirty -->
                   <w xml:id="d1e468">xeen</w><!-- very -->
-                  <w xml:id="d1e470">ña</w><!-- it -->
+                  <w xml:id="d1e470" cert="medium">ña</w><!-- it -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L098-02-08" xml:lang="en">And then his clothes were done and they got very dirty.</span>
-                  <span target="#L098-02-08" xml:lang="es"></span>
+                  <span target="#L098-02-08" xml:lang="es" cert="medium" resp="#JB">Y pues, cuando las ropas estaban terminadas, se ensucieron.</span>
 
+                  <span target="#d1e460" xml:lang="en"></span>
+                  <span target="#d1e460" xml:lang="es"></span>
+                  
+                  <span target="#d1e464 #d1e466" xml:lang="en"></span>
+                  <span target="#d1e464 #d1e466" xml:lang="es"></span>
+                  
+                  <span target="#d1e468" xml:lang="en"></span>
+                  <span target="#d1e468" xml:lang="es"></span>
+                  
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
-                  
-
                </spanGrp>
                <seg xml:id="L098-02-09" type="S">
                   <w xml:id="d1e475">Sara</w>
@@ -561,6 +668,8 @@
                   <span target="#d1e486" xml:lang="en">let's go</span>
                   <span target="#d1e486" xml:lang="es">vamos</span>
                   
+                  <span target="#d1e488" xml:lang="en">party</span>
+                  <span target="#d1e488" xml:lang="es">fiesta</span>
                </spanGrp>
                <pc>-</pc>
                <seg xml:id="L098-02-11" type="S">
@@ -579,38 +688,43 @@
                   <span target="#L098-02-11" xml:lang="en">I won't go because the clothes are really ugly.</span>
                   <span target="#L098-02-11" xml:lang="es">No me voy porqué mis ropas son muy feas.</span>
                   
-                  <span target="#d1e493 d1e495 d1e497" xml:lang="en"></span>
-                  <span target="#d1e493 d1e495 d1e497" xml:lang="es"></span>
+                  <span target="#d1e493 d1e495 d1e497" xml:lang="en">I won't go</span>
+                  <span target="#d1e493 d1e495 d1e497" xml:lang="en">I will not go</span>
+                  <span target="#d1e493 d1e495 d1e497" xml:lang="es">no me voy</span>
+                  <span target="#d1e493 d1e495 d1e497" xml:lang="es">no voy a ir</span>
                   
-                  <span target="#d1e501" xml:lang="en"></span>
-                  <span target="#d1e501" xml:lang="es"></span>
+                  <span target="#d1e493" xml:lang="en">will not</span>
+                  <span target="#d1e493" xml:lang="es">no</span>
+                  
+                  <span target="#d1e501" xml:lang="en">because</span>
+                  <span target="#d1e501" xml:lang="es">porqué</span>
                   
                   <span target="#d1e503 #d1e505" xml:lang="en">ugly</span>
                   <span target="#d1e503 #d1e505" xml:lang="es">feo</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e507" xml:lang="en">is</span>
+                  <span target="#d1e507" xml:lang="es">es</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e509" xml:lang="en">the clothes</span>
+                  <span target="#d1e509" xml:lang="es">las ropas</span>
                </spanGrp>
                <seg xml:id="L098-02-12" type="S">
                   <w xml:id="d1e515">Nchaa</w><!--  until -->
-                  <w xml:id="d1e517">ntakacha</w><!-- wash (nta-)?-->
+                  <w xml:id="d1e517">ntakacha</w><!-- wash (nta-)? (subj)-->
                   <w xml:id="d1e519">ña</w><!-- it -->
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-02-12" xml:lang="en">Not until I wash.</span>
-                  <span target="#L098-02-12" xml:lang="es"></span>
+                  <span target="#L098-02-12" xml:lang="en">Not until I wash them.</span>
+                  <span target="#L098-02-12" xml:lang="es">No hasta las lava.</span>
                   
                   <span target="#d1e515" xml:lang="en">until</span>
                   <span target="#d1e515" xml:lang="es">hasta</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e517" xml:lang="en">I wash</span>
+                  <span target="#d1e517" xml:lang="es">que yo lava</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e519" xml:lang="en">them</span>
+                  <span target="#d1e519" xml:lang="es">las</span>
                </spanGrp>
                   <pc>-</pc>
                <seg xml:id="L098-02-12b" type="S">
@@ -661,21 +775,18 @@
                   <w xml:id="d1e547">Niki'in</w><!-- they hit the road (?) (cmpl) (gls: niki'in - literally to "grab") niki'in ichi-->
                   <w xml:id="d1e549">kueyi</w>
                   <w xml:id="d1e551">ichi</w>
-                  <w xml:id="d1e553">kua'in</w><!-- go (gls: kua'an) -->
+                  <w xml:id="d1e553">kua'in</w><!-- go (gls: kua'an) (why this form?) -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#d1e546" xml:lang="en">They hit the road and went.</span>
                   <span target="#d1e546" xml:lang="es">Dieron el camino y se fueron.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e547 #d1e549 #d1e551" xml:lang="en">they hit the road</span>
+                  <span target="#d1e547 #d1e549 #d1e551" xml:lang="es">dieron el camino</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e553" xml:lang="en">they left</span>
+                  <span target="#d1e553" xml:lang="es">se fueron</span>
                </spanGrp>
                <seg xml:id="d1e557" type="S">
                   <w xml:id="d1e558">Nikitsaa</w><!-- It began to rain? -->
@@ -686,10 +797,14 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#d1e557" xml:lang="en">It began to storm.</span>
-                  <span target="#d1e557" xml:lang="es"></span>
+                  <span target="#d1e557" xml:lang="es">Empezó una tormenta.</span>
+                  
+                  <span target="#d1e560 #d1e562 #d1e562" xml:lang="en">to storm</span>
+                  <span target="#d1e560 #d1e562 #d1e562" xml:lang="es" cert="low"/>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
                </spanGrp>
                <seg xml:id="d1e568" type="S">
                   <w xml:id="d1e569">Sara</w>
@@ -700,8 +815,11 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e568" xml:lang="en">Then he washed his clothes and then he was happy.</span>
-                  <span target="#d1e568" xml:lang="es"></span>
+                  <span target="#d1e568" xml:lang="en">Then his clothes were clean and he was happy.</span>
+                  <span target="#d1e568" xml:lang="es">Y pues sus ropas estaban limpias y estaba feliz.</span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
@@ -734,6 +852,18 @@
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                </spanGrp>
                <seg xml:id="d1e617" type="S">
                   <w xml:id="d1e618">Sara</w>
@@ -754,6 +884,21 @@
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                </spanGrp>
             </p>
          </div>
@@ -770,6 +915,12 @@
                <spanGrp type="translation">
                   <span target="#d1e642" xml:lang="en">The armadillo quickly came home alone.</span>
                   <span target="#d1e642" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
@@ -794,6 +945,27 @@
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#d1e674 #d1e676" xml:lang="en">into a ditch</span>
+                  <span target="#d1e674 #d1e676" xml:lang="es"></span>
                </spanGrp>
                <seg xml:id="d1e681" type="S">
                   <w xml:id="d1e682">Sara</w>
@@ -811,6 +983,19 @@
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
                </spanGrp>
             </p>
          </div>
@@ -851,15 +1036,25 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L098-03-02" xml:lang="en">Then ihe started his fire to warm up.</span>
+                  <span target="#L098-03-02" xml:lang="en">Then he started his fire to warm up.</span>
                   <span target="#L098-03-02" xml:lang="es"></span>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
                </spanGrp>
                <seg xml:id="L098-03-03" type="S">
                   <w xml:id="d1e729">Nikuyachia</w><!-- to get close (approach?) cmpl -->
-                  <w xml:id="d1e731">nuu</w>
+                  <w xml:id="d1e731" orig="nuu">nu</w>
                   <w xml:id="d1e733">ituu</w><!-- ituu tsio = burning embers  -->
                   <w xml:id="d1e735">tsio</w>
                   <w xml:id="d1e737">ña</w>
@@ -872,6 +1067,12 @@
                <spanGrp type="translation">
                   <span target="#L098-03-03" xml:lang="en">He got close to the burning embers and got ashes on his clothes.</span>
                   <span target="#L098-03-03" xml:lang="es"></span>
+                  
+                  <span target="#d1e729" xml:lang="en"></span>
+                  <span target="#d1e729" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
@@ -897,6 +1098,19 @@
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
                </spanGrp>
                <graphic url="L098-03-armadillo.png"/>
             </p>
