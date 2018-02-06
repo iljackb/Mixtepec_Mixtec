@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L101-tok">
    <teiHeader>
       <fileDesc>
@@ -20,7 +21,11 @@
             <editor>María M. Nieves</editor>
             <respStmt>
                <resp>TEI Encoding</resp>
-               <name>Jack T. Bowers</name>
+               <name xml:id="JB">Jack T. Bowers</name>
+            </respStmt>
+            <respStmt>
+               <resp>Language consultant</resp>
+               <name xml:id="TS">Tisu'ma Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -52,36 +57,14 @@
          </textDesc>
       </profileDesc>
       <encodingDesc>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
-                        <list>
-                           <item>i) the entire sentences from original document (first level);</item>
-                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
-                        </list>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
-                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
-         </p>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-02-05</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>
+               </ab>
+            </normalization>
+         </editorialDecl>
+         
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
                <category xml:id="pedagogical">
@@ -141,24 +124,33 @@
                <graphic url="L101-00.png"/>
                <seg xml:id="L101-01-01" type="S">
                   <w xml:id="d1e155">Ntsio</w>
-                  <w xml:id="d1e157">iin</w>
-                  <w xml:id="d1e159">ña'a</w>
+                  <w xml:id="d1e157" orig="iin">in</w>
+                  <w xml:id="d1e159" orig="ña'a">ña'á</w>
                   <w xml:id="d1e161">ntsixikui</w><!-- (hab) used to sell (xikuu = to sell?)-->
                   <w xml:id="d1e163">xikui</w><!-- milk -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-01-01" xml:lang="en">There lived a woman who was a milk vendor.</span>
-                  <span target="#L101-01-01" xml:lang="es"></span>
+                  <span target="#L101-01-01" xml:lang="es" cert="medium" resp="#JB">Había una mujer que vendía leche.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e155" xml:lang="en" cert="low">there was</span>
+                  <span target="#d1e155" xml:lang="es" cert="low">había</span>
+                  
+                  <span target="#d1e159" xml:lang="en">woman</span>
+                  <span target="#d1e159" xml:lang="es">mujer</span>
+                  
+                  <span target="#d1e161" xml:lang="en">she used to sell</span>
+                  <span target="#d1e161" xml:lang="es">vendía</span>
+                  
+                  <span target="#d1e163" xml:lang="en">milk</span>
+                  <span target="#d1e163" xml:lang="es">leche</span>
                </spanGrp>
                <seg xml:id="L101-01-02" type="S">
-                  <w xml:id="d1e168">Iin</w>
+                  <w xml:id="d1e168" orig="Iin">In</w>
                   <w xml:id="d1e170">kii</w>
                   <w xml:id="d1e172">kua'in</w><!-- kua' (-in)3sg.form.fem -->
-                  <w xml:id="d1e174">nuu</w>
+                  <w xml:id="d1e174" orig="nuu">nu</w>
                   <w xml:id="d1e176">ya'vi</w><!-- market [jáʔvi]-->
                   <w xml:id="d1e178">xikui</w><!-- sell -->
                   <w xml:id="d1e180">xikui</w><!-- milk -->
@@ -168,16 +160,40 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-01-02" xml:lang="en">One day she went to the market to sell milk and then she said:</span>
-                  <span target="#L101-01-02" xml:lang="es"></span>
+                  <span target="#L101-01-02" xml:lang="es">Un día fue al mercado para vender leche, y dijó:</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e168 #d1e170" xml:lang="en">one day</span>
+                  <span target="#d1e168 #d1e170" xml:lang="es">un día</span>
+                  
+                  <span target="#d1e172" xml:lang="en">she went</span>
+                  <span target="#d1e172" xml:lang="es">fue</span>
+
+                  <span target="#d1e174" xml:lang="en">to</span>
+                  <span target="#d1e174" xml:lang="es">a</span>
+                  
+                  <span target="#d1e176" xml:lang="en">market</span>
+                  <span target="#d1e176" xml:lang="es" cert="medium">mercado</span>
+
+                  <span target="#d1e172 #d1e174 #d1e176" xml:lang="en">she went to the market</span>
+                  <span target="#d1e172 #d1e174 #d1e176" xml:lang="es">fue al mercado</span>
+                  
+                  <span target="#d1e178" xml:lang="en">she sells</span>
+                  <span target="#d1e178" xml:lang="es">vende</span>
+                  
+                  <span target="#d1e180" xml:lang="en">milk</span>
+                  <span target="#d1e180" xml:lang="es">leche</span>
+                  
+                  <span target="#d1e182" xml:lang="en">then</span>
+                  <span target="#d1e182" xml:lang="es">y</span>
+                  
+                  <span target="#d1e184" xml:lang="en">she said</span>
+                  <span target="#d1e184" xml:lang="es">dijó</span>
                </spanGrp>
-               <seg xml:id="L101-01-03" type="S">
+               <seg xml:id="L101-01-03" type="S" cert="medium"><!-- label as SOLILOQUY voice! -->
                   <pc>—</pc>
                   <w xml:id="d1e191">Nako'on</w>
                   <pc>,</pc>
-                  <w xml:id="d1e195">xiko</w><!-- sell (soliloquy)-->
+                  <w xml:id="d1e195" orig="xiko">xíko</w><!-- incompletive has accent on first vowel -->
                   <w xml:id="d1e197">ko</w><!--  -->
                   <w xml:id="d1e199">xikui</w>
                   <pc>.</pc>
@@ -185,12 +201,15 @@
                <spanGrp type="translation">
                   <span target="#L101-01-03" xml:lang="en">Let's go, we're selling milk.</span>
                   <span target="#L101-01-03" xml:lang="es">Vamos, vendemos leche.</span>
+
+                  <span target="#d1e191" xml:lang="en">let's go</span>
+                  <span target="#d1e191" xml:lang="es">vamos</span>
+
+                  <span target="#d1e195 #d1e197" xml:lang="en">we are selling</span>
+                  <span target="#d1e195 #d1e197" xml:lang="es">vendemos</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e199" xml:lang="en">milk</span>
+                  <span target="#d1e199" xml:lang="es">leche</span>
                </spanGrp>
             </p>
          </div>
@@ -207,16 +226,25 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-02-01" xml:lang="en">When I get money, I will buy eggs.</span>
-                  <span target="#L101-02-01" xml:lang="es"></span>
+                  <span target="#L101-02-01" xml:lang="es">Cuando yo consiga dinero, compraré huevos.</span>
 
                   <span target="#d1e207" xml:lang="en">when</span>
                   <span target="#d1e207" xml:lang="es">quando</span>
 
-                  <span target="#d1e209" xml:lang="en"></span>
-                  <span target="#d1e209" xml:lang="es"></span>
+                  <span target="#d1e209" xml:lang="en">I got</span>
+                  <span target="#d1e209" xml:lang="en">I recieved</span>
+                  <span target="#d1e209" xml:lang="es">conseguí</span>
+                  <!-- note translation of full phrase and item don't match but that is not by accident.  -->
                   
-                  <span target="#d1e213" xml:lang="en"></span>
-                  <span target="#d1e213" xml:lang="es"></span>
+                  <span target="#d1e211" xml:lang="en">money</span>
+                  <span target="#d1e211" xml:lang="es">dinero</span>
+                  
+                  <span target="#d1e213" xml:lang="en">I would buy</span>
+                  <span target="#d1e213" xml:lang="es">yo compra</span>
+                  <span target="#d1e213" xml:lang="es">yo compraría</span>
+                  
+                  <span target="#d1e215" xml:lang="en">egg</span>
+                  <span target="#d1e215" xml:lang="es">huevo</span>
 
                </spanGrp>
             </p>
@@ -227,17 +255,35 @@
                   <w xml:id="d1e224">ka</w>
                   <w xml:id="d1e226">nachikaa</w><!-- put -->
                   <w xml:id="d1e228">yu</w>
-                  <w xml:id="d1e230">ña</w>
+                  <w xml:id="d1e230">ña</w><!--  -->
                   <w xml:id="d1e232">titsi</w>
-                  <w xml:id="d1e234">chuun</w>
+                  <w xml:id="d1e234" orig="chuun">chuún</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-02-02" xml:lang="en">I will put the eggs under the chicken.</span>
-                  <span target="#L101-02-02" xml:lang="es"></span>
+                  <span target="#L101-02-02" xml:lang="es">Pondría los huevo abajo del pollo.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e222" xml:lang="en">egg</span>
+                  <span target="#d1e222" xml:lang="es">huevo</span>
+                  
+                  <span target="#d1e226 #d1e228" xml:lang="en">I will put</span>
+                  <span target="#d1e226 #d1e228" xml:lang="en">I would put</span>
+                  <span target="#d1e226 #d1e228" xml:lang="es">pondía</span>
+                  <span target="#d1e226 #d1e228" xml:lang="es">pondré</span>
+                  
+                  <span target="#d1e230" xml:lang="en" cert="low"/><!-- How to translate, classify "ña" here? -->
+                  <span target="#d1e230" xml:lang="es" cert="low"/>
+                  
+                  <span target="#d1e232" xml:lang="en">bariga</span>
+                  <span target="#d1e232" xml:lang="en">estómago</span>
+                  <span target="#d1e232" xml:lang="es">bariga</span>
+
+                  <span target="#d1e232 #d1e234" xml:lang="en">The chicken's stomach.</span>
+                  <span target="#d1e232 #d1e234" xml:lang="es">La bariga del pollo.</span>
+
+                  <span target="#d1e234" xml:lang="en">chicken</span>
+                  <span target="#d1e234" xml:lang="es">pollo</span>
                </spanGrp>
             </p>
             <p>
@@ -245,24 +291,28 @@
                <seg xml:id="L101-02-03" type="S">
                   <w xml:id="d1e241">Sara</w>
                   <w xml:id="d1e243">nata'vi</w>
-                  <w xml:id="d1e245">tuku</w><!-- again? -->
-                  <w xml:id="d1e247">chuun</w>
+                  <w xml:id="d1e245" cert="medium">tuku</w><!-- again? -->
+                  <w xml:id="d1e247" orig="chuun">chuún</w>
                   <w xml:id="d1e249">kuachi</w>
                   <w xml:id="d1e251">luu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation"><!-- look to see if i need to reorder this.... -->
-                  <span target="#L101-02-03" xml:lang="en">Then the little baby chickens hatch again.</span>
-                  <span target="#L101-02-03" xml:lang="es"></span>
+                  <span target="#L101-02-03" xml:lang="en" cert="medium">Then the little baby chickens hatch again.</span>
+                  <span target="#L101-02-03" xml:lang="es" cert="medium">Y los pollitos nazcan de nuevo.</span>
 
-                  <span target="#d1e243" xml:lang="en"></span>
-                  <span target="#d1e243" xml:lang="es"></span>
+                  <span target="#d1e241" xml:lang="en">then</span>
+                  <span target="#d1e241" xml:lang="es">y</span>
 
-                  <span target="#d1e245" xml:lang="en"></span>
-                  <span target="#d1e245" xml:lang="es"></span>
+                  <span target="#d1e243" xml:lang="en">they will be born</span>
+                  <span target="#d1e243" xml:lang="es">nazcan</span>
+                  <span target="#d1e243" xml:lang="es">nacerían</span>
+
+                  <span target="#d1e245" xml:lang="en" cert="medium">again</span>
+                  <span target="#d1e245" xml:lang="es" cert="medium">de nuevo</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e247 #d1e249 #d1e251" xml:lang="en">little baby chickens</span>
+                  <span target="#d1e247 #d1e249 #d1e251" xml:lang="es" cert="medium">pollito</span>
                </spanGrp>
             </p>
             <p>
@@ -270,8 +320,8 @@
                <seg xml:id="L101-02-04" type="S">
                   <w xml:id="d1e258">Ta</w>
                   <w xml:id="d1e260">nta'vi</w><!-- hatch -->
-                  <w xml:id="d1e262">tuku</w>
-                  <w xml:id="d1e264">chuun</w>
+                  <w xml:id="d1e262" cert="medium">tuku</w>
+                  <w xml:id="d1e264" orig="chuun">chuún</w>
                   <w xml:id="d1e266">kuachi</w>
                   <w xml:id="d1e268">luu</w>
                   <w xml:id="d1e270">ka</w>
@@ -283,25 +333,47 @@
                   <pc>,</pc>
                   <w xml:id="d1e285">nakukuu</w><!-- ?it/they will become -->
                   <w xml:id="d1e287">ti</w>
-                  <w xml:id="d1e289">chuun</w>
+                  <w xml:id="d1e289" orig="chuun">chuún</w>
                   <w xml:id="d1e291">nii</w><!-- adult chickens? (old)?-->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-02-04" xml:lang="en">When the baby chickens hatch, I will feed them when they grow they become big chickens.</span>
-                  <span target="#L101-02-04" xml:lang="es"></span>
+                  <span target="#L101-02-04" xml:lang="es" cert="medium">Cuando los pollitos nazcan, le daría a comer, cuando el crezca, se volverá pollos viejos.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e258" xml:lang="en">when</span>
+                  <span target="#d1e258" xml:lang="es">cuando</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e260" xml:lang="en">hatch</span>
+                  <span target="#d1e260" xml:lang="es">nazca</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e262" xml:lang="en" cert="medium">again</span>
+                  <span target="#d1e262" xml:lang="es" cert="medium">de nuevo</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e264 #d1e266 #d1e268" xml:lang="en">little chicken</span>
+                  <span target="#d1e264 #d1e266 #d1e268" xml:lang="en">chick</span>
+                  <span target="#d1e264 #d1e266 #d1e268" xml:lang="es">pollito</span>
+                  
+                  <span target="#d1e274" xml:lang="en">I will feed</span>
+                  <span target="#d1e274" xml:lang="es">yo daría a comer</span>
+                  <span target="#d1e274" xml:lang="es">ye de a comer</span>
+                  
+                  <span target="#d1e276" xml:lang="en">it</span>
+                  <span target="#d1e276" xml:lang="es">le</span>
+                  
+                  <span target="#d1e278 #d1e280" xml:lang="en">it will grow</span>
+                  <span target="#d1e278 #d1e280" xml:lang="es">crecería</span>
+                  <span target="#d1e278 #d1e280" xml:lang="es">crecerá</span>
+                  
+                  <span target="#d1e285 #d1e287" xml:lang="en">it will become</span>
+                  <span target="#d1e285 #d1e287" xml:lang="es">se volvería</span>
+                  <span target="#d1e285 #d1e287" xml:lang="es">se volverá</span>
+                  
+                  <span target="#d1e289" xml:lang="en">chicken</span>
+                  <span target="#d1e289" xml:lang="es">pollo</span>
+                  
+                  <span target="#d1e291" xml:lang="en">old</span>
+                  <span target="#d1e291" xml:lang="es">viejo</span>
                </spanGrp>
             </p>
             <p>
@@ -316,16 +388,36 @@
                   <w xml:id="d1e310">ti</w><!-- it -->
                   <pc>,</pc>
                   <w xml:id="d1e314">nantakuaan</w><!-- I will buy (JB: why 1sg?) -->
-                  <w xml:id="d1e316">iin</w>
+                  <w xml:id="d1e316" orig="iin">in</w>
                   <w xml:id="d1e318">kini</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-02-05" xml:lang="en">Then when it becomes old, I will sell it, I'll buy a pig.</span>
-                  <span target="#L101-02-05" xml:lang="es"></span>
+                  <span target="#L101-02-05" xml:lang="es" cert="medium">Y cuando se vuelva viejo, yo lo venderé y yo compraría un cierdo.</span><!-- need to check use of spanish tense and mood -->
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e298" xml:lang="en">then</span>
+                  <span target="#d1e298" xml:lang="es">y</span>
+                  
+                  <span target="#d1e300" xml:lang="en">when</span>
+                  <span target="#d1e300" xml:lang="es">cuando</span>
+                  
+                  <span target="#d1e302 #d1e304" xml:lang="en">it is old</span>
+                  <span target="#d1e302 #d1e304" xml:lang="es">está viejo</span>
+                  
+                  <span target="#d1e308" xml:lang="en">I will sell</span>
+                  <span target="#d1e308" xml:lang="es">vendería</span>
+                  <span target="#d1e308" xml:lang="es">venderé</span>
+                  
+                  <span target="#d1e310" xml:lang="en">it</span>
+                  <span target="#d1e310" xml:lang="es">lo</span>
+                  
+                  <span target="#d1e314" xml:lang="en">I will buy</span>
+                  <span target="#d1e314" xml:lang="es">compraría</span>
+                  <span target="#d1e314" xml:lang="es">compraré</span>
+                  
+                  <span target="#d1e316 #d1e318" xml:lang="en">a pig</span>
+                  <span target="#d1e316 #d1e318" xml:lang="es">un cierdo</span>
                </spanGrp>
             </p>
             <p>
@@ -340,15 +432,19 @@
                   <span target="#L101-02-06" xml:lang="en">I will feed the pig.</span>
                   <span target="#L101-02-06" xml:lang="es">Voy a dar comer el puerco.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e326" xml:lang="en">I will feed</span>
+                  <span target="#d1e326" xml:lang="es">daré a comer</span>
+                  <span target="#d1e326" xml:lang="es">daría a comer</span>
+                  
+                  <span target="#d1e328" xml:lang="en">pig</span>
+                  <span target="#d1e328" xml:lang="es">cierdo</span>
                </spanGrp>
                <seg xml:id="L101-02-07" type="S">
                   <w xml:id="d1e335">Ta</w><!-- when -->
                   <w xml:id="d1e337">nia</w><!-- it's old (ni(-a)) -->
                   <pc>,</pc>
                   <w xml:id="d1e341">nantakuaan</w><!-- I will buy -->
-                  <w xml:id="d1e343">iin</w>
+                  <w xml:id="d1e343" orig="iin">in</w>
                   <w xml:id="d1e345">stiki</w>
                   <w xml:id="d1e347">luu</w>
                   <pc>.</pc>
@@ -360,16 +456,22 @@
                   <span target="#d1e335 #d1e337" xml:lang="en">when it's old</span>
                   <span target="#d1e335 #d1e337" xml:lang="es">quando está viejo</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e341" xml:lang="en">I will buy</span>
+                  <span target="#d1e341" xml:lang="en">I would buy</span>
+                  <span target="#d1e341" xml:lang="es">compraría</span>
+                  <span target="#d1e341" xml:lang="es">yo compre</span>
+                  <span target="#d1e341" xml:lang="es">compraré</span>
+                  
+                  <span target="#d1e343 #d1e345 #d1e347" xml:lang="en">a small bull</span>
+                  <span target="#d1e343 #d1e345 #d1e347" xml:lang="es">un toro pequeño</span>
                </spanGrp>
             </p>
          </div>
          <div xml:id="L101-03">
             <p>
-               <seg xml:id="L101-03-01" type="S">
+               <seg xml:id="L101-03-01" type="S"><!-- Back to narrator voice -->
                   <w xml:id="d1e354">Ka'an</w><!--  think-->
-                  <w xml:id="d1e356">ña'a</w>
+                  <w xml:id="d1e356" orig="ña'a">ña'á</w>
                   <w xml:id="d1e358">ka</w>
                   <w xml:id="d1e360">ntakaninia</w><!-- worrying -->
                   <w xml:id="d1e362">kua'in</w>
@@ -378,26 +480,53 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-03-01" xml:lang="en">The woman was thinking and worrying while walking on the road.</span>
-                  <span target="#L101-03-01" xml:lang="es"></span>
+                  <span target="#L101-03-01" xml:lang="es">La mujer estababa pensando y se preocupava mientre caminaba por el camino.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e354" xml:lang="en" cert="medium"></span><!-- tense? -->
+                  <span target="#d1e354" xml:lang="es" cert="medium"></span>
+                  
+                  <span target="#d1e356" xml:lang="en"></span>
+                  <span target="#d1e356" xml:lang="es"></span>
+                  
+                  <span target="#d1e360" xml:lang="en" cert="medium"></span>
+                  <span target="#d1e360" xml:lang="es" cert="medium"></span>
+                  
+                  <span target="#d1e362" xml:lang="en"></span>
+                  <span target="#d1e362" xml:lang="es"></span>
+                  
+                  <span target="#d1e364" xml:lang="en"></span>
+                  <span target="#d1e364" xml:lang="es"></span>
                </spanGrp>
                <seg xml:id="L101-03-02" type="S">
-                  <w xml:id="d1e369">Ñaka</w><!-- that woman -->
+                  <w xml:id="d1e369" orig="Ñaka">Ñáká</w><!-- that woman -->
                   <w xml:id="d1e371">ka'in</w><!-- thinking -->
                   <w xml:id="d1e373">sara</w>
                   <w xml:id="d1e375">ntakaninia</w><!-- worrying -->
                   <w xml:id="d1e377">sara</w>
-                  <w xml:id="d1e379">kuachi</w><!-- h -->
+                  <w xml:id="d1e379" cert="low">kuachi</w><!-- happy? -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-03-02" xml:lang="en"></span>
                   <span target="#L101-03-02" xml:lang="es"></span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e369" xml:lang="en"></span>
+                  <span target="#d1e369" xml:lang="es"></span>
+                  
+                  <span target="#d1e371" xml:lang="en"></span>
+                  <span target="#d1e371" xml:lang="es"></span>
+                  
+                  <span target="#d1e373" xml:lang="en"></span>
+                  <span target="#d1e373" xml:lang="es"></span>
+                  
+                  <span target="#d1e375" xml:lang="en"></span>
+                  <span target="#d1e375" xml:lang="es"></span>
+                  
+                  <span target="#d1e377" xml:lang="en"></span>
+                  <span target="#d1e377" xml:lang="es"></span>
+                  
+                  <span target="#d1e379" xml:lang="en"></span>
+                  <span target="#d1e379" xml:lang="es"></span>
                </spanGrp>
                <seg xml:id="L101-03-03" type="S">
                   <w xml:id="d1e384">Sara</w>
@@ -409,17 +538,42 @@
                   <w xml:id="d1e396">kava</w><!--  -->
                   <w xml:id="d1e398">yoo</w><!-- jug/pot [yoó] -->
                   <w xml:id="d1e400">xikui</w><!-- milk -->
-                  <w xml:id="d1e402">ña</w>
+                  <w xml:id="d1e402">ña</w><!-- poss ?-->
                   <w xml:id="d1e404">ntsicha</w><!-- spill out (cmpl) -->
                   <w xml:id="d1e407">nti'a</w><!-- all (-a)(the pot's milk spilled)  -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-03-03" xml:lang="en">Then she jumped and all of a sudden she fell and the pot spilled out all its milk.</span>
-                  <span target="#L101-03-03" xml:lang="es"></span>
+                  <span target="#L101-03-03" xml:lang="es">Y ella saltó y de repente, se cayó y todo la leche derramó de la olla.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e384" xml:lang="en"></span>
+                  <span target="#d1e384" xml:lang="es"></span>
+                  
+                  <span target="#d1e386 #d1e388" xml:lang="en"></span>
+                  <span target="#d1e386 #d1e388" xml:lang="es"></span>
+                  
+                  <span target="#d1e392" xml:lang="en">all of a sudden</span>
+                  <span target="#d1e392" xml:lang="es"></span>
+                  
+                  <span target="#d1e394 #d1e396" xml:lang="en"></span>
+                  <span target="#d1e394 #d1e396" xml:lang="es"></span>
+                  
+                  <span target="#d1e398" xml:lang="en"></span>
+                  <span target="#d1e398" xml:lang="es"></span>
+                  
+                  <span target="#d1e400" xml:lang="en"></span>
+                  <span target="#d1e400" xml:lang="es"></span>
+                  
+                  <span target="#d1e398 #d1e400 #d1e402" xml:lang="en">her milk jug</span>
+                  <span target="#d1e398 #d1e400 #d1e402" xml:lang="es"></span>
+                  
+                  <span target="#d1e404" xml:lang="en">spilled out</span>
+                  <span target="#d1e404" xml:lang="es"></span>
+                  
+                  <span target="#d1e406" xml:lang="en">everything</span>
+                  <span target="#d1e406" xml:lang="es">todo</span>
+
                </spanGrp>
                <seg xml:id="L101-03-04" type="S">
                   <w xml:id="d1e412">Sara</w>
@@ -435,12 +589,24 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L101-03-04" xml:lang="en">Then she began to tear up, she then said:</span>
-                  <span target="#L101-03-04" xml:lang="es"></span>
+                  <span target="#L101-03-04" xml:lang="es">Empezó a llorar y dijó:</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e412" xml:lang="en">then</span>
+                  <span target="#d1e412" xml:lang="es">y</span>
+                  
+                  <span target="#d1e414" xml:lang="en">began</span>
+                  <span target="#d1e414" xml:lang="es">empezó</span>
+                  
+                  <span target="#d1e416 #d1e418 #d1e420 #d1e422" xml:lang="en">she began to tear up</span>
+                  <span target="#d1e416 #d1e418 #d1e420 #d1e422" xml:lang="es">empezó a llorar</span>
+                  
+                  <span target="#d1e426" xml:lang="en">then</span>
+                  <span target="#d1e426" xml:lang="es">y</span>
+                  
+                  <span target="#d1e428" xml:lang="en">she said</span>
+                  <span target="#d1e428" xml:lang="es">dijó</span>
                </spanGrp>
-               <seg xml:id="L101-03-05" type="S">
+               <seg xml:id="L101-03-05" type="S" cert="low"><!-- ask MILLE -->
                   <pc>—</pc>
                   <w xml:id="d1e435">Sana</w><!-- what's this doing? -->
                   <w xml:id="d1e437">ka'an</w><!-- (?) should it be "kua'an"(?) -->
@@ -468,11 +634,67 @@
                   <w xml:id="d1e483">luu</w>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L101-03-05" xml:lang="en"></span>
-                  <span target="#L101-03-05" xml:lang="es"></span>
+                  <span target="#L101-03-05" xml:lang="en" cert="low"/>
+                  <span target="#L101-03-05" xml:lang="es" cert="low"/>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e435" xml:lang="en"></span>
+                  <span target="#d1e435" xml:lang="es"></span>
+                  
+                  <span target="#d1e437" xml:lang="en"></span>
+                  <span target="#d1e437" xml:lang="es"></span>
+                  
+                  <span target="#d1e439" xml:lang="en">milk</span>
+                  <span target="#d1e439" xml:lang="es">leche</span>
+                  
+                  
+                  <span target="#d1e443" xml:lang="en"></span>
+                  <span target="#d1e443" xml:lang="es"></span>
+                  
+                  <span target="#d1e445" xml:lang="en"></span>
+                  <span target="#d1e445" xml:lang="es"></span>
+                  
+                  <span target="#d1e447" xml:lang="en">money</span>
+                  <span target="#d1e447" xml:lang="es">dinero</span>
+                  
+                  
+                  <span target="#d1e451" xml:lang="en"></span>
+                  <span target="#d1e451" xml:lang="es"></span>
+                  
+                  <span target="#d1e453" xml:lang="en"></span>
+                  <span target="#d1e453" xml:lang="es"></span>
+                  
+                  <span target="#d1e456" xml:lang="en">egg</span>
+                  <span target="#d1e456" xml:lang="es">huevo</span>
+                  
+                  
+                  <span target="#d1e460" xml:lang="en"></span>
+                  <span target="#d1e460" xml:lang="es"></span>
+                  
+                  <span target="#d1e462" xml:lang="en"></span>
+                  <span target="#d1e462" xml:lang="es"></span>
+                  
+                  <span target="#d1e464" xml:lang="en">chicken</span>
+                  <span target="#d1e464" xml:lang="es">pollo</span>
+                  
+                  
+                  <span target="#d1e468" xml:lang="en"></span>
+                  <span target="#d1e468" xml:lang="es"></span>
+                  
+                  <span target="#d1e470" xml:lang="en"></span>
+                  <span target="#d1e470" xml:lang="es"></span>
+                  
+                  <span target="#d1e472" xml:lang="en">pig</span>
+                  <span target="#d1e472" xml:lang="es">cierdo</span>
+                  
+                  
+                  <span target="#d1e476" xml:lang="en"></span>
+                  <span target="#d1e476" xml:lang="es"></span>
+                  
+                  <span target="#d1e478" xml:lang="en"></span>
+                  <span target="#d1e478" xml:lang="es"></span>
+                  
+                  <span target="#d1e480 #d1e483" xml:lang="en">bull calf</span>
+                  <span target="#d1e480 #d1e483" xml:lang="es"></span>
                </spanGrp>
                <seg xml:id="L101-03-06" type="S">
                   <pc>—</pc>
@@ -490,8 +712,35 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L101-03-06" xml:lang="en">She said because all my milk spilled, I will never get money.</span>
-                  <span target="#L101-03-06" xml:lang="es"></span>
+                  <span target="#L101-03-06" xml:lang="en">She said, because all my milk spilled, I will never get money.</span>
+                  <span target="#L101-03-06" xml:lang="es">Dijó,po</span>
+                  
+                  <span target="#d1e492" xml:lang="en"></span>
+                  <span target="#d1e492" xml:lang="es"></span>
+                  
+                  <span target="#d1e494" xml:lang="en"></span>
+                  <span target="#d1e494" xml:lang="es"></span>
+                  
+                  <span target="#d1e496" xml:lang="en"></span>
+                  <span target="#d1e496" xml:lang="es"></span>
+                  
+                  <span target="#d1e498" xml:lang="en"></span>
+                  <span target="#d1e498" xml:lang="es"></span>
+                  
+                  <span target="#d1e502" xml:lang="en"></span>
+                  <span target="#d1e502" xml:lang="es"></span>
+                  
+                  <span target="#d1e504" xml:lang="en"></span>
+                  <span target="#d1e504" xml:lang="es"></span>
+                  
+                  <span target="#d1e506" xml:lang="en"></span>
+                  <span target="#d1e506" xml:lang="es"></span>
+                  
+                  <span target="#d1e509" xml:lang="en"></span>
+                  <span target="#d1e509" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
