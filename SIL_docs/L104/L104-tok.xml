@@ -21,7 +21,14 @@
             <editor>María M. Nieves</editor>
             <respStmt>
                <resp>TEI Encoding</resp>
-               <name>Jack T. Bowers</name>
+               <resp>Annotation</resp>
+               <resp>Translatioln</resp>
+               <name>Jack Bowers</name>
+            </respStmt>
+            <respStmt>
+               <resp>Language consultation</resp>
+               <resp>Glossing</resp>
+               <name>Tisu'ma Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -51,35 +58,14 @@
          </textDesc>
       </profileDesc>
       <encodingDesc>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
-                        <list>
-                           <item>i) the entire sentences from original document (first level);</item>
-                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
-                        </list>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
-                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-02-10</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>
+               </ab>
+            </normalization>
+         </editorialDecl>
+         <p>....
          </p>
          <projectDesc>
             <p>project description to come</p>
@@ -147,7 +133,7 @@
                   <w xml:id="d1e159">tsito</w><!-- to watch/eye (mirando) -->
                   <w xml:id="d1e161">ti</w>
                   <w xml:id="d1e163">ichi</w>
-                  <w xml:id="d1e165">kunkii</w><!-- go get/bring (TS: expects glottal stop between "ii") -->
+                  <w xml:id="d1e165" cert="medium" norm="kunki'i" resp="#TS">kunkii</w><!-- go get/bring (TS: expects glottal stop between "ii") -->
                   <w xml:id="d1e167">ti</w>
                   <w xml:id="d1e169">staa</w>
                   <w xml:id="d1e171">inkaa</w>
@@ -160,23 +146,33 @@
                   <span target="#L104-01-01" xml:lang="en">This dog is looking at the path, he's going to get the tortillas that are inside.</span>
                   <span target="#L104-01-01" xml:lang="es">Este perro está mirando el camino, va a obtener las tortillas que estan adentro.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e155" xml:lang="en">dog</span>
+                  <span target="#d1e155" xml:lang="es">perro</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e157" xml:lang="en">this</span>
+                  <span target="#d1e157" xml:lang="es">este</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e159 #d1e161" xml:lang="en">is looking at</span>
+                  <span target="#d1e159 #d1e161" xml:lang="es">mira</span>
+                  <span target="#d1e159 #d1e161" xml:lang="es">está mirando</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e163" xml:lang="en">path</span>
+                  <span target="#d1e163" xml:lang="es">camino</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e165 #d1e167" xml:lang="en">it is going to get</span>
+                  <span target="#d1e165 #d1e167" xml:lang="es">va a obtener</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e169" xml:lang="en">tortilla</span>
+                  <span target="#d1e169" xml:lang="es">tortilla</span>
+                  
+                  <span target="#d1e171" xml:lang="en">is located</span>
+                  <span target="#d1e171" xml:lang="es">está</span>
+                  
+                  <span target="#d1e173 #d1e175" xml:lang="en">all the way inside</span>
+                  <span target="#d1e173 #d1e175" xml:lang="es">todo el camino adentro</span>
+                  
+                  <span target="#d1e178" xml:lang="en">here</span>
+                  <span target="#d1e178" xml:lang="es">aquí</span>
                </spanGrp><lb/>
                <seg xml:id="L104-01-02" type="S">
                   <w xml:id="d1e183">Ntana'a</w><!-- draw -->
@@ -190,33 +186,49 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-01-02" xml:lang="en">Draw a line for the dog to walk through.</span>
-                  <span target="#L104-01-02" xml:lang="es">Dibuje una linea </span>
+                  <span target="#L104-01-02" xml:lang="es" cert="low">Dibuja una linea para el perro caminar.</span>
 
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e183" xml:lang="en">draw</span>
+                  <span target="#d1e183" xml:lang="es">dibujas</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e187" xml:lang="en">line</span>
+                  <span target="#d1e187" xml:lang="es">linea</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e191" xml:lang="en" cert="medium">walk</span><!-- how to translate? -->
+                  <span target="#d1e191" xml:lang="es">camine</span>
+                  
+                  <span target="#d1e193" xml:lang="en">dog</span>
+                  <span target="#d1e193" xml:lang="es">perro</span>
 
                </spanGrp><lb/>
                <seg xml:id="L104-01-03" type="S">
                   <w xml:id="d1e200">Ku'un</w>
                   <w xml:id="d1e202">ti</w>
                   <w xml:id="d1e204">mancha</w>
-                  <w xml:id="d1e206">nuu</w>
+                  <w xml:id="d1e206" orig="nuu">nu</w>
                   <w xml:id="d1e208">kantu'u</w>
                   <w xml:id="d1e210">staa</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">                 
                   <span target="#L104-01-03" xml:lang="en">It (animal) goes to where the tortillas are.</span>
-                  <span target="#L104-01-03" xml:lang="es"></span>
+                  <span target="#L104-01-03" xml:lang="es" cert="medium">Va a dónde estan las torillas.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e200 #d1e202" xml:lang="en">it goes</span>
+                  <span target="#d1e200 #d1e202" xml:lang="en">it is going</span>
+                  <span target="#d1e200 #d1e202" xml:lang="es">va</span>
+                  
+                  <span target="#d1e204" xml:lang="en">up to</span>
+                  <span target="#d1e204" xml:lang="es">a</span>
+                  
+                  <span target="#d1e206" xml:lang="en">where</span>
+                  <span target="#d1e206" xml:lang="es">dónde</span>
+                  
+                  <span target="#d1e208" xml:lang="en">are sitting</span>
+                  <span target="#d1e208" xml:lang="es">estan</span>
+                  
+                  <span target="#d1e210" xml:lang="en">tortilla</span>
+                  <span target="#d1e210" xml:lang="es">tortilla</span>
                   
                </spanGrp><lb/>
             </p>
@@ -230,27 +242,52 @@
                   <w xml:id="d1e225">kua</w><!-- (TS) where -->
                   <w xml:id="d1e227">ntuku</w><!-- look for -->
                   <w xml:id="d1e229">ti</w>
-                  <w xml:id="d1e231">ña</w>
+                  <w xml:id="d1e231">ña</w><!-- something -->
                   <w xml:id="d1e233">katsi</w>
                   <w xml:id="d1e235">ti</w>
                   <w xml:id="d1e237">ra</w>
                   <w xml:id="d1e240">ntane'e</w><!-- (TS) found/ find (cmpl!?) -->
                   <w xml:id="d1e242">ti</w>
-                  <w xml:id="d1e244">iin</w>
+                  <w xml:id="d1e244" orig="iin">in</w>
                   <w xml:id="d1e246">tukui'i</w><!-- fruit tree -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-01-04" xml:lang="en">This ant came out looking for something to eat and he found a fruit tree.</span>
-                  <span target="#L104-01-04" xml:lang="es"></span>
+                  <span target="#L104-01-04" xml:lang="es">Esta hormiga salió buscando algo a comer y encontré algo en un árbol frutal.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e217" xml:lang="en">ant</span>
+                  <span target="#d1e217" xml:lang="es">hormiga</span>
+                  
+                  <span target="#d1e219" xml:lang="en">this</span>
+                  <span target="#d1e219" xml:lang="es">este</span>
+                  
+                  <span target="#d1e221 #d1e223" xml:lang="en">found</span>
+                  <span target="#d1e221 #d1e223" xml:lang="es">encontró</span>
+                  
+                  <span target="#d1e225" xml:lang="en" cert="low">where</span>
+                  <span target="#d1e225" xml:lang="es" cert="low">dónde</span>
+                  
+                  <span target="#d1e227 #d1e229" xml:lang="en">it looked for</span>
+                  <span target="#d1e227 #d1e229" xml:lang="es">buscó</span>
+                  
+                  <span target="#d1e231" xml:lang="en">something</span>
+                  <span target="#d1e231" xml:lang="es">algo</span>
+                  
+                  <span target="#d1e233 #d1e235" xml:lang="en" cert="medium">it eats</span>
+                  <span target="#d1e233 #d1e235" xml:lang="es" cert="medium">come</span>          
+                  
+                  <span target="#d1e240 #d1e242" xml:lang="en">it found</span>
+                  <span target="#d1e240 #d1e242" xml:lang="es">encontró</span>
+                  
+                  <span target="#d1e246" xml:lang="en">fruit tree</span>
+                  <span target="#d1e246" xml:lang="es">árbol frutal</span>
+
                   
                </spanGrp><lb/>
                <seg xml:id="L104-01-05" type="S">
                   <w xml:id="d1e251">Ntana'a</w>
-                  <w xml:id="d1e253">iin</w>
+                  <w xml:id="d1e253" orig="iin">in</w>
                   <w xml:id="d1e255">ichi</w>
                   <w xml:id="d1e257">ña</w>
                   <w xml:id="d1e259">choko</w>
@@ -258,7 +295,7 @@
                   <w xml:id="d1e263">naku'un</w>
                   <w xml:id="d1e265">ti</w>
                   <w xml:id="d1e267">mancha</w>
-                  <w xml:id="d1e269">nuu</w>
+                  <w xml:id="d1e269" orig="nuu">nu</w>
                   <w xml:id="d1e271">inkaa</w>
                   <w xml:id="d1e274">kui'i</w>
                   <w xml:id="d1e276">luu</w>
@@ -266,12 +303,47 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L104-01-05" xml:lang="en" cert="medium">Draw a path that this ant should (go on/follow) up to where the small fruit are.</span>
-                  <span target="#L104-01-05" xml:lang="es"/>
+                  <span target="#L104-01-05" xml:lang="en" cert="medium">Draw a path that this ant should go on to where the small fruit are.</span>
+                  <span target="#L104-01-05" xml:lang="es" cert="medium">Dibuja una linea por cual la hormiga caminar a dónde estan la fruta pequeña.</span>
 
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e251" xml:lang="en">draw</span>
+                  <span target="#d1e251" xml:lang="es">dibuja</span>
+
+                  <span target="#d1e255" xml:lang="en">line</span>
+                  <span target="#d1e255" xml:lang="es">linea</span>
                   
+                  <span target="#d1e257" xml:lang="en">that</span>
+                  <span target="#d1e257" xml:lang="es" cert="medium">por cual</span>
+                  
+                  <span target="#d1e259" xml:lang="en">ant</span>
+                  <span target="#d1e259" xml:lang="es">hormig</span>
+                  
+                  <span target="#1e261" xml:lang="en">this</span>
+                  <span target="#1e261" xml:lang="es">este</span>
+                  
+                  <span target="#d1e263 #d1e265" xml:lang="en">walk</span>
+                  <span target="#d1e263 #d1e265" xml:lang="es" cert="medium">camina</span>
+                  
+                  <span target="#d1e267" xml:lang="en">to</span>
+                  <span target="#d1e267" xml:lang="es">a</span>
+                  
+                  <span target="#d1e269" xml:lang="en">where</span>
+                  <span target="#d1e269" xml:lang="es">dónde</span>
+                  
+                  <span target="#d1e267 #d1e269" xml:lang="en">up to where</span>
+                  <span target="#d1e267 #d1e269" xml:lang="es">hasta dónde</span>
+                  
+                  <span target="#d1e271" xml:lang="en">be located</span>
+                  <span target="#d1e271" xml:lang="es">está</span>
+                  
+                  <span target="#d1e274" xml:lang="en">fruit</span>
+                  <span target="#d1e274" xml:lang="es">fruta</span>
+                  
+                  <span target="#d1e276" xml:lang="en">small</span>
+                  <span target="#d1e276" xml:lang="es">pequeña</span>
+                  
+                  <span target="#d1e278" xml:lang="en">this</span>
+                  <span target="#d1e278" xml:lang="es">este</span>
 
                </spanGrp><lb/>
             </p>
@@ -291,29 +363,62 @@
                   <w xml:id="d1e302">saan</w>
                   <w xml:id="d1e304">kitsau</w><!-- arrive at/get to the end -->
                   <w xml:id="d1e306">mancha</w>
-                  <w xml:id="d1e309">nuu</w>
+                  <w xml:id="d1e309" orig="nuu">nu</w>
                   <w xml:id="d1e311">nti'i</w><!-- ? -->
                   <w xml:id="d1e313">ichi</w>
                   <w xml:id="d1e315">yo'o</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L104-02-01" xml:lang="en">Here you have to look for path so that you can arrive where this road ends.</span>
-                  <span target="#L104-02-01" xml:lang="es"></span>
+                  <span target="#L104-02-01" xml:lang="en" cert="medium">Here you have to look for path so that you can get to everything here on this path.</span>
+                  <span target="#L104-02-01" xml:lang="es" cert="medium">Aquí tienes que buscar el camino para que llegues hasta todo en este camino.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e286" xml:lang="en">here</span>
+                  <span target="#d1e286" xml:lang="es">aquí</span>
+                  
+                  <span target="#d1e290 #d1e292" xml:lang="en">you have to</span>
+                  <span target="#d1e290 #d1e292" xml:lang="es">tienes que</span>
+                  
+                  <span target="#d1e294 #d1e296" xml:lang="en">you look for</span>
+                  <span target="#d1e294 #d1e296" xml:lang="es">buscas</span>
+                  
+                  <span target="#d1e298" xml:lang="en">path</span>
+                  <span target="#d1e298" xml:lang="es">camino</span>
+                  
+                  <span target="#d1e300 #d1e302" xml:lang="en">so that</span>
+                  <span target="#d1e300 #d1e302" xml:lang="es">para que</span>
+                  
+                  <span target="#d1e304" xml:lang="en">you arrive</span>
+                  <span target="#d1e304" xml:lang="es">llegas</span>
+                  
+                  <span target="#d1e306 #d1e309" xml:lang="en" cert="medium">up to where</span>
+                  <span target="#d1e306 #d1e309" xml:lang="es" cert="medium">hasta dónde</span>
+                  
+                  <span target="#d1e311" xml:lang="en" cert="low">everything</span>
+                  <span target="#d1e311" xml:lang="es" cert="low">todo</span>
+                  
+                  <span target="#d1e313" xml:lang="en">path</span>
+                  <span target="#d1e313" xml:lang="es">camino</span>
+                  
+                  <span target="#d1e315" xml:lang="en">here</span>
+                  <span target="#d1e315" xml:lang="es">aquí</span>
                </spanGrp><lb/>
                <seg xml:id="L104-02-02" type="S">
                   <w xml:id="d1e320">Ntana'a</w>
-                  <w xml:id="d1e322">iin</w>
+                  <w xml:id="d1e322" orig="iin">in</w>
                   <w xml:id="d1e324">linia</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   
                   <span target="#L104-02-02" xml:lang="en">Draw a line.</span>
-                  <span target="#L104-02-02" xml:lang="es">Dibuje una linea.</span>
+                  <span target="#L104-02-02" xml:lang="es">Dibuja una linea.</span>
+
+                  <span target="#d1e320" xml:lang="en">draw</span>
+                  <span target="#d1e320" xml:lang="es">dibuja</span>
+                  
+                  <span target="#d1e324" xml:lang="en">line</span>
+                  <span target="#d1e324" xml:lang="es">linea</span>
                </spanGrp><lb/>
             </p>
             <p>
@@ -325,52 +430,86 @@
                   <w xml:id="d1e337">ichi</w>
                   <w xml:id="d1e339">yo'o</w>
                   <w xml:id="d1e341">sara</w>
-                  <w xml:id="d1e343">ntantuku</w><!-- meaning alone? -->
+                  <w xml:id="d1e343">ntantuku</w><!-- lookfor -->
                   <w xml:id="d1e345">ku</w>
                   <w xml:id="d1e347">nixi</w>
                   <w xml:id="d1e349">kee</w><!-- come out -->
                   <w xml:id="d1e351">tsio</w><!-- other side -->
-                  <w xml:id="d1e354">ku</w><!-- 2s.inf -->
+                  <w xml:id="d1e354" cert="low">ku</w><!-- 2s.inf --><!-- is this "your other side?" -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-02-03" xml:lang="en">You have to enter this path and then you have to come out on the other side.</span>
-                  <span target="#L104-02-03" xml:lang="es"></span>
+                  <span target="#L104-02-03" xml:lang="es">Tienes que entrar este camino y tienes que salir al otro lado.</span>
                   
-                  <span target="#d1e331 #d1e333" xml:lang="en"></span>
-                  <span target="#d1e331 #d1e333" xml:lang="es"></span>
+                  <span target="#d1e331 #d1e333" xml:lang="en" cert="medium">have to</span><!-- lemma? -->
+                  <span target="#d1e331 #d1e333" xml:lang="es" cert="low">tener que</span>
+                  <span target="#d1e331 #d1e333" xml:lang="es" cert="low">tienes que</span><!-- is "ñu'u" also in 2s? -->
                   
-                  <span target="#d1e335" xml:lang="en"></span>
-                  <span target="#d1e335" xml:lang="es"></span>
+                  <span target="#d1e335" xml:lang="en">you enter</span>
+                  <span target="#d1e335" xml:lang="es">entras</span>
                   
-                  <span xml:lang="en" target="#"></span>
-                  <span xml:lang="es" target="#"></span>
+                  <span xml:lang="en" target="#d1e337 #d1e339">this path</span>
+                  <span xml:lang="es" target="#d1e337 #d1e339">este camino</span>
                   
-                  <span xml:lang="en" target="#d1e349"></span>
-                  <span xml:lang="es" target="#d1e349"></span>
+                  <span xml:lang="en" target="#d1e341">then</span>
+                  <span xml:lang="es" target="#d1e341">y</span>
                   
-                  <span xml:lang="en" target="#"></span>
-                  <span xml:lang="es" target="#"></span>
+                  <span xml:lang="en" target="#d1e343 #d1e345">you look for</span>
+                  <span xml:lang="en" target="#d1e343 #d1e345">you figure out</span>
+                  <span xml:lang="es" target="#d1e343 #d1e345">buscas</span>
                   
+                  <span xml:lang="en" target="#d1e347">how</span>
+                  <span xml:lang="es" target="#d1e347">cómo</span>
+                  
+                  <span xml:lang="en" target="#d1e349">come out</span>
+                  <span xml:lang="es" target="#d1e349">salir</span>
+                  
+                  <span xml:lang="en" target="#d1e349 #d1e354">you come out</span>
+                  <span xml:lang="es" target="#d1e349 #d1e354">sales</span>
+                  
+                  <span xml:lang="en" target="#d1e351">side</span>
+                  <span xml:lang="es" target="#d1e351">lado</span>
+         
                </spanGrp><lb/>
                <seg xml:id="L104-02-04" type="S">
                   <w xml:id="d1e359">Ntana'a</w>
-                  <w xml:id="d1e361">iin</w>
+                  <w xml:id="d1e361" orig="iin">in</w>
                   <w xml:id="d1e363">linia</w>
                   <w xml:id="d1e365">mancha</w>
-                  <w xml:id="d1e367">nuu</w>
+                  <w xml:id="d1e367" orig="nuu">nu</w>
                   <w xml:id="d1e369">kee</w>
                   <w xml:id="d1e371">ichi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-02-04" xml:lang="en" cert="medium">Draw a line up to the end of the path.</span>
-                  <span target="#L104-02-04" xml:lang="es"></span>
+                  <span target="#L104-02-04" xml:lang="en" cert="medium">Draw a line up to where the path ends.</span>
+                  <span target="#L104-02-04" xml:lang="es" cert="medium">Dibuja una linea al final del camino.</span>   
+                  <span target="#L104-02-04" xml:lang="es" cert="medium">Dibuja una linea a dónde fine el camino.</span>   
                   
-                  <span target="#d1e369" xml:lang="en"></span>
-                  <span target="#d1e369" xml:lang="es"></span>
+                  <!-- could it be: ",.....where the path ends"? (eg "kee" is a verb?) -->
+                  <span target="#d1e359" xml:lang="en">draw</span>
+                  <span target="#d1e359" xml:lang="es">dibuja</span>
                   
-               </spanGrp><lb/>
+                  <span target="#d1e363" xml:lang="en">line</span>
+                  <span target="#d1e363" xml:lang="es">linea</span>
+                  
+                  <span target="#d1e365" xml:lang="en">up to</span>
+                  <span target="#d1e365" xml:lang="es">a</span>
+                  
+                  <span target="#d1e367" xml:lang="en">where</span>
+                  <span target="#d1e367" xml:lang="es">dónde</span>
+
+                  <span target="#d1e369" xml:lang="en" cert="medium">ends</span>
+                  <span target="#d1e369" xml:lang="es" cert="medium">fine</span>
+                  
+                  <span target="#d1e369 #d1e371" xml:lang="en">the end of the path</span>
+                  <span target="#d1e369 #d1e371" xml:lang="es">fin del camino</span>
+                  
+                  <span target="#d1e371" xml:lang="en">path</span>
+                  <span target="#d1e371" xml:lang="es">camino</span>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L104-03">
@@ -388,36 +527,80 @@
                   <w xml:id="d1e395">nixi</w><!-- how/the way to -->
                   <w xml:id="d1e397">kee</w><!-- get out -->
                   <w xml:id="d1e399">tsio</w>
-                  <w xml:id="d1e402">ku</w>
+                  <w xml:id="d1e402">ku</w><!-- ? -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-03-01" xml:lang="en">You have to enter this path and then you have to come out on the other side.</span>
-                  <span target="#L104-03-01" xml:lang="es"></span>
+                  <span target="#L104-03-01" xml:lang="es">Tienes que entrar este camino y tienes que salir al otro lado.</span>
+                  
+                  <span target="#d1e379 #d1e381" xml:lang="en" cert="medium">have to</span><!-- lemma? -->
+                  <span target="#d1e379 #d1e381" xml:lang="es" cert="low">tener que</span>
+                  <span target="#d1e379 #d1e381" xml:lang="es" cert="low">tienes que</span><!-- is "ñu'u" also in 2s? -->
+                  
+                  <span target="#d1e383" xml:lang="en">you enter</span>
+                  <span target="#d1e383" xml:lang="es">entras</span>
+                  
+                  <span xml:lang="en" target="#d1e385 #d1e387">this path</span>
+                  <span xml:lang="es" target="#d1e385 #d1e387">este camino</span>
+                  
+                  <span xml:lang="en" target="#d1e389">then</span>
+                  <span xml:lang="es" target="#d1e389">y</span>
+                  
+                  <span xml:lang="en" target="#d1e391 #d1e393">you look for</span>
+                  <span xml:lang="en" target="#d1e391 #d1e393">you figure out</span>
+                  <span xml:lang="es" target="#d1e391 #d1e393">buscas</span>
                   
                   <span xml:lang="en" target="#d1e395">how</span>
                   <span xml:lang="es" target="#d1e395">cómo</span>
                   
-                  <span target="#d1e397 #d1e399 #d1e402" xml:lang="en"></span>
-                  <span target="#d1e397 #d1e399 #d1e402" xml:lang="es"></span>
+                  <span xml:lang="en" target="#d1e397">come out</span>
+                  <span xml:lang="es" target="#d1e397">salir</span>
                   
+                  <span xml:lang="en" target="#d1e397 #d1e402">you come out</span>
+                  <span xml:lang="es" target="#d1e397 #d1e402">sales</span>
+                  
+                  <span xml:lang="en" target="#d1e399">side</span>
+                  <span xml:lang="es" target="#d1e399">lado</span>
+                         
                </spanGrp><lb/>
                <seg xml:id="L104-03-02" type="S">
                   <w xml:id="d1e407">Ntana'a</w>
-                  <w xml:id="d1e409">iin</w>
+                  <w xml:id="d1e409" orig="iin">in</w>
                   <w xml:id="d1e411">linia</w>
                   <w xml:id="d1e413">mancha</w>
-                  <w xml:id="d1e415">nuu</w>
+                  <w xml:id="d1e415" orig="nu">nu</w>
                   <w xml:id="d1e417">kee</w><!-- end -->
                   <w xml:id="d1e419">ichi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-03-02" xml:lang="en">Draw a line up to the end of the path.</span>
-                  <span target="#L104-03-02" xml:lang="es"></span>
+                  <span target="#L104-03-02" xml:lang="en" cert="medium">Draw a line up to where the path ends.</span>
+                  <span target="#L104-03-02" xml:lang="es" cert="medium">Dibuja una linea al final del camino.</span>   
+                  <span target="#L104-03-02" xml:lang="es" cert="medium">Dibuja una linea a dónde fine el camino.</span>   
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <!-- could it be: ",.....where the path ends"? (eg "kee" is a verb?) -->
+                  <span target="#d1e407" xml:lang="en">draw</span>
+                  <span target="#d1e407" xml:lang="es">dibuja</span>
+                  
+                  <span target="#d1e411" xml:lang="en">line</span>
+                  <span target="#d1e411" xml:lang="es">linea</span>
+                  
+                  <span target="#d1e413" xml:lang="en">up to</span>
+                  <span target="#d1e413" xml:lang="es">a</span>
+                  
+                  <span target="#d1e415" xml:lang="en">where</span>
+                  <span target="#d1e415" xml:lang="es">dónde</span>
+                  
+                  <span target="#d1e417" xml:lang="en" cert="medium">ends</span>
+                  <span target="#d1e417" xml:lang="es" cert="medium">fine</span>
+                  
+                  <span target="#d1e417 #d1e371" xml:lang="en">the end of the path</span>
+                  <span target="#d1e417 #d1e371" xml:lang="es">fin del camino</span>
+                  
+                  <span target="#d1e419" xml:lang="en">path</span>
+                  <span target="#d1e419" xml:lang="es">camino</span>
                   
                </spanGrp><lb/>
             </p>
@@ -442,19 +625,34 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L104-03-03" xml:lang="en">Here you have to look for the way to enter/go in order to collect all of your eggs.</span>
-                  <span target="#L104-03-03" xml:lang="es"></span>
+                  <span target="#L104-03-03" xml:lang="en">Here you have to look for the way to enter in order to collect all of your eggs.</span>
+                  <span target="#L104-03-03" xml:lang="es">Aquí tienes que buscar la manera a entrar para que recogas todos tus huevos.</span>
+                  
+                  <span target="#d1e426" xml:lang="en">here</span>
+                  <span target="#d1e426" xml:lang="es">aquí</span>
+                  
+                  <span target="#d1e430 #d1e432" xml:lang="en">you have to</span>
+                  <span target="#d1e430 #d1e432" xml:lang="es">tienes que</span>
+                  
+                  <span target="#d1e434 #d1e436" xml:lang="en">you look for</span>
+                  <span target="#d1e434 #d1e436" xml:lang="es">buscas</span>
                   
                   <span target="#d1e438 #d1e440" xml:lang="en">the way</span>
-                  <span target="#d1e438 #d1e440" xml:lang="es"></span>
+                  <span target="#d1e438 #d1e440" xml:lang="en">where</span>
+                  <span target="#d1e438 #d1e440" xml:lang="es">la manera</span>        
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e444 #d1e446" xml:lang="en">so that</span>
+                  <span target="#d1e444 #d1e446" xml:lang="es">para que</span>
+
+                  <span target="#d1e449" xml:lang="en">you can</span>
+                  <span target="#d1e449" xml:lang="es">puedes</span>
+
+                  <span target="#d1e451" xml:lang="en">you collect</span>
+                  <span target="#d1e451" xml:lang="es">recojes</span>
                   
-                  <span target="#d1e451" xml:lang="en">collect</span>
-                  <span target="#d1e451" xml:lang="es">recojer</span>
+                  <span target="#d1e453 #d1e455" xml:lang="en">all your eggs</span>
+                  <span target="#d1e453 #d1e455" xml:lang="es">todos tus huevos</span>
+                  
                </spanGrp>
                <seg xml:id="L104-03-04" type="S">
                   <w xml:id="d1e460">Cha</w>
@@ -469,13 +667,22 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-03-04" xml:lang="en">And now come out on your right.</span>
-                  <span target="#L104-03-04" xml:lang="es"></span>
+                  <span target="#L104-03-04" xml:lang="es">Y ahora sal a tu derecha.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e460" xml:lang="en">and</span>
+                  <span target="#d1e460" xml:lang="es">y</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e462" xml:lang="en">now</span>
+                  <span target="#d1e462" xml:lang="es">ahora</span>
+                  
+                  <span target="#d1e466" xml:lang="en">come out</span>
+                  <span target="#d1e466" xml:lang="es">sal</span>              
+                  
+                  <span target="#d1e468 #d1e470 #d1e472 #d1e474" xml:lang="en">to your right side</span>
+                  <span target="#d1e468 #d1e470 #d1e472 #d1e474" xml:lang="es">a tu derecha</span>    
+                  
+                  <span target="#d1e472 #d1e474" xml:lang="en">right</span>
+                  <span target="#d1e472 #d1e474" xml:lang="es">derecha</span>
                   
                </spanGrp>
             </p>
@@ -491,21 +698,43 @@
                   <w xml:id="d1e490">se'e</w>
                   <w xml:id="d1e492">chaka</w>
                   <w xml:id="d1e494">kuachi</w><!-- small? -->
-                  <w xml:id="d1e496">nuu</w>
+                  <w xml:id="d1e496" orig="nuu">nu</w>
                   <w xml:id="d1e498">chaka</w>
                   <w xml:id="d1e500">ka'nu</w><!-- big -->
                   <pc>?</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-04-01" xml:lang="en">Can the little fish hide from the big fish.</span>
-                  <span target="#L104-04-01" xml:lang="es"></span>
+                  <span target="#L104-04-01" xml:lang="es">¿Puede el pescado pequeño esconder del pescado grande?</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e486" xml:lang="en">can</span>
+                  <span target="#d1e486" xml:lang="es">puede</span>
+                  
+                  <span target="#d1e488 #d1e490" xml:lang="en">hide</span>
+                  <span target="#d1e488 #d1e490" xml:lang="es">esconde</span>
+                  
+                  <span target="#d1e488 #d1e490 #d1e496" xml:lang="en">hide from</span>
+                  <span target="#d1e488 #d1e490 #d1e496" xml:lang="es">esconder de</span>
+                  
+                  <span target="#d1e492" xml:lang="en">fish</span>
+                  <span target="#d1e492" xml:lang="es">pescado</span>
+                  
+                  <span target="#d1e494" xml:lang="en">small</span>
+                  <span target="#d1e494" xml:lang="es">pequeño</span>   
+                  
+                  <span target="#d1e496" xml:lang="en">from</span>
+                  <span target="#d1e496" xml:lang="es">de</span>
+                  
+                  <span target="#d1e498" xml:lang="en">fish</span>
+                  <span target="#d1e498" xml:lang="es">pescado</span>
+                  
+                  <span target="#d1e500" xml:lang="en">big</span>
+                  <span target="#d1e500" xml:lang="es">grande</span>
+
                </spanGrp>
                <seg xml:id="L104-04-02" type="S">
                   <w xml:id="d1e505">Ntana'a</w>
-                  <w xml:id="d1e507">iin</w>
+                  <w xml:id="d1e507" orig="iin">in</w>
                   <w xml:id="d1e509">linia</w>
                   <w xml:id="d1e511">nchii</w><!-- (from) the side where -->
                   <w xml:id="d1e513">tsio</w>
@@ -518,30 +747,58 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-04-02" xml:lang="en">Draw a line from the side where you enter and the side where you come out.</span>
-                  <span target="#L104-04-02" xml:lang="es"></span>
+                  <span target="#L104-04-02" xml:lang="es">Dibuja una linea de dónde entras y el lado dónde sales.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e505" xml:lang="en">draw</span>
+                  <span target="#d1e505" xml:lang="es">dibuja</span>
+                  
+                  <span target="#d1e509" xml:lang="en">line</span>
+                  <span target="#d1e509" xml:lang="es">linea</span>
+                  
+                  <span target="#d1e511 #d1e513" xml:lang="en">the side where</span>
+                  <span target="#d1e511 #d1e513" xml:lang="es">el lado dónde</span>
+                  
+                  <span target="#d1e515" xml:lang="en">you will enter</span>
+                  <span target="#d1e515" xml:lang="es">vas a entrar</span>
+                  
+                  <span target="#d1e517" xml:lang="en">and</span>
+                  <span target="#d1e517" xml:lang="es">y</span>
+                  
+                  <span target="#d1e519 #d1e521" xml:lang="en">the side where</span>
+                  <span target="#d1e519 #d1e521" xml:lang="es">el lado dónde</span>
+      
+                  <span target="#d1e523" xml:lang="en">you will exit</span>
+                  <span target="#d1e523" xml:lang="es">vas a salir</span>
                </spanGrp>
-               <seg xml:id="L104-04-03" type="S">
+               <seg xml:id="L104-04-03" type="S"><!-- question -VOICE? -->
                   <pc>¿</pc>
                   <w xml:id="d1e530">Nisa</w>
                   <w xml:id="d1e532">chaka</w>
-                  <w xml:id="d1e534">kuu</w>
+                  <w xml:id="d1e534">kuu</w><!-- wouldn't "inkaa" "yee" or "iin" be a better verb here? -->
                   <pc>?</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-04-03" xml:lang="en">How many fish are there?</span>
-                  <span target="#L104-04-03" xml:lang="es"></span>
+                  <span target="#L104-04-03" xml:lang="es">¿Cuantos pescados hay?</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e530" xml:lang="en">how many</span>
+                  <span target="#d1e530" xml:lang="es">cuanto</span>
+                  
+                  <span target="#d1e532" xml:lang="en">fish</span>
+                  <span target="#d1e532" xml:lang="es">pescado</span>
+                  
+                  <span target="#d1e534" xml:lang="en">be</span>
+                  <span target="#d1e534" xml:lang="es">hay</span>
                </spanGrp>
                <seg xml:id="L104-04-04" type="S" function="worksheet">
                   <w xml:id="d1e539">Yee</w>
                   <w xml:id="d1e541"> ___________</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#d1e539" xml:lang="en">there are</span>
+                  <span target="#d1e539" xml:lang="es">hay</span>
+               </spanGrp>
             </p>
             <p>
                <graphic url="L104-08.png"/>
@@ -562,27 +819,71 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L104-04-05" xml:lang="en">You have to enter this path and then you have to come out on the other side.</span>
-                  <span target="#L104-04-05" xml:lang="es"></span>
+                  <span target="#L104-04-05" xml:lang="es">Tienes que entrar este camino y tienes que salir al otro lado.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e548 #d1e550" xml:lang="en" cert="medium">have to</span><!-- lemma? -->
+                  <span target="#d1e548 #d1e550" xml:lang="es" cert="low">tener que</span>
+                  <span target="#d1e548 #d1e550" xml:lang="es" cert="low">tienes que</span><!-- is "ñu'u" also in 2s? -->
+                  
+                  <span target="#d1e552" xml:lang="en">you enter</span>
+                  <span target="#d1e552" xml:lang="es">entras</span>
+                  
+                  <span xml:lang="en" target="#d1e554 #d1e556">this path</span>
+                  <span xml:lang="es" target="#d1e554 #d1e556">este camino</span>
+                  
+                  <span xml:lang="en" target="#d1e558">then</span>
+                  <span xml:lang="es" target="#d1e558">y</span>
+                  
+                  <span xml:lang="en" target="#d1e560 #d1e562">you look for</span>
+                  <span xml:lang="en" target="#d1e560 #d1e562">you figure out</span>
+                  <span xml:lang="es" target="#d1e560 #d1e562">buscas</span>
+                  
+                  <span xml:lang="en" target="#d1e564">how</span>
+                  <span xml:lang="es" target="#d1e564">cómo</span>
+                  
+                  <span xml:lang="en" target="#d1e566">come out</span>
+                  <span xml:lang="es" target="#d1e566">salir</span>
+                  
+                  <span xml:lang="en" target="#d1e566 #d1e571">you come out</span>
+                  <span xml:lang="es" target="#d1e566 #d1e571">sales</span>
+                  
+                  <span xml:lang="en" target="#d1e568">side</span>
+                  <span xml:lang="es" target="#d1e568">lado</span>
+                  
                </spanGrp>
                <seg xml:id="L104-04-06" type="S">
                   <w xml:id="d1e576">Ntana'a</w>
-                  <w xml:id="d1e578">iin</w>
+                  <w xml:id="d1e578" orig="iin">in</w>
                   <w xml:id="d1e580">linia</w>
                   <w xml:id="d1e582">mancha</w>
-                  <w xml:id="d1e584">nuu</w>
+                  <w xml:id="d1e584" orig="nuu">nu</w>
                   <w xml:id="d1e586">kunkee</w>
                   <w xml:id="d1e588">ichi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L104-04-06" xml:lang="en">Draw a line up to the end of the path.</span>
-                  <span target="#L104-04-06" xml:lang="es"></span>
+                  <span target="#L104-04-06" xml:lang="en">Draw a line up to wher the path will end.</span>
+                  <span target="#L104-04-06" xml:lang="es" cert="medium">Dibuja una linea a dónde va a terminar el camino.</span>   
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <!-- could it be: ",.....where the path ends"? (eg "kee" is a verb?) -->
+                  <span target="#d1e576" xml:lang="en">draw</span>
+                  <span target="#d1e576" xml:lang="es">dibuja</span>
+                  
+                  <span target="#d1e580" xml:lang="en">line</span>
+                  <span target="#d1e580" xml:lang="es">linea</span>
+                  
+                  <span target="#d1e582" xml:lang="en">up to</span>
+                  <span target="#d1e582" xml:lang="es">a</span>
+                  
+                  <span target="#d1e584" xml:lang="en">where</span>
+                  <span target="#d1e584" xml:lang="es">dónde</span>
+                  
+                  <span target="#d1e586" xml:lang="en" cert="medium">will end</span>
+                  <span target="#d1e586" xml:lang="es" cert="medium">va a terminar</span>
+                  
+                  <span target="#d1e588" xml:lang="en">path</span>
+                  <span target="#d1e588" xml:lang="es">camino</span>
+                  
                </spanGrp>
             </p>
          </div>
