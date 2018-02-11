@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L144-tok">
    <teiHeader>
       <fileDesc>
@@ -195,10 +196,19 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L144-01-01" xml:lang="en">There are two corn cobs laying here.</span>
-                  <span target="#L144-01-01" xml:lang="es"></span>
+                  <span target="#L144-01-01" xml:lang="es">Hay dos elotes aquí.</span>
+                  
+                  <span xml:lang="en" target="#d1e204">here</span>
+                  <span xml:lang="es" target="#d1e204">aquí</span>
                   
                   <span target="#d1e206" xml:lang="en">lay</span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e206" xml:lang="es">acosta</span>
+                  
+                  <span xml:lang="en" target="#d1e208">two</span>
+                  <span xml:lang="es" target="#d1e208">dos</span>
+                  
+                  <span xml:lang="en" target="#d1e210">corn cob</span>
+                  <span xml:lang="es" target="#d1e210">elote</span>
                </spanGrp>
             </p>
             <p>
@@ -210,15 +220,13 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L144-01-02" xml:lang="en">This is Yesenia</span>
-                  <span target="#L144-01-02" xml:lang="es">Esta es Yesenia</span>
+                  <span target="#L144-01-02" xml:lang="en" cert="medium">That is Yesenia</span>
+                  <span target="#L144-01-02" xml:lang="es" cert="medium">Esta es Yesenia</span>
                   
-                  <span target="#d1e217" xml:lang="en">this</span>
-                  <span target="#d1e217" xml:lang="es">esta</span>
+                  <span target="#d1e217" xml:lang="en" cert="medium">that</span>
+                  <span target="#d1e217" xml:lang="es" cert="medium">esa</span>
                   
-                  <span target="#d1e219" xml:lang="en">be</span>
                   <span target="#d1e219" xml:lang="en">is</span>
-                  <span target="#d1e219" xml:lang="es">estar</span>
                   <span target="#d1e219" xml:lang="es">es</span>
                </spanGrp>
                <graphic url="L144-03.png"/>
@@ -249,14 +257,14 @@
                   <w xml:id="d1e241">ko</w><!-- 1pl.incl -->
                   <w xml:id="d1e243">ntixi</w><!-- corn cobs -->
                   <w xml:id="d1e245">yo'o</w><!-- here -->
-                  <w xml:id="d1e247">nuu</w><!-- to, between the -->
+                  <w xml:id="d1e247" orig="nuu">nu</w><!-- to, between the -->
                   <w xml:id="d1e249">uvi</w><!-- two -->
                   <w xml:id="d1e251">ñasi'i</w><!--  girls-->
                   <pc>,</pc>
                   <w xml:id="d1e255">ta</w><!-- then -->
                   <w xml:id="d1e257">ian</w><!-- they each? -->
                   <w xml:id="d1e260">kuntuta'in</w><!-- get -->
-                  <w xml:id="d1e262">iin</w><!-- one (in) -->
+                  <w xml:id="d1e262" orig="iin">in</w><!-- one (in) -->
                   <w xml:id="d1e264">ntixi</w><!-- corn -->
                   <pc>.</pc>
                </seg>
@@ -264,8 +272,42 @@
                   <span target="#L144-01-04" xml:lang="en">If we distribute two corn cobs between the girls then they each get one corn.</span>
                   <span target="#L144-01-04" xml:lang="es" cert="medium" resp="#JB">Se distribuimos dos elotes entre las niñas, entonces cada un entre ellas reciben un elote.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e237" xml:lang="en"></span>
+                  <span target="#d1e237" xml:lang="es"></span>
+                  
+                  <span target="#d1e239 #d1e241" xml:lang="en"></span>
+                  <span target="#d1e239 #d1e241" xml:lang="es"></span>
+                  
+                  <span target="#d1e243" xml:lang="en"></span>
+                  <span target="#d1e243" xml:lang="es"></span>
+                  
+                  <span target="#d1e245" xml:lang="en"></span>
+                  <span target="#d1e245" xml:lang="es"></span>
+                  
+                  <span target="#d1e247" xml:lang="en"></span>
+                  <span target="#d1e247" xml:lang="es"></span>
+                  
+                  <span target="#d1e249" xml:lang="en"></span>
+                  <span target="#d1e249" xml:lang="es"></span>
+                  
+                  <span target="#d1e251" xml:lang="en"></span>
+                  <span target="#d1e251" xml:lang="es"></span>
+                  
+                  <span target="#d1e255" xml:lang="en"></span>
+                  <span target="#d1e255" xml:lang="es"></span>
+                  
+                  <span target="#d1e257" xml:lang="en"></span>
+                  <span target="#d1e257" xml:lang="es"></span>
+                  
+                  <span target="#d1e260" xml:lang="en"></span>
+                  <span target="#d1e260" xml:lang="es"></span>
+                  
+                  <span target="#d1e262" xml:lang="en">one</span>
+                  <span target="#d1e262" xml:lang="es">un</span>
+                  
+                  <span target="#d1e264" xml:lang="en">corn cob</span>    
+                  <span target="#d1e264" xml:lang="en">corn</span>
+                  <span target="#d1e264" xml:lang="es">elote</span>
                </spanGrp>
             </p>
             <p>
@@ -280,11 +322,30 @@
                   <w xml:id="d1e279">uvi</w><!-- two -->
                   <w xml:id="d1e281">ñasi'i</w><!-- girls -->
                   <c>=</c>
-                  <w xml:id="d1e285">iin</w><!-- one (in) -->
+                  <w xml:id="d1e285" orig="iin">in</w><!-- one (in) -->
                   <w xml:id="d1e287">ntixi</w><!-- corb cob -->
                   <w xml:id="d1e289">i'iin</w><!-- each -->
                   <w xml:id="d1e291">ñasi'i</w><!-- girl -->
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L144-01-05" xml:lang="en"></span>
+                  <span target="#L144-01-05" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+               </spanGrp>
             </p>
             <p>
                <seg xml:id="L144-01-06"
@@ -315,8 +376,17 @@
                   <span target="#L144-02-01" xml:lang="en">There are three hats lying here.</span>
                   <span target="#L144-02-01" xml:lang="es">Hay tres sombreros aquí.</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e310" xml:lang="en"></span>
+                  <span target="#d1e310" xml:lang="es"></span>
+                  
+                  <span target="#d1e312" xml:lang="en"></span>
+                  <span target="#d1e312" xml:lang="es"></span>
+                  
+                  <span target="#d1e314" xml:lang="en"></span>
+                  <span target="#d1e314" xml:lang="es"></span>
+                  
+                  <span target="#d1e316" xml:lang="en"></span>
+                  <span target="#d1e316" xml:lang="es"></span>
                </spanGrp>
             </p>
             <p>
@@ -336,6 +406,15 @@
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
+                      
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
+                  
+                  <span target="#" xml:lang="en"></span>
+                  <span target="#" xml:lang="es"></span>
                </spanGrp>
             </p>
             <p>
@@ -345,14 +424,14 @@
                   <w xml:id="d1e340">ko</w>
                   <w xml:id="d1e342">kue</w>
                   <w xml:id="d1e344">xini</w>
-                  <w xml:id="d1e346">nuu</w>
+                  <w xml:id="d1e346" orig="nuu">nu</w>
                   <w xml:id="d1e348">ñasuii</w>
                   <w xml:id="d1e350">yo'o</w><!-- here (not this)? -->
                   <pc>,</pc>
                   <w xml:id="d1e354">i'iin</w>
                   <w xml:id="d1e356">ñasuii</w>
                   <w xml:id="d1e359">kuntuta'in</w>
-                  <w xml:id="d1e361">iin</w>
+                  <w xml:id="d1e361" orig="iin">in</w>
                   <w xml:id="d1e363">xini</w>
                   <pc>.</pc>
                </seg>
@@ -360,15 +439,42 @@
                   <span target="#L144-02-03" xml:lang="en">If we distribute the hats here to each boy, they each get one hat.</span>
                   <span target="#L144-02-03" xml:lang="es"></span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e336" xml:lang="en"></span>
+                  <span target="#d1e336" xml:lang="es"></span>
+                  
+                  <span target="#d1e338 #d1e340" xml:lang="en"></span>
+                  <span target="#d1e338 #d1e340" xml:lang="es"></span>
+                  
+                  <span target="#d1e342" xml:lang="en"></span>
+                  <span target="#d1e342" xml:lang="es"></span>
+                  
+                  <span target="#d1e344" xml:lang="en"></span>
+                  <span target="#d1e344" xml:lang="es"></span>
+                  
+                  <span target="#d1e346" xml:lang="en"></span>
+                  <span target="#d1e346" xml:lang="es"></span>
+                  
+                  <span target="#d1e348" xml:lang="en"></span>
+                  <span target="#d1e348" xml:lang="es"></span>
+                  
+                  <span target="#d1e350" xml:lang="en"></span>
+                  <span target="#d1e350" xml:lang="es"></span>
                   
                   <span target="#d1e354" xml:lang="en">each</span>
                   <span target="#d1e354" xml:lang="es">cada un</span>
                   
+                  <span target="#d1e356" xml:lang="en"></span>
+                  <span target="#d1e356" xml:lang="es"></span>
+                  
                   <span target="#d1e359" xml:lang="en">get</span>
                   <span target="#d1e359" xml:lang="en">recieve</span>
                   <span target="#d1e359" xml:lang="es">reciben</span>
+                  
+                  <span target="#d1e361" xml:lang="en">one</span>
+                  <span target="#d1e361" xml:lang="es">un</span>
+                  
+                  <span target="#d1e363" xml:lang="en">hat</span>
+                  <span target="#d1e363" xml:lang="es">sombrero</span>
                </spanGrp>
             </p>
             <p>
@@ -382,11 +488,40 @@
                   <w xml:id="d1e377">uni</w>
                   <w xml:id="d1e379">ñasuii</w>
                   <c>=</c>
-                  <w xml:id="d1e383">iin</w>
+                  <w xml:id="d1e383" orig="iin">in</w>
                   <w xml:id="d1e385">xini</w>
                   <w xml:id="d1e387">i'iin</w>
                   <w xml:id="d1e389">ñasuii</w>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L144-02-04" xml:lang="en"></span>
+                  <span target="#L144-02-04" xml:lang="es"></span>
+                  
+                  <span target="#d1e371" xml:lang="en"></span>
+                  <span target="#d1e371" xml:lang="es"></span>
+                  
+                  <span target="#d1e373" xml:lang="en"></span>
+                  <span target="#d1e373" xml:lang="es"></span>
+                  
+                  <span target="#d1e377" xml:lang="en"></span>
+                  <span target="#d1e377" xml:lang="es"></span>
+                  
+                  <span target="#d1e379" xml:lang="en"></span>
+                  <span target="#d1e379" xml:lang="es"></span>
+                  
+                  <span target="#d1e383" xml:lang="en"></span>
+                  <span target="#d1e383" xml:lang="es"></span>
+                  
+                  <span target="#d1e385" xml:lang="en"></span>
+                  <span target="#d1e385" xml:lang="es"></span>
+                  
+                  <span target="#d1e387" xml:lang="en"></span>
+                  <span target="#d1e387" xml:lang="es"></span>
+                  
+                  <span target="#d1e389" xml:lang="en"></span>
+                  <span target="#d1e389" xml:lang="es"></span>
+               </spanGrp>
+               
             </p>
             <p>
                <seg xml:id="L144-02-05"
@@ -415,6 +550,12 @@
                   <span target="#L144-02-06" xml:lang="en">Remember: "divide" means to distribute.</span>
                   <span target="#L144-02-06" xml:lang="es">Recuera: "dividir" significa distribuir.</span>
                   
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
+                  
                   <span target="#d1e411 #d1e413" xml:lang="en">means</span>
                   <span target="#d1e411 #d1e413" xml:lang="es">significa</span>
 
@@ -436,12 +577,24 @@
                   <w xml:id="d1e438">saan</w><!-- saan so = always -->
                   <w xml:id="d1e440">so</w>
                   <w xml:id="d1e442">kunkui</w><!-- will be (kun-) + (kuu) + (-i) -->
-                  <w xml:id="d1e445">iin</w>
+                  <w xml:id="d1e445" orig="iin">in</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L144-02-07" xml:lang="en" cert="medium">When we want to divide a number by itself it will always equal one.</span>
                   <span target="#L144-02-07" xml:lang="es"></span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
                   
                   <span target="#d1e434" xml:lang="en">itself</span>
                   <span target="#d1e434" xml:lang="en">oneself</span>
@@ -456,6 +609,9 @@
                   <span target="#d1e442" xml:lang="en">it will be</span>
                   <span target="#d1e442" xml:lang="es">va a ser</span>
                   <span target="#d1e442" xml:lang="es">será</span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
                </spanGrp>
             </p>
          </div>
@@ -473,8 +629,18 @@
                   <span target="#L144-03-01" xml:lang="en">Here there are four cactus pears.</span>
                   <span target="#L144-03-01" xml:lang="es">Aquí estan cuatro nopales.</span>
                   
+                  <span xml:lang="en" target="#d1e453"></span>
+                  <span xml:lang="es" target="#d1e453"></span>
+                         
+                  <span xml:lang="en" target="#d1e455"></span>
+                  <span xml:lang="es" target="#d1e455"></span>
+                  
+                  <span xml:lang="en" target="#d1e457"></span>
+                  <span xml:lang="es" target="#d1e457"></span>
+                  
                   <span target="#d1e459" xml:lang="en">cactus pear</span>
                   <span target="#d1e459" xml:lang="es">nopal</span>
+
                </spanGrp>
                <graphic url="L144-10.jpg"/>
                <seg xml:id="L144-03-02" type="S">
@@ -486,6 +652,12 @@
                <spanGrp type="translation">
                   <span target="#L144-03-02" xml:lang="en">This is Lisa.</span>
                   <span target="#L144-03-02" xml:lang="es">Esta es Lisa.</span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
+                  
+                  <span xml:lang="en" target="#"></span>
+                  <span xml:lang="es" target="#"></span>
                </spanGrp>
             </p>
             <p>
@@ -505,6 +677,9 @@
                   <span target="#d1e475" xml:lang="en">by oneself</span>
                   <span target="#d1e475" xml:lang="es">por si mismo</span>
                   
+                  <span xml:lang="en" target="#d1e477"></span>
+                  <span xml:lang="es" target="#d1e477"></span>
+                  
                   <span target="#d1e481" xml:lang="en">will eat</span>
                   <span target="#d1e481" xml:lang="es">va a comer</span>
                   <span target="#d1e481" xml:lang="es">comerá</span>
@@ -512,8 +687,8 @@
                   <span target="#d1e483" xml:lang="en">all four</span>
                   <span target="#d1e483" xml:lang="es">cada de los cuatro</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e485" xml:lang="en"></span>
+                  <span target="#d1e485" xml:lang="es"></span>
                </spanGrp>
             </p>
             <p>
@@ -529,6 +704,34 @@
                   <w xml:id="d1e507">takua</w>
                   <w xml:id="d1e509">mii</w>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L144-03-04" xml:lang="en"></span>
+                  <span target="#L144-03-04" xml:lang="es"></span>
+                  
+                  <span target="#d1e491" xml:lang="en"></span>
+                  <span target="#d1e491" xml:lang="es"></span>
+                  
+                  <span target="#d1e493" xml:lang="en"></span>
+                  <span target="#d1e493" xml:lang="es"></span>
+                  
+                  <span target="#d1e497" xml:lang="en"></span>
+                  <span target="#d1e497" xml:lang="es"></span>
+                  
+                  <span target="#d1e499" xml:lang="en"></span>
+                  <span target="#d1e499" xml:lang="es"></span>
+                  
+                  <span target="#d1e503" xml:lang="en"></span>
+                  <span target="#d1e503" xml:lang="es"></span>
+                  
+                  <span target="#d1e505" xml:lang="en"></span>
+                  <span target="#d1e505" xml:lang="es"></span>
+                  
+                  <span target="#d1e507" xml:lang="en"></span>
+                  <span target="#d1e507" xml:lang="es"></span>
+                  
+                  <span target="#d1e509" xml:lang="en"></span>
+                  <span target="#d1e509" xml:lang="es"></span>
+               </spanGrp>
             </p>
             <p>
                <seg xml:id="L144-03-05"
@@ -554,6 +757,9 @@
                <spanGrp type="translation">
                   <span target="#L144-03-06" xml:lang="en">Here there are five flowers.</span>
                   <span target="#L144-03-06" xml:lang="es">Aquí hay cinco flores.</span>
+                  
+                  <span xml:lang="en" target="#d1e526"></span>
+                  <span xml:lang="es" target="#d1e526"></span>
 
                   <span target="#d1e528" xml:lang="en">there are</span>
                   <span target="#d1e528" xml:lang="es">hay</span>
@@ -574,11 +780,24 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L144-03-07" xml:lang="en"></span>
+                  <span target="#L144-03-07" xml:lang="es"></span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e538" xml:lang="en"></span>
+                  <span target="#d1e538" xml:lang="es"></span>
+                  
+                  <span target="#d1e540" xml:lang="en"></span>
+                  <span target="#d1e540" xml:lang="es"></span>
+                  
+                  <span target="#d1e542" xml:lang="en"></span>
+                  <span target="#d1e542" xml:lang="es"></span>
+                  
+                  <span target="#d1e544" xml:lang="en"></span>
+                  <span target="#d1e544" xml:lang="es"></span>
+                  
+                  <span target="#d1e546" xml:lang="en"></span>
+                  <span target="#d1e546" xml:lang="es"></span>
+                  
                </spanGrp>
             </p>
             <p>
@@ -596,8 +815,14 @@
                   <span target="#L144-03-08" xml:lang="en">This woman will pick all five flowers by herself.</span>
                   <span target="#L144-03-08" xml:lang="es">Esta mujer va recoger los cinco flores por ella misma.</span>
 
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e552" xml:lang="en"></span>
+                  <span target="#d1e552" xml:lang="es"></span>
+                  
+                  <span target="#d1e554" xml:lang="en"></span>
+                  <span target="#d1e554" xml:lang="es"></span>
+                  
+                  <span target="#d1e556" xml:lang="en"></span>
+                  <span target="#d1e556" xml:lang="es"></span>
 
                   <span target="#d1e560" xml:lang="en"></span>
                   <span target="#d1e560" xml:lang="es"></span>
@@ -605,8 +830,8 @@
                   <span target="#d1e562" xml:lang="en">all five</span>
                   <span target="#d1e562" xml:lang="es">los cinco</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e564" xml:lang="en"></span>
+                  <span target="#d1e564" xml:lang="es"></span>
                </spanGrp>
             </p>
             <p>
@@ -624,8 +849,26 @@
                </seg>
                
                <spanGrp type="translation">
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L144-03-09" xml:lang="en"></span>
+                  <span target="#L144-03-09" xml:lang="es"></span>
+                  
+                  <span target="#d1e570" xml:lang="en"></span>
+                  <span target="#d1e570" xml:lang="es"></span>
+                  
+                  <span target="#d1e572" xml:lang="en"></span>
+                  <span target="#d1e572" xml:lang="es"></span>
+                  
+                  <span target="#d1e576" xml:lang="en"></span>
+                  <span target="#d1e576" xml:lang="es"></span>
+                  
+                  <span target="#d1e578" xml:lang="en"></span>
+                  <span target="#d1e578" xml:lang="es"></span>
+                  
+                  <span target="#d1e582" xml:lang="en"></span>
+                  <span target="#d1e582" xml:lang="es"></span>
+                  
+                  <span target="#d1e584" xml:lang="en"></span>
+                  <span target="#d1e584" xml:lang="es"></span>
                   
                   <span target="#d1e586 #d1e588" xml:lang="en">for oneself</span>
                   <span target="#d1e586 #d1e588" xml:lang="es">para ella misma</span>
@@ -664,8 +907,8 @@
                </seg>
                
                <spanGrp type="translation">
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L144-03-11" xml:lang="en"></span>
+                  <span target="#L144-03-11" xml:lang="es"></span>
                   
                   <span target="#" xml:lang="en"></span>
                   <span target="#" xml:lang="es"></span>
