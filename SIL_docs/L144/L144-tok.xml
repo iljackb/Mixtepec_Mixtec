@@ -81,6 +81,11 @@
                   <date>2018-02-10</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). In this document the extended senses of "face" - "nuu" were not normalized as I am awaiting discussion as to whether this particular sense should also be changed to "nu".
                </ab>
             </normalization>
+            <segmentation>
+               <ab>
+                  TEI encoding of segments that are blank in the original workbooks for interactive answers by users still remain to be finalized.
+               </ab>
+            </segmentation>
          </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
@@ -141,8 +146,7 @@
                <graphic url="L144-01.png"/>
                <seg xml:id="L144-01-01" type="S">
                   <w xml:id="d1e204">Yo'o</w>
-                  <w xml:id="d1e206">ntee</w>
-                  <!-- lay -->
+                  <w xml:id="d1e206">ntee</w>   <!-- lay -->
                   <w xml:id="d1e208">uvi</w>
                   <w xml:id="d1e210">ntixi</w>
                   <pc>.</pc>
@@ -2128,8 +2132,8 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L144-11-03" xml:lang="en"></span>
-                  <span target="#L144-11-03" xml:lang="es"></span>
+                  <span target="#L144-11-03" xml:lang="en" cert="unknown"></span><!-- NEED TO FIGURE OUT HOW TO ENCODE BLANK SPACE -->
+                  <span target="#L144-11-03" xml:lang="es" cert="unknown"></span><!-- NEED TO FIGURE OUT HOW TO ENCODE BLANK SPACE -->
                   
                   <span target="#d1e1377" xml:lang="en">he can</span>
                   <span target="#d1e1377" xml:lang="es">puede</span>
@@ -2157,21 +2161,20 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L144-11-04" xml:lang="en"></span>
-                  <span target="#L144-11-04" xml:lang="es"></span>
+                  <span target="#L144-11-04" xml:lang="en" cert="unknown"></span><!-- NEED TO FIGURE OUT HOW TO ENCODE BLANK SPACE -->
+                  <span target="#L144-11-04" xml:lang="es" cert="unknown"></span>
                   
                   <span target="#d1e1400" xml:lang="en">he can</span>
                   <span target="#d1e1400" xml:lang="es">puede</span>
                   
                   <span target="#d1e1402" xml:lang="en">hey buys</span>
                   <span target="#d1e1402" xml:lang="es">compra</span>
+                              
+                  <span target="#d1e1406" xml:lang="en">vase</span>
+                  <span target="#d1e1406" xml:lang="es">vaso</span>
                   
-                  
-                  <span target="#d1e1406" xml:lang="en"></span>
-                  <span target="#d1e1406" xml:lang="es"></span>
-                  
-                  <span target="#d1e1408" xml:lang="en"></span>
-                  <span target="#d1e1408" xml:lang="es"></span>
+                  <span target="#d1e1408" xml:lang="en" cert="unknown">corn drink</span>
+                  <span target="#d1e1408" xml:lang="es" cert="unknown"></span>
                </spanGrp>
                <graphic url="L144-36.png"/>
                <seg xml:id="L144-11-04-00-01" type="S">______</seg>
@@ -2189,20 +2192,18 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L144-11-05" xml:lang="en"></span>
-                  <span target="#L144-11-05" xml:lang="es"></span>
+                  <span target="#L144-11-05" xml:lang="en" cert="unknown"></span><!-- NEED TO FIGURE OUT HOW TO ENCODE BLANK SPACE -->
+                  <span target="#L144-11-05" xml:lang="es" cert="unknown"></span><!-- NEED TO FIGURE OUT HOW TO ENCODE BLANK SPACE -->
                   
-                  <span target="#d1e1425" xml:lang="en"></span>
-                  <span target="#d1e1425" xml:lang="es"></span>
+                  <span target="#d1e1425" xml:lang="en">he can</span>
+                  <span target="#d1e1425" xml:lang="es">puede</span>
                   
-                  <span target="#d1e1427" xml:lang="en"></span>
-                  <span target="#d1e1427" xml:lang="es"></span>
+                  <span target="#d1e1427" xml:lang="en">he buys</span>
+                  <span target="#d1e1427" xml:lang="es">compra</span>
                   
-                  <span target="#d1e1429" xml:lang="en"></span>
-                  <span target="#d1e1429" xml:lang="es"></span>
                   
-                  <span target="#d1e1431" xml:lang="en"></span>
-                  <span target="#d1e1431" xml:lang="es"></span>
+                  <span target="#d1e1431" xml:lang="en">bread</span>
+                  <span target="#d1e1431" xml:lang="es">pan</span>
                </spanGrp>
                <graphic url="L144-37.png"/>
                <seg xml:id="L144-11-05-00-01" type="S">______</seg>
@@ -2220,7 +2221,7 @@
                   <w xml:id="d1e1454">numero</w>
                   <w xml:id="d1e1456">ña</w>
                   <w xml:id="d1e1458">inkaa</w>
-                  <w xml:id="d1e1460">nuu</w>
+                  <w xml:id="d1e1460" orig="nuu">nu</w>
                   <w xml:id="d1e1462">nchiso</w>   <!-- sacks -->
                   <w xml:id="d1e1464">lurru</w>
                   <w xml:id="d1e1466">yo'o</w>
@@ -2228,68 +2229,71 @@
                   <w xml:id="d1e1470">sara</w>
                   <w xml:id="d1e1473">ntachi</w>   <!-- ntachi ta'un = (add) put together -->
                   <w xml:id="d1e1475">ta'un</w>  <!-- ntachi ta'un = (add) put together, combine -->
-                  <w xml:id="d1e1477">ña</w>      <!-- it -->
+                  <w xml:id="d1e1477">ña</w>      <!-- it (them) e.g. the numbers)-->
                   <pc>,</pc>
                   <w xml:id="d1e1481">takua</w>  <!-- so that -->
-                  <w xml:id="d1e1483">kunu</w>   <!-- you know -->
-                  <w xml:id="d1e1485">nchii</w> <!-- which -->
+                  <w xml:id="d1e1483">kunu</w>   <!-- you know  -->
+                  <w xml:id="d1e1485" orig="nchii">nchi</w> <!-- which (lit: 'what')-->
                   <w xml:id="d1e1487">tsio</w>  <!-- side -->
                   <w xml:id="d1e1489">vee</w><!-- heavy -->
                   <w xml:id="d1e1491">ka</w><!-- tpc + adj make superlative?  -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L144-12-01" xml:lang="en">Divide the numbers that are on this donkey's sacks, then add it all up so that you know which side is heavier.</span>
-                  <span target="#L144-12-01" xml:lang="es"></span>
+                  <span target="#L144-12-01" xml:lang="en">We divide the numbers that are on this donkey's sacks, then add it all up so that you know which side is heavier.</span>
+                  <span target="#L144-12-01" xml:lang="es" cert="medium">Dividimos los numeros que están en los sacos del burro, luego lo addiciona para que sabes cual lado es el mas pessado.</span>
 
-                  <span target="#d1e1450" xml:lang="en"></span>
-                  <span target="#d1e1450" xml:lang="es"></span>
+                  <span target="#d1e1450 #d1e1452" xml:lang="en">we divide</span>
+                  <span target="#d1e1450 #d1e1452" xml:lang="es">dividimos</span>
 
-                  <span target="#d1e1452" xml:lang="en"></span>
-                  <span target="#d1e1452" xml:lang="es"></span>
+                  <span target="#d1e1454" xml:lang="en">number</span>
+                  <span target="#d1e1454" xml:lang="es">numero</span>
 
-                  <span target="#d1e1454" xml:lang="en"></span>
-                  <span target="#d1e1454" xml:lang="es"></span>
+                  <span target="#d1e1456" xml:lang="en">that</span>
+                  <span target="#d1e1456" xml:lang="es">que</span>
 
-                  <span target="#d1e1456" xml:lang="en"></span>
-                  <span target="#d1e1456" xml:lang="es"></span>
+                  <span target="#d1e1458" xml:lang="en">is located</span>
+                  <span target="#d1e1458" xml:lang="es">está</span>
 
-                  <span target="#d1e1458" xml:lang="en"></span>
-                  <span target="#d1e1458" xml:lang="es"></span>
+                  <span target="#d1e1460" xml:lang="en">in</span>
+                  <span target="#d1e1460" xml:lang="es">en</span>
 
-                  <span target="#d1e1460" xml:lang="en"></span>
-                  <span target="#d1e1460" xml:lang="es"></span>
+                  <span target="#d1e1460 #d1e1462 #d1e1464" xml:lang="en">in the donkey's sack</span>
+                  <span target="#d1e1460 #d1e1462 #d1e1464" xml:lang="es">in los sacos del burro</span>
 
-                  <span target="#d1e1462" xml:lang="en"></span>
-                  <span target="#d1e1462" xml:lang="es"></span>
+                  <span target="#d1e1462" xml:lang="en">sack</span>
+                  <span target="#d1e1462" xml:lang="es">saco</span>
 
-                  <span target="#d1e1464" xml:lang="en"></span>
-                  <span target="#d1e1464" xml:lang="es"></span>
+                  <span target="#d1e1462 #d1e1464" xml:lang="en">the donkey's sack</span>
+                  <span target="#d1e1462 #d1e1464" xml:lang="es">los sacos del burro</span>
+                  
+                  <span target="#d1e1464" xml:lang="en">donkey</span>
+                  <span target="#d1e1464" xml:lang="es">burro</span>
 
-                  <span target="#d1e1466" xml:lang="en"></span>
-                  <span target="#d1e1466" xml:lang="es"></span>
+                  <span target="#d1e1466" xml:lang="en">this</span>
+                  <span target="#d1e1466" xml:lang="es">este</span>
 
-                  <span target="#d1e1470" xml:lang="en"></span>
-                  <span target="#d1e1470" xml:lang="es"></span>
+                  <span target="#d1e1470" xml:lang="en">then</span>
+                  <span target="#d1e1470" xml:lang="es">luego</span>
 
                   <span target="#d1e1473 #d1e1475" xml:lang="en">add</span>
                   <span target="#d1e1473 #d1e1475" xml:lang="en">put together</span>
                   <span target="#d1e1473 #d1e1475" xml:lang="es">adicione</span>
 
-                  <span target="#d1e1477" xml:lang="en"></span>
-                  <span target="#d1e1477" xml:lang="es"></span>
+                  <span target="#d1e1477" xml:lang="en">them</span>
+                  <span target="#d1e1477" xml:lang="es">los</span>
 
-                  <span target="#d1e1481" xml:lang="en"></span>
-                  <span target="#d1e1481" xml:lang="es"></span>
+                  <span target="#d1e1481" xml:lang="en">so that</span>
+                  <span target="#d1e1481" xml:lang="es">para que</span>
 
-                  <span target="#d1e1483" xml:lang="en"></span>
-                  <span target="#d1e1483" xml:lang="es"></span>
+                  <span target="#d1e1483" xml:lang="en">you know</span>
+                  <span target="#d1e1483" xml:lang="es">sabes</span>
 
-                  <span target="#d1e1485" xml:lang="en"></span>
-                  <span target="#d1e1485" xml:lang="es"></span>
+                  <span target="#d1e1485" xml:lang="en">which</span>
+                  <span target="#d1e1485" xml:lang="es">cual</span>
 
-                  <span target="#d1e1487" xml:lang="en"></span>
-                  <span target="#d1e1487" xml:lang="es"></span>
+                  <span target="#d1e1487" xml:lang="en">side</span>
+                  <span target="#d1e1487" xml:lang="es">lado</span>
                   
                   <span target="#d1e1489" xml:lang="en">heavy</span>
                   <span target="#d1e1489" xml:lang="es">pesado</span>
@@ -2308,26 +2312,17 @@
                   <w xml:id="d1e1501">________________</w>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L144-12-02" xml:lang="en"></span>
-                  <span target="#L144-12-02" xml:lang="es"></span>
+                  <span target="#L144-12-02" xml:lang="en">left side <span>________________</span>                  </span>
+                  <span target="#L144-12-02" xml:lang="es">lado izquierdo <span>________________</span></span>
                   
-                  <span target="#d1e1499" xml:lang="en"></span>
-                  <span target="#d1e1499" xml:lang="es"></span>
+                  <span target="#d1e1499" xml:lang="en">side</span>
+                  <span target="#d1e1499" xml:lang="es">lado</span>
                   
-                  <span target="#d1e1500" xml:lang="en"></span>
-                  <span target="#d1e1500" xml:lang="es"></span>
+                  <span target="#d1e1500" xml:lang="en">left</span>
+                  <span target="#d1e1500" xml:lang="es">izquierdo</span>
                   
-                  <span target="#d1e1501" xml:lang="en"></span>
-                  <span target="#d1e1501" xml:lang="es"></span>
-               </spanGrp>
-               <spanGrp type="translation">
-                  <span target="#L144-12-02" xml:lang="en">left side <span>________________</span>
-                  </span>
-                  <span target="#L144-12-02" xml:lang="es">lado izquierdo <span>________________</span>
-                  </span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e1501" xml:lang="en" type="blank"></span>
+                  <span target="#d1e1501" xml:lang="es" type="blank"></span>
                </spanGrp>
             </p>
             <p>
@@ -2340,14 +2335,14 @@
                   <span target="#L144-12-03" xml:lang="en">right side<span>________________</span></span>
                   <span target="#L144-12-03" xml:lang="es">lado derecho <span>________________</span></span>
                   
-                  <span target="#d1e1505" xml:lang="en"></span>
-                  <span target="#d1e1505" xml:lang="es"></span>
+                  <span target="#d1e1505" xml:lang="en">side</span>
+                  <span target="#d1e1505" xml:lang="es">lado</span>
                   
-                  <span target="#d1e1506" xml:lang="en"></span>
-                  <span target="#d1e1506" xml:lang="es"></span>
+                  <span target="#d1e1506" xml:lang="en">right</span>
+                  <span target="#d1e1506" xml:lang="es">derecho</span>
                   
-                  <span target="#d1e1507" xml:lang="en"></span>
-                  <span target="#d1e1507" xml:lang="es"></span>
+                  <span target="#d1e1507" xml:lang="en" type="blank"></span>
+                  <span target="#d1e1507" xml:lang="es" type="blank"></span>
                </spanGrp>
             </p>
             <p>
@@ -2355,7 +2350,7 @@
                   <w xml:id="d1e1511">Tsio</w>
                   <w xml:id="d1e1513">________________</w>
                   <w xml:id="d1e1515">kuu</w>
-                  <w xml:id="d1e1517">ña</w>
+                  <w xml:id="d1e1517">ña</w><!-- that which -->
                   <w xml:id="d1e1519">vee</w>
                   <w xml:id="d1e1521">ka</w>
                   <pc>.</pc>
@@ -2364,23 +2359,23 @@
                   <span target="#L144-12-04" xml:lang="en">The <span>________________</span> side is the heavier.</span>
                   <span target="#L144-12-04" xml:lang="es">El lado <span>________________</span> es el más pesado.</span>
                   
-                  <span target="#d1e1511" xml:lang="en"></span>
-                  <span target="#d1e1511" xml:lang="es"></span>
+                  <span target="#d1e1511" xml:lang="en">side</span>
+                  <span target="#d1e1511" xml:lang="es">lado</span>
                   
-                  <span target="#d1e1513" xml:lang="en"></span>
-                  <span target="#d1e1513" xml:lang="es"></span>
+                  <span target="#d1e1513" xml:lang="en" type="blank"></span>
+                  <span target="#d1e1513" xml:lang="es" type="blank"></span>
                   
-                  <span target="#d1e1515" xml:lang="en"></span>
-                  <span target="#d1e1515" xml:lang="es"></span>
+                  <span target="#d1e1515" xml:lang="en">is</span>
+                  <span target="#d1e1515" xml:lang="es">es</span>
                   
-                  <span target="#d1e1517" xml:lang="en"></span>
-                  <span target="#d1e1517" xml:lang="es"></span>
+                  <span target="#d1e1517" xml:lang="en">that which is</span>
+                  <span target="#d1e1517" xml:lang="es">lo que es</span>
                   
-                  <span target="#d1e1519" xml:lang="en"></span>
-                  <span target="#d1e1519" xml:lang="es"></span>
+                  <span target="#d1e1519" xml:lang="en">heavy</span>
+                  <span target="#d1e1519" xml:lang="es">pesado</span>
                   
-                  <span target="#d1e1521" xml:lang="en"></span>
-                  <span target="#d1e1521" xml:lang="es"></span>
+                  <span target="#d1e1517 #d1e1519 #d1e1521" xml:lang="en">the heaviest</span>
+                  <span target="#d1e1521 #d1e1519 #d1e1521" xml:lang="es">el mas pessado</span>
                </spanGrp>          
             </p>
          </div>
