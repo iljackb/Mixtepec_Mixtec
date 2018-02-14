@@ -16,11 +16,22 @@
         </xsl:copy>
     </xsl:template>
     
+    <!-- seg2s -->
+    <!--  
     <xsl:template match="p/seg[@type='S']">
         <s xml:id="{generate-id(.)}" type="multiWordExpression">
             <xsl:copy-of select="@xml:lang"/>
             <xsl:apply-templates select="node()"/>
         </s>     
+    </xsl:template>
+    -->
+    
+    <!-- s2seg -->
+    <xsl:template match="p/s">
+        <seg type="S">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates select="node()"/>
+        </seg>     
     </xsl:template>
     
     <xsl:template match="//seg/seg[@type='LexItem']">

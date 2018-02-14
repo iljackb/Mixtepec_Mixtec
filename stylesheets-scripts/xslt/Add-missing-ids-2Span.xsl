@@ -26,6 +26,18 @@
     </xsl:template>
     -->
     
+    <!-- put <seg type="S"> and pre-existing <spanGrp>'s into <annotationBlock> 
+       
+    <xsl:template match="seg[@type = 'S' and parent::p]">
+        <annotationBlock>
+            <xsl:copy>
+                <xsl:apply-templates select="@* | node()"/>
+            </xsl:copy>         
+
+        </annotationBlock>
+    </xsl:template>
+    
+
     <xsl:template match="annotationBlock">
         <xsl:apply-templates select="@* | seg"/>
     </xsl:template>
@@ -50,7 +62,7 @@
         </xsl:if>
 
     </xsl:template>
-
+ -->
 
     <xsl:template match="spanGrp[@type = 'translation']">
         <xsl:variable name="theSpanGrp" select="."/>
