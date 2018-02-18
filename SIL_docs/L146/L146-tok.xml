@@ -52,38 +52,18 @@
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
-                        <list>
-                           <item>i) the entire sentences from original document (first level);</item>
-                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
-                        </list>
-                        Since the segments are not all orthographic/prose in nature, as many contain mathematical word problems, or completely numerical equations (some contain a mixture of both), 
-                        the segments in this document that are not entirely in prose are given the xml-tei attributes: 
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
-                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
-         </p>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-02-18</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). In this document the extended senses of "face" - "nuu" were not normalized as I am awaiting discussion as to whether this particular sense should also be changed to "nu". "tutu" 'wood' changed to "tutú"
+               </ab>
+            </normalization>
+            <segmentation>
+               <ab>
+                 ...
+               </ab>
+            </segmentation>
+         </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
                <category xml:id="pedagogical">
@@ -365,7 +345,7 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L146-02-01" xml:lang="en">Then the little bird flew away. It was sitting on a tree branch and the little boy came back and again shot at it again as he approached the little bird.</span>
-                  <span target="#L146-02-01" xml:lang="es"></span>
+                  <span target="#L146-02-01" xml:lang="es" cert="medium">Y el pájaro pequeño pájaro salió volando. Se sentaba en una rama de árbol y el niño pequeño volvió y le tiró de nuevo cuando acercaba el pájaro pequeño.</span>
 
                   <span target="#d1e243" xml:lang="en">then</span>
                   <span target="#d1e243" xml:lang="es">y</span>
@@ -555,7 +535,7 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L146-04-02" xml:lang="en">Then the little boy fell and sat down crying because it was night time.</span>
-                  <span target="#L146-04-02" xml:lang="es"/>
+                  <span target="#L146-04-02" xml:lang="es">Y entonces el niño pequeño se cayó llorando porque estaba la noche.</span>
                   
                   <span target="#d1e367" xml:lang="en">and then</span>
                   <span target="#d1e367" xml:lang="es">y entonces</span>
@@ -600,106 +580,115 @@
                   <w xml:id="d1e398">ntuu</w>                  <!-- daytime (ntuu kii) -->
                   <w xml:id="d1e400">kii</w>
                   <w xml:id="d1e402">xchaan</w>                  <!-- the next day -->
-                  <w xml:id="d1e404" cert="unknown">nta'i</w>   <!--  -->
-                  <w xml:id="d1e406" orig="iin">in</w>
+                  <w xml:id="d1e404">nta'i</w>   <!-- cry -->
+                  <w xml:id="d1e406" orig="iin">in</w><!-- "be", "hurt"? "a"? -->
                   <w xml:id="d1e408">ñasuii</w>
                   <w xml:id="d1e410">luu</w>
                   <w xml:id="d1e412">ka</w>
                   <w xml:id="d1e414">ñantu'i</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#L146-05-01" xml:lang="en">Then when it was morning the next day,</span>
-                  <span target="#L146-05-01" xml:lang="es"/>
+               <spanGrp type="translation" cert="low">
+                  <span target="#L146-05-01" xml:lang="en" cert="low">Then when it was morning the next day,....</span>
+                  <span target="#L146-05-01" xml:lang="es" cert="low">Y cuando estaba la mañana el día siguente......</span>
                   
-                  <span target="#d1e394" xml:lang="en"/>
-                  <span target="#d1e394" xml:lang="es"/>
+                  <span target="#d1e394" xml:lang="en">then</span>
+                  <span target="#d1e394" xml:lang="es">y</span>
                   
                   <span target="#d1e396" xml:lang="en">when</span>
                   <span target="#d1e396" xml:lang="es">cuando</span>
                   
                   <span target="#d1e398 #d1e400" xml:lang="en" cert="low">daytime</span><!-- copulative? -->
-                  <span target="#d1e398 #d1e400" xml:lang="es"></span>
+                  <span target="#d1e398 #d1e400" xml:lang="es" cert="low"></span>
                   
-                  <span target="#d1e400" xml:lang="en"></span>
-                  <span target="#d1e400" xml:lang="es"></span>
+                  <span target="#d1e400" xml:lang="en">day</span>
+                  <span target="#d1e400" xml:lang="es">día</span>
                   
-                  <span target="#d1e402" xml:lang="en"/>
-                  <span target="#d1e402" xml:lang="es"/>
+                  <span target="#d1e402" xml:lang="en">the next day</span>
+                  <span target="#d1e402" xml:lang="es">el día siguente</span>
                   
-                  <span target="#d1e404" xml:lang="en" cert="unknown"/>
-                  <span target="#d1e404" xml:lang="es" cert="unknown"/>
+                  <span target="#d1e404" xml:lang="en">cried</span>
+                  <span target="#d1e404" xml:lang="es">lloró</span>
                   
-                  <span target="#d1e406" xml:lang="en"/>
-                  <span target="#d1e406" xml:lang="es"/>
+                  <span target="#d1e406" xml:lang="en" cert="low"/>
+                  <span target="#d1e406" xml:lang="es" cert="low"/>
                   
-                  <span target="#d1e408" xml:lang="en"/>
-                  <span target="#d1e408" xml:lang="es"/>
-                  <span target="#d1e410" xml:lang="en"/>
-                  <span target="#d1e410" xml:lang="es"/>
-                  <span target="#d1e412" xml:lang="en"/>
-                  <span target="#d1e412" xml:lang="es"/>
+                  <span target="#d1e408" xml:lang="en">boy</span>
+                  <span target="#d1e408" xml:lang="es">niño</span>
                   
-                  <span target="#d1e414" xml:lang="en">was sitting</span>
-                  <span target="#d1e414" xml:lang="es">se sentaba</span>
+                  <span target="#d1e410" xml:lang="en">little</span>
+                  <span target="#d1e410" xml:lang="en">small</span>
+                  <span target="#d1e410" xml:lang="es">pequeño</span>
+                  
+                  <span target="#d1e414" xml:lang="en">sat down</span>
+                  <span target="#d1e414" xml:lang="es">se sentó</span>
                </spanGrp>
                <seg xml:id="L146-05-02" type="S">
                   <w xml:id="d1e420">Sara</w>
                   <w xml:id="d1e422" orig="iin">in</w>
                   <w xml:id="d1e424">chaa</w>                  <!-- man -->
-                  <w xml:id="d1e426">ntuku</w>                  <!-- looking for -->
-                  <w xml:id="d1e428">tutu</w>                  <!-- wood -->
+                  <w xml:id="d1e426">ntuku</w>                  <!-- looking for (POS = participle?)-->
+                  <w xml:id="d1e428" orig="tutu">tutú</w>                  <!-- wood -->
                   <w xml:id="d1e430">ntsini</w>                  <!-- heard (ntsini so'o) (sensed w/ "ears") -->
                   <w xml:id="d1e432">so'o</w>
-                  <w xml:id="d1e434">ra</w>
+                  <w xml:id="d1e434">ra</w>  <!--  -->
                   <w xml:id="d1e436">ña</w>
                   <w xml:id="d1e438">nta'ia</w>                  <!-- crying -->
-                  <w xml:id="d1e440">ra</w>
+                  <w xml:id="d1e440">ra</w>  <!-- conj -->
                   <w xml:id="d1e443">ntsa'an</w>                  <!-- came to-->
-                  <w xml:id="d1e445">ra</w>
-                  <w xml:id="d1e447">ntsanche'e</w>                  <!-- saw/looked at -->
-                  <w xml:id="d1e449">ra</w>
-                  <w xml:id="d1e451">nuu</w>                  <!-- nuu ñantu'i (to where he is sitting) -->
+                  <w xml:id="d1e445">ra</w><!-- 3sg.m  -->
+                  <w xml:id="d1e447">ntsanche'e</w>                  <!-- saw/looked at ("ntsa-" = inchoative) -->
+                  <w xml:id="d1e449">ra</w><!-- 3sg.m (or) conj ? -->
+                  <w xml:id="d1e451" orig="nuu">nu</w>                  <!-- nuu ñantu'i (to where he is sitting) -->
                   <w xml:id="d1e453">ñantu'i</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L146-05-02" xml:lang="en"/>
-                  <span target="#L146-05-02" xml:lang="es"/>
-                  <span target="#d1e420" xml:lang="en"/>
-                  <span target="#d1e420" xml:lang="es"/>
-                  <span target="#d1e422" xml:lang="en"/>
-                  <span target="#d1e422" xml:lang="es"/>
-                  <span target="#d1e424" xml:lang="en"/>
-                  <span target="#d1e424" xml:lang="es"/>
-                  <span target="#d1e426" xml:lang="en"/>
-                  <span target="#d1e426" xml:lang="es"/>
-                  <span target="#d1e428" xml:lang="en"/>
-                  <span target="#d1e428" xml:lang="es"/>
-                  <span target="#d1e430" xml:lang="en"/>
-                  <span target="#d1e430" xml:lang="es"/>
-                  <span target="#d1e432" xml:lang="en"/>
-                  <span target="#d1e432" xml:lang="es"/>
-                  <span target="#d1e434" xml:lang="en"/>
-                  <span target="#d1e434" xml:lang="es"/>
-                  <span target="#d1e436" xml:lang="en"/>
+                  <span target="#L146-05-02" xml:lang="en" cert="medium">Then a man looking for wood heard the crying and came up to and saw where the boy was sitting down.</span>
+                  <span target="#L146-05-02" xml:lang="es" cert="low">Y un hombre buscando madera oyó los gritos y vinó y vió dónde el niño se estaba sentado.</span>
+                  
+                  <span target="#d1e420" xml:lang="en">then</span>
+                  <span target="#d1e420" xml:lang="es">y</span>
+                  
+                  <span target="#d1e422" xml:lang="en">a</span>
+                  <span target="#d1e422" xml:lang="es">un</span>
+                  
+                  <span target="#d1e424" xml:lang="en">man</span>
+                  <span target="#d1e424" xml:lang="es">hombre</span>
+                  
+                  <span target="#d1e426" xml:lang="en" cert="medium">looking for</span>
+                  <span target="#d1e426" xml:lang="es" cert="medium">buscando</span>
+                  
+                  <span target="#d1e428" xml:lang="en">wood</span>
+                  <span target="#d1e428" xml:lang="es">madera</span>
+
+                  <span target="#d1e430 #d1e432" xml:lang="en">heard</span>
+                  <span target="#d1e430 #d1e432" xml:lang="es">oyó</span>     
+
+                  <span target="#d1e430 #d1e432 #d1e434" xml:lang="en">he heard</span>
+                  <span target="#d1e430 #d1e432 #d1e434" xml:lang="es">él oyó</span>                          
+                  
+                  <span target="#d1e436" xml:lang="en"/><!-- ña = nominalizer with the verb-->
                   <span target="#d1e436" xml:lang="es"/>
-                  <span target="#d1e438" xml:lang="en"/>
-                  <span target="#d1e438" xml:lang="es"/>
-                  <span target="#d1e440" xml:lang="en"/>
-                  <span target="#d1e440" xml:lang="es"/>
-                  <span target="#d1e443" xml:lang="en"/>
-                  <span target="#d1e443" xml:lang="es"/>
-                  <span target="#d1e445" xml:lang="en"/>
-                  <span target="#d1e445" xml:lang="es"/>
-                  <span target="#d1e447" xml:lang="en"/>
-                  <span target="#d1e447" xml:lang="es"/>
-                  <span target="#d1e449" xml:lang="en"/>
-                  <span target="#d1e449" xml:lang="es"/>
-                  <span target="#d1e451" xml:lang="en"/>
-                  <span target="#d1e451" xml:lang="es"/>
-                  <span target="#d1e453" xml:lang="en"/>
-                  <span target="#d1e453" xml:lang="es"/>
+                  
+                  <span target="#d1e436 #d1e438" xml:lang="en">the crying</span>
+                  <span target="#d1e436 #d1e438" xml:lang="es" cert="low">alguien estaba llorando</span>
+                  <span target="#d1e436 #d1e438" xml:lang="es" cert="low">los gritos</span>
+                  
+                  <span target="#d1e443 #d1e445" xml:lang="en">he came </span>
+                  <span target="#d1e443 #d1e445" xml:lang="es" cert="medium">vino</span>
+                  
+                  <span target="#d1e447 #d1e449" xml:lang="en">he saw</span>
+                  <span target="#d1e447 #d1e449" xml:lang="es">vió</span>            
+                  
+                  <span target="#d1e451" xml:lang="en">where</span>
+                  <span target="#d1e451" xml:lang="es">dónde</span>
+                  
+                  <span target="#d1e451 #d1e453" xml:lang="en">where he was sitting</span>
+                  <span target="#d1e451 #d1e453" xml:lang="es">dónde sentaba</span>
+                  
+                  <span target="#d1e453" xml:lang="en">he sat</span>
+                  <span target="#d1e453" xml:lang="es">sentó</span>
                </spanGrp>
             </p>
          </div>
@@ -721,23 +710,26 @@
                <seg xml:id="L146-06-02" type="S">
                   <pc>—</pc>
                   <pc>¿</pc>
-                  <w xml:id="d1e474">Nchii</w>
+                  <w xml:id="d1e474" cert="low" orig="Nchii">Nchi</w><!-- is "why" also "nchi" like "what" MILLE? -->
                   <w xml:id="d1e476">sa'u</w>
                   <w xml:id="d1e478">ña</w>
                   <w xml:id="d1e480">nta'iu</w><!-- cry 2sg.inf (-u) -->
-                  <pc>?</pc>
-                  <spanGrp type="translation">
+                  <pc>?</pc><!-- LIT: what is making you cry? -->
+                  <spanGrp type="translation" cert="low">
                      <span target="#L146-06-02" xml:lang="en">Why are you crying?</span>
                      <span target="#L146-06-02" xml:lang="es">¿Porqué estás llorando?</span>
                      
-                     <span target="#d1e474" xml:lang="en"/>
-                     <span target="#d1e474" xml:lang="es"/>
-                     <span target="#d1e476" xml:lang="en"/>
-                     <span target="#d1e476" xml:lang="es"/>
-                     <span target="#d1e478" xml:lang="en"/>
-                     <span target="#d1e478" xml:lang="es"/>
-                     <span target="#d1e480" xml:lang="en"/>
-                     <span target="#d1e480" xml:lang="es"/>
+                     <span target="#d1e474" xml:lang="en" cert="low">what</span>
+                     <span target="#d1e474" xml:lang="es" cert="low">que</span>
+                     
+                     <span target="#d1e476" xml:lang="en" cert="low"></span>
+                     <span target="#d1e476" xml:lang="es" cert="low"></span>
+                     
+                     <span target="#d1e478" xml:lang="en" cert="low"/>
+                     <span target="#d1e478" xml:lang="es" cert="low"/>
+                     
+                     <span target="#d1e480" xml:lang="en" cert="low"/>
+                     <span target="#d1e480" xml:lang="es" cert="low"/>
                   </spanGrp>
                </seg>
             
@@ -746,27 +738,29 @@
                   <w xml:id="d1e487">nikachi</w>
                   <w xml:id="d1e489">ñasuii</w>
                   <w xml:id="d1e491">luu</w>
-                  <w xml:id="d1e493">ka</w>:
+                  <w xml:id="d1e493">ka</w>
+                  <pc>:</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L146-06-03" xml:lang="en"/>
-                  <span target="#L146-06-03" xml:lang="es"/>
-                  <span target="#d1e485" xml:lang="en"/>
-                  <span target="#d1e485" xml:lang="es"/>
-                  <span target="#d1e487" xml:lang="en"/>
-                  <span target="#d1e487" xml:lang="es"/>
-                  <span target="#d1e489" xml:lang="en"/>
-                  <span target="#d1e489" xml:lang="es"/>
-                  <span target="#d1e491" xml:lang="en"/>
-                  <span target="#d1e491" xml:lang="es"/>
-                  <span target="#d1e493" xml:lang="en"/>
-                  <span target="#d1e493" xml:lang="es"/>
+                  <span target="#L146-06-03" xml:lang="en">Then the little boy said:</span>
+                  <span target="#L146-06-03" xml:lang="es">Y dijó el pequeño niño:</span>
+                  
+                  <span target="#d1e485" xml:lang="en">then</span>
+                  <span target="#d1e485" xml:lang="es">y</span>
+                  
+                  <span target="#d1e487" xml:lang="en">said</span>
+                  <span target="#d1e487" xml:lang="es">dijó</span>
+                  
+                  <span target="#d1e489" xml:lang="en">boy</span>
+                  <span target="#d1e489" xml:lang="es">niño</span>
+                  
+                  <span target="#d1e491" xml:lang="en">little</span>
+                  <span target="#d1e491" xml:lang="es">pequeño</span>
                </spanGrp>
                
                <seg xml:id="L146-06-04" type="S">
                   <pc>—</pc>
-                  <w xml:id="d1e499">Nta'i</w>
-                  <!--  -->
+                  <w xml:id="d1e499">Nta'i</w> <!--  -->
                   <w xml:id="d1e501">yu</w>
                   <w xml:id="d1e503">vari</w>
                   <w xml:id="d1e505">niyu'u</w>                  <!-- niyu'u ta = be scared -->
@@ -838,7 +832,7 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#L146-06-06" xml:lang="en" cert="low">Don't cry, I'm chopping wood now. Let's go home, I'll go and I can drop you off at your house.....</span>
-                  <span target="#L146-06-06" xml:lang="es"/>
+                  <span target="#L146-06-06" xml:lang="es" cert="low">No lloras, orita estoy cortando madera. Vamos a casa y yo iré y te dejo a tu casa.....</span>
                   
                   <span target="#d1e526" xml:lang="en">don't</span>
                   <span target="#d1e526" xml:lang="es">no</span>
@@ -901,55 +895,43 @@
                   <w xml:id="d1e585">ñasuii</w>
                   <w xml:id="d1e587">luu</w>
                   <w xml:id="d1e589">ka</w>
-                  <w xml:id="d1e591">niyu'u</w>                  <!-- scared -->
+                  <w xml:id="d1e591">niyu'u</w>                  <!-- scared (adj)-->
                   <w xml:id="d1e593">xiin</w>                  <!-- very -->
                   <w xml:id="d1e595">ra</w>
                   <w xml:id="d1e597">miki</w>                  <!-- never -->
-                  <w xml:id="d1e599">ka</w>
+                  <w xml:id="d1e599" cert="low">ka</w><!-- WHY THIS HERE?! -->
                   <w xml:id="d1e601">nitsa'in</w>                  <!-- returned -->
-                  <w xml:id="d1e603">ka'nia</w>                  <!-- to kill  -->
+                  <w xml:id="d1e603">ka'nia</w>                  <!-- kill 3s.inf (incompl)  -->
                   <w xml:id="d1e606">saa</w>                  <!-- birds -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L146-07-01" xml:lang="en">Then the scared little boy never returned to kill birds ever again.</span>
-                  <span target="#L146-07-01" xml:lang="es"/>
+                  <span target="#L146-07-01" xml:lang="en">Then the very scared little boy never returned to kill birds ever again.</span>
+                  <span target="#L146-07-01" xml:lang="es">Y el niño pequeño muy asustado nunca jamás volvió para matar pájaros.</span>
                   
-                  <span target="#d1e583" xml:lang="en"/>
-                  <span target="#d1e583" xml:lang="es"/>
+                  <span target="#d1e583" xml:lang="en">and then</span>
+                  <span target="#d1e583" xml:lang="es">y</span>
                   
-                  <span target="#d1e585" xml:lang="en"/>
-                  <span target="#d1e585" xml:lang="es"/>
+                  <span target="#d1e585" xml:lang="en">boy</span>
+                  <span target="#d1e585" xml:lang="es">niño</span>
                   
-                  <span target="#d1e587" xml:lang="en"/>
-                  <span target="#d1e587" xml:lang="es"/>
+                  <span target="#d1e587" xml:lang="en">little</span>
+                  <span target="#d1e587" xml:lang="es">pequeño</span>         
                   
-                  <span target="#d1e589" xml:lang="en"/>
-                  <span target="#d1e589" xml:lang="es"/>
+                  <span target="#d1e591 #d1e593" xml:lang="en" cert="medium">very scared</span>
+                  <span target="#d1e591 #d1e593" xml:lang="es" cert="medium">muy asustado</span>
                   
-                  <span target="#d1e591" xml:lang="en"/>
-                  <span target="#d1e591" xml:lang="es"/>
+                  <span target="#d1e597" xml:lang="en">never</span>
+                  <span target="#d1e597" xml:lang="es">nunca jamás</span>               
                   
-                  <span target="#d1e593" xml:lang="en"/>
-                  <span target="#d1e593" xml:lang="es"/>
+                  <span target="#d1e601" xml:lang="en">returned</span>
+                  <span target="#d1e601" xml:lang="es">vovió</span>
                   
-                  <span target="#d1e595" xml:lang="en"/>
-                  <span target="#d1e595" xml:lang="es"/>
+                  <span target="#d1e603" xml:lang="en">kills</span>
+                  <span target="#d1e603" xml:lang="es">mata</span>
                   
-                  <span target="#d1e597" xml:lang="en"/>
-                  <span target="#d1e597" xml:lang="es"/>
-                  
-                  <span target="#d1e599" xml:lang="en"/>
-                  <span target="#d1e599" xml:lang="es"/>
-                  
-                  <span target="#d1e601" xml:lang="en"/>
-                  <span target="#d1e601" xml:lang="es"/>
-                  
-                  <span target="#d1e603" xml:lang="en"/>
-                  <span target="#d1e603" xml:lang="es"/>
-                  
-                  <span target="#d1e606" xml:lang="en"/>
-                  <span target="#d1e606" xml:lang="es"/>
+                  <span target="#d1e606" xml:lang="en">bird</span>
+                  <span target="#d1e606" xml:lang="es">pájaro</span>
                </spanGrp>
             </p>
          </div>
