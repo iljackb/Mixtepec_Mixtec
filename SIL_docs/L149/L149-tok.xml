@@ -65,36 +65,18 @@
          </textDesc>
       </profileDesc>
       <encodingDesc>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
-                        <list>
-                           <item>i) the entire sentences from original document (first level);</item>
-                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
-                        </list>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
-                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
-         </p>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-02-19</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). In this document the extended senses of "face" - "nuu" were not normalized as I am awaiting discussion as to whether this particular sense should also be changed to "nu".
+               </ab>
+            </normalization>
+            <segmentation>
+               <ab>
+                  ....
+               </ab>
+            </segmentation>
+         </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
                <category xml:id="pedagogical">
