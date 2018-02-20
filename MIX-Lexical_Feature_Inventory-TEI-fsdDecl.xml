@@ -542,17 +542,71 @@ negator
          </div>
          
          <div xml:id="Adpositions-MIX">
-            <desc><label>Adpositions</label> As per Langacker (1978) Adpositions/propositions etc. will always semantically occur as the 'Trajector'
-               whose role is to specify some relation to the constructions' 'Landmark'. </desc><!-- (refer to feature structure for the TR-LM relationship, and its conceptual primacy in Cognitive Semantics) -->                
+            <desc><label>Adpositions</label> As per Langacker (1978) Adpositions/propositions etc. will always semantically occur as the 'Trajector' whose role is to specify some relation to the constructions' 'Landmark'. </desc><!-- (refer to feature structure for the TR-LM relationship, and its conceptual primacy in Cognitive Semantics) -->                
            
-            <fs type="Trajector" xml:id="TR">
-               <f name="StaticTrajector" xml:id="TR-static"/>
-               <f name="DynamicTrajector" xml:id="TR-dynam"/>
-               <f name="Person-Object" xml:id="TR-pers-obj"/>
-               <f name="EventTrajector" xml:id="TR-event"/>   
+            <fs>
+               <f name="Trajector" xml:id="TR">
+                  <vAlt>
+                     <symbol value="StaticTrajector" xml:id="TR-static"/>
+                     <symbol value="DynamicTrajector" xml:id="TR-dynam"/>
+                     <symbol value="Person-Object" xml:id="TR-pers-obj"/>
+                     <symbol value="EventTrajector" xml:id="TR-event"/>  
+                  </vAlt>
+               </f>
+
             </fs>
             
-            <fs type="Landmark" xml:id="LM"/>   
+            <fs>
+               <f name="Landmark" xml:id="LM"/>
+            </fs>
+            
+            <fs>
+               <f name="Region" xml:id="REG">
+                  <vAlt>
+                     
+                  </vAlt>
+               </f>
+            </fs>
+            
+            <fs>
+               <f name="Path" xml:id="PATH">
+                  <vAlt>
+                     <symbol value="BeginningPath" xml:id="BEG-PATH"/>
+                     <symbol value="MiddlePath" xml:id="MID-PATH"/>
+                     <symbol value="EndPath" xml:id="END-PATH"/>
+                  </vAlt>
+               </f>
+            </fs>
+            
+            <fs>
+               <f name="Motion" xml:id="MTN">
+                  <vAlt>
+                     <symbol value="" xml:id=""/>
+                     <symbol value="" xml:id=""/>
+                     <symbol value="" xml:id=""/>
+                  </vAlt>
+               </f>
+            </fs>
+            
+            <fs>
+               <f name="Direction" xml:id="DIR">
+                  <vAlt>
+                     <symbol value="" xml:id=""/>
+                     <symbol value="" xml:id=""/>
+                     <symbol value="" xml:id=""/>
+                  </vAlt>
+               </f>
+            </fs>
+            
+            <fs>
+               <f name="frameOfReference" xml:id="FoR">
+                  <vAlt>
+                     <symbol value="" xml:id=""/>
+                     <symbol value="" xml:id=""/>
+                     <symbol value="" xml:id=""/>
+                  </vAlt>
+               </f>
+            </fs>
            
             <fs xml:id="PHRS-ADPOS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2285" type="adposition-phrase"><!-- phrase introduced by one or several adpositions and containing a complement such as a noun phrase; Francopoulo, Gil -->
                
@@ -1158,6 +1212,7 @@ negator
             </fs>
             
          </div>
+         
          
       </body>
    </text>
