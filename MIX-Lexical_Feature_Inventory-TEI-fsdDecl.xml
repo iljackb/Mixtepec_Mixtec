@@ -553,57 +553,47 @@ negator
                      <symbol value="EventTrajector" xml:id="TR-event"/>  
                   </vAlt>
                </f>
-
             </fs>
             
             <fs>
-               <f name="Landmark" xml:id="LM"/>
-            </fs>
-            
-            <fs>
-               <f name="Region" xml:id="REG">
+               <f name="Landmark" xml:id="LM">
                   <vAlt>
-                     
+                     <symbol value="personLM" xml:id="LM-PERS"/>
+                     <symbol value="objectLM" xml:id="LM-OBJ"/>
+                     <symbol value="eventLM" xml:id="LM-EVNT"/>
                   </vAlt>
                </f>
             </fs>
             
-            <fs>
-               <f name="Path" xml:id="PATH">
-                  <vAlt>
-                     <symbol value="BeginningPath" xml:id="BEG-PATH"/>
-                     <symbol value="MiddlePath" xml:id="MID-PATH"/>
-                     <symbol value="EndPath" xml:id="END-PATH"/>
-                  </vAlt>
-               </f>
-            </fs>
-            
-            <fs>
-               <f name="Motion" xml:id="MTN">
-                  <vAlt>
-                     <symbol value="" xml:id=""/>
-                     <symbol value="" xml:id=""/>
-                     <symbol value="" xml:id=""/>
-                  </vAlt>
-               </f>
-            </fs>
-            
-            <fs>
-               <f name="Direction" xml:id="DIR">
-                  <vAlt>
-                     <symbol value="" xml:id=""/>
-                     <symbol value="" xml:id=""/>
-                     <symbol value="" xml:id=""/>
-                  </vAlt>
-               </f>
-            </fs>
-            
+   
             <fs>
                <f name="frameOfReference" xml:id="FoR">
                   <vAlt>
-                     <symbol value="" xml:id=""/>
-                     <symbol value="" xml:id=""/>
-                     <symbol value="" xml:id=""/>
+                     <symbol value="viewpoint-centeredFoR" xml:id="VPTC-FoR"/>
+                     <symbol value="relativeFoR" xml:id="REL-FoR"/>
+                     <symbol value="intrinsicFor" xml:id="INTR-FoR"/>
+                     <fs>
+                        <f name="direction" xml:id="DIR">
+                              <symbol value="direction"/>
+                        </f>
+                     </fs>
+                     <fs>
+                        <f name="Path" xml:id="PATH">
+                           <vAlt>
+                              <symbol value="BeginningPath" xml:id="BEG-PATH"/>
+                              <symbol value="MiddlePath" xml:id="MID-PATH"/>
+                              <symbol value="EndPath" xml:id="END-PATH"/>
+                           </vAlt>
+                        </f>
+                     </fs>
+                     <fs>
+                        <f name="Region" xml:id="REG">
+                           <vAlt>
+                              <symbol value="interiorRegion" xml:id="INTER-REG"/>
+                              <symbol value="exteriorRegion" xml:id="EX-REG"/>
+                           </vAlt>
+                        </f>
+                     </fs>
                   </vAlt>
                </f>
             </fs>
