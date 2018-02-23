@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div xml:id="L095-12">
+            <p>
+               <seg xml:id="L095-12-01" type="S" subtype="interrogative">
+                  <pc>¿</pc>
+                  <w xml:id="d1e447" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e449">inkaa</w>
+                  <w xml:id="d1e451">vilu</w>
+                  <pc>?</pc>
+               </seg>
+               <spanGrp type="translation">
+                  <span target="#L095-12-01" xml:lang="en">Where is the cat?</span>
+                  <span target="#L095-12-01" xml:lang="es">¿Dondé está el gato?</span>
+                  
+                  <span target="#d1e447" xml:lang="en">where</span>
+                  <span target="#d1e447" xml:lang="es">dondé</span>
+                  
+                  <span target="#d1e449" xml:lang="en">is</span>
+                  <span target="#d1e449" xml:lang="es">está</span>
+                  
+                  <span target="#d1e451" xml:lang="en">cat</span>
+                  <span target="#d1e451" xml:lang="es">gato</span>
+               </spanGrp>
+               <graphic url="L095-12.png"/>
+               <seg type="blank" xml:id="L095-12-02">_______________________________</seg>
+            </p>
+            <!-- speaker responses to question -->
+            <ab>
+               <seg resp="#TS" xml:id="L095-12-02-A01" type="S" subtype="declarative">
+                  <w xml:id="d1e461">inka<m xml:id="d1e462" corresp="#d1e451">i</m></w>
+                  <w xml:id="d1e463">sata</w>
+                  <w xml:id="d1e465" orig="ña'an">ña'á</w><!-- woman? -->
+                  <w xml:id="d1e467">ka</w>
+               </seg>
+               <spanGrp type="spatialSemantics">  
+                  <span type="trajector" target="#d1e462" ana="#TR-static"/>
+                  <span type="landmark" target="#d1e465" ana="#LM-PERS"/>
+                  
+                  <span type="frameOfReference" target="#" ana="#REL-FoR"/>
+                  <!-- WHAT TO POINT TO FOR FoR? -->
+                  
+                  <span type="path" target="#" ana="#ZERO-PATH"/><!-- NOT SURE IF NECESSARY -->
+                  <!-- what to point to for tagging PATH? -->
+                  <!-- how (whether) to tag spatial indicator (region or directional concept)? (e.g. "nu")? -->
+                  
+                  <span type="spatialRelation" ana=""/>
+                  
+                  <span type="spatialIndicator" target="#d1e463"/>
+                  <span type="motionIndicator"/>
+                  
+               </spanGrp>       
+               <spanGrp type="translation">
+                  <span target="#L095-07-02-A01" xml:lang="en">It's behind the woman.</span>
+                  <span target="#L095-07-02-A01" xml:lang="es">Está atrás de la mujer.</span>
+                  
+                  <span target="#d1e461" xml:lang="en">it is</span>
+                  <span target="#d1e461" xml:lang="es">está</span>
+                  
+                  <span target="#d1e463" xml:lang="en">behind</span>
+                  <span target="#d1e463" xml:lang="es">atrás de</span>
+                  
+                  <span target="#d1e465" xml:lang="en">woman</span>
+                  <span target="#d1e465" xml:lang="es">mujer</span>
+               </spanGrp>
+            </ab>
+            <link target="#L095-12-02 #L095-12-02-A01"/>
+         </div>
+      </body>
+  </text>
+</TEI>

@@ -25,7 +25,7 @@
         </annotationBlock>
     </xsl:template>
     -->
-    <xsl:template match="seg[@type='S']">
+    <xsl:template match="seg[@type='S']"><!-- Need more specific tagging to identify only those <seg>'s with spatial expressions!!-->
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
@@ -34,6 +34,7 @@
             <span type="landmark" target="#" ana="#LM-"/>
             <span type="frameOfReference" target="#" ana="#-FoR"/>
             <span type="path" target="#" ana="#-PATH"/>
+            <!-- how to tag spatial indicator (region or directional concept)? (e.g. "nu")? -->
             
         </spanGrp>       
         
