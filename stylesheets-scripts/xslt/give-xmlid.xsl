@@ -27,7 +27,9 @@
     -->
     <xsl:template match="seg">
         <seg xml:id="{generate-id(.)}">
-           <xsl:copy-of select="@*[not(name()='xml:id')]"/>
+            <xsl:copy-of select="@*"/>
+           <!--  <xsl:copy-of select="@*[not(name()='xml:id')]"/>
+               -->
             <xsl:apply-templates select="node()"/>
         </seg>
     </xsl:template>
@@ -41,7 +43,9 @@
     
     <xsl:template match="w">
         <w xml:id="{generate-id(.)}">
-            <xsl:copy-of select="@*[not(name()='xml:id')]"/> 
+            <xsl:copy-of select="@*"/>
+            <!--  <xsl:copy-of select="@*[not(name()='xml:id')]"/>
+               -->
             <xsl:apply-templates select="node()"/>
         </w>
     </xsl:template>

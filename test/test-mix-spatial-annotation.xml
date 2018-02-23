@@ -3,7 +3,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Title</title>
@@ -15,8 +15,13 @@
             <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
-  </teiHeader>
-  <text>
+   </teiHeader>
+   <text>
+      <!-- 
+      HOW BEST TO IDENTIFY AND LIMIT THE SPATIAL ANNOTATIONS TO JUST THE SPATIAL COMPONENTS OF THE LANGUAGE CONTENT?
+      
+      -->
+      
       <body>
          <div xml:id="L095-12">
             <p>
@@ -30,60 +35,138 @@
                <spanGrp type="translation">
                   <span target="#L095-12-01" xml:lang="en">Where is the cat?</span>
                   <span target="#L095-12-01" xml:lang="es">¿Dondé está el gato?</span>
-                  
                   <span target="#d1e447" xml:lang="en">where</span>
                   <span target="#d1e447" xml:lang="es">dondé</span>
-                  
                   <span target="#d1e449" xml:lang="en">is</span>
                   <span target="#d1e449" xml:lang="es">está</span>
-                  
                   <span target="#d1e451" xml:lang="en">cat</span>
                   <span target="#d1e451" xml:lang="es">gato</span>
                </spanGrp>
                <graphic url="L095-12.png"/>
-               <seg type="blank" xml:id="L095-12-02">_______________________________</seg>
             </p>
             <!-- speaker responses to question -->
             <ab>
-               <seg resp="#TS" xml:id="L095-12-02-A01" type="S" subtype="declarative">
+               <seg xml:id="L095-12-02-A01" resp="#TS" type="S" subtype="declarative">
                   <w xml:id="d1e461">inka<m xml:id="d1e462" corresp="#d1e451">i</m></w>
                   <w xml:id="d1e463">sata</w>
-                  <w xml:id="d1e465" orig="ña'an">ña'á</w><!-- woman? -->
+                  <w xml:id="d1e465" orig="ña'an">ña'á</w>           
                   <w xml:id="d1e467">ka</w>
                </seg>
-               <spanGrp type="spatialSemantics">  
+               <spanGrp type="spatialSemantics">
                   <span type="trajector" target="#d1e462" ana="#TR-static"/>
                   <span type="landmark" target="#d1e465" ana="#LM-PERS"/>
-                  
-                  <span type="frameOfReference" target="#" ana="#REL-FoR"/>
-                  <!-- WHAT TO POINT TO FOR FoR? -->
-                  
-                  <span type="path" target="#" ana="#ZERO-PATH"/><!-- NOT SURE IF NECESSARY -->
-                  <!-- what to point to for tagging PATH? -->
+                  <span type="frameOfReference" ana="#REL-FoR"/>                 
                   <!-- how (whether) to tag spatial indicator (region or directional concept)? (e.g. "nu")? -->
-                  
-                  <span type="spatialRelation" ana=""/>
-                  
+                  <span type="direction" ana="#DIR-REL"/>               
+                  <span type="region" ana="#DC #BEHIND"/>            
                   <span type="spatialIndicator" target="#d1e463"/>
-                  <span type="motionIndicator"/>
-                  
-               </spanGrp>       
+               </spanGrp>
                <spanGrp type="translation">
                   <span target="#L095-07-02-A01" xml:lang="en">It's behind the woman.</span>
                   <span target="#L095-07-02-A01" xml:lang="es">Está atrás de la mujer.</span>
-                  
                   <span target="#d1e461" xml:lang="en">it is</span>
                   <span target="#d1e461" xml:lang="es">está</span>
-                  
                   <span target="#d1e463" xml:lang="en">behind</span>
                   <span target="#d1e463" xml:lang="es">atrás de</span>
-                  
                   <span target="#d1e465" xml:lang="en">woman</span>
                   <span target="#d1e465" xml:lang="es">mujer</span>
                </spanGrp>
             </ab>
             <link target="#L095-12-02 #L095-12-02-A01"/>
          </div>
+         <div>
+            <annotationBlock>
+               <u xml:id="d1e86" n="1" start="0" end="2.51">
+                  <seg xml:id="d1e87" function="utterance" notation="orth">
+                     <w xml:id="d1e88" synch="#T1">ntava</w>
+                     <w xml:id="d1e90" synch="#T8">xi'an</w>
+                     <w xml:id="d1e92" synch="#T14">ka</w>
+                     <w xml:id="d1e94" synch="#T17">nu<m xml:id="d1e95">u̠̠</m>
+                     </w>
+                  </seg>
+               </u>
+               <spanGrp type="spatialSemantics">
+                  <span type="trajector" target="#d1e90" ana="#TR-dynamic"/>
+                  <span type="landmark" target="#d1e95" ana="#LM-PERS"/>              
+                  <span type="frameOfReference" ana="#INTR-FoR"/>           
+                  <span type="path" ana="#MID-PATH"/>
+                  <span type="direction" ana="#DIR-REL"/>               
+                  <span type="region" ana="#DC #FRONT"/>                   
+                  <span type="spatialIndicator" target="#d1e463"/>
+                  <span type="motionIndicator" target="#d1e88"/>
+               </spanGrp>
+            </annotationBlock>
+         </div>
+         <div>
+            <ab>
+               <seg xml:id="d1e118" type="S">
+                  <w xml:id="d1e119">kaka</w>
+                  <w xml:id="d1e121">sata</w>
+               </seg>
+               <spanGrp type="spatialSemantics">
+                  <span type="trajector" ana="#TR-PERS"/><!-- IMPLICIT -->               
+                  <span type="frameOfReference" ana="#REL-FoR"/>
+                  <span type="path" ana="#BEG-PATH" cert="low"/>
+                  <span type="direction" ana="#DIR-REL"/>              
+                  <span type="region" cert="unknown"/>            
+                  <span type="spatialIndicator" target="#d1e121"/>
+                  <span type="motionIndicator" target="#d1e119"/>
+               </spanGrp>
+            </ab>
+         </div>
+         <div>
+            <ab>
+               <seg xml:id="d1e215" function="utterance" notation="orth">
+                  <w xml:id="d1e216" synch="#T32">tsika</w><!-- walk (or) far -->
+                  <w xml:id="d1e218" synch="#T37">tina</w>
+                  <w xml:id="d1e220" synch="#T42">ka</w>
+                  <w xml:id="d1e222" synch="#T45">kua'an</w><!-- going -->
+                  <w xml:id="d1e224" synch="#T51">chinu</w><!-- towards -->
+                  <w xml:id="d1e226" synch="#T56">inkaa</w>
+                  <w xml:id="d1e228" synch="#T61">suluu</w>
+               </seg>
+               <spanGrp type="spatialSemantics">
+                  <span type="trajector" target="#d1e218" ana="#TR-PERS"/>        
+                  <span type="frameOfReference" ana="#INTR-FoR"/>
+                  <span type="landmark" target="#d1e226 #d1e228" ana="#LM-PERS"/>
+                  
+                  <span type="path" ana="#MID-PATH"/><!-- but implies the END of path also!! -->
+                  <span type="direction" ana="#DIR-REL"/>              
+                  
+                  <span type="spatialRelation" ana=""/>
+                  
+                  <span type="spatialIndicator" target="#d1e224"/>
+                  <span type="motionIndicator" target="#d1e216 #d1e222"/>
+               </spanGrp>
+         </ab>
+         </div>
+         <div>
+            <ab>
+               <seg xml:id="d1e56" function="utterance" notation="orth">
+                  <w xml:id="d1e57" synch="#T1">iin</w><!-- eachother -->
+                  <w xml:id="d1e59" synch="#T3">ntsitsio</w><!-- away (opposite direction) -->
+                  <w xml:id="d1e61" synch="#T10">kua'an</w>
+                  <w xml:id="d1e63" synch="#T14">tina</w>
+                  <w xml:id="d1e65" synch="#T20">ka</w>
+               </seg>
+               
+               
+            </ab>
+         </div>
+         
+         <div>
+            <ab>
+               <seg xml:id="d1e70" function="utterance" notation="orth">
+                  <w xml:id="d1e71" synch="#T1">kuntava</w>
+                  <w xml:id="d1e75" synch="#T10">tikuchi</w>
+                  <w xml:id="d1e77" synch="#T17">ka</w>
+                  <w xml:id="d1e79" synch="#T20">ntivia</w>
+                  <w xml:id="d1e81" synch="#T26">nu</w>
+                  <w xml:id="d1e83" synch="#T29">kava</w>
+               </seg>
+            </ab>
+         </div>
+         
       </body>
-  </text>
+   </text>
 </TEI>

@@ -33,8 +33,10 @@
             <span type="trajector" target="#" ana="#TR-"/>
             <span type="landmark" target="#" ana="#LM-"/>
             <span type="frameOfReference" target="#" ana="#-FoR"/>
-            <span type="path" target="#" ana="#-PATH"/>
-            <!-- how to tag spatial indicator (region or directional concept)? (e.g. "nu")? -->
+            <span type="direction" ana="#"/>
+            <span type="region" ana="#"/>
+            <span type="path" target="#" ana="#-PATH"/><!-- Zlatev: if path defined minimally, requires REGION to profile trajectory, REGION requires LM -->
+            <!-- how (whether) to tag spatial indicator (region or directional concept)? (e.g. "nu")? -->
             
         </spanGrp>       
         
