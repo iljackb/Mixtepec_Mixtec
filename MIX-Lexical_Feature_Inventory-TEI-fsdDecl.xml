@@ -553,8 +553,7 @@ negator
                      <symbol value="EventTrajector" xml:id="TR-event"/>  
                   </vAlt>
                </f>
-            </fs>
-            
+            </fs>        
             <fs>
                <f name="Landmark" xml:id="LM">
                   <vAlt>
@@ -571,45 +570,84 @@ negator
                      <symbol value="viewpoint-centeredFoR" xml:id="VPTC-FoR"/>
                      <symbol value="relativeFoR" xml:id="REL-FoR"/>
                      <symbol value="intrinsicFor" xml:id="INTR-FoR"/>
-                     <fs>
-                        <f name="direction" xml:id="DIR">
-                              <symbol value="direction"/>
-                        </f>
-                     </fs>
-                     <fs>
-                        <f name="Path" xml:id="PATH">
-                           <vAlt>
-                              <symbol value="BeginningPath" xml:id="BEG-PATH"/>
-                              <symbol value="MiddlePath" xml:id="MID-PATH"/>
-                              <symbol value="EndPath" xml:id="END-PATH"/>
-                              <symbol value="ZeroPath" xml:id="ZERO-PATH"/>
-                           </vAlt>
-                        </f>
-                     </fs>
-                     <fs>
-                        <f name="Region" xml:id="REG">
-                           <vAlt>
-                              <symbol value="interiorRegion" xml:id="INTER-REG"/>
-                              <symbol value="exteriorRegion" xml:id="EX-REG"/>
-                           </vAlt>
-                        </f>
-                     </fs>
                   </vAlt>
                </f>
             </fs>
+            <fs>
+               <f name="Path" xml:id="PATH"><!-- enhance with "perfect" & "impefective" path? (Hawkins 1984; Zlatev: 11-10) to express "towards" vs "to"? -->
+                  <vAlt>
+                     <symbol value="BeginningPath" xml:id="BEG-PATH"/><!-- source -->
+                     <symbol value="MiddlePath" xml:id="MID-PATH"/>
+                     <symbol value="EndPath" xml:id="END-PATH"/><!-- goal -->
+                     <symbol value="ZeroPath" xml:id="ZERO-PATH"/>
+                  </vAlt>
+               </f>
+            </fs>
+            <fs>
+               <f name="Region" xml:id="REG">
+                  <vAlt><!-- might want to refine with more types or just be general -->
+                     <symbol value="interiorRegion" xml:id="INTER-REG"/>
+                     <symbol value="exteriorRegion" xml:id="EX-REG"/>
+                  </vAlt>
+               </f>
+            </fs>
+            <fs>
+               <f name="directionalRelations" xml:id="DIR">
+                  <vAlt>
+                     <fs>
+                        <f name="absoluteDirections"><!-- relative to Earth geography: {N, S, E, W; NW, NE, SW, SE} -->
+                           <symbol value="absoluteDirection" xml:id="DIR-ABS"/>
+                           <!--  
+                                    <vAlt>
+                                       <symbol value="north" xml:id="NORTH"/>
+                                       <symbol value="south" xml:id="SOUTH"/>
+                                       <symbol value="east" xml:id="EAST"/>
+                                       <symbol value="west" xml:id="WEST"/>
+                                       <symbol value="northwest" xml:id="NW"/>
+                                       <symbol value="southwest" xml:id="SW"/>
+                                       <symbol value="northeast" xml:id="NE"/>
+                                       <symbol value="southeast" xml:id="W"/>
+                                    </vAlt>
+                                    -->
+                        </f>
+                     </fs>
+                     <fs>
+                        <f name="relativeDirections"><!-- relative to LM (local space): {left, right, above, behind, below} -->
+                           <symbol value="relativeDirection" xml:id="DIR-REL"/>
+                           <!--  
+                                    <vAlt>
+                                       <symbol value="left" xml:id="LEFT"/>
+                                       <symbol value="right" xml:id="RIGHT"/>
+                                       <symbol value="front" xml:id="FRONT"/>
+                                       <symbol value="behind" xml:id="BEHIND"/>
+                                       <symbol value="above" xml:id="ABOVE"/>
+                                       <symbol value="below" xml:id="BELOW"/>
+                                       <symbol value="below" xml:id="TOWARD"/>
+                                       <symbol value="below" xml:id="AWAY"/>
+                                    </vAlt>
+                                    -->
+                           <!-- "FRONT" and "INFRONT" are distinguished by the RCC8:
+                              "FRONT"(ofLM) is :TPP"; 
+                              "INFRONT" (ofLM) is: "DC"
+                           -->
+                        </f>
+                     </fs>
            
-            <fs xml:id="PHRS-ADPOS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2285" type="adposition-phrase"><!-- phrase introduced by one or several adpositions and containing a complement such as a noun phrase; Francopoulo, Gil -->
+           
+           
+            <!--  Part of speech that occurs before/inside/after a complement composed of a noun phrase, noun, pronoun or clause that
+               functions as a noun phrase and forms a single structure with the complement to express its grammatical and semantic relation to another unit.; Eagles -->
+           <!-- phrase introduced by one or several adpositions and containing a complement such as a noun phrase; Francopoulo, Gil -->
+            <!-- 
+            <fs xml:id="PHRS-ADPOS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2285" type="adposition-phrase">
                
-               <f name="adposition" xml:id="ADPOS" dcr:datcat="http://www.isocat.org/datcat/DC-1231"><!--  Part of speech that occurs before/inside/after a complement composed of a noun phrase, noun, pronoun or clause that functions as a noun phrase and forms a single structure with the complement to express its grammatical and semantic relation to another unit.; Eagles -->
+               <f name="adposition" xml:id="ADPOS" dcr:datcat="http://www.isocat.org/datcat/DC-1231">
                   <fs xml:id="ADPOS-CNFIG" feats="#ADPOS #CNFIG"/>
                   <fs xml:id="ADPOS-DIR" feats="#ADPOS #DIR #V-MTN"/>
                </f>
             </fs>
             
-            
-            
-            
-            
+ 
          </div>
          <fs>
             
@@ -623,11 +661,13 @@ negator
                   <f name="adjectives">
                      <vAlt>
                         <symbol value="adjective" xml:id="ADJ"/>
-                        <symbol value="adjectiveAttribute" xml:id="ADJ-ATTRIB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-5242"/><!-- decide whether to use (2017/12/12) -->
+                        <symbol value="adjectiveAttribute" xml:id="ADJ-ATTRIB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-5242"/>
+                     
                      </vAlt>
                   </f>
                </fs>
-               
+                   -->
+                        <!-- decide whether to use (2017/12/12) -->
             </div><lb/>
             
             <div xml:id="GrammaticalPerson-MIX">
