@@ -1023,20 +1023,10 @@
 
          <entry xml:id="body-face-eye" type="compound">
             <form type="lemma">
-               <orth>
-                  <seg corresp="#bean">ntuchi</seg>
-                  <seg corresp="#body-face">nuu</seg>
-               </orth>
-               <pron notation="ipa">
-                  <seg corresp="#bean">ndùʧí</seg>
-                  <seg corresp="#body-face">nũ̀ũ̀</seg>
-               </pron>
-               <pron notation="zsampa">
-                  <seg corresp="#bean">d_n\ u_L (tS) i_R</seg>
-                  <seg corresp="#body-face">n u:_n_F</seg>
-               </pron>
+               <orth>ntuchinuu</orth>
+               <pron notation="ipa">ndùʧínũ̀ũ</pron>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Category:Eye">
@@ -1057,9 +1047,16 @@
                   </cit>
                </etym>
                <cit type="translation" xml:lang="en">
-                  <quote>eye, eyes</quote>
+                  <quote>eye</quote>
+               </cit>
+               <cit type="translation" xml:lang="es">
+                  <quote>ojo</quote>
                </cit>
             </sense>
+            <cit type="cognate" xml:lang="miy">
+               <oRef>nduchīh nūuh</oRef>
+               <bibl></bibl>
+            </cit>
          </entry>
 
          <entry xml:id="body-face-nose">
@@ -2925,9 +2922,9 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Horse">
-               <usg type="dom" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Animal">ANIMAL</usg>
                <!-- specify non-native to mexico-->
-               <etym type="metonymy">
+               <etym type="metonymy" subtype="wholeForPart">
                   <date notBefore="1492"/>
                   <cit type="etymon">
                      <oRef corresp="#animal">kiti</oRef>
@@ -4873,7 +4870,7 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Category:Polar_regions_of_the_Earth">
-               <usg type="dom">Polar_regions_of_the_Earth</usg><!-- can/should sense and domain be the same? -->
+               <usg type="dom" corresp="http://dbpedia.org/resource/Earth">Earth</usg>
                <etym type="borrowing">
                   <cit type="etymon">
                      <oRef xml:lang="es">polo</oRef>
@@ -4886,8 +4883,7 @@
                   <quote>polo</quote>
                </cit>
                <cit type="example" xml:lang="mix">
-                  <quote>Kunchee ña "<hi rend="bold">Polo</hi>" tsi "Hemisferio" siin siin
-                     kui.</quote>
+                  <quote>Kunchee ña "<hi rend="bold">Polo</hi>" tsi "Hemisferio" siin siin kui.</quote>
                   <ptr target="SIL_docs/L145/L145-tok.xml"/>
                </cit>
             </sense>
@@ -14517,6 +14513,37 @@ Emotional Actions:
                      <quote>media noche</quote>
                   </cit>
                </sense>
+            </entry>
+            <entry xml:id="sharpen">
+               <form type="lemma">
+                  <orth>ntasaxeen</orth>
+               </form>
+               <gramGrp>
+                  <pos>verb</pos>
+                  <gram type="transitivity">trans</gram>
+                  <gram>causative</gram>
+                  <gram>iterative</gram>
+               </gramGrp>
+               <sense>
+                  <cit type="translation" xml:lang="en">
+                     <quote>sharpen</quote>
+                  </cit>
+               </sense>
+               <etym type="derivation">
+                  <cit type="etymon">
+                     <oRef>nta<pc>-</pc></oRef>
+                  </cit>
+                  <cit type="etymon">
+                     <oRef>sa<pc>-</pc></oRef>
+                  </cit>     
+                  <cit type="etymon">
+                     <oRef>xeen</oRef>
+                     <gramGrp>
+                        <pos>adj</pos>
+                     </gramGrp>
+                     <gloss>dangerous</gloss>
+                  </cit>
+               </etym>
             </entry>
          
          
