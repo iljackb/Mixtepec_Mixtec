@@ -596,9 +596,9 @@ negator
                   <vAlt>
                      <fs>
                         <f name="absoluteDirections"><!-- relative to Earth geography: {N, S, E, W; NW, NE, SW, SE} -->
-                           <symbol value="absoluteDirection" xml:id="DIR-ABS"/>
-                           <!--  
                                     <vAlt>
+                                       <symbol value="absoluteDirection" xml:id="DIR-ABS"/><!-- use this tag for spatial annotation -->
+                                       <!-- use this for conceptual annotation:add uri's for concepts -->
                                        <symbol value="north" xml:id="NORTH"/>
                                        <symbol value="south" xml:id="SOUTH"/>
                                        <symbol value="east" xml:id="EAST"/>
@@ -608,30 +608,97 @@ negator
                                        <symbol value="northeast" xml:id="NE"/>
                                        <symbol value="southeast" xml:id="W"/>
                                     </vAlt>
-                                    -->
                         </f>
                      </fs>
                      <fs>
-                        <f name="relativeDirections"><!-- relative to LM (local space): {left, right, above, behind, below} -->
-                           <symbol value="relativeDirection" xml:id="DIR-REL"/>
-                           <!--  
+                        <!-- SPATIAL RELATIONS -->
+                        <f name="relativeDirections"><!-- relative to LM (local space): {left, right, above, behind, below} -->          
                                     <vAlt>
+                                       <symbol value="relativeDirection" xml:id="DIR-REL"/><!-- use this tag for spatial annotation -->
                                        <symbol value="left" xml:id="LEFT"/>
                                        <symbol value="right" xml:id="RIGHT"/>
-                                       <symbol value="front" xml:id="FRONT"/>
-                                       <symbol value="behind" xml:id="BEHIND"/>
+                                       
+                                       <symbol value="front" xml:id="INFRONT"/><!-- Need to distinguish "FRONT(partOf)" and "FRONT(adjacentSpaceTo(LM))" -->                               
+                                       <symbol value="behind" xml:id="BEHIND"/><!-- sameAs "inBackOf(LM)" -->
+                                       
                                        <symbol value="above" xml:id="ABOVE"/>
                                        <symbol value="below" xml:id="BELOW"/>
+                                       
+                                       <!-- WITH MOTION -->
                                        <symbol value="below" xml:id="TOWARD"/>
                                        <symbol value="below" xml:id="AWAY"/>
                                     </vAlt>
-                                    -->
+                           
                            <!-- "FRONT" and "INFRONT" are distinguished by the RCC8:
                               "FRONT"(ofLM) is :TPP"; 
                               "INFRONT" (ofLM) is: "DC"
                            -->
                         </f>
                      </fs>
+                     
+           <fs>
+              <f name="lexicalRelations">
+                 <vAlt>
+                    
+                 </vAlt>
+              </f>
+              
+           </fs>
+           
+           
+           
+           <fs>
+              
+              <!-- 
+              SEMANTIC RELATIONS
+               
+            MERONYM - face isA meronymOf(body) = partOf(body)
+            HOLONYM - body isA holonymOf(face) = hasPart(face)
+           -->
+              
+              
+              <!-- http://www.ilc.cnr.it/EAGLES96/rep2/node7.html -->
+              
+              <f name="meronymy"><!-- partOf -->
+                 
+                 <!-- win87: Win87
+Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relations In Cognitive Science, 11. Norwood NJ: Ablex Publ. Corp.: 417-444, 1987.
+ -->
+                 <vAlt>
+                    <symbol value="" xml:id=""/>
+                    
+                    
+                    <symbol value="" xml:id=""/>
+                    
+                 </vAlt>
+                 
+                 
+              </f>
+              <!-- 
+                 component / integral object : 
+                  there is a clear structural and functional relation between the whole and its parts, e.g. handle/cup, phonology/linguistics.
+                 
+                member / set or group : 
+                  parts do not necessarily have a structural or functional relation with respect to the whole, parts are distinct from each other. In this class fall for example tree/forest, student/class.
+                  
+                  portion / mass : 
+                     There is a complete similarity between the parts and between parts and the whole. Limits between parts are arbitrary and parts do not have any specific function a priori with respect to the whole. We have in this class for example: slice/bread, centimeter/meter. This subrelation is often called a mereology.
+                     
+                     object / material : 
+                        This type of relation describes the materials from which an object is constructed or created, or the constitutive elements of an object, e.g. alcohol/wine, steel/car.
+                     
+                     subactivity / activity or process : 
+                        describes the different subactivities that form an activity in a structured way, for example in a temporally organized way. Into this class fall examples such as : pay/buy, give exams/teach.
+                        
+                        precise place / area : 
+                        parts do not really contribute to the whole in a functional way. This subrelation expresses spatiality, as in : oasis/desert, Alps/Europe.
+              -->
+           </fs>
+                     
+
+           
+           
+           
            
            
            
@@ -840,7 +907,6 @@ negator
                      <symbol value="VAL-GRM1" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
                   </vAlt>
                </f>
-               
             </fs>
             <fs>
                <f name="transitivity">
@@ -848,6 +914,7 @@ negator
                      <symbol xml:id="TRANS" value="transitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275"/>
                      <symbol xml:id="INTRANS" value="intransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275"/>
                      <symbol xml:id="DITRANS" value="ditransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275"/>
+                     <symbol xml:id="ATRANS" value="a-transitive"/>
                   </vAlt>
                </f>
             </fs>
@@ -857,16 +924,7 @@ negator
             <!-- http://purl.org/linguistics/gold/IntransitiveVerb --> <!-- def:An intransitive verb is a verb that cannot take a direct object, and describes a property, state, or situation involving only one participant [Crystal 1997: 397; Payne 1997: 171].-->
             <!-- def:A transitive verb is a verb that takes a direct object, and describes a relation between two participants [Crystal 1997: 397; Payne 1997: 171];		src: gold "http://purl.org/linguistics/gold/TransitiveVerb" -->
             <!-- def: Ditransitivity (or Bitransitivity) is a term which describes a verb or clause which takes two objects.	src: "www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsDitransitivity.htm" -->
-            
-            <!--  
-            <fs xml:id="ATRANS" feats="#VAL-0"/>
-            
-            <fs xml:id="INTRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-1"/>
-   
-            <fs xml:id="TRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275" feats="#VAL-2"/>
-                 
-            <fs xml:id="DITRANS" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275" feats="#VAL-3"/>      
-            -->
+
             <div xml:id="A-TransitiveVerbs-MIX">   
             
          </div>  
@@ -960,8 +1018,9 @@ negator
                      <symbol xml:id="HAB" value="habitualAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3232"/>
                      <symbol xml:id="IMPERF" value="imperfectAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3246"/><!-- check the tag usage in content -->
                      <symbol xml:id="SEMEL" value="semelfactiveAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3470"/>
-                     <symbol xml:id="REPET" value="iterativeAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3282"/>
+                     <symbol xml:id="ITER" value="iterativeAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3282"/>
                      <symbol xml:id="SIMUL" value="simultaneousAspect" dcr:datcat="http://www.isocat.org/datcat/DC-3478"/>
+                     <!-- inchoative -->
                   </vAlt>
                </f>
             </fs>
@@ -1048,7 +1107,8 @@ negator
          
          
          
-         <div xml:id="InformationStructure-MIX"><label>Information Structure</label><lb/>
+         <div xml:id="InformationStructure-MIX">
+            <label>Information Structure</label><lb/>
             
             <p>Past studies examining the information structure of other forms of Mixtec provide fairly
                consistent evidence that points to a more or less common default, or minimal constituent
