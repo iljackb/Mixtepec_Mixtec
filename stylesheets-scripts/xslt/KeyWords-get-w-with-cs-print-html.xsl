@@ -10,6 +10,9 @@
     <xsl:key name="findTheWord" match="w" use="string-join(*)"/>
     
     <xsl:template match="/">
+        
+        <!-- make variable for word to search -->
+        
         <xsl:value-of select="descendant-or-self::w/string-join(*)" separator=" - "/>
         <xsl:for-each select="key('findTheWord','la˩ku˥ku˧˥')">
             <p>
