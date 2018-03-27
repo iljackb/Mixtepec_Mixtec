@@ -62,44 +62,13 @@
          </textDesc>
       </profileDesc>
       <encodingDesc>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg'
-                        element is used to encapsulate: <list>
-                           <item>i) the entire sentences from original document (first
-                              level);</item>
-                           <item>ii) the individual lexical items contained within the sentences
-                              (second level);</item>
-                        </list>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation
-                        characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c"
-                        (character) element; In future stages of the project, each of these
-                        punctuation characters will be formally linked with the linguistic
-                        categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type
-                           "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding
-                        uses "div" (division) elements; this is to separate the linguistic, and
-                        knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
-         </p>
+         <editorialDecl>
+            <normalization>
+            <ab>
+               <date>2018-03-27</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography).
+            </ab>
+         </normalization>
+         </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
                <category xml:id="pedagogical">
@@ -178,52 +147,47 @@
             </head>
             <p>
                <seg xml:id="L156-01-01" type="S">
-                  <w xml:id="d1e161">Iin</w>
+                  <w xml:id="d1e161" orig="Iin">In</w>
                   <w xml:id="d1e163">kii</w>
                   <w xml:id="d1e165">ra</w>
                   <w xml:id="d1e167">ntsio</w>
-                  <w xml:id="d1e169">iin</w>
-                  <w xml:id="d1e171">ntintsitsa</w>
-                  <!-- tortoise -->
+                  <w xml:id="d1e169" orig="iin">in</w>
+                  <w xml:id="d1e171">ntintsitsa</w>                  <!-- tortoise -->
                   <w xml:id="d1e173">kaka</w>
                   <w xml:id="d1e175">xeen</w>
-                  <w xml:id="d1e177">nuu</w>
-                  <w xml:id="d1e179">iin</w>
+                  <w xml:id="d1e177" orig="nuu">nu</w>
+                  <w xml:id="d1e179" orig="iin">in</w>
                   <w xml:id="d1e181">laguna</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L156-01-01" xml:lang="en"/>
-                  <span target="#L156-01-01" xml:lang="es"/>
-                  <span target="#d1e161" xml:lang="en"/>
-                  <span target="#d1e161" xml:lang="es"/>
-                  <span target="#d1e163" xml:lang="en"/>
-                  <span target="#d1e163" xml:lang="es"/>
-                  <span target="#d1e165" xml:lang="en"/>
-                  <span target="#d1e165" xml:lang="es"/>
-                  <span target="#d1e167" xml:lang="en"/>
-                  <span target="#d1e167" xml:lang="es"/>
-                  <span target="#d1e169" xml:lang="en"/>
-                  <span target="#d1e169" xml:lang="es"/>
-                  <span target="#d1e171" xml:lang="en"/>
-                  <span target="#d1e171" xml:lang="es"/>
-                  <span target="#d1e173" xml:lang="en"/>
-                  <span target="#d1e173" xml:lang="es"/>
-                  <span target="#d1e175" xml:lang="en"/>
-                  <span target="#d1e175" xml:lang="es"/>
-                  <span target="#d1e177" xml:lang="en"/>
-                  <span target="#d1e177" xml:lang="es"/>
-                  <span target="#d1e179" xml:lang="en"/>
-                  <span target="#d1e179" xml:lang="es"/>
-                  <span target="#d1e181" xml:lang="en"/>
-                  <span target="#d1e181" xml:lang="es"/>
+                  <span target="#L156-01-01" xml:lang="en" cert="low"/>
+                  <span target="#L156-01-01" xml:lang="es" cert="low"/>
+                  
+                  <span target="#d1e161 #d1e163" xml:lang="en">one day</span>
+                  <span target="#d1e161 #d1e163" xml:lang="es">un día</span>       
+                  
+                  <span target="#d1e167" xml:lang="en">lived</span>
+                  <span target="#d1e167" xml:lang="es">vivía</span>
+      
+                  <span target="#d1e171" xml:lang="en">tortoise</span>
+                  <span target="#d1e171" xml:lang="es">tortuga</span>
+                  
+                  <span target="#d1e173 #d1e175" xml:lang="en" cert="unknown"/>
+                  <span target="#d1e173 #d1e175" xml:lang="es" cert="unknown"/>
+                  
+                  <span target="#d1e177 #d1e179 #d1e181" xml:lang="en">in a lake</span>
+                  <span target="#d1e177 #d1e179 #d1e181" xml:lang="es">en una laguna</span>
+                  
+                  <span target="#d1e181" xml:lang="en">lake</span>
+                  <span target="#d1e181" xml:lang="es">laguna</span>
                </spanGrp>
 
                <seg xml:id="L156-01-02" type="S">
                   <w xml:id="d1e187">Ntisaan</w>
                   <w xml:id="d1e189">so</w>
                   <w xml:id="d1e191">kii</w>
-                  <w xml:id="d1e193">yee</w>
+                  <w xml:id="d1e193">yee</w><!-- what is this doing here? -->
                   <w xml:id="d1e195">kuaka</w>
                   <w xml:id="d1e197">ña</w>
                   <w xml:id="d1e199">vari</w>
@@ -241,36 +205,46 @@
                <spanGrp type="translation">
                   <span target="#L156-01-02" xml:lang="en"/>
                   <span target="#L156-01-02" xml:lang="es"/>
-                  <span target="#d1e187" xml:lang="en"/>
-                  <span target="#d1e187" xml:lang="es"/>
-                  <span target="#d1e189" xml:lang="en"/>
-                  <span target="#d1e189" xml:lang="es"/>
-                  <span target="#d1e191" xml:lang="en"/>
-                  <span target="#d1e191" xml:lang="es"/>
+                  
+                  <span target="#d1e187 #d1e189" xml:lang="en">every</span>
+                  <span target="#d1e187 #d1e189" xml:lang="es">cada</span>
+                  
+                  <span target="#d1e191" xml:lang="en">day</span>
+                  <span target="#d1e191" xml:lang="es">día</span>
+                  
                   <span target="#d1e193" xml:lang="en"/>
                   <span target="#d1e193" xml:lang="es"/>
-                  <span target="#d1e195" xml:lang="en"/>
-                  <span target="#d1e195" xml:lang="es"/>
-                  <span target="#d1e197" xml:lang="en"/>
-                  <span target="#d1e197" xml:lang="es"/>
+                  
+                  <span target="#d1e195 #d1e197" xml:lang="en" cert="medium">he cried</span>
+                  <span target="#d1e195 #d1e197" xml:lang="es" cert="medium">lloró</span>
+                  
                   <span target="#d1e199" xml:lang="en"/>
                   <span target="#d1e199" xml:lang="es"/>
+                  
                   <span target="#d1e201" xml:lang="en"/>
                   <span target="#d1e201" xml:lang="es"/>
+                  
                   <span target="#d1e203" xml:lang="en"/>
                   <span target="#d1e203" xml:lang="es"/>
+                  
                   <span target="#d1e205" xml:lang="en"/>
                   <span target="#d1e205" xml:lang="es"/>
+                  
                   <span target="#d1e207" xml:lang="en"/>
                   <span target="#d1e207" xml:lang="es"/>
+                  
                   <span target="#d1e210" xml:lang="en"/>
                   <span target="#d1e210" xml:lang="es"/>
+                  
                   <span target="#d1e212" xml:lang="en"/>
                   <span target="#d1e212" xml:lang="es"/>
+                  
                   <span target="#d1e214" xml:lang="en"/>
                   <span target="#d1e214" xml:lang="es"/>
+                  
                   <span target="#d1e216" xml:lang="en"/>
                   <span target="#d1e216" xml:lang="es"/>
+                  
                   <span target="#d1e218" xml:lang="en"/>
                   <span target="#d1e218" xml:lang="es"/>
                </spanGrp>
@@ -423,10 +397,13 @@
                <spanGrp type="translation">
                   <span target="#L156-03-02" xml:lang="en">Friend, come here!</span>
                   <span target="#L156-03-02" xml:lang="es">¡Amigo, ven aquí!</span>
+                  
                   <span target="#d1e316" xml:lang="en"/>
                   <span target="#d1e316" xml:lang="es"/>
+                  
                   <span target="#d1e320" xml:lang="en"/>
                   <span target="#d1e320" xml:lang="es"/>
+                  
                   <span target="#d1e322" xml:lang="en"/>
                   <span target="#d1e322" xml:lang="es"/>
                </spanGrp>
