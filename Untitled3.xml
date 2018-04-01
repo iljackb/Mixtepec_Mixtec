@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <entry xml:id="body-face">
+            
+            <form type="lemma">
+               <orth>nuu</orth>               
+               
+               <pron notation="ipa">nũ̀ṹ</pron>
+               <pron notation="zsampa">n u:_n_F</pron>
+               
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+            </form>
+            
+            <sense xml:id="face-PRIME" corresp="http://dbpedia.org/page/Category:Face"><!-- #PRIME @ana="#FACE" ?-->
+               
+               <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <!-- (meronymy) isA:AnatomicalStructure -->
+               
+               <!-- add 'frontal configuration' unless it is already in dbpedia entry for 'face' -->
+               
+               <usg type="semanticRelation"></usg>
+
+               <cit type="translation" xml:lang="en">
+                  <quote>face</quote>
+               </cit>
+               <cit type="translation" xml:lang="es">
+                  <quote>cara</quote>
+               </cit>
+            </sense>
+            
+            <sense ana="#A">
+               <form type="inflected">
+                  <orth>nuu̠</orth>
+               </form>
+               <gramGrp>
+                  <pos></pos>
+                  <gram></gram>
+                  <gram></gram>
+               </gramGrp>
+               <usg></usg>
+               
+               <!-- discourse? -->\
+               <cit type="example">
+                  <quote>ntu'u saa ka nuu̠</quote>
+               </cit>
+               
+            </sense>
+            
+         </entry>
+         
+         <entry>
+            <form type="lemma">
+               <orth>nu</orth>
+               <!-- in extended sense pronunciation varies more, thus links to files are desirable-->
+               <pron source="#filea.wav">nũ̀ũ</pron>
+               <pron>nũ̀ũ</pron>
+               <!--  -->
+               <pron>nũ̀</pron>
+               <pron>nũ̀</pron>
+               <pron></pron>
+            </form>
+            
+            <sense ana="#FrontPartOf">
+               <!-- FrontOf -->
+              
+               <gramGrp>
+                  <pos></pos>
+               </gramGrp>
+               
+               <usg type="colloc" ana="#LM">LM</usg>
+               <usg type="domain" ana="#MERONYMY"></usg>
+              
+              <cit type="example">
+                 
+              </cit>
+              
+              
+               <def xml:lang="en"></def>
+               <def xml:lang="es"></def>
+               <def xml:lang="mix"></def>
+
+               <etym type='metonymy'>
+                  
+                  <etym type="metaphor">
+                     
+                  </etym>
+                  
+               </etym>
+               
+            </sense>
+            
+            <sense>
+               <!-- inFrontOf -->
+               <def></def>
+               
+               <gramGrp>
+                  <pos></pos>
+               </gramGrp>
+               
+            </sense>
+            <sense>
+               
+               
+            </sense>
+         </entry>
+      </body>
+  </text>
+</TEI>
