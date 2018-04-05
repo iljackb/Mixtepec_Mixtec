@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L160-tok">
    <teiHeader>
       <fileDesc>
@@ -17,7 +18,7 @@
                </seg>
             </title>
             <editor>Gisela Beckmann</editor>
-            <editor>María M. Nieves</editor>
+            <editor xml:id="MN">María M. Nieves</editor>
             <respStmt>
                <resp xml:lang="es">Elaboracíon</resp>
                <resp xml:lang="en">Linguistic consultation</resp>
@@ -26,7 +27,11 @@
             </respStmt>
             <respStmt>
                <resp>TEI Encoding</resp>
-               <name>Jack T. Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
+            </respStmt>
+            <respStmt>
+               <resp>Glossing, Linguistic consultation</resp>
+               <name xml:id="TS">Juan "Tisu'ma" Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -67,36 +72,13 @@
          </textDesc>
       </profileDesc>
       <encodingDesc>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
-                        <list>
-                           <item>i) the entire sentences from original document (first level);</item>
-                           <item>ii) the individual lexical items contained within the sentences (second level);</item>
-                        </list>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>Within the sentence level "seg" (segment) elements all punctuation characters (".", ";", ":", "¿", "?", "!", etc.) are encapsulated in the "c" (character) element;
-                        In future stages of the project, each of these punctuation characters will be formally linked with the linguistic categories with which it is associated:<eg> a sentence that begins with: "¿"
-                           (and ends with: "?") can be immediately recognized as sentence type "question/interrogative";</eg>
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc>Where the page divisions in the original documents are, this encoding uses "div" (division) elements; this is to separate the linguistic, and knowledge data from formatting</desc>
-                  </elementSpec>
-               </item>
-            </list>
-         </p>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-04-05</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography).
+               </ab>
+            </normalization>
+         </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
                <category xml:id="pedagogical">
@@ -157,28 +139,34 @@
             </head>
             <p>
                <seg xml:id="L160-01-01" type="S">
-                  <w xml:id="d1e171">Iin</w>
+                  <w xml:id="d1e171" orig="Iin">In</w>
                   <w xml:id="d1e173">kii</w>
-                  <w xml:id="d1e175">iin</w>
+                  <w xml:id="d1e175" orig="iin">in</w>
                   <w xml:id="d1e177">chaa</w>
-                  <w xml:id="d1e179">ntsa'an</w><!-- went to -->
+                  <w xml:id="d1e179">ntsa'an</w>                  <!-- went to -->
                   <w xml:id="d1e181">ra</w>
-                  <w xml:id="d1e183">nuya'vi</w><!-- plaza -->
+                  <w xml:id="d1e183">nuya'vi</w>                  <!-- plaza -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L160-01-01" xml:lang="en">One day a man went to the plaza.</span>
                   <span target="#L160-01-01" xml:lang="es">Un día un hombre fue a la plaza.</span>
                   
+                  <span target="#d1e171 #d1e173" xml:lang="en">one day</span>
+                  <span target="#d1e171 #d1e173" xml:lang="es">un día</span>             
+                  
+                  <span target="#d1e177" xml:lang="en">man</span>
+                  <span target="#d1e177" xml:lang="es">hombre</span>
+                  
                   <span target="#d1e179 #d1e181" xml:lang="en">he went</span>
-                  <span target="#d1e179 #d1e181" xml:lang="es">él fue</span>
+                  <span target="#d1e179 #d1e181" xml:lang="es">fue</span>
                   
                   <span target="#d1e183" xml:lang="en">plaza</span>
                   <span target="#d1e183" xml:lang="es">plaza</span>
                </spanGrp>
                <seg xml:id="L160-01-02" type="S">
                   <w xml:id="d1e188">Cha</w>
-                  <w xml:id="d1e190">ntakuaan</w><!-- buy/bought (iterative) (present, but means past) -->
+                  <w xml:id="d1e190">ntakuaan</w>                  <!-- buy/bought (iterative) (present, but means past) -->
                   <w xml:id="d1e192">ra</w>
                   <w xml:id="d1e194">kumi</w>
                   <w xml:id="d1e196">lurru</w>
@@ -188,28 +176,47 @@
                   <span target="#L160-01-02" xml:lang="en">And he brought four donkeys.</span>
                   <span target="#L160-01-02" xml:lang="es">Y él compró cuatro burros.</span>
                   
-                  <span target="#d1e190 #d1e192" xml:lang="en">he buys</span>
-                  <span target="#d1e190 #d1e192" xml:lang="en">he is buying</span>
-                  <span target="#d1e190 #d1e192" xml:lang="es">él compra</span>
-                  <span target="#d1e190 #d1e192" xml:lang="es">está comprando</span>
+                  <span target="#d1e188" xml:lang="en">and</span>
+                  <span target="#d1e188" xml:lang="es">y</span>
+                  
+                  <span target="#d1e190 #d1e192" xml:lang="en">he bought</span>
+                  <span target="#d1e190 #d1e192" xml:lang="es">él compró</span>
+
+                  <span target="#d1e194" xml:lang="en">four</span>
+                  <span target="#d1e194" xml:lang="es">cuatro</span>
+                  
+                  <span target="#d1e196" xml:lang="en">donkey</span>
+                  <span target="#d1e196" xml:lang="es">burro</span>
                </spanGrp>
                <seg xml:id="L160-01-03" type="S">
                   <w xml:id="d1e201">Sara</w>
-                  <w xml:id="d1e203">ntanchiko</w><!--returned (form is present)  -->
+                  <w xml:id="d1e203">ntanchiko</w>                  <!--returned (form is present)  -->
                   <w xml:id="d1e205">ra</w>
-                  <w xml:id="d1e207">ve'e</w><!-- home -->
+                  <w xml:id="d1e207">ve'e</w>                  <!-- home -->
                   <w xml:id="d1e209">ra</w>
-                  <w xml:id="d1e211">kuacha</w><!-- very happy -->
+                  <w xml:id="d1e211">kuacha</w>                  <!-- very happy -->
                   <w xml:id="d1e213">nchu'a</w>
-                  <w xml:id="d1e215">ra</w><!-- him -->
+                  <w xml:id="d1e215">ra</w>                  <!-- him -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-01-03" xml:lang="en">He then returned home very happy.</span>
-                  <span target="#L160-01-03" xml:lang="es"></span>
+                  <span target="#L160-01-03" xml:lang="en">Then he then returned home very happy.</span>
+                  <span target="#L160-01-03" xml:lang="es">Y volvió a casa muy feliz.</span>
+
+                  <span target="#d1e201" xml:lang="en">then</span>
+                  <span target="#d1e201" xml:lang="es">y</span>
+
+                  <span target="#d1e203 #d1e205" xml:lang="en">he returned</span>
+                  <span target="#d1e203 #d1e205" xml:lang="es">volvió</span>
+
+                  <span target="#d1e207 #d1e209" xml:lang="en">his home</span>
+                  <span target="#d1e207 #d1e209" xml:lang="es">his casa</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e209" xml:lang="en" cert="medium">home</span>
+                  <span target="#d1e209" xml:lang="es" cert="medium">a casa</span>
+
+                  <span target="#d1e211 #d1e213 #d1e215" xml:lang="en">he was very happy</span>
+                  <span target="#d1e211 #d1e213 #d1e215" xml:lang="es">estaba muy feliz</span>
                </spanGrp>
             </p>
          </div>
@@ -220,95 +227,204 @@
             <p>
                <seg xml:id="L160-02-01" type="S">
                   <w xml:id="d1e224">Sara</w>
-                  <w xml:id="d1e226">ntsoo</w><!-- ntsoo so "he rode" (tense/form?) -->
+                  <w xml:id="d1e226">ntsoo</w>                  <!-- ntsoo so "he rode" (tense/form?) -->
                   <w xml:id="d1e228">so</w>
                   <w xml:id="d1e230">ra</w>
-                  <w xml:id="d1e232">iin</w>
+                  <w xml:id="d1e232" orig="iin">in</w>
                   <w xml:id="d1e234">lurru</w>
                   <w xml:id="d1e236">cha</w>
-                  <w xml:id="d1e238" cert="medium">tatsi</w><!-- chase? -->
+                  <w xml:id="d1e238" cert="medium">tatsi</w>                  <!-- (TS) chase? (JB: follow)?-->
                   <w xml:id="d1e240">ra</w>
                   <w xml:id="d1e242">uni</w>
                   <w xml:id="d1e244">lurru</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-02-01" xml:lang="en"></span>
-                  <span target="#L160-02-01" xml:lang="es"></span>
+                  <span target="#L160-02-01" xml:lang="en" cert="medium">Then he rode one donkey and he followed the three donkeys.</span>
+                  <span target="#L160-02-01" xml:lang="es" cert="medium">Y él montó un burro y siguió los tres burros.</span>
+                  <!-- who followed who? -->
                   
-                  <span target="#d1e226 #d1e228 #d1e230" xml:lang="en">he rides</span>
-                  <span target="#d1e226 #d1e228 #d1e230" xml:lang="es"></span>
+                  <span target="#d1e224" xml:lang="en">then</span>
+                  <span target="#d1e224" xml:lang="es">y</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e226 #d1e228 #d1e230" xml:lang="en">he rode</span>
+                  <span target="#d1e226 #d1e228 #d1e230" xml:lang="es">él montó</span>  
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e232" xml:lang="en">one</span>
+                  <span target="#d1e232" xml:lang="es">un</span>
+                  
+                  <span target="#d1e234" xml:lang="en">donkey</span>
+                  <span target="#d1e234" xml:lang="es">burro</span>
+                  
+                  <span target="#d1e236" xml:lang="en">and</span>
+                  <span target="#d1e236" xml:lang="es">y</span>
+                  
+                  <span target="#d1e238 #d1e240" xml:lang="en">he followed</span>
+                  <span target="#d1e238 #d1e240" xml:lang="es">él siguió</span>
+                  
+                  <span target="#d1e242" xml:lang="en">three</span>
+                  <span target="#d1e242" xml:lang="es">tres</span>
+                  
+                  <span target="#d1e244" xml:lang="en">donkey</span>
+                  <span target="#d1e244" xml:lang="es">burro</span>
                </spanGrp>
                <seg xml:id="L160-02-02" type="S">
                   <w xml:id="d1e250">Ta</w>
-                  <w xml:id="d1e252">ntsaa</w><!-- ta ntsaa = when he arrived/got  -->
+                  <w xml:id="d1e252">ntsaa</w>                  <!-- ta ntsaa = when he arrived/got  -->
                   <w xml:id="d1e254">ra</w>
-                  <w xml:id="d1e256">sava</w><!-- half way -->
-                  <w xml:id="d1e258">ichi</w> <!-- path  -->
+                  <w xml:id="d1e256">sava</w>                  <!-- half way -->
+                  <w xml:id="d1e258">ichi</w>                   <!-- path  -->
                   <pc>,</pc>
                   <w xml:id="d1e262">cha</w>
-                  <w xml:id="d1e264">nikitsaa</w><!-- began -->
+                  <w xml:id="d1e264">nikitsaa</w>                  <!-- began -->
                   <w xml:id="d1e266">ra</w>
-                  <w xml:id="d1e268">ntaka'vi</w><!-- count -->
+                  <w xml:id="d1e268">ntaka'vi</w>                  <!-- count -->
                   <w xml:id="d1e270">ra</w>
-                  <w xml:id="d1e273">lurru</w><!-- (JB: why is there no plural marker?) -->
+                  <w xml:id="d1e273">lurru</w>                  <!-- (JB: why is there no plural marker?) -->
                   <w xml:id="d1e275">ka</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L160-02-02" xml:lang="en">When he was half way along the path, he began to count the donkeys.</span>
-                  <span target="#L160-02-02" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L160-02-02" xml:lang="es"/>
+
+                  <span target="#d1e250" xml:lang="en"/>
+                  <span target="#d1e250" xml:lang="es"/>
+
+                  <span target="#d1e252" xml:lang="en"/>
+                  <span target="#d1e252" xml:lang="es"/>
+
+                  <span target="#d1e254" xml:lang="en"/>
+                  <span target="#d1e254" xml:lang="es"/>
+
+                  <span target="#d1e256" xml:lang="en"/>
+                  <span target="#d1e256" xml:lang="es"/>
+
+                  <span target="#d1e258" xml:lang="en"/>
+                  <span target="#d1e258" xml:lang="es"/>
+
+                  <span target="#d1e262" xml:lang="en"/>
+                  <span target="#d1e262" xml:lang="es"/>
+
+                  <span target="#d1e264" xml:lang="en"/>
+                  <span target="#d1e264" xml:lang="es"/>
+
+                  <span target="#d1e266" xml:lang="en"/>
+                  <span target="#d1e266" xml:lang="es"/>
+
+                  <span target="#d1e268" xml:lang="en"/>
+                  <span target="#d1e268" xml:lang="es"/>
+
+                  <span target="#d1e270" xml:lang="en"/>
+                  <span target="#d1e270" xml:lang="es"/>
+
+                  <span target="#d1e273" xml:lang="en"/>
+                  <span target="#d1e273" xml:lang="es"/>
+
+                  <span target="#d1e275" xml:lang="en"/>
+                  <span target="#d1e275" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-02-03" type="S">
                   <w xml:id="d1e280">Cha</w>
-                  <w xml:id="d1e282">kuu</w><!-- cop? (why not "yee"?) -->
+                  <w xml:id="d1e282">kuu</w>                  <!-- cop? (why not "yee"?) -->
                   <w xml:id="d1e284">uni</w>
-                  <w xml:id="d1e286">ntaa</w><!-- exactly? -->
+                  <w xml:id="d1e286">ntaa</w>                  <!-- exactly? -->
                   <w xml:id="d1e288">ti</w>
-                  <w xml:id="d1e290">ntsinche'e</w><!-- he saw/was seeing (ntsi-) imperfect?!-->
+                  <w xml:id="d1e290">ntsinche'e</w>                  <!-- he saw/was seeing (ntsi-) imperfect?!-->
                   <w xml:id="d1e292">ra</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L160-02-03" xml:lang="en">And he saw that there were (exactly?) three of them.</span>
-                  <span target="#L160-02-03" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L160-02-03" xml:lang="es"/>
+
+                  <span target="#d1e280" xml:lang="en"/>
+                  <span target="#d1e280" xml:lang="es"/>
+
+                  <span target="#d1e282" xml:lang="en"/>
+                  <span target="#d1e282" xml:lang="es"/>
+
+                  <span target="#d1e284" xml:lang="en"/>
+                  <span target="#d1e284" xml:lang="es"/>
+
+                  <span target="#d1e286" xml:lang="en"/>
+                  <span target="#d1e286" xml:lang="es"/>
+
+                  <span target="#d1e288" xml:lang="en"/>
+                  <span target="#d1e288" xml:lang="es"/>
+
+                  <span target="#d1e290" xml:lang="en"/>
+                  <span target="#d1e290" xml:lang="es"/>
+
+                  <span target="#d1e292" xml:lang="en"/>
+                  <span target="#d1e292" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-02-04" type="S">
                   <w xml:id="d1e297">Sara</w>
-                  <w xml:id="d1e299" cert="medium">nika'an</w><!-- thought or said? (realized?) -->
+                  <w xml:id="d1e299" cert="medium">nika'an</w>
+                  <!-- thought or said? (realized?) -->
                   <w xml:id="d1e301">ra</w>
-                  <w xml:id="d1e303">ña</w><!-- that -->
-                  <w xml:id="d1e305">kumani</w><!-- missing -->
+                  <w xml:id="d1e303">ña</w>
+                  <!-- that -->
+                  <w xml:id="d1e305">kumani</w>
+                  <!-- missing -->
                   <w xml:id="d1e307">iin</w>
                   <w xml:id="d1e309">lurru</w>
                   <w xml:id="d1e311">ra</w>
                   <pc>,</pc>
                   <w xml:id="d1e315">sara</w>
-                  <w xml:id="d1e317">nikitsaa</w><!-- started -->
+                  <w xml:id="d1e317">nikitsaa</w>
+                  <!-- started -->
                   <w xml:id="d1e320">ra</w>
-                  <w xml:id="d1e322">tsaku</w><!-- crying -->
+                  <w xml:id="d1e322">tsaku</w>
+                  <!-- crying -->
                   <w xml:id="d1e324">ra</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L160-02-04" xml:lang="en">Then he thought that one donkey was missing, he then started to cry.</span>
-                  <span target="#L160-02-04" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L160-02-04" xml:lang="es"/>
+
+                  <span target="#d1e297" xml:lang="en"/>
+                  <span target="#d1e297" xml:lang="es"/>
+
+                  <span target="#d1e299" xml:lang="en"/>
+                  <span target="#d1e299" xml:lang="es"/>
+
+                  <span target="#d1e301" xml:lang="en"/>
+                  <span target="#d1e301" xml:lang="es"/>
+
+                  <span target="#d1e303" xml:lang="en"/>
+                  <span target="#d1e303" xml:lang="es"/>
+
+                  <span target="#d1e305" xml:lang="en"/>
+                  <span target="#d1e305" xml:lang="es"/>
+
+                  <span target="#d1e307" xml:lang="en"/>
+                  <span target="#d1e307" xml:lang="es"/>
+
+                  <span target="#d1e309" xml:lang="en"/>
+                  <span target="#d1e309" xml:lang="es"/>
+
+                  <span target="#d1e311" xml:lang="en"/>
+                  <span target="#d1e311" xml:lang="es"/>
+
+                  <span target="#d1e315" xml:lang="en"/>
+                  <span target="#d1e315" xml:lang="es"/>
+
+                  <span target="#d1e317" xml:lang="en"/>
+                  <span target="#d1e317" xml:lang="es"/>
+
+                  <span target="#d1e320" xml:lang="en"/>
+                  <span target="#d1e320" xml:lang="es"/>
+
+                  <span target="#d1e322" xml:lang="en"/>
+                  <span target="#d1e322" xml:lang="es"/>
+
+                  <span target="#d1e324" xml:lang="en"/>
+                  <span target="#d1e324" xml:lang="es"/>
                </spanGrp>
+             
             </p>
          </div>
          <div xml:id="L160-03">
@@ -317,43 +433,79 @@
             </head>
             <p>
                <seg xml:id="L160-03-01" type="S">
-                  <w xml:id="d1e333">Ta</w><!-- when -->
-                  <w xml:id="d1e335">ntatsaa</w><!-- arrived (why "nta-") -->
+                  <w xml:id="d1e333">Ta</w>                  <!-- when -->
+                  <w xml:id="d1e335">ntatsaa</w>                  <!-- arrived (why "nta-") -->
                   <w xml:id="d1e337">ra</w>
                   <w xml:id="d1e339">ve'e</w>
                   <w xml:id="d1e341">ra</w>
                   <pc>,</pc>
                   <w xml:id="d1e345">cha</w>
-                  <w xml:id="d1e347">nikachi</w><!--  said -->
+                  <w xml:id="d1e347">nikachi</w>                  <!--  said -->
                   <w xml:id="d1e349">ra</w>
-                  <w xml:id="d1e351">nuu</w><!-- to  -->
-                  <w xml:id="d1e353">ñasi'i</w><!-- wife -->
-                  <w xml:id="d1e356">ra</w><!-- his 3sg.form -->
+                  <w xml:id="d1e351">nuu</w>                  <!-- to  -->
+                  <w xml:id="d1e353">ñasi'i</w>                  <!-- wife -->
+                  <w xml:id="d1e356">ra</w>                  <!-- his 3sg.form -->
                   <pc>:</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L160-03-01" xml:lang="en">When he arrived home he said to his wife:</span>
                   <span target="#L160-03-01" xml:lang="es">Quando llegó a casa, él dijó a su esposa:</span>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e333" xml:lang="en"/>
+                  <span target="#d1e333" xml:lang="es"/>
+                  
+                  <span target="#d1e335" xml:lang="en"/>
+                  <span target="#d1e335" xml:lang="es"/>
+                  
+                  <span target="#d1e337" xml:lang="en"/>
+                  <span target="#d1e337" xml:lang="es"/>
+                  
+                  <span target="#d1e339" xml:lang="en"/>
+                  <span target="#d1e339" xml:lang="es"/>
+                  
+                  <span target="#d1e341" xml:lang="en"/>
+                  <span target="#d1e341" xml:lang="es"/>
+                  
+                  <span target="#d1e345" xml:lang="en"/>
+                  <span target="#d1e345" xml:lang="es"/>
+                  
+                  <span target="#d1e347" xml:lang="en"/>
+                  <span target="#d1e347" xml:lang="es"/>
+                  
+                  <span target="#d1e349" xml:lang="en"/>
+                  <span target="#d1e349" xml:lang="es"/>
+                  
+                  <span target="#d1e351" xml:lang="en"/>
+                  <span target="#d1e351" xml:lang="es"/>
+                  
+                  <span target="#d1e353" xml:lang="en"/>
+                  <span target="#d1e353" xml:lang="es"/>
+                  
+                  <span target="#d1e356" xml:lang="en"/>
+                  <span target="#d1e356" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-03-02" type="S">
                   <pc>—</pc>
-                  <w xml:id="d1e363">Ntakuaan</w><!-- I bought (form=present) -->
-                  <w xml:id="d1e365">yu</w><!-- 1sg -->
-                  <w xml:id="d1e367">kumi</w><!-- four -->
+                  <w xml:id="d1e363">Ntakuaan</w>
+                  <!-- I bought (form=present) -->
+                  <w xml:id="d1e365">yu</w>
+                  <!-- 1sg -->
+                  <w xml:id="d1e367">kumi</w>
+                  <!-- four -->
                   <w xml:id="d1e369">lurru</w>
                   <pc>,</pc>
                   <w xml:id="d1e373">cha</w>
                   <w xml:id="d1e375">vichi</w>
                   <w xml:id="d1e377">ra</w>
-                  <w xml:id="d1e379">vaa</w><!-- only -->
+                  <w xml:id="d1e379">vaa</w>
+                  <!-- only -->
                   <w xml:id="d1e381">uni</w>
                   <w xml:id="d1e384">ti</w>
                   <w xml:id="d1e386">kuu</w>
-                  <w xml:id="d1e388">vari</w><!-- because -->
-                  <w xml:id="d1e390">skuina</w><!-- stole (form = present) -->
+                  <w xml:id="d1e388">vari</w>
+                  <!-- because -->
+                  <w xml:id="d1e390">skuina</w>
+                  <!-- stole (form = present) -->
                   <w xml:id="d1e392">na</w>
                   <w xml:id="d1e394">iin</w>
                   <w xml:id="d1e396">ti</w>
@@ -362,15 +514,54 @@
                <spanGrp type="translation">
                   <span target="#L160-03-02" xml:lang="en">I bought four donkeys and now there are only three of them because they stole one.</span>
                   <span target="#L160-03-02" xml:lang="es">Yo compré cuatro burros y ahora hay solamente tres porqué me robaron uno de ellos.</span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+
+                  <span target="#d1e363" xml:lang="en"/>
+                  <span target="#d1e363" xml:lang="es"/>
+
+                  <span target="#d1e365" xml:lang="en"/>
+                  <span target="#d1e365" xml:lang="es"/>
+
+                  <span target="#d1e367" xml:lang="en"/>
+                  <span target="#d1e367" xml:lang="es"/>
+
+                  <span target="#d1e369" xml:lang="en"/>
+                  <span target="#d1e369" xml:lang="es"/>
+
+                  <span target="#d1e373" xml:lang="en"/>
+                  <span target="#d1e373" xml:lang="es"/>
+
+                  <span target="#d1e375" xml:lang="en"/>
+                  <span target="#d1e375" xml:lang="es"/>
+
+                  <span target="#d1e377" xml:lang="en"/>
+                  <span target="#d1e377" xml:lang="es"/>
+
+                  <span target="#d1e379" xml:lang="en"/>
+                  <span target="#d1e379" xml:lang="es"/>
+
+                  <span target="#d1e381" xml:lang="en"/>
+                  <span target="#d1e381" xml:lang="es"/>
+
+                  <span target="#d1e384" xml:lang="en"/>
+                  <span target="#d1e384" xml:lang="es"/>
+
+                  <span target="#d1e386" xml:lang="en"/>
+                  <span target="#d1e386" xml:lang="es"/>
+
+                  <span target="#d1e388" xml:lang="en"/>
+                  <span target="#d1e388" xml:lang="es"/>
+
+                  <span target="#d1e390" xml:lang="en"/>
+                  <span target="#d1e390" xml:lang="es"/>
+
+                  <span target="#d1e392" xml:lang="en"/>
+                  <span target="#d1e392" xml:lang="es"/>
+
+                  <span target="#d1e394" xml:lang="en"/>
+                  <span target="#d1e394" xml:lang="es"/>
+
+                  <span target="#d1e396" xml:lang="en"/>
+                  <span target="#d1e396" xml:lang="es"/>
                </spanGrp>
             </p>
          </div>
@@ -381,10 +572,12 @@
             <p>
                <seg xml:id="L160-04-01" type="S">
                   <w xml:id="d1e405">Cha</w>
-                  <w xml:id="d1e407">ntsakui</w><!-- ? -->
+                  <w xml:id="d1e407">ntsakui</w>
+                  <!-- ? -->
                   <w xml:id="d1e409">ra</w>
                   <w xml:id="d1e411">vari</w>
-                  <w xml:id="d1e413">ntsinia</w><!--  -->
+                  <w xml:id="d1e413">ntsinia</w>
+                  <!--  -->
                   <w xml:id="d1e415">ña</w>
                   <w xml:id="d1e417">inkaa</w>
                   <w xml:id="d1e419">kumi</w>
@@ -397,11 +590,34 @@
                   <pc>:</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-04-01" xml:lang="en"></span>
-                  <span target="#L160-04-01" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L160-04-01" xml:lang="en"/>
+                  <span target="#L160-04-01" xml:lang="es"/>
+                  <span target="#d1e405" xml:lang="en"/>
+                  <span target="#d1e405" xml:lang="es"/>
+                  <span target="#d1e407" xml:lang="en"/>
+                  <span target="#d1e407" xml:lang="es"/>
+                  <span target="#d1e409" xml:lang="en"/>
+                  <span target="#d1e409" xml:lang="es"/>
+                  <span target="#d1e411" xml:lang="en"/>
+                  <span target="#d1e411" xml:lang="es"/>
+                  <span target="#d1e413" xml:lang="en"/>
+                  <span target="#d1e413" xml:lang="es"/>
+                  <span target="#d1e415" xml:lang="en"/>
+                  <span target="#d1e415" xml:lang="es"/>
+                  <span target="#d1e417" xml:lang="en"/>
+                  <span target="#d1e417" xml:lang="es"/>
+                  <span target="#d1e419" xml:lang="en"/>
+                  <span target="#d1e419" xml:lang="es"/>
+                  <span target="#d1e421" xml:lang="en"/>
+                  <span target="#d1e421" xml:lang="es"/>
+                  <span target="#d1e423" xml:lang="en"/>
+                  <span target="#d1e423" xml:lang="es"/>
+                  <span target="#d1e425" xml:lang="en"/>
+                  <span target="#d1e425" xml:lang="es"/>
+                  <span target="#d1e430" xml:lang="en"/>
+                  <span target="#d1e430" xml:lang="es"/>
+                  <span target="#d1e432" xml:lang="en"/>
+                  <span target="#d1e432" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-04-02" type="S">
                   <pc>—</pc>
@@ -410,48 +626,78 @@
                   <pc>!</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-04-02" xml:lang="en"></span>
-                  <span target="#L160-04-02" xml:lang="es"></span>
-                  
+                  <span target="#L160-04-02" xml:lang="en"/>
+                  <span target="#L160-04-02" xml:lang="es"/>
+                  <span target="#d1e441" xml:lang="en"/>
+                  <span target="#d1e441" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-04-03" type="S">
                   <w xml:id="d1e446">Mee</w>
                   <w xml:id="d1e448">ra</w>
-                  <w xml:id="d1e450" cert="medium">nche'e</w><!-- I see? -->
+                  <w xml:id="d1e450" cert="medium">nche'e</w>                  <!-- I see? -->
                   <w xml:id="d1e452">u'un</w>
                   <w xml:id="d1e454">lurru</w>
-                  <w xml:id="d1e456">vari</w><!-- because -->
+                  <w xml:id="d1e456">vari</w>                  <!-- because -->
                   <w xml:id="d1e458">iin</w>
                   <w xml:id="d1e460">ti</w>
-                  <w xml:id="d1e462" cert="unknown">yosu</w><!--  -->
+                  <w xml:id="d1e462" cert="unknown">yosu</w>                  <!--  -->
                   <pc>,</pc>
                   <w xml:id="d1e466">cha</w>
-                  <w xml:id="d1e469">uni</w><!-- 3 -->
+                  <w xml:id="d1e469">uni</w>                  <!-- 3 -->
                   <w xml:id="d1e471">ti</w>
-                  <w xml:id="d1e473" cert="unknown">tatsu</w><!--  -->
+                  <w xml:id="d1e473" cert="unknown">tatsu</w>
+                  <!--  -->
                   <w xml:id="d1e475">cha</w>
-                  <w xml:id="d1e477">meu</w><!-- you  -->
-                  <w xml:id="d1e479">kuu</w><!-- are -->
-                  <w xml:id="d1e481">u'un</w><!-- five -->
+                  <w xml:id="d1e477">meu</w>
+                  <!-- you  -->
+                  <w xml:id="d1e479">kuu</w>
+                  <!-- are -->
+                  <w xml:id="d1e481">u'un</w>
+                  <!-- five -->
                   <w xml:id="d1e483">ti</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-04-03" xml:lang="en"></span>
-                  <span target="#L160-04-03" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L160-04-03" xml:lang="en"/>
+                  <span target="#L160-04-03" xml:lang="es"/>
+                  <span target="#d1e446" xml:lang="en"/>
+                  <span target="#d1e446" xml:lang="es"/>
+                  <span target="#d1e448" xml:lang="en"/>
+                  <span target="#d1e448" xml:lang="es"/>
+                  <span target="#d1e450" xml:lang="en"/>
+                  <span target="#d1e450" xml:lang="es"/>
+                  <span target="#d1e452" xml:lang="en"/>
+                  <span target="#d1e452" xml:lang="es"/>
+                  <span target="#d1e454" xml:lang="en"/>
+                  <span target="#d1e454" xml:lang="es"/>
+                  <span target="#d1e456" xml:lang="en"/>
+                  <span target="#d1e456" xml:lang="es"/>
+                  <span target="#d1e458" xml:lang="en"/>
+                  <span target="#d1e458" xml:lang="es"/>
+                  <span target="#d1e460" xml:lang="en"/>
+                  <span target="#d1e460" xml:lang="es"/>
+                  <span target="#d1e462" xml:lang="en"/>
+                  <span target="#d1e462" xml:lang="es"/>
+                  <span target="#d1e466" xml:lang="en"/>
+                  <span target="#d1e466" xml:lang="es"/>
+                  <span target="#d1e469" xml:lang="en"/>
+                  <span target="#d1e469" xml:lang="es"/>
+                  <span target="#d1e471" xml:lang="en"/>
+                  <span target="#d1e471" xml:lang="es"/>
+                  <span target="#d1e473" xml:lang="en"/>
+                  <span target="#d1e473" xml:lang="es"/>
+                  <span target="#d1e475" xml:lang="en"/>
+                  <span target="#d1e475" xml:lang="es"/>
+                  <span target="#d1e477" xml:lang="en"/>
+                  <span target="#d1e477" xml:lang="es"/>
+                  <span target="#d1e479" xml:lang="en"/>
+                  <span target="#d1e479" xml:lang="es"/>
+                  <span target="#d1e481" xml:lang="en"/>
+                  <span target="#d1e481" xml:lang="es"/>
+                  <span target="#d1e483" xml:lang="en"/>
+                  <span target="#d1e483" xml:lang="es"/>
                </spanGrp>
+             
             </p>
          </div>
          <div xml:id="L160-05">
@@ -468,18 +714,28 @@
                   <pc>:</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-05-01" xml:lang="en"></span>
-                  <span target="#L160-05-01" xml:lang="es"></span>
-                  
-                  <span target="#d1e492 #d1e494" xml:lang="en"></span>
-                  <span target="#d1e492 #d1e494" xml:lang="es"></span>
+                  <span target="#L160-05-01" xml:lang="en"/>
+                  <span target="#L160-05-01" xml:lang="es"/>
+                  <span target="#d1e492" xml:lang="en"/>
+                  <span target="#d1e492" xml:lang="es"/>
+                  <span target="#d1e494" xml:lang="en"/>
+                  <span target="#d1e494" xml:lang="es"/>
+                  <span target="#d1e496" xml:lang="en"/>
+                  <span target="#d1e496" xml:lang="es"/>
+                  <span target="#d1e498" xml:lang="en"/>
+                  <span target="#d1e498" xml:lang="es"/>
+                  <span target="#d1e500" xml:lang="en"/>
+                  <span target="#d1e500" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-05-02" type="S">
                   <pc>—</pc>
                   <w xml:id="d1e507">Kuena</w>
-                  <w xml:id="d1e509" cert="low">chacha</w><!-- ? -->
-                  <w xml:id="d1e511">su'a</w><!-- like so/así -->
-                  <w xml:id="d1e513" cert="medium">nto'i</w><!-- happened to him? (-i) -->
+                  <w xml:id="d1e509" cert="low">chacha</w>
+                  <!-- ? -->
+                  <w xml:id="d1e511">su'a</w>
+                  <!-- like so/así -->
+                  <w xml:id="d1e513" cert="medium">nto'i</w>
+                  <!-- happened to him? (-i) -->
                   <pc>,</pc>
                   <w xml:id="d1e517">tono</w>
                   <w xml:id="d1e519">kaa</w>
@@ -494,11 +750,36 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#L160-05-02" xml:lang="en"></span>
-                  <span target="#L160-05-02" xml:lang="es"></span>
-                  
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#L160-05-02" xml:lang="en"/>
+                  <span target="#L160-05-02" xml:lang="es"/>
+                  <span target="#d1e507" xml:lang="en"/>
+                  <span target="#d1e507" xml:lang="es"/>
+                  <span target="#d1e509" xml:lang="en"/>
+                  <span target="#d1e509" xml:lang="es"/>
+                  <span target="#d1e511" xml:lang="en"/>
+                  <span target="#d1e511" xml:lang="es"/>
+                  <span target="#d1e513" xml:lang="en"/>
+                  <span target="#d1e513" xml:lang="es"/>
+                  <span target="#d1e517" xml:lang="en"/>
+                  <span target="#d1e517" xml:lang="es"/>
+                  <span target="#d1e519" xml:lang="en"/>
+                  <span target="#d1e519" xml:lang="es"/>
+                  <span target="#d1e521" xml:lang="en"/>
+                  <span target="#d1e521" xml:lang="es"/>
+                  <span target="#d1e523" xml:lang="en"/>
+                  <span target="#d1e523" xml:lang="es"/>
+                  <span target="#d1e525" xml:lang="en"/>
+                  <span target="#d1e525" xml:lang="es"/>
+                  <span target="#d1e528" xml:lang="en"/>
+                  <span target="#d1e528" xml:lang="es"/>
+                  <span target="#d1e530" xml:lang="en"/>
+                  <span target="#d1e530" xml:lang="es"/>
+                  <span target="#d1e532" xml:lang="en"/>
+                  <span target="#d1e532" xml:lang="es"/>
+                  <span target="#d1e534" xml:lang="en"/>
+                  <span target="#d1e534" xml:lang="es"/>
+                  <span target="#d1e536" xml:lang="en"/>
+                  <span target="#d1e536" xml:lang="es"/>
                </spanGrp>
             </p>
          </div>
@@ -506,25 +787,38 @@
             <head>
                <seg xml:id="L160-06-00">
                   <w xml:id="d1e543">Na</w>
-                  <w xml:id="d1e545">ntaka'vi</w><!-- count -->
+                  <w xml:id="d1e545">ntaka'vi</w>
+                  <!-- count -->
                   <w xml:id="d1e547">ko</w>
                </seg>
             </head>
             <p>
                <seg xml:id="L160-06-01" function="equation" style="verbal" type="S">
                   <pc>¿</pc>
-                  <w xml:id="d1e553">Nisa</w><!-- how many  -->
-                  <w xml:id="d1e555" cert="medium">yoo</w><!-- sacks? -->
-                  <w xml:id="d1e557">nchiso</w><!-- carrying (on his back) -->
+                  <w xml:id="d1e553">Nisa</w>
+                  <!-- how many  -->
+                  <w xml:id="d1e555" cert="medium">yoo</w>
+                  <!-- sacks? -->
+                  <w xml:id="d1e557">nchiso</w>
+                  <!-- carrying (on his back) -->
                   <w xml:id="d1e559">lurru</w>
                   <pc>?</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#L160-06-01" xml:lang="en">How many sacks is the donkey carrying?</span>
-                  <span target="#L160-06-01" xml:lang="es"></span>
+                  <span target="#L160-06-01" xml:lang="es"/>
+ 
+                  <span target="#d1e553" xml:lang="en"/>
+                  <span target="#d1e553" xml:lang="es"/>
                   
-                  <span target="#" xml:lang="en"></span>
-                  <span target="#" xml:lang="es"></span>
+                  <span target="#d1e555" xml:lang="en"/>
+                  <span target="#d1e555" xml:lang="es"/>
+                  
+                  <span target="#d1e557" xml:lang="en"/>
+                  <span target="#d1e557" xml:lang="es"/>
+                  
+                  <span target="#d1e559" xml:lang="en"/>
+                  <span target="#d1e559" xml:lang="es"/>
                </spanGrp>
                <seg xml:id="L160-06-02" type="S">
                   <w xml:id="d1e564">Nchiso</w>
@@ -533,6 +827,22 @@
                   <w xml:id="d1e570">yoo</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-06-02" xml:lang="en"/>
+                  <span target="#L160-06-02" xml:lang="es"/>
+                  
+                  <span target="#d1e564" xml:lang="en"/>
+                  <span target="#d1e564" xml:lang="es"/>
+                  
+                  <span target="#d1e566" xml:lang="en"/>
+                  <span target="#d1e566" xml:lang="es"/>
+                  
+                  <span target="#d1e568" xml:lang="en"/>
+                  <span target="#d1e568" xml:lang="es"/>
+                  
+                  <span target="#d1e570" xml:lang="en"/>
+                  <span target="#d1e570" xml:lang="es"/>
+               </spanGrp>
             </p>
             <p>
                <graphic url="L160-06.png"/>
@@ -547,6 +857,25 @@
                   <w xml:id="d1e588">ñu'u</w>
                   <pc>?</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-06-03" xml:lang="en"/>
+                  <span target="#L160-06-03" xml:lang="es"/>
+                  
+                  <span target="#d1e580" xml:lang="en"/>
+                  <span target="#d1e580" xml:lang="es"/>
+                  
+                  <span target="#d1e582" xml:lang="en"/>
+                  <span target="#d1e582" xml:lang="es"/>
+                  
+                  <span target="#d1e584" xml:lang="en"/>
+                  <span target="#d1e584" xml:lang="es"/>
+                  
+                  <span target="#d1e586" xml:lang="en"/>
+                  <span target="#d1e586" xml:lang="es"/>
+                  
+                  <span target="#d1e588" xml:lang="en"/>
+                  <span target="#d1e588" xml:lang="es"/>
+               </spanGrp>
                <seg xml:id="L160-06-04" type="S">
                   <w xml:id="d1e593">Kantu'u</w>
                   <w xml:id="d1e595"> ______</w>
@@ -555,6 +884,25 @@
                   <w xml:id="d1e601">ñu'u</w>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-06-04" xml:lang="en"/>
+                  <span target="#L160-06-04" xml:lang="es"/>
+                  
+                  <span target="#d1e593" xml:lang="en"/>
+                  <span target="#d1e593" xml:lang="es"/>
+                  
+                  <span target="#d1e595" xml:lang="en"/>
+                  <span target="#d1e595" xml:lang="es"/>
+                  
+                  <span target="#d1e597" xml:lang="en"/>
+                  <span target="#d1e597" xml:lang="es"/>
+                  
+                  <span target="#d1e599" xml:lang="en"/>
+                  <span target="#d1e599" xml:lang="es"/>
+                  
+                  <span target="#d1e601" xml:lang="en"/>
+                  <span target="#d1e601" xml:lang="es"/>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-07" decls="#pedagogical-inter">
@@ -572,11 +920,37 @@
                   <w xml:id="d1e623">kui</w>
                   <pc>?</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-07-01" xml:lang="en"/>
+                  <span target="#L160-07-01" xml:lang="es"/>
+                  
+                  <span target="#d1e611" xml:lang="en"/>
+                  <span target="#d1e611" xml:lang="es"/>
+                  
+                  <span target="#d1e613" xml:lang="en"/>
+                  <span target="#d1e613" xml:lang="es"/>
+                  
+                  <span target="#d1e615" xml:lang="en"/>
+                  <span target="#d1e615" xml:lang="es"/>
+                  
+                  <span target="#d1e621" xml:lang="en"/>
+                  <span target="#d1e621" xml:lang="es"/>
+                  
+                  <span target="#d1e623" xml:lang="en"/>
+                  <span target="#d1e623" xml:lang="es"/>
+               </spanGrp>
                <seg xml:id="L160-07-02" type="S">
                   <w xml:id="d1e628">Kui</w>
                   <seg xml:id="L160-07-02-00" type="blank"> ____________</seg>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-07-02" xml:lang="en"/>
+                  <span target="#L160-07-02" xml:lang="es"/>
+                  
+                  <span target="#d1e628" xml:lang="en"/>
+                  <span target="#d1e628" xml:lang="es"/>
+               </spanGrp>
                <seg xml:id="L160-07-03"
                     function="equation"
                     style="numeric"
@@ -587,6 +961,10 @@
                   <c>=</c>
                   <seg xml:id="L160-07-03-00" type="blank"> ____________</seg>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-07-03" xml:lang="en"/>
+                  <span target="#L160-07-03" xml:lang="es"/>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-08" decls="#pedagogical-inter">
@@ -610,6 +988,24 @@
                   <w xml:id="d1e672">kui</w>
                   <pc>?</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-08-01" xml:lang="en"/>
+                  <span target="#L160-08-01" xml:lang="es"/>
+                  <span target="#d1e656" xml:lang="en"/>
+                  <span target="#d1e656" xml:lang="es"/>
+                  <span target="#d1e658" xml:lang="en"/>
+                  <span target="#d1e658" xml:lang="es"/>
+                  <span target="#d1e660" xml:lang="en"/>
+                  <span target="#d1e660" xml:lang="es"/>
+                  <span target="#d1e662" xml:lang="en"/>
+                  <span target="#d1e662" xml:lang="es"/>
+                  <span target="#d1e664" xml:lang="en"/>
+                  <span target="#d1e664" xml:lang="es"/>
+                  <span target="#d1e670" xml:lang="en"/>
+                  <span target="#d1e670" xml:lang="es"/>
+                  <span target="#d1e672" xml:lang="en"/>
+                  <span target="#d1e672" xml:lang="es"/>
+               </spanGrp>
             </p>
             <p>
                <graphic url="L160-07.png"/>
@@ -620,6 +1016,12 @@
                   <seg xml:id="L160-08-02-00" type="blank"> ____________</seg>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-08-02" xml:lang="en"/>
+                  <span target="#L160-08-02" xml:lang="es"/>
+                  <span target="#d1e680" xml:lang="en"/>
+                  <span target="#d1e680" xml:lang="es"/>
+               </spanGrp>
             </p>
          </div>
          <div xml:id="L160-09" decls="#pedagogical-inter">
@@ -642,11 +1044,35 @@
                   <w xml:id="d1e710">kui</w>
                   <pc>?</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-09-01" xml:lang="en"/>
+                  <span target="#L160-09-01" xml:lang="es"/>
+                  <span target="#d1e694" xml:lang="en"/>
+                  <span target="#d1e694" xml:lang="es"/>
+                  <span target="#d1e696" xml:lang="en"/>
+                  <span target="#d1e696" xml:lang="es"/>
+                  <span target="#d1e698" xml:lang="en"/>
+                  <span target="#d1e698" xml:lang="es"/>
+                  <span target="#d1e700" xml:lang="en"/>
+                  <span target="#d1e700" xml:lang="es"/>
+                  <span target="#d1e702" xml:lang="en"/>
+                  <span target="#d1e702" xml:lang="es"/>
+                  <span target="#d1e708" xml:lang="en"/>
+                  <span target="#d1e708" xml:lang="es"/>
+                  <span target="#d1e710" xml:lang="en"/>
+                  <span target="#d1e710" xml:lang="es"/>
+               </spanGrp>
                <seg xml:id="L160-09-02" type="S">
                   <w xml:id="d1e715">Kui</w>
                   <seg xml:id="L160-09-02-00" type="blank"> ____________</seg>
                   <pc>.</pc>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-09-02" xml:lang="en"/>
+                  <span target="#L160-09-02" xml:lang="es"/>
+                  <span target="#d1e715" xml:lang="en"/>
+                  <span target="#d1e715" xml:lang="es"/>
+               </spanGrp>
                <seg xml:id="L160-09-03"
                     function="equation"
                     style="numeric"
@@ -657,6 +1083,10 @@
                   <c>=</c>
                   <seg xml:id="L160-09-03-00" type="blank"> ____________</seg>
                </seg>
+               <spanGrp type="translation">
+                  <span target="#L160-09-03" xml:lang="en"/>
+                  <span target="#L160-09-03" xml:lang="es"/>
+               </spanGrp>
             </p>
          </div>
       </body>
