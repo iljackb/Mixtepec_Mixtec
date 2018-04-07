@@ -45,6 +45,7 @@
     </xsl:template>
 
 <!-- For content in //list/item structures with dual (spanish-mixtec) content -->
+    <!--  
     <xsl:template match="item">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -63,8 +64,21 @@
         </spanGrp>       
         
     </xsl:template>
-
-
+-->
+    <!-- For content in //list/item structures with just mixtec content -->
+    <xsl:template match="item">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+        
+        
+        <spanGrp type="translation">         
+            <xsl:for-each select="w">
+                <span target="#{@xml:id}" xml:lang="en"></span>
+            </xsl:for-each>
+        </spanGrp>       
+        
+    </xsl:template>
 
     <!-- Generic copy template -->
 
