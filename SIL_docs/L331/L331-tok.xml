@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L331-tok">
    <teiHeader>
       <fileDesc>
@@ -58,63 +59,16 @@
             Complex Consonants, Non-Native sounds) represented by the orthographic convention
             are all contained within the "item" element.
          </p>
-         <p>
-            <list>
-               <item>
-                  <label>segment</label>
-                  <elementSpec ident="seg">
-                     <desc>In this document (and in all others in the SIL collection) the 'seg' element is used to encapsulate:
-                        <list>
-                           <item>i) examples of words containing the orthographic unit in MIX;</item>
-                           <item>ii) Spanish translations of the MIX words containing the orthographic unit;;</item>
-                        </list>
-                        The attributes within the "seg" element are as follows:
-                        '<att>xml:lang</att>="(<val>mix</val>|<val>esp</val>)"' is again to declare that the language is MIX or Spanish;
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>character</label>
-                  <elementSpec ident="c">
-                     <desc>The "character" element (represented as: "c") in which the orthographic unit is present;
-                        The attributes within the "c" element are as follows:
-                        "@<att>xml:id</att>" is given to elements so that in further searching/modeling of the language and conceptual data contained therein may be uniquely identified;
-                        '@<att>type</att>="<val>orth</val>"' is to declare that the style is orthographic;
-                        '@<att>xml:lang</att>="<val>mix</val>"' is to declare that the language is MIX; (although this will likely be changed in later encodings so that it is only necessary to do once)
-                     </desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>column break</label>
-                  <elementSpec ident="cb">
-                     <desc>This is a formatting element that will likely be replaced at a later time with either CSS or XSL</desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>division</label>
-                  <elementSpec ident="div">
-                     <desc> The "div" element contains each separate list;</desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>head</label>
-                  <elementSpec ident="head">
-                     <desc>The headers from original document are represented as the "head" element of each list:</desc>
-                  </elementSpec>
-               </item>
-               <item>
-                  <label>graphic</label>
-                  <elementSpec ident="graphic">
-                     <desc>All images from SIL-Mexico publications are encoded in TEI 'graphic' elements. Each is identified in attribute: @'<att>url</att>. In final output, the goal is to annotate/encode image and the semantic contents represented according to one or more Linked Open Data compatible metadata markup formats.</desc>
-                  </elementSpec>
-               </item>
-            </list>
-         </p>
-         <p>
-            Note: from the alphabet defined herein a FSD document will be created for this alphabetic system and characters. 
-            These features will be linked to the phonetic and phonological FSD for this language which at a future time could form the basis for a system of automatic 
-            transcription of Mixtepec Mixtec speech in phonetic and/or orthographic form.
-         </p>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-04-06</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography).
+               </ab>
+            </normalization>
+            <ab>
+               This document should be linked with the final (or working) version of the "Guia Ortografica" as it is updated (<ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>), which should (and I would expect) will be eventually translated to Mixtec for use of native speakers. The, given that it will be the standard, latter will also superceed this document as this is incomplete and out of date with respect to a number of areas of MIX orthography.
+            </ab>
+         </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">
                <category xml:id="pedagogical">
@@ -142,28 +96,7 @@
          </classDecl>
          <projectDesc>
             <p>
-               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
-               The encoding of this portion of the MIX Language resources can be divided into the following components:
-               <list>
-                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
-                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
-                     
-                     <list>
-                        <item>glossing of orthographical lexical items;</item>
-                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
-                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
-                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
-                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
-                     </list>
-                  </item>
-                  <item>iii) Classification of Document Types and Ontology Linking;
-                     <list>
-                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
-                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
-                     </list>
-                  </item>
-               </list>
-            </p>
+               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.</p>
          </projectDesc>
       </encodingDesc>
    </teiHeader>
@@ -183,6 +116,12 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-01-02">corazón</w>
                      <graphic url="L331-heart.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-01-01 #L331-01-01-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-01-01" xml:lang="en">heart</span>
+                     </spanGrp>
                   </item>
                   <item xml:id="L331-01-02">
                      <c>an</c>
@@ -191,7 +130,13 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-02-02">gavilán</w>
                      <graphic url="L331-hawk.png"/>
-                  </item>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-02-01 #L331-01-02-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-02-01" xml:lang="en">hawk</span>
+                     </spanGrp>
+                  </item>     
                   <item xml:id="L331-01-03">
                      <c>aa</c>
                      <cb/>
@@ -199,6 +144,12 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-03-02">pájaro</w>
                      <graphic url="L331-bird.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-03-01 #L331-01-03-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-03-01" xml:lang="en">bird</span>
+                     </spanGrp>
                   </item>
                   <item xml:id="L331-01-04">
                      <c>a'a</c>
@@ -207,7 +158,15 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-04-02">chile</w>
                      <graphic url="L331-chile.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-04-01 #L331-01-04-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-04-01" xml:lang="en">chili</span>
+                        <span target="#L331-01-04-01" xml:lang="en">peper</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-05">
                      <c>e</c>
                      <cb/>
@@ -215,7 +174,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-05-02">borreguito</w>
                      <graphic url="L331-lamb.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-05-01 #L331-01-05-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-05-01" xml:lang="en">lamb</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-06">
                      <c>en</c>
                      <cb/>
@@ -223,7 +189,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-06-02">sudor</w>
                      <graphic url="L331-sweat.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-06-01 #L331-01-06-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-06-01" xml:lang="en">sweat</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-07">
                      <c>ee</c>
                      <cb/>
@@ -231,6 +204,13 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-07-02">pizcando</w>
                      <graphic url="L331-harvest-pick.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-07-01 #L331-01-07-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-07-01" xml:lang="en">pick</span>
+                        <span target="#L331-01-07-01" xml:lang="en">harvest</span>
+                     </spanGrp>
                   </item>
                   <item xml:id="L331-01-08">
                      <c>e'e</c>
@@ -239,6 +219,13 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-08-02">casa</w>
                      <graphic url="L331-house.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-08-01 #L331-01-08-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-08-01" xml:lang="en">house</span>
+                        <span target="#L331-01-08-01" xml:lang="en">home</span>
+                     </spanGrp>
                   </item>
                   <item xml:id="L331-01-09">
                      <c>i</c>
@@ -247,7 +234,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-09-02">flor</w>
                      <graphic url="L331-flower.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-09-01 #L331-01-09-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-09-01" xml:lang="en">flower</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-10">
                      <c>in</c>
                      <cb/>
@@ -255,7 +249,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-10-02">ardilla</w>
                      <graphic url="L331-squirrel.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-10-01 #L331-01-10-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-10-01" xml:lang="en">squirrel</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-11">
                      <c>ii</c>
                      <cb/>
@@ -263,7 +264,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-11-02">agua</w>
                      <graphic url="L331-water.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-11-01 #L331-01-11-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-11-01" xml:lang="en">water</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-12">
                      <c>i'i</c>
                      <cb/>
@@ -271,15 +279,29 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-12-02">hongo</w>
                      <graphic url="L331-mushroom.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-12-01 #L331-01-12-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-12-01" xml:lang="en">mushroom</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-13">
                      <c>o</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-01-13-01">oko</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-13-02">vente</w>
-                     <w xml:id="L331-01-13-03">20</w>
+                     <num xml:id="L331-01-13-03">20</num>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-13-01 #L331-01-13-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-13-01" xml:lang="en">twenty</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-14">
                      <c>on</c>
                      <cb/>
@@ -287,7 +309,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-14-02">trabajamos</w>
                      <graphic url="L331-work.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-14-01 #L331-01-14-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-14-01" xml:lang="en">we are working</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-15">
                      <c>oo</c>
                      <cb/>
@@ -295,7 +324,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-15-02">culebra</w>
                      <graphic url="L331-snake.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-15-01 #L331-01-15-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-15-01" xml:lang="en">snake</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-16">
                      <c>o'o</c>
                      <cb/>
@@ -303,7 +339,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-16-02">colibrí</w>
                      <graphic url="L331-hummingbird.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-16-01 #L331-01-16-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-16-01" xml:lang="en">humminbird</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-17">
                      <c>u</c>
                      <cb/>
@@ -311,7 +354,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-17-02">resortera</w>
                      <graphic url="L331-slingshot.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-17-01 #L331-01-17-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-17-01" xml:lang="en">slingshot</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-18">
                      <c>un</c>
                      <cb/>
@@ -319,7 +369,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-18-02">dinero</w>
                      <graphic url="L331-money.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-18-01 #L331-01-18-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-18-01" xml:lang="en">money</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-19">
                      <c>uu</c>
                      <cb/>
@@ -327,7 +384,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-19-02">codorniz</w>
                      <graphic url="L331-quail.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-19-01 #L331-01-19-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-19-01" xml:lang="en">quail</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-01-20">
                      <c>u'u</c>
                      <cb/>
@@ -335,7 +399,14 @@
                      <cb/>
                      <w xml:lang="es" xml:id="L331-01-20-02">boca</w>
                      <graphic url="L331-mouth.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-01-20-01 #L331-01-20-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-01-20-01" xml:lang="en">mouth</span>
+                     </spanGrp>
                   </item>
+
                </list>
             </p>
          </div>
@@ -353,7 +424,14 @@
                      <w xml:lang="es" xml:id="L331-02-01-02">caballo</w>
                      <cb/>
                      <graphic url="L331-horse.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-01-01 #L331-02-01-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-01-01" xml:lang="en">horse</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-02">
                      <c>l</c>
                      <cb/>
@@ -362,7 +440,14 @@
                      <w xml:lang="es" xml:id="L331-02-02-02">tortolita</w>
                      <cb/>
                      <graphic url="L331-mourning_dove.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-02-01 #L331-02-02-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-02-01" xml:lang="en">mourning dove</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-03">
                      <c>m</c>
                      <cb/>
@@ -371,7 +456,14 @@
                      <w xml:lang="es" xml:id="L331-02-03-02">mapache</w>
                      <cb/>
                      <graphic url="L331-racoon.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-03-01 #L331-02-03-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-03-01" xml:lang="en">racoon</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-04">
                      <c>n</c>
                      <cb/>
@@ -380,7 +472,14 @@
                      <w xml:lang="es" xml:id="L331-02-04-02">maiz</w>
                      <cb/>
                      <graphic url="L331-corn_kernals.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-04-01 #L331-02-04-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-04-01" xml:lang="en">corn kernals</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-05">
                      <c>ñ</c>
                      <cb/>
@@ -389,7 +488,14 @@
                      <w xml:lang="es" xml:id="L331-02-05-02">red</w>
                      <cb/>
                      <graphic url="L331-net.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-05-01 #L331-02-05-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-05-01" xml:lang="en">net</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-06">
                      <c>r</c>
                      <cb/>
@@ -398,7 +504,14 @@
                      <w xml:lang="es" xml:id="L331-02-06-02">maestro</w>
                      <cb/>
                      <graphic url="L331-teacher.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-06-01 #L331-02-06-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-06-01" xml:lang="en">teacher</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-07">
                      <c>s</c>
                      <cb/>
@@ -407,16 +520,30 @@
                      <w xml:lang="es" xml:id="L331-02-07-02">lluvia</w>
                      <cb/>
                      <graphic url="L331-rain.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-07-01 #L331-02-07-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-07-01" xml:lang="en">rain</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-08">
                      <c>t</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-02-08-01">tikaka</w>
                      <cb/>
-                     <w xml:lang="es" xml:id="L331-02-08-02">curvo</w>
+                     <w xml:lang="es" xml:id="L331-02-08-02">cuervo</w>
                      <cb/>
                      <graphic url="L331-crow.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-08-01 #L331-02-08-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-08-01" xml:lang="en">crow</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-09">
                      <c>v</c>
                      <cb/>
@@ -425,7 +552,14 @@
                      <w xml:lang="es" xml:id="L331-02-09-02">piña</w>
                      <cb/>
                      <graphic url="L331-pineapple.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-09-01 #L331-02-09-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-09-01" xml:lang="en">pineapple</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-10">
                      <c>x</c>
                      <cb/>
@@ -434,7 +568,14 @@
                      <w xml:lang="es" xml:id="L331-02-10-02">falda</w>
                      <cb/>
                      <graphic url="L331-skirt.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-10-01 #L331-02-10-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-10-01" xml:lang="en">skirt</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-11">
                      <c>y</c>
                      <cb/>
@@ -443,7 +584,14 @@
                      <w xml:lang="es" xml:id="L331-02-11-02">armadillo</w>
                      <cb/>
                      <graphic url="L331-armadillo.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-11-01 #L331-02-11-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-11-01" xml:lang="en">armadillo</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-02-12">
                      <c>'</c>
                      <cb/>
@@ -452,7 +600,14 @@
                      <w xml:lang="es" xml:id="L331-02-12-02">gallo</w>
                      <cb/>
                      <graphic url="L331-rooster.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-02-12-01 #L331-02-12-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-02-12-01" xml:lang="en">rooster</span>
+                     </spanGrp>
                   </item>
+
                </list>
             </p>
          </div>
@@ -470,7 +625,14 @@
                      <w xml:lang="es" xml:id="L331-03-01-02">pez</w>
                      <cb/>
                      <graphic url="L331-fish.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-01-01 #L331-03-01-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-01-01" xml:lang="en">fish</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-03-02">
                      <c>nch</c>
                      <cb/>
@@ -479,7 +641,14 @@
                      <w xml:lang="es" xml:id="L331-03-02-02">ejote</w>
                      <cb/>
                      <graphic url="L331-green_beans.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-02-01 #L331-03-02-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-02-01" xml:lang="en">green bean</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-03-03">
                      <c>nk</c>
                      <cb/>
@@ -489,7 +658,14 @@
                      <cb/>
                      <cb/>
                      <graphic url="L331-fox.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-03-01 #L331-03-03-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-03-01" xml:lang="en">fox</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-03-04">
                      <c>nt</c>
                      <cb/>
@@ -498,7 +674,14 @@
                      <w xml:lang="es" xml:id="L331-03-04-02">elote</w>
                      <cb/>
                      <graphic url="L331-corn_on_cob_w-husk.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-04-01 #L331-03-04-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-04-01" xml:lang="en">corncob</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-03-05">
                      <c>nts</c>
                      <cb/>
@@ -507,7 +690,14 @@
                      <w xml:lang="es" xml:id="L331-03-05-02">ala</w>
                      <cb/>
                      <graphic url="L331-wing.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-05-01 #L331-03-05-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-05-01" xml:lang="en">wing</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-03-06">
                      <c>ts</c>
                      <cb/>
@@ -516,7 +706,14 @@
                      <w xml:lang="es" xml:id="L331-03-06-02">pantalón</w>
                      <cb/>
                      <graphic url="L331-pants.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-06-01 #L331-03-06-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-06-01" xml:lang="en">pants</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-03-07">
                      <c>xch</c>
                      <cb/>
@@ -525,7 +722,14 @@
                      <w xml:lang="es" xml:id="L331-03-07-02">pelos de maíz</w>
                      <cb/>
                      <graphic url="L331-corn_on_cob_w-husk.png"/>
+                     <linkGrp type="translation">
+                        <link target="#L331-03-07-01 #L331-03-07-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-03-07-01" xml:lang="en">corn kernals</span>
+                     </spanGrp>
                   </item>
+
                </list>
             </p>
          </div>
@@ -534,6 +738,7 @@
                <list>
                   <head>
                      <seg xml:lang="es" xml:id="L331-04-00">Las letras d, f, g, j, p, rr solamente se usan en palabras tomadas del español.</seg>
+                     <!-- (JB) can expand and make a Mixtec translation of this -->
                   </head>
                   <item xml:id="L331-04-01">
                      <c>d</c>
@@ -541,42 +746,84 @@
                      <w xml:lang="mix" xml:id="L331-04-01-01">soldado</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-04-01-02">soldado</w>
+                     <linkGrp type="translation">
+                        <link target="#L331-04-01-01 #L331-04-01-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-04-01-01" xml:lang="en">soldier</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-04-02">
                      <c>f</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-04-02-01">cafe</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-04-02-02">café</w>
+                     <linkGrp type="translation">
+                        <link target="#L331-04-02-01 #L331-04-02-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-04-02-01" xml:lang="en">coffee</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-04-03">
                      <c>g</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-04-03-01">amigu</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-04-03-02">amigo</w>
+                     <linkGrp type="translation">
+                        <link target="#L331-04-03-01 #L331-04-03-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-04-03-01" xml:lang="en">friend</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-04-04">
                      <c>j</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-04-04-01">juevixi</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-04-04-02">jueves</w>
+                     <linkGrp type="translation">
+                        <link target="#L331-04-04-01 #L331-04-04-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-04-04-01" xml:lang="en">Thursday</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-04-05">
                      <c>p</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-04-05-01">paa</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-04-05-02">pan</w>
+                     <linkGrp type="translation">
+                        <link target="#L331-04-05-01 #L331-04-05-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-04-05-01" xml:lang="en">bread</span>
+                     </spanGrp>
                   </item>
+
                   <item xml:id="L331-04-06">
                      <c>rr</c>
                      <cb/>
                      <w xml:lang="mix" xml:id="L331-04-06-01">lurru</w>
                      <cb/>
                      <w xml:lang="es" xml:id="L331-04-06-02">burro</w>
+                     <linkGrp type="translation">
+                        <link target="#L331-04-06-01 #L331-04-06-02"/>
+                     </linkGrp>
+                     <spanGrp type="translation">
+                        <span target="#L331-04-06-01" xml:lang="en">donkey</span>
+                     </spanGrp>
                   </item>
+
                </list>
             </p>
          </div>

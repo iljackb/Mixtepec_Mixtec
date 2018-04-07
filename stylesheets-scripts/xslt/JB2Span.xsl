@@ -25,6 +25,8 @@
         </annotationBlock>
     </xsl:template>
     -->
+    <!-- standard document format -->
+    <!--  -->
     <xsl:template match="seg[@type='S']">
             <xsl:copy>
                 <xsl:apply-templates select="@* | node()"/>
@@ -41,6 +43,27 @@
             </spanGrp>       
         
     </xsl:template>
+
+<!-- For content in //list/item structures with dual (spanish-mixtec) content -->
+    <xsl:template match="item">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+        
+        <linkGrp type="translation">         
+            <xsl:for-each select="w">
+                <link target="#{@xml:id}"/>
+            </xsl:for-each>
+        </linkGrp>       
+  
+        <spanGrp type="translation">         
+            <xsl:for-each select="w[@xml:lang='mix']">
+                <span target="#{@xml:id}" xml:lang="en"></span>
+            </xsl:for-each>
+        </spanGrp>       
+        
+    </xsl:template>
+
 
 
     <!-- Generic copy template -->
