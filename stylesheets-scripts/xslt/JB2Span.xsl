@@ -26,7 +26,7 @@
     </xsl:template>
     -->
     <!-- standard document format -->
-    <!--  -->
+    <!--  
     <xsl:template match="seg[@type='S']">
             <xsl:copy>
                 <xsl:apply-templates select="@* | node()"/>
@@ -42,7 +42,7 @@
                 </xsl:for-each>
             </spanGrp>       
         
-    </xsl:template>
+    </xsl:template>-->
 
 <!-- For content in //list/item structures with dual (spanish-mixtec) content -->
     <!--  
@@ -73,6 +73,23 @@
         
         
         <spanGrp type="translation">         
+            <xsl:for-each select="w">
+                <span target="#{@xml:id}" xml:lang="en"></span>
+            </xsl:for-each>
+        </spanGrp>       
+        
+    </xsl:template>
+    
+    
+<!-- for content in a table /cell  -->
+    <xsl:template match="cell/seg[@xml:lang='mix']">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+        
+        
+        <spanGrp type="translation">     
+            <span target="#{@xml:id}" xml:lang="en"></span>
             <xsl:for-each select="w">
                 <span target="#{@xml:id}" xml:lang="en"></span>
             </xsl:for-each>

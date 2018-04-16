@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="Parangon-MIX">
    <teiHeader>
       <fileDesc>
@@ -35,6 +36,16 @@
             <language ident="en" xml:lang="mix">Inglés</language>
          </langUsage>
       </profileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <correction>
+               <ab>I made a correction to the word "ntisaanntitu'u" as I am quite sure it is a typo in the orignal and was intended to be two separate words: "ntisaan" "ntitu'u"</ab>
+            </correction>
+            <normalization>
+               <ab>I changed all saltillos used in the source for glottal stops to apostrophes in order to better enable integration and usage.</ab>
+            </normalization>
+         </editorialDecl>
+      </encodingDesc>
       <revisionDesc>
          <change when-iso="2014-09-21">
             <gi>profileDesc</gi>, <gi>langUsage</gi>, and <gi>revisionDesc</gi> added; additional
@@ -66,13 +77,19 @@
             <head>Palabras clave:</head>
             <list>
                <item>Parangón</item>
+               <spanGrp type="translation"/>
                <item>difrasismo</item>
+               <spanGrp type="translation"/>
                <item>paralelismo</item>
+               <spanGrp type="translation"/>
                <item>metáforas</item>
+               <spanGrp type="translation"/>
                <item>
                   <placeName>San Juan Mixtepec</placeName>
                </item>
+               <spanGrp type="translation"/>
                <item>mixteco</item>
+               <spanGrp type="translation"/>
             </list>
          </div>
          <lb/>
@@ -116,7 +133,8 @@
             </label>
             <lb/>
             <p>Mucho se ha escrito acerca de los Huehuehtlahtolli y de otras formas de discursos, y
-               poco análisis se ha escrito acerca del parangón o “<foreign><w xml:lang="mix">tsaꞌvi</w>
+               poco análisis se ha escrito acerca del parangón o “<foreign>
+                  <w xml:lang="mix">tsaꞌvi</w>
                </foreign>”, aunque ha sido estudiado por algunos investigadores y hablantes nativos
                del mixteco. Sin embargo, el parangón no es algo nuevo. Es un tipo de discurso ritual
                que se remonta a los códices de la época prehispánica y que se continúa recitando en
@@ -133,7 +151,7 @@
                relacionadas u opuestas entre sí, para expresar una misma idea.</p>
             <lb/>
             <p>En algunas partes de la mixteca este discurso se conoce como <foreign>
-               <w xml:lang="mix">saꞌvi</w>
+                  <w xml:lang="mix">saꞌvi</w>
                </foreign>, <foreign>
                   <w xml:lang="mix">saꞌu</w>
                </foreign> o <foreign>
@@ -261,11 +279,18 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s1-mix" type="S">
-                        <w xml:id="d1e298">Nti'o</w><!-- "-o" 1pl-->
-                        <w xml:id="d1e300">ni</w><!-- particle, prefix completive -->
-                        <w xml:id="d1e303">vatsi</w><!-- verb, intrns, motion-arrival, come -->
+                        <w xml:id="d1e298">Nti'o</w>   <!-- "-o" 1pl-->
+                        <w xml:id="d1e300" norm="nivatsi">
+                           <w xml:id="d1e300a">ni</w> <!-- particle, prefix completive -->
+                           <w xml:id="d1e300b">vatsi</w> <!-- verb, intrns, motion-arrival, come -->
+                        </w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s1-mix" xml:lang="en">All of us, came.</span>
+                        <span target="#d1e298" xml:lang="en">all of us</span>
+                        <span target="#d1e300" xml:lang="en">came</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s1-esp" type="S">
@@ -278,13 +303,20 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s2.1-mix" type="S">
-                        <w xml:id="d1e321">Ika</w><!-- entonces -->
+                        <w xml:id="d1e321">Ika</w> <!-- entonces !-->
                         <pc>,</pc>
                         <w xml:id="d1e325">tsini</w>
                         <w xml:id="d1e327">ñu'u</w>
                         <w xml:id="d1e329">ña</w>
-                        <w xml:id="d1e331">ka'an</w>
+                        <w xml:id="d1e331">ka'an</w><!-- infinitive? -->
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s2.1-mix" xml:lang="en">Therefore, it's necessary to speak.</span>
+                        <span target="#d1e321" xml:lang="en">therefore</span>
+                        <span target="#d1e325 #d1e327" xml:lang="en">it's necessary</span>
+                        <span target="#d1e329" xml:lang="en">that</span>
+                        <span target="#d1e331" xml:lang="en">speak</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s2.1-esp" type="S">
@@ -295,28 +327,29 @@
                         <seg xml:id="s2.1-4-esp" type="LexItem">que</seg>
                         <seg xml:id="s2.1-5-esp" type="LexItem">hable</seg>
                      </seg>
-                     <spanGrp type="translation">
-                        <span target="#d1e321" xml:lang="en">therefore</span>
-
-                        <span target="#d1e327 #d1e329 #d1e331" xml:lang="en">it's necessary that</span>
-                        <span target="#d1e327 #d1e329 #d1e331" xml:lang="en">it's necessary that</span>
-                        
-                        <span target="#s2.1-mix" xml:lang="en">Therefore it is necessary to speak.</span>
-                     </spanGrp>
                   </cell>
                </row>
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s2.2-mix" type="S">
-                        <w xml:id="d1e350">nuu</w>
+                        <w xml:id="d1e350">nuu</w> <!-- where -->
                         <w xml:id="d1e352">yee</w>
                         <w xml:id="d1e354">in</w>
                         <w xml:id="d1e356">junta</w>
                         <w xml:id="d1e358">ka'nu</w><!-- adj, big -->
-                        <w xml:id="d1e361">yo'o</w>                        <!-- here -->
+                        <w xml:id="d1e361">yo'o</w>   <!-- here -->
                         <w xml:id="d1e364">ra</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s2.2-mix" xml:lang="en">here where there is a great big gathering</span>
+                        <span target="#d1e350" xml:lang="en">where</span>
+                        <span target="#d1e352" xml:lang="en">there is</span>
+                        <span target="#d1e354" xml:lang="en">a</span>
+                        <span target="#d1e356" xml:lang="en">gathering</span>
+                        <span target="#d1e358" xml:lang="en">big</span>
+                        <span target="#d1e361" xml:lang="en">here</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s2.2-esp" type="S">
@@ -334,14 +367,20 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s3-mix" type="S">
-                        <w xml:id="d1e389">Na</w><!-- particle,  -->
-                        <w xml:id="d1e392">ka'an</w>                        <!-- verb, intrns, speak -->
-                        <w xml:id="d1e395">yu</w><!-- 1s -->
+                        <w xml:id="d1e389">Naka'an</w>  
+                        <w xml:id="d1e395">yu</w>
                         <w xml:id="d1e398">vasu</w>
                         <w xml:id="d1e400">xoo</w>
                         <w xml:id="d1e402">ra</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s3-mix" xml:lang="en">I'm going to speak even if a little.</span>
+                        <span target="#d1e389 #d1e392" xml:lang="en">I will speak</span>
+                        <span target="#d1e389 #d1e392" xml:lang="en">I am going to speak</span>
+                        <span target="#d1e398" xml:lang="en">even if</span>
+                        <span target="#d1e400" xml:lang="en">a little</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s3-esp" type="S">
@@ -360,11 +399,18 @@
                   <cell>
                      <seg xml:lang="mix" xml:id="s4-mix" type="S">
                         <w xml:id="d1e427">Kuchaa</w>
-                        <w xml:id="d1e429">so'o</w><!-- ,etym: metonymy 'ear' -->
-                        <w xml:id="d1e432">ntisaanntitu'u</w>
-                        <w xml:id="d1e434">kueni</w>                        <!-- pron, 2pl, -->
+                        <w xml:id="d1e429">so'o</w>
+                        <w xml:id="d1e431">ntisaan</w>
+                        <w xml:id="d1e432">ntitu'u</w>
+                        <w xml:id="d1e434">kueni</w>                       <!-- pron, 2pl, form -->
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s4-mix" xml:lang="en">Pay attention everyone, all of you.</span>
+                        <span target="#d1e427 #d1e429" xml:lang="en">pay attention</span>
+                        <span target="#d1e431" xml:lang="en">everyone</span>
+                        <span target="#d1e432 #d1e434" xml:lang="en">all of you</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s4-esp" type="S">
@@ -380,7 +426,7 @@
                </row>
             </table>
             <lb/>
-            <linkGrp type="phrase-grouping">
+            <linkGrp type="phrase-grouping"><!-- not sure we need this but keep and discuss with Laurent -->
                <link target="#s1-2-mix #s1-3-mix" xml:id="s1-ph1-mix-cmpl-arrive"/>
                <link target="#s1-2-esp #s1-3-esp" xml:id="s1-ph1-es-1pl-arrive-pret"/>
                <link target="#s2.1-2-mix #s2.1-3-mix" xml:id="s2-ph1-mix-be.necessary-that"/>
@@ -417,11 +463,16 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s5.1-mix" type="S">
-                        <w xml:id="d1e488">Kukaꞌnu</w>
+                        <w xml:id="d1e488" orig="Kukaꞌnu">Kuka'nu</w>
                         <w xml:id="d1e490">ini</w>
                         <w xml:id="d1e492">ntisaan</w>
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s5.1-mix" xml:lang="en"/>
+                        <span target="#d1e488 #d1e490" xml:lang="en" cert="low"></span><!-- who is sorry? or forgiven? -->
+                        <span target="#d1e492" xml:lang="en">everyone</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s5.1-esp" type="S">
@@ -435,24 +486,32 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s5.2-mix" type="S">
-                        <w xml:id="d1e509">inmillón</w>
+                        <w xml:id="d1e509" norm="in millión">
+                           <w xml:id="d1e509a">in</w>
+                           <w xml:id="d1e509b">millón</w>
+                        </w>
                         <w xml:id="d1e514">ña</w>
                         <w xml:id="d1e516">kukaꞌnu</w>
                         <w xml:id="d1e518">ini</w>
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s5.2-mix" xml:lang="en"/>
+                        <span target="#d1e509" xml:lang="en">one million</span>
+                        <span target="#d1e514" xml:lang="en"/>
+                        <span target="#d1e516" xml:lang="en"/>
+                        <span target="#d1e518" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s5.2-esp" type="S">
-                        <seg xml:id="s5.2-1-esp" type="LexItem">
                            <seg xml:id="s5.2-1.1-esp">un</seg>
                            <seg xml:id="s5.2-1.2-esp">millón</seg>
-                        </seg>
+                        
                         <seg xml:id="s5.2-2-esp" type="LexItem">de</seg>
-                        <seg xml:id="s5.2-3-esp" type="LexItem">
                            <seg xml:id="s5.2-3.1-esp">lo</seg>
                            <seg xml:id="s5.2-3.2-esp">que</seg>
-                        </seg>
+                        
                         <seg xml:id="s5.2-4-esp" type="LexItem">perdona</seg>
                         <seg xml:id="s5.2-5-esp" type="LexItem">(perdón)</seg>
                         <pc>.</pc>
@@ -462,10 +521,15 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s5.3-mix" type="S">
-                        <w xml:id="d1e545">ntisaan-ntituꞌu</w>
+                        <w xml:id="d1e545" orig="ntisaan-ntituꞌu">ntisaan-ntitu'u</w>
                         <w xml:id="d1e552">kueni</w>
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s5.3-mix" xml:lang="en">to each and everyone of you</span>
+                        <span target="#d1e545" xml:lang="en"/>
+                        <span target="#d1e552" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s5.3-esp" type="S">
@@ -487,6 +551,14 @@
                         <w xml:id="d1e579">mani</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s5.4-mix" xml:lang="en">and to dearest Lord</span>
+                        <span target="#d1e573" xml:lang="en" cert="unknown"/>
+                        <span target="#d1e575" xml:lang="en">God</span>
+                        <span target="#d1e577" xml:lang="en">dear</span>
+                        <span target="#d1e575 #d1e577 #d1e579" xml:lang="en">dearest Lord</span>
+                        <span target="#d1e579" xml:lang="en" cert="unknown"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s5.4-esp" type="S">
@@ -557,6 +629,14 @@
                         <w xml:id="d1e653">yu</w>
                         <pc>!</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s6-mix" xml:lang="en">And how happy, how happy I am!</span>
+                        <span target="#d1e637" xml:lang="en">and</span>
+                        <span target="#d1e639" xml:lang="en">how</span>
+                        <span target="#d1e641" xml:lang="en">happy</span>
+                        <span target="#d1e647" xml:lang="en">how</span>
+                        <span target="#d1e649 #d1e651 #d1e653" xml:lang="en">I am happy</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s6.1-es-lit" type="S">
@@ -585,9 +665,15 @@
                      <seg xml:lang="mix" xml:id="s7-mix" type="S">
                         <pc>…</pc>
                         <w xml:id="d1e692">ini</w>
-                        <w xml:id="d1e694">ñuyivi</w>
+                        <w xml:id="d1e694">ñuyivi</w><!-- =  ñu'un ncha'i? -->
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s7-mix" xml:lang="en" type="literal">inside the Earth</span>
+                        <span target="#s7-mix" xml:lang="en">wherever in the world</span>
+                        <span target="#d1e692" xml:lang="en" type="literal">inside</span>
+                        <span target="#d1e694" xml:lang="en">Earth</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s7.1-es-lit" type="S">
@@ -611,9 +697,14 @@
                   <cell>
                      <seg xml:lang="mix" xml:id="s8-mix" type="S">
                         <w xml:id="d1e723">ini</w>
-                        <w xml:id="d1e725">ñuꞌu-nchaꞌi</w>
+                        <w xml:id="d1e725" orig="ñuꞌu-nchaꞌi">ñu'u-ncha'i</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s8-mix" xml:lang="en">wherever in the world</span>
+                        <span target="#d1e723" xml:lang="en"/>
+                        <span target="#d1e725" xml:lang="en">Earth</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s8-esp" type="S">
@@ -703,37 +794,41 @@
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix"
-                         
-                          xml:id="earth-mix"
-                          type="LexItem">
-                        <seg xml:id="earth-mix-01">ñuꞌu</seg>
+                     <w xml:lang="mix" xml:id="earth-mix" norm="ñu'un-ncha'i">
+                        <w xml:id="earth-mix-01" orig="ñuꞌu">ñu'u</w>
                         <pc>-</pc>
-                        <seg xml:id="earth-mix-02">nchaꞌi</seg>
-                     </seg>
+                        <w xml:id="earth-mix-02" orig="nchaꞌi">ncha'i</w>
+                     </w>
+                     <spanGrp type="translation">
+                        <span target="#earth-mix-01" xml:lang="en" type="literal">land</span>
+                        <span target="#earth-mix-02" xml:lang="en" type="literal">mud</span>
+                        <span target="#earth-mix" xml:lang="en">Planet Earth</span>
+                     </spanGrp>
+                     
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="earth-mix-es-lit"
-                          type="S">
+                     <seg xml:lang="es" xml:id="earth-mix-es-lit" type="S">
                         <seg xml:id="earth-mix-es-lit-01" type="LexItem">tierra</seg>
                         <pc>-</pc>
                         <seg xml:id="earth-mix-es-lit-02" type="LexItem">lodo</seg>
                      </seg>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="earth-esp" type="S">Planeta
-                        Tierra</seg>
+                     <seg xml:lang="es" xml:id="earth-esp" type="S">Planeta Tierra</seg>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="body-mix" type="S">
+                     <w xml:lang="mix" xml:id="body-mix" norm="iki-kuñu">
                         <w xml:id="d1e830">iki</w>
                         <pc>-</pc>
                         <w xml:id="d1e834">kuñu</w>
-                     </seg>
+                     </w>
+                     <spanGrp type="translation">
+                        <span target="#body-mix" xml:lang="en">body</span>
+                        <span target="#d1e830" xml:lang="en" type="literal">bone</span>
+                        <span target="#d1e834" xml:lang="en" type="literal">meat</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="body-mix-es-lit" type="S">
@@ -748,98 +843,93 @@
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="go_away-mix" type="S">
-                        <w xml:id="d1e850">yaꞌa</w>
+                     <w xml:lang="mix" xml:id="go_away-mix" norm="ya'a-ku'un">
+                        <w xml:id="d1e850" orig="yaꞌa">ya'a</w>
                         <pc>-</pc>
-                        <w xml:id="d1e854">kuꞌun</w>
-                     </seg>
+                        <w xml:id="d1e854" orig="kuꞌun">ku'un</w>
+                     </w>
+                     <spanGrp type="translation">
+                        <span target="#go_away-mix" xml:lang="en">to leave</span>
+                        <span target="#d1e850" xml:lang="en" type="literal">to go for a walk</span>
+                        <span target="#d1e854" xml:lang="en" type="literal">to go</span>
+                     </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="go_away-es-mix-lit"
-                          type="S">
+                     <seg xml:lang="es" xml:id="go_away-es-mix-lit">
                         <seg xml:id="go_away-es-mix-lit-01" type="LexItem">pasar</seg>
                         <pc>-</pc>
                         <seg xml:id="go_away-es-mix-lit-02" type="LexItem">ir</seg>
                      </seg>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="V-go_away-esp"
-                          type="LexItem">irse</seg>
+                     <seg xml:lang="es" xml:id="V-go_away-esp" type="LexItem">irse</seg>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix"
-                         
-                          xml:id="wholeHeartedly-mix"
-                          type="S">
-                        <w xml:id="d1e870">ntinuu</w>
+                     <w xml:lang="mix" xml:id="wholeHeartedly-mix" norm="ntinuu-ntintaa">
+                        <w xml:id="d1e870">ntinuu</w><!-- nti- + nuu (face)?! -->
                         <pc>-</pc>
                         <w xml:id="d1e877">ntintaa</w>
-                     </seg>
+                     </w>
+                     <spanGrp type="translation">
+                        <span target="#wholeHeartedly-mix" xml:lang="en">whole heartedly</span>
+                        <span target="#d1e870" xml:lang="en" type="literal">totally honest</span>
+                        <span target="#d1e877" xml:lang="en" type="literal">totally straight</span>
+                     </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="wholeHeartedly-es-lit"
-                          type="S">
-                        <seg xml:id="wholeHeartedly-es-lit-01" type="LexItem">
+                     <seg xml:lang="es" xml:id="wholeHeartedly-es-lit" type="S">
                            <seg xml:id="wholeHeartedly-es-lit-01.1">todo</seg>
                            <seg xml:id="wholeHeartedly-es-lit-01.1.2">sincero</seg>
-                        </seg>
+                        
                         <pc>-</pc>
-                        <seg type="LexItem">
                            <seg xml:id="wholeHeartedly-es-lit-02">todo</seg>
                            <seg xml:id="wholeHeartedly-es-lit-02.1.2">derecho</seg>
-                        </seg>
+                        
                      </seg>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="wholeHeartedly-esp"
-                          type="S">de todo corazón</seg>
+                     <seg xml:lang="es" xml:id="wholeHeartedly-esp" type="S">de todo corazón</seg>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix"
-                         
-                          xml:id="beautiful-pure-mix"
-                          type="S">
+                     <w xml:lang="mix" xml:id="beautiful-pure-mix" norm="vii-ntatu">
                         <w xml:id="d1e902">vii</w>
                         <pc>-</pc>
                         <w xml:id="d1e906">ntatu</w>
-                     </seg>
+                     </w>
+                     <spanGrp type="translation">
+                        <span target="#beautiful-pure-mix" xml:lang="en">beautiful</span>
+                        <span target="#beautiful-pure-mix" xml:lang="en">pretty</span>
+                        <span target="#d1e902" xml:lang="en" type="literal">clean</span>
+                        <span target="#d1e906" xml:lang="en" type="literal">pure</span>
+                     </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="beautiful-pure-es-lit"
-                          type="S">
+                     <seg xml:lang="es" xml:id="beautiful-pure-es-lit" type="S">
                         <seg xml:id="beautiful-pure-es-lit-01" type="LexItem">limpio</seg>
                         <pc>-</pc>
                         <seg xml:id="beautiful-pure-es-lit-02" type="LexItem">puro</seg>
                      </seg>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          xml:id="beautiful-pure-esp"
-                          type="S">bonito, hermoso</seg>
+                     <seg xml:lang="es" xml:id="beautiful-pure-esp" type="S">bonito, hermoso</seg>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="holyWord-mix" type="S">
-                        <w xml:id="d1e922">tuꞌun</w>
+                     <w xml:lang="mix" xml:id="holyWord-mix" norm="tu'un-ntusu">
+                        <w xml:id="d1e922" orig="tuꞌun">tu'un</w>
                         <pc>-</pc>
                         <w xml:id="d1e926">ntusu</w>
-                     </seg>
+                     </w>
+                     <spanGrp type="translation">
+                        <span target="#holyWord-mix" xml:lang="en" cert="medium">the word of God</span>
+                        <span target="#d1e922" xml:lang="en" type="literal">word</span>
+                        <span target="#d1e926" xml:lang="en" type="literal">voice</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="holyWord-es-lit" type="S">
@@ -883,6 +973,13 @@
                         <w xml:id="d1e968">ntatu</w>
                         <pc>!</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s9-mix" xml:lang="en">How clean, how pure!</span>
+                        <span target="#d1e960" xml:lang="en">how</span>
+                        <span target="#d1e962" xml:lang="en">clean</span>
+                        <span target="#d1e966" xml:lang="en">how</span>
+                        <span target="#d1e968" xml:lang="en">pure</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s9-es-lit" type="S">
@@ -908,7 +1005,7 @@
                   <cell>
                      <seg xml:lang="mix" xml:id="s10-mix" type="S">
                         <w xml:id="d1e1001">Kachi</w>
-                        <w xml:id="d1e1003">tuꞌun</w>
+                        <w xml:id="d1e1003" orig="tuꞌun">tu'un</w>
                         <w xml:id="d1e1005">ra</w>
                         <pc>,</pc>
                         <w xml:id="d1e1009">kachi</w>
@@ -916,10 +1013,20 @@
                         <w xml:id="d1e1013">meeya</w>
                         <pc>,</pc>
                         <w xml:id="d1e1017">ni</w>
-                        <w xml:id="d1e1019">tata</w>
+                        <w xml:id="d1e1019">tata</w><!-- lord -->
                         <w xml:id="d1e1021">yu</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s10-mix" xml:lang="en">This is how he speaks, my Lord.</span>
+                        <span target="#d1e1001" xml:lang="en">say</span>
+                        <span target="#d1e1003" xml:lang="en">the word</span>
+                        <span target="#d1e1009" xml:lang="en">say</span>
+                        <span target="#d1e1011" xml:lang="en">voice</span>
+                        <span target="#d1e1011 #d1e1013" xml:lang="en">His voice</span>
+                        <span target="#d1e1013" xml:lang="en">of Him</span>
+                        <span target="#d1e1017 #d1e1019 #d1e1021" xml:lang="en">my Lord</span>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s10-es-lit" type="S">
@@ -990,14 +1097,19 @@
                      <seg xml:lang="es" type="S">simiente</seg>
                   </cell>
                   <cell>
-                     <seg xml:lang="mix" type="S">
+                     <w  xml:id="d1e1106" xml:lang="mix" norm="ntiki-tata">
                         <w xml:id="d1e1107">ntiki</w>
                         <pc>-</pc>
                         <w xml:id="d1e1111">tata</w>
-                        <foreign>
-                           <seg xml:lang="es">(semilla<pc>-</pc>semilla de maíz)</seg>
-                        </foreign>
-                     </seg>
+                     </w>
+                     <foreign>
+                        <seg xml:lang="es">(semilla<pc>-</pc>semilla de maíz)</seg>
+                     </foreign>
+                     <spanGrp type="translation">
+                        <span target="#d1e1106" xml:lang="en" cert="low">seed</span>
+                        <span target="#d1e1107" xml:lang="en" type="literal">seed</span>
+                        <span target="#d1e1111" xml:lang="en" type="literal">corn kernal</span>
+                     </spanGrp>
                   </cell>
                </row>
                <row>
@@ -1017,6 +1129,11 @@
                         <pc>-</pc>
                         <w xml:id="d1e1140">ntatu</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#" xml:lang="en"/>
+                        <span target="#d1e1136" xml:lang="en"/>
+                        <span target="#d1e1140" xml:lang="en"/>
+                     </spanGrp>
                      <seg xml:lang="es" type="S">(limpio<pc>-</pc>puro)</seg>
                   </cell>
                </row>
@@ -1042,6 +1159,11 @@
                         <pc>-</pc>
                         <w xml:id="d1e1172">ñuu</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#" xml:lang="en"/>
+                        <span target="#d1e1168" xml:lang="en"/>
+                        <span target="#d1e1172" xml:lang="en"/>
+                     </spanGrp>
                      <pc/>
                      <seg xml:lang="es" type="S">día<pc>-</pc>noche</seg>
                      <pc>)</pc>
@@ -1069,6 +1191,11 @@
                         <pc>-</pc>
                         <w xml:id="d1e1211">chai</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#" xml:lang="en"/>
+                        <span target="#d1e1207" xml:lang="en"/>
+                        <span target="#d1e1211" xml:lang="en"/>
+                     </spanGrp>
                      <seg xml:lang="es" type="S">(pueblo<pc>-</pc>silla)</seg>
                   </cell>
                </row>
@@ -1089,6 +1216,11 @@
                         <pc>-</pc>
                         <w xml:id="d1e1236">tsaꞌa</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#" xml:lang="en"/>
+                        <span target="#d1e1232" xml:lang="en"/>
+                        <span target="#d1e1236" xml:lang="en"/>
+                     </spanGrp>
                      <seg xml:lang="es" type="S">(mano<pc>-</pc>pie)</seg>
                   </cell>
                </row>
@@ -1116,6 +1248,11 @@
                         <pc>-</pc>
                         <w xml:id="d1e1267">kuñu</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#" xml:lang="en"/>
+                        <span target="#d1e1263" xml:lang="en"/>
+                        <span target="#d1e1267" xml:lang="en"/>
+                     </spanGrp>
                      <seg xml:lang="es" type="S">(hueso-carne)</seg>
                   </cell>
                </row>
@@ -1164,6 +1301,14 @@
                         <w xml:id="d1e1318">ntatu</w>
                         <pc>!</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s11-mix" xml:lang="en"/>
+                        <span target="#d1e1308" xml:lang="en"/>
+                        <span target="#d1e1310" xml:lang="en"/>
+                        <span target="#d1e1312" xml:lang="en"/>
+                        <span target="#d1e1316" xml:lang="en"/>
+                        <span target="#d1e1318" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s11-esp" type="S">
@@ -1200,6 +1345,18 @@
                         <w xml:id="d1e1375">Adán</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s12-mix" xml:lang="en"/>
+                        <span target="#d1e1341" xml:lang="en"/>
+                        <span target="#d1e1343" xml:lang="en"/>
+                        <span target="#d1e1354" xml:lang="en"/>
+                        <span target="#d1e1356" xml:lang="en"/>
+                        <span target="#d1e1358" xml:lang="en"/>
+                        <span target="#d1e1362" xml:lang="en"/>
+                        <span target="#d1e1364" xml:lang="en"/>
+                        <span target="#d1e1371" xml:lang="en"/>
+                        <span target="#d1e1375" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s12-esp" type="S">
@@ -1248,6 +1405,22 @@
                         <w xml:id="d1e1455">nanalina</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s13-mix" xml:lang="en"/>
+                        <span target="#d1e1424" xml:lang="en"/>
+                        <span target="#d1e1426" xml:lang="en"/>
+                        <span target="#d1e1428" xml:lang="en"/>
+                        <span target="#d1e1430" xml:lang="en"/>
+                        <span target="#d1e1434" xml:lang="en"/>
+                        <span target="#d1e1436" xml:lang="en"/>
+                        <span target="#d1e1438" xml:lang="en"/>
+                        <span target="#d1e1442" xml:lang="en"/>
+                        <span target="#d1e1444" xml:lang="en"/>
+                        <span target="#d1e1447" xml:lang="en"/>
+                        <span target="#d1e1451" xml:lang="en"/>
+                        <span target="#d1e1453" xml:lang="en"/>
+                        <span target="#d1e1455" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s13-esp" type="S">
@@ -1290,6 +1463,15 @@
                         <w xml:id="d1e1525">pasu</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s14-mix" xml:lang="en"/>
+                        <span target="#d1e1510" xml:lang="en"/>
+                        <span target="#d1e1512" xml:lang="en"/>
+                        <span target="#d1e1519" xml:lang="en"/>
+                        <span target="#d1e1521" xml:lang="en"/>
+                        <span target="#d1e1523" xml:lang="en"/>
+                        <span target="#d1e1525" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s14-esp" type="S">
@@ -1315,6 +1497,14 @@
                         <w xml:id="d1e1567">santa madre iglesia</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s15-mix" xml:lang="en"/>
+                        <span target="#d1e1554" xml:lang="en"/>
+                        <span target="#d1e1556" xml:lang="en"/>
+                        <span target="#d1e1561" xml:lang="en"/>
+                        <span target="#d1e1563" xml:lang="en"/>
+                        <span target="#d1e1567" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s15-esp" type="S">
@@ -1346,6 +1536,15 @@
                         <w xml:id="d1e1611">ninu</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s16-mix" xml:lang="en"/>
+                        <span target="#d1e1599" xml:lang="en"/>
+                        <span target="#d1e1601" xml:lang="en"/>
+                        <span target="#d1e1603" xml:lang="en"/>
+                        <span target="#d1e1607" xml:lang="en"/>
+                        <span target="#d1e1609" xml:lang="en"/>
+                        <span target="#d1e1611" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s16-esp" type="S">
@@ -1367,6 +1566,11 @@
                         <w xml:id="d1e1638">Sa Juaa Bautista</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s17-mix" xml:lang="en"/>
+                        <span target="#d1e1636" xml:lang="en"/>
+                        <span target="#d1e1638" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s17-esp" type="S">
@@ -1393,6 +1597,18 @@
                         <w xml:id="d1e1673">RíoJordán</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s18-mix" xml:lang="en"/>
+                        <span target="#d1e1657" xml:lang="en"/>
+                        <span target="#d1e1659" xml:lang="en"/>
+                        <span target="#d1e1661" xml:lang="en"/>
+                        <span target="#d1e1663" xml:lang="en"/>
+                        <span target="#d1e1665" xml:lang="en"/>
+                        <span target="#d1e1667" xml:lang="en"/>
+                        <span target="#d1e1669" xml:lang="en"/>
+                        <span target="#d1e1671" xml:lang="en"/>
+                        <span target="#d1e1673" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s18-esp" type="S">
@@ -1424,6 +1640,17 @@
                         <w xml:id="d1e1724">Jesucristo</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s19-mix" xml:lang="en"/>
+                        <span target="#d1e1710" xml:lang="en"/>
+                        <span target="#d1e1712" xml:lang="en"/>
+                        <span target="#d1e1714" xml:lang="en"/>
+                        <span target="#d1e1716" xml:lang="en"/>
+                        <span target="#d1e1718" xml:lang="en"/>
+                        <span target="#d1e1720" xml:lang="en"/>
+                        <span target="#d1e1722" xml:lang="en"/>
+                        <span target="#d1e1724" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s19-esp" type="S">
@@ -1458,9 +1685,24 @@
                         <pc>,</pc>
                         <w xml:id="d1e1777">mancha</w>
                         <w xml:id="d1e1779">kivi</w>
-                        <w xml:id="d1e1781">tsiꞌna</w><!-- primero-->
+                        <w xml:id="d1e1781">tsiꞌna</w>
+                        <!-- primero-->
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s20-mix" xml:lang="en"/>
+                        <span target="#d1e1754" xml:lang="en"/>
+                        <span target="#d1e1756" xml:lang="en"/>
+                        <span target="#d1e1760" xml:lang="en"/>
+                        <span target="#d1e1762" xml:lang="en"/>
+                        <span target="#d1e1764" xml:lang="en"/>
+                        <span target="#d1e1768" xml:lang="en"/>
+                        <span target="#d1e1770" xml:lang="en"/>
+                        <span target="#d1e1772" xml:lang="en"/>
+                        <span target="#d1e1777" xml:lang="en"/>
+                        <span target="#d1e1779" xml:lang="en"/>
+                        <span target="#d1e1781" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s20-esp" type="S">
@@ -1483,17 +1725,14 @@
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix"
-                         
-                          rend="bold"
-                          xml:id="s21-mix"
-                          type="S">
+                     <seg xml:lang="mix" rend="bold" xml:id="s21-mix" type="S">
                         <w xml:id="d1e1822">Kachi</w>
                         <w xml:id="d1e1824">tuꞌun</w>
                         <w xml:id="d1e1826">ra</w>
                         <pc>,</pc>
                         <w xml:id="d1e1830">kachi</w>
-                        <w xml:id="d1e1832">ntusu</w><!-- word -->
+                        <w xml:id="d1e1832">ntusu</w>
+                        <!-- word -->
                         <w xml:id="d1e1834">ni</w>
                         <w xml:id="d1e1836">tata</w>
                         <w xml:id="d1e1838">compadre</w>
@@ -1501,13 +1740,22 @@
                         <w xml:id="d1e1842">mani</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s21-mix" xml:lang="en"/>
+                        <span target="#d1e1822" xml:lang="en"/>
+                        <span target="#d1e1824" xml:lang="en"/>
+                        <span target="#d1e1826" xml:lang="en"/>
+                        <span target="#d1e1830" xml:lang="en"/>
+                        <span target="#d1e1832" xml:lang="en"/>
+                        <span target="#d1e1834" xml:lang="en"/>
+                        <span target="#d1e1836" xml:lang="en"/>
+                        <span target="#d1e1838" xml:lang="en"/>
+                        <span target="#d1e1840" xml:lang="en"/>
+                        <span target="#d1e1842" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          rend="bold"
-                          xml:id="s21-esp"
-                          type="S">
+                     <seg xml:lang="es" rend="bold" xml:id="s21-esp" type="S">
                         <seg xml:id="s21-es-0" type="LexItem">Dice</seg>
                         <seg type="LexItem">la</seg>
                         <seg type="LexItem">palabra</seg>
@@ -1551,15 +1799,34 @@
                         <w xml:id="d1e1899">ntitsi</w>
                         <w xml:id="d1e1901">luu</w>
                         <pc>,</pc>
-                        <w xml:id="d1e1905">ma</w><!-- dont -->
-                        <w xml:id="d1e1907">kusuchi</w><!-- get sad (why not "ni" here?)-->
+                        <w xml:id="d1e1905">ma</w>
+                        <!-- dont -->
+                        <w xml:id="d1e1907">kusuchi</w>
+                        <!-- get sad (why not "ni" here?)-->
                         <pc>,</pc>
-                        <w xml:id="d1e1911">ma</w><!-- don't -->
-                        <w xml:id="d1e1913">kuchain</w><!-- be disturbed "kuchain ini" get mad -->
+                        <w xml:id="d1e1911">ma</w>
+                        <!-- don't -->
+                        <w xml:id="d1e1913">kuchain</w>
+                        <!-- be disturbed "kuchain ini" get mad -->
                         <w xml:id="d1e1916">ini</w>
-                        <w xml:id="d1e1918">ni</w><!-- ni(2sg. form?) -->
+                        <w xml:id="d1e1918">ni</w>
+                        <!-- ni(2sg. form?) -->
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s22-mix" xml:lang="en"/>
+                        <span target="#d1e1890" xml:lang="en"/>
+                        <span target="#d1e1892" xml:lang="en"/>
+                        <span target="#d1e1897" xml:lang="en"/>
+                        <span target="#d1e1899" xml:lang="en"/>
+                        <span target="#d1e1901" xml:lang="en"/>
+                        <span target="#d1e1905" xml:lang="en"/>
+                        <span target="#d1e1907" xml:lang="en"/>
+                        <span target="#d1e1911" xml:lang="en"/>
+                        <span target="#d1e1913" xml:lang="en"/>
+                        <span target="#d1e1916" xml:lang="en"/>
+                        <span target="#d1e1918" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s22-esp" type="S">
@@ -1595,6 +1862,17 @@
                         <w xml:id="d1e1967">Señor presidente</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s23-mix" xml:lang="en"/>
+                        <span target="#d1e1951" xml:lang="en"/>
+                        <span target="#d1e1953" xml:lang="en"/>
+                        <span target="#d1e1957" xml:lang="en"/>
+                        <span target="#d1e1959" xml:lang="en"/>
+                        <span target="#d1e1961" xml:lang="en"/>
+                        <span target="#d1e1963" xml:lang="en"/>
+                        <span target="#d1e1965" xml:lang="en"/>
+                        <span target="#d1e1967" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s23-esp" type="S">
@@ -1627,6 +1905,14 @@
                         <w xml:id="d1e2017">ñoochayo</w>
                         <pc>?</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s24-mix" xml:lang="en"/>
+                        <span target="#d1e2009" xml:lang="en"/>
+                        <span target="#d1e2011" xml:lang="en"/>
+                        <span target="#d1e2013" xml:lang="en"/>
+                        <span target="#d1e2015" xml:lang="en"/>
+                        <span target="#d1e2017" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s24-esp" type="S">
@@ -1665,6 +1951,20 @@
                         <w xml:id="d1e2076">ra</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s25-mix" xml:lang="en"/>
+                        <span target="#d1e2051" xml:lang="en"/>
+                        <span target="#d1e2053" xml:lang="en"/>
+                        <span target="#d1e2055" xml:lang="en"/>
+                        <span target="#d1e2057" xml:lang="en"/>
+                        <span target="#d1e2059" xml:lang="en"/>
+                        <span target="#d1e2061" xml:lang="en"/>
+                        <span target="#d1e2065" xml:lang="en"/>
+                        <span target="#d1e2067" xml:lang="en"/>
+                        <span target="#d1e2071" xml:lang="en"/>
+                        <span target="#d1e2074" xml:lang="en"/>
+                        <span target="#d1e2076" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s25-esp" type="S">
@@ -1689,11 +1989,7 @@
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix"
-                         
-                          rend="bold"
-                          xml:id="s26-mix"
-                          type="S">
+                     <seg xml:lang="mix" rend="bold" xml:id="s26-mix" type="S">
                         <w xml:id="d1e2114">Nkusuchi</w>
                         <pc>,</pc>
                         <w xml:id="d1e2118">nkuchain</w>
@@ -1701,13 +1997,16 @@
                         <w xml:id="d1e2122">kueni</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s26-mix" xml:lang="en"/>
+                        <span target="#d1e2114" xml:lang="en"/>
+                        <span target="#d1e2118" xml:lang="en"/>
+                        <span target="#d1e2120" xml:lang="en"/>
+                        <span target="#d1e2122" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es"
-                         
-                          rend="bold"
-                          xml:id="s26-esp"
-                          type="S">
+                     <seg xml:lang="es" rend="bold" xml:id="s26-esp" type="S">
                         <seg xml:id="s26-es-0" type="LexItem">No</seg>
                         <seg type="LexItem">se entristezcan
                         </seg>
@@ -1753,6 +2052,10 @@
                      <seg xml:lang="mix" xml:id="s27-mix" type="S">
                         <w xml:id="d1e2167">ntututu</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s27-mix" xml:lang="en"/>
+                        <span target="#d1e2167" xml:lang="en"/>
+                     </spanGrp>
                      <pc>,</pc>
                   </cell>
                   <cell>
@@ -1767,6 +2070,10 @@
                      <seg xml:lang="mix" xml:id="s28-mix" type="S">
                         <w xml:id="d1e2181">ntuyuku,</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s28-mix" xml:lang="en"/>
+                        <span target="#d1e2181" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s28-esp" type="S">
@@ -1791,6 +2098,15 @@
                            ntito'o</w>
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s29-mix" xml:lang="en"/>
+                        <span target="#d1e2196" xml:lang="en"/>
+                        <span target="#d1e2198" xml:lang="en"/>
+                        <span target="#d1e2200" xml:lang="en"/>
+                        <span target="#d1e2202" xml:lang="en"/>
+                        <span target="#d1e2206" xml:lang="en"/>
+                        <span target="#d1e2208" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s29-esp" type="S">
@@ -1829,6 +2145,21 @@
                         <w xml:id="d1e2267">ntakanini</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s30-mix" xml:lang="en"/>
+                        <span target="#d1e2242" xml:lang="en"/>
+                        <span target="#d1e2244" xml:lang="en"/>
+                        <span target="#d1e2246" xml:lang="en"/>
+                        <span target="#d1e2248" xml:lang="en"/>
+                        <span target="#d1e2250" xml:lang="en"/>
+                        <span target="#d1e2252" xml:lang="en"/>
+                        <span target="#d1e2254" xml:lang="en"/>
+                        <span target="#d1e2258" xml:lang="en"/>
+                        <span target="#d1e2260" xml:lang="en"/>
+                        <span target="#d1e2262" xml:lang="en"/>
+                        <span target="#d1e2265" xml:lang="en"/>
+                        <span target="#d1e2267" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s30-esp" type="S">
@@ -1867,6 +2198,13 @@
                         <w xml:id="d1e2323">Ñu'u Ncha'i</w>
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s31-mix" xml:lang="en"/>
+                        <span target="#d1e2315" xml:lang="en"/>
+                        <span target="#d1e2317" xml:lang="en"/>
+                        <span target="#d1e2321" xml:lang="en"/>
+                        <span target="#d1e2323" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s31-esp" type="S">
@@ -1899,6 +2237,16 @@
                         <w xml:id="d1e2366">ni</w>
                         <pc>,</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s32-mix" xml:lang="en"/>
+                        <span target="#d1e2352" xml:lang="en"/>
+                        <span target="#d1e2354" xml:lang="en"/>
+                        <span target="#d1e2358" xml:lang="en"/>
+                        <span target="#d1e2360" xml:lang="en"/>
+                        <span target="#d1e2362" xml:lang="en"/>
+                        <span target="#d1e2364" xml:lang="en"/>
+                        <span target="#d1e2366" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s32-esp" type="S">
@@ -1928,6 +2276,13 @@
                         <w xml:id="d1e2400">ini</w>
                         <w xml:id="d1e2402">kueni</w>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s33-mix" xml:lang="en"/>
+                        <span target="#d1e2394" xml:lang="en"/>
+                        <span target="#d1e2398" xml:lang="en"/>
+                        <span target="#d1e2400" xml:lang="en"/>
+                        <span target="#d1e2402" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s33-esp" type="S">
@@ -1966,6 +2321,17 @@
                         <w xml:id="d1e2451">carnal</w>
                         <pc>.</pc>
                      </seg>
+                     <spanGrp type="translation">
+                        <span target="#s34-mix" xml:lang="en"/>
+                        <span target="#d1e2435" xml:lang="en"/>
+                        <span target="#d1e2437" xml:lang="en"/>
+                        <span target="#d1e2439" xml:lang="en"/>
+                        <span target="#d1e2441" xml:lang="en"/>
+                        <span target="#d1e2445" xml:lang="en"/>
+                        <span target="#d1e2447" xml:lang="en"/>
+                        <span target="#d1e2449" xml:lang="en"/>
+                        <span target="#d1e2451" xml:lang="en"/>
+                     </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s34-esp" type="S">
@@ -2026,6 +2392,16 @@
                            <w xml:id="d1e2527">nivi</w>
                            <pc>?</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s35-mix" xml:lang="en"/>
+                           <span target="#d1e2515" xml:lang="en"/>
+                           <span target="#d1e2517" xml:lang="en"/>
+                           <span target="#d1e2519" xml:lang="en"/>
+                           <span target="#d1e2521" xml:lang="en"/>
+                           <span target="#d1e2523" xml:lang="en"/>
+                           <span target="#d1e2525" xml:lang="en"/>
+                           <span target="#d1e2527" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s35-esp" type="S">
@@ -2052,6 +2428,16 @@
                            <w xml:id="d1e2564">santoGabriel</w>
                            <pc>.</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s36-mix" xml:lang="en"/>
+                           <span target="#d1e2552" xml:lang="en"/>
+                           <span target="#d1e2554" xml:lang="en"/>
+                           <span target="#d1e2556" xml:lang="en"/>
+                           <span target="#d1e2558" xml:lang="en"/>
+                           <span target="#d1e2560" xml:lang="en"/>
+                           <span target="#d1e2562" xml:lang="en"/>
+                           <span target="#d1e2564" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s36-esp" type="S">
@@ -2081,6 +2467,15 @@
                            <w xml:id="d1e2610">madrina</w>
                            <pc>.</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s37-mix" xml:lang="en"/>
+                           <span target="#d1e2598" xml:lang="en"/>
+                           <span target="#d1e2600" xml:lang="en"/>
+                           <span target="#d1e2602" xml:lang="en"/>
+                           <span target="#d1e2606" xml:lang="en"/>
+                           <span target="#d1e2608" xml:lang="en"/>
+                           <span target="#d1e2610" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s37-esp" type="S">
@@ -2105,15 +2500,27 @@
                      <cell>
                         <seg xml:lang="mix" xml:id="s38-mix" type="S">
                            <w xml:id="d1e2648">Nivi</w>
-                           <w xml:id="d1e2650">kunkukuu</w><!-- will be -->
+                           <w xml:id="d1e2650">kunkukuu</w>
+                           <!-- will be -->
                            <w xml:id="d1e2652">chuun</w>
                            <w xml:id="d1e2654">ra</w>
                            <pc>,</pc>
                            <w xml:id="d1e2658">nivi</w>
-                           <w xml:id="d1e2660">kunkukuu</w><!-- will be -->
+                           <w xml:id="d1e2660">kunkukuu</w>
+                           <!-- will be -->
                            <w xml:id="d1e2662">chiꞌvi</w>
                            <pc>.</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s38-mix" xml:lang="en"/>
+                           <span target="#d1e2648" xml:lang="en"/>
+                           <span target="#d1e2650" xml:lang="en"/>
+                           <span target="#d1e2652" xml:lang="en"/>
+                           <span target="#d1e2654" xml:lang="en"/>
+                           <span target="#d1e2658" xml:lang="en"/>
+                           <span target="#d1e2660" xml:lang="en"/>
+                           <span target="#d1e2662" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s38-esp" type="S">
@@ -2177,6 +2584,16 @@
                            <w xml:id="d1e2749">vii</w>
                            <pc>?</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s39-mix" xml:lang="en"/>
+                           <span target="#d1e2737" xml:lang="en"/>
+                           <span target="#d1e2739" xml:lang="en"/>
+                           <span target="#d1e2741" xml:lang="en"/>
+                           <span target="#d1e2743" xml:lang="en"/>
+                           <span target="#d1e2745" xml:lang="en"/>
+                           <span target="#d1e2747" xml:lang="en"/>
+                           <span target="#d1e2749" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s39-esp" type="S">
@@ -2202,9 +2619,22 @@
                            <w xml:id="d1e2784">ka</w>
                            <w xml:id="d1e2786">in</w>
                            <w xml:id="d1e2788">loverta</w>
-                           <w xml:id="d1e2790">ntatu</w><!-- pure -->
+                           <w xml:id="d1e2790">ntatu</w>
+                           <!-- pure -->
                            <pc>?</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s40-mix" xml:lang="en"/>
+                           <span target="#d1e2774" xml:lang="en"/>
+                           <span target="#d1e2776" xml:lang="en"/>
+                           <span target="#d1e2778" xml:lang="en"/>
+                           <span target="#d1e2780" xml:lang="en"/>
+                           <span target="#d1e2782" xml:lang="en"/>
+                           <span target="#d1e2784" xml:lang="en"/>
+                           <span target="#d1e2786" xml:lang="en"/>
+                           <span target="#d1e2788" xml:lang="en"/>
+                           <span target="#d1e2790" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s40-esp" type="S">
@@ -2235,6 +2665,17 @@
                            <w xml:id="d1e2834">carnal</w>
                            <pc>.</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s41-mix" xml:lang="en"/>
+                           <span target="#d1e2817" xml:lang="en"/>
+                           <span target="#d1e2820" xml:lang="en"/>
+                           <span target="#d1e2822" xml:lang="en"/>
+                           <span target="#d1e2824" xml:lang="en"/>
+                           <span target="#d1e2828" xml:lang="en"/>
+                           <span target="#d1e2830" xml:lang="en"/>
+                           <span target="#d1e2832" xml:lang="en"/>
+                           <span target="#d1e2834" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s41-esp" type="S">
@@ -2282,6 +2723,12 @@
                            <w xml:id="d1e2888">yo'o</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s42-mix" xml:lang="en"/>
+                           <span target="#d1e2884" xml:lang="en"/>
+                           <span target="#d1e2886" xml:lang="en"/>
+                           <span target="#d1e2888" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s42-esp" type="S">
@@ -2301,6 +2748,13 @@
                            <w xml:id="d1e2911">ra</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s43-mix" xml:lang="en"/>
+                           <span target="#d1e2905" xml:lang="en"/>
+                           <span target="#d1e2907" xml:lang="en"/>
+                           <span target="#d1e2909" xml:lang="en"/>
+                           <span target="#d1e2911" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s43-esp" type="S">
@@ -2319,6 +2773,11 @@
                            <w xml:id="d1e2932">yo'o</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s44-mix" xml:lang="en"/>
+                           <span target="#d1e2930" xml:lang="en"/>
+                           <span target="#d1e2932" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s44-esp" type="S">
@@ -2336,6 +2795,12 @@
                            <w xml:id="d1e2951">ntakanini</w>
                            <pc>.</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s45-mix" xml:lang="en"/>
+                           <span target="#d1e2947" xml:lang="en"/>
+                           <span target="#d1e2949" xml:lang="en"/>
+                           <span target="#d1e2951" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s45-esp" type="S">
@@ -2379,6 +2844,12 @@
                            <w xml:id="d1e2996">ntaꞌa</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s46-mix" xml:lang="en"/>
+                           <span target="#d1e2992" xml:lang="en"/>
+                           <span target="#d1e2994" xml:lang="en"/>
+                           <span target="#d1e2996" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s46-esp" type="S">
@@ -2399,6 +2870,11 @@
                            <w xml:id="d1e3021">tsaꞌa</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s47-mix" xml:lang="en"/>
+                           <span target="#d1e3019" xml:lang="en"/>
+                           <span target="#d1e3021" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s47-esp" type="S">
@@ -2417,11 +2893,22 @@
                            <w xml:id="d1e3042">in</w>
                            <w xml:id="d1e3044">nivi</w>
                            <w xml:id="d1e3046">luu</w>
-                           <w xml:id="d1e3048">ntoyo</w><!-- to be -->
+                           <w xml:id="d1e3048">ntoyo</w>
+                           <!-- to be -->
                            <w xml:id="d1e3050">nuu</w>
-                           <w xml:id="d1e3052">tsion</w><!-- with us! -->
+                           <w xml:id="d1e3052">tsion</w>
+                           <!-- with us! -->
                            <pc>…</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s48-mix" xml:lang="en"/>
+                           <span target="#d1e3042" xml:lang="en"/>
+                           <span target="#d1e3044" xml:lang="en"/>
+                           <span target="#d1e3046" xml:lang="en"/>
+                           <span target="#d1e3048" xml:lang="en"/>
+                           <span target="#d1e3050" xml:lang="en"/>
+                           <span target="#d1e3052" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s48-esp" type="S">
@@ -2465,15 +2952,28 @@
                         <seg xml:lang="mix" xml:id="s49-mix" type="S">
                            <w xml:id="d1e3094">Cha</w>
                            <w xml:id="d1e3096">ika</w>
-                           <w xml:id="d1e3098">ntiin</w><!-- grab -->
+                           <w xml:id="d1e3098">ntiin</w>
+                           <!-- grab -->
                            <w xml:id="d1e3100">na</w>
                            <w xml:id="d1e3102">ra</w>
                            <pc>,</pc>
                            <w xml:id="d1e3106">ika</w>
-                           <w xml:id="d1e3108">numi</w><!-- embrace/(hug?) -->
+                           <w xml:id="d1e3108">numi</w>
+                           <!-- embrace/(hug?) -->
                            <w xml:id="d1e3110">na</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s49-mix" xml:lang="en"/>
+                           <span target="#d1e3094" xml:lang="en"/>
+                           <span target="#d1e3096" xml:lang="en"/>
+                           <span target="#d1e3098" xml:lang="en"/>
+                           <span target="#d1e3100" xml:lang="en"/>
+                           <span target="#d1e3102" xml:lang="en"/>
+                           <span target="#d1e3106" xml:lang="en"/>
+                           <span target="#d1e3108" xml:lang="en"/>
+                           <span target="#d1e3110" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s49-esp" type="S">
@@ -2495,6 +2995,12 @@
                            <w xml:id="d1e3137">Stoꞌo Nchuxi</w>
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s50-mix" xml:lang="en"/>
+                           <span target="#d1e3133" xml:lang="en"/>
+                           <span target="#d1e3135" xml:lang="en"/>
+                           <span target="#d1e3137" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s50-esp" type="S">
@@ -2528,13 +3034,24 @@
                         <seg xml:lang="mix" xml:id="s51-mix" type="S">
                            <w xml:id="d1e3167">Kuu</w>
                            <w xml:id="d1e3169">nuu</w>
-                           <w xml:id="d1e3171">kunkaa</w><!-- estar (potential) -->
+                           <w xml:id="d1e3171">kunkaa</w>
+                           <!-- estar (potential) -->
                            <pc>,</pc>
                            <w xml:id="d1e3175">kuu</w>
                            <w xml:id="d1e3177">nuu</w>
-                           <w xml:id="d1e3179">kunchichi</w><!-- stop (potential) -->
+                           <w xml:id="d1e3179">kunchichi</w>
+                           <!-- stop (potential) -->
                            <pc>,</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s51-mix" xml:lang="en"/>
+                           <span target="#d1e3167" xml:lang="en"/>
+                           <span target="#d1e3169" xml:lang="en"/>
+                           <span target="#d1e3171" xml:lang="en"/>
+                           <span target="#d1e3175" xml:lang="en"/>
+                           <span target="#d1e3177" xml:lang="en"/>
+                           <span target="#d1e3179" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s51-esp" type="S">
@@ -2557,13 +3074,21 @@
                   <row>
                      <cell>
                         <seg xml:lang="mix" xml:id="s52-mix" type="S">
-                           <w xml:id="d1e3215">Yuyeꞌe</w><!-- outside -->
+                           <w xml:id="d1e3215">Yuyeꞌe</w>
+                           <!-- outside -->
                            <w xml:id="d1e3217">antivi</w>
                            <pc>,</pc>
                            <w xml:id="d1e3221">ini</w>
                            <w xml:id="d1e3223">gloria</w>
                            <pc>.</pc>
                         </seg>
+                        <spanGrp type="translation">
+                           <span target="#s52-mix" xml:lang="en"/>
+                           <span target="#d1e3215" xml:lang="en"/>
+                           <span target="#d1e3217" xml:lang="en"/>
+                           <span target="#d1e3221" xml:lang="en"/>
+                           <span target="#d1e3223" xml:lang="en"/>
+                        </spanGrp>
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s52-esp" type="S">
@@ -2699,4 +3224,3 @@
       </back>
    </text>
 </TEI>
- 
