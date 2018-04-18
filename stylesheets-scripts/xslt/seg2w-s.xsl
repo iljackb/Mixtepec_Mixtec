@@ -25,13 +25,19 @@
     
     
      -->
+    <!--  -->
     <xsl:template match="//seg[@type='LexItem']">
-        <w xml:id="{generate-id(.)}">
-            <!--  
+        <w>   
+            <xsl:copy-of select="@* except(@type)"/>
+            <xsl:value-of select="."/>
+        <!--  
+            <w xml:id="{generate-id(.)}">
+         
             <xsl:copy-of select="@*"/>
             <xsl:value-of select="."/>
-            -->
+           
             <xsl:apply-templates select="node()|@*"/>
+             -->
         </w>
     </xsl:template>
         
