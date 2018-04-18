@@ -154,7 +154,7 @@
                relacionadas u opuestas entre sí, para expresar una misma idea.</p>
             <lb/>
             <p>En algunas partes de la mixteca este discurso se conoce como <foreign>
-               <w xml:lang="mix" orig="saꞌvi">sa'vi</w>
+                  <w xml:lang="mix" orig="saꞌvi">sa'vi</w>
                </foreign>, <foreign>
                   <w xml:lang="mix" orig="saꞌu">sa'u</w>
                </foreign> o <foreign>
@@ -281,10 +281,10 @@
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s1-mix" type="S">
-                        <w xml:id="d1e298">Nti'o</w>   <!-- "-o" 1pl-->
+                        <w xml:id="d1e298">Nti'o</w>                          <!-- "-o" 1pl-->
                         <w xml:id="d1e300" norm="nivatsi">
-                           <w xml:id="d1e300a">ni</w> <!-- particle, prefix completive -->
-                           <w xml:id="d1e300b">vatsi</w> <!-- verb, intrns, motion-arrival, come -->
+                           <w xml:id="d1e300a">ni</w>                       <!-- particle, prefix completive -->
+                           <w xml:id="d1e300b">vatsi</w>         <!-- verb, intrns, motion-arrival, come -->
                         </w>
                         <pc>.</pc>
                      </seg>
@@ -296,21 +296,26 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s1-esp" type="S">
-                        <seg xml:id="s1-1-esp" type="LexItem">todos nosotros</seg>
-                        <seg xml:id="s1-3-esp" type="LexItem">venimos</seg>
+                        <w xml:id="s1-1-esp">Todos nosotros</w>
+                        <w xml:id="s1-3-esp">venimos</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s1-esp #s1-mix"/>
+                        <link target="#s1-1-esp #d1e298"/>
+                        <link target="#s1-3-esp #d1e300"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s2.1-mix" type="S">
-                        <w xml:id="d1e321">Ika</w> <!-- entonces !-->
+                     <seg xml:lang="mix" xml:id="s2.1-mix" type="S" part="I" next="#s2.2-mix">
+                        <w xml:id="d1e321">Ika</w>   <!-- entonces !-->
                         <pc>,</pc>
                         <w xml:id="d1e325">tsini</w>
                         <w xml:id="d1e327">ñu'u</w>
                         <w xml:id="d1e329">ña</w>
-                        <w xml:id="d1e331">ka'an</w><!-- infinitive? -->
+                        <w xml:id="d1e331">ka'an</w>      <!-- infinitive? necessary that WHO? speaks-->
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s2.1-mix" xml:lang="en">Therefore, it's necessary to speak.</span>
@@ -321,25 +326,31 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s2.1-esp" type="S">
-                        <seg xml:id="s2.1-1-esp" type="LexItem">Entonces</seg>
+                     <seg xml:lang="es" xml:id="s2.1-esp" type="S" part="I" next="#s2.2-esp">
+                        <w xml:id="s2.1-1-esp">Entonces</w>
                         <pc>,</pc>
-                        <seg xml:id="s2.1-2-esp" type="LexItem">es</seg>
-                        <seg xml:id="s2.1-3-esp" type="LexItem">necesario</seg>
-                        <seg xml:id="s2.1-4-esp" type="LexItem">que</seg>
-                        <seg xml:id="s2.1-5-esp" type="LexItem">hable</seg>
+                        <w xml:id="s2.1-2-esp">es necesario</w>
+                        <w xml:id="s2.1-4-esp">que</w>
+                        <w xml:id="s2.1-5-esp">hable</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s2.1-esp #s2.1-mix"/>
+                        <link target="#s2.1-1-esp #d1e321"/>
+                        <link target="#s2.1-2-esp #d1e325 #d1e327"/>
+                        <link target="#s2.1-4-esp #d1e329"/>
+                        <link target="#s2.1-5-esp #d1e331"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s2.2-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s2.2-mix" type="S" part="F" prev="#s2.1-mix">
                         <w xml:id="d1e350">nuu</w> <!-- where -->
                         <w xml:id="d1e352">yee</w>
                         <w xml:id="d1e354">in</w>
                         <w xml:id="d1e356">junta</w>
-                        <w xml:id="d1e358">ka'nu</w><!-- adj, big -->
-                        <w xml:id="d1e361">yo'o</w>   <!-- here -->
+                        <w xml:id="d1e358">ka'nu</w>                        <!-- adj, big -->
+                        <w xml:id="d1e361">yo'o</w>              <!-- here -->
                         <w xml:id="d1e364">ra</w>
                         <pc>.</pc>
                      </seg>
@@ -354,22 +365,30 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s2.2-esp" type="S">
-                        <seg xml:id="s2.2-1-esp" type="LexItem">aquí</seg>
-                        <seg xml:id="s2.2-2-esp" type="LexItem">en</seg>
-                        <seg xml:id="s2.2-3-esp" type="LexItem">donde</seg>
-                        <seg xml:id="s2.2-4-esp" type="LexItem">hay</seg>
-                        <seg xml:id="s2.2-5-esp" type="LexItem">una</seg>
-                        <seg xml:id="s2.2-6-esp" type="LexItem">reunión</seg>
-                        <seg xml:id="s2.2-7-esp" type="LexItem">grande</seg>
+                     <seg xml:lang="es" xml:id="s2.2-esp" type="S" part="F" prev="#s2.1-esp">
+                        <w xml:id="s2.2-1-esp">aquí</w>
+                        <w xml:id="s2.2-2-esp">en donde</w>
+                        <w xml:id="s2.2-4-esp">hay</w>
+                        <w xml:id="s2.2-5-esp">una</w>
+                        <w xml:id="s2.2-6-esp">reunión</w>
+                        <w xml:id="s2.2-7-esp">grande</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s2.2-esp #s2.2-en"/>
+                        <link target="#s2.2-1-esp #d1e361"/>
+                        <link target="#s2.2-2-esp #d1e350"/>
+                        <link target="#s2.2-4-esp #d1e352"/>
+                        <link target="#s2.2-5-esp #d1e354"/>
+                        <link target="#s2.2-6-esp #d1e356"/>
+                        <link target="#s2.2-7-esp #d1e358"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s3-mix" type="S">
-                        <w xml:id="d1e389">Naka'an</w>  
+                        <w xml:id="d1e389">Naka'an</w>
                         <w xml:id="d1e395">yu</w>
                         <w xml:id="d1e398">vasu</w>
                         <w xml:id="d1e400">xoo</w>
@@ -386,15 +405,17 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s3-esp" type="S">
-                        <seg xml:id="s3-1-esp" type="LexItem">Voy</seg>
-                        <seg xml:id="s3-2-esp" type="LexItem">a</seg>
-                        <seg xml:id="s3-3-esp" type="LexItem">hablar</seg>
-                        <seg xml:id="s3-4-esp" type="LexItem">aunque</seg>
-                        <seg xml:id="s3-5-esp" type="LexItem">sea</seg>
-                        <seg xml:id="s3-6-esp" type="LexItem">un</seg>
-                        <seg xml:id="s3-7-esp" type="LexItem">poquito</seg>
+                        <w xml:id="s3-1-esp">Voy a hablar</w>
+                        <w xml:id="s3-4-esp">aunque sea</w>
+                        <w xml:id="s3-6-esp">un poquito</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s3-esp #s3-mix"/>
+                        <link target="#s3-1-esp #d1e389 #d1e392"/>
+                        <link target="#s3-4-esp #d1e398"/>
+                        <link target="#s3-6-esp #d1e400"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -404,7 +425,7 @@
                         <w xml:id="d1e429">so'o</w>
                         <w xml:id="d1e431">ntisaan</w>
                         <w xml:id="d1e432">ntitu'u</w>
-                        <w xml:id="d1e434">kueni</w>                       <!-- pron, 2pl, form -->
+                        <w xml:id="d1e434">kueni</w><!-- pron, 2pl, form -->
                         <pc>.</pc>
                      </seg>
                      <spanGrp type="translation">
@@ -416,14 +437,20 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s4-esp" type="S">
-                        <seg xml:id="s4-1-esp" type="LexItem">Presten</seg>
-                        <seg xml:id="s4-2-esp" type="LexItem">atención</seg>
-                        <seg xml:id="s4-3-esp" type="LexItem">todos</seg>
+                        <w xml:id="s4-1-esp">Presten</w>
+                        <w xml:id="s4-2-esp">atención</w>
+                        <w xml:id="s4-3-esp">todos</w>
                         <pc>,</pc>
-                        <seg xml:id="s4-4-esp" type="LexItem">todos</seg>
-                        <seg xml:id="s4-5-esp" type="LexItem">ustedes</seg>
+                        <w xml:id="s4-4-esp">todos</w>
+                        <w xml:id="s4-5-esp">ustedes</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s4-esp #s4-mix"/>
+                        <link target="#s4-1-esp #s4-2-esp #d1e427 #d1e429"/>
+                        <link target="#s4-3-esp #d1e431"/>
+                        <link target="#s4-4-esp #s4-5-esp #d1e432 #d1e434"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -464,30 +491,35 @@
             <table cols="2">
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s5.1-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s5.1-mix" type="S" part="I" next="#s5.2-mix">
                         <w xml:id="d1e488" orig="Kukaꞌnu">Kuka'nu</w>
                         <w xml:id="d1e490">ini</w>
                         <w xml:id="d1e492">ntisaan</w>
                         <pc>,</pc>
                      </seg>
                      <spanGrp type="translation">
-                        <span target="#s5.1-mix" xml:lang="en"/>
-                        <span target="#d1e488 #d1e490" xml:lang="en" cert="low"></span><!-- who is sorry? or forgiven? -->
+                        <span target="#s5.1-mix" xml:lang="en">Excuse me everyone,</span>
+                        <span target="#d1e488 #d1e490" xml:lang="en">excuse me</span><!-- who is sorry? or forgiven? -->
                         <span target="#d1e492" xml:lang="en">everyone</span>
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s5.1-esp" type="S">
-                        <seg xml:id="s5.1-1-esp" type="LexItem">Disculpen</seg>
-                        <seg xml:id="s5.1-2-esp" type="LexItem">a</seg>
-                        <seg xml:id="s5.1-3-esp" type="LexItem">todos</seg>
+                     <seg xml:lang="es" xml:id="s5.1-esp" type="S" part="I" next="#s5.2-esp">
+                        <w xml:id="s5.1-1-esp">Disculpen</w>
+                        <w xml:id="s5.1-2-esp">a</w>
+                        <w xml:id="s5.1-3-esp">todos</w>
                         <pc>,</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s5.1-esp #s5.1-mix"/>
+                        <link target="#s5.1-1-esp #d1e488 #d1e490"/>
+                        <link target="#s5.1-3-esp #d1e492"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s5.2-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s5.2-mix" type="S" part="M" next="#s5.3-mix">
                         <w xml:id="d1e509" norm="in millión">
                            <w xml:id="d1e509a">in</w>
                            <w xml:id="d1e509b">millón</w>
@@ -498,55 +530,59 @@
                         <pc>,</pc>
                      </seg>
                      <spanGrp type="translation">
-                        <span target="#s5.2-mix" xml:lang="en"/>
+                        <span target="#s5.2-mix" xml:lang="en" cert="medium">one million of what he forgives,</span>
                         <span target="#d1e509" xml:lang="en">one million</span>
-                        <span target="#d1e514" xml:lang="en"/>
-                        <span target="#d1e516" xml:lang="en"/>
-                        <span target="#d1e518" xml:lang="en"/>
+                        <span target="#d1e514" xml:lang="en">of what</span>
+                        <span target="#d1e516 #d1e518" xml:lang="en">he forgives</span>
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s5.2-esp" type="S">
-                           <seg xml:id="s5.2-1.1-esp">un</seg>
-                           <seg xml:id="s5.2-1.2-esp">millón</seg>
-                        
-                        <seg xml:id="s5.2-2-esp" type="LexItem">de</seg>
-                           <seg xml:id="s5.2-3.1-esp">lo</seg>
-                           <seg xml:id="s5.2-3.2-esp">que</seg>
-                        
-                        <seg xml:id="s5.2-4-esp" type="LexItem">perdona</seg>
-                        <seg xml:id="s5.2-5-esp" type="LexItem">(perdón)</seg>
+                     <seg xml:lang="es" xml:id="s5.2-esp" type="S" part="M" next="#s5.3-esp">
+                        <w xml:id="s5.2-1.1-esp">un millón</w>
+                        <w xml:id="s5.2-2-esp">de lo que</w>
+                        <w xml:id="s5.2-4-esp">perdona (perdón)</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s5.2-esp #s5.2-mix"/>
+                        <link target="#s5.2-2-esp #d1e509"/>
+                        <link target="#s5.2-4-esp #d1e514"/>
+                        <link target="#s5.2-5-esp #d1e516 #d1e518"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s5.3-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s5.3-mix" type="S" part="M" prev="#s5.2-mix" next="#s5.4-mix">
                         <w xml:id="d1e545" orig="ntisaan-ntituꞌu">ntisaan-ntitu'u</w>
                         <w xml:id="d1e552">kueni</w>
                         <pc>,</pc>
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s5.3-mix" xml:lang="en">to each and everyone of you</span>
-                        <span target="#d1e545" xml:lang="en"/>
-                        <span target="#d1e552" xml:lang="en"/>
+                        <span target="#d1e545" xml:lang="en">all</span>
+                        <span target="#d1e552" xml:lang="en">all of you</span>
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s5.3-esp" type="S">
-                        <seg xml:id="s5.3-1-esp" type="LexItem">a</seg>
-                        <seg xml:id="s5.3-2-esp" type="LexItem">todos</seg>
+                     <seg xml:lang="es" xml:id="s5.3-esp" type="S" part="M" prev="#s5.2-esp" next="#s5.4-esp">
+                        <w xml:id="s5.3-1-esp">a</w>
+                        <w xml:id="s5.3-2-esp">todos</w>
                         <pc>-</pc>
-                        <seg xml:id="s5.3-3-esp" type="LexItem">todos</seg>
-                        <seg xml:id="s5.3-4-esp" type="LexItem">ustedes</seg>
+                        <w xml:id="s5.3-3-esp">todos</w>
+                        <w xml:id="s5.3-4-esp">ustedes</w>
                         <pc>,</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s5.3-esp #s5.3-mix"/>
+                        <link target="#s5.3-1-esp #d1e545"/>
+                        <link target="#s5.3-2-esp #s5.3-3-esp #d1e552"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s5.4-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s5.4-mix" type="S" prev="#s5.3-mix" part="F">
                         <w xml:id="d1e573">Tata</w>
                         <w xml:id="d1e575">Nchuxi</w>
                         <w xml:id="d1e577">luu</w>
@@ -555,7 +591,7 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s5.4-mix" xml:lang="en">and to dearest Lord</span>
-                        <span target="#d1e573" xml:lang="en" cert="unknown"/>
+                        <span target="#d1e573" xml:lang="en">dear</span>
                         <span target="#d1e575" xml:lang="en">God</span>
                         <span target="#d1e577" xml:lang="en">dear</span>
                         <span target="#d1e575 #d1e577 #d1e579" xml:lang="en">dearest Lord</span>
@@ -564,12 +600,16 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s5.4-esp" type="S">
-                        <seg xml:id="s5.4-1-esp" type="LexItem">(y)</seg>
-                        <seg xml:id="s5.4-2-esp" type="LexItem">a</seg>
-                        <seg xml:id="s5.4-3-esp" type="LexItem">Diosito</seg>
-                        <seg xml:id="s5.4-4-esp" type="LexItem">querido</seg>
+                        <w xml:id="s5.4-1-esp">(y)</w>
+                        <w xml:id="s5.4-2-esp">a</w>
+                        <w xml:id="s5.4-3-esp">Diosito</w>
+                        <w xml:id="s5.4-4-esp">querido</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s5.4-esp #s5.4-mix"/>
+                        <link target="#s5.4-3-esp #d1e575 #d1e577 #d1e579"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -643,78 +683,101 @@
                   <cell>
                      <seg xml:lang="es" xml:id="s6.1-es-lit" type="S">
                         <pc>¡</pc>
-                        <seg xml:id="s6.1-es-lit-01" type="LexItem">Y</seg>
-                        <seg xml:id="s6.1-es-lit-02" type="LexItem">qué</seg>
-                        <seg xml:id="s6.1-es-lit-03" type="LexItem">alegre</seg>
+                        <w xml:id="s6.1-es-lit-01">Y</w>
+                        <w xml:id="s6.1-es-lit-02">qué</w>
+                        <w xml:id="s6.1-es-lit-03">alegre</w>
                         <pc>,</pc>
-                        <seg xml:id="s6.1-es-lit-04" type="LexItem">qué</seg>
-                        <seg xml:id="s6.1-es-lit-05" type="LexItem">contento</seg>
-                        <seg xml:id="s6.1-es-lit-06" type="LexItem">estoy</seg>
+                        <w xml:id="s6.1-es-lit-04">qué</w>
+                        <w xml:id="s6.1-es-lit-05">contento estoy</w>
                         <pc>!</pc>
                      </seg>
+                     <linkGrp type="translation" subtype="literal">
+                        <link target="#s6.1-es-lit #s6-mix"/>
+                        <link target="#s6.1-es-lit-01 #d1e637"/>
+                        <link target="#s6.1-es-lit-02 #d1e639"/>
+                        <link target="#s6.1-es-lit-03 #d1e641"/>
+                        <link target="#s6.1-es-lit-04 #d1e647"/>
+                        <link target="#s6.1-es-lit-05 #d1e649 #d1e651 #d1e653"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s6.1-esp" type="S">
-                        <seg xml:id="s6.1-es-01" type="LexItem">Estoy</seg>
-                        <seg xml:id="s6.1-es-02" type="LexItem">muy</seg>
-                        <seg xml:id="s6.1-es-03" type="LexItem">feliz</seg>
+                        <w xml:id="s6.1-es-01">Estoy</w>
+                        <w xml:id="s6.1-es-02">muy</w>
+                        <w xml:id="s6.1-es-03">feliz</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s6.1-esp #s6-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s7-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s7-mix" type="S" part="M" next="#s8-mix">
                         <pc>…</pc>
                         <w xml:id="d1e692">ini</w>
-                        <w xml:id="d1e694">ñuyivi</w><!-- =  ñu'un ncha'i? -->
+                        <w xml:id="d1e694">ñuyivi</w> <!-- =  ñu'un ncha'i? -->
                         <pc>,</pc>
                      </seg>
                      <spanGrp type="translation">
-                        <span target="#s7-mix" xml:lang="en" type="literal">inside the Earth</span>
+                        <span target="#s7-mix" xml:lang="en" type="literal">inside the world</span>
                         <span target="#s7-mix" xml:lang="en">wherever in the world</span>
                         <span target="#d1e692" xml:lang="en" type="literal">inside</span>
                         <span target="#d1e694" xml:lang="en">Earth</span>
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s7.1-es-lit" type="S">
+                     <seg xml:lang="es" xml:id="s7.1-es-lit" type="S" part="M" next="#s8-esp">
                         <pc>…</pc>
-                        <seg xml:id="s7.1-es-lit-01" type="LexItem">adentro</seg>
-                        <seg xml:id="s7.1-es-lit-02" type="LexItem">de</seg>
-                        <seg xml:id="s7.1-es-lit-03" type="LexItem">la Tierra</seg>
+                        <w xml:id="s7.1-es-lit-01">adentro</w>
+                        <w xml:id="s7.1-es-lit-02">de</w>
+                        <w xml:id="s7.1-es-lit-03">la Tierra</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s7.1-es-lit #s7-mix" type="literal"/>
+                        <link target="#s7.1-es-lit-01 #d1e692" type="literal"/>
+                        <link target="#s7.1-es-lit-03 #d1e694" type="literal"/>
+                     </linkGrp>
                      <pc>,</pc>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s7.1-esp" type="S">
-                        <seg xml:id="s7.1-es-01" type="LexItem">cualquier</seg>
-                        <seg xml:id="s7.1-es-02" type="LexItem">parte</seg>
-                        <seg xml:id="s7.1-es-03" type="LexItem">del</seg>
-                        <seg xml:id="s7.1-es-04" type="LexItem">mundo</seg>
+                     <seg xml:lang="es" xml:id="s7.1-esp" type="S" part="M" next="#s8-esp">
+                        <w xml:id="s7.1-es-01">cualquier</w>
+                        <w xml:id="s7.1-es-02">parte</w>
+                        <w xml:id="s7.1-es-03">del</w>
+                        <w xml:id="s7.1-es-04">mundo</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s7.1-esp #s7-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="mix" xml:id="s8-mix" type="S">
+                     <seg xml:lang="mix" xml:id="s8-mix" type="S" part="F" prev="#s7-mix">
                         <w xml:id="d1e723">ini</w>
                         <w xml:id="d1e725" orig="ñuꞌu-nchaꞌi">ñu'u-ncha'i</w>
                         <pc>.</pc>
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s8-mix" xml:lang="en">wherever in the world</span>
-                        <span target="#d1e723" xml:lang="en"/>
+                        <span target="#d1e723" xml:lang="en" type="literal">inside</span>
                         <span target="#d1e725" xml:lang="en">Earth</span>
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="s8-esp" type="S">
-                        <seg xml:id="s8-es-01" type="LexItem">adentro</seg>
-                        <seg xml:id="s8-es-02" type="LexItem">del</seg>
-                        <seg xml:id="s8-es-03" type="LexItem">mundo</seg>
+                     <seg xml:lang="es" xml:id="s8-esp" type="S" part="F" prev="#s7-esp">
+                        <w xml:id="s8-es-01">adentro</w>
+                        <w xml:id="s8-es-02">del</w>
+                        <w xml:id="s8-es-03">mundo</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s8-esp #s8-mix" type="literal"/>
+                        <link target="#s8-es-01 #d1e723" type="literal"/>
+                        <link target="#s8-es-03 s8-es-03" type="literal"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -796,7 +859,7 @@
                </row>
                <row>
                   <cell>
-                     <w xml:lang="mix" xml:id="earth-mix" norm="ñu'un-ncha'i">
+                     <w xml:lang="mix" xml:id="earth-mix" norm="ñu'un-ncha'i" type="compound">
                         <w xml:id="earth-mix-01" orig="ñuꞌu">ñu'u</w>
                         <pc>-</pc>
                         <w xml:id="earth-mix-02" orig="nchaꞌi">ncha'i</w>
@@ -806,22 +869,30 @@
                         <span target="#earth-mix-02" xml:lang="en" type="literal">mud</span>
                         <span target="#earth-mix" xml:lang="en">Planet Earth</span>
                      </spanGrp>
-                     
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="earth-mix-es-lit" type="S">
-                        <seg xml:id="earth-mix-es-lit-01" type="LexItem">tierra</seg>
+                     <w xml:lang="es" xml:id="earth-mix-es-lit">
+                        <w xml:id="earth-mix-es-lit-01">tierra</w>
                         <pc>-</pc>
-                        <seg xml:id="earth-mix-es-lit-02" type="LexItem">lodo</seg>
-                     </seg>
+                        <w xml:id="earth-mix-es-lit-02">lodo</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#earth-mix-es-lit-01 #earth-mix-01" type="literal"/>
+                        <link target="#earth-mix-es-lit-02 #earth-mix-02" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="earth-esp" type="S">Planeta Tierra</seg>
+                     <seg xml:lang="es" xml:id="earth-esp">
+                        <w>Planeta Tierra</w>
+                     </seg>
+                     <linkGrp type="translation">
+                        <link target="#earth-esp #earth-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <w xml:lang="mix" xml:id="body-mix" norm="iki-kuñu">
+                     <w xml:lang="mix" xml:id="body-mix" norm="iki-kuñu" type="compound">
                         <w xml:id="d1e830">iki</w>
                         <pc>-</pc>
                         <w xml:id="d1e834">kuñu</w>
@@ -833,19 +904,28 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="body-mix-es-lit" type="S">
-                        <seg xml:id="body-mix-es-lit-01" type="LexItem">hueso</seg>
+                     <w xml:lang="es" xml:id="body-mix-es-lit">
+                        <w xml:id="body-mix-es-lit-01">hueso</w>
                         <pc>-</pc>
-                        <seg xml:id="body-mix-es-lit-02" type="LexItem">carne</seg>
-                     </seg>
+                        <w xml:id="body-mix-es-lit-02">carne</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#body-mix-es-lit-01 #d1e830" type="literal"/>
+                        <link target="#body-mix-es-lit-02 #d1e834" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="body-esp" type="S">cuerpo</seg>
+                     <w xml:lang="es" xml:id="body-esp">
+                        <w>cuerpo</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#body-esp #body-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <w xml:lang="mix" xml:id="go_away-mix" norm="ya'a-ku'un">
+                     <w xml:lang="mix" xml:id="go_away-mix" norm="ya'a-ku'un" type="compound">
                         <w xml:id="d1e850" orig="yaꞌa">ya'a</w>
                         <pc>-</pc>
                         <w xml:id="d1e854" orig="kuꞌun">ku'un</w>
@@ -857,19 +937,26 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="go_away-es-mix-lit">
-                        <seg xml:id="go_away-es-mix-lit-01" type="LexItem">pasar</seg>
+                     <w xml:lang="es" xml:id="go_away-es-mix-lit">
+                        <w xml:id="go_away-es-mix-lit-01">pasar</w>
                         <pc>-</pc>
-                        <seg xml:id="go_away-es-mix-lit-02" type="LexItem">ir</seg>
-                     </seg>
+                        <w xml:id="go_away-es-mix-lit-02">ir</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#go_away-es-mix-lit-01 #d1e850" type="literal"/>
+                        <link target="#go_away-es-mix-lit-02 #d1e854" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="V-go_away-esp" type="LexItem">irse</seg>
+                     <w xml:lang="es" xml:id="V-go_away-esp">irse</w>
+                  <linkGrp type="translation">
+                     <link target="#V-go_away-esp #go_away-mix"/>
+                  </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <w xml:lang="mix" xml:id="wholeHeartedly-mix" norm="ntinuu-ntintaa">
+                     <w xml:lang="mix" xml:id="wholeHeartedly-mix" norm="ntinuu-ntintaa" type="compound">
                         <w xml:id="d1e870">ntinuu</w><!-- nti- + nuu (face)?! -->
                         <pc>-</pc>
                         <w xml:id="d1e877">ntintaa</w>
@@ -881,23 +968,26 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="wholeHeartedly-es-lit" type="S">
-                           <seg xml:id="wholeHeartedly-es-lit-01.1">todo</seg>
-                           <seg xml:id="wholeHeartedly-es-lit-01.1.2">sincero</seg>
-                        
+                     <w xml:lang="es" xml:id="wholeHeartedly-es-lit">
+                        <w xml:id="wholeHeartedly-es-lit-01">todo sincero</w>
                         <pc>-</pc>
-                           <seg xml:id="wholeHeartedly-es-lit-02">todo</seg>
-                           <seg xml:id="wholeHeartedly-es-lit-02.1.2">derecho</seg>
-                        
-                     </seg>
+                        <w xml:id="wholeHeartedly-es-lit-02">todo derecho</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#wholeHeartedly-es-lit-01 #d1e870" type="literal"/>
+                        <link target="#wholeHeartedly-es-lit-02 #d1e877" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="wholeHeartedly-esp" type="S">de todo corazón</seg>
+                     <w xml:lang="es" xml:id="wholeHeartedly-esp" type="S">de todo corazón</w>
+                     <linkGrp type="translation">
+                        <link target="#wholeHeartedly-esp #wholeHeartedly-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <w xml:lang="mix" xml:id="beautiful-pure-mix" norm="vii-ntatu">
+                     <w xml:lang="mix" xml:id="beautiful-pure-mix" norm="vii-ntatu" type="compound">
                         <w xml:id="d1e902">vii</w>
                         <pc>-</pc>
                         <w xml:id="d1e906">ntatu</w>
@@ -910,19 +1000,26 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="beautiful-pure-es-lit" type="S">
-                        <seg xml:id="beautiful-pure-es-lit-01" type="LexItem">limpio</seg>
+                     <w xml:lang="es" xml:id="beautiful-pure-es-lit" type="compound">
+                        <w xml:id="beautiful-pure-es-lit-01">limpio</w>
                         <pc>-</pc>
-                        <seg xml:id="beautiful-pure-es-lit-02" type="LexItem">puro</seg>
-                     </seg>
+                        <w xml:id="beautiful-pure-es-lit-02">puro</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#beautiful-pure-es-lit-01 #d1e902" type="literal"/>
+                        <link target="#beautiful-pure-es-lit-02 #d1e906" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="beautiful-pure-esp" type="S">bonito, hermoso</seg>
+                     <w xml:lang="es" xml:id="beautiful-pure-esp">bonito, hermoso</w>
+                     <linkGrp type="translation">
+                        <link target="#beautiful-pure-esp #beautiful-pure-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <w xml:lang="mix" xml:id="holyWord-mix" norm="tu'un-ntusu">
+                     <w xml:lang="mix" xml:id="holyWord-mix" norm="tu'un-ntusu" type="compound">
                         <w xml:id="d1e922" orig="tuꞌun">tu'un</w>
                         <pc>-</pc>
                         <w xml:id="d1e926">ntusu</w>
@@ -934,14 +1031,21 @@
                      </spanGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="holyWord-es-lit" type="S">
-                        <seg xml:id="holyWord-es-lit-01" type="LexItem">palabra</seg>
+                     <w xml:lang="es" xml:id="holyWord-es-lit" type="compound">
+                        <w xml:id="holyWord-es-lit-01">palabra</w>
                         <pc>-</pc>
-                        <seg xml:id="holyWord-es-lit-02" type="LexItem">voz</seg>
-                     </seg>
+                        <w xml:id="holyWord-es-lit-02">voz</w>
+                     </w>
+                     <linkGrp type="translation">
+                        <link target="#holyWord-es-lit-01 #d1e922" type="literal"/>
+                        <link target="#holyWord-es-lit-02 #d1e926" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" xml:id="holyWord-esp" type="S">palabra (dada por Dios)</seg>
+                     <w xml:lang="es" xml:id="holyWord-esp">palabra (dada por Dios)</w>
+                     <linkGrp type="translation">
+                        <link target="#holyWord-esp #holyWord-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -986,21 +1090,31 @@
                   <cell>
                      <seg xml:lang="es" xml:id="s9-es-lit" type="S">
                         <pc>¡</pc>
-                        <seg xml:id="s9-es-lit-01" type="LexItem">Qué</seg>
-                        <seg xml:id="s9-es-lit-02" type="LexItem">limpio</seg>
+                        <w xml:id="s9-es-lit-01">Qué</w>
+                        <w xml:id="s9-es-lit-02">limpio</w>
                         <pc>,</pc>
-                        <seg xml:id="s9-es-lit-03" type="LexItem">qué</seg>
-                        <seg xml:id="s9-es-lit-04" type="LexItem">puro</seg>
+                        <w xml:id="s9-es-lit-03">qué</w>
+                        <w xml:id="s9-es-lit-04">puro</w>
                         <pc>!</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s9-es-lit #s9-mix" type="literal"/>
+                        <link target="#s9-es-lit-01 #d1e960" type="literal"/>
+                        <link target="#s9-es-lit-02 #d1e962" type="literal"/>
+                        <link target="#s9-es-lit-03 #d1e966" type="literal"/>
+                        <link target="#s9-es-lit-04 #d1e968" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s9-esp" type="S">
                         <pc>¡</pc>
-                        <seg xml:id="s9-es-01" type="LexItem">Qué</seg>
-                        <seg xml:id="s9-es-02" type="LexItem">hermoso</seg>
+                        <w xml:id="s9-es-01">Qué</w>
+                        <w xml:id="s9-es-02">hermoso</w>
                         <pc>!</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s9-esp #s9-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1021,9 +1135,9 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s10-mix" xml:lang="en">This is how he speaks, my Lord.</span>
-                        <span target="#d1e1001" xml:lang="en">say</span>
+                        <span target="#d1e1001" xml:lang="en">says</span>
                         <span target="#d1e1003" xml:lang="en">the word</span>
-                        <span target="#d1e1009" xml:lang="en">say</span>
+                        <span target="#d1e1009" xml:lang="en">says</span>
                         <span target="#d1e1011" xml:lang="en">voice</span>
                         <span target="#d1e1011 #d1e1013" xml:lang="en">His voice</span>
                         <span target="#d1e1013" xml:lang="en">of Him</span>
@@ -1032,28 +1146,41 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s10-es-lit" type="S">
-                        <seg xml:id="s10-es-lit-01" type="LexItem">Dice</seg>
-                        <seg xml:id="s10-es-lit-02" type="LexItem">la palabra</seg>
+                        <w xml:id="s10-es-lit-01">Dice</w>
+                        <w xml:id="s10-es-lit-02">la palabra</w>
                         <pc>,</pc>
-                        <seg xml:id="s10-es-lit-03" type="LexItem">dice</seg>
-                        <seg xml:id="s10-es-lit-04" type="LexItem">la voz</seg>
-                        <seg xml:id="s10-es-lit-05" type="LexItem">de</seg>
-                        <seg xml:id="s10-es-lit-06" type="LexItem">él</seg>
+                        <w xml:id="s10-es-lit-03">dice</w>
+                        <w xml:id="s10-es-lit-04">la voz</w>
+                        <w xml:id="s10-es-lit-05">de él</w>
                         <pc>,</pc>
-                        <seg xml:id="s10-es-lit-07" type="LexItem">mi</seg>
-                        <seg xml:id="s10-es-lit-08" type="LexItem">señor</seg>
+                        <w xml:id="s10-es-lit-07">mi</w>
+                        <w xml:id="s10-es-lit-08">señor</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s10-es-lit #s10-mix" type="literal"/>
+                        <link target="#s10-es-lit-01 #d1e1001" type="literal"/>
+                        <link target="#s10-es-lit-02 #d1e1003" type="literal"/>
+                        <link target="#s10-es-lit-03 #d1e1009" type="literal"/>
+                        <link target="#s10-es-lit-04 #d1e1011" type="literal"/>
+                        <link target="#s10-es-lit-05 #d1e1013" type="literal"/>
+                        <link target="#s10-es-lit-07 #d1e1019" type="literal"/>
+                        <link target="#s10-es-lit-08 #d1e1021" type="literal"/>
+                        <link target="#s10-es-lit-07 #s10-es-lit-08 #d1e1019 #d1e1021" type="literal"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s10-esp" type="S">
-                        <seg xml:id="s10-es-01" type="LexItem">Así</seg>
-                        <seg xml:id="s10-es-02" type="LexItem">habla</seg>
+                        <w xml:id="s10-es-01">Así</w>
+                        <w xml:id="s10-es-02">habla</w>
                         <pc>,</pc>
-                        <seg xml:id="s10-es-03" type="LexItem">mi</seg>
-                        <seg xml:id="s10-es-04" type="LexItem">señor</seg>
+                        <w xml:id="s10-es-03">mi</w>
+                        <w xml:id="s10-es-04">señor</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s10-esp #s10-mix"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -1085,28 +1212,44 @@
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="alv-mix" type="S">
-                        <seg type="LexItem">tata</seg>
+                     <w xml:lang="alv-mix" type="compound" xml:id="alv-mix-01">
+                        <w xml:id="alv-mix-01a">tata</w>
                         <pc>-</pc>
-                        <seg type="LexItem">deqtata</seg>
-                        <pc>/</pc>
-                        <seg type="LexItem">deque</seg>
+                        <w xml:id="alv-mix-01b">deqtata</w>
+                     </w>
+                     <pc>/</pc>
+                     <w xml:lang="alv-mix" type="compound" xml:id="alv-mix-02">
+                        <w xml:id="alv-mix-02a">deque</w>
                         <pc>-</pc>
-                        <seg type="LexItem">tata</seg>
-                     </seg>
+                        <w xml:id="alv-mix-02b">tata</w>
+                     </w>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" type="S">simiente</seg>
+                     <w xml:lang="es" xml:id="d1e1105">simiente</w>
+                     <linkGrp type="translation">
+                        <link target="#d1e1105 #alv-mix-01"/>
+                        <link target="#d1e1105 #alv-mix-02"/>
+                        <link target="#d1e1105 #d1e1106"/>
+                     </linkGrp>
                   </cell>
                   <cell>
-                     <w  xml:id="d1e1106" xml:lang="mix" norm="ntiki-tata">
+                     <w xml:id="d1e1106" xml:lang="mix" norm="ntiki-tata" type="compound">
                         <w xml:id="d1e1107">ntiki</w>
                         <pc>-</pc>
                         <w xml:id="d1e1111">tata</w>
                      </w>
-                     <foreign><!-- maybe just integrate this into the spanGrp translations -->
-                        <seg xml:lang="es">(semilla<pc>-</pc>semilla de maíz)</seg>
+                     <pc>(</pc><foreign>
+                        <w xml:lang="es" xml:id="d1e1106esp">
+                           
+                           <w xml:id="d1e1106esp1">semilla</w>
+                           <pc>-</pc>
+                           <w xml:id="d1e1106esp2">semilla de maíz</w>
+                        </w><pc>)</pc>
                      </foreign>
+                     <linkGrp type="translation">
+                        <link target="#d1e1106esp1 #d1e1107" type="literal"/>
+                        <link target="#d1e1106esp2 #d1e1111" type="literal"/>
+                     </linkGrp>
                      <spanGrp type="translation">
                         <span target="#d1e1106" xml:lang="en" cert="low">seed</span>
                         <span target="#d1e1107" xml:lang="en" type="literal">seed</span>
@@ -1116,14 +1259,19 @@
                </row>
                <row>
                   <cell>
-                     <seg xml:lang="alv-mix" type="S">fahuij<pc>-</pc>fadzacu</seg>
+                     <w xml:lang="alv-mix" type="compound">fahuij<pc>-</pc>fadzacu</w>
                   </cell>
                   <cell>
                      <seg xml:lang="es" type="S">
-                        <seg type="LexItem">bella cosa</seg>
+                        <w>bella cosa</w>
                         <pc>/</pc>
-                        <seg type="LexItem">hermoso</seg>
+                        <w>hermoso</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <w xml:lang="mix" xml:id="d1e1136" norm="vii-ntatu">
@@ -1137,6 +1285,9 @@
                         <span target="#d1e1140" xml:lang="en" type="literal">pure</span>
                      </spanGrp>
                      <seg xml:lang="es" type="S">(limpio<pc>-</pc>puro)</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1168,24 +1319,30 @@
                      </spanGrp>
                      <pc/>
                      <seg xml:lang="es" type="S">día<pc>-</pc>noche</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                      <pc>)</pc>
                   </cell>
                </row>
                <row>
                   <cell>
                      <seg xml:lang="alv-mix">
-                        <seg type="LexItem">ñuu</seg>
+                        <w>ñuu</w>
                         <pc>-</pc>
-                        <seg type="LexItem">tayu</seg>
+                        <w>tayu</w>
                         <pc>,</pc>
-                        <seg type="LexItem">tayutoniñe</seg>
+                        <w>tayutoniñe</w>
                         <pc>,</pc>
-                        <seg type="LexItem">yuvuitayu</seg>
+                        <w>yuvuitayu</w>
                      </seg>
                   </cell>
                   <cell>
                      <seg xml:lang="es" type="S">asentamiento<pc>,</pc> pueblo (donde
                         están establecidos)</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <w xml:lang="mix" xml:id="d1e1207">
@@ -1199,18 +1356,24 @@
                         <span target="#d1e1211" xml:lang="en" type="literal">chair</span>
                      </spanGrp>
                      <seg xml:lang="es" type="S">(pueblo<pc>-</pc>silla)</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
                      <seg xml:lang="alv-mix" type="S">
-                        <seg type="LexItem">ntaha</seg>
+                        <w>ntaha</w>
                         <pc>-</pc>
-                        <seg type="LexItem">saha</seg>
+                        <w>saha</w>
                      </seg>
                   </cell>
                   <cell>
                      <seg xml:lang="es" type="S">esclavo vendido</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <w xml:lang="mix" xml:id="d1e1232" norm="nta'a-tsa'a">
@@ -1224,6 +1387,9 @@
                         <span target="#d1e1236" xml:lang="en" type="literal">foot</span>
                      </spanGrp>
                      <seg xml:lang="es" type="S">(mano<pc>-</pc>pie)</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -1236,13 +1402,16 @@
                <row>
                   <cell>
                      <seg xml:lang="alv-mix" type="S">
-                        <seg type="LexItem">yeque</seg>
+                        <w>yeque</w>
                         <pc>-</pc>
-                        <seg type="LexItem">coñondi</seg>
+                        <w>coñondi</w>
                      </seg>
                   </cell>
                   <cell>
                      <seg xml:lang="es" type="S">cuerpo humano entero</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <w xml:lang="mix" xml:id="d1e1263">
@@ -1256,12 +1425,16 @@
                         <span target="#d1e1267" xml:lang="en" type="literal">meat</span>
                      </spanGrp>
                      <seg xml:lang="es" type="S">(hueso-carne)</seg>
+                     <linkGrp type="translation">
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
             <lb/>
             <label xml:lang="es">
-               <hi rend="bold">Estribillo</hi><!-- choras -->
+               <hi rend="bold">Estribillo</hi>
+               <!-- choras -->
             </label>
             <lb/>
             <p xml:lang="es">Un estribillo puede ocurrir únicamente después de cada línea o
@@ -1314,13 +1487,20 @@
                   <cell>
                      <seg xml:lang="es" xml:id="s11-esp" type="S">
                         <pc>¡</pc>
-                        <seg xml:id="s11-es-0" type="LexItem">Cuán</seg>
-                        <seg type="LexItem">limpio</seg>
+                        <w xml:id="s11-es-0">Cuán</w>
+                        <w>limpio</w>
                         <pc>,</pc>
-                        <seg type="LexItem">cuán</seg>
-                        <seg type="LexItem">puro</seg>
+                        <w>cuán</w>
+                        <w>puro</w>
                         <pc>!</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s11-esp"/>
+                        <link target="#s11-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1363,25 +1543,39 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s12-esp" type="S">
-                        <seg xml:id="s12-es-0" type="LexItem">Recibió</seg>
-                        <seg type="LexItem">el señor</seg>
-                        <seg type="LexItem">(padre del novio)</seg>
+                        <w xml:id="s12-es-0">Recibió</w>
+                        <w>el señor</w>
+                        <w>(padre del novio)</w>
                         <pc>,</pc>
-                        <seg type="LexItem">la semilla</seg>
-                        <seg type="LexItem">de</seg>
-                        <seg type="LexItem">don</seg>
-                        <seg type="LexItem">José</seg>
+                        <w>la semilla</w>
+                        <w>de</w>
+                        <w>don</w>
+                        <w>José</w>
                         <pc>,</pc>
-                        <seg type="LexItem">la semilla</seg>
-                        <seg type="LexItem">de</seg>
-                        <seg type="LexItem">
-                           <seg>doña</seg> María santísima</seg>
+                        <w>la semilla</w>
+                        <w>de</w>
+                        <w>doña María santísima</w>
                         <pc>,</pc>
-                        <seg type="LexItem">Eva</seg>
+                        <w>Eva</w>
                         <pc>,</pc>
-                        <seg type="LexItem">Adán</seg>
+                        <w>Adán</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s12-esp"/>
+                        <link target="#s12-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1410,12 +1604,10 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s13-mix" xml:lang="en">And it's like so his gift, it's like so waiting on what would be, the person who would become the godfather, the person who would become godmother.</span>
-                        
                         <span target="#d1e1424" xml:lang="en">and</span>
                         <span target="#d1e1426" xml:lang="en" cert="medium">it's like so</span>
-                        <span target="#d1e1428" xml:lang="en">gift</span>                        
+                        <span target="#d1e1428" xml:lang="en">gift</span>
                         <span target="#d1e1428 #d1e1430" xml:lang="en">his gift</span>
-                        
                         <span target="#d1e1434" xml:lang="en" cert="medium">it's like so</span>
                         <span target="#d1e1436" xml:lang="en">waited</span>
                         <span target="#d1e1438" xml:lang="en">happened</span>
@@ -1429,28 +1621,48 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s13-esp" type="S">
-                        <seg xml:id="s13-es-0" type="LexItem">Y</seg>
-                        <seg type="LexItem">así</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">su</seg>
-                        <seg type="LexItem">don</seg>
+                        <w xml:id="s13-es-0">Y</w>
+                        <w>así</w>
+                        <w>es</w>
+                        <w>su</w>
+                        <w>don</w>
                         <pc>,</pc>
-                        <seg type="LexItem">así</seg>
-                        <seg type="LexItem">esperaba</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">fuera</seg>
+                        <w>así</w>
+                        <w>esperaba</w>
+                        <w>que</w>
+                        <w>fuera</w>
                         <pc>,</pc>
-                        <seg type="LexItem">persona</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">fue</seg>
-                        <seg type="LexItem">padrino</seg>
+                        <w>persona</w>
+                        <w>que</w>
+                        <w>fue</w>
+                        <w>padrino</w>
                         <pc>,</pc>
-                        <seg type="LexItem">persona</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">fue</seg>
-                        <seg type="LexItem">madrina</seg>
+                        <w>persona</w>
+                        <w>que</w>
+                        <w>fue</w>
+                        <w>madrina</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s13-esp"/>
+                        <link target="#s13-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1471,29 +1683,34 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s14-mix" xml:lang="en">There they approached, after walking three to four steps.</span>
-                        
                         <span target="#d1e1510" xml:lang="en">there</span>
                         <span target="#d1e1512 #d1e1514" xml:lang="en">they approached</span>
-                        
                         <span target="#d1e1519" xml:lang="en">after</span>
-                        
                         <span target="#d1e1521" xml:lang="en">walking</span>
-                        
                         <span target="#d1e1523" xml:lang="en">three to four</span>
                         <span target="#d1e1525" xml:lang="en">step</span>
                      </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s14-esp" type="S">
-                        <seg xml:id="s14-es-0" type="LexItem">Allí</seg>
-                        <seg type="LexItem">se acercaron</seg>
+                        <w xml:id="s14-es-0">Allí</w>
+                        <w>se acercaron</w>
                         <pc>,</pc>
-                        <seg type="LexItem">después</seg>
-                        <seg type="LexItem">pisaron</seg>
-                        <seg type="LexItem">dostres</seg>
-                        <seg type="LexItem">pasos</seg>
+                        <w>después</w>
+                        <w>pisaron</w>
+                        <w>dostres</w>
+                        <w>pasos</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s14-esp"/>
+                        <link target="#s14-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1510,10 +1727,9 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s15-mix" xml:lang="en">There they approached inside the sacred house, inside the holy mother church.</span>
-                        
-                        <span target="#d1e1554" xml:lang="en">There</span>                      
+                        <span target="#d1e1554" xml:lang="en">There</span>
                         <span target="#d1e1556 #d1e1557" xml:lang="en">they approached</span>
-                        <span target="#d1e1561" xml:lang="en">inside</span>                     
+                        <span target="#d1e1561" xml:lang="en">inside</span>
                         <span target="#d1e1563" xml:lang="en">the sacred house</span>
                         <span target="#d1e1561 #d1e1563" xml:lang="en">inside the sacred house</span>
                         <span target="#d1e1567" xml:lang="en">the holy mother church</span>
@@ -1521,15 +1737,24 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s15-esp" type="S">
-                        <seg xml:id="s15-es-0" type="LexItem">Allí</seg>
-                        <seg type="LexItem">se acercaron</seg>
-                        <seg type="LexItem">adentro de</seg>
-                        <seg type="LexItem">la casa</seg>
-                        <seg type="LexItem">sagrada</seg>
+                        <w xml:id="s15-es-0">Allí</w>
+                        <w>se acercaron</w>
+                        <w>adentro de</w>
+                        <w>la casa</w>
+                        <w>sagrada</w>
                         <pc>,</pc>
-                        <seg type="LexItem">santa madre iglesia</seg>
+                        <w>santa madre iglesia</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s15-esp"/>
+                        <link target="#s15-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1549,7 +1774,6 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s16-mix" xml:lang="en">Where left behind from above, where left behind from below.</span>
-                        
                         <span target="#d1e1599" xml:lang="en">where</span>
                         <span target="#d1e1601" xml:lang="en" cert="medium">left behind</span>
                         <span target="#d1e1603" xml:lang="en">above</span>
@@ -1560,15 +1784,24 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s16-esp" type="S">
-                        <seg xml:id="s16-es-0" type="LexItem">Donde</seg>
-                        <seg type="LexItem">sobra</seg>
-                        <seg type="LexItem">de arriba</seg>
+                        <w xml:id="s16-es-0">Donde</w>
+                        <w>sobra</w>
+                        <w>de arriba</w>
                         <pc>,</pc>
-                        <seg type="LexItem">donde</seg>
-                        <seg type="LexItem">sobra de</seg>
-                        <seg type="LexItem">abajo</seg>
+                        <w>donde</w>
+                        <w>sobra de</w>
+                        <w>abajo</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s16-esp"/>
+                        <link target="#s16-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1576,7 +1809,10 @@
                      <seg xml:lang="mix" xml:id="s17-mix" type="S">
                         <w xml:id="d1e1636">Patron</w>
                         <w xml:id="d1e1638" norm="Sa Juaa Bautista">
-                           <w xml:id="d1e1638a">Sa</w> <w xml:id="d1e1638b">Juaa</w> <w xml:id="d1e1638c">Bautista</w></w>
+                           <w xml:id="d1e1638a">Sa</w>
+                           <w xml:id="d1e1638b">Juaa</w>
+                           <w xml:id="d1e1638c">Bautista</w>
+                        </w>
                         <pc>.</pc>
                      </seg>
                      <spanGrp type="translation">
@@ -1589,10 +1825,15 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s17-esp" type="S">
-                        <seg xml:id="s17-es-0" type="LexItem">Patrón</seg>
-                        <seg type="LexItem">San Juan Bautista</seg>
+                        <w xml:id="s17-es-0">Patrón</w>
+                        <w>San Juan Bautista</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s17-esp"/>
+                        <link target="#s17-es-0"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1627,19 +1868,33 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s18-esp" type="S">
-                        <seg xml:id="s18-es-0" type="LexItem">Y</seg>
-                        <seg type="LexItem">allí</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">donde</seg>
-                        <seg type="LexItem">está</seg>
-                        <seg type="LexItem">el</seg>
-                        <seg type="LexItem">río</seg>
-                        <seg type="LexItem">grande</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">se llama</seg>
-                        <seg type="LexItem">Jordán</seg>
+                        <w xml:id="s18-es-0">Y</w>
+                        <w>allí</w>
+                        <w>es</w>
+                        <w>donde</w>
+                        <w>está</w>
+                        <w>el</w>
+                        <w>río</w>
+                        <w>grande</w>
+                        <w>que</w>
+                        <w>se llama</w>
+                        <w>Jordán</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s18-esp"/>
+                        <link target="#s18-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1669,16 +1924,27 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s19-esp" type="S">
-                        <seg xml:id="s19-es-0" type="LexItem">Allí</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">donde</seg>
-                        <seg type="LexItem">le regaron</seg>
-                        <seg type="LexItem">agua</seg>
-                        <seg type="LexItem">al</seg>
-                        <seg type="LexItem">maestro</seg>
-                        <seg type="LexItem">Jesucristo</seg>
+                        <w xml:id="s19-es-0">Allí</w>
+                        <w>es</w>
+                        <w>donde</w>
+                        <w>le regaron</w>
+                        <w>agua</w>
+                        <w>al</w>
+                        <w>maestro</w>
+                        <w>Jesucristo</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s19-esp"/>
+                        <link target="#s19-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1700,14 +1966,14 @@
                         <pc>,</pc>
                         <w xml:id="d1e1777">mancha</w>
                         <w xml:id="d1e1779">kivi</w>
-                        <w xml:id="d1e1781" orig="tsiꞌna">tsi'na</w><!-- primero-->
+                        <w xml:id="d1e1781" orig="tsiꞌna">tsi'na</w>
+                        <!-- primero-->
                         <pc>.</pc>
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s20-mix" xml:lang="en">Saint John the Baptist did the day that he arrived, from the day he began, to the first day.</span>
-                        
-                        <span target="#d1e1754" xml:lang="en">did</span><!-- why not "nisa'a"? -->
-                        
+                        <span target="#d1e1754" xml:lang="en">did</span>
+                        <!-- why not "nisa'a"? -->
                         <span target="#d1e1756" xml:lang="en">San Juan Bautista</span>
                         <span target="#d1e1760 #d1e1762" xml:lang="en">the day that</span>
                         <span target="#d1e1760 #d1e1762" xml:lang="en">the day when</span>
@@ -1724,21 +1990,35 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s20-esp" type="S">
-                        <seg xml:id="s20-es-0" type="LexItem">Hizo</seg>
-                        <seg type="LexItem">San Juan Bautista</seg>
+                        <w xml:id="s20-es-0">Hizo</w>
+                        <w>San Juan Bautista</w>
                         <pc>,</pc>
-                        <seg type="LexItem">el día</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">llegó</seg>
+                        <w>el día</w>
+                        <w>que</w>
+                        <w>llegó</w>
                         <pc>,</pc>
-                        <seg type="LexItem">desde</seg>
-                        <seg type="LexItem">el día</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">empezó</seg>
+                        <w>desde</w>
+                        <w>el día</w>
+                        <w>que</w>
+                        <w>empezó</w>
                         <pc>,</pc>
-                        <seg type="LexItem">desde</seg>
-                        <seg type="LexItem">el día</seg> primero<pc>.</pc>
+                        <w>desde</w>
+                        <w>el día</w> primero<pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s20-esp"/>
+                        <link target="#s20-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1749,7 +2029,8 @@
                         <w xml:id="d1e1826" cert="unknown">ra</w>
                         <pc>,</pc>
                         <w xml:id="d1e1830">kachi</w>
-                        <w xml:id="d1e1832">ntusu</w><!-- voice -->
+                        <w xml:id="d1e1832">ntusu</w>
+                        <!-- voice -->
                         <w xml:id="d1e1834">ni</w>
                         <w xml:id="d1e1836">tata</w>
                         <w xml:id="d1e1838">compadre</w>
@@ -1760,13 +2041,13 @@
                      <spanGrp type="translation">
                         <span target="#s21-mix" xml:lang="en" cert="medium">He says the word, he speaks the voice of lord dear companion.</span>
                         <span target="#d1e1822 #d1e1824 #d1e1826" xml:lang="en" cert="medium">he speaks the word</span>
-
-                        <span target="#d1e1826" xml:lang="en" cert="low"/><!-- is this 3sg.m.form? or conj? -->
-
-                        <span target="#d1e1830 #d1e1832 #d1e1834" xml:lang="en" cert="medium">he speaks the voice</span><!-- does "ni" belong here? -->
+                        <span target="#d1e1826" xml:lang="en" cert="low"/>
+                        <!-- is this 3sg.m.form? or conj? -->
+                        <span target="#d1e1830 #d1e1832 #d1e1834" xml:lang="en" cert="medium">he speaks the voice</span>
+                        <!-- does "ni" belong here? -->
                         <span target="#d1e1832" xml:lang="en">voice</span>
-                        <span target="#d1e1834" xml:lang="en" cert="low"/><!-- is this 2sg.form? or something else? -->
-                        
+                        <span target="#d1e1834" xml:lang="en" cert="low"/>
+                        <!-- is this 2sg.form? or something else? -->
                         <span target="#d1e1836" xml:lang="en">lord</span>
                         <span target="#d1e1838" xml:lang="en">companion</span>
                         <span target="#d1e1840" xml:lang="en" type="literal">small</span>
@@ -1776,17 +2057,28 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" rend="bold" xml:id="s21-esp" type="S">
-                        <seg xml:id="s21-es-0" type="LexItem">Dice</seg>
-                        <seg type="LexItem">la</seg>
-                        <seg type="LexItem">palabra</seg>
+                        <w xml:id="s21-es-0">Dice</w>
+                        <w>la</w>
+                        <w>palabra</w>
                         <pc>,</pc>
-                        <seg type="LexItem">dice</seg>
-                        <seg type="LexItem">la</seg>
-                        <seg type="LexItem">voz</seg>
+                        <w>dice</w>
+                        <w>la</w>
+                        <w>voz</w>
                         <pc>,</pc>
-                        <seg type="LexItem">señor</seg>
-                        <seg type="LexItem">compadrito</seg>
+                        <w>señor</w>
+                        <w>compadrito</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s21-esp"/>
+                        <link target="#s21-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -1819,18 +2111,22 @@
                         <w xml:id="d1e1899">ntitsi</w>
                         <w xml:id="d1e1901">luu</w>
                         <pc>,</pc>
-                        <w xml:id="d1e1905">ma</w> <!-- dont -->
-                        <w xml:id="d1e1907">kusuchi</w>   <!-- get sad -->
+                        <w xml:id="d1e1905">ma</w>
+                        <!-- dont -->
+                        <w xml:id="d1e1907">kusuchi</w>
+                        <!-- get sad -->
                         <pc>,</pc>
-                        <w xml:id="d1e1911">ma</w> <!-- don't -->
-                        <w xml:id="d1e1913">kuchain</w>   <!-- be disturbed "kuchain ini" get mad -->
+                        <w xml:id="d1e1911">ma</w>
+                        <!-- don't -->
+                        <w xml:id="d1e1913">kuchain</w>
+                        <!-- be disturbed "kuchain ini" get mad -->
                         <w xml:id="d1e1916">ini</w>
-                        <w xml:id="d1e1918">ni</w> <!-- ni(2sg. form?) (is this distributed to previous verb & clause?)-->
+                        <w xml:id="d1e1918">ni</w>
+                        <!-- ni(2sg. form?) (is this distributed to previous verb & clause?)-->
                         <pc>.</pc>
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s22-mix" xml:lang="en" cert="medium">And not one of you, don't get sad, don't get angry.</span>
-                        
                         <span target="#d1e1890" xml:lang="en">and</span>
                         <span target="#d1e1892" xml:lang="en">no one</span>
                         <span target="#d1e1897" xml:lang="en" cert="low"/>
@@ -1838,21 +2134,31 @@
                         <span target="#d1e1901" xml:lang="en" cert="low"/>
                         <span target="#d1e1905 #d1e1907" xml:lang="en">don't be sad</span>
                         <span target="#d1e1911 #d1e1913 #d1e1916" xml:lang="en">get angry</span>
-                        <span target="#d1e1918" xml:lang="en" cert="low"/><!-- what verb(s) does this go with?  -->
+                        <span target="#d1e1918" xml:lang="en" cert="low"/>
+                        <!-- what verb(s) does this go with?  -->
                      </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s22-esp" type="S">
-                        <seg xml:id="s22-es-0" type="LexItem">Y</seg>
-                        <seg type="LexItem">ninguno</seg>
-                        <seg type="LexItem">de</seg>
-                        <seg type="LexItem">ustedes</seg>
+                        <w xml:id="s22-es-0">Y</w>
+                        <w>ninguno</w>
+                        <w>de</w>
+                        <w>ustedes</w>
                         <pc>,</pc>
-                        <seg type="LexItem">no se entristezcan</seg>
+                        <w>no se entristezcan</w>
                         <pc>,</pc>
-                        <seg type="LexItem">no se turben</seg>
+                        <w>no se turben</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s22-esp"/>
+                        <link target="#s22-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1871,9 +2177,7 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s23-mix" xml:lang="en" cert="medium">Everyone, all of us will obey, the people who will be with the president.</span>
-                        
                         <span target="#d1e1951" xml:lang="en">everyone</span>
-
                         <span target="#d1e1957" xml:lang="en">all of us</span>
                         <span target="#d1e1959" xml:lang="en">will obey</span>
                         <span target="#d1e1961" xml:lang="en">people</span>
@@ -1884,22 +2188,34 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s23-esp" type="S">
-                        <seg xml:id="s23-es-0" type="LexItem">todos</seg>
+                        <w xml:id="s23-es-0">todos</w>
                         <pc>,</pc>
-                        <seg type="LexItem">todos</seg>
-                        <seg type="LexItem">nosotros</seg>
-                        <seg type="LexItem">vamos <seg>a</seg>
-                        </seg>
-                        <seg type="LexItem">obedecer</seg>
+                        <w>todos</w>
+                        <w>nosotros</w>
+                        <w>vamos a</w>
+                        <w>obedecer</w>
                         <pc>,</pc>
-                        <seg type="LexItem">la</seg>
-                        <seg type="LexItem">gente</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">está</seg>
-                        <seg type="LexItem">con</seg>
-                        <seg type="LexItem">el presidente<pc>.</pc>
-                        </seg>
+                        <w>la</w>
+                        <w>gente</w>
+                        <w>que</w>
+                        <w>está</w>
+                        <w>con</w>
+                        <w>el presidente.</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s23-esp"/>
+                        <link target="#s23-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1926,20 +2242,27 @@
                   <cell>
                      <seg xml:lang="es" xml:id="s24-esp" type="S">
                         <pc>¿</pc>
-                        <seg xml:id="s24-es-0" type="LexItem">Qué</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">
-                           <seg>lo</seg>
-                           <seg>que</seg>
-                        </seg>
-                        <seg type="LexItem">va <seg>a</seg>
-                        </seg>
-                        <seg type="LexItem">faltar</seg>
-                        <seg type="LexItem">en</seg>
-                        <seg type="LexItem">nuestro</seg>
-                        <seg type="LexItem">pueblo-silla</seg>
+                        <w xml:id="s24-es-0">Qué</w>
+                        <w>es</w>
+                        <w>loque</w>
+                        <w>va a</w>
+                        <w>faltar</w>
+                        <w>en</w>
+                        <w>nuestro</w>
+                        <w>pueblo-silla</w>
                         <pc>?</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s24-esp"/>
+                        <link target="#s24-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -1962,7 +2285,6 @@
                      </seg>
                      <spanGrp type="translation">
                         <span target="#s25-mix" xml:lang="en" cert="medium">And here is where they will be seated, because this way, he has his gift.</span>
-                        
                         <span target="#d1e2051" xml:lang="en">and</span>
                         <span target="#d1e2053" xml:lang="en">here</span>
                         <span target="#d1e2055" xml:lang="en">is </span>
@@ -1970,29 +2292,43 @@
                         <span target="#d1e2059 #d1e2061" xml:lang="en">they will be seated</span>
                         <span target="#d1e2065" xml:lang="en">because</span>
                         <span target="#d1e2067" xml:lang="en">this way</span>
-                        <span target="#d1e2071" xml:lang="en">has</span>                      
+                        <span target="#d1e2071" xml:lang="en">has</span>
                         <span target="#d1e2074 #d1e2076" xml:lang="en" cert="low">his gift</span>
                      </spanGrp>
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s25-esp" type="S">
-                        <seg xml:id="s25-es-0" type="LexItem">Y</seg>
-                        <seg type="LexItem">aquí</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">donde</seg>
-                        <seg type="LexItem">
+                        <w xml:id="s25-es-0">Y</w>
+                        <w>aquí</w>
+                        <w>es</w>
+                        <w>donde</w>
+                        <w>
                          se van a
-                        </seg>
-                        <seg type="LexItem">sentar</seg>
+                        </w>
+                        <w>sentar</w>
                         <pc>,</pc>
-                        <seg type="LexItem">por qué</seg>
-                        <seg type="LexItem">así</seg>
+                        <w>por qué</w>
+                        <w>así</w>
                         <pc>,</pc>
-                        <seg type="LexItem">tiene</seg>
-                        <seg type="LexItem">su</seg>
-                        <seg type="LexItem">don</seg>
+                        <w>tiene</w>
+                        <w>su</w>
+                        <w>don</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s25-esp"/>
+                        <link target="#s25-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -2002,7 +2338,8 @@
                         <pc>,</pc>
                         <w xml:id="d1e2118">nkuchain</w>
                         <w xml:id="d1e2120">ini</w>
-                        <w xml:id="d1e2122" cert="low">kueni</w><!-- does this apply to both verbs? -->
+                        <w xml:id="d1e2122" cert="low">kueni</w>
+                        <!-- does this apply to both verbs? -->
                         <pc>.</pc>
                      </seg>
                      <spanGrp type="translation">
@@ -2014,11 +2351,16 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" rend="bold" xml:id="s26-esp" type="S">
-                        <seg xml:id="s26-es-0" type="LexItem">No se entristezcan</seg>
+                        <w xml:id="s26-es-0">No se entristezcan</w>
                         <pc>,</pc>
-                        <seg type="LexItem">no se turben</seg>
+                        <w>no se turben</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s26-esp"/>
+                        <link target="#s26-es-0"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -2063,16 +2405,21 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s27-esp">
-                        <seg xml:id="s27-es-0" type="LexItem">se juntaron</seg>
+                        <w xml:id="s27-es-0">se juntaron</w>
                         <!-- the spanish is translated as 3pl but the form is not inflected for person -->
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s27-esp"/>
+                        <link target="#s27-es-0"/>
+                     </linkGrp>
                      <pc>,</pc>
                   </cell>
                </row>
                <row>
                   <cell>
                      <seg xml:lang="mix" xml:id="s28-mix">
-                        <w xml:id="d1e2181">ntuyuku</w><pc>,</pc>
+                        <w xml:id="d1e2181">ntuyuku</w>
+                        <pc>,</pc>
                      </seg>
                      <spanGrp type="translation">
                         <span target="#d1e2181" xml:lang="en" cert="low">prepared</span>
@@ -2081,9 +2428,13 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s28-esp">
-                        <seg xml:id="s28-es-0" type="LexItem">se formaron</seg>
+                        <w xml:id="s28-es-0">se formaron</w>
                         <!-- the spanish is translated as 3pl but the form is not inflected for person -->
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s28-esp"/>
+                        <link target="#s28-es-0"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -2113,14 +2464,23 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s29-esp" type="S">
-                        <seg xml:id="s29-es-0" type="LexItem">Esta</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">la casa</seg>
-                        <seg type="LexItem">detodos</seg>
+                        <w xml:id="s29-es-0">Esta</w>
+                        <w>es</w>
+                        <w>la casa</w>
+                        <w>detodos</w>
                         <pc>,</pc>
-                        <seg type="LexItem">y</seg>
-                        <seg type="LexItem">de todos nosotros</seg>
+                        <w>y</w>
+                        <w>de todos nosotros</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s29-esp"/>
+                        <link target="#s29-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -2151,7 +2511,8 @@
                         <span target="#d1e2248" xml:lang="en">is</span>
                         <span target="#d1e2250" xml:lang="en">the one that</span>
                         <span target="#d1e2252" xml:lang="en" cert="medium">announces</span>
-                        <span target="#d1e2254" xml:lang="en" cert="low"/><!-- is this "3sg.f.m" or conjunction -->
+                        <span target="#d1e2254" xml:lang="en" cert="low"/>
+                        <!-- is this "3sg.f.m" or conjunction -->
                         <span target="#d1e2258 #d1e2260" xml:lang="en">the other one</span>
                         <span target="#d1e2262" xml:lang="en">is</span>
                         <span target="#d1e2265" xml:lang="en">the one who</span>
@@ -2160,18 +2521,30 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s30-esp" type="S">
-                        <seg xml:id="s30-es-0" type="LexItem">Y</seg>
-                        <seg type="LexItem">una de estas</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">la que</seg>
-                        <seg type="LexItem">anuncia</seg>
+                        <w xml:id="s30-es-0">Y</w>
+                        <w>una de estas</w>
+                        <w>es</w>
+                        <w>la que</w>
+                        <w>anuncia</w>
                         <pc>,</pc>
-                        <seg type="LexItem">la otra</seg>
-                        <seg type="LexItem">es</seg>
-                        <seg type="LexItem">la que</seg>
-                        <seg type="LexItem">piensa</seg>
+                        <w>la otra</w>
+                        <w>es</w>
+                        <w>la que</w>
+                        <w>piensa</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s30-esp"/>
+                        <link target="#s30-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -2187,7 +2560,10 @@
                         <w xml:id="d1e2317">ñuyivi</w>
                         <pc>,</pc>
                         <w xml:id="d1e2321">ini</w>
-                        <w xml:id="d1e2323" norm="Ñu'u Ncha'i"><w>Ñu'u</w> <w>Ncha'i</w></w>
+                        <w xml:id="d1e2323" norm="Ñu'u Ncha'i">
+                           <w>Ñu'u</w>
+                           <w>Ncha'i</w>
+                        </w>
                         <pc>,</pc>
                      </seg>
                      <spanGrp type="translation">
@@ -2202,13 +2578,20 @@
                   <cell>
                      <seg xml:lang="es" xml:id="s31-esp" type="S">
                         <pc>...</pc>
-                        <seg xml:id="s31-es-0" type="LexItem">en</seg>
-                        <seg type="LexItem">el mundo</seg>
+                        <w xml:id="s31-es-0">en</w>
+                        <w>el mundo</w>
                         <pc>,</pc>
-                        <seg type="LexItem">en</seg>
-                        <seg type="LexItem">la Tierra</seg>
+                        <w>en</w>
+                        <w>la Tierra</w>
                         <pc>,</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s31-esp"/>
+                        <link target="#s31-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -2225,7 +2608,8 @@
                         <pc>,</pc>
                         <w xml:id="d1e2358">ma</w>
                         <w xml:id="d1e2360">kuchain</w>
-                        <w xml:id="d1e2362" cert="low">kue</w><!-- why is this here? why not "ma kuchain ini kueni"? -->
+                        <w xml:id="d1e2362" cert="low">kue</w>
+                        <!-- why is this here? why not "ma kuchain ini kueni"? -->
                         <w xml:id="d1e2364">ini</w>
                         <w xml:id="d1e2366">ni</w>
                         <pc>,</pc>
@@ -2239,13 +2623,19 @@
                   <cell>
                      <seg xml:lang="es" xml:id="s32-esp" type="S">
                         <pc>...</pc>
-                        <seg xml:id="s32-es-0" type="LexItem">no se pongan
-                        </seg>
-                        <seg type="LexItem">tristes</seg>
+                        <w xml:id="s32-es-0">no se pongan
+                        </w>
+                        <w>tristes</w>
                         <pc>,</pc>
-                        <seg type="LexItem">no se turben
-                        </seg>
+                        <w>no se turben
+                        </w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s32-esp"/>
+                        <link target="#s32-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
                <row>
@@ -2270,15 +2660,21 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s33-esp" type="S">
-                        <seg xml:id="s33-es-0" type="LexItem">No</seg>
-                        <seg type="LexItem">se pon<seg>gan</seg>
-                        </seg>
-                        <seg type="LexItem">tristes</seg>
+                        <w xml:id="s33-es-0">No</w>
+                        <w>se pongan</w>
+                        <w>tristes</w>
                         <pc>,</pc>
-                        <seg type="LexItem">no</seg>
-                        <seg type="LexItem">se turb<seg>en</seg>
-                        </seg>
+                        <w>no</w>
+                        <w>se turben</w>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s33-esp"/>
+                        <link target="#s33-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -2319,19 +2715,32 @@
                   </cell>
                   <cell>
                      <seg xml:lang="es" xml:id="s34-esp" type="S">
-                        <seg xml:id="s34-es-0" type="LexItem">Donde</seg>
-                        <seg type="LexItem">está</seg>
-                        <seg type="LexItem">una</seg>
-                        <seg type="LexItem">milpa</seg>
+                        <w xml:id="s34-es-0">Donde</w>
+                        <w>está</w>
+                        <w>una</w>
+                        <w>milpa</w>
                         <pc>,</pc>
-                        <seg type="LexItem">salió</seg>
-                        <seg type="LexItem">una</seg>
-                        <seg type="LexItem">flor</seg>
-                        <seg type="LexItem">que</seg>
-                        <seg type="LexItem">parece</seg>
-                        <seg type="LexItem">persona</seg>
+                        <w>salió</w>
+                        <w>una</w>
+                        <w>flor</w>
+                        <w>que</w>
+                        <w>parece</w>
+                        <w>persona</w>
                         <pc>.</pc>
                      </seg>
+                     <linkGrp type="translation">
+                        <link target="#s34-esp"/>
+                        <link target="#s34-es-0"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                        <link target="#"/>
+                     </linkGrp>
                   </cell>
                </row>
             </table>
@@ -2368,7 +2777,8 @@
                         <seg xml:lang="mix" xml:id="s35-mix" type="S" next="#s36-mix">
                            <pc>¿</pc>
                            <w xml:id="d1e2515">Nchii</w>
-                           <w xml:id="d1e2517" cert="low">vi</w><!-- what is this doing here? (especially before the "kuu"?) -->
+                           <w xml:id="d1e2517" cert="low">vi</w>
+                           <!-- what is this doing here? (especially before the "kuu"?) -->
                            <w xml:id="d1e2519">kuu</w>
                            <w xml:id="d1e2521">nuu</w>
                            <w xml:id="d1e2523">inkaa</w>
@@ -2388,19 +2798,32 @@
                      <cell>
                         <seg xml:lang="es" xml:id="s35-esp" type="S">
                            <pc>¿</pc>
-                           <seg xml:id="s35-es-0" type="LexItem">Dónde</seg>
-                           <seg type="LexItem">es</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">está</seg>
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">persona</seg>
+                           <w xml:id="s35-es-0">Dónde</w>
+                           <w>es</w>
+                           <w>que</w>
+                           <w>está</w>
+                           <w>una</w>
+                           <w>persona</w>
                            <pc>?</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s35-esp"/>
+                           <link target="#s35-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s36-mix" type="S" prev="#s35-mix" next="#s37-mix">
+                        <seg xml:lang="mix"
+                             xml:id="s36-mix"
+                             type="S"
+                             prev="#s35-mix"
+                             next="#s37-mix">
                            <w xml:id="d1e2552">Kuu</w>
                            <w xml:id="d1e2554">nuu</w>
                            <w xml:id="d1e2556">kuu</w>
@@ -2421,23 +2844,40 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s36-esp" type="S">
-                           <seg xml:id="s36-es-0" type="LexItem">Son</seg>
-                           <seg type="LexItem">los</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">están</seg>
-                           <seg type="LexItem">en</seg>
-                           <seg type="LexItem">lugar</seg>
-                           <seg type="LexItem">del</seg>
-                           <seg type="LexItem">Señor</seg>
-                           <seg type="LexItem">santo</seg>
-                           <seg type="LexItem">Gabriel</seg>
+                           <w xml:id="s36-es-0">Son</w>
+                           <w>los</w>
+                           <w>que</w>
+                           <w>están</w>
+                           <w>en</w>
+                           <w>lugar</w>
+                           <w>del</w>
+                           <w>Señor</w>
+                           <w>santo</w>
+                           <w>Gabriel</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s36-esp"/>
+                           <link target="#s36-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s37-mix" type="S" prev="#s36-mix" next="#s38-mix">
+                        <seg xml:lang="mix"
+                             xml:id="s37-mix"
+                             type="S"
+                             prev="#s36-mix"
+                             next="#s38-mix">
                            <w xml:id="d1e2598">Nivi</w>
                            <w xml:id="d1e2600">kunkukuu</w>
                            <w xml:id="d1e2602">padrino</w>
@@ -2461,17 +2901,28 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s37-esp" type="S">
-                           <seg xml:id="s37-es-0" type="LexItem">Persona</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">va a ser</seg>
-                           <seg type="LexItem">padrino</seg>
+                           <w xml:id="s37-es-0">Persona</w>
+                           <w>que</w>
+                           <w>va a ser</w>
+                           <w>padrino</w>
                            <pc>,</pc>
-                           <seg type="LexItem">persona</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">va a ser</seg>
-                           <seg type="LexItem">madrina</seg>
+                           <w>persona</w>
+                           <w>que</w>
+                           <w>va a ser</w>
+                           <w>madrina</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s37-esp"/>
+                           <link target="#s37-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
@@ -2501,17 +2952,28 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s38-esp" type="S">
-                           <seg xml:id="s38-es-0" type="LexItem">Persona</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">va a ser</seg>
-                           <seg type="LexItem">estrella</seg>
+                           <w xml:id="s38-es-0">Persona</w>
+                           <w>que</w>
+                           <w>va a ser</w>
+                           <w>estrella</w>
                            <pc>,</pc>
-                           <seg type="LexItem">persona</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">va a ser</seg>
-                           <seg type="LexItem">luciérnaga</seg>
+                           <w>persona</w>
+                           <w>que</w>
+                           <w>va a ser</w>
+                           <w>luciérnaga</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s38-esp"/>
+                           <link target="#s38-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                </table>
@@ -2559,8 +3021,13 @@
                         </seg>
                         <spanGrp type="translation">
                            <span target="#s39-mix" xml:lang="en">Where is a clean orchard?</span>
-                           <span target="#d1e2737 #d1e2739 #d1e2741 #d1e2743" xml:lang="en" cert="medium">where is</span>
-                           <span target="#d1e2737 #d1e2739 #d1e2741 #d1e2743" xml:lang="en" cert="medium" type="literal">where is it a place where</span>
+                           <span target="#d1e2737 #d1e2739 #d1e2741 #d1e2743"
+                                 xml:lang="en"
+                                 cert="medium">where is</span>
+                           <span target="#d1e2737 #d1e2739 #d1e2741 #d1e2743"
+                                 xml:lang="en"
+                                 cert="medium"
+                                 type="literal">where is it a place where</span>
                            <span target="#d1e2747" xml:lang="en">orchard</span>
                            <span target="#d1e2747" xml:lang="en">garden</span>
                            <span target="#d1e2749" xml:lang="en">clean</span>
@@ -2569,13 +3036,21 @@
                      <cell>
                         <seg xml:lang="es" xml:id="s39-esp" type="S">
                            <pc>¿</pc>
-                           <seg xml:id="s39-es-0" type="LexItem">Dónde</seg>
-                           <seg type="LexItem">está</seg>
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">huerta</seg>
-                           <seg type="LexItem">limpia</seg>
+                           <w xml:id="s39-es-0">Dónde</w>
+                           <w>está</w>
+                           <w>una</w>
+                           <w>huerta</w>
+                           <w>limpia</w>
                            <pc>?</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s39-esp"/>
+                           <link target="#s39-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
@@ -2590,13 +3065,19 @@
                            <w xml:id="d1e2784">ka</w>
                            <w xml:id="d1e2786">in</w>
                            <w xml:id="d1e2788">loverta</w>
-                           <w xml:id="d1e2790">ntatu</w><!-- pure -->
+                           <w xml:id="d1e2790">ntatu</w>
+                           <!-- pure -->
                            <pc>?</pc>
                         </seg>
                         <spanGrp type="translation">
                            <span target="#s40-mix" xml:lang="en">Where is a pure orchard longer?</span>
-                           <span target="#d1e2774 #d1e2776 #d1e2778 #d1e2780" xml:lang="en" cert="medium">where is</span>
-                           <span target="#d1e2774 #d1e2776 #d1e2778 #d1e2780" xml:lang="en" cert="medium" type="literal">where is it a place where</span>
+                           <span target="#d1e2774 #d1e2776 #d1e2778 #d1e2780"
+                                 xml:lang="en"
+                                 cert="medium">where is</span>
+                           <span target="#d1e2774 #d1e2776 #d1e2778 #d1e2780"
+                                 xml:lang="en"
+                                 cert="medium"
+                                 type="literal">where is it a place where</span>
                            <span target="#d1e2782 #d1e2784" xml:lang="en">longer</span>
                            <span target="#d1e2788" xml:lang="en">garden</span>
                            <span target="#d1e2788" xml:lang="en">orchard</span>
@@ -2606,14 +3087,23 @@
                      <cell>
                         <seg xml:lang="es" xml:id="s40-esp" type="S">
                            <pc>¿</pc>
-                           <seg xml:id="s40-es-0" type="LexItem">Dónde</seg>
-                           <seg type="LexItem">es</seg>
-                           <seg type="LexItem">más largo</seg>
-                           <seg type="LexItem">un</seg>
-                           <seg type="LexItem">huerto</seg>
-                           <seg type="LexItem">puro</seg>
+                           <w xml:id="s40-es-0">Dónde</w>
+                           <w>es</w>
+                           <w>más largo</w>
+                           <w>un</w>
+                           <w>huerto</w>
+                           <w>puro</w>
                            <pc>?</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s40-esp"/>
+                           <link target="#s40-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
@@ -2642,19 +3132,32 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s41-esp" type="S">
-                           <seg xml:id="s41-es-0" type="LexItem">Donde</seg>
-                           <seg type="LexItem">está</seg>
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">milpa</seg>
+                           <w xml:id="s41-es-0">Donde</w>
+                           <w>está</w>
+                           <w>una</w>
+                           <w>milpa</w>
                            <pc>,</pc>
-                           <seg type="LexItem">salió</seg>
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">flor</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg rend="bold" type="LexItem">parece</seg>
-                           <seg type="LexItem">persona</seg>
+                           <w>salió</w>
+                           <w>una</w>
+                           <w>flor</w>
+                           <w>que</w>
+                           <w rend="bold">parece</w>
+                           <w>persona</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s41-esp"/>
+                           <link target="#s41-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                </table>
@@ -2680,7 +3183,11 @@
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s42-mix" type="S" next="#s42-mix" part="I">
+                        <seg xml:lang="mix"
+                             xml:id="s42-mix"
+                             type="S"
+                             next="#s42-mix"
+                             part="I">
                            <w xml:id="d1e2884">Cha</w>
                            <w xml:id="d1e2886">ian</w>
                            <w xml:id="d1e2888">yo'o</w>
@@ -2695,16 +3202,27 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s42-esp" type="S">
-                           <seg xml:id="s42-es-0" type="LexItem">Y</seg>
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">aquí</seg>
+                           <w xml:id="s42-es-0">Y</w>
+                           <w>una</w>
+                           <w>aquí</w>
                            <pc>,</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s42-esp"/>
+                           <link target="#s42-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s43-mix" type="S" prev="#s42-mix" next="#s44-mix" part="M">
+                        <seg xml:lang="mix"
+                             xml:id="s43-mix"
+                             type="S"
+                             prev="#s42-mix"
+                             next="#s44-mix"
+                             part="M">
                            <w xml:id="d1e2905">kuu</w>
                            <w xml:id="d1e2907">ña</w>
                            <w xml:id="d1e2909">ntakani</w>
@@ -2720,17 +3238,29 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s43-esp" type="S">
-                           <seg xml:id="s43-es-0" type="LexItem">es</seg>
-                           <seg type="LexItem">la</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">anuncia</seg>
+                           <w xml:id="s43-es-0">es</w>
+                           <w>la</w>
+                           <w>que</w>
+                           <w>anuncia</w>
                            <pc>,</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s43-esp"/>
+                           <link target="#s43-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s44-mix" type="S" prev="#s43-mix" next="#s45-mix" part="M">
+                        <seg xml:lang="mix"
+                             xml:id="s44-mix"
+                             type="S"
+                             prev="#s43-mix"
+                             next="#s45-mix"
+                             part="M">
                            <w xml:id="d1e2930">ian</w>
                            <w xml:id="d1e2932">yo'o</w>
                            <pc>,</pc>
@@ -2743,15 +3273,24 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s44-esp" type="S">
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">aquí</seg>
+                           <w>una</w>
+                           <w>aquí</w>
                            <pc>,</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s44-esp"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s45-mix" type="S" prev="#s44-mix" part="F">
+                        <seg xml:lang="mix"
+                             xml:id="s45-mix"
+                             type="S"
+                             prev="#s44-mix"
+                             part="F">
                            <w xml:id="d1e2947">kuu</w>
                            <w xml:id="d1e2949">ña</w>
                            <w xml:id="d1e2951">ntakanini</w>
@@ -2766,16 +3305,26 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s45-esp" type="S">
-                           <seg xml:id="s45-es-0" type="LexItem">es</seg>
-                           <seg type="LexItem">la que</seg>
-                           <seg type="LexItem">piensa</seg>
+                           <w xml:id="s45-es-0">es</w>
+                           <w>la que</w>
+                           <w>piensa</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s45-esp"/>
+                           <link target="#s45-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                </table>
                <lb/>
-               <p xml:lang="es"> A la presidencia se le atribuye la facultad de hablar y al  comisariado o al síndico la facultad de pensar. Note que <seg><foreign> <w xml:lang="mix">ña</w></foreign></seg> es un pronombre inanimado.</p>
+               <p xml:lang="es"> A la presidencia se le atribuye la facultad de hablar y al  comisariado o al síndico la facultad de pensar. Note que <seg>
+                     <foreign>
+                        <w xml:lang="mix">ña</w>
+                     </foreign>
+                  </seg> es un pronombre inanimado.</p>
                <lb/>
             </div>
             <div>
@@ -2794,7 +3343,11 @@
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s46-mix" type="S" next="#s47-mix" part="I">
+                        <seg xml:lang="mix"
+                             xml:id="s46-mix"
+                             type="S"
+                             next="#s47-mix"
+                             part="I">
                            <w xml:id="d1e2992">Tatu</w>
                            <w xml:id="d1e2994" orig="niyaꞌa">niya'a</w>
                            <w xml:id="d1e2996" orig="ntaꞌa">nta'a</w>
@@ -2809,16 +3362,26 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s46-esp" type="S">
-                           <seg xml:id="s46-es-0" type="LexItem">Si</seg>
-                           <seg type="LexItem">se han pasado</seg>
-                           <seg type="LexItem">las manos</seg>
+                           <w xml:id="s46-es-0">Si</w>
+                           <w>se han pasado</w>
+                           <w>las manos</w>
                            <pc>,</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s46-esp"/>
+                           <link target="#s46-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s47-mix" type="S" prev="#s46-mix" part="M">
+                        <seg xml:lang="mix"
+                             xml:id="s47-mix"
+                             type="S"
+                             prev="#s46-mix"
+                             part="M">
                            <w xml:id="d1e3019" orig="niyaꞌa">niya'a</w>
                            <w xml:id="d1e3021" orig="tsaꞌa">tsa'a</w>
                            <pc>,</pc>
@@ -2831,21 +3394,32 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s47-esp" type="S">
-                           <seg xml:id="s47-es-0" type="LexItem">se han pasado</seg>
-                           <seg type="LexItem">los pies</seg>
+                           <w xml:id="s47-es-0">se han pasado</w>
+                           <w>los pies</w>
                            <pc>,</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s47-esp"/>
+                           <link target="#s47-es-0"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s48-mix" type="S" part="M" prev="#s47-mix">
+                        <seg xml:lang="mix"
+                             xml:id="s48-mix"
+                             type="S"
+                             part="M"
+                             prev="#s47-mix">
                            <w xml:id="d1e3042">in</w>
                            <w xml:id="d1e3044">nivi</w>
                            <w xml:id="d1e3046">luu</w>
-                           <w xml:id="d1e3048">ntoyo</w><!-- lays, is seated?, is present -->                      
+                           <w xml:id="d1e3048">ntoyo</w>
+                           <!-- lays, is seated?, is present -->
                            <w xml:id="d1e3050">nuu</w>
-                           <w xml:id="d1e3052">tsion</w>      <!-- with us! -->
+                           <w xml:id="d1e3052">tsion</w>
+                           <!-- with us! -->
                            <pc>…</pc>
                         </seg>
                         <spanGrp type="translation">
@@ -2861,14 +3435,23 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s48-esp" type="S">
-                           <seg xml:id="s48-es-0" type="LexItem">de</seg>
-                           <seg type="LexItem">una</seg>
-                           <seg type="LexItem">persona</seg>
-                           <seg type="LexItem">que</seg>
-                           <seg type="LexItem">está</seg>
-                           <seg type="LexItem">con nosotros</seg>
+                           <w xml:id="s48-es-0">de</w>
+                           <w>una</w>
+                           <w>persona</w>
+                           <w>que</w>
+                           <w>está</w>
+                           <w>con nosotros</w>
                            <pc>…</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s48-esp"/>
+                           <link target="#s48-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                </table>
@@ -2897,15 +3480,21 @@
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s49-mix" type="S" part="I" next="#s50-mix">
+                        <seg xml:lang="mix"
+                             xml:id="s49-mix"
+                             type="S"
+                             part="I"
+                             next="#s50-mix">
                            <w xml:id="d1e3094">Cha</w>
                            <w xml:id="d1e3096">ika</w>
-                           <w xml:id="d1e3098">ntiin</w>   <!-- grab -->
+                           <w xml:id="d1e3098">ntiin</w>
+                           <!-- grab -->
                            <w xml:id="d1e3100">na</w>
                            <w xml:id="d1e3102">ra</w>
                            <pc>,</pc>
                            <w xml:id="d1e3106">ika</w>
-                           <w xml:id="d1e3108">numi</w>  <!-- embrace/(hug?) -->
+                           <w xml:id="d1e3108">numi</w>
+                           <!-- embrace/(hug?) -->
                            <w xml:id="d1e3110">na</w>
                            <pc>,</pc>
                         </seg>
@@ -2920,19 +3509,31 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s49-esp" type="S">
-                           <seg xml:id="s49-es-0" type="LexItem">Y</seg>
-                           <seg type="LexItem">allí</seg>
-                           <seg type="LexItem">agarraron</seg>
+                           <w xml:id="s49-es-0">Y</w>
+                           <w>allí</w>
+                           <w>agarraron</w>
                            <pc>,</pc>
-                           <seg type="LexItem">allí</seg>
-                           <seg type="LexItem">abrazaron</seg>
+                           <w>allí</w>
+                           <w>abrazaron</w>
                            <pc>,</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s49-esp"/>
+                           <link target="#s49-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s50-mix" type="S" part="M" prev="#s49-mix">
+                        <seg xml:lang="mix"
+                             xml:id="s50-mix"
+                             type="S"
+                             part="M"
+                             prev="#s49-mix">
                            <w xml:id="d1e3133" orig="tuꞌun-ntusu">tu'un-ntusu</w>
                            <w xml:id="d1e3135">misericordia</w>
                            <w xml:id="d1e3137" orig="Stoꞌo Nchuxi">Sto'o Nchuxi</w>
@@ -2948,12 +3549,20 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s50-esp" type="S">
-                           <seg xml:id="s50-es-0" type="LexItem">La palabra-voz</seg>
-                           <seg type="LexItem">de</seg>
-                           <seg type="LexItem">misericordia</seg>
-                           <seg type="LexItem">de</seg>
-                           <seg type="LexItem">Dios</seg>
+                           <w xml:id="s50-es-0">La palabra-voz</w>
+                           <w>de</w>
+                           <w>misericordia</w>
+                           <w>de</w>
+                           <w>Dios</w>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s50-esp"/>
+                           <link target="#s50-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                </table>
@@ -2973,14 +3582,20 @@
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s51-mix" type="S" part="I" next="#s52-mix">
+                        <seg xml:lang="mix"
+                             xml:id="s51-mix"
+                             type="S"
+                             part="I"
+                             next="#s52-mix">
                            <w xml:id="d1e3167">Kuu</w>
                            <w xml:id="d1e3169">nuu</w>
-                           <w xml:id="d1e3171">kunkaa</w>    <!-- estar (potential) -->
+                           <w xml:id="d1e3171">kunkaa</w>
+                           <!-- estar (potential) -->
                            <pc>,</pc>
                            <w xml:id="d1e3175">kuu</w>
                            <w xml:id="d1e3177">nuu</w>
-                           <w xml:id="d1e3179">kunchichi</w>       <!-- stop (potential) -->
+                           <w xml:id="d1e3179">kunchichi</w>
+                           <!-- stop (potential) -->
                            <pc>,</pc>
                         </seg>
                         <spanGrp type="translation">
@@ -2995,22 +3610,37 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s51-esp" type="S">
-                           <seg xml:id="s51-es-0" type="LexItem">Es</seg>
-                           <seg type="LexItem">donde</seg>
-                           <seg type="LexItem">van a estar</seg>
+                           <w xml:id="s51-es-0">Es</w>
+                           <w>donde</w>
+                           <w>van a estar</w>
                            <pc>,</pc>
-                           <seg type="LexItem">es</seg>
-                           <seg type="LexItem">donde</seg>
-                           <seg type="LexItem">se van a</seg>
-                           <seg type="LexItem">parar</seg>
+                           <w>es</w>
+                           <w>donde</w>
+                           <w>se van a</w>
+                           <w>parar</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s51-esp"/>
+                           <link target="#s51-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                   <row>
                      <cell>
-                        <seg xml:lang="mix" xml:id="s52-mix" type="S" part="F" prev="#s51-mix">
-                           <w xml:id="d1e3215">Yuyeꞌe</w>  <!-- outside -->
+                        <seg xml:lang="mix"
+                             xml:id="s52-mix"
+                             type="S"
+                             part="F"
+                             prev="#s51-mix">
+                           <w xml:id="d1e3215">Yuyeꞌe</w>
+                           <!-- outside -->
                            <w xml:id="d1e3217">antivi</w>
                            <pc>,</pc>
                            <w xml:id="d1e3221">ini</w>
@@ -3028,15 +3658,24 @@
                      </cell>
                      <cell>
                         <seg xml:lang="es" xml:id="s52-esp" type="S">
-                           <seg xml:id="s52-es-0" type="LexItem">Afuera</seg>
-                           <seg type="LexItem">del</seg>
-                           <seg type="LexItem">cielo</seg>
+                           <w xml:id="s52-es-0">Afuera</w>
+                           <w>del</w>
+                           <w>cielo</w>
                            <pc>,</pc>
-                           <seg type="LexItem">adentro</seg>
-                           <seg type="LexItem">de</seg>
-                           <seg type="LexItem">la gloria</seg>
+                           <w>adentro</w>
+                           <w>de</w>
+                           <w>la gloria</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#s52-esp"/>
+                           <link target="#s52-es-0"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                           <link target="#"/>
+                        </linkGrp>
                      </cell>
                   </row>
                </table>
