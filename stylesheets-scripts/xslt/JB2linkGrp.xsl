@@ -81,8 +81,25 @@
     </xsl:template>
      -->
     
-    <!-- for content in a table /cell  -->
+    <!-- for content in a table /cell  
     <xsl:template match="cell/seg[@xml:lang='es']">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+        
+        
+        <linkGrp type="translation">     
+            <link target="#{@xml:id}"/>
+            <xsl:for-each select="w">
+                <link target="#{@xml:id}"/>
+            </xsl:for-each>
+        </linkGrp>       
+        
+    </xsl:template>
+    -->
+    
+    <!-- for sequential <seg> not in cell or other structure  -->
+    <xsl:template match="seg[@xml:lang='es' or @xml:lang='en']">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>

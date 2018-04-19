@@ -1239,8 +1239,7 @@
                         <w xml:id="d1e1111">tata</w>
                      </w>
                      <pc>(</pc><foreign>
-                        <w xml:lang="es" xml:id="d1e1106esp">
-                           
+                        <w xml:lang="es" xml:id="d1e1106esp">                      
                            <w xml:id="d1e1106esp1">semilla</w>
                            <pc>-</pc>
                            <w xml:id="d1e1106esp2">semilla de maíz</w>
@@ -1259,18 +1258,22 @@
                </row>
                <row>
                   <cell>
-                     <w xml:lang="alv-mix" type="compound">fahuij<pc>-</pc>fadzacu</w>
+                     <w xml:lang="alv-mix" type="compound" norm="jahuij-fadzacu" xml:id="d1e1106-alv">
+                        <w xml:id="d1e1106-alv1">fahuij</w><pc>-</pc><w xml:id="d1e1106-alv2">fadzacu</w>
+                     </w>
                   </cell>
                   <cell>
-                     <seg xml:lang="es" type="S">
+                     <seg xml:lang="es" xml:id="d1e1107-esp" type="phrase">
                         <w>bella cosa</w>
-                        <pc>/</pc>
-                        <w>hermoso</w>
                      </seg>
+                        <pc>/</pc>
+                     <w xml:lang="es" xml:id="d1e1108-esp">hermoso</w>
+
                      <linkGrp type="translation">
-                        <link target="#"/>
-                        <link target="#"/>
-                        <link target="#"/>
+                        <link target="#d1e1106-alv #d1e1107-esp"/>
+                        <link target="#d1e1106-alv #d1e1108-esp"/>
+                        <link target="#d1e1136  #d1e1107-esp"/>
+                        <link target="#d1e1136 #d1e1108-esp"/>
                      </linkGrp>
                   </cell>
                   <cell>
@@ -1284,27 +1287,34 @@
                         <span target="#d1e1136a" xml:lang="en" type="literal">clean</span>
                         <span target="#d1e1140" xml:lang="en" type="literal">pure</span>
                      </spanGrp>
-                     <seg xml:lang="es" type="S">(limpio<pc>-</pc>puro)</seg>
+                     
+                     (<w xml:lang="es"  xml:id="d1e1136-esp-lit">limpio-puro</w>)
+                     <!-- this is already translated, i'm not including a <linkGrp> for it as it's redundant -->
+                     
                      <linkGrp type="translation">
-                        <link target="#"/>
+                        <link target="#d1e1106-alv #d1e1136"/>
+                        <link target="#d1e1106-alv #d1e1136"/>     
                      </linkGrp>
                   </cell>
                </row>
                <row>
                   <cell>
-                     <w xml:lang="alv-mix">
-                        <w>eequevuiñuu</w>
+                     <w xml:lang="alv-mix" xml:id="d1e1107-alv">
+                        <w xml:id="d1e1107-alv1">eequevuiñuu</w>
                         <pc>-</pc>
-                        <w>duvuiniñu</w>
+                        <w xml:id="d1e1107-alv2">duvuiniñu</w>
                      </w>
                   </cell>
                   <cell>
-                     <w xml:lang="es">
-                        <w>todo</w>
-                        <w>el tiempo</w>
+                     <seg xml:lang="es" type="phrase" xml:id="d1fesp107">
+                        <w>todo el tiempo</w>
                         <pc>,</pc>
-                        <w>completo</w>
-                     </w>
+                     <w>completo</w>
+                     </seg>
+                     <linkGrp type="translation">
+                        <link target="#d1fesp107 #d1e1107-alv"/>
+                        <link target="#d1e1107-alv #d1e1168"/>
+                     </linkGrp>
                   </cell>
                   <cell>
                      <w xml:lang="mix" xml:id="d1e1168" norm="ntuu-ñuu">
@@ -1317,10 +1327,13 @@
                         <span target="#d1e1168a" xml:lang="en" type="literal">day</span>
                         <span target="#d1e1172" xml:lang="en" type="literal">night</span>
                      </spanGrp>
+                     
                      <pc/>
                      <seg xml:lang="es" type="S">día<pc>-</pc>noche</seg>
+                     <!-- this is already translated, i'm not including a <linkGrp> for it as it's redundant -->
+                     
                      <linkGrp type="translation">
-                        <link target="#"/>
+                        <link target="#d1e1168 #d1e1107-alv"/>
                      </linkGrp>
                      <pc>)</pc>
                   </cell>
@@ -1331,15 +1344,19 @@
                         <w>ñuu</w>
                         <pc>-</pc>
                         <w>tayu</w>
+                     </seg>
                         <pc>,</pc>
+                     
                         <w>tayutoniñe</w>
                         <pc>,</pc>
                         <w>yuvuitayu</w>
-                     </seg>
+               
                   </cell>
                   <cell>
-                     <seg xml:lang="es" type="S">asentamiento<pc>,</pc> pueblo (donde
-                        están establecidos)</seg>
+                     <seg xml:lang="es" type="S">
+                        <w>asentamiento</w><pc>,</pc>
+                        <w>pueblo</w>
+                        (donde están establecidos)</seg>
                      <linkGrp type="translation">
                         <link target="#"/>
                      </linkGrp>
@@ -1355,6 +1372,7 @@
                         <span target="#d1e1207a" xml:lang="en" type="literal">town</span>
                         <span target="#d1e1211" xml:lang="en" type="literal">chair</span>
                      </spanGrp>
+                     
                      <seg xml:lang="es" type="S">(pueblo<pc>-</pc>silla)</seg>
                      <linkGrp type="translation">
                         <link target="#"/>

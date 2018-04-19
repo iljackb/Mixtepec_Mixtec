@@ -4,20 +4,8 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="es">
-               <seg>
-                  <seg>Probaditas lingüísticas</seg>
-                  <pc>:</pc>
-                  <seg>Modismos</seg>
-               </seg>
-            </title>
-            <title xml:lang="en">
-               <seg>
-                  <seg>Linguistic Tidbits</seg>
-                  <pc>:</pc>
-                  <seg>Idioms</seg>
-               </seg>
-            </title>
+            <title xml:lang="es">Probaditas lingüísticas: Modismos</title>
+            <title xml:lang="en">Linguistic Tidbits: Idioms</title>
             <author>María M. Nieves</author>
             <respStmt>
                <resp>TEI Encoding</resp>
@@ -67,6 +55,9 @@
             <rendition xml:id="fontWeightbold">font-weight: bold;</rendition>
             <rendition xml:id="fontItalic">font-style: italic;</rendition>
          </tagsDecl>
+         <editorialDecl>
+            <ab>brackets "(" ")" which were originally within the (non-literal) translations were moved to outside the phrases so they don't appear in the results of a translation.</ab>
+         </editorialDecl>
       </encodingDesc>
       <revisionDesc>
          <change>
@@ -98,297 +89,379 @@
          <lb/>
          <div>
             <p>
-               <s xml:id="d1e112" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e112" xml:lang="mix">
                   <w xml:id="d1e113">Tsi'i</w>
                   <w xml:id="d1e115">yu</w>
                   <w xml:id="d1e117">soko</w>
-               </s>
+               </seg>
                <lb/>
                <pc>(</pc>
-               <s xml:id="d1e122" type="multiWordExpression" xml:lang="es">
+               <seg type="MWE" xml:id="d1e122" xml:lang="es">
                   <w xml:id="d1e123">Tengo</w>
                   <w xml:id="d1e125">mucha</w>
                   <w xml:id="d1e127">hambre</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e122 #d1e112"/>
+               </linkGrp>
                <pc>)</pc>
                <lb/>
                <pc>(</pc>
-               <s xml:id="d1e136" type="multiWordExpression" xml:lang="en">
+               <seg type="MWE" xml:id="d1e136" xml:lang="en">
                   <w xml:id="d1e137">I</w>
                   <w xml:id="d1e139">am</w>
                   <w xml:id="d1e141">very</w>
                   <w xml:id="d1e143">hungry</w>
                   <pc>.</pc>
-               </s>
+               </seg>
                <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e136 #d1e112"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e150" type="multiWordExpression" xml:lang="es">
-                  <w xml:id="d1e151">Me</w>
-                  <w xml:id="d1e153">estoy</w>
-                  <w xml:id="d1e155">muriendo</w>
+               <seg type="MWE" xml:id="d1e150" xml:lang="es">
+                  <w xml:id="d1e151">Me estoy muriendo</w>
                   <w xml:id="d1e157">de hambre</w>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e150 #d1e112" type="literal"/>
+                  <link target="#d1e151 #d1e113 #d1e115" type="literal"/>
+               </linkGrp>
                <pc>.</pc>
                <lb/>
-               <s xml:id="d1e163" type="multiWordExpression" xml:lang="en">
-                  <w xml:id="d1e164">I'm</w>
-                  <w xml:id="d1e166">dying</w>
+               <seg type="MWE" xml:id="d1e163" xml:lang="en">
+                  <w xml:id="d1e164">I'm dying</w>
                   <w xml:id="d1e168">of hunger</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e163 #d1e112" type="literal"/>
+                  <link target="#d1e164 #d1e113 #d1e115" type="literal"/>
+               </linkGrp>
                <lb/>
                <lb/>
-               <s xml:id="d1e174" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e174" xml:lang="mix">
                   <w xml:id="d1e175">Tsani</w>
                   <w xml:id="d1e177">kuii</w>
-               </s>
+               </seg>
                <lb/>
-               <s xml:id="d1e180" type="multiWordExpression" xml:lang="es">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e180" xml:lang="es">
                   <w xml:id="d1e183">Casi</w>
                   <w xml:id="d1e185">matar</w>
-                  <pc>)</pc>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e180 #d1e174"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e192" type="multiWordExpression" xml:lang="en">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e192" xml:lang="en">
                   <w xml:id="d1e195">Almost</w>
                   <w xml:id="d1e197">kill</w>
-                  <pc>)</pc>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e192 #d1e174"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e205" type="multiWordExpression" xml:lang="es">
+               <seg type="MWE" xml:id="d1e205" xml:lang="es">
                   <w xml:id="d1e206">Herir</w>
                   <w xml:id="d1e208">de</w>
                   <w xml:id="d1e210">muerte</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e205 #d1e174" type="literal"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e215" type="multiWordExpression" xml:lang="en">
+               <seg type="MWE" xml:id="d1e215" xml:lang="en">
                   <w xml:id="d1e216">Strike</w>
                   <w xml:id="d1e218">a</w>
                   <w xml:id="d1e220">mortal</w>
                   <w xml:id="d1e222">blow</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e215 #d1e174" type="literal"/>   
+               </linkGrp>
                <lb/>
                <lb/>
-               <s xml:id="d1e228" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e228" xml:lang="mix">
                   <w xml:id="d1e229">Tsain</w>
                   <w xml:id="d1e231">yu</w>
                   <w xml:id="d1e233">yaa</w>
-               </s>
+               </seg>
                <lb/>
-               <s xml:id="d1e236" type="multiWordExpression" xml:lang="es">
-                  <pc>(</pc>
-                  <w xml:id="d1e239">estoy</w>
-                  <w xml:id="d1e241">bailando</w>
-                  <pc>)</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e236" xml:lang="es"> 
+                  <w xml:id="d1e239">estoy bailando</w>               
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e236 #d1e228"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e248" type="multiWordExpression" xml:lang="en">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e248" xml:lang="en"> 
                   <w xml:id="d1e251">I</w>
-                  <w xml:id="d1e253">am</w>
-                  <w xml:id="d1e255">dancing</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e253">am dancing</w>         
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e248 #d1e228"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e263" type="multiWordExpression" xml:lang="en">
+               <seg type="MWE" xml:id="d1e263" xml:lang="en">
                   <w xml:id="d1e264">I</w>
-                  <w xml:id="d1e266">am</w>
-                  <w xml:id="d1e268">stepping</w>
+                  <w xml:id="d1e266">am stepping</w>
                   <w xml:id="d1e270">on</w>
-                  <w xml:id="d1e272">the</w>
-                  <w xml:id="d1e274">music</w>
+                  <w xml:id="d1e272">the music</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e263 #d1e228" type="literal"/>
+                  <link target="#d1e264 #d1e266 #d1e229 #d1e231" type="literal"/>
+                  <link target="#d1e272 #d1e233" type="literal"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e279" type="multiWordExpression" xml:lang="es">
-                  <w xml:id="d1e280">Estoy</w>
-                  <w xml:id="d1e282">pisando</w>
-                  <w xml:id="d1e284">la</w>
-                  <w xml:id="d1e286">música</w>
+               <seg type="MWE" xml:id="d1e279" xml:lang="es">
+                  <w xml:id="d1e280">Estoy pisando</w>
+                  <w xml:id="d1e284">la música</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e280 #d1e229 #d1e231" type="literal"/>
+                  <link target="#d1e284 #d1e272" type="literal"/>
+               </linkGrp>
                <lb/>
                <lb/>
-               <s xml:id="d1e292" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e292" xml:lang="mix">
                   <w xml:id="d1e293">Ntaki'in</w>
                   <w xml:id="d1e295">yu</w>
                   <w xml:id="d1e297">ichi</w>
-               </s>
+               </seg>
                <lb/>
-               <s xml:id="d1e300" type="multiWordExpression" xml:lang="es">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e300" xml:lang="es">
                   <w xml:id="d1e303">Me</w>
-                  <w xml:id="d1e305">voy</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e305">voy</w>               
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e300 #d1e292"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e312" type="multiWordExpression" xml:lang="en">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e312" xml:lang="en">          
                   <w xml:id="d1e315">I</w>
-                  <w xml:id="d1e317">am</w>
-                  <w xml:id="d1e319">leaving</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e317">am leaving</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e312 #d1e292"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e327" type="multiWordExpression" xml:lang="en">
-                  <w xml:id="d1e328">I</w>
-                  <w xml:id="d1e330">grab</w>
-                  <w xml:id="d1e332">the</w>
-                  <w xml:id="d1e334">road</w>
+               <seg type="MWE" xml:id="d1e327" xml:lang="en">
+                  <w xml:id="d1e328">I grab</w>
+                  <w xml:id="d1e332">the road</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e339 #d1e227" type="literal"/>
+                  <link target="#d1e328 #d1e293 #d1e295" type="literal"/>
+                  <link target="#d1e332 #d1e297" type="literal"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e339" type="multiWordExpression" xml:lang="es">
+               <seg type="MWE" xml:id="d1e339" xml:lang="es">
                   <w xml:id="d1e340">Agarro</w>
-                  <w xml:id="d1e342">el</w>
-                  <w xml:id="d1e344">camino</w>
+                  <w xml:id="d1e342">el camino</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e339 #d1e292" type="literal"/>
+                  <link target="#d1e340 #d1e293 #d1e295" type="literal"/>
+                  <link target="#d1e342 #d1e297" type="literal"/>
+               </linkGrp>
                <lb/>
                <lb/>
-               <s xml:id="d1e350" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e350" xml:lang="mix">
                   <w xml:id="d1e351">Ntasaa</w>
                   <w xml:id="d1e353">yu</w>
-               </s>
+               </seg>
                <lb/>
-               <s xml:id="d1e356" type="multiWordExpression" xml:lang="es">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e356" xml:lang="es">
                   <w xml:id="d1e359">Me</w>
-                  <w xml:id="d1e361">estoy</w>
-                  <w xml:id="d1e363">enojando</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e361">estoy enojando</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e356 #d1e350"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e370" type="multiWordExpression" xml:lang="en">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e370" xml:lang="en">
                   <w xml:id="d1e373">I</w>
-                  <w xml:id="d1e375">am</w>
-                  <w xml:id="d1e377">angry</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e375">am angry</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e370 #d1e350"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e385" type="multiWordExpression" xml:lang="es">
+               <seg type="MWE" xml:id="d1e385" xml:lang="es">
                   <w xml:id="d1e386">Me</w>
-                  <w xml:id="d1e388">estoy
-                  </w>
-                  <w xml:id="d1e390">calentando</w>
+                  <w xml:id="d1e388">estoy calentando</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e385 #d1e350" type="literal"/>
+                  <link target="#d1e386 #d1e353" type="literal"/>
+                  <link target="#d1e388 #d1e351" type="literal"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e395" type="multiWordExpression" xml:lang="en">
+               <seg type="MWE" xml:id="d1e395" xml:lang="en">
                   <w xml:id="d1e396">I</w>
-                  <w xml:id="d1e398">am</w>
-                  <w xml:id="d1e400">getting</w>
-                  <w xml:id="d1e402">hot</w>
+                  <w xml:id="d1e398">am getting hot</w>
                   <pc>(</pc>
                   <w xml:id="d1e406">under</w>
-                  <w xml:id="d1e408">the</w>
-                  <w xml:id="d1e410">collar</w>
+                  <w xml:id="d1e408">the collar</w>
                   <pc>)</pc>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e395 #d1e350" type="literal"/>
+                  <link target="#d1e396 #d1e353" type="literal"/>
+                  <link target="#d1e398 #d1e351" type="literal"/>
+               </linkGrp>
                <lb/>
                <lb/>
-               <s xml:id="d1e418" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e418" xml:lang="mix">
                   <w xml:id="d1e419">Ntsasi</w>
                   <w xml:id="d1e421">ra</w>
                   <w xml:id="d1e423">yu'u</w>
                   <w xml:id="d1e425">yu</w>
-               </s>
+               </seg>
                <lb/>
-               <s xml:id="d1e428" type="multiWordExpression" xml:lang="es">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e428" xml:lang="es">
                   <w xml:id="d1e431">Él</w>
                   <w xml:id="d1e433">me</w>
                   <w xml:id="d1e435">calló</w>
-                  <pc>)</pc>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e428 #d1e418"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e442" type="multiWordExpression" xml:lang="en">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e442" xml:lang="en">
                   <w xml:id="d1e445">He</w>
                   <w xml:id="d1e447">made</w>
                   <w xml:id="d1e449">me</w>
-                  <w xml:id="d1e451">be</w>
-                  <w xml:id="d1e453">quiet</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e451">be quiet</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e442 #d1e418"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e461" type="multiWordExpression" xml:lang="es">
+               <seg type="MWE" xml:id="d1e461" xml:lang="es">
                   <w xml:id="d1e462">Él</w>
                   <w xml:id="d1e464">tapó</w>
                   <w xml:id="d1e466">mi</w>
                   <w xml:id="d1e468">boca</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e461 #d1e418" type="literal"/>
+                  <link target="#d1e462 #d1e464 #d1e419 #d1e421" type="literal"/>
+                  <link target="#d1e466 #d1e468 #d1e422 #d1e425" type="literal"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e473" type="multiWordExpression" xml:lang="en">
+               <seg type="MWE" xml:id="d1e473" xml:lang="en">
                   <w xml:id="d1e474">He</w>
                   <w xml:id="d1e476">shut</w>
                   <w xml:id="d1e478">my</w>
                   <w xml:id="d1e480">mouth</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e473 #d1e418" type="literal"/>
+                  <link target="#d1e474 #d1e476 #d1e419 #d1e421" type="literal"/>
+                  <link target="#d1e478 #d1e480 #d1e422 #d1e425" type="literal"/>
+               </linkGrp>
                <lb/>
                <lb/>
-               <s xml:id="d1e486" type="multiWordExpression" xml:lang="mix">
+               <seg type="MWE" xml:id="d1e486" xml:lang="mix">
                   <w xml:id="d1e487">Tsa'a</w>
                   <w xml:id="d1e489">ra</w>
                   <w xml:id="d1e491">ichi</w>
-               </s>
+               </seg>
                <lb/>
-               <s xml:id="d1e494" type="multiWordExpression" xml:lang="es">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e494" xml:lang="es">
                   <w xml:id="d1e497">Él</w>
                   <w xml:id="d1e499">da</w>
-                  <w xml:id="d1e501">el</w>
-                  <w xml:id="d1e503">permiso</w>
-                  <pc>)</pc>
+                  <w xml:id="d1e501">el permiso</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e494 #d1e486"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e510" type="multiWordExpression" xml:lang="en">
-                  <pc>(</pc>
+               <pc>(</pc>
+               <seg type="MWE" xml:id="d1e510" xml:lang="en">
                   <w xml:id="d1e513">He</w>
                   <w xml:id="d1e515">gives</w>
                   <w xml:id="d1e517">permission</w>
-                  <pc>)</pc>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <pc>)</pc>
+               <linkGrp type="translation">
+                  <link target="#d1e510 #d1e486"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e525" type="multiWordExpression" xml:lang="es">
+               <seg type="MWE" xml:id="d1e525" xml:lang="es">
                   <w xml:id="d1e526">Él</w>
                   <w xml:id="d1e528">da</w>
-                  <w xml:id="d1e530">el</w>
-                  <w xml:id="d1e532">camino</w>
+                  <w xml:id="d1e530">el camino</w>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e525 #d1e486" type="literal"/>
+                  <link target="#d1e526 #d1e528 #d1e487 #d1e489" type="literal"/>
+                  <link target="#d1e530 #d1e491" type="literal"/>
+               </linkGrp>
                <lb/>
-               <s xml:id="d1e537" type="multiWordExpression" xml:lang="en">
+               <seg type="MWE" xml:id="d1e537" xml:lang="en">
                   <w xml:id="d1e538">He</w>
                   <w xml:id="d1e540">gives</w>
-                  <w xml:id="d1e542">the</w>
-                  <w xml:id="d1e544">road</w>
+                  <w xml:id="d1e542">the road</w>
                   <pc>(</pc>
                   <w xml:id="d1e548">gives way</w>
                   <pc>)</pc>
                   <pc>.</pc>
-               </s>
+               </seg>
+               <linkGrp type="translation">
+                  <link target="#d1e537 #d1e486" type="literal"/>
+                  <link target="#d1e538 #d1e540 #d1e487 #d1e489" type="literal"/>
+                  <link target="#d1e542 #d1e491" type="literal"/>
+                  <link target="#d1e548  #d1e486" type="literal"/>
+               </linkGrp>
                <lb/>
                <lb/>
             </p>
