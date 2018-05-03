@@ -35,7 +35,7 @@
             <respStmt>
                <resp>TEI Encoding</resp>
                <resp>Annotation</resp>
-               <name xml:id="JB">Jack T. Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
             </respStmt>
             <respStmt>
                <resp>Native Speaker Consultation, Glossing, Translation</resp>
@@ -73,6 +73,32 @@
                   
                </ab>
             </normalization>  
+            
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations:
+                     
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     
+                     <ref>//div/head/seg[@xml:lang='mix']/w</ref>  
+                     
+                     <ref>//div/list/item/seg[@xml:lang='mix']/w</ref>
+                     
+                     
+                     <ref>//div/label/seg[@xml:lang='mix']/w</ref>  
+                     <ref>//div/p/seg[@xml:lang='mix']/w</ref>
+                     <ref>//div/list/head/seg[@xml:lang='mix']/w</ref>
+
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+               </list>
+            </ab>
+            
+            
             <segmentation>
                <ab>Several vocabulary items were made into compounds in the segmentation encoding at the judgment of the encoder, including: "ntikumi tsio"; all directions "chi Ninu", "chi Kuchi", "chi Sachi", "chi Kua'a",... 
                   
@@ -134,14 +160,14 @@
          <change when-iso="2014-11-05">Added the abstract in Spanish which is included in the publications but was originally left out of the XML encoding.</change>
       </revisionDesc>
    </teiHeader>
-   <text decls="#pedagogical-ref">
+   <text decls="#pedagogical-ref" xml:lang="mix">
       <front xml:lang="es">
          <ab>Este libro trata acerca de algunos conceptos básicos y generales de cómo es el mundo y su forma, cuando éste está dibujado en un planisferio.También incluye una descripción básica sobre países y continentes, conceptos como los puntos cardinales y cómo éstos se usan en el estudio de los mapas.</ab>
       </front>
-      <body xml:lang="mix">
+      <body>
          <div xml:id="L145-01">
             <head>
-               <s xml:id="L145-01-00">
+               <seg xml:id="L145-01-00">
                   <w xml:id="d1e196">Ntantuku</w>
                   <w xml:id="d1e198">nuu</w>
                   <w xml:id="d1e200">inkaa</w>
@@ -150,13 +176,15 @@
                   <w xml:id="d1e206">ña</w>
                   <w xml:id="d1e208">kunu</w>
                   <w xml:id="d1e210">ka'vu</w>
-               </s>
+               </seg>
             </head>
             <list type="ordered">
                <item>
-                  <w xml:id="d1e214">Kava</w>
-                  <w xml:id="d1e216">Ñu'u</w>
-                  <w xml:id="d1e218">Ncha'i</w>
+                  <seg>
+                     <w xml:id="d1e214">Kava</w>
+                     <w xml:id="d1e216">Ñu'u</w>
+                     <w xml:id="d1e218">Ncha'i</w>
+                  </seg>
                   <spanGrp type="semantics">
                      <span/>
                   </spanGrp>
@@ -165,14 +193,18 @@
                   </spanGrp>
                </item>
                <item>
-                  <seg xml:id="L145-01-02a" xml:lang="mix">Ntikumi</seg>
-                  <seg xml:id="L145-01-02b" xml:lang="mix">tsio</seg>
+                  <seg>
+                     <w xml:id="L145-01-02a" xml:lang="mix">
+                        <w>Ntikumi</w> <w>tsio</w></w>
+                  </seg>
                </item>
                <item>
-                  <w xml:id="d1e230">Nixi</w>
-                  <w xml:id="d1e232">na'a</w>
-                  <w xml:id="d1e234">ntikumi</w>
-                  <w xml:id="d1e236">tsio</w>
+                  <seg xml:id="d1e229">
+                     <w xml:id="d1e230">Nixi</w>
+                     <w xml:id="d1e232">na'a</w>
+                     <w xml:id="d1e234">ntikumi</w>
+                     <w xml:id="d1e236">tsio</w>
+                  </seg>
                </item>
                <item>
                   <seg xml:id="L145-01-04" xml:lang="mix">
@@ -181,9 +213,9 @@
                      <w xml:id="d1e242">ma'in</w>
                      <w xml:id="d1e244">sava</w>
                      <w xml:id="d1e246">ntaa</w>
-                     <w xml:id="d1e248">Ñu'u Ncha'i</w>
+                     <w xml:id="d1e248"><w>Ñu'u</w> <w>Ncha'i</w></w>
                      <w xml:id="d1e250">ña</w>
-                     <w xml:id="d1e252">chi kuchi</w>
+                     <w xml:id="d1e252"><w>chi</w> <w>kuchi</w></w>
                      <w xml:id="d1e254">tsi</w>
                      <w xml:id="d1e256">ninu</w>
                   </seg>
@@ -191,9 +223,9 @@
                <item>
                   <seg xml:id="L145-01-05" xml:lang="mix">
                      <w xml:id="d1e260">Hemisferios</w>
-                     <w xml:id="d1e262">chi Kuchi</w>
+                     <w xml:id="d1e262"><w>chi</w> <w>Kuchi</w></w>
                      <w xml:id="d1e264">cha</w>
-                     <w xml:id="d1e266">chi Ninu</w>
+                     <w xml:id="d1e266"><w>chi</w> <w>Ninu</w></w>
                   </seg>
                </item>
                <item>
@@ -203,8 +235,7 @@
                      <w xml:id="d1e274">ma'in</w>
                      <w xml:id="d1e276">sava</w>
                      <w xml:id="d1e278">ntaa</w>
-                     <w xml:id="d1e280">Ñu'u</w>
-                     <w xml:id="d1e281">Ncha'i</w>
+                     <w xml:id="d1e280"><w>Ñu'u</w> <w>Ncha'i</w></w>
                      <w xml:id="d1e282">tsio</w>
                      <w xml:id="d1e283">kua'a</w>
                      <w xml:id="d1e284">tsi</w>
@@ -222,8 +253,7 @@
                </item>
                <item>
                   <seg xml:id="L145-01-08" xml:lang="mix">
-                     <w xml:id="d1e300">Ñu'u</w>
-                     <w xml:id="d1e301">Ncha'i</w>
+                     <w xml:id="d1e300"><w>Ñu'u</w> <w>Ncha'i</w></w>
                      <w xml:id="d1e302">ka</w>
                      <w xml:id="d1e304">tsiko</w>
                      <w xml:id="d1e306">nui</w>
@@ -248,16 +278,32 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-01-11" xml:lang="mix">Hemisferio Sachi</seg>
+                  <seg xml:id="L145-01-11" xml:lang="mix">
+                     <w xml:id="L145-01-11a">
+                        <w>Hemisferio</w> <w>Sachi</w>
+                     </w>
+                  </seg>
                </item>
                <item>
-                  <seg xml:id="L145-01-12" xml:lang="mix">Hemisferio Kua'a</seg>
+                  <seg xml:id="L145-01-12" xml:lang="mix">
+                     <w xml:id="L145-01-12a">
+                        <w>Hemisferio</w> <w>Kua'a</w>
+                     </w>
+                  </seg>
                </item>
                <item>
-                  <seg xml:id="L145-01-13" xml:lang="mix">Ñu'u Nkoyo</seg>
+                  <seg xml:id="L145-01-13" xml:lang="mix">
+                     <w xml:id="L145-01-13a">
+                        <w>Ñu'u</w> <w>Nkoyo</w>
+                     </w>
+                  </seg>
                </item>
                <item>
-                  <seg xml:id="L145-01-14" xml:lang="mix">Ñu'u Ntua</seg>
+                  <seg xml:id="L145-01-14" xml:lang="mix">
+                     <w xml:id="L145-01-14a">
+                        <w>Ñu'u</w> <w>Ntua</w>
+                     </w>
+                  </seg>
                </item>
                <item>
                   <seg xml:id="L145-01-15" xml:lang="mix">
@@ -283,7 +329,7 @@
             </head>
             <list type="ordered">
                <item>
-                  <seg xml:id="L145-02-01" xml:lang="mix">
+                  <seg xml:id="L145-02-01" xml:lang="es">
                      <w xml:id="d1e372">Eje</w>
                      <w xml:id="d1e374">de</w>
                      <w xml:id="d1e376">la</w>
@@ -291,7 +337,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-02" xml:lang="mix">
+                  <seg xml:id="L145-02-02" xml:lang="es">
                      <w xml:id="d1e382">Los</w>
                      <w xml:id="d1e384">cuatro</w>
                      <w xml:id="d1e386">puntos</w>
@@ -299,7 +345,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-03" xml:lang="mix">
+                  <seg xml:id="L145-02-03" xml:lang="es">
                      <w xml:id="d1e392">Cómo</w>
                      <w xml:id="d1e394">podemos</w>
                      <w xml:id="d1e396">ubicar</w>
@@ -310,7 +356,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-04" xml:lang="mix">
+                  <seg xml:id="L145-02-04" xml:lang="es">
                      <w xml:id="d1e408">La</w>
                      <w xml:id="d1e410">línea</w>
                      <w xml:id="d1e412">del</w>
@@ -318,7 +364,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-05" xml:lang="mix">
+                  <seg xml:id="L145-02-05" xml:lang="es">
                      <w xml:id="d1e418">Hemisferios</w>
                      <w xml:id="d1e420">norte</w>
                      <w xml:id="d1e422">y</w>
@@ -326,10 +372,10 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-06" xml:lang="mix">Primer meridiano</seg>
+                  <seg xml:id="L145-02-06" xml:lang="es">Primer meridiano</seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-07" xml:lang="mix">
+                  <seg xml:id="L145-02-07" xml:lang="es">
                      <w xml:id="d1e431">Hemisferios</w>
                      <w xml:id="d1e433">oriental</w>
                      <w xml:id="d1e435">y</w>
@@ -337,7 +383,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-08" xml:lang="mix">
+                  <seg xml:id="L145-02-08" xml:lang="es">
                      <w xml:id="d1e441">Movimiento</w>
                      <w xml:id="d1e443">de</w>
                      <w xml:id="d1e445">traslación</w>
@@ -347,7 +393,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-09" xml:lang="mix">
+                  <seg xml:id="L145-02-09" xml:lang="es">
                      <pc>¿</pc>
                      <w xml:id="d1e457">Por qué</w>
                      <w xml:id="d1e459">hay</w>
@@ -358,7 +404,7 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-10" xml:lang="mix">
+                  <seg xml:id="L145-02-10" xml:lang="es">
                      <w xml:id="d1e471">La</w>
                      <w xml:id="d1e473">Tierra</w>
                      <c>(</c>
@@ -368,13 +414,13 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-11" xml:lang="mix">Hemisferio occidental</seg>
+                  <seg xml:id="L145-02-11" xml:lang="es">Hemisferio occidental</seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-12" xml:lang="mix">Hemisferio oriental</seg>
+                  <seg xml:id="L145-02-12" xml:lang="es">Hemisferio oriental</seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-13" xml:lang="mix">
+                  <seg xml:id="L145-02-13" xml:lang="es">
                      <w xml:id="d1e492">Mapa</w>
                      <w xml:id="d1e494">de</w>
                      <w xml:id="d1e496">la</w>
@@ -382,14 +428,14 @@
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-14" xml:lang="mix">
+                  <seg xml:id="L145-02-14" xml:lang="es">
                      <w xml:id="d1e502">Mapa</w>
                      <w xml:id="d1e504">del</w>
                      <w xml:id="d1e506">Estado de Oaxaca</w>
                   </seg>
                </item>
                <item>
-                  <seg xml:id="L145-02-15" xml:lang="mix">
+                  <seg xml:id="L145-02-15" xml:lang="es">
                      <w xml:id="d1e510">Mapa</w>
                      <w xml:id="d1e512">de</w>
                      <w xml:id="d1e514">América del Norte</w>
@@ -417,8 +463,7 @@
             </head>
             <p>
                <seg type="S" xml:id="L145-03-01">
-                  <w xml:id="d1e535">Ñu'u</w>
-                  <w xml:id="d1e536">Ñcha'i</w>
+                  <w xml:id="d1e535"><w>Ñu'u</w> <w>Ñcha'i</w></w>
                   <w xml:id="d1e537">ka</w>
                   <w xml:id="d1e539">kai</w>
                   <w xml:id="d1e541">tono</w>
@@ -635,7 +680,7 @@
          </div>
          <div xml:id="L145-04">
             <head><!-- Domain!! -->
-               <seg xml:id="L145-04-00" xml:lang="mix">Ntikumi tsio</seg>
+               <seg xml:id="L145-04-00" xml:lang="mix"><w xml:id="L145-04-00a"><w>Ntikumi</w> <w>tsio</w></w></seg>
             </head>
             <head>
                <graphic url="L145_02.jpeg"/>
@@ -804,7 +849,7 @@
             <head>
                <seg xml:id="L145-05-00" xml:lang="mix" cert="low">
                   <w xml:id="d1e742">Nixi</w>
-                  <w xml:id="d1e743">
+                  <w xml:id="d1e743" norm="na'a ntikumi tsio">
                      <w xml:id="d1e744" cert="low">na'a</w>
                      <w xml:id="d1e746">ntikumi</w>
                      <w xml:id="d1e748">tsio</w>
@@ -822,27 +867,27 @@
                <seg type="S" xml:id="L145-05-01" cert="medium"><!-- is the compass the argument or the cardinal directions?-->
                   <w xml:id="d1e752">Su'a</w>                  <!-- su'a na'a = "like this", "showing", "meaning".-->
                   <w xml:id="d1e754">na'a</w>                  <!-- su'a na'a = "like this", "showing", "meaning" -->
-                  <w xml:id="d1e755">
+                  <w xml:id="d1e755" norm="ntikumi tsio">
                      <w xml:id="d1e756">ntikumi</w>
                      <w xml:id="d1e757">tsio</w>
                   </w>
                   <w xml:id="d1e758">tono</w>
                   <w xml:id="d1e759">
-                     <w xml:id="d1e760">chi</w>
+                     <w xml:id="d1e760" norm="chi Kuchi">chi</w>
                      <w xml:id="d1e762">Kuchi</w>
                   </w>
                   <pc>,</pc>
-                  <w xml:id="d1e763">
+                  <w xml:id="d1e763" norm="chi Ninu">
                      <w xml:id="d1e764">chi</w>
                      <w xml:id="d1e766">Ninu</w>
                   </w>
                   <pc>,</pc>
-                  <w xml:id="d1e767">
+                  <w xml:id="d1e767" norm="chi Kua'a">
                      <w xml:id="d1e768">chi</w>
                      <w xml:id="d1e769">Kua'a</w>
                   </w>
                   <w xml:id="d1e770">tsi</w>
-                  <w xml:id="d1e771">
+                  <w xml:id="d1e771" norm="chi Sachi">
                      <w xml:id="d1e772">chi</w>
                      <w xml:id="d1e774">Sachi</w>
                   </w>
@@ -907,7 +952,7 @@
                   <w xml:id="d1e800">ña</w>
                   <w xml:id="d1e802">inkai</w>                  <!-- be loc (-i) -->
                   <w xml:id="d1e804">ma'i</w>                  <!-- between -->
-                  <w xml:id="d1e805">   
+                  <w xml:id="d1e805" norm="ntikumi tsio">   
                      <w xml:id="d1e806">ntikumi</w>
                      <w xml:id="d1e808">tsio</w>
                   </w>
@@ -947,13 +992,13 @@
                   <w xml:id="d1e817">ñasuii</w>                  <!-- boy -->
                   <w xml:id="d1e819">yo'o</w>                  <!-- this -->
                   <w xml:id="d1e821">nania</w>
-                  <w xml:id="d1e822">
+                  <w xml:id="d1e822" norm="chi Kuchi">
                      <w xml:id="d1e823">chi</w>
                      <w xml:id="d1e825">kuchi</w>
                   </w>
                   <pc>,</pc>
                   <w xml:id="d1e827">cha</w>
-                  <w xml:id="d1e828">
+                  <w xml:id="d1e828" norm="chi Ninu">
                      <w xml:id="d1e829">chi</w>
                      <w xml:id="d1e830">Ninu</w>
                   </w>
@@ -1012,7 +1057,7 @@
                   <w xml:id="d1e845">ko</w>
                   <w xml:id="d1e847">tuku</w>
                   <w xml:id="d1e849">ña</w>                  <!-- that -->
-                  <w xml:id="d1e850">    
+                  <w xml:id="d1e850" norm="chi Kua'a">    
                      <w xml:id="d1e851">chi</w>
                      <w xml:id="d1e852">Kua'a</w>
                   </w>
@@ -1020,7 +1065,7 @@
                   <w xml:id="d1e855">nikanchii</w>
                   <pc>,</pc>
                   <w xml:id="d1e859">ra</w>
-                  <w xml:id="d1e860">
+                  <w xml:id="d1e860" norm="chi Sachi">
                      <w xml:id="d1e861">chi</w>
                      <w xml:id="d1e863">Sachi</w>
                   </w>
@@ -1081,12 +1126,12 @@
                   <w xml:id="d1e879">ma'in</w>
                   <w xml:id="d1e881">sava</w>
                   <w xml:id="d1e883">ntaa</w>
-                  <w xml:id="d1e884">
+                  <w xml:id="d1e884" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e886">Ñu'u</w>
                      <w xml:id="d1e887">Ncha'i</w>
                   </w>
                   <w xml:id="d1e888" cert="medium">ña</w>  <!-- function of "ña" here?-->
-                  <w xml:id="d1e889">
+                  <w xml:id="d1e889" norm="chi kuchi">
                      <w xml:id="d1e890">chi</w>
                      <w xml:id="d1e891">kuchi</w>
                   </w>
@@ -1106,12 +1151,11 @@
                   <w xml:id="d1e900">Ntuku'un</w>                  <!-- remember/recall that: ntuku'un ini (-u) 2sg.inf -->
                   <w xml:id="d1e902">inu</w>                  <!-- 2sg.inf -->
                   <w xml:id="d1e904">ña</w>
-                  <w xml:id="d1e906">Ñu'u</w>
-                  <w xml:id="d1e907">Ncha'i</w>
+                  <w xml:id="d1e906" norm="Ñu'u Ncha'i"><w>Ñu'u</w> <w>Ncha'i</w></w>
                   <w xml:id="d1e908">ka</w>
                   <w xml:id="d1e910">kui</w>
                   <w xml:id="d1e912">tono</w>
-                  <w xml:id="d1e914">iin</w>
+                  <w xml:id="d1e914" orig="iin">in</w>
                   <w xml:id="d1e916">tikuaa</w>
                   <pc>.</pc>
                </seg>
@@ -1143,16 +1187,16 @@
                   <w xml:id="d1e931">tsa'ncha</w>
                   <w xml:id="d1e933">sava</w>
                   <w xml:id="d1e935">ntaa</w>
-                  <w xml:id="d1e936"> 
+                  <w xml:id="d1e936" norm="Ñu'u Ncha'i"> 
                      <w xml:id="d1e937">Ñu'u</w>
                      <w xml:id="d1e938">Ncha'i</w>
                   </w>
-                  <w xml:id="d1e939a"> 
+                  <w xml:id="d1e939a" norm="chi Kuchi"> 
                      <w xml:id="d1e939">chi</w>
                      <w xml:id="d1e940">Kuchi</w>
                   </w>
                   <w xml:id="d1e941">tsi</w>
-                  <w xml:id="d1e942">
+                  <w xml:id="d1e942" norm="chi Ninu">
                      <w xml:id="d1e944">chi</w>
                      <w xml:id="d1e946">Ninu</w>
                   </w>
@@ -1224,27 +1268,29 @@
                <seg type="S" xml:id="L145-06-04">
                   <w xml:id="d1e966">Sava</w>
                   <w xml:id="d1e968">ntaa</w><!-- side? -->
-                  <w xml:id="d1e969">
+                  <w xml:id="d1e969" norm="chi Kuchi">
                      <w xml:id="d1e970">chi</w>
                      <w xml:id="d1e971">Kuchi</w>
                   </w>
                   <w xml:id="d1e972">nania</w>
                   <pc>"</pc>
-                  <w xml:id="d1e976">Hemisferio</w>
-                  <w xml:id="d1e977">Kuchi</w>
+                  <w xml:id="d1e976a" norm="Hemisferio Kuchi">
+                     <w xml:id="d1e976">Hemisferio</w>
+                     <w xml:id="d1e977">Kuchi</w></w>
                   <pc>"</pc>
                   <pc>,</pc>
                   <w xml:id="d1e982">cha</w>
                   <w xml:id="d1e984">sava</w>
                   <w xml:id="d1e986">ntaa</w>
-                  <w xml:id="d1e987">
+                  <w xml:id="d1e987" norm="chi Ninu">
                      <w xml:id="d1e989">chi</w>
                      <w xml:id="d1e990">Ninu</w>
                   </w>
                   <w xml:id="d1e991">nania</w>
                   <pc>"</pc>
-                  <w xml:id="d1e995">Hemisferio</w>
-                  <w xml:id="d1e997">Ninu</w>
+                  <w xml:id="d1e995a" norm="Hemisferio Ninu">
+                     <w xml:id="d1e995">Hemisferio</w>
+                     <w xml:id="d1e997">Ninu</w></w>
                   <pc>"</pc>
                   <pc>.</pc>
                </seg>
@@ -1293,12 +1339,12 @@
             <head>
                <seg xml:id="L145-07-00" xml:lang="mix">
                   <w xml:id="d1e1006">Hemisferios</w>   <!-- foreign ("-s" at the end is not mixtec) -->
-                  <w xml:id="d1e1007">
+                  <w xml:id="d1e1007" norm="chi Kuchi" expand="Hemisferio chi Kuchi">
                      <w xml:id="d1e1008">chi</w>
                      <w xml:id="d1e1009">Kuchi</w>
                   </w>
                   <w xml:id="d1e1010">cha</w>
-                  <w xml:id="d1e1011">
+                  <w xml:id="d1e1011" norm="chi Ninu" expand="Hemisferio chi Ninu">
                      <w xml:id="d1e1012">chi</w>
                      <w xml:id="d1e1014">Ninu</w>
                   </w>
@@ -1334,8 +1380,10 @@
                   <pc>"</pc>
                   <w xml:id="d1e1032">Hemisferio</w>
                   <pc>"</pc>
-                  <w xml:id="d1e1036">siin</w><!-- siin siin = different -->
-                  <w xml:id="d1e1037">siin</w>
+                  <w xml:id="d1e1036a" norm="siin siin">
+                     <w xml:id="d1e1036">siin</w><!-- siin siin = different -->
+                     <w xml:id="d1e1037">siin</w>
+                  </w>
                   <w xml:id="d1e1038">kui</w><!-- be (-i) -->
                   <pc>.</pc>
                </seg>
@@ -1422,7 +1470,7 @@
                   <w xml:id="d1e1086">kunia</w>  <!-- kunia kachia = "means -->
                   <w xml:id="d1e1088">kachia</w>
                   <w xml:id="d1e1090">sava</w>
-                  <w xml:id="d1e1091">
+                  <w xml:id="d1e1091" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1092">Ñu'u</w>
                      <w xml:id="d1e1094">Ncha'i</w>
                   </w>
@@ -1473,15 +1521,19 @@
                   <w xml:id="d1e1116">ma'i</w>
                   <w xml:id="d1e1118">sava</w>
                   <w xml:id="d1e1120">ntaa</w>
-                  <w xml:id="d1e1121">
+                  <w xml:id="d1e1121" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1122">Ñu'u</w>
                      <w xml:id="d1e1123">Ncha'i</w>
                   </w>
-                  <w xml:id="d1e1124">tsio</w>
-                  <w xml:id="d1e1125">kua'a</w>
+                  <w xml:id="d1e1124a" norm="tsio kua'a">
+                     <w xml:id="d1e1124">tsio</w>
+                     <w xml:id="d1e1125">kua'a</w>
+                  </w>
                   <w xml:id="d1e1126">tsi</w>
-                  <w xml:id="d1e1128">tsio</w>
-                  <w xml:id="d1e1130">sachi</w>
+                  <w xml:id="d1e1128a" norm="tsio sachi">
+                     <w xml:id="d1e1128">tsio</w>
+                     <w xml:id="d1e1130">sachi</w>
+                  </w>
                </seg>
                <spanGrp type="translation">
                   <span target="#L145-08-00" xml:lang="en">That which cuts straight through the middle of the Earth between the east and west.</span>
@@ -1509,11 +1561,17 @@
                   <span target="#d1e1124 #d1e1125" xml:lang="en">right side</span>
                   <span target="#d1e1124 #d1e1125" xml:lang="es">lado derecho</span>
                   
+                  <span target="#d1e1124a" xml:lang="en">right side</span>
+                  <span target="#d1e1124a" xml:lang="es">lado derecho</span>
+                  
                   <span target="#d1e1126" xml:lang="en">and</span>
                   <span target="#d1e1126" xml:lang="es">y</span>
                   
                   <span target="#d1e1128 #d1e1130" xml:lang="en">left side</span>
                   <span target="#d1e1128 #d1e1130" xml:lang="es">lado izquierdo</span>
+                  
+                  <span target="#d1e1128a" xml:lang="en">left side</span>
+                  <span target="#d1e1128a" xml:lang="es">lado izquierdo</span>
                </spanGrp>
             </head>
             <head>
@@ -1526,15 +1584,18 @@
                   <w xml:id="d1e1138">ma'i</w>
                   <w xml:id="d1e1140">sava</w>
                   <w xml:id="d1e1142">ntaa</w>
-                  <w xml:id="d1e1141">
+                  <w xml:id="d1e1141" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1144">Ñu'u</w>
                      <w xml:id="d1e1145">Ncha'i</w>
                   </w>
-                  <w xml:id="d1e1146">tsio</w>
-                  <w xml:id="d1e1147">kua'a</w>
+                  <w xml:id="d1e1146a" norm="tsio kua'a">
+                     <w xml:id="d1e1146">tsio</w>
+                     <w xml:id="d1e1147">kua'a</w>
+                  </w>
                   <w xml:id="d1e1148">tsi</w>
-                  <w xml:id="d1e1150">tsio</w>
-                  <w xml:id="d1e1151">sachi</w>
+                  <w xml:id="d1e1150a" norm="tsio sachi">
+                     <w xml:id="d1e1150">tsio</w>
+                     <w xml:id="d1e1151">sachi</w></w>
                   <w xml:id="d1e1152">nania</w>
                   <pc>"</pc>
                   <w xml:id="d1e1157">Meridiano</w>
@@ -1614,14 +1675,14 @@
 
                <seg type="S" xml:id="L145-08-03">
                   <w xml:id="d1e1179">Kitsai</w>
-                  <w xml:id="d1e1180">
+                  <w xml:id="d1e1180" norm="chi kuchi">
                      <w xml:id="d1e1181">chi</w>
                      <w xml:id="d1e1182">kuchi</w>
                   </w>
                   <w xml:id="d1e1183">cha</w>
                   <w xml:id="d1e1185">tsai</w>  <!-- goes/arrives at -->
                   <w xml:id="d1e1187">mancha</w>
-                  <w xml:id="d1e1188">
+                  <w xml:id="d1e1188" norm="chi ninu">
                      <w xml:id="d1e1189">chi</w>
                      <w xml:id="d1e1190">ninu</w>
                   </w>
@@ -1865,7 +1926,7 @@
          <div xml:id="L145-10">
             <head>
                <seg xml:id="d1e1316">
-                  <w  xml:id="d1e1316b">
+                  <w  xml:id="d1e1316b" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1317">Ñu'u</w>
                      <w xml:id="d1e1318">Ncha'i</w>
                   </w>
@@ -1877,8 +1938,6 @@
                   <span target="#d1e1316" xml:lang="en" cert="medium">The Earth is circling around</span>
                   <span target="#d1e1316" xml:lang="es" cert="medium">La Tierra giran alrededor</span>
                   
-                  <span target="#" xml:lang="en"/>
-                  <span target="#" xml:lang="es"/>
                </spanGrp>
             </head>
             <head>
@@ -1891,7 +1950,7 @@
                   <w xml:id="d1e1333">kuu</w>
                   <w xml:id="d1e1335">ña</w>
                   <w xml:id="d1e1337">kaa</w>
-                  <w xml:id="d1e1338">
+                  <w xml:id="d1e1338" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1339">Ñu'u</w>
                      <w xml:id="d1e1340">Ncha'i</w>
                   </w>
@@ -2012,7 +2071,7 @@
                   <w xml:id="d1e1387">Tsa</w>                  <!-- already -->
                   <w xml:id="d1e1389">tsino</w>                  <!-- know (-o) 1pl -->
                   <w xml:id="d1e1391">ña</w>                  <!-- that -->
-                  <w xml:id="d1e1392">
+                  <w xml:id="d1e1392" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1393">Ñu'u</w>
                      <w xml:id="d1e1394">Ncha'i</w>
                   </w>
@@ -2070,7 +2129,7 @@
                </seg>
                <spanGrp type="translation"><!-- this seems to say "the far side of the sun--> 
                   <span target="#L145-12-02" xml:lang="en" cert="low">The far side of the sun is light, and the close(?) side of the sun is night.</span>
-                  <span target="#L145-12-02" xml:lang="es"></span>
+                  <span target="#L145-12-02" xml:lang="es" cert="unknown"/>
                   
                   <span target="#d1e1408" xml:lang="en"/>
                   <span target="#d1e1408" xml:lang="es"/>
@@ -2114,7 +2173,7 @@
          <div xml:id="L145-13">
             <head>
                <seg xml:id="L145-13-00">
-                  <w xml:id="d1e1437">
+                  <w xml:id="d1e1437" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1438">Ñu'u</w>
                      <w xml:id="d1e1441">Ncha'i</w>
                   </w>
@@ -2145,7 +2204,7 @@
                   <w xml:id="d1e1464">tsi</w>                  <!-- coordinatingConj-->
                   <w xml:id="d1e1467">chikuii</w>                  <!-- noun-->
                   <w xml:id="d1e1470" orig="nuu">nu</w>                  <!-- relationalNoun/(relational)adposition -->
-                  <w xml:id="d1e1471">
+                  <w xml:id="d1e1471" norm="Ñu'u Ncha'i">
                      <w xml:id="d1e1473">Ñu'u</w>   
                      <w xml:id="d1e1477">Ncha'i</w>
                   </w>          
@@ -2669,7 +2728,7 @@
                <seg type="S" xml:id="L145-16-01">
                   <w xml:id="d1e1762">Cha</w>
                   <w xml:id="d1e1764">Yee</w>
-                  <w xml:id="d1e1765">
+                  <w xml:id="d1e1765" norm="oko utsi in">
                      <w xml:id="d1e1766">oko</w>
                      <w xml:id="d1e1766b">utsi</w>
                      <w xml:id="d1e1766c" orig="iin">in</w>
@@ -2791,7 +2850,7 @@
                <seg type="S" xml:id="L145-17-01">
                   <w xml:id="d1e1818" cert="unknown" orig="Nuu">Nu</w><!-- normalize? (sense: (LOC)) -->
                   <w xml:id="d1e1819">
-                     <w xml:id="d1e1820">Ñu'u</w>
+                     <w xml:id="d1e1820" norm="Ñu'u Ncha'i">Ñu'u</w>
                      <w xml:id="d1e1821">Ncha'i</w>
                   </w>
                   <w xml:id="d1e1822">kantu'u</w>                  <!-- sitting/situated -->
@@ -2900,7 +2959,7 @@
                   <w xml:id="d1e1887">tsi</w>
                   <w xml:id="d1e1889">ñuu</w>
                   <w xml:id="d1e1892">nania</w>
-                  <w xml:id="d1e1893">
+                  <w xml:id="d1e1893" norm="Yucha Ncho'o">
                      <w xml:id="d1e1894">Yucha</w>
                      <w xml:id="d1e1896">Ncho'o</w>
                   </w>
@@ -3030,7 +3089,7 @@
                   <w xml:id="d1e1943">Kue</w>
                   <w xml:id="d1e1945">ñuu</w>
                   <w xml:id="d1e1947">inkaa</w>
-                  <w xml:id="d1e1948">
+                  <w xml:id="d1e1948" norm="chi Kuchi">
                      <w xml:id="d1e1949">chi</w>
                      <w xml:id="d1e1951">Kuchi</w>
                   </w>
@@ -3049,13 +3108,13 @@
                   <w xml:id="d1e1957">ña</w>
                   <w xml:id="d1e1959">Canadá</w>
                   <w xml:id="d1e1961">tsi</w>
-                  <w xml:id="d1e1962">
+                  <w xml:id="d1e1962" norm="Estados Unidos">
                      <w xml:id="d1e1963">Estados</w>
                      <w xml:id="d1e1964">Unidos</w>
                   </w>
                   <w xml:id="d1e1965">inkaa</w>
                   <w xml:id="d1e1967" cert="high">kui</w><!-- pron? -->
-                  <w xml:id="d1e1968">
+                  <w xml:id="d1e1968" norm="chi kuchi">
                      <w xml:id="d1e1969">chi</w>
                      <w xml:id="d1e1971">kuchi</w>
                   </w>
@@ -3092,12 +3151,12 @@
                   <w xml:id="d1e1974">Cha</w>
                   <w xml:id="d1e1976">Nko'yo</w>
                   <w xml:id="d1e1978">inkai</w>
-                  <w xml:id="d1e1979">
+                  <w xml:id="d1e1979" norm="chi ninu">
                      <w xml:id="d1e1980">chi</w>
                      <w xml:id="d1e1981">ninu</w>
                   </w>
                   <w xml:id="d1e1982" cert="medium">ñuu</w>
-                  <w xml:id="d1e1983">
+                  <w xml:id="d1e1983" norm="Estados Unidos">
                      <w xml:id="d1e1984">Estados</w>
                      <w xml:id="d1e1986">Unidos</w>
                   </w>
@@ -3124,14 +3183,14 @@
                </spanGrp>
                <seg type="S" xml:id="L145-18-03">
                   <w xml:id="d1e1989">Yee</w>
-                  <w xml:id="d1e1990">
+                  <w xml:id="d1e1990" norm="uxiko utsi">
                      <w xml:id="d1e1991">uxiko</w>
                      <w xml:id="d1e1992">utsi</w>
                   </w>
                   <w xml:id="d1e1993">kue</w>
                   <w xml:id="d1e1995">estado</w>
                   <w xml:id="d1e1997" orig="nuu">nu</w>
-                  <w xml:id="d1e1998">
+                  <w xml:id="d1e1998" norm="Estados Unidos">
                      <w xml:id="d1e1999">Estados</w>
                      <w xml:id="d1e2001">Unidos</w>
                   </w>
@@ -3249,8 +3308,9 @@
                   <w xml:id="d1e2058">so</w>
                   <w xml:id="d1e2060">kue</w><!-- pl? -->
                   <w xml:id="d1e2062">ñuu</w>
-                  <w xml:id="d1e2064">Estados</w>
-                  <w xml:id="d1e2065">Unidos</w>
+                  <w xml:id="d1e2064a" norm="Estados Unidos">
+                     <w xml:id="d1e2064">Estados</w>
+                  <w xml:id="d1e2065">Unidos</w></w>
                   <w xml:id="d1e2066">ka</w>
                   <w xml:id="d1e2068">yee</w>
                   <w xml:id="d1e2070">kuena</w>
@@ -3309,13 +3369,13 @@
             <p>
                <seg type="S" xml:id="L145-19-01">
                   <w xml:id="d1e2090">Yee</w>
-                  <w xml:id="d1e2091">
+                  <w xml:id="d1e2091" norm="utsi uni">
                      <w xml:id="d1e2092">utsi</w>
                      <w xml:id="d1e2093">uni</w>
                   </w>
                   <w xml:id="d1e2094">ñuu</w>
                   <w xml:id="d1e2096" orig="nuu">nu</w>
-                  <w xml:id="d1e2099">
+                  <w xml:id="d1e2099" norm="Ñu'u chi Ninu">
                      <w xml:id="d1e2098">Ñu'u</w>
                      <w xml:id="d1e2100">chi</w>
                      <w xml:id="d1e2101">Ninu</w>

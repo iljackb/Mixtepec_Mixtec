@@ -7,18 +7,23 @@
       <fileDesc>
          <titleStmt>
             <title xml:lang="mix">
-               <seg xml:id="d1e8">
+               <seg xml:id="d1e8" xml:lang="mix">
                   <pc>¿</pc>
-                  <w xml:id="d1e11">A</w><!-- Question Particle -->
-                  <w xml:id="d1e14">tsinu</w><!-- (relative ?) 'which' -->
-                  <w xml:id="d1e17">kue</w><!-- plural mkr -->
-                  <w xml:id="d1e20">tsa'a</w>   <!-- dbpedia #Foot -->
-                  <w xml:id="d1e23">kiti</w><!--  dbpedia #Animal -->
+                  <w xml:id="d1e11">A</w>
+                  <!-- Question Particle -->
+                  <w xml:id="d1e14">tsinu</w>
+                  <!-- (relative ?) 'which' -->
+                  <w xml:id="d1e17">kue</w>
+                  <!-- plural mkr -->
+                  <w xml:id="d1e20">tsa'a</w>
+                  <!-- dbpedia #Foot -->
+                  <w xml:id="d1e23">kiti</w>
+                  <!--  dbpedia #Animal -->
                   <pc>?</pc>
                </seg>
             </title>
             <title xml:lang="es">
-               <seg xml:id="d1e30">
+               <seg xml:id="d1e30" xml:lang="es">
                   <pc>¿</pc>
                   <w xml:id="d1e33">De</w>
                   <w xml:id="d1e35">qué</w>
@@ -71,6 +76,26 @@
          </textDesc>
       </profileDesc>
       <encodingDesc>
+         <editorialDecl>
+            <normalization>
+               <ab>
+                  <date>2018-02-05</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GU%C3%8DA%20ORTOGR%C3%81FICA%20PRELIMINAR%20Short%20version.xml</ref>
+               </ab>
+            </normalization>
+            
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg[@xml:lang='mix']</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+               </list>
+            </ab>
+            
+         </editorialDecl>
          <p>
             <list>
                <item>
@@ -233,43 +258,42 @@
             -->
       </encodingDesc>
       <revisionDesc>
-         <change><date>2018.01.31</date> Normalized <oRef>Nchii</oRef> <gloss>"what"/"which"</gloss> to updated orthographic standard spelling. Original form listed in <att>orig</att>="<val>Nchii</val>" in order to distinguish with minimal pair meaning <gloss>"where"</gloss>. </change>
+         <change>
+            <date>2018.01.31</date> Normalized <oRef>Nchii</oRef>
+            <gloss>"what"/"which"</gloss> to updated orthographic standard spelling. Original form listed in <att>orig</att>="<val>Nchii</val>" in order to distinguish with minimal pair meaning <gloss>"where"</gloss>. </change>
       </revisionDesc>
    </teiHeader>
-   <text>
+   <text xml:lang="mix">
       <body>
          <div xml:id="L097-01">
             <p>
                <graphic url="L097-1-Q-pig.jpg"/>
-               <s xml:id="d1e214" type="interrogative">
+               <seg type="interrogative" xml:id="d1e214">
                   <pc>¿</pc>
                   <w xml:id="d1e218" orig="Nchii">Nchi</w>
                   <w xml:id="d1e220">tsa'a</w>
                   <w xml:id="d1e222">kiti</w>
                   <w xml:id="d1e224">kuu</w>
                   <w xml:id="d1e226">ña</w>
-                  <w xml:id="d1e228">ño'o</w><!-- #DEM-DIST (?) -->
+                  <w xml:id="d1e228">ño'o</w>   <!-- #DEM-DIST (?) -->
                   <pc>?</pc>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e214" xml:lang="en">Which animal's foot is that?</span>
                   <span target="#d1e214" xml:lang="es">¿De qué animales son las patas?</span>
                </spanGrp>
             </p>
-            
-               <!-- NOT SURE OF CLASSIFICATION OF 'ña' in this usage -->
-               <!-- previous <link> links all the occurences of 'ña' from each occurence in sentences; annotates in @ana -->
-
-               <!-- previous <link> links all the occurences of 'ño'o' from each occurence in sentences; annotates in @ana -->
-            
+            <!-- NOT SURE OF CLASSIFICATION OF 'ña' in this usage -->
+            <!-- previous <link> links all the occurences of 'ña' from each occurence in sentences; annotates in @ana -->
+            <!-- previous <link> links all the occurences of 'ño'o' from each occurence in sentences; annotates in @ana -->
             <!-- Still need to decide how to label <link>'s as <s>2 is answer to question <s>1-->
          </div>
          <div xml:id="L097-02">
             <p>
                <graphic url="L097-1-A-pig.png"/>
-               <s xml:id="d1e261" type="declarative">
+               <seg type="declarative" xml:id="d1e261">
                   <w xml:id="d1e262">kini</w>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e262" xml:lang="en">pig</span>
                   <span target="#d1e262" xml:lang="es">puerco</span>
@@ -282,7 +306,7 @@
          <div xml:id="L097-03">
             <p>
                <graphic url="L097-1-A-pig.png"/>
-               <s xml:id="d1e269" type="interrogative">
+               <seg type="interrogative" xml:id="d1e269">
                   <pc>¿</pc>
                   <w xml:id="d1e272" orig="Nchii">Nchi</w>
                   <w xml:id="d1e274">tsa'a</w>
@@ -291,7 +315,7 @@
                   <w xml:id="d1e280">ña</w>
                   <w xml:id="d1e282">ño'o</w>
                   <pc>?</pc>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e269" xml:lang="en">Which animal's foot is that?</span>
                   <span target="#d1e269" xml:lang="es">¿De qué animales son las patas?</span>
@@ -303,9 +327,9 @@
                <graphic url="L097-2-Q.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e295" type="declarative">
+               <seg type="declarative" xml:id="d1e295">
                   <w xml:id="d1e296">to'lo</w>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e296" xml:lang="en">rooster</span>
                   <span target="#d1e296" xml:lang="es">gallo</span>
@@ -317,7 +341,7 @@
                <graphic url="L097-3-Q.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e302" type="interrogative">
+               <seg type="interrogative" xml:id="d1e302">
                   <pc>¿</pc>
                   <w xml:id="d1e305" orig="Nchii">Nchi</w>
                   <w xml:id="d1e307">tsa'a</w>
@@ -326,7 +350,7 @@
                   <w xml:id="d1e313">ña</w>
                   <w xml:id="d1e315">ño'o</w>
                   <pc>?</pc>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e302" xml:lang="en">Which animal's foot is that?</span>
                   <span target="#d1e302" xml:lang="es">¿De qué animales son las patas?</span>
@@ -338,9 +362,9 @@
                <graphic url="L097-3-A-horse.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e328" type="declarative">
+               <seg type="declarative" xml:id="d1e328">
                   <w xml:id="d1e329">kiti</w>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e329" xml:lang="en">horse</span>
                   <span target="#d1e329" xml:lang="es">caballo</span>
@@ -352,7 +376,7 @@
                <graphic url="L097-4-Q.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e338" type="interrogative">
+               <seg type="interrogative" xml:id="d1e338">
                   <pc>¿</pc>
                   <w xml:id="d1e341" orig="Nchii">Nchi</w>
                   <w xml:id="d1e343">tsa'a</w>
@@ -361,7 +385,7 @@
                   <w xml:id="d1e349">ña</w>
                   <w xml:id="d1e351">ño'o</w>
                   <pc>?</pc>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e338" xml:lang="en">Which animal's foot is that?</span>
                   <span target="#d1e338" xml:lang="es">¿De qué animales son las patas?</span>
@@ -373,9 +397,9 @@
                <graphic url="L097-4-A-dog.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e364" type="declarative">
+               <seg type="declarative" xml:id="d1e364">
                   <w xml:id="d1e365">tina</w>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e365" xml:lang="en">dog</span>
                   <span target="#d1e365" xml:lang="es">perro</span>
@@ -387,7 +411,7 @@
                <graphic url="L097-5-Q.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e374" type="interrogative">
+               <seg type="interrogative" xml:id="d1e374">
                   <pc>¿</pc>
                   <w xml:id="d1e377" orig="Nchii">Nchi</w>
                   <w xml:id="d1e379">tsa'a</w>
@@ -396,7 +420,7 @@
                   <w xml:id="d1e385">ña</w>
                   <w xml:id="d1e387">ño'o</w>
                   <pc>?</pc>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e374" xml:lang="en">Which animal's foot is that?</span>
                   <span target="#d1e374" xml:lang="es">¿De qué animales son las patas?</span>
@@ -408,9 +432,9 @@
                <graphic url="L097-5-A-goat.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e400" type="declarative">
+               <seg type="declarative" xml:id="d1e400">
                   <w xml:id="d1e401">ntucha</w>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e401" xml:lang="en">goat</span>
                   <span target="#d1e401" xml:lang="es">cabra</span>
@@ -422,7 +446,7 @@
                <graphic url="L097-6-Q-bull.png"/>
             </p>
             <p>
-               <s xml:id="d1e410" type="interrogative">
+               <seg type="interrogative" xml:id="d1e410">
                   <pc>¿</pc>
                   <w xml:id="d1e413" orig="Nchii">Nchi</w>
                   <w xml:id="d1e415">tsa'a</w>
@@ -431,7 +455,7 @@
                   <w xml:id="d1e421">ña</w>
                   <w xml:id="d1e423">ño'o</w>
                   <pc>?</pc>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e410" xml:lang="en">Which animal's foot is that?</span>
                   <span target="#d1e410" xml:lang="es">¿De qué animales son las patas?</span>
@@ -443,9 +467,9 @@
                <graphic url="L097-6-A.jpg"/>
             </p>
             <p>
-               <s xml:id="d1e437" type="declarative">
+               <seg type="declarative" xml:id="d1e437">
                   <w xml:id="d1e438">stiki</w>
-               </s>
+               </seg>
                <spanGrp type="translation">
                   <span target="#d1e438" xml:lang="en">bull</span>
                   <span target="#d1e438" xml:lang="es">toro</span>

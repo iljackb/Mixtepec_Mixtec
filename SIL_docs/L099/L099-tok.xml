@@ -16,7 +16,8 @@
             <editor xml:id="MN">María M. Nieves</editor>
             <respStmt>
                <resp>TEI Encoding</resp>
-               <name xml:id="JB">Jack T. Bowers</name>
+               <resp>Annotation</resp>
+               <name xml:id="JB">Jack Bowers</name>
             </respStmt>
             <respStmt>
                <resp>Glossing, Consultation</resp>
@@ -58,6 +59,18 @@
                   <date>2018-02-05</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GU%C3%8DA%20ORTOGR%C3%81FICA%20PRELIMINAR%20Short%20version.xml</ref>
                </ab>
             </normalization>
+            
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+               </list>
+            </ab>
          </editorialDecl>
          <p>
           <!--  -->
@@ -114,7 +127,7 @@
          </classDecl>
       </encodingDesc>
    </teiHeader>
-   <text decls="#fiction-fantasy">
+   <text decls="#fiction-fantasy" xml:lang="mix">
       <body>
          <div xml:id="L099-01">
             <head>

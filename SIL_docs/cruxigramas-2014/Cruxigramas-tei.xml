@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -60,6 +60,67 @@
             </p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         
+         <editorialDecl>
+            <normalization><!-- not up to date!! -->
+               <ab>Where there was a spelling by the author which separately wrote two items that should be written as one (such as future (potential) prefixes in front of a verb, these are wrapped in a common <tag>w</tag> and the <att>norm</att> is used to show the normalized value (without) whitespace.</ab>
+               <ab>Where the original did not follow spelling conventions and no white-space was involved and the items were changed to reflect the most up-to-date orthography conventions and the original form written by Tisu is recorded in the <att>orig</att>.</ab>
+               
+            </normalization>
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: 
+                     <ref>//div/head/seg[@xml:lang='mix']/w</ref>  
+                     <ref>//div/label/seg[@xml:lang='mix']/w</ref>  <!-- may be redundant (normalize as /head?) -->
+                     <ref>//div/p/seg[@xml:lang='mix']/w</ref>
+                     <ref>//div/list/head/seg[@xml:lang='mix']/w</ref>
+                     <ref>//div/list/item/seg[@xml:lang='mix']/w</ref><!-- NEED TYPOLOGY FOR "HINTS" --> 
+                  </item>
+                  
+                  
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following locations:
+                     
+                     <ref>//div/head/spanGrp[@type='translation']/span[xml:lang='en']</ref> where preceding sibling is: <ref>//div/head/seg[@xml:lang='mix']</ref>  
+                     
+                     <ref>//div/label/spanGrp[@type='translation']/span[xml:lang='en']</ref> where preceding sibling is: <ref>//div/label/seg[@xml:lang='mix']</ref>  <!-- may be redundant (normalize as /head?) -->
+                     
+                     <ref>//div/p/spanGrp[@type='translation']/span[xml:lang='en']</ref> where preceding sibling is: <ref>//div/p/seg[@xml:lang='mix']</ref>
+                     
+                     <ref>//div/list/head/spanGrp[@type='translation']/span[xml:lang='en']</ref> where preceding sibling is: <ref>//div/list/head/seg[@xml:lang='mix']</ref>
+                     
+                     <ref>//div/list/item/spanGrp[@type='translation']/span[xml:lang='en']</ref> where preceding sibling is: <ref>//div/list/item/seg[@xml:lang='mix']</ref><!-- NEED TYPOLOGY FOR "HINTS" --> 
+                     
+                     
+                  </item>
+                  
+                  <item>Spanish translations are defined both in relation to their Mixtec equivalents and as original content (as a prompt for readers to give the Mixtec equivalent) in the following locations:
+                     
+                     The document contains original content Spanish vocab as prompts to which the answer is the Mixtec item, at the following: <ref>//div/list/item/seg[@xml:lang='es']/w</ref><!-- original content -->
+                     
+                     <ref>//div/head/spanGrp[@type='translation']/span[xml:lang='es']</ref> where preceding sibling is: <ref>//div/head/seg[@xml:lang='mix']</ref>  
+                     
+                     <ref>//div/label/spanGrp[@type='translation']/span[xml:lang='es']</ref> where preceding sibling is: <ref>//div/label/seg[@xml:lang='mix']</ref>  <!-- may be redundant (normalize as /head?) -->
+                     
+                     <ref>//div/p/spanGrp[@type='translation']/span[xml:lang='es']</ref> where preceding sibling is: <ref>//div/p/seg[@xml:lang='mix']</ref>
+                     
+                     <ref>//div/list/head/spanGrp[@type='translation']/span[xml:lang='es']</ref> where preceding sibling is: <ref>//div/list/head/seg[@xml:lang='mix']</ref>
+                     
+                     <ref>//div/list/item/spanGrp[@type='translation']/span[xml:lang='es']</ref> where preceding sibling is: <ref>//div/list/item/seg[@xml:lang='mix']</ref><!-- NEED TYPOLOGY FOR "HINTS" --> 
+                 
+                  </item>
+                  
+                  <item><!-- MIXTEC TRANSLATIONS OF SPANISH CONTENT!!! (SOME NOT ORIGINAL *ANSWERS TO QUESTION MATERIAL!!) -->
+                     
+                     <ref>//div/list/item/spanGrp[@type='translation']/span[xml:lang='mix']</ref> where preceding sibling is: <ref>//div/list/item/seg[@xml:lang='es']</ref><!-- original content -->
+                     
+                     
+                  </item>
+               </list>
+               
+            </ab>
+         </editorialDecl>
+      </encodingDesc>
    </teiHeader>
    <text>
       <body>
@@ -82,13 +143,13 @@
                </seg>
             </head>
             <p>
-               <seg xml:id="d1e48" type="declarative">
+               <seg xml:id="d1e48" type="declarative" xml:lang="mix">
                   <w xml:id="d1e49">In</w>
                   <w xml:id="d1e51">in</w>
                   <w xml:id="d1e53">kue</w>
                   <w xml:id="d1e55">letra</w>
-                  <w xml:id="d1e57" cert="unknown">tsini</w>
-                  <w xml:id="d1e59" cert="unknown">ñuꞌu</w><!--  -->
+                  <w xml:id="d1e57">tsini</w>
+                  <w xml:id="d1e59">ñuꞌu</w><!--  tsini ñu'un = have to-->
                   <w xml:id="d1e61">kunkai</w>
                   <w xml:id="d1e63">ini</w>
                   <w xml:id="d1e65">in</w>
@@ -98,15 +159,18 @@
                   <w xml:id="d1e74">yoꞌo</w>
                   <pc>.</pc>
                </seg>
-               <seg xml:id="d1e78" type="declarative">
-                  ¡<w xml:id="d1e80">Cha</w>
+               <seg xml:id="d1e78" type="declarative" xml:lang="mix">
+                  <pc>¡</pc>
+                  <w xml:id="d1e80">Cha</w>
                   <w xml:id="d1e82">letra</w>
                   <c xml:id="d1e84">ch</c>
                   <w xml:id="d1e86" cert="unknown">kunkuachuin</w><!-- ? -->
                   <w xml:id="d1e88">in</w>
                   <w xml:id="d1e90">mituꞌun</w>
                   <w xml:id="d1e92">caja</w>
-                  <w xml:id="d1e94">luu</w>! </seg>
+                  <w xml:id="d1e94">luu</w>
+                  <pc>!</pc>
+               </seg>
                
                <spanGrp type="translation">
                   <span target="#d1e90" xml:lang="en">only</span>
@@ -118,7 +182,7 @@
                   <span target="#d1e92" xml:lang="es">caja</span>
                   
                </spanGrp>
-               <seg xml:id="d1e97" type="declarative">
+               <seg xml:id="d1e97" type="declarative" xml:lang="mix">
                   <w xml:id="d1e98">Suꞌa</w>
                   <w xml:id="d1e100">kui</w>
                   <pc>:</pc>
@@ -130,7 +194,7 @@
                <graphic url=" cruxigramas-00-1.png"/>
             </p>
             <p>
-               <seg xml:id="d1e106" type="declarative">
+               <seg xml:id="d1e106" type="declarative" xml:lang="mix">
                   <w xml:id="d1e107">Cha</w>
                   <w xml:id="d1e109">letra</w>
                   <w xml:id="d1e111">ña</w>
@@ -142,7 +206,7 @@
                   <w xml:id="d1e123">ñoꞌo</w><!-- (JB: this/that?) -->
                   <pc>:</pc>
                </seg>
-               <seg xml:id="d1e127" type="declarative">
+               <seg xml:id="d1e127" type="declarative" xml:lang="mix">
                   <w xml:id="d1e128">Cha</w>
                   <w xml:id="d1e130">tsini</w>
                   <w xml:id="d1e132">ñuꞌu</w>
@@ -159,7 +223,7 @@
                   <w xml:id="d1e155">ña</w>
                   <pc>.</pc>
                </seg>
-               <seg xml:id="d1e159" type="declarative">
+               <seg xml:id="d1e159" type="declarative" xml:lang="mix">
                   <w xml:id="d1e160">Suꞌa</w>
                   <w xml:id="d1e162">kui</w>
                   <pc>:</pc>
@@ -171,7 +235,7 @@
             <!-- page 1 -->
             <head>
                <num>1.</num>
-               <seg xml:id="d1e171" type="header">
+               <seg xml:id="d1e171" type="header" xml:lang="mix">
                   <!-- everything (all answers to hints) in this inherits the semantic profile: is_a:Animal; domain="animal"-->
                   <w xml:id="d1e172">Kue</w>
                   <w xml:id="d1e174">kiti</w>
@@ -184,7 +248,7 @@
             <!-- IMG OF CROSSWORD -->
             <list>
                <head>
-                  <seg xml:id="d1e178" type="header">
+                  <seg xml:id="d1e178" type="header" xml:lang="mix">
                      <w xml:id="d1e179">Kue</w>
                      <w xml:id="d1e181">tuꞌun</w>
                      <w xml:id="d1e183">kantuꞌu</w>
@@ -219,7 +283,7 @@
             </list>
             <list>
                <head>
-                  <seg xml:id="d1e205" type="header">
+                  <seg xml:id="d1e205" type="header" xml:lang="mix">
                      <w xml:id="d1e206">Kue</w>
                      <w xml:id="d1e208">tuꞌun</w>
                      <w xml:id="d1e210">inchichi</w>
@@ -261,7 +325,7 @@ The things I use
             -->
             <head>
                <num>2.</num>
-               <seg type="header" xml:id="d1e214">
+               <seg type="header" xml:id="d1e214" xml:lang="mix">
                   <w xml:id="d1e230">Kue</w>
                   <w xml:id="d1e232">ñaꞌa</w>
                   <w xml:id="d1e234">ña</w>
@@ -277,7 +341,7 @@ The things I use
             </head>
             <list>
                <head>
-                  <seg type="header" xml:id="d1e238">
+                  <seg type="header" xml:id="d1e238" xml:lang="mix">
                      <w xml:id="d1e240">Kue</w>
                      <w xml:id="d1e242">tuꞌun</w>
                      <w xml:id="d1e244">kantuꞌu</w>
@@ -309,7 +373,7 @@ The things I use
             </list>
             <list>
                <head>
-                  <seg xml:id="d1e265" type="header">
+                  <seg xml:id="d1e265" type="header" xml:lang="mix">
                      <w xml:id="d1e268">Kue</w>
                      <w xml:id="d1e270">tuꞌun</w>
                      <w xml:id="d1e272">inchichi</w>
@@ -342,7 +406,7 @@ The things I use
          <div>
             <label>
                <num>3.</num>
-               <seg xml:id="d1e290" type="header">
+               <seg xml:id="d1e290" type="header" xml:lang="mix">
                   <w xml:id="d1e291">Nixi</w>
                   <w xml:id="d1e292">nani</w>
                   <w xml:id="d1e293">kue</w>
@@ -362,7 +426,7 @@ The things I use
             <!-- IMG HERE -->
             <list>
                <head>
-                  <seg xml:id="d1e295" type="header">
+                  <seg xml:id="d1e295" type="header" xml:lang="mix">
                      <w xml:id="d1e298">Kue</w>
                      <w xml:id="d1e300">tuꞌun</w>
                      <w xml:id="d1e302">kantuꞌu</w>
@@ -373,36 +437,36 @@ The things I use
                <!-- words (going/sitting) straight-->
                <item>
                   <num>1.</num>
-                  <w xml:id="d1e312">Santa María Teposlantongo</w>
+                  <seg  xml:id="d1e311" xml:lang="es"><w xml:id="d1e312">Santa María Teposlantongo</w></seg>
                </item>
                <item>
                   <num>5.</num>
-                  <w xml:id="d1e317">Tinuma de Zaragoza</w>
+                  <seg xml:id="d1e316" xml:lang="es"><w xml:id="d1e317" xml:lang="es">Tinuma de Zaragoza</w></seg>
                </item>
                <item>
                   <num>7.</num>
-                  <w xml:id="d1e322">El Llano</w>
+                  <seg xml:lang="es" xml:id="d1e321"><w xml:id="d1e322">El Llano</w></seg>
                </item>
                <item>
                   <num>8.</num>
-                  <w xml:id="d1e327">Juxtlahuaca</w>
+                  <seg xml:lang="es" xml:id="d1e326"><w xml:id="d1e327">Juxtlahuaca</w></seg>
                </item>
                <item>
                   <num>9.</num>
-                  <w xml:id="d1e332">San Pedro Yososcua</w>
+                  <seg xml:id="d1e331" xml:lang="es"><w xml:id="d1e332">San Pedro Yososcua</w></seg>
                </item>
                <item>
                   <num>12.</num>
-                  <w xml:id="d1e337">San Juan Mixtepec</w>
+                  <seg xml:id="d1e336" xml:lang="es"><w xml:id="d1e337">San Juan Mixtepec</w></seg>
                </item>
                <item>
                   <num>13.</num>
-                  <w xml:id="d1e342">Oaxaca</w>
+                  <seg xml:lang="es" xml:id="d1e341"><w xml:id="d1e342">Oaxaca</w></seg>
                </item>
             </list>
             <list>
                <head>
-                  <seg xml:id="d1e344" type="header">
+                  <seg xml:id="d1e344" type="header" xml:lang="mix">
                      <w xml:id="d1e346">Kue</w>
                      <w xml:id="d1e348">tuꞌun</w>
                      <w xml:id="d1e350">inchichi</w>
@@ -412,38 +476,38 @@ The things I use
                <!-- (diagonal) words  -->
                <item>
                   <num>1.</num>
-                  <w xml:id="d1e358">Tlaxiaco</w>
+                  <seg xml:lang="es"  xml:id="d1e357"><w xml:id="d1e358">Tlaxiaco</w></seg>
                </item>
                <item>
                   <num>2.</num>
-                  <w xml:id="d1e363">Putla</w>
+                  <seg xml:lang="es" xml:id="d1e362"><w xml:id="d1e363">Putla</w></seg>
                </item>
                <item>
                   <num>3.</num>
-                  <w xml:id="d1e368">Río Timbre</w>
+                  <seg xml:lang="es" xml:id="d1e367"><w xml:id="d1e368">Río Timbre</w></seg>
                </item>
                <item>
                   <num>4.</num>
-                  <w xml:id="d1e373">San Lucas</w>
+                  <seg xml:lang="es" xml:id="d1e372"><w xml:id="d1e373">San Lucas</w></seg>
                </item>
                <item>
                   <num>6.</num>
-                  <w xml:id="d1e378">Tejocotes</w>
+                  <seg xml:lang="es" xml:id="d1e377"><w xml:id="d1e378">Tejocotes</w></seg>
                </item>
                <item>
                   <num>10.</num>
-                  <w xml:id="d1e383">Huajuapan</w>
+                  <seg xml:lang="es" xml:id="d1e382"><w xml:id="d1e383">Huajuapan</w></seg>
                </item>
                <item>
                   <num>11.</num>
-                  <w xml:id="d1e388">Santiago Tiño</w>
+                  <seg xml:lang="es" xml:id="d1e387"><w xml:id="d1e388">Santiago Tiño</w></seg>
                </item>
             </list>
          </div>
          <div>
             <label>
                <num>4.</num>
-               <seg xml:id="d1f390" type="header">
+               <seg xml:id="d1f390" type="header" xml:lang="mix">
                   <w xml:id="d1f392">Kue</w>
                   <w xml:id="d1f394">kiti</w>
                   <w xml:id="d1f396">yee</w>
@@ -469,7 +533,7 @@ The things I use
             <!-- IMG 04 -->
             <list>
                <head>
-                  <seg xml:id="d1e394" type="header">
+                  <seg xml:id="d1e394" type="header" xml:lang="mix">
                      <w xml:id="d1e396">Kue</w>
                      <w xml:id="d1e398">tuꞌun</w>
                      <w xml:id="d1e400">kantuꞌu</w>
@@ -615,10 +679,11 @@ tintuyu = squash/pumkin
             </list>
             <list>
                <head>
-                  <w xml:id="d1e487">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e487">Kue</w>
                   <w xml:id="d1e489">tuꞌun</w>
                   <w xml:id="d1e491">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -820,7 +885,7 @@ nchu'a =extremely
             <label>
                <num>5.</num>
                <!--  -->
-               <seg xml:id="d1f602" type="header"><!-- topics -->
+               <seg xml:id="d1f602" type="header" xml:lang="mix"><!-- topics -->
                   <w xml:id="d1f604">Kue</w>
                   <w xml:id="d1f606">kuiꞌi</w>
                   <w xml:id="d1f608">tsi</w>
@@ -841,10 +906,12 @@ nchu'a =extremely
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e602">Kue</w>
-                  <w xml:id="d1e604">tuꞌun</w>
-                  <w xml:id="d1e606">kantuꞌu</w>
-                  <w xml:id="d1e608">ntaa</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e602">Kue</w>
+                     <w xml:id="d1e604">tuꞌun</w>
+                     <w xml:id="d1e606">kantuꞌu</w>
+                     <w xml:id="d1e608">ntaa</w>
+                  </seg>
                   <pc>:</pc>
                </head>
                <!-- words (going/sitting) straight-->
@@ -1078,9 +1145,11 @@ intincha'i = black -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e783">Kue</w>
-                  <w xml:id="d1e785">tuꞌun</w>
-                  <w xml:id="d1e787">inchichi</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e783">Kue</w>
+                     <w xml:id="d1e785">tuꞌun</w>
+                     <w xml:id="d1e787">inchichi</w>
+                  </seg>
                   <pc>:</pc>
                </head>
                <!-- (diagonal) words  -->
@@ -1338,7 +1407,7 @@ na nuu nchai = on their food -->
             <label>
                <w>6</w>
                <pc>.</pc>
-               <seg xml:id="d1e1000" type="header">
+               <seg xml:id="d1e1000" type="header" xml:lang="mix">
                   <w xml:id="d1e1002">Iki</w><!-- why "iki" here? -->
                   <w xml:id="d1e1004">kuñu</w>
                </seg>
@@ -1351,11 +1420,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e1009">Kue</w>
-                  <w xml:id="d1e1011">tuꞌun</w>
-                  <w xml:id="d1e1013">kantuꞌu</w>
-                  <w xml:id="d1e1015">ntaa</w>
-                  <pc>:</pc>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e1009">Kue</w>
+                     <w xml:id="d1e1011">tuꞌun</w>
+                     <w xml:id="d1e1013">kantuꞌu</w>
+                     <w xml:id="d1e1015">ntaa</w>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -1365,10 +1435,12 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e1025">Kue</w>
-                  <w xml:id="d1e1027">tuꞌun</w>
-                  <w xml:id="d1e1029">inchichi</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e1025">Kue</w>
+                     <w xml:id="d1e1027">tuꞌun</w>
+                     <w xml:id="d1e1029">inchichi</w>
                   <pc>:</pc>
+                  </seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -1380,7 +1452,7 @@ na nuu nchai = on their food -->
          <div>
             <label>
                <num>7.</num>
-               <seg xml:id="d1e1037" type="header">
+               <seg xml:id="d1e1037" type="header" xml:lang="mix">
                   <w xml:id="d1e1039">Kue</w>
                   <w xml:id="d1e1040">kiti</w>
                </seg>
@@ -1392,7 +1464,7 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <seg xml:id="d1f1040" type="header">
+                  <seg xml:id="d1f1040" type="header" xml:lang="mix">
                      <w xml:id="d1e1043">Kue</w>
                      <w xml:id="d1e1045">tuꞌun</w>
                      <w xml:id="d1e1047">kantuꞌu</w>
@@ -1475,8 +1547,6 @@ na nuu nchai = on their food -->
                      
                      <span target="#d1e1123" xml:lang="en">thorn</span>
 
-                     <span target="" xml:lang="en"/>
-                     <span target="" xml:lang="es"/>
                      
                      <span target="#d1e1099" xml:lang="en" cert="low">An animal that flies and walks around on the thorns.</span>
                      <span target="#d1e1099" xml:lang="es"/>
@@ -1639,10 +1709,11 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <seg>
+                  <seg xml:lang="mix">
                      <w xml:id="d1e1233">Kue</w>
                      <w xml:id="d1e1235">tuꞌun</w>
-                     <w xml:id="d1e1237">inchichi</w></seg>
+                     <w xml:id="d1e1237">inchichi</w>
+                  </seg>
                   <pc>:</pc>
                </head>
                <!-- (diagonal) words  -->
@@ -1842,7 +1913,7 @@ na nuu nchai = on their food -->
             <label>
                <w>8</w>
                <pc>.</pc>
-               <seg xml:id="d1f1393" type="header">
+               <seg xml:id="d1f1393" type="header" xml:lang="mix">
                   <w xml:id="d1f1395">Kue</w>
                   <w xml:id="d1f1397">nchai</w><!-- food -->
                   <w xml:id="d1f1399">ña</w><!-- DEM that -->
@@ -1861,11 +1932,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e1393">Kue</w>
-                  <w xml:id="d1e1395">tuꞌun</w>
-                  <w xml:id="d1e1397">kantuꞌu</w>
-                  <w xml:id="d1e1399">ntaa</w>
-                  <pc>:</pc>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e1393">Kue</w>
+                     <w xml:id="d1e1395">tuꞌun</w>
+                     <w xml:id="d1e1397">kantuꞌu</w>
+                     <w xml:id="d1e1399">ntaa</w>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -2062,10 +2134,11 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e1641">Kue</w>
-                  <w xml:id="d1e1643">tuꞌun</w>
-                  <w xml:id="d1e1645">inchichi</w>
-                  <pc>:</pc>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e1641">Kue</w>
+                     <w xml:id="d1e1643">tuꞌun</w>
+                     <w xml:id="d1e1645">inchichi</w>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -2240,7 +2313,7 @@ na nuu nchai = on their food -->
          <div>
             <label>
                <num>9.</num>
-               <seg xml:id="d1f1804" type="header">
+               <seg xml:id="d1f1804" type="header" xml:lang="mix">
                   <w xml:id="d1f1806">Nuu</w>
                   <w xml:id="d1f1808">itu</w>
                </seg>
@@ -2252,11 +2325,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e1814">Kue</w>
-                  <w xml:id="d1e1816">tuꞌun</w>
-                  <w xml:id="d1e1818">kantuꞌu</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e1814">Kue</w>
+                     <w xml:id="d1e1816">tuꞌun</w>
+                     <w xml:id="d1e1818">kantuꞌu</w>
                   <w xml:id="d1e1820">ntaa</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -2444,10 +2518,11 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e1987">Kue</w>
+                 <seg xml:lang="mix">
+                    <w xml:id="d1e1987">Kue</w>
                   <w xml:id="d1e1989">tuꞌun</w>
                   <w xml:id="d1e1991">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -2653,7 +2728,7 @@ na nuu nchai = on their food -->
          <div>
             <label>
                <num>10.</num>
-               <seg xml:id="d1f2181" type="header">
+               <seg xml:id="d1f2181" type="header" xml:lang="mix">
                   <w xml:id="d1f2183">Kue</w>
                   <w xml:id="d1f2185">kiti</w>
                </seg>
@@ -2665,11 +2740,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e2191">Kue</w>
-                  <w xml:id="d1e2193">tuꞌun</w>
-                  <w xml:id="d1e2195">kantuꞌu</w>
-                  <w xml:id="d1e2197">ntaa</w>
-                  <pc>:</pc>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e2191">Kue</w>
+                     <w xml:id="d1e2193">tuꞌun</w>
+                     <w xml:id="d1e2195">kantuꞌu</w>
+                     <w xml:id="d1e2197">ntaa</w>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -2814,10 +2890,11 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e2318">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e2318">Kue</w>
                   <w xml:id="d1e2320">tuꞌun</w>
                   <w xml:id="d1e2322">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -2999,7 +3076,7 @@ na nuu nchai = on their food -->
          <div>
             <label>
                <num>11.</num>
-               <seg xml:id="d1f2459" type="header">
+               <seg xml:id="d1f2459" type="header" xml:lang="mix">
                   <w xml:id="d1f2461">Kue</w>
                   <w xml:id="d1f2463">kiti</w>
                   <w xml:id="d1f2465">ntava</w>
@@ -3012,11 +3089,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e2470">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e2470">Kue</w>
                   <w xml:id="d1e2472">tuꞌun</w>
                   <w xml:id="d1e2474">kantuꞌu</w>
                   <w xml:id="d1e2476">ntaa</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -3142,10 +3220,10 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e2560">Kue</w>
+                  <seg xml:lang="mix"> <w xml:id="d1e2560">Kue</w>
                   <w xml:id="d1e2562">tuꞌun</w>
                   <w xml:id="d1e2564">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -3271,7 +3349,7 @@ na nuu nchai = on their food -->
          <div>
             <label>
                <num>12.</num>
-               <seg xml:id="d1f2642" type="header">
+               <seg xml:id="d1f2642" type="header" xml:lang="mix">
                   <w xml:id="d1f2644">Kue</w>
                   <w xml:id="d1f2646">yutu</w>
                   <w xml:id="d1f2648">kuii</w>
@@ -3287,11 +3365,11 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e2650">Kue</w>
+                  <seg xml:lang="mix"> <w xml:id="d1e2650">Kue</w>
                   <w xml:id="d1e2652">tuꞌun</w>
                   <w xml:id="d1e2654">kantuꞌu</w>
                   <w xml:id="d1e2656">ntaa</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -3458,10 +3536,10 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e2840">Kue</w>
+                  <seg xml:lang="mix"><w xml:id="d1e2840">Kue</w>
                   <w xml:id="d1e2842">tuꞌun</w>
                   <w xml:id="d1e2844">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -3684,7 +3762,7 @@ na nuu nchai = on their food -->
          <div>
             <label>
                <num> 13.</num>
-               <seg xml:id="d1f3073" type="header">
+               <seg xml:id="d1f3073" type="header" xml:lang="mix">
                   <w xml:id="d1f3075">Kue</w>
                   <w xml:id="d1f3077">kiti</w>
                   <w xml:id="d1f3079">yee</w>
@@ -3698,11 +3776,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e3083">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e3083">Kue</w>
                   <w xml:id="d1e3085">tuꞌun</w>
                   <w xml:id="d1e3087">kantuꞌu</w>
                   <w xml:id="d1e3089">ntaa</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -3920,10 +3999,11 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e3325">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e3325">Kue</w>
                   <w xml:id="d1e3327">tuꞌun</w>
                   <w xml:id="d1e3329">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
@@ -4173,9 +4253,9 @@ na nuu nchai = on their food -->
          </div>
          <div>
             <label>
-               <w>14</w>
+               <num>14</num>
                <pc>.</pc>
-               <seg xml:id="d1f3565" type="header">
+               <seg xml:id="d1f3565" type="header" xml:lang="mix">
                   <w xml:id="d1f3567">Kue</w>
                   <w xml:id="d1f3569">itsi</w>
                   <w xml:id="d1f3570">luu</w>
@@ -4188,11 +4268,12 @@ na nuu nchai = on their food -->
             <!-- IMG  -->
             <list>
                <head>
-                  <w xml:id="d1e3575">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e3575">Kue</w>
                   <w xml:id="d1e3577">tuꞌun</w>
                   <w xml:id="d1e3579">kantuꞌu</w>
                   <w xml:id="d1e3581">ntaa</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- words (going/sitting) straight-->
                <item>
@@ -4453,10 +4534,11 @@ na nuu nchai = on their food -->
             </list>
             <list>
                <head>
-                  <w xml:id="d1e3898">Kue</w>
+                  <seg xml:lang="mix">
+                     <w xml:id="d1e3898">Kue</w>
                   <w xml:id="d1e3900">tuꞌun</w>
                   <w xml:id="d1e3902">inchichi</w>
-                  <pc>:</pc>
+                  <pc>:</pc></seg>
                </head>
                <!-- (diagonal) words  -->
                <item>
