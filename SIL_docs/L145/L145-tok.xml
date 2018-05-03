@@ -78,22 +78,39 @@
                <list>
                   <item>Mixtec content found at following locations:
                      
-                     <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
-                     
-                     <ref>//div/head/seg[@xml:lang='mix']/w</ref>  
-                     
-                     <ref>//div/list/item/seg[@xml:lang='mix']/w</ref>
-                     
-                     
-                     <ref>//div/label/seg[@xml:lang='mix']/w</ref>  
-                     <ref>//div/p/seg[@xml:lang='mix']/w</ref>
-                     <ref>//div/list/head/seg[@xml:lang='mix']/w</ref>
-
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>                 
+                     <ref>//text[@xml:lang='mix']/body/div/head/seg[@xml:lang='mix']/w</ref>          
+                     <ref>//text[@xml:lang='mix']/body/div/list/item/seg[@xml:lang='mix']/w</ref>       
+                     <ref>//text[@xml:lang='mix']/body/div/label/seg[@xml:lang='mix']/w</ref>  
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg[@xml:lang='mix']/w</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/head/seg[@xml:lang='mix']/w</ref>
                      
                   </item>
-                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location:
+                     
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/item/spanGrp[@type='translation']/span[@xml:lang='en']</ref> 
+                     <ref>//text[@xml:lang='mix']/body/div/label/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/head/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     
+                     for each, the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref> where a preceding sibling is:
+                     <ref>//text[@xml:lang='mix']/body/*/seg</ref>
+                     
                   </item>
-                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location:
+                     
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/item/spanGrp[@type='translation']/span[@xml:lang='es']</ref> 
+                     <ref>//text[@xml:lang='mix']/body/div/label/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/head/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     
+                     
+                     for each, the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding a sibling is: <ref>//text[@xml:lang='mix']/body/*/seg</ref>
                   </item>
                </list>
             </ab>
@@ -3476,7 +3493,7 @@
                   <w xml:id="d1e2153">ka</w>
                   <w xml:id="d1e2155" cert="low" orig="nuu">nu</w>
                   <w xml:id="d1e2157" cert="medium">nii</w>                  <!-- old? -->
-                  <w xml:id="d1e2158">
+                  <w xml:id="d1e2158" norm="Ñu'u Nchai">
                      <w xml:id="d1e2159">Ñu'u</w>
                      <w xml:id="d1e2160">Nchai</w>
                   </w>

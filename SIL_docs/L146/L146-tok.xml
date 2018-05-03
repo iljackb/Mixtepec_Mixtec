@@ -27,6 +27,17 @@
                   <w xml:id="d1e25">mucho</w>
                </seg>
             </title>
+            <respStmt>
+               <resp>Glossing</resp>
+               <name xml:id="TS">Tisu'ma Salazar</name>
+            </respStmt>
+            
+            <respStmt>
+               <resp>translation</resp>
+               <resp>TEI encoding</resp>
+               <resp>annotation</resp>
+               <name xml:id="JB">Jack Bowers</name>
+            </respStmt>
          </titleStmt>
          <publicationStmt>
             <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
@@ -58,6 +69,19 @@
                   <date>2018-02-18</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). In this document the extended senses of "face" - "nuu" were not normalized as I am awaiting discussion as to whether this particular sense should also be changed to "nu". "tutu" 'wood' changed to "tutú"
                </ab>
             </normalization>
+            
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+               </list>
+            </ab>
+            
             <segmentation>
                <ab>
                  ...
@@ -116,7 +140,7 @@
          </projectDesc>
       </encodingDesc>
    </teiHeader>
-   <text decls="#fiction-realistic">
+   <text decls="#fiction-realistic" xml:lang="mix">
       <body>
          <div xml:id="L146-01">
             <head>

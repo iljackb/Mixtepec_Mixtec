@@ -17,11 +17,11 @@
                <resp>TEI Encoding</resp>
                <resp>Annotation</resp>
                <resp>Glossing</resp>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
             </respStmt>
             <respStmt>
                <resp>Glossing</resp>
-               <name>Juan "Tisu'ma" Salazar</name>
+               <name xml:id="TS">Juan "Tisu'ma" Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -71,6 +71,20 @@
                   <date>2018-03-27</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography).
                </ab>
             </normalization>
+            
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref> where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+               </list>
+            </ab>
+            
+            
          </editorialDecl>
          <classDecl>
             <taxonomy xml:id="tax.sil-mix">

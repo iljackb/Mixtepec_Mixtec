@@ -5,10 +5,10 @@
       <fileDesc>
          <titleStmt>
             <title xml:lang="mix">
-               <w xml:id="d1e6">Tuyu</w> <w xml:id="d1e7">kuka'nu</w>
+               <seg xml:id="d1e5"><w xml:id="d1e6">Tuyu</w> <w xml:id="d1e7">kuka'nu</w></seg>
             </title>
             <title xml:lang="es">
-               <w xml:id="d1e12">El </w>Sabino Grande
+               <seg xml:id="d1e12">El Sabino Grande</seg>
             </title>
             <author>Samuel López Santiago</author>
             <editor>Gisela Beckmann</editor>
@@ -20,7 +20,7 @@
             <respStmt>
                <resp>TEI Encoding</resp>
                <resp>Translation</resp>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -71,6 +71,18 @@
                   <date>2018-02-19</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). In this document the extended senses of "face" - "nuu" were not normalized as I am awaiting discussion as to whether this particular sense should also be changed to "nu". Compound place names were wrapped in a parent <tag>w</tag> and the original (separate) values are represented (and searchable) in the @<att>norm</att>.
                </ab>
             </normalization>
+            
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  </item>
+               </list>
+            </ab>
             <segmentation>
                <ab>
                   ....

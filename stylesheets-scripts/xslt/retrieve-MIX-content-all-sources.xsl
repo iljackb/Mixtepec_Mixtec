@@ -2,7 +2,95 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
-    version="2.0">
+    version="2.0"
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0">
+    
+   <xsl:output encoding="UTF-8" method="html" indent="yes"/>
+
+   <xsl:param name="input" as="xs:string" select="'../../SIL_docs/Parangon/ParangonMixtepec-MNieves-TEI.xml'"/>
+   
+   <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
+
+   <xsl:variable name="input-document" select="doc($input)"/>
+   
+   <xsl:param name="searchTarget" select="'nuu'"/>
+    <xsl:param name="searchLang" select="'mix'"/>
+    
+    <xsl:template match="/">
+       <xsl:message>Fichier: <xsl:value-of select="$input"/></xsl:message>
+       <xsl:message>Fichier: <xsl:value-of select="$input-document/descendant::w[1]"/></xsl:message>
+      <html>
+         <body>
+            <h1>Searched element</h1>
+            <xsl:value-of select="$searchTarget"/>
+            <h1>Results</h1>
+            <xsl:apply-templates select="$input-document/descendant::w[contains(.,$searchTarget)]"/>
+         </body>
+      </html>
+    </xsl:template>
+   
+   <xsl:template match="w">
+      <xsl:variable name="currentId" select="@xml:id"/>
+      <xsl:variable name="currentTarget" select="concat('#',$currentId)"/>
+      
+      <xsl:variable name="spanTranslations" select="$input-document/descendant::span[contains(@target,$currentTarget) and not(@type)]"/>   
+      <xsl:variable name="literalSpanTranslations" select="$input-document/descendant::span[contains(@target,$currentTarget) and @type]"/>   
+      <xsl:variable name="linkTranslations" select="$input-document/descendant::link[contains(@target,$currentTarget) and not(@type)]"/>
+      <xsl:variable name="literalLinkTranslations" select="$input-document/descendant::link[contains(@target,$currentTarget) and @type]"/>
+      
+      <p>
+         <xsl:value-of select="."/> (<xsl:value-of select="$currentTarget"/>) = 
+         <xsl:for-each select="$spanTranslations">
+            <xsl:text>Span: </xsl:text>
+            <xsl:variable name="spanLang" select="@xml:lang"/>
+            (<xsl:value-of select="$spanLang"/>)
+            <xsl:value-of select="."/>, <!-- only want where there is another one -->      
+         </xsl:for-each>
+         
+         <xsl:for-each select="$literalSpanTranslations">
+            <xsl:text>Span: </xsl:text>
+            <xsl:variable name="spanLang" select="@xml:lang"/>
+            (<xsl:value-of select="$spanLang"/>:literal)
+            <xsl:value-of select="."/>, <!-- only want where there is another one -->      
+         </xsl:for-each>
+         
+         <xsl:for-each select="$linkTranslations">
+            <xsl:for-each select="tokenize(@target,' ')">
+               <xsl:text> Links: </xsl:text>
+               
+           
+               
+               <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
+               <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
+               <xsl:variable name="linkLang" select="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang"/>
+               
+               <xsl:if test="$linkLang='es'">
+                  (<xsl:value-of select="$linkLang"/>)
+                  <xsl:value-of select="$currentLinkedObject"/>
+               </xsl:if>
+            </xsl:for-each>,
+         </xsl:for-each>
+         
+         <xsl:for-each select="$literalLinkTranslations"><!-- finish this -->
+            <xsl:for-each select="tokenize(@target,' ')">
+               <xsl:text> Links: </xsl:text>
+               
+               <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
+               <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
+               <xsl:if test="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang='es'">
+                  <xsl:value-of select="$currentLinkedObject"/>
+               </xsl:if>
+            </xsl:for-each>,
+         </xsl:for-each>
+        
+      </p>
+   </xsl:template>
+    
+    
+    
+    
+    
+    
     
     <!-- add XPath for title translations also (once implemented) -->
     
@@ -54,7 +142,7 @@
     
     -->
     
-    <!-- Cruxigramas -->
+    <!-- Cruxigramas, L145 -->
     <!-- 
     <list>
                   <item>Mixtec content found at following locations: 
@@ -104,22 +192,7 @@
                   </item>
     
     -->
-    
-    <!-- L093 -->
-    
-    <!-- 
-<list>
-                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/p/seg/w</ref></item>     
-                  
-                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/p/spanGrp[@type='translation']/span[@target</ref> and the two equivalent translation values are defined in the value of <ref>//span[@target]</ref> 
-                  where preceding sibling is: <ref>//text[@xml:lang='mix']/body/p/seg[@xml:lang='mix']</ref></item>
-                  
-                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/p/seg[@xml:lang='mix']</ref></item>
-                  
-               </list>
-    
-    -->
-    
+
     <!-- L095-tok-QA-rspns -->
     
     <!-- 
@@ -143,21 +216,117 @@
     -->
     
     
-   <!-- L097, L098, L099, L101, L102, L103, L104, L106, L144,-->
+   <!-- L093, L097, L098, L099, L101, L102, L103, L104, L106, L144, L146, L147, L149, L150, L152, L153, L154, L155, L156, L157, L158, L159, L161, -->
    <!-- 
                <ab type="annotation">
                <list>
                   <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
                      
                   </item>
-                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
                   </item>
-                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
                   </item>
                </list>
             </ab>
    
    
    -->
+   <!-- L145 -->
+   <!-- 
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations:
+                     
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>                 
+                     <ref>//text[@xml:lang='mix']/body/div/head/seg[@xml:lang='mix']/w</ref>          
+                     <ref>//text[@xml:lang='mix']/body/div/list/item/seg[@xml:lang='mix']/w</ref>       
+                     <ref>//text[@xml:lang='mix']/body/div/label/seg[@xml:lang='mix']/w</ref>  
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg[@xml:lang='mix']/w</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/head/seg[@xml:lang='mix']/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location:
+                     
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/item/spanGrp[@type='translation']/span[@xml:lang='en']</ref> 
+                     <ref>//text[@xml:lang='mix']/body/div/label/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/head/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     
+                     for each, the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref> where a preceding sibling is:
+                     <ref>//text[@xml:lang='mix']/body/*/seg</ref>
+                     
+                  </item>
+                  
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location:
+                     
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/item/spanGrp[@type='translation']/span[@xml:lang='es']</ref> 
+                     <ref>//text[@xml:lang='mix']/body/div/label/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/list/head/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     
+                     
+                     for each, the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding a sibling is: <ref>//text[@xml:lang='mix']/body/*/seg</ref>
+                  </item>
+               </list>
+   -->
     
+    <!-- L151 -->
+   
+   <!-- 
+   
+   <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations:
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following locations:
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     
+                     the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/*/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following locations:
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     
+                     the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/*/seg</ref>
+                  </item>
+               </list>
+            </ab>
+   -->
+    
+    <!-- L160 -->
+    <!-- 
+    
+    <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: 
+                     <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/seg/w</ref>
+                     
+                  </item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following locations:
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='en']</ref>
+                     where the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>
+                     
+                     where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/*/seg</ref>
+                  </item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location:                    
+                     <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     <ref>//text[@xml:lang='mix']/body/div/head/spanGrp[@type='translation']/span[@xml:lang='es']</ref>
+                     where the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>
+                     
+                     where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/*/seg</ref>
+                  </item>
+               </list>
+            </ab>
+    -->
 </xsl:stylesheet>
