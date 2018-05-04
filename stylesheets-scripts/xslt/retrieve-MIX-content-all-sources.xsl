@@ -42,7 +42,7 @@
       <xsl:variable name="literalLinkTranslations" select="$input-document/descendant::link[contains(@target,$currentTarget) and @type]"/>
       
       <p>
-         <xsl:value-of select="."/> (<xsl:value-of select="$currentTarget"/>) = 
+         <xsl:value-of select="."/> (<xsl:value-of select="$currentTarget"/>)<!-- remove later --> = 
          <xsl:for-each select="$spanTranslations">
             <xsl:text>Span: </xsl:text><!-- remove later -->
             <xsl:variable name="spanLang" select="@xml:lang"/>
@@ -58,8 +58,8 @@
          </xsl:for-each>
          
          <xsl:for-each select="$linkTranslations">
+            <xsl:text> Links: </xsl:text><!-- remove later --> 
             <xsl:for-each select="tokenize(@target,' ')">
-               <xsl:text> Links: </xsl:text><!-- remove later -->
                             
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
                <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
@@ -72,16 +72,16 @@
             </xsl:for-each>,
          </xsl:for-each>
          
-         <xsl:for-each select="$literalLinkTranslations"><!-- finish this -->
-            <xsl:for-each select="tokenize(@target,' ')">
-               <xsl:text> Links: </xsl:text><!-- remove later -->            
+         <xsl:for-each select="$literalLinkTranslations">
+            <xsl:text> Links: </xsl:text><!-- remove later -->  
+            
+            <xsl:for-each select="tokenize(@target,' ')">          
                
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
                <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
                <xsl:variable name="linkLang" select="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang"/>
                
                <xsl:if test="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang='es'">
-                  <!-- need to print (es:literal) -->
                   (<xsl:value-of select="$linkLang"/>:literal)
                   <xsl:value-of select="$currentLinkedObject"/>
                </xsl:if>
