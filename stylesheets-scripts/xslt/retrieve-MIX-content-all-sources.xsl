@@ -74,12 +74,15 @@
          
          <xsl:for-each select="$literalLinkTranslations"><!-- finish this -->
             <xsl:for-each select="tokenize(@target,' ')">
-               <xsl:text> Links: </xsl:text><!-- remove later -->
-               (<xsl:value-of select="$linkLang"/>)
+               <xsl:text> Links: </xsl:text><!-- remove later -->            
+               
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
                <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
+               <xsl:variable name="linkLang" select="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang"/>
                
                <xsl:if test="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang='es'">
+                  <!-- need to print (es:literal) -->
+                  (<xsl:value-of select="$linkLang"/>:literal)
                   <xsl:value-of select="$currentLinkedObject"/>
                </xsl:if>
             </xsl:for-each>,
