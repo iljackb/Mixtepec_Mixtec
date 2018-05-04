@@ -16,7 +16,12 @@
    <xsl:param name="searchTarget" select="'vii'"/>
     <xsl:param name="searchLang" select="'mix'"/>
    
-   <!-- to make tri-lingual/directional use "if" clause -->
+   <!-- CHANGES TO MAKE -->
+      <!--apply to whole collection (all *.xml documents) -->
+      <!-- to make tri-lingual/directional use "if" clause -->
+      <!-- fix to allow searching words with glottal stops -->
+      <!-- only print out unique translations -->
+      <!-- expand to allow searching of utterance files  -->
    
     
     <xsl:template match="/">
