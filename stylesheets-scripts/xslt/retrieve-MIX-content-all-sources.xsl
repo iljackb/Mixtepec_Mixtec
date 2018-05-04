@@ -13,8 +13,11 @@
 
    <xsl:variable name="input-document" select="doc($input)"/>
    
-   <xsl:param name="searchTarget" select="'nuu'"/>
+   <xsl:param name="searchTarget" select="'vii'"/>
     <xsl:param name="searchLang" select="'mix'"/>
+   
+   <!-- to make tri-lingual/directional use "if" clause -->
+   
     
     <xsl:template match="/">
        <xsl:message>Fichier: <xsl:value-of select="$input"/></xsl:message>
@@ -41,14 +44,14 @@
       <p>
          <xsl:value-of select="."/> (<xsl:value-of select="$currentTarget"/>) = 
          <xsl:for-each select="$spanTranslations">
-            <xsl:text>Span: </xsl:text>
+            <xsl:text>Span: </xsl:text><!-- remove later -->
             <xsl:variable name="spanLang" select="@xml:lang"/>
             (<xsl:value-of select="$spanLang"/>)
             <xsl:value-of select="."/>, <!-- only want where there is another one -->      
          </xsl:for-each>
          
          <xsl:for-each select="$literalSpanTranslations">
-            <xsl:text>Span: </xsl:text>
+            <xsl:text>Span: </xsl:text><!-- remove later -->
             <xsl:variable name="spanLang" select="@xml:lang"/>
             (<xsl:value-of select="$spanLang"/>:literal)
             <xsl:value-of select="."/>, <!-- only want where there is another one -->      
@@ -56,10 +59,8 @@
          
          <xsl:for-each select="$linkTranslations">
             <xsl:for-each select="tokenize(@target,' ')">
-               <xsl:text> Links: </xsl:text>
-               
-           
-               
+               <xsl:text> Links: </xsl:text><!-- remove later -->
+                            
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
                <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
                <xsl:variable name="linkLang" select="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang"/>
@@ -73,10 +74,11 @@
          
          <xsl:for-each select="$literalLinkTranslations"><!-- finish this -->
             <xsl:for-each select="tokenize(@target,' ')">
-               <xsl:text> Links: </xsl:text>
-               
+               <xsl:text> Links: </xsl:text><!-- remove later -->
+               (<xsl:value-of select="$linkLang"/>)
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
                <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
+               
                <xsl:if test="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang='es'">
                   <xsl:value-of select="$currentLinkedObject"/>
                </xsl:if>
