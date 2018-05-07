@@ -6,35 +6,36 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     
    <xsl:output encoding="UTF-8" method="html" indent="yes"/>
-
+<!-- 
    <xsl:param name="input" as="xs:string" select="'../../SIL_docs/Parangon/ParangonMixtepec-MNieves-TEI.xml'"/>
+    -->
+   <xsl:param name="theCollection" select="collection('./?select=*.xml')"/>
    
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
-
-   <xsl:variable name="input-document" select="doc($input)"/>
    
+   <xsl:variable name="currentCollection" select="${currentFileURL}"/>
+<!--  
+   <xsl:variable name="input-document" select="doc($input)"/>
+ 
+     -->
    <xsl:param name="searchTarget" select="'vii'"/>
     <xsl:param name="searchLang" select="'mix'"/>
    
-   <!-- CHANGES TO MAKE -->
-      <!--apply to whole collection (all *.xml documents) -->
-      <!-- fix to allow searching words with glottal stops -->
-      <!-- to make tri-lingual/directional use "if" clause -->
-      <!-- only print out unique translations -->
-      <!-- expand to allow searching of utterance files  -->
-      <!-- expand to take into account part of speech (and other fields of annotation as well)  -->
-   
+ 
     
     <xsl:template match="/">
+       <!--  
        <xsl:message>Fichier: <xsl:value-of select="$input"/></xsl:message>
-       <xsl:message>Fichier: <xsl:value-of select="$input-document/descendant::w[1]"/></xsl:message><!-- test -->
+       <xsl:message>Fichier: <xsl:value-of select="$input-document/descendant::w[1]"/></xsl:message> test -->
       <html>
+         <xsl:for-each select="$currentCollection"> 
          <body>
             <h1>Searched element</h1>
             <xsl:value-of select="$searchTarget"/>
             <h1>Results</h1>
-            <xsl:apply-templates select="$input-document/descendant::w[contains(.,$searchTarget)]"/>
+            <xsl:apply-templates select="$currentCollection/descendant::w[contains(.,$searchTarget)]"/>
          </body>
+         </xsl:for-each>
       </html>
     </xsl:template>
    
@@ -42,10 +43,10 @@
       <xsl:variable name="currentId" select="@xml:id"/>
       <xsl:variable name="currentTarget" select="concat('#',$currentId)"/>
       
-      <xsl:variable name="spanTranslations" select="$input-document/descendant::span[contains(@target,$currentTarget) and not(@type)]"/>   
-      <xsl:variable name="literalSpanTranslations" select="$input-document/descendant::span[contains(@target,$currentTarget) and @type]"/>   
-      <xsl:variable name="linkTranslations" select="$input-document/descendant::link[contains(@target,$currentTarget) and not(@type)]"/>
-      <xsl:variable name="literalLinkTranslations" select="$input-document/descendant::link[contains(@target,$currentTarget) and @type]"/>
+      <xsl:variable name="spanTranslations" select="$currentCollection/descendant::span[contains(@target,$currentTarget) and not(@type)]"/>   
+      <xsl:variable name="literalSpanTranslations" select="$currentCollection/descendant::span[contains(@target,$currentTarget) and @type]"/>   
+      <xsl:variable name="linkTranslations" select="$currentCollection/descendant::link[contains(@target,$currentTarget) and not(@type)]"/>
+      <xsl:variable name="literalLinkTranslations" select="$currentCollection/descendant::link[contains(@target,$currentTarget) and @type]"/>
       
       <p>
          <xsl:value-of select="."/> (<xsl:value-of select="$currentTarget"/>)<!-- remove later --> = 
@@ -71,7 +72,7 @@
             <xsl:for-each select="tokenize(@target,' ')">
                             
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
-               <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
+               <xsl:variable name="currentLinkedObject" select="$currentCollection/descendant::*[@xml:id=$currentLinkedId]"/>
                <xsl:variable name="linkLang" select="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang"/>
                
                <xsl:if test="$linkLang='es'">
@@ -87,7 +88,7 @@
             <xsl:for-each select="tokenize(@target,' ')">          
                
                <xsl:variable name="currentLinkedId" select="substring-after(.,'#')"/>
-               <xsl:variable name="currentLinkedObject" select="$input-document/descendant::*[@xml:id=$currentLinkedId]"/>
+               <xsl:variable name="currentLinkedObject" select="$currentCollection/descendant::*[@xml:id=$currentLinkedId]"/>
                <xsl:variable name="linkLang" select="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang"/>
                
                <xsl:if test="$currentLinkedObject/ancestor-or-self::*[@xml:lang][1]/@xml:lang='es'">

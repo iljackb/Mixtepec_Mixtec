@@ -14,23 +14,25 @@
         </xsl:copy>
     </xsl:template> 
     
-    <xsl:template match="//seg/text()">
+    <xsl:template match="//seg/text()" priority="1">
         <xsl:analyze-string select="." regex="(\w+)">
             <xsl:matching-substring>
-                <seg ana="lexItem"><xsl:value-of select="regex-group(1)"/></seg>
+                <w><xsl:value-of select="regex-group(1)"/></w>
             </xsl:matching-substring>
-            <xsl:non-matching-substring>
-                <xsl:analyze-string select="." regex="(\.|;|:|,)">
+     <!--        <xsl:non-matching-substring>
+                <xsl:analyze-string select="." regex="(\.|;|:|,|')(^|$)">
                     <xsl:matching-substring>
                         <pc><xsl:value-of select="."/></pc>
                     </xsl:matching-substring>
+                    --> 
                     <xsl:non-matching-substring>
                         <xsl:value-of select="."/>
                     </xsl:non-matching-substring>
+            <!-- 
                 </xsl:analyze-string>         
-            </xsl:non-matching-substring>
+            </xsl:non-matching-substring> -->
         </xsl:analyze-string>
     </xsl:template>
-    
+
     
 </xsl:stylesheet>
