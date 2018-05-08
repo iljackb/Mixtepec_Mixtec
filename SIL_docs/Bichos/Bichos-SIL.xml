@@ -33,16 +33,30 @@
       <body>    
          <div><!-- pg 10 -->
             <head>
-               <seg xml:id="d1e768">
-                  <w xml:id="d1e769">Tintoo</w>
-                  <w xml:id="d1e771">savi</w>
-               </seg> ~ <seg xml:id="d1e774">
-                  <w xml:id="d1e775">Araña</w>
-                  <w xml:id="d1e777">lobo</w>
-               </seg> ~ <seg xml:id="d1e780">
-                  <w xml:id="d1e781">Wolf</w>
-                  <w xml:id="d1e783">spider</w>
+               <seg xml:id="d1e768" xml:lang="mix">
+                  <w xml:id="d1e769a">
+                     <w xml:id="d1e769">Tintoo</w>
+                     <w xml:id="d1e771">savi</w>
+                  </w>
+               </seg> 
+               <metamark>~</metamark> 
+               <seg xml:id="d1e774" xml:lang="es">
+                  <w xml:id="d1e775a">
+                     <w xml:id="d1e775">Araña</w>
+                     <w xml:id="d1e777">lobo</w>
+                  </w>
                </seg>
+               <metamark>~</metamark>
+               <seg xml:id="d1e780">
+                  <w xml:id="d1e781a">
+                     <w xml:id="d1e781">Wolf</w>
+                     <w xml:id="d1e783">spider</w>
+                  </w>
+               </seg>
+               <linkGrp type="translations">
+                  <link target="#d1e769a #d1e775a"/>
+                  <link target="#d1e769a #d1e781a"/>
+               </linkGrp>
             </head>
             <table>
                <row>
@@ -61,8 +75,9 @@
                            <w xml:id="d1e802">kiti</w>
                            <w xml:id="d1e804">nani</w>
                            <pc>,</pc>
-                           <w xml:id="d1e807">tintoo</w>
-                           <w xml:id="d1e809">savi</w>
+                           <w xml:id="d1e807a">
+                              <w xml:id="d1e807">tintoo</w>
+                              <w xml:id="d1e809">savi</w></w>
                            <pc>.</pc>
                         </seg>
                         
@@ -84,7 +99,8 @@
                            <w xml:id="d1e835">taꞌvi</w>
                            <w xml:id="d1e837">seꞌe</w>
                            <w xml:id="d1e839">ti</w>
-                           <w xml:id="d1e841">ra</w><pc>,</pc>
+                           <w xml:id="d1e841">ra</w>
+                           <pc>,</pc>
                            <w xml:id="d1e844">ntaskaa</w>
                            <w xml:id="d1e846">ti</w>
                            <w xml:id="d1e848">ña</w>
@@ -133,7 +149,8 @@
                            <w xml:id="d1e920">tatu</w>
                            <w xml:id="d1e922" orig="kaꞌnu">ka'nu</w>
                            <w xml:id="d1e924">ti</w>
-                           <w xml:id="d1e926">ra</w><pc>,</pc>
+                           <w xml:id="d1e926">ra</w>
+                           <pc>,</pc>
                            <w xml:id="d1e930">kuu</w>
                            <w xml:id="d1e932" orig="kaꞌni">ka'ni</w>
                            <w xml:id="d1e934">savi</w>
@@ -153,7 +170,8 @@
                            <w xml:id="d1e956">yee</w>
                            <w xml:id="d1e958">yu</w>
                            <w xml:id="d1e960" orig="yoꞌo">yo'o</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
                      </ab>
                   </cell>
                   <cell>
@@ -166,10 +184,11 @@
                            <w xml:id="d1e973">de</w>
                            <w xml:id="d1e975">araña</w>
                            <w xml:id="d1e977">que</w>
-                           <w xml:id="d1e979">se</w>
-                           <w xml:id="d1e981">llama</w>
-                           <w xml:id="d1e983">tintoo</w>
-                           <w xml:id="d1e985">savi</w>
+                           <w xml:id="d1e979">se llama</w>
+                           <foreign xml:lang="mix">
+                              <w xml:id="d1e983">tintoo</w>
+                              <w xml:id="d1e985">savi</w>
+                           </foreign>
                            <w xml:id="d1e987">en</w>
                            <w xml:id="d1e990">el</w>
                            <w xml:id="d1e992">mixteco</w>
@@ -183,26 +202,63 @@
                            <pc>)</pc>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e966 #d1e795"/>
+                           <link target="#d1e967 #d1e796"/>
+                           <link target="#d1e969 #d1e798"/>
+                           <link target="#d1e969 #d1e971 #d1e973 #d1e975 #d1e798 #d1e800 #d1e802"/><!-- un tipo de araña -->
+                           <link target="#d1e975 #d1e800"/>
+                           <link target="#d1e979 #d1e804"/><!-- se llama -->
+                           <!-- the rest is in mixtec and/or have no mixtec translation in the mix section -->
+                        </linkGrp>
                         <seg xml:id="d1e1004" type="S">
                            <w xml:id="d1e1005">Carga</w>
                            <w xml:id="d1e1007">sus</w>
                            <w xml:id="d1e1009">huevos</w>
                            <w xml:id="d1e1011">en</w>
-                           <w xml:id="d1e1013">un</w> “<w xml:id="d1e1016">rebozo</w>
-                           <w xml:id="d1e1018">blanco</w>”<pc>.</pc>
+                           <w xml:id="d1e1013">un</w> 
+                           <pc>“</pc>
+                           <w xml:id="d1e1016">rebozo</w>
+                           <w xml:id="d1e1018">blanco</w>
+                           <pc>”</pc>
+                           <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1004 #d1e812"/><!-- sentence -->
+                           <link target="#d1e1005 #d1e1007 #d1e813 #d1e815"/><!-- carga /nchisio ti -->
+                           <link target="#d1e1007 #d1e1009 #d1e817 #d1e819"/>
+     
+                           <link target="#d1e1011 #d1e1013 #d1e1016 #d1e1018 #d1e821 #d1e823 #d1e825 #d1e827"/>
+                           <!-- en un rebozo blanco  -nuu in pain yaa-->
+                           
+                           <link target="#d1e1013 #d1e823"/><!-- un - in -->
+                           
+                           <link target="#d1e1016 #d1e825"/><!-- rebozo - pain -->
+                           <link target="#d1e1018 #d1e827"/><!-- blanco - yaa -->
+                        </linkGrp>
                         
                         <seg xml:id="d1e1021" type="S">
                            <w xml:id="d1e1022">Cuando</w>
                            <w xml:id="d1e1024">sus</w>
                            <w xml:id="d1e1026">crías</w>
-                           <w xml:id="d1e1028">nacen</w><pc>,</pc>
-                           <w xml:id="d1e1031">se</w>
-                           <w xml:id="d1e1033">suben</w>
+                           <w xml:id="d1e1028">nacen</w>
+                           <pc>,</pc>
+                           <w xml:id="d1e1031">se suben</w>
                            <w xml:id="d1e1035">a</w>
                            <w xml:id="d1e1037">su</w>
                            <w xml:id="d1e1039">espalda</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1021 #d1e830"/><!-- sentence -->
+                           <link target="#d1e1022 #d1e831 #d1e833"/><!-- cha - cuando -->
+                           <link target="#d1e1024 #d1e1026 #d1e837 #d1e839"/><!-- se'e ti - sus crías -->
+                          
+                           <link target="#d1e1028 #d1e835"/><!-- ta'vi - nace(n) -->
+                           <link target="#d1e1031 #d1e844 #d1e846"/><!-- se suben - ntaskaa ti -->
+                           <link target="#d1e1035 #d1e1037 #d1e1039 #d1e848 #d1e850 #d1e853"/><!-- a su espalda - ña sata ti -->
+                           <link target="#d1e1037 #d1e1039 #d1e850 #d1e853"/><!-- su espalda - sata ti -->
+                        </linkGrp>
                         
                         <seg xml:id="d1e1042" type="S">
                            <w xml:id="d1e1043">Cuida</w>
@@ -217,6 +273,16 @@
                            <w xml:id="d1e1061">mamá</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1042 #d1e856"/><!-- sentence -->
+                           <link target="#d1e1043 #d1e1045 #d1e857 #d1e859 #d1e861"/><!-- cuida mucho a - nchaa nchu'a ti -->
+                           <link target="#d1e1049 #d1e1051  #d1e863  #d1e865  #d1e867"/><!-- sus hijitas - kue se'e ti -->
+                           <link target="#d1e1053 #d1e870"/><!-- porque - vari -->
+                           <link target="#d1e1055 #d1e872  #d1e874"/><!-- es - kuu ti -->
+                           <link target="#d1e1057 #d1e876"/>
+                           <link target="#d1e1059 #d1e879"/><!-- mamá - nana -->
+                           <link target="#d1e1061 #d1e881"/><!-- buena - va'a -->
+                        </linkGrp>
                      </ab>
                      
                      <ab xml:lang="es">
@@ -232,7 +298,8 @@
                            <w xml:id="d1e1082">a</w>
                            <w xml:id="d1e1084">la</w>
                            <w xml:id="d1e1086">araña</w>
-                           <w xml:id="d1e1089">lobo</w><pc>,</pc>
+                           <w xml:id="d1e1089">lobo</w>
+                           <pc>,</pc>
                            <w xml:id="d1e1092">porque</w>
                            <w xml:id="d1e1094">si</w>
                            <w xml:id="d1e1096">la</w>
@@ -243,6 +310,23 @@
                            <w xml:id="d1e1106">rayo</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1065 #d1e885"/> <!-- sentence -->
+                           <link target="#d1e1068 #d1e1070 #d1e888"/><!-- pueblo -ñuu -->
+                           <link target="#d1e1068 #d1e1070 #d1e1072 #d1e888 #d1e890"/><!-- mi pueblo - ñuu yu-->
+                           <link target="#d1e1072 #d1e894 #d1e896 #d1e898"/><!-- creen - tsini ini na -->
+                           <link target="#d1e1074 #d1e900"/><!-- que - ña -->
+                           <link target="#d1e1076 #d1e1078 #d1e911"/><!-- es malo - vá'a -->
+                           <link target="#d1e1080 #d1e913"/><!-- matar - ka'nu -->
+
+                           <link target="#d1e1092 #d1e918"/><!-- porque - vari -->
+                           <link target="#d1e1094 #d1e920"/><!-- if - tatu -->
+                           <link target="#d1e1096 #d1e924"/><!-- la - ti -->
+                           <link target="#d1e1098 #d1e922"/><!-- matas - ka'nu -->
+                           <link target="#d1e1100 #d1e936"/><!-- te - yo -->
+                           <link target="#d1e1100 #d1e1102 #d1e1104 #d1e930 #d1e932 #d1e934"/><!-- te cae un rayo - kuu ka'ni savi yo -->
+                           <link target="#d1e1106 #d1e932 #d1e934"/><!-- rayo - ka'ni savi - lightning -->
+                        </linkGrp>
                         
                         <seg xml:id="d1e1109" type="S">
                            <w xml:id="d1e1110">Eso</w>
@@ -252,7 +336,18 @@
                            <w xml:id="d1e1118">creen</w>
                            <w xml:id="d1e1120">donde</w>
                            <w xml:id="d1e1122">vivo</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1109"/>
+                           <link target="#d1e1110"/>
+                           <link target="#d1e1112"/>
+                           <link target="#d1e1114"/>
+                           <link target="#d1e1116"/>
+                           <link target="#d1e1118"/>
+                           <link target="#d1e1120"/>
+                           <link target="#d1e1122"/>
+                        </linkGrp>
                         
                      </ab>
                   </cell>
@@ -277,7 +372,30 @@
                            <w xml:id="d1e1158">town</w>
                            <w xml:id="d1e1160">of</w>
                            <w xml:id="d1e1162">Mixtepec</w> (<w xml:id="d1e1165">saꞌan</w>
-                           <w xml:id="d1e1167">savi</w>)<pc>.</pc></seg>
+                           <w xml:id="d1e1167">savi</w>)<pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1128"/>
+                           <link target="#d1e1129"/>
+                           <link target="#d1e1131"/>
+                           <link target="#d1e1133"/>
+                           <link target="#d1e1135"/>
+                           <link target="#d1e1137"/>
+                           <link target="#d1e1139"/>
+                           <link target="#d1e1141"/>
+                           <link target="#d1e1143"/>
+                           <link target="#d1e1145"/>
+                           <link target="#d1e1147"/>
+                           <link target="#d1e1149"/>
+                           <link target="#d1e1152"/>
+                           <link target="#d1e1154"/>
+                           <link target="#d1e1156"/>
+                           <link target="#d1e1158"/>
+                           <link target="#d1e1160"/>
+                           <link target="#d1e1162"/>
+                           <link target="#d1e1165"/>
+                           <link target="#d1e1167"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e1170" type="S">
                            <w xml:id="d1e1171">The</w>
@@ -289,19 +407,48 @@
                            <w xml:id="d1e1183">a</w>
                            <w xml:id="d1e1185">white</w>
                            <w xml:id="d1e1187">shawl</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1170"/>
+                           <link target="#d1e1171"/>
+                           <link target="#d1e1173"/>
+                           <link target="#d1e1175"/>
+                           <link target="#d1e1177"/>
+                           <link target="#d1e1179"/>
+                           <link target="#d1e1181"/>
+                           <link target="#d1e1183"/>
+                           <link target="#d1e1185"/>
+                           <link target="#d1e1187"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e1190" type="S">
                            <w xml:id="d1e1191">When</w>
                            <w xml:id="d1e1193">the</w>
                            <w xml:id="d1e1195">babies</w>
                            <w xml:id="d1e1197">are</w>
-                           <w xml:id="d1e1199">born</w><pc>,</pc> <w xml:id="d1e1202">they</w>
+                           <w xml:id="d1e1199">born</w>
+                           <pc>,</pc> 
+                           <w xml:id="d1e1202">they</w>
                            <w xml:id="d1e1204">climb</w>
                            <w xml:id="d1e1206">onto</w>
                            <w xml:id="d1e1208">her</w>
                            <w xml:id="d1e1210">back</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1190"/>
+                           <link target="#d1e1191"/>
+                           <link target="#d1e1193"/>
+                           <link target="#d1e1195"/>
+                           <link target="#d1e1197"/>
+                           <link target="#d1e1199"/>
+                           <link target="#d1e1202"/>
+                           <link target="#d1e1204"/>
+                           <link target="#d1e1206"/>
+                           <link target="#d1e1208"/>
+                           <link target="#d1e1210"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e1213" type="S">
                            <w xml:id="d1e1214">She</w>
@@ -316,7 +463,23 @@
                            <w xml:id="d1e1232">a</w>
                            <w xml:id="d1e1234">good</w>
                            <w xml:id="d1e1237">mama</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1213"/>
+                           <link target="#d1e1214"/>
+                           <link target="#d1e1216"/>
+                           <link target="#d1e1218"/>
+                           <link target="#d1e1220"/>
+                           <link target="#d1e1222"/>
+                           <link target="#d1e1224"/>
+                           <link target="#d1e1226"/>
+                           <link target="#d1e1228"/>
+                           <link target="#d1e1230"/>
+                           <link target="#d1e1232"/>
+                           <link target="#d1e1234"/>
+                           <link target="#d1e1237"/>
+                        </linkGrp>
                         
                      </ab>
                      <ab xml:lang="en">
@@ -335,6 +498,20 @@
                            <w xml:id="d1e1268">spider</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1241"/>
+                           <link target="#d1e1242"/>
+                           <link target="#d1e1244"/>
+                           <link target="#d1e1246"/>
+                           <link target="#d1e1249"/>
+                           <link target="#d1e1251"/>
+                           <link target="#d1e1253"/>
+                           <link target="#d1e1257"/>
+                           <link target="#d1e1259"/>
+                           <link target="#d1e1264"/>
+                           <link target="#d1e1266"/>
+                           <link target="#d1e1268"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e1271" type="S">
                            <w xml:id="d1e1272">If</w>
@@ -347,7 +524,20 @@
                            <w xml:id="d1e1285">struck</w>
                            <w xml:id="d1e1287">by</w>
                            <w xml:id="d1e1289">lightning</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1271"/>
+                           <link target="#d1e1272"/>
+                           <link target="#d1e1274"/>
+                           <link target="#d1e1276"/>
+                           <link target="#d1e1279"/>
+                           <link target="#d1e1281"/>
+                           <link target="#d1e1283"/>
+                           <link target="#d1e1285"/>
+                           <link target="#d1e1287"/>
+                           <link target="#d1e1289"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e1292" type="S">
                            <w xml:id="d1e1293">That’s</w>
@@ -358,7 +548,19 @@
                            <w xml:id="d1e1306">I</w>
                            <w xml:id="d1e1308">come</w>
                            <w xml:id="d1e1310">from</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e1292"/>
+                           <link target="#d1e1293"/>
+                           <link target="#d1e1298"/>
+                           <link target="#d1e1300"/>
+                           <link target="#d1e1302"/>
+                           <link target="#d1e1304"/>
+                           <link target="#d1e1306"/>
+                           <link target="#d1e1308"/>
+                           <link target="#d1e1310"/>
+                        </linkGrp>
                      </ab>
                   </cell>
                </row>
@@ -383,17 +585,31 @@
                      <pc>,</pc>
                      <w xml:id="d1e1332">tintoo</w>
                      <w xml:id="d1e1334">savi</w>
-                     <pc>.</pc></seg>
+                     <pc>.</pc>
+                  </seg>
                   
                   <seg xml:id="d1e1337" type="IGT" xml:lang="es">
                      <w xml:id="d1e1338">hay</w>
                      <w xml:id="d1e1340">una</w>
                      <w xml:id="d1e1342">araña</w>
-                     <w xml:id="d1e1344">animal</w><pc>/</pc><w xml:id="d1e1347">insecto</w>
+                     <w xml:id="d1e1344">animal</w>
+                     <pc>/</pc>
+                     <w xml:id="d1e1347">insecto</w>
                      <w xml:id="d1e1349">se.llama</w>
                      <w xml:id="d1e1354">araña</w>
                      <w xml:id="d1e1356">lluvia</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1337"/>
+                     <link target="#d1e1338"/>
+                     <link target="#d1e1340"/>
+                     <link target="#d1e1342"/>
+                     <link target="#d1e1344"/>
+                     <link target="#d1e1347"/>
+                     <link target="#d1e1349"/>
+                     <link target="#d1e1354"/>
+                     <link target="#d1e1356"/>
+                  </linkGrp>
                   <seg xml:id="d1e1358" type="IGT" xml:lang="en">
                      <w xml:id="d1e1359">there.is</w>
                      <w xml:id="d1e1364">a</w>
@@ -403,6 +619,17 @@
                      <w xml:id="d1e1379">spider</w>
                      <w xml:id="d1e1381">rain</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1358"/>
+                     <link target="#d1e1359"/>
+                     <link target="#d1e1364"/>
+                     <link target="#d1e1366"/>
+                     <link target="#d1e1368"/>
+                     <link target="#d1e1371"/>
+                     <link target="#d1e1373"/>
+                     <link target="#d1e1379"/>
+                     <link target="#d1e1381"/>
+                  </linkGrp>
                   <seg xml:id="d1e1383" type="S" xml:lang="es">
                      <pc>‘</pc>
                      <w xml:id="d1e1385">Hay</w>
@@ -416,6 +643,17 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1383"/>
+                     <link target="#d1e1385"/>
+                     <link target="#d1e1387"/>
+                     <link target="#d1e1389"/>
+                     <link target="#d1e1391"/>
+                     <link target="#d1e1393"/>
+                     <link target="#d1e1395"/>
+                     <link target="#d1e1397"/>
+                     <link target="#d1e1399"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1402" type="S" xml:lang="en">
                      <pc>‘</pc>
@@ -430,7 +668,21 @@
                      <w xml:id="d1e1420">wolf</w>
                      <w xml:id="d1e1422">spider</w>
                      <pc>.</pc>
-                     <pc>’</pc></seg>
+                     <pc>’</pc>
+                  </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1402"/>
+                     <link target="#d1e1404"/>
+                     <link target="#d1e1406"/>
+                     <link target="#d1e1408"/>
+                     <link target="#d1e1410"/>
+                     <link target="#d1e1412"/>
+                     <link target="#d1e1414"/>
+                     <link target="#d1e1416"/>
+                     <link target="#d1e1418"/>
+                     <link target="#d1e1420"/>
+                     <link target="#d1e1422"/>
+                  </linkGrp>
                </ab>
                <ab>
                   <label>Tintoo savi:2</label>
@@ -456,6 +708,17 @@
                      <w xml:id="d1e1462">rebozo</w>
                      <w xml:id="d1e1464">blanco</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1446"/>
+                     <link target="#d1e1447"/>
+                     <link target="#d1e1449"/>
+                     <link target="#d1e1451"/>
+                     <link target="#d1e1453"/>
+                     <link target="#d1e1458"/>
+                     <link target="#d1e1460"/>
+                     <link target="#d1e1462"/>
+                     <link target="#d1e1464"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1466" xml:lang="en" type="IGT">
                      <w xml:id="d1e1467">carries</w>
@@ -467,6 +730,17 @@
                      <w xml:id="d1e1479">shawl</w>
                      <w xml:id="d1e1481">white</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1466"/>
+                     <link target="#d1e1467"/>
+                     <link target="#d1e1469"/>
+                     <link target="#d1e1471"/>
+                     <link target="#d1e1473"/>
+                     <link target="#d1e1475"/>
+                     <link target="#d1e1477"/>
+                     <link target="#d1e1479"/>
+                     <link target="#d1e1481"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1483" type="S" xml:lang="es">
                      <pc>‘</pc>
@@ -485,6 +759,19 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1483"/>
+                     <link target="#d1e1485"/>
+                     <link target="#d1e1487"/>
+                     <link target="#d1e1489"/>
+                     <link target="#d1e1491"/>
+                     <link target="#d1e1493"/>
+                     <link target="#d1e1496"/>
+                     <link target="#d1e1499"/>
+                     <link target="#d1e1501"/>
+                     <link target="#d1e1504"/>
+                     <link target="#d1e1506"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1509" type="S" xml:lang="en">
                      <pc>‘</pc>
@@ -502,12 +789,29 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1509"/>
+                     <link target="#d1e1511"/>
+                     <link target="#d1e1513"/>
+                     <link target="#d1e1515"/>
+                     <link target="#d1e1517"/>
+                     <link target="#d1e1520"/>
+                     <link target="#d1e1523"/>
+                     <link target="#d1e1525"/>
+                     <link target="#d1e1527"/>
+                     <link target="#d1e1530"/>
+                  </linkGrp>
                </ab>
                
                <ab>
                   <label>Tintoo savi:3.1</label>
                   
-                  <seg xml:id="d1e1536" type="S" xml:lang="mix" n="3.1" next="#d1e1634" part="I">
+                  <seg xml:id="d1e1536"
+                       type="S"
+                       xml:lang="mix"
+                       n="3.1"
+                       next="#d1e1634"
+                       part="I">
                      <w xml:id="d1e1537">Cha</w>
                      <w xml:id="d1e1539">ta</w>
                      <w xml:id="d1e1541" orig="taꞌvi">ta'vi</w>
@@ -524,6 +828,14 @@
                      <w xml:id="d1e1562">de.ella</w> 
                      *
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1550"/>
+                     <link target="#d1e1551"/>
+                     <link target="#d1e1553"/>
+                     <link target="#d1e1555"/>
+                     <link target="#d1e1560"/>
+                     <link target="#d1e1562"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1568" type="IGT" xml:lang="en">
                      <w xml:id="d1e1569">and</w>
@@ -533,6 +845,14 @@
                      <w xml:id="d1e1577">her</w>
                      *
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1568"/>
+                     <link target="#d1e1569"/>
+                     <link target="#d1e1571"/>
+                     <link target="#d1e1573"/>
+                     <link target="#d1e1575"/>
+                     <link target="#d1e1577"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1580" type="S" xml:lang="es">
                      <pc>‘</pc>
@@ -549,6 +869,17 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1580"/>
+                     <link target="#d1e1582"/>
+                     <link target="#d1e1584"/>
+                     <link target="#d1e1587"/>
+                     <link target="#d1e1589"/>
+                     <link target="#d1e1592"/>
+                     <link target="#d1e1596"/>
+                     <link target="#d1e1598"/>
+                     <link target="#d1e1601"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1604" type="S" xml:lang="en">
                      <pc>‘</pc>
@@ -568,10 +899,29 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1604"/>
+                     <link target="#d1e1606"/>
+                     <link target="#d1e1608"/>
+                     <link target="#d1e1611"/>
+                     <link target="#d1e1613"/>
+                     <link target="#d1e1616"/>
+                     <link target="#d1e1618"/>
+                     <link target="#d1e1620"/>
+                     <link target="#d1e1622"/>
+                     <link target="#d1e1625"/>
+                     <link target="#d1e1627"/>
+                     <link target="#d1e1629"/>
+                  </linkGrp>
                   
                   <label>Tintoo savi:3.2</label>
                   
-                  <seg xml:id="d1e1634" xml:lang="mix" type="S" n="3.2" prev="#d1e1536" part="F">
+                  <seg xml:id="d1e1634"
+                       xml:lang="mix"
+                       type="S"
+                       n="3.2"
+                       prev="#d1e1536"
+                       part="F">
                      <w xml:id="d1e1635">ntaskaa</w>
                      <w xml:id="d1e1637">ti</w>
                      <w xml:id="d1e1639">ña</w>
@@ -587,6 +937,14 @@
                      <w xml:id="d1e1656">espalda</w>
                      <w xml:id="d1e1658">de.ella</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1646"/>
+                     <link target="#d1e1647"/>
+                     <link target="#d1e1652"/>
+                     <link target="#d1e1654"/>
+                     <link target="#d1e1656"/>
+                     <link target="#d1e1658"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1663" xml:lang="en" type="S">
                      <w xml:id="d1e1664">raise.up</w>
@@ -595,6 +953,14 @@
                      <w xml:id="d1e1673">back</w>
                      <w xml:id="d1e1675">her</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1663"/>
+                     <link target="#d1e1664"/>
+                     <link target="#d1e1669"/>
+                     <link target="#d1e1671"/>
+                     <link target="#d1e1673"/>
+                     <link target="#d1e1675"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1677" type="S" xml:lang="es">
                      <pc>'</pc>
@@ -607,6 +973,15 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1677"/>
+                     <link target="#d1e1679"/>
+                     <link target="#d1e1681"/>
+                     <link target="#d1e1683"/>
+                     <link target="#d1e1685"/>
+                     <link target="#d1e1687"/>
+                     <link target="#d1e1689"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1693" type="S" xml:lang="en">
                      <pc>'</pc>
@@ -620,11 +995,26 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1693"/>
+                     <link target="#d1e1695"/>
+                     <link target="#d1e1697"/>
+                     <link target="#d1e1699"/>
+                     <link target="#d1e1701"/>
+                     <link target="#d1e1703"/>
+                     <link target="#d1e1705"/>
+                     <link target="#d1e1707"/>
+                  </linkGrp>
                </ab>
                <ab>
                   <label>Tintoo savi:4.1</label>
                   
-                  <seg xml:id="d1e1713" xml:lang="mix" type="S" part="I" n="4.1" next="#d1e1795">
+                  <seg xml:id="d1e1713"
+                       xml:lang="mix"
+                       type="S"
+                       part="I"
+                       n="4.1"
+                       next="#d1e1795">
                      <w xml:id="d1e1714">Nchaa</w>
                      <w xml:id="d1e1716" orig="nchuꞌa">nchu'a</w>
                      <w xml:id="d1e1718">ti</w>
@@ -638,10 +1028,20 @@
                      <w xml:id="d1e1728">cuida</w>
                      <w xml:id="d1e1730">mucho</w>
                      <w xml:id="d1e1732">ella</w>
-                     <pc>(</pc><note xml:lang="es">Plural</note><pc>)</pc>
+                     <pc>(</pc>
+                     <note xml:lang="es">Plural</note>
+                     <pc>)</pc>
                      <w xml:id="d1e1738">hijo</w>
                      <w xml:id="d1e1740">de.ella</w>   
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1727"/>
+                     <link target="#d1e1728"/>
+                     <link target="#d1e1730"/>
+                     <link target="#d1e1732"/>
+                     <link target="#d1e1738"/>
+                     <link target="#d1e1740"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1745" type="IGT" xml:lang="en">
                      <w xml:id="d1e1746">cares.for</w>
@@ -653,6 +1053,15 @@
                      <w xml:id="d1e1759">child</w>
                      <w xml:id="d1e1761">her</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1745"/>
+                     <link target="#d1e1746"/>
+                     <link target="#d1e1751"/>
+                     <link target="#d1e1753"/>
+                     <link target="#d1e1756"/>
+                     <link target="#d1e1759"/>
+                     <link target="#d1e1761"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1763" xml:lang="es" type="S" part="I" n="4.1">
                      <pc>‘</pc>
@@ -665,6 +1074,15 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1763"/>
+                     <link target="#d1e1765"/>
+                     <link target="#d1e1767"/>
+                     <link target="#d1e1769"/>
+                     <link target="#d1e1771"/>
+                     <link target="#d1e1773"/>
+                     <link target="#d1e1775"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1778" xml:lang="en" type="S" part="I" n="4.1">
                      <pc>‘</pc>
@@ -677,6 +1095,15 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1778"/>
+                     <link target="#d1e1780"/>
+                     <link target="#d1e1782"/>
+                     <link target="#d1e1784"/>
+                     <link target="#d1e1786"/>
+                     <link target="#d1e1788"/>
+                     <link target="#d1e1790"/>
+                  </linkGrp>
                   
                   <label>Tintoo savi:4.2</label>
                   
@@ -698,6 +1125,15 @@
                      <w xml:id="d1e1818">mamá</w>
                      <w xml:id="d1e1820">buena</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1809"/>
+                     <link target="#d1e1810"/>
+                     <link target="#d1e1812"/>
+                     <link target="#d1e1814"/>
+                     <link target="#d1e1816"/>
+                     <link target="#d1e1818"/>
+                     <link target="#d1e1820"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1822" type="IGT" part="F" xml:lang="en" n="4.2">
                      <w xml:id="d1e1823">because</w>
@@ -707,6 +1143,15 @@
                      <w xml:id="d1e1831">mother</w>
                      <w xml:id="d1e1833">good</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1822"/>
+                     <link target="#d1e1823"/>
+                     <link target="#d1e1825"/>
+                     <link target="#d1e1827"/>
+                     <link target="#d1e1829"/>
+                     <link target="#d1e1831"/>
+                     <link target="#d1e1833"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1835" type="S" part="F" xml:lang="es" n="4.2">
                      <pc>‘</pc>
@@ -719,6 +1164,15 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1835"/>
+                     <link target="#d1e1837"/>
+                     <link target="#d1e1839"/>
+                     <link target="#d1e1841"/>
+                     <link target="#d1e1843"/>
+                     <link target="#d1e1845"/>
+                     <link target="#d1e1847"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1851" type="S" part="F" xml:lang="en" n="4.2">
                      <pc>‘</pc>
@@ -731,12 +1185,26 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1851"/>
+                     <link target="#d1e1853"/>
+                     <link target="#d1e1855"/>
+                     <link target="#d1e1857"/>
+                     <link target="#d1e1859"/>
+                     <link target="#d1e1861"/>
+                     <link target="#d1e1863"/>
+                  </linkGrp>
                </ab>
                
                <ab>
                   <label>Tintoo savi:5.1</label>
                   
-                  <seg xml:id="d1e1869" xml:lang="mix" type="S" n="5.1" part="I" next="#d1e1936">
+                  <seg xml:id="d1e1869"
+                       xml:lang="mix"
+                       type="S"
+                       n="5.1"
+                       part="I"
+                       next="#d1e1936">
                      <w xml:id="d1e1870">Cha</w>
                      <w xml:id="d1e1872">ñuu</w>
                      <w xml:id="d1e1874">yu</w>
@@ -754,6 +1222,14 @@
                      <w xml:id="d1e1892">creen</w>
                      <w xml:id="d1e1894">ellos</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1884"/>
+                     <link target="#d1e1885"/>
+                     <link target="#d1e1887"/>
+                     <link target="#d1e1889"/>
+                     <link target="#d1e1892"/>
+                     <link target="#d1e1894"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1896" type="S" xml:lang="en" n="5.1">
                      <w xml:id="d1e1897">and</w>
@@ -763,6 +1239,14 @@
                      <w xml:id="d1e1904">believe</w>
                      <w xml:id="d1e1906">they</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1896"/>
+                     <link target="#d1e1897"/>
+                     <link target="#d1e1899"/>
+                     <link target="#d1e1901"/>
+                     <link target="#d1e1904"/>
+                     <link target="#d1e1906"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1908" type="IGT" xml:lang="es" n="5.1">
                      <pc>‘</pc>
@@ -773,6 +1257,14 @@
                      <w xml:id="d1e1918">creen</w>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1908"/>
+                     <link target="#d1e1910"/>
+                     <link target="#d1e1912"/>
+                     <link target="#d1e1914"/>
+                     <link target="#d1e1916"/>
+                     <link target="#d1e1918"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1921" type="IGT" xml:lang="en" n="5.1">
                      <pc>‘</pc>
@@ -783,6 +1275,14 @@
                      <w xml:id="d1e1931">believe</w>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1921"/>
+                     <link target="#d1e1923"/>
+                     <link target="#d1e1925"/>
+                     <link target="#d1e1927"/>
+                     <link target="#d1e1929"/>
+                     <link target="#d1e1931"/>
+                  </linkGrp>
                   
                   <label>Tintoo savi:5.2</label>
                   
@@ -808,6 +1308,16 @@
                      <w xml:id="d1e1966">matas.tú</w>
                      <w xml:id="d1e1971">ella</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1954"/>
+                     <link target="#d1e1955"/>
+                     <link target="#d1e1957"/>
+                     <link target="#d1e1959"/>
+                     <link target="#d1e1961"/>
+                     <link target="#d1e1964"/>
+                     <link target="#d1e1966"/>
+                     <link target="#d1e1971"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1973" type="IGT" xml:lang="en" n="5.2" part="M">
                      <w xml:id="d1e1974">that</w>
@@ -819,6 +1329,16 @@
                      <w xml:id="d1e1985">you.kill</w>
                      <w xml:id="d1e1990">it</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1973"/>
+                     <link target="#d1e1974"/>
+                     <link target="#d1e1976"/>
+                     <link target="#d1e1978"/>
+                     <link target="#d1e1980"/>
+                     <link target="#d1e1983"/>
+                     <link target="#d1e1985"/>
+                     <link target="#d1e1990"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e1992" type="S" xml:lang="es" n="5.2" part="M">
                      <pc>‘</pc>
@@ -838,6 +1358,19 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e1992"/>
+                     <link target="#d1e1994"/>
+                     <link target="#d1e1996"/>
+                     <link target="#d1e1998"/>
+                     <link target="#d1e2000"/>
+                     <link target="#d1e2002"/>
+                     <link target="#d1e2004"/>
+                     <link target="#d1e2007"/>
+                     <link target="#d1e2009"/>
+                     <link target="#d1e2011"/>
+                     <link target="#d1e2014"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2018" type="S" xml:lang="en" n="5.2" part="M">
                      <pc>‘</pc>
@@ -858,10 +1391,29 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2018"/>
+                     <link target="#d1e2020"/>
+                     <link target="#d1e2022"/>
+                     <link target="#d1e2024"/>
+                     <link target="#d1e2026"/>
+                     <link target="#d1e2028"/>
+                     <link target="#d1e2030"/>
+                     <link target="#d1e2032"/>
+                     <link target="#d1e2034"/>
+                     <link target="#d1e2037"/>
+                     <link target="#d1e2040"/>
+                     <link target="#d1e2042"/>
+                  </linkGrp>
                   
                   <label>Tintoo savi:5.3</label>
                   
-                  <seg xml:id="d1e2047" type="S" n="5.3" xml:lang="mix" part="M" next="#d1e2108">
+                  <seg xml:id="d1e2047"
+                       type="S"
+                       n="5.3"
+                       xml:lang="mix"
+                       part="M"
+                       next="#d1e2108">
                      <w xml:id="d1e2048">vari</w>
                      <w xml:id="d1e2050">tatu</w>
                      <w xml:id="d1e2052" orig="nakaꞌno">naka'no</w>
@@ -877,6 +1429,13 @@
                      <w xml:id="d1e2066">ella</w>
                      *
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2059"/>
+                     <link target="#d1e2060"/>
+                     <link target="#d1e2062"/>
+                     <link target="#d1e2064"/>
+                     <link target="#d1e2066"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2069" type="IGT" xml:lang="en" part="M">
                      <w xml:id="d1e2070">because</w>
@@ -885,6 +1444,13 @@
                      <w xml:id="d1e2079">it</w>
                      *
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2069"/>
+                     <link target="#d1e2070"/>
+                     <link target="#d1e2072"/>
+                     <link target="#d1e2074"/>
+                     <link target="#d1e2079"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2082" type="S" xml:lang="es" part="M">
                      <pc>‘</pc>
@@ -895,6 +1461,13 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2082"/>
+                     <link target="#d1e2084"/>
+                     <link target="#d1e2086"/>
+                     <link target="#d1e2088"/>
+                     <link target="#d1e2090"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2093" type="S" xml:lang="en" part="M">
                      <pc>‘</pc>
@@ -906,6 +1479,14 @@
                      <pc>,</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2093"/>
+                     <link target="#d1e2095"/>
+                     <link target="#d1e2097"/>
+                     <link target="#d1e2099"/>
+                     <link target="#d1e2101"/>
+                     <link target="#d1e2103"/>
+                  </linkGrp>
                   
                   <label>Tintoo savi:5.4</label>
                   
@@ -922,12 +1503,24 @@
                      <w xml:id="d1e2121">pegar.rayo</w>
                      <w xml:id="d1e2126">a.ti</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2118"/>
+                     <link target="#d1e2119"/>
+                     <link target="#d1e2121"/>
+                     <link target="#d1e2126"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2131" type="IGT" xml:lang="en" n="5.4" part="F">
                      <w xml:id="d1e2132">can</w>
                      <w xml:id="d1e2134">strike.lightning</w>
                      <w xml:id="d1e2139">you</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2131"/>
+                     <link target="#d1e2132"/>
+                     <link target="#d1e2134"/>
+                     <link target="#d1e2139"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2142" type="S" xml:lang="es" n="5.4" part="F">
                      <pc>‘</pc>
@@ -938,6 +1531,13 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2142"/>
+                     <link target="#d1e2144"/>
+                     <link target="#d1e2146"/>
+                     <link target="#d1e2148"/>
+                     <link target="#d1e2150"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2153" xml:lang="en" type="S" n="5.4" part="F">
                      <pc>‘</pc>
@@ -950,6 +1550,15 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2153"/>
+                     <link target="#d1e2155"/>
+                     <link target="#d1e2157"/>
+                     <link target="#d1e2159"/>
+                     <link target="#d1e2161"/>
+                     <link target="#d1e2163"/>
+                     <link target="#d1e2165"/>
+                  </linkGrp>
                </ab>
                <ab>
                   <label>Tintoo savi:6</label>
@@ -980,6 +1589,19 @@
                      <w xml:id="d1e2213">yo</w>
                      <w xml:id="d1e2216">aquí</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2193"/>
+                     <link target="#d1e2194"/>
+                     <link target="#d1e2196"/>
+                     <link target="#d1e2198"/>
+                     <link target="#d1e2203"/>
+                     <link target="#d1e2205"/>
+                     <link target="#d1e2207"/>
+                     <link target="#d1e2209"/>
+                     <link target="#d1e2211"/>
+                     <link target="#d1e2213"/>
+                     <link target="#d1e2216"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2218" xml:lang="en" type="IGT" n="6">
                      <w xml:id="d1e2219">this</w>
@@ -993,6 +1615,19 @@
                      <w xml:id="d1e2235">I</w>
                      <w xml:id="d1e2237">here</w>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2218"/>
+                     <link target="#d1e2219"/>
+                     <link target="#d1e2221"/>
+                     <link target="#d1e2223"/>
+                     <link target="#d1e2225"/>
+                     <link target="#d1e2227"/>
+                     <link target="#d1e2229"/>
+                     <link target="#d1e2231"/>
+                     <link target="#d1e2233"/>
+                     <link target="#d1e2235"/>
+                     <link target="#d1e2237"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2239" n="6" type="S" xml:lang="es">
                      <pc>‘</pc>
@@ -1007,7 +1642,21 @@
                      <w xml:id="d1e2257">donde</w>
                      <w xml:id="d1e2259">vivo</w>
                      <pc>.</pc>
-                     <pc>’</pc></seg>
+                     <pc>’</pc>
+                  </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2239"/>
+                     <link target="#d1e2241"/>
+                     <link target="#d1e2243"/>
+                     <link target="#d1e2245"/>
+                     <link target="#d1e2247"/>
+                     <link target="#d1e2249"/>
+                     <link target="#d1e2251"/>
+                     <link target="#d1e2253"/>
+                     <link target="#d1e2255"/>
+                     <link target="#d1e2257"/>
+                     <link target="#d1e2259"/>
+                  </linkGrp>
                   
                   <seg xml:id="d1e2262" xml:lang="en" type="S" n="6">
                      <pc>‘</pc>
@@ -1025,6 +1674,20 @@
                      <pc>.</pc>
                      <pc>’</pc>
                   </seg>
+                  <linkGrp type="translation">
+                     <link target="#d1e2262"/>
+                     <link target="#d1e2264"/>
+                     <link target="#d1e2266"/>
+                     <link target="#d1e2268"/>
+                     <link target="#d1e2270"/>
+                     <link target="#d1e2272"/>
+                     <link target="#d1e2274"/>
+                     <link target="#d1e2276"/>
+                     <link target="#d1e2278"/>
+                     <link target="#d1e2280"/>
+                     <link target="#d1e2282"/>
+                     <link target="#d1e2285"/>
+                  </linkGrp>
                </ab>
             </div>
          </div>
@@ -1159,7 +1822,8 @@
                            <w xml:id="d1e224">ti</w>
                            <w xml:id="d1e226">itsi</w>
                            <w xml:id="d1e228">ka</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
                      </ab>
                   </cell>
                   <cell>
@@ -1184,6 +1848,19 @@
                            <pc>)</pc>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e234"/>
+                           <link target="#d1e235"/>
+                           <link target="#d1e237"/>
+                           <link target="#d1e239"/>
+                           <link target="#d1e241"/>
+                           <link target="#d1e243"/>
+                           <link target="#d1e245"/>
+                           <link target="#d1e247"/>
+                           <link target="#d1e249"/>
+                           <link target="#d1e251"/>
+                           <link target="#d1e253"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e262" type="S">
                            <w xml:id="d1e263">Dicen</w>
@@ -1206,7 +1883,30 @@
                            <w xml:id="d1e297">a</w>
                            <w xml:id="d1e299">tener</w>
                            <w xml:id="d1e301">problemas</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e262"/>
+                           <link target="#d1e263"/>
+                           <link target="#d1e265"/>
+                           <link target="#d1e267"/>
+                           <link target="#d1e269"/>
+                           <link target="#d1e271"/>
+                           <link target="#d1e273"/>
+                           <link target="#d1e275"/>
+                           <link target="#d1e277"/>
+                           <link target="#d1e279"/>
+                           <link target="#d1e281"/>
+                           <link target="#d1e283"/>
+                           <link target="#d1e286"/>
+                           <link target="#d1e288"/>
+                           <link target="#d1e291"/>
+                           <link target="#d1e293"/>
+                           <link target="#d1e295"/>
+                           <link target="#d1e297"/>
+                           <link target="#d1e299"/>
+                           <link target="#d1e301"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e304" type="tsaꞌni">
                            <w xml:id="d1e305">También</w>
@@ -1218,6 +1918,16 @@
                            <w xml:id="d1e317">dinero</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e304"/>
+                           <link target="#d1e305"/>
+                           <link target="#d1e307"/>
+                           <link target="#d1e309"/>
+                           <link target="#d1e311"/>
+                           <link target="#d1e313"/>
+                           <link target="#d1e315"/>
+                           <link target="#d1e317"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e320" type="S">
                            <w xml:id="d1e321">Eso</w>
@@ -1227,6 +1937,14 @@
                            <w xml:id="d1e329">cuentan</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e320"/>
+                           <link target="#d1e321"/>
+                           <link target="#d1e323"/>
+                           <link target="#d1e325"/>
+                           <link target="#d1e327"/>
+                           <link target="#d1e329"/>
+                        </linkGrp>
                      </ab>
                      
                      <ab xml:lang="es">
@@ -1245,7 +1963,24 @@
                            <w xml:id="d1e356">patas</w>
                            <w xml:id="d1e358">bien</w>
                            <w xml:id="d1e360">fijas</w>
-                           <pc>?</pc></seg>
+                           <pc>?</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e333"/>
+                           <link target="#d1e335"/>
+                           <link target="#d1e337"/>
+                           <link target="#d1e339"/>
+                           <link target="#d1e341"/>
+                           <link target="#d1e343"/>
+                           <link target="#d1e345"/>
+                           <link target="#d1e347"/>
+                           <link target="#d1e349"/>
+                           <link target="#d1e351"/>
+                           <link target="#d1e353"/>
+                           <link target="#d1e356"/>
+                           <link target="#d1e358"/>
+                           <link target="#d1e360"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e363" type="S">
                            <w xml:id="d1e364">Porque</w>
@@ -1274,6 +2009,32 @@
                            <w xml:id="d1e411">insecto</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e363"/>
+                           <link target="#d1e364"/>
+                           <link target="#d1e366"/>
+                           <link target="#d1e368"/>
+                           <link target="#d1e370"/>
+                           <link target="#d1e372"/>
+                           <link target="#d1e374"/>
+                           <link target="#d1e376"/>
+                           <link target="#d1e378"/>
+                           <link target="#d1e380"/>
+                           <link target="#d1e382"/>
+                           <link target="#d1e384"/>
+                           <link target="#d1e388"/>
+                           <link target="#d1e390"/>
+                           <link target="#d1e392"/>
+                           <link target="#d1e394"/>
+                           <link target="#d1e396"/>
+                           <link target="#d1e398"/>
+                           <link target="#d1e400"/>
+                           <link target="#d1e402"/>
+                           <link target="#d1e404"/>
+                           <link target="#d1e406"/>
+                           <link target="#d1e408"/>
+                           <link target="#d1e411"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e414" type="S">
                            <w xml:id="d1e415">Luego</w>
@@ -1292,7 +2053,26 @@
                            <w xml:id="d1e444">mirando</w>
                            <w xml:id="d1e446">la</w>
                            <w xml:id="d1e448">pata</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e414"/>
+                           <link target="#d1e415"/>
+                           <link target="#d1e417"/>
+                           <link target="#d1e419"/>
+                           <link target="#d1e421"/>
+                           <link target="#d1e423"/>
+                           <link target="#d1e425"/>
+                           <link target="#d1e427"/>
+                           <link target="#d1e430"/>
+                           <link target="#d1e432"/>
+                           <link target="#d1e434"/>
+                           <link target="#d1e437"/>
+                           <link target="#d1e439"/>
+                           <link target="#d1e444"/>
+                           <link target="#d1e446"/>
+                           <link target="#d1e448"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e451" type="S">
                            <w xml:id="d1e452">Entonces</w>
@@ -1309,7 +2089,23 @@
                            <w xml:id="d1e473">y</w>
                            <w xml:id="d1e475">lo</w>
                            <w xml:id="d1e477">mata</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e451"/>
+                           <link target="#d1e452"/>
+                           <link target="#d1e455"/>
+                           <link target="#d1e457"/>
+                           <link target="#d1e460"/>
+                           <link target="#d1e462"/>
+                           <link target="#d1e464"/>
+                           <link target="#d1e466"/>
+                           <link target="#d1e468"/>
+                           <link target="#d1e470"/>
+                           <link target="#d1e473"/>
+                           <link target="#d1e475"/>
+                           <link target="#d1e477"/>
+                        </linkGrp>
                      </ab>
                   </cell>
                   <cell>
@@ -1338,7 +2134,27 @@
                               <w xml:id="d1e520">Savi</w>
                            </foreign>
                            <pc>)</pc>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e483"/>
+                           <link target="#d1e484"/>
+                           <link target="#d1e486"/>
+                           <link target="#d1e488"/>
+                           <link target="#d1e490"/>
+                           <link target="#d1e492"/>
+                           <link target="#d1e494"/>
+                           <link target="#d1e496"/>
+                           <link target="#d1e498"/>
+                           <link target="#d1e500"/>
+                           <link target="#d1e502"/>
+                           <link target="#d1e504"/>
+                           <link target="#d1e507"/>
+                           <link target="#d1e509"/>
+                           <link target="#d1e511"/>
+                           <link target="#d1e513"/>
+                           <link target="#d1e515"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e523" type="S">
                            <w xml:id="d1e524">It</w>
@@ -1367,6 +2183,32 @@
                            <w xml:id="d1e571">problems</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e523"/>
+                           <link target="#d1e524"/>
+                           <link target="#d1e526"/>
+                           <link target="#d1e528"/>
+                           <link target="#d1e530"/>
+                           <link target="#d1e532"/>
+                           <link target="#d1e534"/>
+                           <link target="#d1e536"/>
+                           <link target="#d1e538"/>
+                           <link target="#d1e540"/>
+                           <link target="#d1e542"/>
+                           <link target="#d1e544"/>
+                           <link target="#d1e547"/>
+                           <link target="#d1e549"/>
+                           <link target="#d1e551"/>
+                           <link target="#d1e553"/>
+                           <link target="#d1e555"/>
+                           <link target="#d1e557"/>
+                           <link target="#d1e560"/>
+                           <link target="#d1e562"/>
+                           <link target="#d1e564"/>
+                           <link target="#d1e566"/>
+                           <link target="#d1e569"/>
+                           <link target="#d1e571"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e574" type="S">
                            <w xml:id="d1e575">But</w>
@@ -1386,6 +2228,23 @@
                            <w xml:id="d1e603">rich</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e574"/>
+                           <link target="#d1e575"/>
+                           <link target="#d1e577"/>
+                           <link target="#d1e579"/>
+                           <link target="#d1e581"/>
+                           <link target="#d1e583"/>
+                           <link target="#d1e585"/>
+                           <link target="#d1e587"/>
+                           <link target="#d1e589"/>
+                           <link target="#d1e591"/>
+                           <link target="#d1e594"/>
+                           <link target="#d1e597"/>
+                           <link target="#d1e599"/>
+                           <link target="#d1e601"/>
+                           <link target="#d1e603"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e606" type="S">
                            <w xml:id="d1e607">This</w>
@@ -1393,7 +2252,16 @@
                            <w xml:id="d1e611">what</w>
                            <w xml:id="d1e613">they</w>
                            <w xml:id="d1e615">say</w>
-                           <pc>.</pc></seg>
+                           <pc>.</pc>
+                        </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e606"/>
+                           <link target="#d1e607"/>
+                           <link target="#d1e609"/>
+                           <link target="#d1e611"/>
+                           <link target="#d1e613"/>
+                           <link target="#d1e615"/>
+                        </linkGrp>
                      </ab>
                      
                      <ab xml:lang="en">
@@ -1412,6 +2280,21 @@
                            <w xml:id="d1e646">attached</w>
                            <pc>?</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e619"/>
+                           <link target="#d1e620"/>
+                           <link target="#d1e622"/>
+                           <link target="#d1e624"/>
+                           <link target="#d1e626"/>
+                           <link target="#d1e628"/>
+                           <link target="#d1e630"/>
+                           <link target="#d1e632"/>
+                           <link target="#d1e637"/>
+                           <link target="#d1e639"/>
+                           <link target="#d1e642"/>
+                           <link target="#d1e644"/>
+                           <link target="#d1e646"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e649" type="S">
                            <w xml:id="d1e650">It</w>
@@ -1445,6 +2328,37 @@
                            <w xml:id="d1e707">attacker</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e649"/>
+                           <link target="#d1e650"/>
+                           <link target="#d1e652"/>
+                           <link target="#d1e654"/>
+                           <link target="#d1e656"/>
+                           <link target="#d1e658"/>
+                           <link target="#d1e660"/>
+                           <link target="#d1e662"/>
+                           <link target="#d1e664"/>
+                           <link target="#d1e666"/>
+                           <link target="#d1e668"/>
+                           <link target="#d1e670"/>
+                           <link target="#d1e673"/>
+                           <link target="#d1e675"/>
+                           <link target="#d1e677"/>
+                           <link target="#d1e679"/>
+                           <link target="#d1e681"/>
+                           <link target="#d1e683"/>
+                           <link target="#d1e686"/>
+                           <link target="#d1e688"/>
+                           <link target="#d1e690"/>
+                           <link target="#d1e692"/>
+                           <link target="#d1e695"/>
+                           <link target="#d1e697"/>
+                           <link target="#d1e699"/>
+                           <link target="#d1e701"/>
+                           <link target="#d1e703"/>
+                           <link target="#d1e705"/>
+                           <link target="#d1e707"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e710" type="S">
                            <w xml:id="d1e711">The</w>
@@ -1463,6 +2377,23 @@
                            <w xml:id="d1e738">leg</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e710"/>
+                           <link target="#d1e711"/>
+                           <link target="#d1e713"/>
+                           <link target="#d1e715"/>
+                           <link target="#d1e717"/>
+                           <link target="#d1e719"/>
+                           <link target="#d1e721"/>
+                           <link target="#d1e723"/>
+                           <link target="#d1e725"/>
+                           <link target="#d1e727"/>
+                           <link target="#d1e729"/>
+                           <link target="#d1e731"/>
+                           <link target="#d1e734"/>
+                           <link target="#d1e736"/>
+                           <link target="#d1e738"/>
+                        </linkGrp>
                         
                         <seg xml:id="d1e741" type="S">
                            <w xml:id="d1e742">So</w>
@@ -1478,6 +2409,20 @@
                            <w xml:id="d1e762">it</w>
                            <pc>.</pc>
                         </seg>
+                        <linkGrp type="translation">
+                           <link target="#d1e741"/>
+                           <link target="#d1e742"/>
+                           <link target="#d1e744"/>
+                           <link target="#d1e746"/>
+                           <link target="#d1e748"/>
+                           <link target="#d1e750"/>
+                           <link target="#d1e752"/>
+                           <link target="#d1e754"/>
+                           <link target="#d1e756"/>
+                           <link target="#d1e758"/>
+                           <link target="#d1e760"/>
+                           <link target="#d1e762"/>
+                        </linkGrp>
                      </ab>
                   </cell>
                </row>
