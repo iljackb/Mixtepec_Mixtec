@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0" xmlns="http://www.tei-c.org/ns/1.0"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="3.0" xmlns="http://www.tei-c.org/ns/1.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
     
     <xsl:output method="xml" indent="yes"/>
@@ -99,7 +99,7 @@
     -->
     
     <!-- for sequential <seg> not in cell or other structure  -->
-    <xsl:template match="seg[@xml:lang='es' or @xml:lang='en']">
+    <xsl:template match="seg[ancestor-or-self::*[@xml:lang][1]/(@xml:lang='en' or @xml:lang='es')]">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
