@@ -40,6 +40,28 @@
              -->
         </w>
     </xsl:template>
+  
+  <!-- 
+    <xsl:template match="//seg[@type='IGT']" priority="1">
+        <seg notation="igt">   
+            <xsl:copy-of select="node()|@*"/>
+        </seg>
+    </xsl:template>
+   -->
+    <xsl:template match="//seg[@type='IGT']/w">
+        <gloss>   
+            <xsl:copy-of select="@*"/>
+            <xsl:value-of select="."/>
+            <!--  
+            <w xml:id="{generate-id(.)}">
+         
+            <xsl:copy-of select="@*"/>
+            <xsl:value-of select="."/>
+           
+            <xsl:apply-templates select="node()|@*"/>
+             -->
+        </gloss>
+    </xsl:template>
         
       <!--
     <xsl:template match="seg[@type='S']">
