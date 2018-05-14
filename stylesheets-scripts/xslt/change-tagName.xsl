@@ -30,14 +30,6 @@
         <w>   
             <xsl:copy-of select="@* except(@type)"/>
             <xsl:value-of select="."/>
-        <!--  
-            <w xml:id="{generate-id(.)}">
-         
-            <xsl:copy-of select="@*"/>
-            <xsl:value-of select="."/>
-           
-            <xsl:apply-templates select="node()|@*"/>
-             -->
         </w>
     </xsl:template>
   
@@ -52,17 +44,33 @@
         <gloss>   
             <xsl:copy-of select="@*"/>
             <xsl:value-of select="."/>
-            <!--  
-            <w xml:id="{generate-id(.)}">
-         
-            <xsl:copy-of select="@*"/>
-            <xsl:value-of select="."/>
-           
-            <xsl:apply-templates select="node()|@*"/>
-             -->
         </gloss>
     </xsl:template>
+    
+    <xsl:template match="//lbl">
+        <desc>   
+            <xsl:copy-of select="@*"/>
+            <xsl:value-of select="."/>
+        </desc>
+    </xsl:template>
         
+    <xsl:template match="//cit[@type='etymon' or @type='descendent']/oRef">
+        <form>   
+            <orth>
+                <xsl:copy-of select="@*"/>
+                <xsl:value-of select="."/>     
+            </orth>
+        </form>
+    </xsl:template>
+    
+    <xsl:template match="//cit[@type='etymon' or @type='descendent']/pRef">
+        <form>   
+            <pron>
+                <xsl:copy-of select="@*"/>
+                <xsl:value-of select="."/>     
+            </pron>
+        </form>
+    </xsl:template>
       <!--
     <xsl:template match="seg[@type='S']">
         <s>
