@@ -7,15 +7,17 @@
     
    <xsl:output encoding="UTF-8" method="html" indent="yes"/>
 
-   <xsl:param name="input" as="xs:string" select="'../../misc-sources/Tisu-Vienna-Diary-201711.xml'"/>
+   <xsl:param name="input" as="xs:string" select="'../../SIL_docs/Parangon/ParangonMixtepec-MNieves-TEI.xml'"/>
    
    <!-- '../../SIL_docs/Parangon/ParangonMixtepec-MNieves-TEI.xml' -->
+   <!-- '../../misc-sources/Tisu-Vienna-Diary-201711.xml' -->
+   <!-- '../../SIL_docs/Bichos/Bichos-SIL.xml' -->
    
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
 
    <xsl:variable name="input-document" select="doc($input)"/>
    
-   <xsl:param name="searchTarget" select="'ntachiko'"/>
+   <xsl:param name="searchTarget" select="'nivatsi'"/>
     <xsl:param name="searchLang" select="'mix'"/>
    
    <!-- CHANGES TO MAKE -->
