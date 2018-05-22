@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -54,26 +54,38 @@
                <w xml:id="d1e46">vi</w>
             </seg>" 
             I have seen "vi" in the booklets (the new "Cruxigramas" has it a lot) but what is the "kui/"?  <q> Remember that I told you there is free variation between "<seg><w>ku</w></seg>" and "<seg><w>v</w></seg>"?  Another example is: "
+               
             <seg xml:lang="mix" xml:id="d1e57">
                <w xml:id="d1e58">takua</w>
             </seg>" v/s "
+               <spanGrp type="translation">
+                  <span target="#d1e58" xml:lang="es">para</span>
+                  <span target="#d1e58" xml:lang="es" resp="#JB">for</span>
+               </spanGrp>..
+               
                <seg xml:lang="mix" xml:id="d1e61">
                <w xml:id="d1e62">tava</w>
             </seg>"
+               
                <spanGrp type="translation">
-                  <span target="#d1e58 #d1e61" xml:lang="es">para</span>
-                  <span target="#d1e58 #d1e61" xml:lang="es" resp="#JB">for</span>
+                  <span target="#d1e61" xml:lang="es">para</span>
+                  <span target="#d1e61" xml:lang="es" resp="#JB">for</span>
                </spanGrp>..
                Also "ꞌ
                <seg xml:lang="mix" xml:id="d1e65">
                <w xml:id="d1e66">kue</w>
-            </seg>" v/s "
+            </seg>" 
+               <spanGrp type="gram">
+                  <span type="pos" target="#d1e66" ana="#ART">plural</span>
+                  <span type="number" target="#d1e66" ana="#PL"/>
+               </spanGrp>
+               v/s "
                <seg xml:lang="mix" xml:id="d1e70">
                   <w xml:id="d1e71">vee</w>
             </seg>" 
                <spanGrp type="gram">
-                  <span type="pos" target="#d1e66 #d1e71" ana="#ART">plural</span>
-                  <span type="number" target="#d1e66 #d1e71" ana="#PL"/>
+                  <span type="pos" target="#d1e71" ana="#ART">plural</span>
+                  <span type="number" target="#d1e71" ana="#PL"/>
                </spanGrp>.
             </q>
             
@@ -90,15 +102,18 @@
             
             Causatives The prefixes for causatives come from the verb "
             <seg xml:lang="mix" xml:id="d1e76">
-               <w xml:id="d1e77">saꞌa</w>
+               <w xml:id="d1e77" orig="saꞌa">sa'a</w>
             </seg>"
             <spanGrp type="translation">
-               <span target="#d1e77" type="en">hacer</span>
-            </spanGrp>.  There are sentences with the full noun "saꞌa" (I donꞌt know in which of the texts to look for this example, since I donꞌt remember which one.) 
+               <span target="#d1e77" xml:lang="en">hacer</span>
+            </spanGrp>.  
+            
+            There are sentences with the full noun "saꞌa" (I donꞌt know in which of the texts to look for this example, since I donꞌt remember which one.) 
             
             There are loan words from Spanish with the prefix
             <seg xml:lang="mix" xml:id="d1e84">
-               <m xml:id="d1e85">sa</m>‑</seg> like "
+               <m xml:id="d1e85">sa</m>‑</seg>
+            like "
             <spanGrp type="translation">
                <span target="#d1e94" type="es">ganar</span>
                </spanGrp>
@@ -110,39 +125,46 @@
                   <w xml:id="d1e94">sakanari</w>
                </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e94" type="en">to win</span>
+               <span target="#d1e94" xml:lang="en">to win</span>
                </spanGrp> / 
             The loan words with sa‑ that I have heard so far, different from other causatives are intransitive.  I have to record many of them to confirm this.
             
             There are verbs with the prefix 
             <seg xml:lang="mix" xml:id="d1e102">
                <m xml:id="d1e103">s</m><pc>‑</pc>
-            </seg> like, "
+            </seg>
+            
+            like, "
             <seg xml:lang="mix" xml:id="d1e107">
-                  <w xml:id="d1e108">sasiaꞌa</w>
+               <w xml:id="d1e108" orig="sasiaꞌa">sasia'a</w>
                </seg>" 
               <spanGrp type="translation">
-                 <span target="#d1e108" type="en">to spread  (the word)</span>
-               </spanGrp> from "
+                 <span target="#d1e108" xml:lang="en">to spread  (the word)</span>
+               </spanGrp> 
+            
+            from "
             <seg xml:lang="mix" xml:id="d1e115">
-                  <w xml:id="d1e116">siaꞌa</w>
+               <w xml:id="d1e116" orig="siaꞌa">sia'a</w>
                </seg>"
             <spanGrp type="translation">
-               <span target="#d1e116" type="en">(lit. to pass, transmit)</span>
+               <span target="#d1e116" type="literal" xml:lang="en">to pass</span>
+               <span target="#d1e116" type="literal" xml:lang="en">transmit</span>
                </spanGrp>.
             
             The prefix sa‑ can occur with adjectives like, "
             <seg xml:lang="mix" xml:id="d1e123">
-               <w xml:id="d1e124">savaꞌa</w>
+               <w xml:id="d1e124" orig="savaꞌa">sava'a</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e124" type="en">to build</span>
-            </spanGrp>  from "<!-- FIGURE OUT HOW TO TAG! -->
+               <span target="#d1e124" xml:lang="en">to build</span>
+            </spanGrp>
+            
+            from "<!-- FIGURE OUT HOW TO TAG! -->
             <seg xml:lang="mix" xml:id="d1e132">
-               <w xml:id="d1e133">vaꞌa</w>
+               <w xml:id="d1e133" orig="vaꞌa">va'a</w>
             </seg>"
             <spanGrp type="translation">
-               <span target="#" type="en">good</span>
+               <span target="#d1e133" xml:lang="en">good</span>
             </spanGrp>;. 
             
             The prefix sa‑ can occur with nouns like, "
@@ -150,13 +172,14 @@
                <w xml:id="d1e141">satsio</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e141" type="en">to separate, get away from</span>
+               <span target="#d1e141" xml:lang="en">to separate</span>
+               <span target="#d1e141" xml:lang="en">get away from</span>
             </spanGrp>  "
             <seg xml:lang="mix" xml:id="d1e148">
                <w xml:id="d1e149">tsio</w>
             </seg>"
             <spanGrp type="translation">
-               <span target="#d1e149" type="en">side</span>
+               <span target="#d1e149" xml:lang="en">side</span>
             </spanGrp>;.  
             
             There are words with the prefix s‑ from sa‑ like
@@ -164,20 +187,20 @@
                <w xml:id="d1e158">skana</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e158" type="en">to throw</span>
+               <span target="#d1e158" xml:lang="en">to throw</span>
             </spanGrp>; 
             "<seg xml:lang="mix" xml:id="d1e165">
-               <w xml:id="d1e166">sniꞌi</w>
+               <w xml:id="d1e166" orig="sniꞌi">sni'i</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e166" type="en">to make noise</span>
-               <span target="#d1e166" type="en">incite</span>
+               <span target="#d1e166" xml:lang="en">to make noise</span>
+               <span target="#d1e166" xml:lang="en">incite</span>
             </spanGrp>;
             "<seg xml:lang="mix" xml:id="d1e175">
                <w xml:id="d1e176">stutsi</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e176" type="en">to hurt  (someone)</span>
+               <span target="#d1e176" xml:lang="en">to hurt (someone)</span>
             </spanGrp>
             
             There are some verbs which have s‑ but they are intransitive like
@@ -185,51 +208,59 @@
                <w xml:id="d1e185">skee</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e185" type="en">to harvest (corn)</span>
+               <span target="#d1e185" xml:lang="en">to harvest (corn)</span>
             </spanGrp>.
             
             Iteratives (or repetitives) it refer to events which takes place repeteadly like those verbs in Mixtec with the prefix
             <seg xml:lang="mix" xml:id="d1e192">
-               <m xml:id="d1e193">nta</m>‑</seg>.  In other Mixtec varieties this prefix is na‑.  In Mixtec this prefix has different meanings.  It describes an action which is done repeatedly, it has habitual force, and also it gives the idea that an action will start again after a certain period of time.  In Spanish is something like "
+               <m xml:id="d1e193">nta</m>‑</seg>. 
+            
+            In other Mixtec varieties this prefix is na‑.  In Mixtec this prefix has different meanings.  It describes an action which is done repeatedly, it has habitual force, and also it gives the idea that an action will start again after a certain period of time.  In Spanish is something like "
             <spanGrp type="translation">
-               <span target="#d1e193" type="en">volver a</span>
+               <span target="#d1e193" xml:lang="en">volver a</span>
              </spanGrp>" (ex. caminar).
             
             Examples of verbs with the prefix 
             <seg xml:lang="mix" xml:id="d1e201">
                <m xml:id="d1e202">nta</m><pc>‑</pc>
-            </seg> are "
+            </seg> 
+            are "
                <seg xml:lang="mix" xml:id="d1e207">
                   <w xml:id="d1e208">ntakani</w>
                </seg>"
             <spanGrp type="translation">
-               <span target="#d1e208" type="en">to tell (a story, the news)</span>
-               </spanGrp>; "
+               <span target="#d1e208" xml:lang="en">to tell</span>
+               </spanGrp>(a story, the news); "
+            
             <seg xml:lang="mix" xml:id="d1e215">
                   <w xml:id="d1e216">ntakaka</w>
                </seg>"
             <spanGrp type="translation">
-               <span target="#d1e216" type="en">to walk again</span>
+               <span target="#d1e216" xml:lang="en">to walk again</span>
                </spanGrp>; "
+            
             <seg xml:lang="mix" xml:id="d1e223">
                   <w xml:id="d1e224">ntakuatu</w>
                </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e224" type="en">to pray</span>
-               <span target="#d1e224" type="en">to recite</span>
+               <span target="#d1e224" xml:lang="en">to pray</span>
+               <span target="#d1e224" xml:lang="en">to recite</span>
                </spanGrp>. 
             I donꞌt know the meaning of these words without the prefix but some of them come from the colonial Mixtec as barbara has mentioned before.
             
             Inchoatives are verbs derived from adjectives which indicate a change of state like the verb in English become. 
             The prefix is the verb
+            
             <seg xml:lang="mix" xml:id="d1e234">
                <m xml:id="d1e235">ntu</m><pc>‑</pc>
-            </seg> which comes from <!-- find systematic way to tag! -->
+            </seg>
+            which comes from <!-- find systematic way to tag! -->
             <seg xml:lang="mix" xml:id="d1e240">
-                  <w xml:id="d1e241">ntuꞌu</w>
-               </seg> "
+               <w xml:id="d1e241" orig="ntuꞌu">ntu'u</w>
+               </seg>
+            "
             <spanGrp type="translation">
-               <span target="#d1e241" type="en">become</span>
+               <span target="#d1e241" xml:lang="en">become</span>
                </spanGrp>". 
             
             The other prefix is "
@@ -240,62 +271,86 @@
                   <w xml:id="d1e254">kuu</w>
                </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e254" type="en">be</span>
+               <span target="#d1e254" xml:lang="en">be</span>
                </spanGrp>. 
             
             The verbs with
             <seg xml:lang="mix" xml:id="d1e262">
                <m xml:id="d1e263">ku</m><pc>‑</pc>
-            </seg> indicate the beginning of a process<!-- find systematic way to tag! -->.  Other linguist use the word inceptive for these verbs.  They do occur in a number of languages.
+            </seg>
+            
+            indicate the beginning of a process<!-- find systematic way to tag! -->.  
+            
+            Other linguist use the word inceptive for these verbs.  They do occur in a number of languages.
             
             Some examples are:
             "<seg xml:lang="mix" xml:id="d1e269">
                <w xml:id="d1e270">ntutsaa</w>
             </seg>" 
+            
             <spanGrp type="translation">
-               <span target="#d1e270" type="en">to renew  (lit. to become new)</span>
-            </spanGrp> from<!-- find systematic way to tag! -->  "
+               <span target="#d1e270" xml:lang="en">to renew  (lit. to become new)</span>
+               <span target="#d1e270" xml:lang="en">to renew  (lit. to become new)</span>
+            </spanGrp>
+            
+            from<!-- find systematic way to tag! -->  "
             <seg xml:lang="mix" xml:id="d1e280">
                <w xml:id="d1e281">tsaa</w>
             </seg>" 
+            
             <spanGrp type="translation">
-               <span target="#d1e281" type="en">new</span>
+               <span target="#d1e281" xml:lang="en">new</span>
             </spanGrp>; ,
+            
             "<seg xml:lang="mix" xml:id="d1e288">
                <w xml:id="d1e289">ntuvii</w>
             </seg>" 
+            (lit. 
             <spanGrp type="translation">
-               <span target="#d1e289" type="en">(lit.to become clean)</span>
-            </spanGrp> from
+               <span target="#d1e289" xml:lang="en" type="literal">to become clean</span>
+            </spanGrp>)
+            from
             <seg xml:lang="mix" xml:id="d1e296">
                <w xml:id="d1e297">vii</w>
             </seg>
+            
             <spanGrp type="translation">
-               <span target="#d1e297" type="en">limpio</span>
+               <span target="#d1e297" xml:lang="en">limpio</span>
             </spanGrp>; 
             "<seg xml:lang="mix" xml:id="d1e304">
                <w xml:id="d1e305">kukuaa</w>
             </seg>"
+            (lit. 
             <spanGrp type="translation">
-               <span target="#d1e305" type="en">(lit. start to go blind)</span>
-            </spanGrp> from "
+               <span target="#d1e305" xml:lang="en" type="literal">start to go blind</span>
+            </spanGrp> )
+            from "
+            
             <seg xml:lang="mix" xml:id="d1e312">
                <w xml:id="d1e313">kuaa</w>
             </seg>" 
+            
             <spanGrp type="translation">
-               <span target="#d1e313" type="en">blind</span>
+               <span target="#d1e313" xml:lang="en">blind</span>
             </spanGrp>;
+            
             "<seg xml:lang="mix" xml:id="d1e320">
                <w xml:id="d1e321">kuyachi</w>
             </seg>" 
+            (lit. 
             <spanGrp type="translation">
-               <span target="#d1e321" type="en">(lit. start to approach, to move closer")</span>
-            </spanGrp> from "
+               <span target="#d1e321" xml:lang="en" type="literal">start to approach</span>
+               <span target="#d1e321" xml:lang="en">to move closer</span>
+            </spanGrp>
+            
+            from "
+            
             <seg xml:lang="mix" xml:id="d1e329">
                <w xml:id="d1e330">yachi</w>
             </seg>"
+            
             <spanGrp type="translation">
-               <span target="#d1e330" type="en">close</span>
+               <span target="#d1e330" xml:lang="en">close</span>
             </spanGrp>.       
             
             A few random questions from some things I've encountered in the last few days of my annotations:
@@ -304,9 +359,10 @@
             - For the sentences: 'you (2sg.inf) smell good/bad' 
             
             &gt;How do you spell the verb? "va'a/kini (tsa'un or tsa'mu)" I donꞌt know.  Perhaps, "
+            
             <seg xml:lang="mix" xml:id="d1e337" resp="#MN">
                <w xml:id="d1e338">kini</w>
-               <w xml:id="d1e340">tsaꞌun</w>
+               <w xml:id="d1e340" orig="tsaꞌun">tsa'un</w>
             </seg>".
             
             "tsa'un" or "tsa'mu" the pronunciations are like in between the two, one is [tsaɁmũ] the other is [tsaɁõ]
@@ -330,14 +386,20 @@
             
             &gt;&gt;Would "kueti" be a valid alternative to using these two separately? No. This sentence means, "
             <spanGrp type="translation">
-               <span target="#d1e343" type="en">They plow with the animals (oxen)</span>
-            </spanGrp>"  The sentence shows the pronoun "
+               <span target="#d1e343" xml:lang="en">They plow with the animals (oxen)</span>
+            </spanGrp>" 
+            
+            The sentence shows the pronoun "
             <seg xml:lang="mix" xml:id="d1e359">
                <w xml:id="d1e360">na</w>
-            </seg>" they  and the pronoun "
+            </seg>" 
+            
+            they  and the pronoun "
             <seg xml:lang="mix" xml:id="d1e364">
                <w xml:id="d1e365">ti</w>
-            </seg>" animal".  <!-- usg note on "ti" -->Even if someone is plowing (ploughing) with two bulls is fine to use the singular form for animal.
+            </seg>" animal".  <!-- usg note on "ti" -->
+            
+            Even if someone is plowing (ploughing) with two bulls is fine to use the singular form for animal.
             
             (5)
             From the "Kue kui'i tsi kue ntua" page:
@@ -347,11 +409,19 @@
                <w xml:id="d1e371">ntua</w>
             </seg>" 
             <spanGrp type="translation">
-               <span target="#d1e371" type="en">vegetables</span>
-            </spanGrp>? Yes. (homograph w/ "Oaxaca" other than the capital letter right?) No, tones are different.
+               <span target="#d1e371" xml:lang="en">vegetables</span>
+            </spanGrp>
+            ? Yes. 
+            
+            (homograph w/ "Oaxaca" other than the capital letter right?) No, tones are different.
             
             (6)
-            The sentence: "<seg xml:lang="mix" xml:id="d1e373" type="declarative"><w>Yee</w> <w>ña</w> <w>ntikuii</w> <w>a</w> <w>ña</w> <w>ntinchaꞌi</w>.</seg> Cha titsia kuu ntikuii."
+            The sentence: "
+            
+            <seg xml:lang="mix" xml:id="d1e373" type="declarative">
+               <w>Yee</w> <w>ña</w> <w>ntikuii</w> <w>a</w> <w>ña</w> <w>ntinchaꞌi</w>.</seg>
+            Cha titsia kuu ntikuii."
+            
             &gt; What is the "a" ? is that a particle/clitic referring to the object in question? The "a" means or.    Lit. means, "
             <spanGrp type="translation">
                <span target="#d1e373" type="es">Hay de color verde o de color negro.</span>

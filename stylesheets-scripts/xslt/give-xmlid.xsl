@@ -28,6 +28,7 @@
     <xsl:template match="seg">
         <seg xml:id="{generate-id(.)}">
             <xsl:copy-of select="@*"/>
+            <xsl:attribute name="xml:lang">mix</xsl:attribute>
            <!--  <xsl:copy-of select="@*[not(name()='xml:id')]"/>
                -->
             <xsl:apply-templates select="node()"/>
