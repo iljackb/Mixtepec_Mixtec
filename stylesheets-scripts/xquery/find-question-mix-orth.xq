@@ -1,0 +1,1 @@
+//seg[@type="LexItem"]/preceding-sibling::pc[.="¿"]/parent::seg[@type="S"]

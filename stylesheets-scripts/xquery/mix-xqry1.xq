@@ -1,0 +1,1 @@
+//seg[@id="L152-01-01"]/descendant::node()/text()

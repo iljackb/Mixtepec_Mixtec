@@ -1,0 +1,1 @@
+//seg[@type="LexItem"][matches(.,"^(kuunka)$")]/parent::seg[@type="S"]
