@@ -9,7 +9,8 @@
             <title>Mixtec vocabulary from Skype Conversation with Mille</title>
             <respStmt>
                <resp>source of vocabulary</resp>
-               <name>Mille Nieves</name>
+               <resp>Speaker</resp>
+               <name xml:id="MN">Mille Nieves</name>
             </respStmt>
             <respStmt>
                <resp>transcription and encoding of data</resp>
@@ -29,7 +30,7 @@
    <text>
       <body>
          <annotationBlock>
-            <u xml:id="d1e30">
+            <u xml:id="d1e30" xml:lang="mix">
                <w xml:id="d1e31">kuun</w>
             </u>
             <spanGrp type="gram">
@@ -38,30 +39,30 @@
             <spanGrp type="semantics">
                <span/>
             </spanGrp>
-            <spanGrp type="">
-               <span target="" xml:lang=""/>
-               <span target="" xml:lang=""/>
+            <spanGrp type="translation">
+               <span target="#d1e31" xml:lang="en">fall</span>
+               <span target="#d1e31" xml:lang="es">cayer</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e41">
+            <u xml:id="d1e41" xml:lang="mix">
                <seg xml:id="d1e42" xml:lang="mix">
-                  <w xml:id="d1e43">ntachi</w>
+                  <w xml:id="d1e43">ntachi</w><!-- ntachí -->
                </seg>
             </u>
             <spanGrp type="gram">
-               <span/>
+               <span target="#d1e43" type="pos" ana="#V"/>
             </spanGrp>
             <spanGrp type="semantics">
                <span/>
             </spanGrp>
             <spanGrp type="translation">
-               <span target="" xml:lang="es"/>
-               <span target="" xml:lang="en"/>
+               <span target="#d1e43" xml:lang="es">fall</span>
+               <span target="#d1e43" xml:lang="en">caer</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e53">
+            <u xml:id="d1e53" xml:lang="mix">
                <seg xml:id="d1e54" xml:lang="mix" function="utterance" type="orth">
                   <w xml:id="d1e55">tuyutsa</w>
                </seg>
@@ -70,27 +71,40 @@
                <span/>
             </spanGrp>
             <spanGrp type="semantics">
-               <span/>
+               <span type="sense" target="#d1e55" corresp="http://dbpedia.org/resource/Pinus_montezumea"/>
             </spanGrp>
             <spanGrp type="translation">
-               <span target="" xml:lang="es"/>
-               <span target="" xml:lang="en"/>
+               <span target="#d1e55" xml:lang="es">Montezuma pine</span>
+               <span target="#d1e55" xml:lang="en">Ocote</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e65">
-               <seg xml:id="d1e66" xml:lang="mix" function="utterance" notation="orth" type="MWE">
+            <u xml:id="d1e65" xml:lang="mix">
+               <seg xml:id="d1e66"
+                  xml:lang="mix"
+                  function="utterance"
+                  notation="orth"
+                  type="MWE">
                   <w xml:id="d1e67">kuun</w>
                   <w xml:id="d1e69">ntitsi</w>
                </seg>
             </u>
             <spanGrp type="gram">
-               <span type="" n="" target="#d1e66" ana=""/>
+               <span type="pos" n="1" target="#d1e66" ana="#V"/>
+               <span type="pos" n="2" target="#d1e66" ana="#N"/>
             </spanGrp>
             <spanGrp type="semantics">
-               <span type="sense" target="#d1e66" corresp="http://dbpedia.org/resource/Diarrhea"/>
-               <span type="domain" target="#d1e66" corresp="http://dbpedia.org/resource/"/><!-- illness -->
-               <span type="domain" target="#d1e66" corresp="http://dbpedia.org/resource/"/><!-- bodily function -->
+               <span type="sense"
+                  target="#d1e66"
+                  corresp="http://dbpedia.org/resource/Diarrhea"/>
+               <span type="domain"
+                  target="#d1e66"
+                  corresp="http://dbpedia.org/resource/"/>
+               <!-- illness -->
+               <span type="domain"
+                  target="#d1e66"
+                  corresp="http://dbpedia.org/resource/"/>
+               <!-- bodily function -->
             </spanGrp>
             <spanGrp type="translation">
                <span target="#d1e66" xml:lang="es">diarrhea</span>
@@ -98,18 +112,27 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e81">
-               <seg xml:id="d1e82" xml:lang="mix" function="utterance" notation="orth" type="compound">
+            <u xml:id="d1e81" xml:lang="mix">
+               <seg xml:id="d1e82"
+                  xml:lang="mix"
+                  function="utterance"
+                  notation="orth"
+                  type="compound">
                   <w xml:id="d1e83">tsaan</w>
                   <w xml:id="d1e85">ni</w>
                </seg>
             </u>
             <spanGrp type="gram">
-               <span type="pos" target="#d1e82" ana="#CONJ #ADV" cert="medium"/><!-- conjunctive adverb? -->
+               <span type="pos" target="#d1e82" ana="#CONJ #ADV" cert="medium"/>
+               <!-- conjunctive adverb? -->
             </spanGrp>
             <spanGrp type="translation">
-               <span target="#d1e82" xml:lang="es" corresp="https://en.wiktionary.org/wiki/also">also</span>
-               <span target="#d1e82" xml:lang="en" corresp="https://es.wiktionary.org/wiki/también">también</span>
+               <span target="#d1e82"
+                  xml:lang="es"
+                  corresp="https://en.wiktionary.org/wiki/also">also</span>
+               <span target="#d1e82"
+                  xml:lang="en"
+                  corresp="https://es.wiktionary.org/wiki/también">también</span>
             </spanGrp>
          </annotationBlock>
       </body>
