@@ -1,8 +1,5 @@
 NEEDED:
 
-- <seg> vs <s> (in transcription files output)
-  > Note: not all utterances are <s>, in which cases should we delete? (how would this affect searches)
-
 - Eventually add @xml:lang=“mix-x-YCNY” for all relevant speaker sources, make others as needed for other places in region
 
 - Need to extract speaker for each utterance file from the file name of source .wav file!!
@@ -24,7 +21,10 @@ NEEDED:
 - What to do/how to tag words in orthography tier as “nui”
 	 e.g. 
 		<w>nu</w><w>i</w> (NOTE! Can re-segment textgrid only for vowels, as long as the tone is synched (implicitly or explicitly)
-
+	>>DECISION:
+		> Only for spoken utterances (e.g. do not apply this to text sources)
+		> format as:
+			<w>nu<m>i</m></w>
 
 
 - Where/how to annotate adjective that only applies to animate nouns? 
