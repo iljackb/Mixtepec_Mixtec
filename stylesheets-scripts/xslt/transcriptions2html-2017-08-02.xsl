@@ -7,11 +7,11 @@
     <xsl:template match="/">
         <html>
             <xsl:for-each select="descendant::seg[@xml:id and @type = 'S']">
-                <table border="1">
+                <table border="0">
                     <tr>
                         <xsl:for-each select="*">
                             <td>
-                                <xsl:value-of select="."/>
+                                <font size="4"><xsl:value-of select="."/></font>
                             </td>
                         </xsl:for-each>
                     </tr>
