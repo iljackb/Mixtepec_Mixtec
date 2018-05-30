@@ -5,8 +5,22 @@
     <xsl:output encoding="UTF-8" method="html" indent="yes"/>
 
     <xsl:template match="/">
+        
         <html>
-            <xsl:for-each select="descendant::seg[@xml:id and @type = 'S']">
+            <xsl:for-each select="//title">
+                <label><b><font size="5"><xsl:value-of select="."/></font></b></label>
+            </xsl:for-each>
+            
+            <xsl:for-each select="//div">
+                <!-- 
+                <xsl:for-each select="//head">
+                    <label><b><xsl:value-of select="."/></b></label>
+                </xsl:for-each> -->
+                <br/>
+                <br/>
+                    <label><b><xsl:value-of select="head/text()"/></b></label>
+                
+                <xsl:for-each select="descendant::seg[@xml:id and @type = 'S']">
                 <table border="0">
                     <tr>
                         <xsl:for-each select="*">
@@ -18,7 +32,7 @@
                 </table>
                 <xsl:variable name="annotations" select="following-sibling::spanGrp[@type='translation'][1]"/>
                 <table border="1">
-                    <tr><td colspan="2">English</td></tr>
+                    <tr><td colspan="2"><b>English</b></td></tr>
                     <xsl:for-each select="$annotations/span[@xml:lang='en']">
                         <tr>
                             <td>
@@ -29,7 +43,7 @@
                             </td>
                         </tr>
                     </xsl:for-each>
-                    <tr><td colspan="2">Spanish</td></tr>
+                    <tr><td colspan="2"><b>Spanish</b></td></tr>
                     <xsl:for-each select="$annotations/span[@xml:lang='es']">
                         <tr>
                             <td>
@@ -41,6 +55,7 @@
                         </tr>
                     </xsl:for-each>
                 </table>
+            </xsl:for-each>
             </xsl:for-each>
             <!--  -->
             <!--<p n="1">
