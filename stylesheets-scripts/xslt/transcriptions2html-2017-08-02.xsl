@@ -7,6 +7,8 @@
     <xsl:template match="/">
         
         <html>
+            
+            <link href="display-text-docs.css" rel="stylesheet" type="text/css"/>
             <xsl:for-each select="//title">
                 <label><b><font size="5"><xsl:value-of select="."/></font></b></label>
             </xsl:for-each>
@@ -19,12 +21,20 @@
                 <br/>
                 <br/>
                     <label><b><xsl:value-of select="head/text()"/></b></label>
-                
+                <br/>
+                <br/>
                 <xsl:for-each select="descendant::seg[@xml:id and @type = 'S']">
                 <table border="0">
-                    <tr>
-                        <xsl:for-each select="*">
+                    <tr>   
+                        <!-- add numbering here (for each sentence in <div>) -->
                             <td>
+                                <xsl:value-of select="position()"/><xsl:text>) </xsl:text>
+                            </td>
+                            <xsl:for-each select="*">
+                            <td>
+                                <!--  
+                                    <xsl:number value="position()" format="1" grouping-separator=")"/>
+                                -->
                                 <font size="4"><xsl:value-of select="."/></font>
                             </td>
                         </xsl:for-each>
@@ -36,9 +46,11 @@
                     <xsl:for-each select="$annotations/span[@xml:lang='en']">
                         <tr>
                             <td>
+                                <!-- can add condition of w[@cert] vs w[not(@cert)] here -->
                                 <xsl:value-of select="."/>
                             </td>
-                            <td>
+                            <td> 
+                                <!-- can add condition of w[@cert] vs w[not(@cert)] here -->
                                 <xsl:value-of select="for $i in tokenize(@target,' ') return /descendant::w[@xml:id= substring-after($i,'#')]" separator=" "/>
                             </td>
                         </tr>
@@ -54,6 +66,7 @@
                             </td>
                         </tr>
                     </xsl:for-each>
+                    <!-- add "if" to include extra cell for hypelinks to semantic annotations -->
                 </table>
             </xsl:for-each>
             </xsl:for-each>
