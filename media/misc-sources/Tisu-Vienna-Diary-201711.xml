@@ -2,13 +2,22 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-stylesheet type="text/css" href="display-working-text-docs.css"?>
+<?xml-stylesheet type="text/css" href="display-working-text-docs.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Tisu's Vienna Trip Diary</title>
-            <author xml:id="TS">Juan "Tisu'ma" Salazar</author>
-            <editor xml:id="JB">Jack Bowers</editor>
+            <respStmt>
+               <resp>Author</resp>
+               <name xml:id="TS">Juan "Tisu'ma" Salazar</name>
+            </respStmt>
+           <respStmt>
+              <resp>editor</resp>
+              <resp>translation</resp>
+              <name xml:id="JB">Jack Bowers</name>
+           </respStmt>
          </titleStmt>
          <publicationStmt>
             <p>public information </p>
@@ -249,7 +258,7 @@
                   <w xml:id="d1e168">nikaa</w><!-- get out/get in? -->
                   <w xml:id="d1e171">kue</w>
                   <w xml:id="d1e173">nuu</w>
-                  <w xml:id="d1e175">carru</w>
+                  <w xml:id="d1e175" orig="carru">karru</w>
                   <w xml:id="d1e177">Donny</w>
                   <w xml:id="d1e179">ka</w>
                   <pc>,</pc>
@@ -731,7 +740,7 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#d1e569" xml:lang="en">When I was done checking my bag, I walked through.</span>
-                  <span target="#d1e569" xml:lang="es">Cuando acabé de facturar mi valija, caminé y atravesé</span>
+                  <span target="#d1e569" xml:lang="es">Cuando acabé de facturar mi valija, caminé y atravesé.</span>
                   
                   <span target="#d1e570" xml:lang="en">when</span>
                   <span target="#d1e570" xml:lang="es">cuando</span>
@@ -1518,7 +1527,7 @@
                   <w xml:id="d1e1124">ri</w><!-- because -->
                   <w xml:id="d1e1126">ntsika</w><!-- requested -->
                   <w xml:id="d1e1129" cert="medium" orig="yuu">yu</w>
-                  <w xml:id="d1e1131">carru</w>
+                  <w xml:id="d1e1131" orig="carru">karru</w>
                   <w xml:id="d1e1133" cert="medium">ña</w><!-- need to make further chunk -->
                   <w xml:id="d1e1135">kitsi</w><!-- come [kítsí] -->
                   <w xml:id="d1e1137">ntaki'an</w><!-- pick up -->
@@ -1766,7 +1775,7 @@
                   <w xml:id="d1e1419" orig="ni kaa">nikaa</w>
                   <w xml:id="d1e1424">kue</w>
                   <w xml:id="d1e1427">nuu</w>
-                  <w xml:id="d1e1429">carru</w>
+                  <w xml:id="d1e1429" orig="carru">karru</w>
                   <w xml:id="d1e1431">ra</w>
                   <w xml:id="d1e1433">skaki</w><!-- drove -->
                   <w xml:id="d1e1435" norm="ntsa sia'i">ntsasia'i</w><!-- bring over -->
@@ -1779,7 +1788,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e1403" xml:lang="en">Then we left the airport and got in the car and drove (?) and arrived at the Hotel Regina.</span>
+                  <span target="#d1e1403" xml:lang="en">Then we left the airport and got in the car and drove to bring me over to Hotel Regina.</span>
                   <span target="#d1e1403" xml:lang="es"/>
                   
                   <span target="#d1e1404" xml:lang="en"/>
@@ -2058,7 +2067,7 @@
             </salute>
             <p>
                <seg xml:id="d1e1812" xml:lang="mix" resp="#TS" type="S">
-                  <w  xml:id="d1e1813" norm="Ni kixi">Nikixi</w>
+                  <w  xml:id="d1e1813" orig="Ni kixi">Nikixi</w>
                   <w xml:id="d1e1817">yu</w>
                   <w xml:id="d1e1819">kua</w>
                   <w xml:id="d1e1821">una</w>
@@ -2089,7 +2098,7 @@
                   <w xml:id="d1e1849">ka'un</w><!-- ká'u -->
                   <w xml:id="d1e1851">sata</w>
                   <w xml:id="d1e1853">ña</w>
-                  <w xml:id="d1e1855" norm="ntsi intu'u" cert="low">ntsintu'u</w>
+                  <w xml:id="d1e1855" orig="ntsi intu'u" cert="low">ntsintu'u</w>
                   <w xml:id="d1e1859">nuu</w>
                   <w xml:id="d1e1861">avión</w>
                   <w xml:id="d1e1863">ka</w>
@@ -2694,10 +2703,7 @@
                   <w xml:id="d1e2570">in</w>
                   <w xml:id="d1e2572">chai</w>
                   <w xml:id="d1e2574">ta</w>
-                  <w xml:id="d1e2576" norm="nikitsai">
-                     <w xml:id="d1e2576a">ni</w>
-                     <w xml:id="d1e2578">kitsai</w>
-                  </w>
+                  <w xml:id="d1e2576" orig="ni kitsai">nikitsai</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
@@ -2731,7 +2737,7 @@
                
                <seg xml:id="d1e2601" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e2602">Ta</w>
-                  <w xml:id="d1e2604">kunche</w>
+                  <w xml:id="d1e2604">kunchee</w>
                   <w xml:id="d1e2606">nuu</w>
                   <w xml:id="d1e2608">relog</w>
                   <w xml:id="d1e2610">ra</w>
@@ -2820,7 +2826,7 @@
                   <w xml:id="d1e2686">Tsika</w>
                   <w xml:id="d1e2688">kue</w>
                   <w xml:id="d1e2690">ra</w>
-                  <w xml:id="d1e2692" orig="mi chu'ni">michu'ni</w>
+                  <w xml:id="d1e2692" orig="mi chu'ni" cert="low">michu'ni</w><!-- why use this "right now" when writing about the past? -->
                   <w xml:id="d1e2696" orig="ni kitsaa">nikitsaa</w>
                   <w xml:id="d1e2700">kue</w>
                   <w xml:id="d1e2702">nuu</w>
@@ -2909,7 +2915,7 @@
                   <span target="#d1e2727" xml:lang="en"/>
                   <span target="#d1e2727" xml:lang="es"/>
                   
-                  <span target="#d1e2729" xml:lang="en"/>
+                  <span target="#d1e2729" xml:lang="en">then</span>
                   <span target="#d1e2729" xml:lang="es"/>
                   
                   <span target="#d1e2732" xml:lang="en"/>
@@ -2918,7 +2924,7 @@
                   <span target="#d1e2734" xml:lang="en"/>
                   <span target="#d1e2734" xml:lang="es"/>
                   
-                  <span target="#d1e2736" xml:lang="en"/>
+                  <span target="#d1e2736" xml:lang="en">this</span>
                   <span target="#d1e2736" xml:lang="es"/>
                   
                   <span target="#d1e2738" xml:lang="en"/>
@@ -2935,14 +2941,11 @@
                   <w xml:id="d1e2808">Sara</w>
                   <w xml:id="d1e2810">tsika</w>
                   <w xml:id="d1e2812">kue</w>
-                  <w xml:id="d1e2814" norm="kuku'un">
-                     <w xml:id="d1e2814a">ku</w>
-                     <w xml:id="d1e2816">ku'un</w>
-                  </w>
+                  <w xml:id="d1e2814" orig="ku ku'un">kuku'un</w>
                   <w xml:id="d1e2818">kue</w>
                   <w xml:id="d1e2820">ma'in</w>
                   <w xml:id="d1e2822">ñuu</w>
-                  <w xml:id="d1e2824">Vienna</w>
+                  <w xml:id="d1e2824">Viena</w>
                   <w xml:id="d1e2826" cert="low">yo'o</w>
                   <pc>.</pc>
                </seg>
@@ -3036,10 +3039,7 @@
                
                <seg xml:id="d1e2906" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e2907">Ra</w>
-                  <w xml:id="d1e2909" norm="kukuntu'un" cert="low">
-                     <w xml:id="d1e2909a">ku</w>
-                     <w xml:id="d1e2911">kuntu'un</w>
-                  </w>
+                  <w xml:id="d1e2909" orig="ku kuntu'un" cert="low">kukuntu'un</w><!-- why in future/potential? -->
                   <w xml:id="d1e2913">kue</w>
                   <w xml:id="d1e2915">yo'o</w>
                   <w xml:id="d1e2917" orig="ntakuan">ntakuaan</w>
@@ -3266,7 +3266,7 @@
                   <w xml:id="d1e3152">Kua'an</w>
                   <w xml:id="d1e3154">ncho'a</w>
                   <w xml:id="d1e3156">nivi</w>
-                  <w xml:id="d1e3158">tsika</w>
+                  <w xml:id="d1e3158" cert="medium">tsika</w><!-- ntsika(?) put in past? -->
                   <w xml:id="d1e3160">nuu</w>
                   <pc>.</pc>
                </seg>
@@ -3274,20 +3274,15 @@
                   <span target="#d1e3151" xml:lang="en">There were a lot of people walking around.</span>
                   <span target="#d1e3151" xml:lang="es"/>
                   
-                  <span target="#d1e3152" xml:lang="en"/>
-                  <span target="#d1e3152" xml:lang="es"/>
+                  <span target="#d1e3152 #d1e3154" xml:lang="en">many</span>
+                  <span target="#d1e3152 #d1e3154" xml:lang="es">mucha</span>             
                   
-                  <span target="#d1e3154" xml:lang="en"/>
-                  <span target="#d1e3154" xml:lang="es"/>
+                  <span target="#d1e3156" xml:lang="en">people</span>
+                  <span target="#d1e3156" xml:lang="es">gente</span>
                   
-                  <span target="#d1e3156" xml:lang="en"/>
-                  <span target="#d1e3156" xml:lang="es"/>
+                  <span target="#d1e3158 #d1e3160" xml:lang="en">walking around</span>
+                  <span target="#d1e3158 #d1e3160" xml:lang="es"/>
                   
-                  <span target="#d1e3158" xml:lang="en"/>
-                  <span target="#d1e3158" xml:lang="es"/>
-                  
-                  <span target="#d1e3160" xml:lang="en"/>
-                  <span target="#d1e3160" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e3177" xml:lang="mix" resp="#TS" type="S">
@@ -3295,7 +3290,7 @@
                   <w xml:id="d1e3180" orig="inka">inkaa</w>
                   <w xml:id="d1e3182">in</w>
                   <w xml:id="d1e3184">restaurante</w>
-                  <w xml:id="d1e3186" norm="ku nkutu'u">kunkutu'u</w>
+                  <w xml:id="d1e3186" orig="ku nkutu'u">kunkutu'u</w>
                   <w xml:id="d1e3190">kue</w>
                   <w xml:id="d1e3192">katsa'an</w>
                   <pc>.</pc>
@@ -3376,8 +3371,7 @@
                   <w xml:id="d1e3262">Ta</w>
                   <w xml:id="d1e3264">ntsinu</w>
                   <w xml:id="d1e3266">ra</w>
-                  <w xml:id="d1e3270">ku</w>
-                  <w xml:id="d1e3272">nkaka</w>
+                  <w xml:id="d1e3270" cert="low" orig="ku nkaka">kunkaka</w><!-- why in future/potential? -->
                   <w xml:id="d1e3274" orig="kuue">kue</w>
                   <w xml:id="d1e3276">ntanchiko</w>
                   <w xml:id="d1e3278">nuu</w>
@@ -3471,22 +3465,9 @@
                <seg xml:id="d1e3359" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e3360">Taku</w>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e3359" xml:lang="en"/>
-                  <span target="#d1e3359" xml:lang="es"/>
-                  <span target="#d1e3360" xml:lang="en"/>
-                  <span target="#d1e3360" xml:lang="es"/>
-               </spanGrp>
                /<seg xml:id="d1e3366" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e3367">tukuni</w>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e3366" xml:lang="en"/>
-                  <span target="#d1e3366" xml:lang="es"/>
-                  <span target="#d1e3367" xml:lang="en"/>
-                  <span target="#d1e3367" xml:lang="es"/>
-               </spanGrp>
-               
             </salute>
             <p>
                <seg xml:id="d1e3373" xml:lang="mix" resp="#TS" type="S">
@@ -3513,10 +3494,11 @@
                   <span target="#d1e3380" xml:lang="es">lunes</span>
                </spanGrp>
                <seg xml:id="d1e3395" xml:lang="mix" resp="#TS" type="S">
-                  <w norm="Na ntakani" xml:id="d1e3396">Natakani</w>
+                  <w orig="Na ntakani" xml:id="d1e3396">Nantakani</w>
                   <w xml:id="d1e3400">nchi</w>
                   <w xml:id="d1e3402" orig="saa'a">sa'a</w>
-                  <w xml:id="d1e3418">ña</w>
+                  <!-- Separate below into new sentence -->
+                  <w xml:id="d1e3418" cert="low">ña</w>
                   <w xml:id="d1e3420">ntakoo</w>
                   <w xml:id="d1e3422">kua</w>
                   <w xml:id="d1e3424">ka</w>
@@ -3526,7 +3508,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3395" xml:lang="en">I will tell what I did...</span>
+                  <span target="#d1e3395" xml:lang="en">I will tell what I did, (?) I woke up around eight and I showered.</span>
                   <span target="#d1e3395" xml:lang="es"/>
                   
                   <span target="#d1e3396" xml:lang="en">I will tell</span>
@@ -3538,8 +3520,8 @@
                   <span target="#d1e3402" xml:lang="en">I did</span>
                   <span target="#d1e3402" xml:lang="es">hice</span>
                   
-                  <span target="#d1e3418" xml:lang="en"/>
-                  <span target="#d1e3418" xml:lang="es"/>
+                  <span target="#d1e3418" xml:lang="en" cert="low"/>
+                  <span target="#d1e3418" xml:lang="es" cert="low"/>
                   
                   <span target="#d1e3420" xml:lang="en"/>
                   <span target="#d1e3420" xml:lang="es"/>
@@ -3556,8 +3538,8 @@
                   <span target="#d1e3428" xml:lang="en"/>
                   <span target="#d1e3428" xml:lang="es"/>
                   
-                  <span target="#d1e3430" xml:lang="en" cert="unknown"/>
-                  <span target="#d1e3430" xml:lang="es" cert="unknown"/>
+                  <span target="#d1e3430" xml:lang="en">I showered</span>
+                  <span target="#d1e3430" xml:lang="es"/>
                </spanGrp>
            
                <seg xml:id="d1e3451" xml:lang="mix" resp="#TS" type="S">
@@ -3570,14 +3552,14 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3451" xml:lang="en">... I went and ate.</span>
+                  <span target="#d1e3451" xml:lang="en">Then I came down, I went and ate.</span>
                   <span target="#d1e3451" xml:lang="es"/>
                   
                   <span target="#d1e3452" xml:lang="en">And</span>
                   <span target="#d1e3452" xml:lang="es"/>
                   
                   <span target="#d1e3454" xml:lang="en">I came down</span>
-                  <span target="#d1e3454" xml:lang="es"/>
+                  <span target="#d1e3454" xml:lang="es">subí</span>
                   
                   <span target="#d1e3458 #d1e3460" xml:lang="en">I went</span>
                   <span target="#d1e3458 #d1e3460" xml:lang="es">fuí</span>
@@ -3591,10 +3573,10 @@
                   <w xml:id="d1e3486" orig="tsitsan">ntsitsa'an</w>
                   <w xml:id="d1e3488">ra</w>
                   <w xml:id="d1e3490" orig="nike'e">nike'e</w>
-                  <w xml:id="d1e3494">ich</w>
+                  <w xml:id="d1e3494">ichi</w>
                   <w xml:id="d1e3496">ntsa'an</w>
                   <w xml:id="d1e3498">yu</w>
-                  <w xml:id="d1e3500">nu</w>
+                  <w xml:id="d1e3500">nuu</w>
                   <w orig="kun takita'an" xml:id="d1e3502">kuntakita'an<!-- meet -->
                   </w>
                   <w xml:id="d1e3507">tsi</w>
@@ -3607,7 +3589,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3481" xml:lang="en"/>
+                  <span target="#d1e3481" xml:lang="en">When I was done eating, I hit the road and I went to where I was going to meet Jack for our work.</span>
                   <span target="#d1e3481" xml:lang="es"/>
                   
                   <span target="#d1e3482" xml:lang="en"/>
@@ -3622,14 +3604,8 @@
                   <span target="#d1e3488" xml:lang="en"/>
                   <span target="#d1e3488" xml:lang="es"/>
                   
-                  <span target="#d1e3490" xml:lang="en"/>
-                  <span target="#d1e3490" xml:lang="es"/>
-                  
-                  <span target="#d1e3492" xml:lang="en"/>
-                  <span target="#d1e3492" xml:lang="es"/>
-                  
-                  <span target="#d1e3494" xml:lang="en"/>
-                  <span target="#d1e3494" xml:lang="es"/>
+                  <span target="#d1e3490 #d1e3494" xml:lang="en">I hit the road</span>
+                  <span target="#d1e3490 #d1e3494" xml:lang="es">di el camino</span>      
                   
                   <span target="#d1e3496" xml:lang="en"/>
                   <span target="#d1e3496" xml:lang="es"/>
@@ -3670,11 +3646,12 @@
                   <w xml:id="d1e3568" orig="tsa">ntsaa</w>
                   <w xml:id="d1e3570">yu</w>
                   <w xml:id="d1e3572" orig="nu">nuu</w>
-                  <w xml:id="d1e3574" norm="ku takita'an">kutakita'an</w>
+                  <w xml:id="d1e3574" orig="ku takita'an">kutakita'an</w>
                   <w xml:id="d1e3578">kue</w>
                   <w xml:id="d1e3580">cha</w>
                   <w xml:id="d1e3582" orig="nikitsa'a">nikitsaa</w><!-- [nikitsáá] -->
-                  <w xml:id="d1e3584">nchatunuu</w>
+                  <w xml:id="d1e3584">nchatu</w>
+                  <w xml:id="d1e3585">nuu</w>
                   <w xml:id="d1e3586">ña</w>
                   <pc>.</pc>
                </seg>
@@ -3711,8 +3688,8 @@
                   <span target="#d1e3582" xml:lang="en"/>
                   <span target="#d1e3582" xml:lang="es"/>
                   
-                  <span target="#d1e3584" xml:lang="en"/>
-                  <span target="#d1e3584" xml:lang="es"/>
+                  <span target="#d1e3584 #d1e3585" xml:lang="en"></span>
+                  <span target="#d1e3584 #d1e3585" xml:lang="es"/>
                   
                   <span target="#d1e3586" xml:lang="en">for him</span>
                   <span target="#d1e3586" xml:lang="es">para él</span>
@@ -3748,39 +3725,36 @@
                   <span target="#d1e3627" xml:lang="en"/>
                   <span target="#d1e3627" xml:lang="es"/>
                   
-                  <span target="#d1e3631 #d1e3633" xml:lang="en">he is not visible</span>
+                  <span target="#d1e3631 #d1e3633" xml:lang="en">he was not visible</span>
                   <span target="#d1e3631 #d1e3633" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e3656" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e3657">Cha</w>
-                  <w xml:id="d1e3659" orig="ni ka'an">nika'an</w>
+                  <w xml:id="d1e3659" orig="ni ka'an">nika'an</w><!-- [kã̃̀ʔã́] -->
                   <w xml:id="d1e3663">ña</w>
-                  <w xml:id="d1e3665">ncha</w>
+                  <w xml:id="d1e3665">ntsaa</w>
                   <w xml:id="d1e3667" orig="kitsa'i">kitsai</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3656" xml:lang="en">Then I talked to him(?) until he arrived.</span>
+                  <span target="#d1e3656" xml:lang="en">And I was thinking that he would be arriving.</span>
                   <span target="#d1e3656" xml:lang="es"/>
                   
                   <span target="#d1e3657" xml:lang="en"/>
                   <span target="#d1e3657" xml:lang="es"/>
                   
-                  <span target="#d1e3659" xml:lang="en"/>
-                  <span target="#d1e3659" xml:lang="es"/>
+                  <span target="#d1e3659" xml:lang="en">I was thinking</span>
+                  <span target="#d1e3659" xml:lang="es">yo pensaba</span>
                   
-                  <span target="#d1e3661" xml:lang="en"/>
-                  <span target="#d1e3661" xml:lang="es"/>
+                  <span target="#d1e3663" xml:lang="en">that</span>
+                  <span target="#d1e3663" xml:lang="es">que</span>
                   
-                  <span target="#d1e3663" xml:lang="en"/>
-                  <span target="#d1e3663" xml:lang="es"/>
+                  <span target="#d1e3665" xml:lang="en">he arrives</span>
+                  <span target="#d1e3665" xml:lang="es">llegua</span>
                   
-                  <span target="#d1e3665" xml:lang="en"/>
-                  <span target="#d1e3665" xml:lang="es"/>
-                  
-                  <span target="#d1e3667" xml:lang="en"/>
-                  <span target="#d1e3667" xml:lang="es"/>
+                  <span target="#d1e3667" xml:lang="en">he is coming</span>
+                  <span target="#d1e3667" xml:lang="es">viene</span>
                </spanGrp>
                
                <seg xml:id="d1e3686" xml:lang="mix" resp="#TS" type="S">
@@ -3790,14 +3764,14 @@
                   <w xml:id="d1e3695">oko</w>
                   <w xml:id="d1e3697">minute</w>
                   <w xml:id="d1e3699">ra</w>
-                  <w xml:id="d1e3701" orig="nikitsa'a">nikitsaa</w>
+                  <w xml:id="d1e3701" orig="nikitsa'a" cert="low">nikitsáá</w><!-- who? (if 1sg, shouldn't it be "nikitsaa yu"?)-->
                   <w xml:id="d1e3703">tsika</w>
-                  <w xml:id="d1e3705">ntatuku</w>
+                  <w xml:id="d1e3705">ntatuku</w><!-- looked for him -->
                   <w xml:id="d1e3707">ña</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3686" xml:lang="en"/>
+                  <span target="#d1e3686" xml:lang="en">About eight minutes must had past then I started to walk around and look for him.</span>
                   <span target="#d1e3686" xml:lang="es"/>
                   
                   <span target="#d1e3687" xml:lang="en"/>
@@ -3850,10 +3824,10 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3738" xml:lang="en"/>
+                  <span target="#d1e3738" xml:lang="en">I was walking around for about five minutes then I found him, we met on the other side (of the park).</span>
                   <span target="#d1e3738" xml:lang="es"/>
                   
-                  <span target="#d1e3739" xml:lang="en"/>
+                  <span target="#d1e3739" xml:lang="en">I was walking around</span>
                   <span target="#d1e3739" xml:lang="es"/>
                   
                   <span target="#d1e3741" xml:lang="en"/>
@@ -3871,23 +3845,25 @@
                   <span target="#d1e3751" xml:lang="en"/>
                   <span target="#d1e3751" xml:lang="es"/>
                   
-                  <span target="#d1e3753" xml:lang="en"/>
-                  <span target="#d1e3753" xml:lang="es"/>
+                  <span target="#d1e3753" xml:lang="en">I found</span>
+                  <span target="#d1e3753" xml:lang="es">encontré</span>
                   
-                  <span target="#d1e3755" xml:lang="en"/>
-                  <span target="#d1e3755" xml:lang="es"/>
+                  <span target="#d1e3753 #d1e3755" xml:lang="en">I found him</span>
+                  <span target="#d1e3753 #d1e3755" xml:lang="es">lo encontré</span>
                   
-                  <span target="#d1e3760" xml:lang="en"/>
-                  <span target="#d1e3760" xml:lang="es"/>
+                  <span target="#d1e3755" xml:lang="en">him</span>
+                  <span target="#d1e3755" xml:lang="es">lo</span>
                   
-                  <span target="#d1e3762" xml:lang="en"/>
-                  <span target="#d1e3762" xml:lang="es"/>
+                  <span target="#d1e3760 #d1e3762" xml:lang="en">I met him</span>
+                  <span target="#d1e3760 #d1e3762" xml:lang="es"/>
                   
-                  <span target="#d1e3764" xml:lang="en"/>
-                  <span target="#d1e3764" xml:lang="es"/>
+                  <span target="#d1e3762" xml:lang="en">with him</span>
+                  <span target="#d1e3762" xml:lang="es" cert="low"/>
                   
-                  <span target="#d1e3766" xml:lang="en"/>
-                  <span target="#d1e3766" xml:lang="es"/>
+                  <span target="#d1e3764 #d1e3766" xml:lang="en">across</span>
+                  <span target="#d1e3764 #d1e3766" xml:lang="en">the other side</span>
+                  <span target="#d1e3764 #d1e3766" xml:lang="es">a travéz de</span>
+                  <span target="#d1e3764 #d1e3766" xml:lang="es">otro lado</span>
                </spanGrp>
                
                <seg xml:id="d1e3802" xml:lang="mix" resp="#TS" type="S">
@@ -3901,7 +3877,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3802" xml:lang="en"/>
+                  <span target="#d1e3802" xml:lang="en">Then we left to go to where he works.</span>
                   <span target="#d1e3802" xml:lang="es"/>
                   
                   <span target="#d1e3803" xml:lang="en"/>
@@ -3912,12 +3888,16 @@
                   
                   <span target="#d1e3807" xml:lang="en"/>
                   <span target="#d1e3807" xml:lang="es"/>
+                  
                   <span target="#d1e3809" xml:lang="en"/>
                   <span target="#d1e3809" xml:lang="es"/>
+                  
                   <span target="#d1e3811" xml:lang="en"/>
                   <span target="#d1e3811" xml:lang="es"/>
+                  
                   <span target="#d1e3813" xml:lang="en"/>
                   <span target="#d1e3813" xml:lang="es"/>
+                  
                   <span target="#d1e3815" xml:lang="en"/>
                   <span target="#d1e3815" xml:lang="es"/>
                </spanGrp>
@@ -3931,11 +3911,11 @@
                   <w xml:id="d1e3848" orig="ku nkuku" cert="medium">kunkuku</w>
                   <w xml:id="d1e3852" orig="kwa">kua</w> 
                   <w xml:id="d1e3859">ka</w>
-                  <w xml:id="d1e3861">utsi</w> <note>(10)</note>
+                  <w xml:id="d1e3861">utsi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e3837" xml:lang="en">Then we arrived and already it was about 10 o'clock.</span>
+                  <span target="#d1e3837" xml:lang="en">When we arrived and already it was about 10 o'clock.</span>
                   <span target="#d1e3837" xml:lang="es"/>
                   
                   <span target="#d1e3838" xml:lang="en"/>
@@ -3950,8 +3930,8 @@
                   <span target="#d1e3844" xml:lang="en"/>
                   <span target="#d1e3844" xml:lang="es"/>
                   
-                  <span target="#d1e3846" xml:lang="en"/>
-                  <span target="#d1e3846" xml:lang="es"/>
+                  <span target="#d1e3846" xml:lang="en">already</span>
+                  <span target="#d1e3846" xml:lang="es">yá</span>
                   
                   <span target="#d1e3848" xml:lang="en"/>
                   <span target="#d1e3848" xml:lang="es"/>
@@ -3985,14 +3965,11 @@
                   <span target="#d1e3901" xml:lang="en">Then we worked.</span>
                   <span target="#d1e3901" xml:lang="es"/>
                   
-                  <span target="#d1e3902" xml:lang="en"/>
-                  <span target="#d1e3902" xml:lang="es"/>
-                  <span target="#d1e3904" xml:lang="en"/>
-                  <span target="#d1e3904" xml:lang="es"/>
-                  <span target="#d1e3906" xml:lang="en"/>
-                  <span target="#d1e3906" xml:lang="es"/>
-                  <span target="#d1e3908" xml:lang="en"/>
-                  <span target="#d1e3908" xml:lang="es"/>
+                  <span target="#d1e3902" xml:lang="en">then</span>
+                  <span target="#d1e3902" xml:lang="es">y pues</span>
+                  
+                  <span target="#d1e3904 #d1e3908" xml:lang="en">we worked</span>
+                  <span target="#d1e3904 #d1e3908" xml:lang="es">trabajamos</span>
                </spanGrp>
                
                <seg xml:id="d1e3923" xml:lang="mix" resp="#TS" type="S">
@@ -4099,7 +4076,7 @@
                   <w xml:id="d1e4042" orig="Sa chuun">Sachuun</w>
                   <w xml:id="d1e4046">kue</w>
                   <w xml:id="d1e4050">ncha</w>
-                  <w xml:id="d1e4052" orig="ka">kaa</w>
+                  <w xml:id="d1e4052" orig="ka" cert="medium">kaa</w>
                   <w xml:id="d1e4054">iñu</w>
                   <w xml:id="d1e4056" orig="ntsini">tsini</w>
                   <pc>.</pc>
@@ -4443,7 +4420,7 @@
                <seg xml:id="d1e4398" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e4399">Ta</w>
                   <w xml:id="d1e4401">kua</w>
-                  <w xml:id="d1e4403" orig="ka" cert="high">kaa</w>
+                  <w xml:id="d1e4403" orig="ka" cert="medium">kaa</w>
                   <w xml:id="d1e4405">utsi</w>
                   <w xml:id="d1e4407">ra</w>
                   <w xml:id="d1e4409" orig="ni kixi">nikixi</w>
@@ -4500,16 +4477,23 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4455" xml:lang="en"/>
+                  <span target="#d1e4455" xml:lang="en">Now it is Tuesday evening.</span>
                   <span target="#d1e4455" xml:lang="es"/>
+                  
                   <span target="#d1e4456" xml:lang="en"/>
                   <span target="#d1e4456" xml:lang="es"/>
+                  
                   <span target="#d1e4458" xml:lang="en"/>
                   <span target="#d1e4458" xml:lang="es"/>
+                  
                   <span target="#d1e4460" xml:lang="en"/>
                   <span target="#d1e4460" xml:lang="es"/>
-                  <span target="#d1e4462" xml:lang="en"/>
-                  <span target="#d1e4462" xml:lang="es"/>
+
+                  <span target="#d1e4460 #d1e4462" xml:lang="en">Tuesday evening</span>
+                  <span target="#d1e4460 #d1e4462" xml:lang="es" cert="medium">la tarde de martes</span>
+
+                  <span target="#d1e4462" xml:lang="en">Tuesday</span>
+                  <span target="#d1e4462" xml:lang="es">Martes</span>
                </spanGrp>
                
                <seg xml:id="d1e4477" xml:lang="mix" resp="#TS" type="S">
@@ -4540,10 +4524,10 @@
                </spanGrp>
                
                <seg xml:id="d1e4503" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e4504">Ña</w>
+                  <w xml:id="d1e4504" cert="low">Ña</w>
                   <w xml:id="d1e4506">ntakoo</w>
                   <w xml:id="d1e4508">kua</w>
-                  <w xml:id="d1e4510" orig="ka">kaa</w>
+                  <w xml:id="d1e4510" orig="ka" cert="medium">kaa</w>
                   <w xml:id="d1e4512">utsa</w>
                   <w xml:id="d1e4514">ra</w>
                   <w xml:id="d1e4516">ntsichi</w>
@@ -4551,15 +4535,15 @@
                   <w xml:id="d1e4520">ntakacha</w>
                   <w xml:id="d1e4522">yu'u</w>
                   <pc>,</pc>
-                  <w xml:id="d1e4527">ntakiin</w>
+                  <w xml:id="d1e4527">ntaki'in</w>
                   <w xml:id="d1e4529">sa'ma</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4503" xml:lang="en"/>
+                  <span target="#d1e4503" xml:lang="en" cert="medium">And so I got up around seven and I took a shower, I brushed my teeth and</span>
                   <span target="#d1e4503" xml:lang="es"/>
                   
-                  <span target="#d1e4504" xml:lang="en"/>
+                  <span target="#d1e4504" xml:lang="en" cert="unknown"/>
                   <span target="#d1e4504" xml:lang="es"/>
                   
                   <span target="#d1e4506" xml:lang="en"/>
@@ -4598,11 +4582,11 @@
                   <pc>,</pc>
                   <w xml:id="d1e4570">ntsa'an</w>
                   <w xml:id="d1e4572">yu</w>
-                  <w xml:id="d1e4574">tsitsan</w>
+                  <w xml:id="d1e4574" orig="tsitsan">tsitsa'an</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4563" xml:lang="en"/>
+                  <span target="#d1e4563" xml:lang="en">Then I came down and went to eat.</span>
                   <span target="#d1e4563" xml:lang="es"/>
                 
                   <span target="#d1e4564" xml:lang="en"/>
@@ -4624,10 +4608,9 @@
                <seg xml:id="d1e4593" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e4594">Ta</w>
                   <w xml:id="d1e4596">tsinu</w>
-                  <w xml:id="d1e4598">tsitsan</w>
+                  <w xml:id="d1e4598" orig="tsitsan">tsitsa'an</w>
                   <w xml:id="d1e4600">ra</w>
-                  <w xml:id="d1e4602">ni</w>
-                  <w xml:id="d1e4604">ki'i</w>
+                  <w xml:id="d1e4602" orig="ni ki'i">niki'i</w>
                   <w xml:id="d1e4606">ichi</w>
                   <w xml:id="d1e4608">ntsa'an</w>
                   <w xml:id="d1e4610">yu</w>
@@ -4643,7 +4626,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4593" xml:lang="en"/>
+                  <span target="#d1e4593" xml:lang="en">When I was done eating I hit the road and went to where I was meeting with Jack for work.</span>
                   <span target="#d1e4593" xml:lang="es"/>
                   
                   <span target="#d1e4594" xml:lang="en"/>
@@ -4714,7 +4697,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4734" xml:lang="en"/>
+                  <span target="#d1e4734" xml:lang="en">I got on the train and walked to where we were going to work.</span>
                   <span target="#d1e4734" xml:lang="es"/>
                   
                   <span target="#d1e4735" xml:lang="en"/>
@@ -4755,17 +4738,17 @@
                   <w xml:id="d1e4787">Ta</w>
                   <w xml:id="d1e4789">ntsaa</w>
                   <w xml:id="d1e4791">yu</w>
-                  <w xml:id="d1e4793" cert="low">inka</w>
-                  <w xml:id="d1e4795">cha</w>
+                  <w xml:id="d1e4793">ika</w>
+                  <w xml:id="d1e4795">ra</w>
                   <w xml:id="d1e4797">tsa</w>
-                  <w xml:id="d1e4799" orig="chatunu">kunchatu</w>
+                  <w xml:id="d1e4799" orig="chatunu">nchatu</w>
                   <w xml:id="d1e4800">nuu</w>
                   <w xml:id="d1e4801">Jack</w>
                   <w xml:id="d1e4803">ka</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4786" xml:lang="en"></span>
+                  <span target="#d1e4786" xml:lang="en" cert="low">When I arrived there, Jack was already waiting.</span>
                   <span target="#d1e4786" xml:lang="es"/>
                 
                   <span target="#d1e4787" xml:lang="en"/>
@@ -4814,7 +4797,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4828" xml:lang="en"/>
+                  <span target="#d1e4828" xml:lang="en">Then we met and we went to his office, the office where we were going to work.</span>
                   <span target="#d1e4828" xml:lang="es"/>
                
                   <span target="#d1e4829" xml:lang="en"/>
@@ -4873,67 +4856,77 @@
                   <w xml:id="d1e4915">kua</w>
                   <w xml:id="d1e4922">ka</w>
                   <w xml:id="d1e4924">iin</w> 
-                  <note xml:id="d1e4927">(9)</note>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4900" xml:lang="en"/>
+                  <span target="#d1e4900" xml:lang="en">When we got there it was already about nine o'clock.</span>
                   <span target="#d1e4900" xml:lang="es"/>
+                  
                   <span target="#d1e4901" xml:lang="en"/>
                   <span target="#d1e4901" xml:lang="es"/>
+                 
                   <span target="#d1e4903" xml:lang="en"/>
                   <span target="#d1e4903" xml:lang="es"/>
+                  
                   <span target="#d1e4905" xml:lang="en"/>
                   <span target="#d1e4905" xml:lang="es"/>
+                  
                   <span target="#d1e4907" xml:lang="en"/>
                   <span target="#d1e4907" xml:lang="es"/>
+                  
                   <span target="#d1e4909" xml:lang="en"/>
                   <span target="#d1e4909" xml:lang="es"/>
+                  
                   <span target="#d1e4911" xml:lang="en"/>
                   <span target="#d1e4911" xml:lang="es"/>
+                  
                   <span target="#d1e4913" xml:lang="en"/>
                   <span target="#d1e4913" xml:lang="es"/>
+                  
                   <span target="#d1e4915" xml:lang="en"/>
                   <span target="#d1e4915" xml:lang="es"/>
+                  
                   <span target="#d1e4918" xml:lang="en"/>
                   <span target="#d1e4918" xml:lang="es"/>
+                  
                   <span target="#d1e4922" xml:lang="en"/>
                   <span target="#d1e4922" xml:lang="es"/>
+                  
                   <span target="#d1e4924" xml:lang="en"/>
                   <span target="#d1e4924" xml:lang="es"/>
+                  
                   <span target="#d1e4927" xml:lang="en"/>
                   <span target="#d1e4927" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e4964" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e4965">Sara</w>
-                  <w xml:id="d1e4967">nikitsa</w>
+                  <w xml:id="d1e4967" orig="nikitsa">nikitsáá</w>
                   <w xml:id="d1e4969">kue</w>
                   <w xml:id="d1e4971">sachuun</w>
                   <w xml:id="d1e4975">kue</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4964" xml:lang="en"/>
-                 
+                  <span target="#d1e4964" xml:lang="en">Then we started to work.</span>
                   <span target="#d1e4964" xml:lang="es"/>
-                  <span target="#d1e4965" xml:lang="en"/>
                   
+                  <span target="#d1e4965" xml:lang="en"/>            
                   <span target="#d1e4965" xml:lang="es"/>
-                  <span target="#d1e4967" xml:lang="en"/>
                   
+                  <span target="#d1e4967" xml:lang="en"/>                
                   <span target="#d1e4967" xml:lang="es"/>
-                  <span target="#d1e4969" xml:lang="en"/>
                   
+                  <span target="#d1e4969" xml:lang="en"/>            
                   <span target="#d1e4969" xml:lang="es"/>
-                  <span target="#d1e4971" xml:lang="en"/>
                   
+                  <span target="#d1e4971" xml:lang="en"/>             
                   <span target="#d1e4971" xml:lang="es"/>
+                  
                   <span target="#d1e4973" xml:lang="en"/>
-                  
                   <span target="#d1e4973" xml:lang="es"/>
-                  <span target="#d1e4975" xml:lang="en"/>
                   
+                  <span target="#d1e4975" xml:lang="en"/>
                   <span target="#d1e4975" xml:lang="es"/>
                </spanGrp>
                
@@ -4949,41 +4942,55 @@
                   <w xml:id="d1e5019">ntsatsi</w>
                   <w xml:id="d1e5021">kue</w>
                   <w xml:id="d1e5023">ña</w>
-                  <w xml:id="d1e5025">takuan</w>
+                  <w xml:id="d1e5025">takuaan</w>
                   <w xml:id="d1e5027">kue</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e4995" xml:lang="en"/>
+                  <span target="#d1e4995" xml:lang="en">We worked until about 1 and then we ate the stuff that we bought.</span>
                   <span target="#d1e4995" xml:lang="es"/>
+                  
                   <span target="#d1e4996" xml:lang="en"/>
                   <span target="#d1e4996" xml:lang="es"/>
+                  
                   <span target="#d1e4998" xml:lang="en"/>
                   <span target="#d1e4998" xml:lang="es"/>
+                  
                   <span target="#d1e5000" xml:lang="en"/>
                   <span target="#d1e5000" xml:lang="es"/>
+                  
                   <span target="#d1e5002" xml:lang="en"/>
                   <span target="#d1e5002" xml:lang="es"/>
+                  
                   <span target="#d1e5004" xml:lang="en"/>
                   <span target="#d1e5004" xml:lang="es"/>
+                  
                   <span target="#d1e5006" xml:lang="en"/>
                   <span target="#d1e5006" xml:lang="es"/>
+                  
                   <span target="#d1e5008" xml:lang="en"/>
                   <span target="#d1e5008" xml:lang="es"/>
+                  
                   <span target="#d1e5011" xml:lang="en"/>
                   <span target="#d1e5011" xml:lang="es"/>
+                  
                   <span target="#d1e5017" xml:lang="en"/>
                   <span target="#d1e5017" xml:lang="es"/>
+                  
                   <span target="#d1e5019" xml:lang="en"/>
                   <span target="#d1e5019" xml:lang="es"/>
+                  
                   <span target="#d1e5021" xml:lang="en"/>
                   <span target="#d1e5021" xml:lang="es"/>
-                  <span target="#d1e5023" xml:lang="en"/>
-                  <span target="#d1e5023" xml:lang="es"/>
-                  <span target="#d1e5025" xml:lang="en"/>
-                  <span target="#d1e5025" xml:lang="es"/>
-                  <span target="#d1e5027" xml:lang="en"/>
-                  <span target="#d1e5027" xml:lang="es"/>
+                  
+                  <span target="#d1e5023 #d1e5025 #d1e5027" xml:lang="en">that which we bought</span>
+                  <span target="#d1e5023 #d1e5025 #d1e5027" xml:lang="es" cert="medium">lo que hemos comprado</span>
+                  
+                  <span target="#d1e5023" xml:lang="en">that which</span>
+                  <span target="#d1e5023" xml:lang="es">lo que</span>
+                  
+                  <span target="#d1e5025 #d1e5027" xml:lang="en">we bought</span>
+                  <span target="#d1e5025 #d1e5027" xml:lang="es" cert="medium">hemos comprado</span>
                </spanGrp>
                
                <seg xml:id="d1e5067" xml:lang="mix" resp="#TS" type="S">
@@ -4998,7 +5005,7 @@
                   <w xml:id="d1e5084">tsa'a</w>
                   <w xml:id="d1e5086">kue</w>
                   <w xml:id="d1e5088">tienda</w>
-                  <w xml:id="d1e5091">takua'an</w>
+                  <w xml:id="d1e5091">takuaan</w>
                   <w xml:id="d1e5093">kue</w>
                   <w xml:id="d1e5095">santuich</w>
                   <w xml:id="d1e5097">tsi</w>
@@ -5006,53 +5013,52 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5067" xml:lang="en"/>
-                 
+                  <span target="#d1e5067" xml:lang="en" cert="low">And so we went to the store where we met earlier and bought sandwiches and water.</span> 
                   <span target="#d1e5067" xml:lang="es"/>
-                  <span target="#d1e5068" xml:lang="en"/>
                   
+                  <span target="#d1e5068" xml:lang="en" cert="low"/>                 
                   <span target="#d1e5068" xml:lang="es"/>
-                  <span target="#d1e5070" xml:lang="en"/>
                   
+                  <span target="#d1e5070" xml:lang="en"/>                 
                   <span target="#d1e5070" xml:lang="es"/>
-                  <span target="#d1e5072" xml:lang="en"/>
                   
+                  <span target="#d1e5072" xml:lang="en"/>                
                   <span target="#d1e5072" xml:lang="es"/>
-                  <span target="#d1e5074" xml:lang="en"/>
                   
+                  <span target="#d1e5074" xml:lang="en"/>                 
                   <span target="#d1e5074" xml:lang="es"/>
-                  <span target="#d1e5076" xml:lang="en"/>
                   
+                  <span target="#d1e5076" xml:lang="en"/>            
                   <span target="#d1e5076" xml:lang="es"/>
-                  <span target="#d1e5078" xml:lang="en"/>
                   
+                  <span target="#d1e5078" xml:lang="en"/>           
                   <span target="#d1e5078" xml:lang="es"/>
-                  <span target="#d1e5082" xml:lang="en"/>
                   
+                  <span target="#d1e5082" xml:lang="en"/>      
                   <span target="#d1e5082" xml:lang="es"/>
-                  <span target="#d1e5084" xml:lang="en"/>
                   
+                  <span target="#d1e5084" xml:lang="en"/>                 
                   <span target="#d1e5084" xml:lang="es"/>
-                  <span target="#d1e5086" xml:lang="en"/>
                   
+                  <span target="#d1e5086" xml:lang="en"/> 
                   <span target="#d1e5086" xml:lang="es"/>
-                  <span target="#d1e5088" xml:lang="en"/>
-                  
+               
+                  <span target="#d1e5088" xml:lang="en"/>       
                   <span target="#d1e5088" xml:lang="es"/>
-                  <span target="#d1e5091" xml:lang="en"/>
-                  
+     
+                  <span target="#d1e5091" xml:lang="en"/>              
                   <span target="#d1e5091" xml:lang="es"/>
-                  <span target="#d1e5093" xml:lang="en"/>
-                  
+    
+                  <span target="#d1e5093" xml:lang="en"/>        
                   <span target="#d1e5093" xml:lang="es"/>
+                  
                   <span target="#d1e5095" xml:lang="en"/>
-                  
                   <span target="#d1e5095" xml:lang="es"/>
-                  <span target="#d1e5097" xml:lang="en"/>
-                  
+   
+                  <span target="#d1e5097" xml:lang="en"/>         
                   <span target="#d1e5097" xml:lang="es"/>
-                  <span target="#d1e5099" xml:lang="en"/>
                   
+                  <span target="#d1e5099" xml:lang="en"/>       
                   <span target="#d1e5099" xml:lang="es"/>
                </spanGrp>
                
@@ -5068,26 +5074,25 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5139" xml:lang="en"/>
-                 
+                  <span target="#d1e5139" xml:lang="en" cert="low">And we ate that at around one o'clock.</span>        
                   <span target="#d1e5139" xml:lang="es"/>
-                  <span target="#d1e5140" xml:lang="en"/>
                   
+                  <span target="#d1e5140" xml:lang="en"/>           
                   <span target="#d1e5140" xml:lang="es"/>
-                  <span target="#d1e5142" xml:lang="en"/>
                   
+                  <span target="#d1e5142" xml:lang="en"/>            
                   <span target="#d1e5142" xml:lang="es"/>
-                  <span target="#d1e5144" xml:lang="en"/>
                   
+                  <span target="#d1e5144" xml:lang="en"/>            
                   <span target="#d1e5144" xml:lang="es"/>
-                  <span target="#d1e5146" xml:lang="en"/>
                   
+                  <span target="#d1e5146" xml:lang="en"/>              
                   <span target="#d1e5146" xml:lang="es"/>
-                  <span target="#d1e5148" xml:lang="en"/>
                   
+                  <span target="#d1e5148" xml:lang="en"/>               
                   <span target="#d1e5148" xml:lang="es"/>
-                  <span target="#d1e5150" xml:lang="en"/>
                   
+                  <span target="#d1e5150" xml:lang="en"/>
                   <span target="#d1e5150" xml:lang="es"/>
                   <span target="#d1e5152" xml:lang="en"/>
                   
@@ -5102,7 +5107,7 @@
                
                
                <seg xml:id="d1e5187" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e5188">Ta</w>
+                  <w xml:id="d1e5188" cert="medium">Ta</w><!-- should this be "Sara" or "cha"? -->
                   <w xml:id="d1e5190">tsinu</w>
                   <w xml:id="d1e5192">ntsitsa'an</w>
                   <w xml:id="d1e5196">kue</w>
@@ -5113,38 +5118,28 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5187" xml:lang="en"/>
-                  
+                  <span target="#d1e5187" xml:lang="en" cert="medium">Then we were done eating and we went back to work.</span>           
                   <span target="#d1e5187" xml:lang="es"/>
+
                   <span target="#d1e5188" xml:lang="en"/>
-                  
                   <span target="#d1e5188" xml:lang="es"/>
-                  <span target="#d1e5190" xml:lang="en"/>
-                  
+                  <span target="#d1e5190" xml:lang="en"/> 
                   <span target="#d1e5190" xml:lang="es"/>
-                  <span target="#d1e5192" xml:lang="en"/>
-                  
+                  <span target="#d1e5192" xml:lang="en"/>                 
                   <span target="#d1e5192" xml:lang="es"/>
-                  <span target="#d1e5194" xml:lang="en"/>
-                  
+                  <span target="#d1e5194" xml:lang="en"/>                 
                   <span target="#d1e5194" xml:lang="es"/>
-                  <span target="#d1e5196" xml:lang="en"/>
-                  
+                  <span target="#d1e5196" xml:lang="en"/>                  
                   <span target="#d1e5196" xml:lang="es"/>
-                  <span target="#d1e5198" xml:lang="en"/>
-                  
+                  <span target="#d1e5198" xml:lang="en"/>                 
                   <span target="#d1e5198" xml:lang="es"/>
                   <span target="#d1e5200" xml:lang="en"/>
-                  
                   <span target="#d1e5200" xml:lang="es"/>
-                  <span target="#d1e5202" xml:lang="en"/>
-                  
+                  <span target="#d1e5202" xml:lang="en"/>                
                   <span target="#d1e5202" xml:lang="es"/>
-                  <span target="#d1e5204" xml:lang="en"/>
-                  
+                  <span target="#d1e5204" xml:lang="en"/>             
                   <span target="#d1e5204" xml:lang="es"/>
-                  <span target="#d1e5206" xml:lang="en"/>
-                  
+                  <span target="#d1e5206" xml:lang="en"/>         
                   <span target="#d1e5206" xml:lang="es"/>
                </spanGrp>
                
@@ -5159,67 +5154,52 @@
                   <w xml:id="d1e5250">u'un</w> 
                   <w xml:id="d1e5257">sava</w>
                   <w xml:id="d1e5259">sana</w>
-                  <w xml:id="d1e5261">tsike</w>
+                  <w xml:id="d1e5261">tsika</w>
                   <w xml:id="d1e5263">kue</w>
                   <w xml:id="d1e5265">nuu</w>
                   <w xml:id="d1e5267">chuun</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5233" xml:lang="en"/>
-                
+                  <span target="#d1e5233" xml:lang="en">We worked until about five thirty then we walked from work.</span>   
                   <span target="#d1e5233" xml:lang="es"/>
-                  <span target="#d1e5234" xml:lang="en"/>
                   
+                  <span target="#d1e5234" xml:lang="en"/>               
                   <span target="#d1e5234" xml:lang="es"/>
-                  <span target="#d1e5236" xml:lang="en"/>
-                  
+                  <span target="#d1e5236" xml:lang="en"/>  
                   <span target="#d1e5236" xml:lang="es"/>
-                  <span target="#d1e5238" xml:lang="en"/>
-                  
+                  <span target="#d1e5238" xml:lang="en"/>                 
                   <span target="#d1e5238" xml:lang="es"/>
-                  <span target="#d1e5242" xml:lang="en"/>
-                  
+                  <span target="#d1e5242" xml:lang="en"/>             
                   <span target="#d1e5242" xml:lang="es"/>
-                  <span target="#d1e5244" xml:lang="en"/>
-                  
+                  <span target="#d1e5244" xml:lang="en"/>                
                   <span target="#d1e5244" xml:lang="es"/>
-                  <span target="#d1e5246" xml:lang="en"/>
-                  
+                  <span target="#d1e5246" xml:lang="en"/>              
                   <span target="#d1e5246" xml:lang="es"/>
-                  <span target="#d1e5248" xml:lang="en"/>
-                  
+                  <span target="#d1e5248" xml:lang="en"/>            
                   <span target="#d1e5248" xml:lang="es"/>
-                  <span target="#d1e5250" xml:lang="en"/>
-                  
+                  <span target="#d1e5250" xml:lang="en"/>          
                   <span target="#d1e5250" xml:lang="es"/>
-                  <span target="#d1e5253" xml:lang="en"/>
-                  
+                  <span target="#d1e5253" xml:lang="en"/>             
                   <span target="#d1e5253" xml:lang="es"/>
-                  <span target="#d1e5257" xml:lang="en"/>
-                  
+                  <span target="#d1e5257" xml:lang="en"/>              
                   <span target="#d1e5257" xml:lang="es"/>
-                  <span target="#d1e5259" xml:lang="en"/>
-                  
+                  <span target="#d1e5259" xml:lang="en"/>     
                   <span target="#d1e5259" xml:lang="es"/>
-                  <span target="#d1e5261" xml:lang="en"/>
-                  
+                  <span target="#d1e5261" xml:lang="en"/>               
                   <span target="#d1e5261" xml:lang="es"/>
-                  <span target="#d1e5263" xml:lang="en"/>
-                  
+                  <span target="#d1e5263" xml:lang="en"/>         
                   <span target="#d1e5263" xml:lang="es"/>
-                  <span target="#d1e5265" xml:lang="en"/>
-                  
+                  <span target="#d1e5265" xml:lang="en"/>          
                   <span target="#d1e5265" xml:lang="es"/>
-                  <span target="#d1e5267" xml:lang="en"/>
-                  
+                  <span target="#d1e5267" xml:lang="en"/>               
                   <span target="#d1e5267" xml:lang="es"/>
                </spanGrp>
                
             </p>
             <p>
                <seg xml:id="d1e5310" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e5311">Ta</w>
+                  <w xml:id="d1e5311">Ta</w><!-- Cha ? -->
                   <w xml:id="d1e5313">nikee</w>
                   <w xml:id="d1e5317">vatsi</w>
                   <w xml:id="d1e5319">ntitsi</w>
@@ -5232,61 +5212,45 @@
                   <w xml:id="d1e5334">tsa</w>
                   <w xml:id="d1e5336">nikui</w>
                   <w xml:id="d1e5340">kua</w>
-                  <w xml:id="d1e5342">ka</w>
+                  <w xml:id="d1e5342" cert="medium">ka</w>
                   <w xml:id="d1e5344">iñu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5310" xml:lang="en"/>
-               
+                  <span target="#d1e5310" xml:lang="en">When I came back and went into the hotel when I was staying it was about six o'clock.</span> 
                   <span target="#d1e5310" xml:lang="es"/>
-                  <span target="#d1e5311" xml:lang="en"/>
                   
+                  <span target="#d1e5311" xml:lang="en"/>            
                   <span target="#d1e5311" xml:lang="es"/>
-                  <span target="#d1e5313" xml:lang="en"/>
-                  
+                  <span target="#d1e5313" xml:lang="en"/>            
                   <span target="#d1e5313" xml:lang="es"/>
-                  <span target="#d1e5315" xml:lang="en"/>
-                  
+                  <span target="#d1e5315" xml:lang="en"/>         
                   <span target="#d1e5315" xml:lang="es"/>
                   <span target="#d1e5317" xml:lang="en"/>
-                  
                   <span target="#d1e5317" xml:lang="es"/>
                   <span target="#d1e5319" xml:lang="en"/>
-                  
                   <span target="#d1e5319" xml:lang="es"/>
                   <span target="#d1e5321" xml:lang="en"/>
-                  
                   <span target="#d1e5321" xml:lang="es"/>
-                  <span target="#d1e5323" xml:lang="en"/>
-                  
+                  <span target="#d1e5323" xml:lang="en"/>               
                   <span target="#d1e5323" xml:lang="es"/>
-                  <span target="#d1e5325" xml:lang="en"/>
-                  
+                  <span target="#d1e5325" xml:lang="en"/>            
                   <span target="#d1e5325" xml:lang="es"/>
-                  <span target="#d1e5327" xml:lang="en"/>
-                  
+                  <span target="#d1e5327" xml:lang="en"/>                
                   <span target="#d1e5327" xml:lang="es"/>
-                  <span target="#d1e5329" xml:lang="en"/>
-                  
+                  <span target="#d1e5329" xml:lang="en"/>               
                   <span target="#d1e5329" xml:lang="es"/>
-                  <span target="#d1e5334" xml:lang="en"/>
-                  
+                  <span target="#d1e5334" xml:lang="en"/>              
                   <span target="#d1e5334" xml:lang="es"/>
-                  <span target="#d1e5336" xml:lang="en"/>
-                  
+                  <span target="#d1e5336" xml:lang="en"/>                
                   <span target="#d1e5336" xml:lang="es"/>
-                  <span target="#d1e5338" xml:lang="en"/>
-                  
+                  <span target="#d1e5338" xml:lang="en"/>     
                   <span target="#d1e5338" xml:lang="es"/>
-                  <span target="#d1e5340" xml:lang="en"/>
-                  
+                  <span target="#d1e5340" xml:lang="en"/>            
                   <span target="#d1e5340" xml:lang="es"/>
-                  <span target="#d1e5342" xml:lang="en"/>
-                  
+                  <span target="#d1e5342" xml:lang="en"/>               
                   <span target="#d1e5342" xml:lang="es"/>
-                  <span target="#d1e5344" xml:lang="en"/>
-                  
+                  <span target="#d1e5344" xml:lang="en"/> 
                   <span target="#d1e5344" xml:lang="es"/>
                </spanGrp>
                
@@ -5295,64 +5259,61 @@
                   <w xml:id="d1e5389">nikitsaa</w>
                   <w xml:id="d1e5393">yu</w>
                   <w xml:id="d1e5397">nuu</w>
+                  <w xml:id="d1e5399">nuu</w>
                   <w xml:id="d1e5401">treen</w>
                   <w xml:id="d1e5403">ka</w>
                   <pc>,</pc>
                   <w xml:id="d1e5407">cha</w>
                   <w xml:id="d1e5410">ntatuku</w>
-                  <w xml:id="d1e5412">chi</w>
-                  <w xml:id="d1e5414">un</w>
+                  <w xml:id="d1e5412" cert="medium" orig="chi">nchii</w>
                   <w xml:id="d1e5416">ku'un</w>
                   <w xml:id="d1e5418">yu</w>
                   <w xml:id="d1e5420">katsa'an</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5386" xml:lang="en"/>   
+                  <span target="#d1e5386" xml:lang="en">When I arrived, I got onto the train and I looked for somewhere I could go to eat.</span>   
                   <span target="#d1e5386" xml:lang="es"/>
               
                   <span target="#d1e5387" xml:lang="en"/>
                   <span target="#d1e5387" xml:lang="es"/>
+               
                   <span target="#d1e5389" xml:lang="en"/>                 
                   <span target="#d1e5389" xml:lang="es"/>
+                  
                   <span target="#d1e5391" xml:lang="en"/>                  
                   <span target="#d1e5391" xml:lang="es"/>
+                  
                   <span target="#d1e5393" xml:lang="en"/>                  
                   <span target="#d1e5393" xml:lang="es"/>
+                  
                   <span target="#d1e5395" xml:lang="en"/>                  
                   <span target="#d1e5395" xml:lang="es"/>
-                  <span target="#d1e5397" xml:lang="en"/>
                   
+                  <span target="#d1e5397" xml:lang="en"/>         
                   <span target="#d1e5397" xml:lang="es"/>
-                  <span target="#d1e5399" xml:lang="en"/>
                   
+                  <span target="#d1e5399" xml:lang="en"/> 
                   <span target="#d1e5399" xml:lang="es"/>
-                  <span target="#d1e5401" xml:lang="en"/>
                   
+                  <span target="#d1e5401" xml:lang="en"/>            
                   <span target="#d1e5401" xml:lang="es"/>
-                  <span target="#d1e5403" xml:lang="en"/>
                   
+                  <span target="#d1e5403" xml:lang="en"/>           
                   <span target="#d1e5403" xml:lang="es"/>
-                  <span target="#d1e5407" xml:lang="en"/>
-                  
+                  <span target="#d1e5407" xml:lang="en"/>            
                   <span target="#d1e5407" xml:lang="es"/>
-                  <span target="#d1e5410" xml:lang="en"/>
-                  
+                  <span target="#d1e5410" xml:lang="en"/>               
                   <span target="#d1e5410" xml:lang="es"/>
-                  <span target="#d1e5412" xml:lang="en"/>
-                  
+                  <span target="#d1e5412" xml:lang="en"/>                 
                   <span target="#d1e5412" xml:lang="es"/>
-                  <span target="#d1e5414" xml:lang="en"/>
-                  
+                  <span target="#d1e5414" xml:lang="en"/>                  
                   <span target="#d1e5414" xml:lang="es"/>
-                  <span target="#d1e5416" xml:lang="en"/>
-                  
+                  <span target="#d1e5416" xml:lang="en"/>                  
                   <span target="#d1e5416" xml:lang="es"/>
-                  <span target="#d1e5418" xml:lang="en"/>
-                  
+                  <span target="#d1e5418" xml:lang="en"/>                  
                   <span target="#d1e5418" xml:lang="es"/>
-                  <span target="#d1e5420" xml:lang="en"/>
-                  
+                  <span target="#d1e5420" xml:lang="en"/>                 
                   <span target="#d1e5420" xml:lang="es"/>
                </spanGrp>
                
@@ -5361,25 +5322,24 @@
                   <w xml:id="d1e5465">lulu</w>
                   <w xml:id="d1e5467">tsa'an</w>
                   <w xml:id="d1e5469">yu</w>
-                  <w xml:id="d1e5471">in</w>
-                  <w xml:id="d1e5473">un</w>
-                  <w xml:id="d1e5475">yav'i</w>
-                  <w xml:id="d1e5477">un</w>
+                  <w xml:id="d1e5473">nuu</w>
+                  <w xml:id="d1e5475">ya'vi</w>
+                  <w xml:id="d1e5477">nuu</w>
                   <w xml:id="d1e5479">xiko</w>
                   <w xml:id="d1e5481">kui</w>
                   <w xml:id="d1e5483">nchai</w>
                   <pc>,</pc>
                   <w xml:id="d1e5488">ra</w>
-                  <w xml:id="d1e5490">takuan</w>
+                  <w xml:id="d1e5490" orig="takuan">takuaan</w>
                   <w xml:id="d1e5492">in</w>
                   <w xml:id="d1e5494">ko'o</w>
                   <w xml:id="d1e5496">ña</w>
                   <w xml:id="d1e5498">camaron</w>
-                  <w xml:id="d1e5500">ntsitsan</w>
+                  <w xml:id="d1e5500" orig="ntsitsa">ntsitsa'an</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5462" xml:lang="en"/>
+                  <span target="#d1e5462" xml:lang="en">I walked a little bit and I went to a market where they sold food, then I bought a plate of shrimp to eat.</span>
                   <span target="#d1e5462" xml:lang="es"/>
                
                   <span target="#d1e5463" xml:lang="en"/>
@@ -5424,31 +5384,31 @@
                   <span target="#d1e5492" xml:lang="en"/>
                   <span target="#d1e5492" xml:lang="es"/>
                   
-                  <span target="#d1e5494" xml:lang="en"/>
-                  <span target="#d1e5494" xml:lang="es"/>
+                  <span target="#d1e5494" xml:lang="en">plate</span>
+                  <span target="#d1e5494" xml:lang="es">plato</span>
                   
-                  <span target="#d1e5496" xml:lang="en"/>
-                  <span target="#d1e5496" xml:lang="es"/>
+                  <span target="#d1e5494 #d1e5496" xml:lang="en">plate of</span>
+                  <span target="#d1e5494 #d1e5496" xml:lang="es">plato de</span>
                   
-                  <span target="#d1e5498" xml:lang="en"/>
-                  <span target="#d1e5498" xml:lang="es"/>
+                  <span target="#d1e5498" xml:lang="en">shirmp</span>
+                  <span target="#d1e5498" xml:lang="es">camarones</span>
                   
                   <span target="#d1e5500" xml:lang="en"/>
                   <span target="#d1e5500" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e5546" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e5547">Takuan</w>
+                  <w xml:id="d1e5547" orig="Takuan">Takuaan</w>
                   <w xml:id="d1e5549">in</w>
                   <w xml:id="d1e5551">sangría</w>
                   <w xml:id="d1e5553">tsi'i</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5546" xml:lang="en"/>
+                  <span target="#d1e5546" xml:lang="en">I bought a sangría to drink</span>
                   <span target="#d1e5546" xml:lang="es"/>
               
-                  <span target="#d1e5547" xml:lang="en"/>
+                  <span target="#d1e5547" xml:lang="en">I bought</span>
                   <span target="#d1e5547" xml:lang="es"/>
                   
                   <span target="#d1e5549" xml:lang="en"/>
@@ -5457,7 +5417,7 @@
                   <span target="#d1e5551" xml:lang="en"/>
                   <span target="#d1e5551" xml:lang="es"/>
                   
-                  <span target="#d1e5553" xml:lang="en"/>
+                  <span target="#d1e5553" xml:lang="en" cert="medium">I drink</span>
                   <span target="#d1e5553" xml:lang="es"/>
                </spanGrp>
                
@@ -5478,20 +5438,20 @@
                   <span target="#d1e5568" xml:lang="en">When I finished eating, I went back to the hotel and relaxed a little bit.</span>
                   <span target="#d1e5568" xml:lang="es"/>
                   
-                  <span target="#d1e5569" xml:lang="en"/>
+                  <span target="#d1e5569" xml:lang="en">when</span>
                   <span target="#d1e5569" xml:lang="es"/>
                  
-                  <span target="#d1e5571" xml:lang="en"/>
-                  <span target="#d1e5571" xml:lang="es"/>
+                  <span target="#d1e5571 #d1e5573" xml:lang="en">I finished eating</span>
+                  <span target="#d1e5571 #d1e5573" xml:lang="es">acabé a comer</span>      
                   
-                  <span target="#d1e5573" xml:lang="en"/>
-                  <span target="#d1e5573" xml:lang="es"/>
-                  
-                  <span target="#d1e5575" xml:lang="en"/>
+                  <span target="#d1e5575" xml:lang="en">I went into</span>
                   <span target="#d1e5575" xml:lang="es"/>
                   
-                  <span target="#d1e5577" xml:lang="en"/>
+                  <span target="#d1e5577" xml:lang="en">into</span>
                   <span target="#d1e5577" xml:lang="es"/>
+                  
+                  <span target="#d1e5577 #d1e5579" xml:lang="en">into the hotel</span>
+                  <span target="#d1e5577 #d1e5579" xml:lang="es"/>
                   
                   <span target="#d1e5579" xml:lang="en"/>
                   <span target="#d1e5579" xml:lang="es"/>
@@ -5524,11 +5484,11 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5624" xml:lang="en"/>
+                  <span target="#d1e5624" xml:lang="en">I watched TV and drank water for about two hours.</span>
                   <span target="#d1e5624" xml:lang="es"/>
                   
-                  <span target="#d1e5625" xml:lang="en"/>
-                  <span target="#d1e5625" xml:lang="es"/>
+                  <span target="#d1e5625" xml:lang="en">I watched</span>
+                  <span target="#d1e5625" xml:lang="es">ví la tele</span>
                   
                   <span target="#d1e5627" xml:lang="en"/>
                   <span target="#d1e5627" xml:lang="es"/>
@@ -5553,8 +5513,8 @@
                </spanGrp>
                
                <seg xml:id="d1e5663" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e5664">Tsa</w>
-                  <w xml:id="d1e5666">ña</w>
+                  <w xml:id="d1e5664" orig="Tsa">Tsa'a</w>
+                  <w xml:id="d1e5666" orig="ña">ñaa</w>
                   <w xml:id="d1e5668">sa'an</w>
                   <w xml:id="d1e5670">Alemania</w>
                   <w xml:id="d1e5672">kui</w>
@@ -5577,11 +5537,8 @@
                   <span target="#d1e5666" xml:lang="en"/>
                   <span target="#d1e5666" xml:lang="es"/>
                   
-                  <span target="#d1e5668" xml:lang="en"/>
-                  <span target="#d1e5668" xml:lang="es"/>
-                  
-                  <span target="#d1e5670" xml:lang="en"/>
-                  <span target="#d1e5670" xml:lang="es"/>
+                  <span target="#d1e5668 #d1e5670" xml:lang="en">german</span>
+                  <span target="#d1e5668 #d1e5670" xml:lang="es">alemán</span>          
                   
                   <span target="#d1e5672" xml:lang="en"/>
                   <span target="#d1e5672" xml:lang="es"/>
@@ -5604,17 +5561,14 @@
                   <w xml:id="d1e5726">ta</w>
                   <w xml:id="d1e5728">kua</w>
                   <w xml:id="d1e5730" orig="ka" cert="medium">kaa</w>
-                  <w xml:id="d1e5732a">
-                     <w xml:id="d1e5732">utsi</w>
-                     <w xml:id="d1e5734">in</w>
-                  </w>
+                  <w xml:id="d1e5732a" orig="utsi in">utsi-in</w>
                   <w xml:id="d1e5740">ra</w>
                   <w xml:id="d1e5742">nikixi</w>
                   <w xml:id="d1e5747">yu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5723" xml:lang="en"/>
+                  <span target="#d1e5723" xml:lang="en">Then at around eleven I went to sleep.</span>
                   <span target="#d1e5723" xml:lang="es"/>
                   
                   <span target="#d1e5724" xml:lang="en"/>
@@ -5629,15 +5583,9 @@
                   <span target="#d1e5730" xml:lang="en"/>
                   <span target="#d1e5730" xml:lang="es"/>
                   
-                  <span target="#d1e5732" xml:lang="en"/>
-                  <span target="#d1e5732" xml:lang="es"/>
-                  
-                  <span target="#d1e5734" xml:lang="en"/>
-                  <span target="#d1e5734" xml:lang="es"/>
-                  
-                  <span target="#d1e5737" xml:lang="en"/>
-                  <span target="#d1e5737" xml:lang="es"/>
-                  
+                  <span target="#d1e5732a" xml:lang="en">eleven</span>
+                  <span target="#d1e5732a" xml:lang="es">onze</span>
+                 
                   <span target="#d1e5740" xml:lang="en"/>
                   <span target="#d1e5740" xml:lang="es"/>
                   
@@ -5659,22 +5607,9 @@
                <seg xml:id="d1e5783" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e5784">Taku</w>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e5783" xml:lang="en"/>
-                  <span target="#d1e5783" xml:lang="es"/>
-                  <span target="#d1e5784" xml:lang="en"/>
-                  <span target="#d1e5784" xml:lang="es"/>
-               </spanGrp>
                /<seg xml:id="d1e5790" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e5791">tukuni</w>
-               </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e5790" xml:lang="en"/>
-                  <span target="#d1e5790" xml:lang="es"/>
-                  <span target="#d1e5791" xml:lang="en"/>
-                  <span target="#d1e5791" xml:lang="es"/>
-               </spanGrp>
-               
+               </seg> 
             </salute>
             <p>
                <seg xml:id="d1e5797" xml:lang="mix" resp="#TS" type="S">
@@ -5702,28 +5637,16 @@
                </spanGrp>
                
                <seg xml:id="d1e5819" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e5820">Natakani</w>
+                  <w xml:id="d1e5820">Nantakani</w>
                   <w xml:id="d1e5824">nchi</w>
                   <w xml:id="d1e5826">sa'a</w>
                   <w xml:id="d1e5828">vichi</w>
-                  <w xml:id="d1e5846">ña</w>
-                  <w xml:id="d1e5848">ntakoo</w>
-                  <w xml:id="d1e5850">kua</w>
-                  <w xml:id="d1e5852">ka</w>
-                  <w xml:id="d1e5854">utsa</w>
-                  <w xml:id="d1e5856">ra</w>
-                  <w xml:id="d1e5858">ntsichi</w>
-                  <pc>,</pc>
-                  <w xml:id="d1e5862">ntakacha</w>
-                  <w xml:id="d1e5864">yu'u</w>
-                  <pc>,</pc>
-                  <w xml:id="d1e5869">ntakiin</w>
-                  <w xml:id="d1e5871">sa'ma</w>
-                  <pc>.</pc>
                   <pc>.</pc>
                </seg>
+
+
                <spanGrp type="translation">
-                  <span target="#d1e5819" xml:lang="en"/>
+                  <span target="#d1e5819" xml:lang="en">I'm going to tell what I did today. (?) I got up around seven o'clock and I took a shower, brushed my teeth, and got dressed.</span>
                   <span target="#d1e5819" xml:lang="es"/>
                  
                   <span target="#d1e5820" xml:lang="en"/>
@@ -5740,6 +5663,28 @@
                   
                   <span target="#d1e5828" xml:lang="en"/>
                   <span target="#d1e5828" xml:lang="es"/>
+                       
+               </spanGrp>
+               <seg xml:id="d1e5821" type="S" resp="#TS">
+                  <w xml:id="d1e5846" cert="low">Ña</w>
+                  <w xml:id="d1e5848">ntakoo</w>
+                  <w xml:id="d1e5850">kua</w>
+                  <w xml:id="d1e5852">ka</w>
+                  <w xml:id="d1e5854">utsa</w>
+                  <w xml:id="d1e5856">ra</w>
+                  <w xml:id="d1e5858">ntsichi</w>
+                  <pc>,</pc>
+                  <w xml:id="d1e5862">ntakacha</w>
+                  <w xml:id="d1e5864">yu'u</w>
+                  <pc>,</pc>
+                  <w xml:id="d1e5869" cert="medium">ntaki'in</w>
+                  <w xml:id="d1e5871">sa'ma</w>
+                  <pc>.</pc>
+                  <pc>.</pc>
+               </seg>
+               <spanGrp type="translation">
+                  <span target="#d1e5819" xml:lang="en">And so I got up around seven o'clock and I took a shower, brushed my teeth, and got dressed.</span>
+                  <span target="#d1e5819" xml:lang="es"/>
                   
                   <span target="#d1e5846" xml:lang="en"/>
                   <span target="#d1e5846" xml:lang="es"/>
@@ -5774,8 +5719,6 @@
                   <span target="#d1e5871" xml:lang="en"/>
                   <span target="#d1e5871" xml:lang="es"/>
                </spanGrp>
-
-
                
                <seg xml:id="d1e5905" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e5906">Cha</w>
@@ -5822,7 +5765,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e5935" xml:lang="en"/>
+                  <span target="#d1e5935" xml:lang="en">When I finished eating I hit the road and I went to where I was going to meet with Jack for our work.</span>
                   <span target="#d1e5935" xml:lang="es"/>
                  
                   <span target="#d1e5936" xml:lang="en"/>
@@ -5883,7 +5826,8 @@
                <seg xml:id="d1e6019" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e6020">Ichi</w>
                   <w xml:id="d1e6022">yo'o</w>
-                  <w xml:id="d1e6024">kuu</w>
+                  <w xml:id="d1e6024">kua'an</w>
+                  <w xml:id="d1e6025">yu</w>
                   <w xml:id="d1e6026">ña</w>
                   <w xml:id="d1e6028">kaa</w>
                   <w xml:id="d1e6030">nuu</w>
@@ -5891,16 +5835,24 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6019" xml:lang="en"/>
+                  <span target="#d1e6019" xml:lang="en" cert="low">I went on the way to get on the train.</span>
                   <span target="#d1e6019" xml:lang="es"/>
+                  
                   <span target="#d1e6020" xml:lang="en"/>
                   <span target="#d1e6020" xml:lang="es"/>
+                  
                   <span target="#d1e6022" xml:lang="en"/>
                   <span target="#d1e6022" xml:lang="es"/>
-                  <span target="#d1e6024" xml:lang="en"/>
-                  <span target="#d1e6024" xml:lang="es"/>
+                  
+                  <span target="#d1e6024 #d1e6025" xml:lang="en"/>
+                  <span target="#d1e6024 #d1e6025" xml:lang="es"/>
+                  
+                  <span target="#d1e6025" xml:lang="en"/>
+                  <span target="#d1e6025" xml:lang="es"/>
+                  
                   <span target="#d1e6026" xml:lang="en"/>
                   <span target="#d1e6026" xml:lang="es"/>
+                  
                   <span target="#d1e6028" xml:lang="en"/>
                   <span target="#d1e6028" xml:lang="es"/>
                   <span target="#d1e6030" xml:lang="en"/>
@@ -5920,7 +5872,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6054" xml:lang="en">I got onto the train and I went to work</span>
+                  <span target="#d1e6054" xml:lang="en">I got onto the train and I went to work.</span>
                   <span target="#d1e6054" xml:lang="es"/>
                
                   <span target="#d1e6055" xml:lang="en"/>
@@ -6015,7 +5967,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6148" xml:lang="en">Then we met and we went with him to the office</span>
+                  <span target="#d1e6148" xml:lang="en">Then we met and we went to his office.</span>
                   <span target="#d1e6148" xml:lang="es"/>
                   
                   <span target="#d1e6149" xml:lang="en"/>
@@ -6054,13 +6006,13 @@
                   <w xml:id="d1e6199">nitakuan</w>
                   <w xml:id="d1e6203">kue</w>
                   <w xml:id="d1e6205">santuich</w>
-                  <w xml:id="d1e6207" cert="low">a</w>
-                  <w xml:id="d1e6209" cert="low">nchi</w>
+                  <w xml:id="d1e6207">a</w>
+                  <w xml:id="d1e6209">nchi</w>
                   <w xml:id="d1e6211">nchai</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6190" xml:lang="en" cert="medium">This day we did not buy sandwiches to eat.</span>
+                  <span target="#d1e6190" xml:lang="en">This day we did not buy sandwiches or any food.</span>
                   <span target="#d1e6190" xml:lang="es"/>
                   
                   <span target="#d1e6191" xml:lang="en"/>
@@ -6087,14 +6039,14 @@
                   <span target="#d1e6205" xml:lang="en"/>
                   <span target="#d1e6205" xml:lang="es"/>
                   
-                  <span target="#d1e6207" xml:lang="en"/>
-                  <span target="#d1e6207" xml:lang="es"/>
+                  <span target="#d1e6207" xml:lang="en">or</span>
+                  <span target="#d1e6207" xml:lang="es">o</span>
                   
-                  <span target="#d1e6209" xml:lang="en"/>
-                  <span target="#d1e6209" xml:lang="es"/>
+                  <span target="#d1e6209" xml:lang="en">any</span>
+                  <span target="#d1e6209" xml:lang="es">ningún</span>
                   
-                  <span target="#d1e6211" xml:lang="en"/>
-                  <span target="#d1e6211" xml:lang="es"/>
+                  <span target="#d1e6211" xml:lang="en">food</span>
+                  <span target="#d1e6211" xml:lang="es">comida</span>
                </spanGrp>
                
                <seg xml:id="d1e6242" xml:lang="mix" resp="#TS" type="S">
@@ -6105,7 +6057,7 @@
                   <w xml:id="d1e6255" orig="ka" cert="medium">kaa</w>
                   <w xml:id="d1e6257">iin</w> 
                   <w xml:id="d1e6264">ra</w>
-                  <w xml:id="d1e6266">nikitsaa</w>
+                  <w xml:id="d1e6266" orig="nikitsaa">nikitsáá</w>
                   <w xml:id="d1e6268">kue</w>
                   <w xml:id="d1e6270">sachuun</w>
                   <w xml:id="d1e6274">kue</w>
@@ -6237,7 +6189,7 @@
                   <w xml:id="d1e6406">yu</w>
                   <w xml:id="d1e6408">chikuii</w>
                   <w xml:id="d1e6410">sara</w>
-                  <w xml:id="d1e6412">ntsaan</w>
+                  <w xml:id="d1e6412" cert="medium">ntsaan</w><!-- why not "ntsaan kue"? -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
@@ -6407,40 +6359,49 @@
             <p>
                <seg xml:id="d1e6598" xml:lang="mix" resp="#TS" type="S" cert="low">
                   <w xml:id="d1e6599">Cha</w>
-                  <w xml:id="d1e6601">vitchi</w>
+                  <w xml:id="d1e6601">vichi</w>
                   <w xml:id="d1e6603">ra</w>
                   <w xml:id="d1e6605">ma</w>
-                  <w xml:id="d1e6607" orig="ni kaa">nikaa</w>
+                  <w xml:id="d1e6607" orig="ni kaa">nikaa</w><!-- note: kunkaa = I will get down -->
                   <w xml:id="d1e6611">nuu</w>
                   <w xml:id="d1e6613">treen</w>
                   <w xml:id="d1e6615">ka</w>
-                  <w xml:id="d1e6617">ntitsi</w><!-- [ntítsí] -->
+                  <!-- [ntítsí] -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6598" xml:lang="en"/>
+                  <span target="#d1e6598" xml:lang="en" cert="medium">And today I didn't get on the train</span>
                   <span target="#d1e6598" xml:lang="es"/>
                   
                   <span target="#d1e6599" xml:lang="en"/>
                   <span target="#d1e6599" xml:lang="es"/>
+                  
                   <span target="#d1e6601" xml:lang="en"/>
                   <span target="#d1e6601" xml:lang="es"/>
+                  
                   <span target="#d1e6603" xml:lang="en"/>
                   <span target="#d1e6603" xml:lang="es"/>
+                  
                   <span target="#d1e6605" xml:lang="en"/>
                   <span target="#d1e6605" xml:lang="es"/>
+                  
                   <span target="#d1e6607" xml:lang="en"/>
                   <span target="#d1e6607" xml:lang="es"/>
+                  
                   <span target="#d1e6609" xml:lang="en"/>
                   <span target="#d1e6609" xml:lang="es"/>
+                  
                   <span target="#d1e6611" xml:lang="en"/>
                   <span target="#d1e6611" xml:lang="es"/>
+                  
                   <span target="#d1e6613" xml:lang="en"/>
                   <span target="#d1e6613" xml:lang="es"/>
+                  
                   <span target="#d1e6615" xml:lang="en"/>
                   <span target="#d1e6615" xml:lang="es"/>
-                  <span target="#d1e6617" xml:lang="en"/>
-                  <span target="#d1e6617" xml:lang="es"/>
+                  
+                  <span target="#d1e6617" xml:lang="en" cert="low">I came back</span><!-- "to come back"?  or "I came back"?-->
+                  <span target="#d1e6617" xml:lang="es" cert="low">volví</span>
                </spanGrp>
                
                <seg xml:id="d1e6644" xml:lang="mix" resp="#TS" type="S">
@@ -6456,7 +6417,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6644" xml:lang="en">Now I hit the road and am walking by foot to go back.</span>
+                  <span target="#d1e6644" xml:lang="en">Today I hit the road and walked back by foot.</span>
                   <span target="#d1e6644" xml:lang="es"/>
                   
                   <span target="#d1e6645" xml:lang="en"/>
@@ -6474,17 +6435,16 @@
                   <span target="#d1e6653" xml:lang="en"/>
                   <span target="#d1e6653" xml:lang="es"/>
                   
-                  <span target="#d1e6655" xml:lang="en"/>
-                  <span target="#d1e6655" xml:lang="es"/>
+                  <span target="#d1e6655 #d1e6657" xml:lang="en">I walked by foot</span>
+                  <span target="#d1e6655 #d1e6657" xml:lang="es">fuí a pie</span>
                   
-                  <span target="#d1e6657" xml:lang="en"/>
-                  <span target="#d1e6657" xml:lang="es"/>
+                  <span target="#d1e6657" xml:lang="en">foot</span>
+                  <span target="#d1e6657" xml:lang="es">pie</span>
                   
-                  <span target="#d1e6659" xml:lang="en"/>
-                  <span target="#d1e6659" xml:lang="es"/>
+                  <span target="#d1e6659" xml:lang="en">I returned</span>
+                  <span target="#d1e6659 #d1e6661" xml:lang="es" cert="medium">volví</span>
                   
-                  <span target="#d1e6661" xml:lang="en"/>
-                  <span target="#d1e6661" xml:lang="es"/>
+                  <span target="#d1e6661" xml:lang="en">I went back</span>
                </spanGrp>
                
                <seg xml:id="d1e6686" xml:lang="mix" resp="#TS" type="S">
@@ -6493,7 +6453,7 @@
                   <w xml:id="d1e6691">ntsika</w>
                   <w xml:id="d1e6693">ra</w>
                   <w xml:id="d1e6695">niya'a</w>
-                  <w xml:id="d1e6699" cert="high">nuu</w>
+                  <w xml:id="d1e6699" cert="medium">nuu</w><!-- Tisu had "kuu" -->
                   <w xml:id="d1e6701">inkaa</w>
                   <w xml:id="d1e6703">ve'e</w>
                   <w xml:id="d1e6705">ñu'un</w>
@@ -6506,7 +6466,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6686" xml:lang="en">I walked a lot and I approached the front of the church that I saw on Saturday.</span>
+                  <span target="#d1e6686" xml:lang="en">I walked a lot and I passed by where the church that I saw on Saturday was.</span>
                   <span target="#d1e6686" xml:lang="es"/>
                   
                   <span target="#d1e6687" xml:lang="en"/>
@@ -6556,7 +6516,7 @@
                   <w xml:id="d1e6767">inkaa</w>
                   <w xml:id="d1e6769">in</w>
                   <w xml:id="d1e6771">tienda</w>
-                  <w xml:id="d1e6773">takuan</w>
+                  <w xml:id="d1e6773">takuaan</w>
                   <w xml:id="d1e6775">in</w>
                   <w xml:id="d1e6777">bolsa</w>
                   <w xml:id="d1e6779">ña</w>
@@ -6566,10 +6526,10 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6758" xml:lang="en">I went back to a store to buy a sack that I would take home.</span>
+                  <span target="#d1e6758" xml:lang="en">I passed by a store again to buy a sack that I would take home.</span>
                   <span target="#d1e6758" xml:lang="es"/>
                   
-                  <span target="#d1e6759" xml:lang="en" cert="low">I approached</span>
+                  <span target="#d1e6759" xml:lang="en" cert="low">I passed by again</span>
                   <span target="#d1e6759" xml:lang="es"/>
                   
                   <span target="#d1e6763" xml:lang="en">again</span>
@@ -6624,7 +6584,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6826" xml:lang="en">Then I left again and walked, and ? it was getting late.</span>
+                  <span target="#d1e6826" xml:lang="en">Then I left again and walked, and came back it was getting late.</span>
                   <span target="#d1e6826" xml:lang="es"/>
                   
                   <span target="#d1e6827" xml:lang="en"/>
@@ -6645,14 +6605,11 @@
                   <span target="#d1e6839" xml:lang="en"/>
                   <span target="#d1e6839" xml:lang="es"/>
                   
-                  <span target="#d1e6841" xml:lang="en"/>
-                  <span target="#d1e6841" xml:lang="es"/>
+                  <span target="#d1e6841" xml:lang="en">I came back</span>
+                  <span target="#d1e6841" xml:lang="es">volví</span>
                   
-                  <span target="#d1e6843" xml:lang="en"/>
+                  <span target="#d1e6843" xml:lang="en">it was getting late</span>
                   <span target="#d1e6843" xml:lang="es"/>
-                  
-                  <span target="#d1e6845" xml:lang="en">it was getting late</span>
-                  <span target="#d1e6845" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e6872" xml:lang="mix" resp="#TS" type="S">
@@ -6685,13 +6642,13 @@
                   <w xml:id="d1e6900">ri</w>
                   <w xml:id="d1e6902">nikuni</w>
                   <w xml:id="d1e6906">yu</w>
-                  <w xml:id="d1e6908">takuan</w>
+                  <w xml:id="d1e6908" orig="takuan">takuaan</w>
                   <w xml:id="d1e6910">nchai</w>
                   <w xml:id="d1e6912">nuu</w>
                   <w xml:id="d1e6914">ya'vi</w>
                   <w xml:id="d1e6916">nuu</w>
-                  <w xml:id="d1e6919">ntsitsa'a</w>
-                  <w xml:id="d1e6921">inkaa</w>
+                  <w xml:id="d1e6919">ntsitsa'an</w>
+                  <w xml:id="d1e6921" orig="inkaa">inka</w>
                   <w xml:id="d1e6923">cha'ncha</w>
                   <pc>,</pc>
                   <w xml:id="d1e6927">nuu</w>
@@ -6700,7 +6657,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e6895" xml:lang="en">I walked back because I wanted to buy food at the store where I ate the other day, where I bought shrimp.</span>
+                  <span target="#d1e6895" xml:lang="en">I walked back because I wanted to buy food at the market where I ate the other day, where I bought shrimp.</span>
                   <span target="#d1e6895" xml:lang="es"/>
                   
                   <span target="#d1e6896" xml:lang="en"/>
@@ -6712,14 +6669,8 @@
                   <span target="#d1e6900" xml:lang="en"/>
                   <span target="#d1e6900" xml:lang="es"/>
                   
-                  <span target="#d1e6902" xml:lang="en"/>
-                  <span target="#d1e6902" xml:lang="es"/>
-                  
-                  <span target="#d1e6904" xml:lang="en"/>
-                  <span target="#d1e6904" xml:lang="es"/>
-                  
-                  <span target="#d1e6906" xml:lang="en"/>
-                  <span target="#d1e6906" xml:lang="es"/>
+                  <span target="#d1e6902 #d1e6906" xml:lang="en">I wanted</span>
+                  <span target="#d1e6902 #d1e6906" xml:lang="es">quería</span>
                   
                   <span target="#d1e6908" xml:lang="en"/>
                   <span target="#d1e6908" xml:lang="es"/>
@@ -6727,14 +6678,15 @@
                   <span target="#d1e6910" xml:lang="en"/>
                   <span target="#d1e6910" xml:lang="es"/>
                   
-                  <span target="#d1e6912" xml:lang="en"/>
-                  <span target="#d1e6912" xml:lang="es"/>
+                  <span target="#d1e6912 #d1e6914" xml:lang="en">at the market</span>
+                  <span target="#d1e6912 #d1e6914" xml:lang="es">al mercado</span>
                   
-                  <span target="#d1e6914" xml:lang="en"/>
-                  <span target="#d1e6914" xml:lang="es"/>
+                  <span target="#d1e6914" xml:lang="en">market</span>
+                  <!-- market? -->
+                  <span target="#d1e6914" xml:lang="es">mercado</span>
                   
-                  <span target="#d1e6916" xml:lang="en"/>
-                  <span target="#d1e6916" xml:lang="es"/>
+                  <span target="#d1e6916" xml:lang="en">where</span>
+                  <span target="#d1e6916" xml:lang="es">donde</span>
                   
                   <span target="#d1e6919" xml:lang="en"/>
                   <span target="#d1e6919" xml:lang="es"/>
@@ -6818,39 +6770,35 @@
                </spanGrp>
                
                <seg xml:id="d1e7041" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e7042">Tsa'a</w>
-                  <w xml:id="d1e7044">ña</w>
-                  <w xml:id="d1e7046">iin</w>
-                  <w xml:id="d1e7048">chikuii</w>
-                  <w xml:id="d1e7050">cha</w>
-                  <w xml:id="d1e7052">nchaka</w>
-                  <w xml:id="d1e7054">ntsi'i</w>
+                  <w xml:id="d1e7042">Ntsatsi</w>
+                  <w xml:id="d1e7044">in</w>
+                  <w xml:id="d1e7045">chaka</w>
+                  <w xml:id="d1e7046">cha</w>
+                  <w xml:id="d1e7048">ntsi'i</w>
+                  <w xml:id="d1e7050">chikuii</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7041" xml:lang="en" cert="low"></span>
+                  <span target="#d1e7041" xml:lang="en">I ate a fish and drank water.</span>
                   <span target="#d1e7041" xml:lang="es"/>
                   
-                  <span target="#d1e7042" xml:lang="en"/>
-                  <span target="#d1e7042" xml:lang="es"/>
+                  <span target="#d1e7042" xml:lang="en">I ate</span>
+                  <span target="#d1e7042" xml:lang="es">comí</span>
                   
-                  <span target="#d1e7044" xml:lang="en"/>
-                  <span target="#d1e7044" xml:lang="es"/>
+                  <span target="#d1e7044" xml:lang="en">a</span>
+                  <span target="#d1e7044" xml:lang="es">un</span>
                   
-                  <span target="#d1e7046" xml:lang="en">there was</span>
-                  <span target="#d1e7046" xml:lang="es">había</span>
+                  <span target="#d1e7045" xml:lang="en">fish</span>
+                  <span target="#d1e7045" xml:lang="es">pez</span>
                   
-                  <span target="#d1e7048" xml:lang="en">water</span>
-                  <span target="#d1e7048" xml:lang="es">agua</span>
+                  <span target="#d1e7046" xml:lang="en">and</span>
+                  <span target="#d1e7046" xml:lang="es">y</span>
                   
-                  <span target="#d1e7050" xml:lang="en"/>
-                  <span target="#d1e7050" xml:lang="es"/>
+                  <span target="#d1e7048" xml:lang="en">I drank</span>
+                  <span target="#d1e7048" xml:lang="es">bebí</span>
                   
-                  <span target="#d1e7052" xml:lang="en"/>
-                  <span target="#d1e7052" xml:lang="es"/>
-                  
-                  <span target="#d1e7054" xml:lang="en">I drank</span>
-                  <span target="#d1e7054" xml:lang="es">bebí</span>
+                  <span target="#d1e7050" xml:lang="en">water</span>
+                  <span target="#d1e7050" xml:lang="es">agua</span>
                </spanGrp>
                
                <seg xml:id="d1e7075" xml:lang="mix" resp="#TS" type="S">
@@ -6860,7 +6808,7 @@
                   <w xml:id="d1e7082">ra</w>
                   <w xml:id="d1e7084">tsika</w>
                   <w xml:id="d1e7088">yu</w>
-                  <w xml:id="d1e7090">ika</w><!-- it's not clear where you're talking about -->
+                  <w xml:id="d1e7090" cert="low">ika</w><!-- it's not clear where you're talking about -->
                   <w xml:id="d1e7092">kua</w>
                   <w xml:id="d1e7094">iin</w>
                   <w xml:id="d1e7096">hora</w>
@@ -6873,7 +6821,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7075" xml:lang="en">When I finished eating I walked (there) at around nine o'clock, I watched some people were doing.</span>
+                  <span target="#d1e7075" xml:lang="en">When I finished eating I walked (there) at around nine o'clock, I watched what  people were doing.</span>
                   <span target="#d1e7075" xml:lang="es"></span>
                   
                   <span target="#d1e7076" xml:lang="en"/>
@@ -6937,7 +6885,7 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7152" xml:lang="en">At about nine o'clock I went into the hotel and I relaxed a while.</span>
+                  <span target="#d1e7152" xml:lang="en">At about nine o'clock I went into the hotel and I relaxed a little while.</span>
                   <span target="#d1e7152" xml:lang="es"/>
                   
                   <span target="#d1e7153" xml:lang="en"/>
@@ -6985,9 +6933,9 @@
                   <w xml:id="d1e7227">ntaka'an</w>
                   <w xml:id="d1e7228">yu</w>
                   <w xml:id="d1e7229">nchii</w>
-                  <w xml:id="d1e7231">tsika</w>
-                  <w xml:id="d1e7232">yo'o</w>
-                  <w xml:id="d1e7234">tsika</w>
+                  <w xml:id="d1e7231">tsikaa</w>
+                  <w xml:id="d1e7232">to'o</w>
+                  <w xml:id="d1e7234">yo'o</w>
                   <w xml:id="d1e7235">nui</w>
                   <pc>.</pc>
                </seg>
@@ -7007,8 +6955,8 @@
                   <span target="#d1e7225" xml:lang="en"/>
                   <span target="#d1e7225" xml:lang="es"/>
                   
-                  <span target="#d1e7227" xml:lang="en"/>
-                  <span target="#d1e7227" xml:lang="es"/>
+                  <span target="#d1e7227 #d1e7228" xml:lang="en">I was thinking</span>
+                  <span target="#d1e7227 #d1e7228" xml:lang="es">yo pensaba</span>
                   
                   <span target="#d1e7229" xml:lang="en"/>
                   <span target="#d1e7229" xml:lang="es"/>
@@ -7028,36 +6976,46 @@
                   <w xml:id="d1e7265">ta</w>
                   <w xml:id="d1e7267">kua</w>
                   <w xml:id="d1e7269">ka</w>
-                  <w xml:id="d1e7271">utsi</w>
-                  <w xml:id="d1e7273">iin</w> (<w xml:id="d1e7276">11</w>) <w xml:id="d1e7279">ra</w>
-                  <w xml:id="d1e7281">ni</w>
-                  <w xml:id="d1e7284">kixi</w>
-                  <w xml:id="d1e7286">yuu</w>
+                  <w xml:id="d1e7271" orig="utsi iin">utsi-iin</w>
+                  <w xml:id="d1e7279">ra</w>
+                  <w xml:id="d1e7281" orig="ni kixi">nikixi</w>
+                  <w xml:id="d1e7286" orig="yuu">yu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7262" xml:lang="en"/>
+                  <span target="#d1e7262" xml:lang="en">I went to sleep at around eleven.</span>
                   <span target="#d1e7262" xml:lang="es"/>
+                  
                   <span target="#d1e7263" xml:lang="en"/>
                   <span target="#d1e7263" xml:lang="es"/>
+                 
                   <span target="#d1e7265" xml:lang="en"/>
                   <span target="#d1e7265" xml:lang="es"/>
+                  
                   <span target="#d1e7267" xml:lang="en"/>
                   <span target="#d1e7267" xml:lang="es"/>
+                  
                   <span target="#d1e7269" xml:lang="en"/>
                   <span target="#d1e7269" xml:lang="es"/>
+                  
                   <span target="#d1e7271" xml:lang="en"/>
                   <span target="#d1e7271" xml:lang="es"/>
+                  
                   <span target="#d1e7273" xml:lang="en"/>
                   <span target="#d1e7273" xml:lang="es"/>
+                  
                   <span target="#d1e7276" xml:lang="en"/>
                   <span target="#d1e7276" xml:lang="es"/>
+                  
                   <span target="#d1e7279" xml:lang="en"/>
                   <span target="#d1e7279" xml:lang="es"/>
+                  
                   <span target="#d1e7281" xml:lang="en"/>
                   <span target="#d1e7281" xml:lang="es"/>
+                  
                   <span target="#d1e7284" xml:lang="en"/>
                   <span target="#d1e7284" xml:lang="es"/>
+                  
                   <span target="#d1e7286" xml:lang="en"/>
                   <span target="#d1e7286" xml:lang="es"/>
                </spanGrp>
@@ -7065,60 +7023,51 @@
             </p>
          </div>
          <div>
-            <head>Se'e Savi Kii itsa (7)</head>
+            <head>Se'e Savi Kii utsa (7)</head>
             <salute>
                <seg xml:id="d1e7322" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7323">Taku</w>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e7322" xml:lang="en"/>
-                  <span target="#d1e7322" xml:lang="es"/>
-                  <span target="#d1e7323" xml:lang="en"/>
-                  <span target="#d1e7323" xml:lang="es"/>
-               </spanGrp>
                /<seg xml:id="d1e7329" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7330">tukuni</w>
-               </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e7329" xml:lang="en"/>
-                  <span target="#d1e7329" xml:lang="es"/>
-                  <span target="#d1e7330" xml:lang="en"/>
-                  <span target="#d1e7330" xml:lang="es"/>
-               </spanGrp>
-               
+               </seg>              
             </salute>
             <p>
                <seg xml:id="d1e7336" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7337">Vichi</w>
                   <w xml:id="d1e7339">kui</w>
                   <w xml:id="d1e7341">tsini</w>
-                  <w xml:id="d1e7343">juevish</w>
+                  <w xml:id="d1e7343">juevix</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7336" xml:lang="en"/>
+                  <span target="#d1e7336" xml:lang="en">Now it is Thursday evening.</span>
                   <span target="#d1e7336" xml:lang="es"/>
+                  
                   <span target="#d1e7337" xml:lang="en"/>
                   <span target="#d1e7337" xml:lang="es"/>
+                  
                   <span target="#d1e7339" xml:lang="en"/>
                   <span target="#d1e7339" xml:lang="es"/>
+                  
                   <span target="#d1e7341" xml:lang="en"/>
                   <span target="#d1e7341" xml:lang="es"/>
+                  
                   <span target="#d1e7343" xml:lang="en"/>
                   <span target="#d1e7343" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e7358" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e7359">Na</w>
-                  <w xml:id="d1e7361">takani</w>
+                  <w xml:id="d1e7359" orig="Na takani">Natakani</w>
                   <w xml:id="d1e7363">nchi</w>
-                  <w xml:id="d1e7365">saa'a</w>
+                  <w xml:id="d1e7365">sa'a</w>
                   <w xml:id="d1e7367">vichi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7358" xml:lang="en"/>
+                  <span target="#d1e7358" xml:lang="en">I'm going to tell what I did today.</span>
                   <span target="#d1e7358" xml:lang="es"/>
+                  
                   <span target="#d1e7359" xml:lang="en"/>
                   <span target="#d1e7359" xml:lang="es"/>
                   <span target="#d1e7361" xml:lang="en"/>
@@ -7132,7 +7081,7 @@
                </spanGrp>
                
                <seg xml:id="d1e7384" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e7385">ña</w>
+                  <w xml:id="d1e7385" cert="low">Ña</w>
                   <w xml:id="d1e7387">ntakoo</w>
                   <w xml:id="d1e7389">kua</w>
                   <w xml:id="d1e7391">ka</w>
@@ -7143,13 +7092,14 @@
                   <w xml:id="d1e7401">ntakacha</w>
                   <w xml:id="d1e7403">yu'u</w>
                   <pc>,</pc>
-                  <w xml:id="d1e7408">ntakiin</w>
+                  <w xml:id="d1e7408">ntaki'in</w>
                   <w xml:id="d1e7410">sa'ma</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7384" xml:lang="en"/>
+                  <span target="#d1e7384" xml:lang="en">I got up at around seven and showered, brushed my teeth and got dressed.</span>
                   <span target="#d1e7384" xml:lang="es"/>
+                  
                   <span target="#d1e7385" xml:lang="en"/>
                   <span target="#d1e7385" xml:lang="es"/>
                   <span target="#d1e7387" xml:lang="en"/>
@@ -7180,20 +7130,25 @@
                   <pc>,</pc>
                   <w xml:id="d1e7451">ntsa'an</w>
                   <w xml:id="d1e7453">yu</w>
-                  <w xml:id="d1e7455">tsitsan</w>
+                  <w xml:id="d1e7455" orig="tsitsan">tsitsa'an</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7444" xml:lang="en"/>
+                  <span target="#d1e7444" xml:lang="en">And I came down and went to eat. </span>
                   <span target="#d1e7444" xml:lang="es"/>
+                  
                   <span target="#d1e7445" xml:lang="en"/>
                   <span target="#d1e7445" xml:lang="es"/>
+                 
                   <span target="#d1e7447" xml:lang="en"/>
                   <span target="#d1e7447" xml:lang="es"/>
+                  
                   <span target="#d1e7451" xml:lang="en"/>
                   <span target="#d1e7451" xml:lang="es"/>
+                  
                   <span target="#d1e7453" xml:lang="en"/>
                   <span target="#d1e7453" xml:lang="es"/>
+                  
                   <span target="#d1e7455" xml:lang="en"/>
                   <span target="#d1e7455" xml:lang="es"/>
                </spanGrp>
@@ -7201,16 +7156,14 @@
                <seg xml:id="d1e7474" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7475">Ta</w>
                   <w xml:id="d1e7477">tsinu</w>
-                  <w xml:id="d1e7479">tsitsan</w>
+                  <w xml:id="d1e7479">tsitsa'an</w>
                   <w xml:id="d1e7481">ra</w>
-                  <w xml:id="d1e7483">ni</w>
-                  <w xml:id="d1e7485">ki'i</w>
+                  <w xml:id="d1e7483">niki'in</w>
                   <w xml:id="d1e7487">ichi</w>
                   <w xml:id="d1e7489">ntsa'an</w>
                   <w xml:id="d1e7491">yu</w>
-                  <w xml:id="d1e7493">nu</w>
-                  <w xml:id="d1e7495">ku</w>
-                  <w xml:id="d1e7498">ntakita'an</w>
+                  <w xml:id="d1e7493">nuu</w>
+                  <w xml:id="d1e7495">kuntakita'an</w>
                   <w xml:id="d1e7500">tsi</w>
                   <w xml:id="d1e7502">Jack</w>
                   <w xml:id="d1e7504">ka</w>
@@ -7221,8 +7174,9 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7474" xml:lang="en"/>
+                  <span target="#d1e7474" xml:lang="en">When I was done eating I hit the road and went to where I was going to meet with Jack for our work.</span>
                   <span target="#d1e7474" xml:lang="es"/>
+                  
                   <span target="#d1e7475" xml:lang="en"/>
                   <span target="#d1e7475" xml:lang="es"/>
                   <span target="#d1e7477" xml:lang="en"/>
@@ -7266,8 +7220,7 @@
                   <w xml:id="d1e7561">kii</w>
                   <w xml:id="d1e7563">yo'o</w>
                   <w xml:id="d1e7565">ra</w>
-                  <w xml:id="d1e7567">ni</w>
-                  <w xml:id="d1e7569">ntoo</w>
+                  <w xml:id="d1e7567" orig="ni ntoo">nintoo</w>
                   <w xml:id="d1e7571">kue</w>
                   <w xml:id="d1e7573">ña</w>
                   <w xml:id="d1e7575">ncha</w>
@@ -7279,149 +7232,174 @@
                   <w xml:id="d1e7588">ri</w>
                   <w xml:id="d1e7590">tsa'an</w>
                   <w xml:id="d1e7592">ña</w>
-                  <w xml:id="d1e7594">ku</w>
-                  <w xml:id="d1e7596">ku'un</w>
+                  <w xml:id="d1e7594">kunku'un</w>
                   <w xml:id="d1e7598">yu</w>
-                  <w xml:id="d1e7600">iin</w>
-                  <w xml:id="d1e7602">un</w>
-                  <w xml:id="d1e7605">yav'i</w>
+                  <w xml:id="d1e7600" cert="medium">iin</w><!-- "there is"?  "a"?-->
+                  <w xml:id="d1e7602">nuu</w>
+                  <w xml:id="d1e7605">ya'vi</w>
                   <w xml:id="d1e7607">nani</w>
                   <w xml:id="d1e7609">Nasmarck</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7558" xml:lang="en"/>
+                  <span target="#d1e7558" xml:lang="en">And on this day we agreed that we wouldn't meet until ten thirty for the reason that I was going to go to a market called Nasmark.</span>
                   <span target="#d1e7558" xml:lang="es"/>
+                  
                   <span target="#d1e7559" xml:lang="en"/>
                   <span target="#d1e7559" xml:lang="es"/>
+                 
                   <span target="#d1e7561" xml:lang="en"/>
                   <span target="#d1e7561" xml:lang="es"/>
+                  
                   <span target="#d1e7563" xml:lang="en"/>
                   <span target="#d1e7563" xml:lang="es"/>
+                  
                   <span target="#d1e7565" xml:lang="en"/>
                   <span target="#d1e7565" xml:lang="es"/>
-                  <span target="#d1e7567" xml:lang="en"/>
-                  <span target="#d1e7567" xml:lang="es"/>
-                  <span target="#d1e7569" xml:lang="en"/>
-                  <span target="#d1e7569" xml:lang="es"/>
-                  <span target="#d1e7571" xml:lang="en"/>
-                  <span target="#d1e7571" xml:lang="es"/>
+                  
+                  <span target="#d1e7567 #d1e7571" xml:lang="en">we agreed</span>
+                  <span target="#d1e7567 #d1e7571" xml:lang="es" cert="medium">estuvimos de acuerdo</span>
+                  
+                  <span target="#d1e7571" xml:lang="en">that</span>
+                  <span target="#d1e7571" xml:lang="es">que</span>
+                  
                   <span target="#d1e7573" xml:lang="en"/>
                   <span target="#d1e7573" xml:lang="es"/>
+                  
                   <span target="#d1e7575" xml:lang="en"/>
                   <span target="#d1e7575" xml:lang="es"/>
+                  
                   <span target="#d1e7577" xml:lang="en"/>
                   <span target="#d1e7577" xml:lang="es"/>
+                  
                   <span target="#d1e7579" xml:lang="en"/>
                   <span target="#d1e7579" xml:lang="es"/>
+                  
                   <span target="#d1e7582" xml:lang="en"/>
                   <span target="#d1e7582" xml:lang="es"/>
+                  
                   <span target="#d1e7584" xml:lang="en"/>
                   <span target="#d1e7584" xml:lang="es"/>
+                  
                   <span target="#d1e7586" xml:lang="en"/>
                   <span target="#d1e7586" xml:lang="es"/>
+                  
                   <span target="#d1e7588" xml:lang="en"/>
                   <span target="#d1e7588" xml:lang="es"/>
+                  
                   <span target="#d1e7590" xml:lang="en"/>
                   <span target="#d1e7590" xml:lang="es"/>
+                  
                   <span target="#d1e7592" xml:lang="en"/>
                   <span target="#d1e7592" xml:lang="es"/>
-                  <span target="#d1e7594" xml:lang="en"/>
-                  <span target="#d1e7594" xml:lang="es"/>
-                  <span target="#d1e7596" xml:lang="en"/>
-                  <span target="#d1e7596" xml:lang="es"/>
-                  <span target="#d1e7598" xml:lang="en"/>
-                  <span target="#d1e7598" xml:lang="es"/>
+                  
+                  <span target="#d1e7594 #d1e7598" xml:lang="en">I was going to go to</span>
+                  <span target="#d1e7594 #d1e7598" xml:lang="es"/>
+                  
                   <span target="#d1e7600" xml:lang="en"/>
                   <span target="#d1e7600" xml:lang="es"/>
+                  
                   <span target="#d1e7602" xml:lang="en"/>
                   <span target="#d1e7602" xml:lang="es"/>
+                  
                   <span target="#d1e7605" xml:lang="en"/>
                   <span target="#d1e7605" xml:lang="es"/>
+                  
                   <span target="#d1e7607" xml:lang="en"/>
                   <span target="#d1e7607" xml:lang="es"/>
+                  
                   <span target="#d1e7609" xml:lang="en"/>
                   <span target="#d1e7609" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e7669" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e7670">Ni</w>
-                  <w xml:id="d1e7672">ka</w>
+                  <w xml:id="d1e7670">Nikaa</w>
                   <w xml:id="d1e7674">nuu</w>
                   <w xml:id="d1e7676">treen</w>
                   <w xml:id="d1e7678">ka</w>
                   <w xml:id="d1e7680">kua</w>
-                  <w xml:id="d1e7682">ka</w>
-                  <w xml:id="d1e7684">iin</w> (<w xml:id="d1e7687">9</w>) <w xml:id="d1e7691">tsa'un</w> (<w xml:id="d1e7694">15</w>)<pc>,</pc>
+                  <w xml:id="d1e7682" cert="medium">ka</w><!-- kaa? -->
+                  <w xml:id="d1e7684">iin</w>
+                  <w xml:id="d1e7691">tsa'un</w> 
+                  <pc>,</pc>
                   <w xml:id="d1e7699">takua</w>
-                  <w xml:id="d1e7701">na</w>
-                  <w xml:id="d1e7703">ko</w>
+                  <w xml:id="d1e7701" orig="na ko" cert="medium">nakoo</w>
                   <w xml:id="d1e7705">tiempo</w>
                   <w xml:id="d1e7707">yu</w>
-                  <w xml:id="d1e7709">ku</w>
-                  <w xml:id="d1e7712">kaka</w>
+                  <w xml:id="d1e7709">kukaka</w>
                   <w xml:id="d1e7714">nuu</w>
-                  <w xml:id="d1e7716">nu</w>
-                  <w xml:id="d1e7718">yav'I</w>
+                  <w xml:id="d1e7718">ya'vi</w>
                   <w xml:id="d1e7720">ka</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7669" xml:lang="en"/>
+                  <span target="#d1e7669" xml:lang="en">I got onthe train at around nine fifteen because I wasn't going to have time to walk to the market.</span>
                   <span target="#d1e7669" xml:lang="es"/>
+                  
                   <span target="#d1e7670" xml:lang="en"/>
                   <span target="#d1e7670" xml:lang="es"/>
+                 
                   <span target="#d1e7672" xml:lang="en"/>
                   <span target="#d1e7672" xml:lang="es"/>
+                  
                   <span target="#d1e7674" xml:lang="en"/>
                   <span target="#d1e7674" xml:lang="es"/>
+                  
                   <span target="#d1e7676" xml:lang="en"/>
                   <span target="#d1e7676" xml:lang="es"/>
+                  
                   <span target="#d1e7678" xml:lang="en"/>
                   <span target="#d1e7678" xml:lang="es"/>
+                  
                   <span target="#d1e7680" xml:lang="en"/>
                   <span target="#d1e7680" xml:lang="es"/>
+                  
                   <span target="#d1e7682" xml:lang="en"/>
                   <span target="#d1e7682" xml:lang="es"/>
-                  <span target="#d1e7684" xml:lang="en"/>
-                  <span target="#d1e7684" xml:lang="es"/>
-                  <span target="#d1e7687" xml:lang="en"/>
-                  <span target="#d1e7687" xml:lang="es"/>
-                  <span target="#d1e7691" xml:lang="en"/>
-                  <span target="#d1e7691" xml:lang="es"/>
+                  
+                  <span target="#d1e7684 #d1e7691" xml:lang="en">nine fifteen</span>
+                  <span target="#d1e7684 #d1e7691" xml:lang="es">las nueve y cuarto</span>
+                  
                   <span target="#d1e7694" xml:lang="en"/>
                   <span target="#d1e7694" xml:lang="es"/>
+                  
                   <span target="#d1e7699" xml:lang="en"/>
                   <span target="#d1e7699" xml:lang="es"/>
-                  <span target="#d1e7701" xml:lang="en"/>
-                  <span target="#d1e7701" xml:lang="es"/>
-                  <span target="#d1e7703" xml:lang="en"/>
-                  <span target="#d1e7703" xml:lang="es"/>
-                  <span target="#d1e7705" xml:lang="en"/>
-                  <span target="#d1e7705" xml:lang="es"/>
-                  <span target="#d1e7707" xml:lang="en"/>
-                  <span target="#d1e7707" xml:lang="es"/>
-                  <span target="#d1e7709" xml:lang="en"/>
-                  <span target="#d1e7709" xml:lang="es"/>
-                  <span target="#d1e7712" xml:lang="en"/>
-                  <span target="#d1e7712" xml:lang="es"/>
-                  <span target="#d1e7714" xml:lang="en"/>
-                  <span target="#d1e7714" xml:lang="es"/>
+                  
+                  <span target="#d1e7701" xml:lang="en">there would not be</span>
+                  <span target="#d1e7701" xml:lang="es">no sería</span>
+                  
+                  <span target="#d1e7705" xml:lang="en">time</span>
+                  <span target="#d1e7705" xml:lang="es">tiempo</span>
+                  
+                  <span target="#d1e7707" xml:lang="en">for me</span>
+                  <span target="#d1e7707" xml:lang="es">para que yo</span>
+                  
+                  <span target="#d1e7709" xml:lang="en">I will walk</span>
+                  <span target="#d1e7709" xml:lang="es">voy a caminar</span>
+                  
+                  <span target="#d1e7714" xml:lang="en">from</span>
+                  <span target="#d1e7714" xml:lang="es">de</span>
+                  
+                  <span target="#d1e7714 #d1e7716" xml:lang="en">from the market</span>
+                  <span target="#d1e7714 #d1e7716" xml:lang="es">del mercado</span>
+                  
                   <span target="#d1e7716" xml:lang="en"/>
                   <span target="#d1e7716" xml:lang="es"/>
+                  
                   <span target="#d1e7718" xml:lang="en"/>
                   <span target="#d1e7718" xml:lang="es"/>
+                  
                   <span target="#d1e7720" xml:lang="en"/>
                   <span target="#d1e7720" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e7779" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7780">Ntsa'an</w>
-                  <w xml:id="d1e7782">yuu</w>
+                  <w xml:id="d1e7782">yu</w>
                   <w xml:id="d1e7784">tian</w>
                   <w xml:id="d1e7786">kue</w>
-                  <w xml:id="d1e7788">ni</w>
-                  <w xml:id="d1e7790">kuu</w>
+                  <w xml:id="d1e7788" orig="ni kuu">nikuu</w>
                   <w xml:id="d1e7792">kaka</w>
                   <w xml:id="d1e7794">nuu</w>
                   <w xml:id="d1e7796">ri</w>
@@ -7430,63 +7408,74 @@
                   <pc>,</pc>
                   <w xml:id="d1e7805">tsini</w>
                   <w xml:id="d1e7807">ñu'u</w>
-                  <w xml:id="d1e7809">tsa</w>
+                  <w xml:id="d1e7809">ku'un</w>
                   <w xml:id="d1e7811">yu</w>
-                  <w xml:id="d1e7813">un</w>
-                  <w xml:id="d1e7815">chuun</w>
+                  <w xml:id="d1e7813">nuu</w>
+                  <w xml:id="d1e7815">sachuun</w>
                   <w xml:id="d1e7817">kua</w>
                   <w xml:id="d1e7819">ka</w>
                   <w xml:id="d1e7821">utsi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7779" xml:lang="en"/>
+                  <span target="#d1e7779" xml:lang="en">I went but I couldn't walk there because there wasn't time, I had to go to work at around ten.</span>
                   <span target="#d1e7779" xml:lang="es"/>
-                  <span target="#d1e7780" xml:lang="en"/>
-                  <span target="#d1e7780" xml:lang="es"/>
-                  <span target="#d1e7782" xml:lang="en"/>
-                  <span target="#d1e7782" xml:lang="es"/>
-                  <span target="#d1e7784" xml:lang="en"/>
-                  <span target="#d1e7784" xml:lang="es"/>
-                  <span target="#d1e7786" xml:lang="en"/>
-                  <span target="#d1e7786" xml:lang="es"/>
-                  <span target="#d1e7788" xml:lang="en"/>
-                  <span target="#d1e7788" xml:lang="es"/>
+                  
+                  <span target="#d1e7780 #d1e7782" xml:lang="en">I left</span>
+                  <span target="#d1e7780 #d1e7782" xml:lang="es">me fui</span>
+                  
+                  <span target="#d1e7784" xml:lang="en">but</span>
+                  <span target="#d1e7784" xml:lang="es">pero</span>
+                  
+                  <span target="#d1e7786" xml:lang="en">not</span>
+                  <span target="#d1e7786" xml:lang="es">no</span>
+                
+                  <span target="#d1e7786 #d1e7788" xml:lang="en">I could not</span>
+                  <span target="#d1e7786 #d1e7788" xml:lang="en">I couldn't</span>
+                  <span target="#d1e7786 #d1e7788" xml:lang="es">yo no podía</span>
+                  
                   <span target="#d1e7790" xml:lang="en"/>
                   <span target="#d1e7790" xml:lang="es"/>
+                  
                   <span target="#d1e7792" xml:lang="en"/>
                   <span target="#d1e7792" xml:lang="es"/>
+                  
                   <span target="#d1e7794" xml:lang="en"/>
                   <span target="#d1e7794" xml:lang="es"/>
+                 
                   <span target="#d1e7796" xml:lang="en"/>
                   <span target="#d1e7796" xml:lang="es"/>
+                  
                   <span target="#d1e7798" xml:lang="en"/>
                   <span target="#d1e7798" xml:lang="es"/>
+                  
                   <span target="#d1e7800" xml:lang="en"/>
                   <span target="#d1e7800" xml:lang="es"/>
-                  <span target="#d1e7805" xml:lang="en"/>
-                  <span target="#d1e7805" xml:lang="es"/>
-                  <span target="#d1e7807" xml:lang="en"/>
-                  <span target="#d1e7807" xml:lang="es"/>
-                  <span target="#d1e7809" xml:lang="en"/>
-                  <span target="#d1e7809" xml:lang="es"/>
-                  <span target="#d1e7811" xml:lang="en"/>
-                  <span target="#d1e7811" xml:lang="es"/>
+                  
+                  <span target="#d1e7805 #d1e7807" xml:lang="en">I had to</span>
+                  <span target="#d1e7805 #d1e7807" xml:lang="es">yo tenía que</span>
+                  
+                  <span target="#d1e7805 #d1e7807 #d1e7809 #d1e7811" xml:lang="en">I had to go</span>
+                  <span target="#d1e7805 #d1e7807 #d1e7809 #d1e7811" xml:lang="es">yo tenía que ir</span>
+                  
                   <span target="#d1e7813" xml:lang="en"/>
                   <span target="#d1e7813" xml:lang="es"/>
+                  
                   <span target="#d1e7815" xml:lang="en"/>
                   <span target="#d1e7815" xml:lang="es"/>
+                  
                   <span target="#d1e7817" xml:lang="en"/>
                   <span target="#d1e7817" xml:lang="es"/>
+                  
                   <span target="#d1e7819" xml:lang="en"/>
                   <span target="#d1e7819" xml:lang="es"/>
+                  
                   <span target="#d1e7821" xml:lang="en"/>
                   <span target="#d1e7821" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e7871" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e7872">Ntsi</w>
-                  <w xml:id="d1e7874">ka</w>
+                  <w xml:id="d1e7872" orig="Ntsi ka">Ntsika</w>
                   <w xml:id="d1e7876">yu</w>
                   <w xml:id="d1e7878">ika</w>
                   <w xml:id="d1e7880">kua</w>
@@ -7496,15 +7485,16 @@
                   <w xml:id="d1e7888">ntachiko</w>
                   <pc>,</pc>
                   <w xml:id="d1e7892">nu'u</w>
-                  <w xml:id="d1e7895">yuu</w>
+                  <w xml:id="d1e7895">yu</w>
                   <w xml:id="d1e7897">nuu</w>
                   <w xml:id="d1e7899">oficina</w>
                   <w xml:id="d1e7901">ka</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7871" xml:lang="en"/>
+                  <span target="#d1e7871" xml:lang="en">I walked there in around twenty minutes and I went back, and went to the office.</span>
                   <span target="#d1e7871" xml:lang="es"/>
+                  
                   <span target="#d1e7872" xml:lang="en"/>
                   <span target="#d1e7872" xml:lang="es"/>
                   <span target="#d1e7874" xml:lang="en"/>
@@ -7537,9 +7527,9 @@
                
                <seg xml:id="d1e7939" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7940">Cha</w>
-                  <w xml:id="d1e7942">ntakuan</w>
-                  <w xml:id="d1e7944">iin</w>
-                  <w xml:id="d1e7946">nchia</w>
+                  <w xml:id="d1e7942" orig="ntakuan">ntakuaan</w>
+                  <w xml:id="d1e7944">in</w>
+                  <w xml:id="d1e7946">nchai</w>
                   <w xml:id="d1e7948">nani</w>
                   <w xml:id="d1e7950">salami</w>
                   <pc>,</pc>
@@ -7549,8 +7539,9 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7939" xml:lang="en"/>
+                  <span target="#d1e7939" xml:lang="en">I bought some food called salami, it is meat from a pig.</span>
                   <span target="#d1e7939" xml:lang="es"/>
+                  
                   <span target="#d1e7940" xml:lang="en"/>
                   <span target="#d1e7940" xml:lang="es"/>
                   <span target="#d1e7942" xml:lang="en"/>
@@ -7573,99 +7564,123 @@
                
                <seg xml:id="d1e7985" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e7986">Cha</w>
-                  <w xml:id="d1e7988">naa</w>
                   <w xml:id="d1e7990">ña</w>
-                  <w xml:id="d1e7992">ntsa'a</w>
+                  <w xml:id="d1e7992" orig="ntsa'a">ntsaa</w>
                   <w xml:id="d1e7994">yu</w>
-                  <w xml:id="d1e7996">un</w>
+                  <w xml:id="d1e7996">nuu</w>
                   <w xml:id="d1e7998">chuun</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e7985" xml:lang="en"/>
+                  <span target="#d1e7985" xml:lang="en" cert="low">And then I arrived at work.</span>
                   <span target="#d1e7985" xml:lang="es"/>
+                  
                   <span target="#d1e7986" xml:lang="en"/>
                   <span target="#d1e7986" xml:lang="es"/>
+                  
                   <span target="#d1e7988" xml:lang="en"/>
                   <span target="#d1e7988" xml:lang="es"/>
+                  
                   <span target="#d1e7990" xml:lang="en"/>
                   <span target="#d1e7990" xml:lang="es"/>
+                  
                   <span target="#d1e7992" xml:lang="en"/>
                   <span target="#d1e7992" xml:lang="es"/>
+                  
                   <span target="#d1e7994" xml:lang="en"/>
                   <span target="#d1e7994" xml:lang="es"/>
+                  
                   <span target="#d1e7996" xml:lang="en"/>
                   <span target="#d1e7996" xml:lang="es"/>
+                  
                   <span target="#d1e7998" xml:lang="en"/>
                   <span target="#d1e7998" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e8020" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8021">Nta</w>
-                  <w xml:id="d1e8023">tsa</w>
+                  <w xml:id="d1e8021" cert="medium">Ntatsaa</w><!-- why inchoative prefix "nta-"?-->
                   <w xml:id="d1e8025">yu</w>
                   <w xml:id="d1e8027">nuu</w>
                   <w xml:id="d1e8029">chuun</w>
-                  <w xml:id="d1e8031">ka</w>
+                  <w xml:id="d1e8031" cert="low">ka</w>
                   <w xml:id="d1e8033">kua</w>
                   <w xml:id="d1e8035">ka</w>
                   <w xml:id="d1e8037">utsi</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8020" xml:lang="en"/>
+                  <span target="#d1e8020" xml:lang="en">I arrived at work at around ten o'clock.</span>
                   <span target="#d1e8020" xml:lang="es"/>
+                  
                   <span target="#d1e8021" xml:lang="en"/>
                   <span target="#d1e8021" xml:lang="es"/>
+                  
                   <span target="#d1e8023" xml:lang="en"/>
                   <span target="#d1e8023" xml:lang="es"/>
+                  
                   <span target="#d1e8025" xml:lang="en"/>
                   <span target="#d1e8025" xml:lang="es"/>
+                  
                   <span target="#d1e8027" xml:lang="en"/>
                   <span target="#d1e8027" xml:lang="es"/>
+                  
                   <span target="#d1e8029" xml:lang="en"/>
                   <span target="#d1e8029" xml:lang="es"/>
+                  
                   <span target="#d1e8031" xml:lang="en"/>
                   <span target="#d1e8031" xml:lang="es"/>
+                  
                   <span target="#d1e8033" xml:lang="en"/>
                   <span target="#d1e8033" xml:lang="es"/>
+                  
                   <span target="#d1e8035" xml:lang="en"/>
                   <span target="#d1e8035" xml:lang="es"/>
+                  
                   <span target="#d1e8037" xml:lang="en"/>
                   <span target="#d1e8037" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e8062" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8063">Ta</w>
-                  <w xml:id="d1e8065">tsa</w>
+                  <w xml:id="d1e8063" cert="low">Ta</w>
+                  <w xml:id="d1e8065" orig="tsa">ntsaa</w>
                   <w xml:id="d1e8067">yu</w>
-                  <w xml:id="d1e8069">inka</w>
+                  <w xml:id="d1e8069" orig="inka">ika</w>
                   <w xml:id="d1e8071">cha</w>
                   <w xml:id="d1e8073">tsa</w>
-                  <w xml:id="d1e8075">chatunu</w>
+                  <w xml:id="d1e8075">nchatu</w>
+                  <w xml:id="d1e8076">nuu</w>
                   <w xml:id="d1e8077">Jack</w>
                   <w xml:id="d1e8079">ka</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8062" xml:lang="en"/>
+                  <span target="#d1e8062" xml:lang="en">When I arrived there, Jack was already waiting..</span>
                   <span target="#d1e8062" xml:lang="es"/>
+                  
                   <span target="#d1e8063" xml:lang="en"/>
                   <span target="#d1e8063" xml:lang="es"/>
+                  
                   <span target="#d1e8065" xml:lang="en"/>
                   <span target="#d1e8065" xml:lang="es"/>
+                  
                   <span target="#d1e8067" xml:lang="en"/>
                   <span target="#d1e8067" xml:lang="es"/>
+                  
                   <span target="#d1e8069" xml:lang="en"/>
                   <span target="#d1e8069" xml:lang="es"/>
+                  
                   <span target="#d1e8071" xml:lang="en"/>
                   <span target="#d1e8071" xml:lang="es"/>
+                  
                   <span target="#d1e8073" xml:lang="en"/>
                   <span target="#d1e8073" xml:lang="es"/>
+                  
                   <span target="#d1e8075" xml:lang="en"/>
                   <span target="#d1e8075" xml:lang="es"/>
+                  
                   <span target="#d1e8077" xml:lang="en"/>
                   <span target="#d1e8077" xml:lang="es"/>
+                  
                   <span target="#d1e8079" xml:lang="en"/>
                   <span target="#d1e8079" xml:lang="es"/>
                </spanGrp>
@@ -7673,13 +7688,13 @@
                <seg xml:id="d1e8104" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8105">Kua</w>
                   <w xml:id="d1e8107">ka</w>
-                  <w xml:id="d1e8109">utsi</w>
-                  <w xml:id="d1e8111">iin</w> (<w xml:id="d1e8114">11</w>)<pc>,</pc>
+                  <w xml:id="d1e8109" orig="utsi-iin">utsi-in</w> 
+                  <pc>,</pc>
                   <w xml:id="d1e8119">nuu</w>
                   <w xml:id="d1e8121">kue</w>
                   <w xml:id="d1e8123">tsa'an</w>
                   <w xml:id="d1e8126">kue</w>
-                  <w xml:id="d1e8128">takuan</w>
+                  <w xml:id="d1e8128">takuaan</w>
                   <w xml:id="d1e8130">paa</w>
                   <w xml:id="d1e8132">ña</w>
                   <w xml:id="d1e8134">katsi</w>
@@ -7689,8 +7704,9 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8104" xml:lang="en"/>
+                  <span target="#d1e8104" xml:lang="en">Around eleven we went down and went to buy bread to eat with the salami.</span>
                   <span target="#d1e8104" xml:lang="es"/>
+                  
                   <span target="#d1e8105" xml:lang="en"/>
                   <span target="#d1e8105" xml:lang="es"/>
                   <span target="#d1e8107" xml:lang="en"/>
@@ -7726,24 +7742,25 @@
                </spanGrp>
                
                <seg xml:id="d1e8184" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8185">Oh</w>
+                  <w xml:id="d1e8185">Oo</w>
                   <pc>,</pc>
-                  <w xml:id="d1e8189">takuan</w>
-                  <w xml:id="d1e8191">quesu</w>
+                  <w xml:id="d1e8189">takuaan</w>
+                  <w xml:id="d1e8191">kesu</w>
                   <pc>,</pc>
                   <w xml:id="d1e8195">ña</w>
-                  <w xml:id="d1e8197">chi</w>
-                  <w xml:id="d1e8199">kaa</w>
+                  <w xml:id="d1e8197">chikaa</w>
                   <w xml:id="d1e8201">yu</w>
                   <w xml:id="d1e8203">nuu</w>
                   <w xml:id="d1e8205">paa</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8184" xml:lang="en"/>
+                  <span target="#d1e8184" xml:lang="en" cert="low">Oh yeah, I bought cheese to put on my bread.</span>
                   <span target="#d1e8184" xml:lang="es"/>
-                  <span target="#d1e8185" xml:lang="en"/>
-                  <span target="#d1e8185" xml:lang="es"/>
+                  
+                  <span target="#d1e8185" xml:lang="en">oh yeah</span>
+                  <span target="#d1e8185" xml:lang="es" cert="unknown"/>
+                  
                   <span target="#d1e8189" xml:lang="en"/>
                   <span target="#d1e8189" xml:lang="es"/>
                   <span target="#d1e8191" xml:lang="en"/>
@@ -7767,32 +7784,38 @@
                <seg xml:id="d1e8237" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8238">Cha</w>
                   <w xml:id="d1e8240">ñaka</w>
-                  <w xml:id="d1e8242">ntsati</w>
+                  <w xml:id="d1e8242">ntsatsi</w>
                   <w xml:id="d1e8244">kua</w>
                   <w xml:id="d1e8246">ka</w>
-                  <w xml:id="d1e8248">iin</w>
+                  <w xml:id="d1e8248">in</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8237" xml:lang="en"/>
+                  <span target="#d1e8237" xml:lang="en">And I ate that at around one o'clock.</span>
                   <span target="#d1e8237" xml:lang="es"/>
+                  
                   <span target="#d1e8238" xml:lang="en"/>
                   <span target="#d1e8238" xml:lang="es"/>
-                  <span target="#d1e8240" xml:lang="en"/>
+              
+                  <span target="#d1e8240" xml:lang="en">that</span>
                   <span target="#d1e8240" xml:lang="es"/>
-                  <span target="#d1e8242" xml:lang="en"/>
-                  <span target="#d1e8242" xml:lang="es"/>
+                  
+                  <span target="#d1e8242" xml:lang="en">I ate</span>
+                  <span target="#d1e8242" xml:lang="es">comí</span>
+                  
                   <span target="#d1e8244" xml:lang="en"/>
                   <span target="#d1e8244" xml:lang="es"/>
+                  
                   <span target="#d1e8246" xml:lang="en"/>
                   <span target="#d1e8246" xml:lang="es"/>
+                  
                   <span target="#d1e8248" xml:lang="en"/>
                   <span target="#d1e8248" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e8267" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8268">Mani</w>
-                  <w xml:id="d1e8270">tsaan</w>
+                  <w xml:id="d1e8268" orig="Mani">Ma</w>
+                  <w xml:id="d1e8270" orig="tsaan">nitsa'an</w>
                   <w xml:id="d1e8272">kue</w>
                   <w xml:id="d1e8274">restaurante</w>
                   <w xml:id="d1e8276">katsa'an</w>
@@ -7800,41 +7823,40 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8267" xml:lang="en"/>
+                  <span target="#d1e8267" xml:lang="en">We didn't go to a restaurant to eat.</span>
                   <span target="#d1e8267" xml:lang="es"/>
-                  <span target="#d1e8268" xml:lang="en"/>
-                  <span target="#d1e8268" xml:lang="es"/>
-                  <span target="#d1e8270" xml:lang="en"/>
-                  <span target="#d1e8270" xml:lang="es"/>
-                  <span target="#d1e8272" xml:lang="en"/>
-                  <span target="#d1e8272" xml:lang="es"/>
-                  <span target="#d1e8274" xml:lang="en"/>
-                  <span target="#d1e8274" xml:lang="es"/>
-                  <span target="#d1e8276" xml:lang="en"/>
-                  <span target="#d1e8276" xml:lang="es"/>
-                  <span target="#d1e8278" xml:lang="en"/>
-                  <span target="#d1e8278" xml:lang="es"/>
+                  
+                  <span target="#d1e8268" xml:lang="en">not</span>
+                  <span target="#d1e8268" xml:lang="es">no</span>
+                  
+                  <span target="#d1e8268 #d1e8270 #d1e8272" xml:lang="en">we did not go</span>
+                  <span target="#d1e8268 #d1e8270 #d1e8272" xml:lang="es">no nos fuimos</span>
+                  
+                  <span target="#d1e8274" xml:lang="en">restaurant</span>
+                  <span target="#d1e8274" xml:lang="es">restaurante</span>
+                  
+                  <span target="#d1e8276 #d1e8278" xml:lang="en">we ate</span>
+                  <span target="#d1e8276 #d1e8278" xml:lang="es">comimos</span>
                </spanGrp>
                
                <seg xml:id="d1e8297" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8298">Ta</w>
                   <w xml:id="d1e8300">tsinu</w>
-                  <w xml:id="d1e8302">tsi</w>
-                  <w xml:id="d1e8304">tsaan</w>
+                  <w xml:id="d1e8302" orig="tsi tsaan">tsitsa'an</w>
                   <w xml:id="d1e8306">kue</w>
                   <w xml:id="d1e8308">cha</w>
-                  <w xml:id="d1e8310">sa</w>
-                  <w xml:id="d1e8312">chuun</w>
+                  <w xml:id="d1e8310">sachuun</w>
                   <w xml:id="d1e8314">kue</w>
-                  <w xml:id="d1e8316">ncha</w>
+                  <w xml:id="d1e8316" orig="ncha">nchaa</w>
                   <w xml:id="d1e8318">kua</w>
                   <w xml:id="d1e8321">ka</w>
                   <w xml:id="d1e8323">u'un</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8297" xml:lang="en"/>
+                  <span target="#d1e8297" xml:lang="en">When we finished eating we worked until about five o'clock.</span>
                   <span target="#d1e8297" xml:lang="es"/>
+                  
                   <span target="#d1e8298" xml:lang="en"/>
                   <span target="#d1e8298" xml:lang="es"/>
                   <span target="#d1e8300" xml:lang="en"/>
@@ -7865,50 +7887,57 @@
                
                <seg xml:id="d1e8357" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8358">Sara</w>
-                  <w xml:id="d1e8360">ni</w>
-                  <w xml:id="d1e8362">kee</w>
+                  <w xml:id="d1e8360" orig="ni kee">nikee</w>
                   <w xml:id="d1e8364">kue</w>
-                  <w xml:id="d1e8366">kua</w>
+                  <w xml:id="d1e8366" orig="kua">kua'a</w>
                   <w xml:id="d1e8368">nu'u</w>
                   <w xml:id="d1e8370">kue</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8357" xml:lang="en"/>
+                  <span target="#d1e8357" xml:lang="en">Then we came out and went back.</span>
                   <span target="#d1e8357" xml:lang="es"/>
+                  
                   <span target="#d1e8358" xml:lang="en"/>
                   <span target="#d1e8358" xml:lang="es"/>
+             
                   <span target="#d1e8360" xml:lang="en"/>
                   <span target="#d1e8360" xml:lang="es"/>
+                
                   <span target="#d1e8362" xml:lang="en"/>
                   <span target="#d1e8362" xml:lang="es"/>
+                 
                   <span target="#d1e8364" xml:lang="en"/>
                   <span target="#d1e8364" xml:lang="es"/>
+                  
                   <span target="#d1e8366" xml:lang="en"/>
                   <span target="#d1e8366" xml:lang="es"/>
+                  
                   <span target="#d1e8368" xml:lang="en"/>
                   <span target="#d1e8368" xml:lang="es"/>
+                  
                   <span target="#d1e8370" xml:lang="en"/>
                   <span target="#d1e8370" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e8391" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8392">Ta</w>
+                  <w xml:id="d1e8392" cert="low">Ta</w>
                   <w xml:id="d1e8394">ntsaa</w>
                   <w xml:id="d1e8396">yu</w>
-                  <w xml:id="d1e8398">un</w>
-                  <w xml:id="d1e8400">inka</w>
+                  <w xml:id="d1e8398">nuu</w>
+                  <w xml:id="d1e8400" orig="inka">inkaa</w>
                   <w xml:id="d1e8402">treen</w>
                   <w xml:id="d1e8404">ka</w>
-                  <w xml:id="d1e8406">cha</w>
-                  <w xml:id="d1e8408">takuan</w>
+                  <w xml:id="d1e8406" cert="low">cha</w><!-- ok in conjunction with "Ta" at beginning? -->
+                  <w xml:id="d1e8408">takuaan</w>
                   <w xml:id="d1e8410">uvi</w>
-                  <w xml:id="d1e8412">sandwhich</w>
+                  <w xml:id="d1e8412">santuich</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8391" xml:lang="en"/>
+                  <span target="#d1e8391" xml:lang="en">(When |Then?) I got to the train and I bought two sandwiches.</span>
                   <span target="#d1e8391" xml:lang="es"/>
+                  
                   <span target="#d1e8392" xml:lang="en"/>
                   <span target="#d1e8392" xml:lang="es"/>
                   <span target="#d1e8394" xml:lang="en"/>
@@ -7936,54 +7965,69 @@
                <seg xml:id="d1e8443" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8444">Naa</w>
                   <w xml:id="d1e8446">ña</w>
-                  <w xml:id="d1e8448">ni</w>
-                  <w xml:id="d1e8450">kaa</w>
-                  <w xml:id="d1e8452">nu</w>
+                  <w xml:id="d1e8448">nikaa</w>
+                  <w xml:id="d1e8452">nuu</w>
                   <w xml:id="d1e8454">treen</w>
                   <w xml:id="d1e8456">ka</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8443" xml:lang="en"/>
+                  <span target="#d1e8443" xml:lang="en">I carried them (sandwiches) and I got on the train.</span>
                   <span target="#d1e8443" xml:lang="es"/>
-                  <span target="#d1e8444" xml:lang="en"/>
-                  <span target="#d1e8444" xml:lang="es"/>
-                  <span target="#d1e8446" xml:lang="en"/>
-                  <span target="#d1e8446" xml:lang="es"/>
-                  <span target="#d1e8448" xml:lang="en"/>
-                  <span target="#d1e8448" xml:lang="es"/>
-                  <span target="#d1e8450" xml:lang="en"/>
-                  <span target="#d1e8450" xml:lang="es"/>
-                  <span target="#d1e8452" xml:lang="en"/>
-                  <span target="#d1e8452" xml:lang="es"/>
-                  <span target="#d1e8454" xml:lang="en"/>
-                  <span target="#d1e8454" xml:lang="es"/>
+                  
+                  <span target="#d1e8444" xml:lang="en">I carried</span>
+                  <span target="#d1e8444" xml:lang="es">cargué</span>
+                  
+                  <span target="#d1e8446" xml:lang="en">them</span>
+                  <span target="#d1e8446" xml:lang="es">los</span>
+                  
+                  <span target="#d1e8448" xml:lang="en">I got on</span>
+                  <span target="#d1e8448" xml:lang="es">subí</span>
+                  
+                  <span target="#d1e8450" xml:lang="en">onto</span>
+                  <span target="#d1e8450" xml:lang="es">a</span>
+                  
+                  <span target="#d1e8452 #d1e8454" xml:lang="en">onto the train</span>
+                  <span target="#d1e8452 #d1e8454" xml:lang="es">al tren</span>
+                  
+                  <span target="#d1e8454" xml:lang="en">train</span>
+                  <span target="#d1e8454" xml:lang="es">tren</span>
+                  
                   <span target="#d1e8456" xml:lang="en"/>
                   <span target="#d1e8456" xml:lang="es"/>
                </spanGrp>
                
                <seg xml:id="d1e8478" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8479">ñaka</w>
-                  <w xml:id="d1e8481">tsi</w>
-                  <w xml:id="d1e8483">tsaan</w>
-                  <w xml:id="d1e8485">ra</w>
-                  <w xml:id="d1e8487">tsi'i</w>
-                  <w xml:id="d1e8489">chikui</w>
+                  <w xml:id="d1e8479">Ñaka</w>
+                  <w xml:id="d1e8481">ntsatsi</w>
+                  <w xml:id="d1e8485">cha</w>
+                  <w xml:id="d1e8486">nuu</w>                  
+                  <w xml:id="d1e8487">ntsi'i</w>
+                  <w xml:id="d1e8489">chikuii</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8478" xml:lang="en"/>
+                  <span target="#d1e8478" xml:lang="en">I ate those (sandwiches) and I got off and drank water.</span>
                   <span target="#d1e8478" xml:lang="es"/>
+                  
                   <span target="#d1e8479" xml:lang="en"/>
                   <span target="#d1e8479" xml:lang="es"/>
+                  
                   <span target="#d1e8481" xml:lang="en"/>
                   <span target="#d1e8481" xml:lang="es"/>
+                
                   <span target="#d1e8483" xml:lang="en"/>
                   <span target="#d1e8483" xml:lang="es"/>
+                  
                   <span target="#d1e8485" xml:lang="en"/>
                   <span target="#d1e8485" xml:lang="es"/>
+                  
+                  <span target="#d1e8486" xml:lang="en">I got off</span>
+                  <span target="#d1e8486" xml:lang="es">me bajé</span>
+                  
                   <span target="#d1e8487" xml:lang="en"/>
                   <span target="#d1e8487" xml:lang="es"/>
+                  
                   <span target="#d1e8489" xml:lang="en"/>
                   <span target="#d1e8489" xml:lang="es"/>
                </spanGrp>
@@ -7993,12 +8037,10 @@
                <seg xml:id="d1e8509" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8510">Ta</w>
                   <w xml:id="d1e8512">tsinu</w>
-                  <w xml:id="d1e8514">tsi</w>
-                  <w xml:id="d1e8516">tsaan</w>
+                  <w xml:id="d1e8514">ntsitsa'an</w>
                   <pc>,</pc>
                   <w xml:id="d1e8520">ra</w>
-                  <w xml:id="d1e8522">ntsi</w>
-                  <w xml:id="d1e8524">nchee</w>
+                  <w xml:id="d1e8522">ntsinchee</w>
                   <w xml:id="d1e8526">Tele</w>
                   <pc>,</pc>
                   <w xml:id="d1e8530">kua</w>
@@ -8007,8 +8049,9 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8509" xml:lang="en"/>
+                  <span target="#d1e8509" xml:lang="en">When I finished eating I watched TV for about two hours.</span>
                   <span target="#d1e8509" xml:lang="es"/>
+                  
                   <span target="#d1e8510" xml:lang="en"/>
                   <span target="#d1e8510" xml:lang="es"/>
                   <span target="#d1e8512" xml:lang="en"/>
@@ -8035,23 +8078,31 @@
                
                <seg xml:id="d1e8569" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8570">Cha</w>
-                  <w xml:id="d1e8572">nchaa</w>
+                  <w xml:id="d1e8572" cert="low">nchaa</w>
                   <w xml:id="d1e8574">nuu</w>
                   <w xml:id="d1e8576">computadora</w>
                   <w xml:id="d1e8578">yu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8569" xml:lang="en"/>
+                  <span target="#d1e8569" xml:lang="en">Then I went on my computer.</span>
                   <span target="#d1e8569" xml:lang="es"/>
+                  
                   <span target="#d1e8570" xml:lang="en"/>
                   <span target="#d1e8570" xml:lang="es"/>
-                  <span target="#d1e8572" xml:lang="en"/>
-                  <span target="#d1e8572" xml:lang="es"/>
-                  <span target="#d1e8574" xml:lang="en"/>
-                  <span target="#d1e8574" xml:lang="es"/>
-                  <span target="#d1e8576" xml:lang="en"/>
-                  <span target="#d1e8576" xml:lang="es"/>
+                  
+                  <span target="#d1e8572 #d1e8574 #d1e8576" xml:lang="en">I went on the computer</span>
+                  <span target="#d1e8572 #d1e8574 #d1e8576" xml:lang="es"/>
+                  
+                  <span target="#d1e8574" xml:lang="en">on</span>
+                  <span target="#d1e8574" xml:lang="es" cert="low">en</span>
+                  
+                  <span target="#d1e8574 #d1e8576 #d1e8578" xml:lang="en">on my computer</span>
+                  <span target="#d1e8574 #d1e8576 #d1e8578" xml:lang="es" cert="low">en mi computadora</span>
+                  
+                  <span target="#d1e8576 #d1e8578" xml:lang="en">my computer</span>
+                  <span target="#d1e8576 #d1e8578" xml:lang="es">mi computadora</span>
+                  
                   <span target="#d1e8578" xml:lang="en"/>
                   <span target="#d1e8578" xml:lang="es"/>
                </spanGrp>
@@ -8061,43 +8112,54 @@
                   <w xml:id="d1e8598">ta</w>
                   <w xml:id="d1e8600">kua</w>
                   <w xml:id="d1e8602">ka</w>
-                  <w xml:id="d1e8604">utsi</w>
-                  <w xml:id="d1e8606">iin</w>-<w xml:id="d1e8609">sava</w>
-                  <pc>,</pc> (<w xml:id="d1e8614">11</w>
-                  <pc>:</pc>
-                  <w xml:id="d1e8619">30</w>) <w xml:id="d1e8622">ra</w>
-                  <w xml:id="d1e8624">ni</w>
-                  <w xml:id="d1e8626">kixi</w>
-                  <w xml:id="d1e8628">yuu</w>
+                  <w xml:id="d1e8604" orig="utsi iin">utsi-in</w> 
+                  <w xml:id="d1e8609">sava</w>
+                  <pc>,</pc> 
+                  <w xml:id="d1e8622">ra</w>
+                  <w xml:id="d1e8624" orig="ni kixi">nikixi</w>
+                  <w xml:id="d1e8628">yu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8595" xml:lang="en"/>
+                  <span target="#d1e8595" xml:lang="en">Then at about eleven thirty I went to sleep.</span>
                   <span target="#d1e8595" xml:lang="es"/>
+                  
                   <span target="#d1e8596" xml:lang="en"/>
                   <span target="#d1e8596" xml:lang="es"/>
+                 
                   <span target="#d1e8598" xml:lang="en"/>
                   <span target="#d1e8598" xml:lang="es"/>
+                  
                   <span target="#d1e8600" xml:lang="en"/>
                   <span target="#d1e8600" xml:lang="es"/>
+                  
                   <span target="#d1e8602" xml:lang="en"/>
                   <span target="#d1e8602" xml:lang="es"/>
+                  
                   <span target="#d1e8604" xml:lang="en"/>
                   <span target="#d1e8604" xml:lang="es"/>
+                  
                   <span target="#d1e8606" xml:lang="en"/>
                   <span target="#d1e8606" xml:lang="es"/>
+                  
                   <span target="#d1e8609" xml:lang="en"/>
                   <span target="#d1e8609" xml:lang="es"/>
+                  
                   <span target="#d1e8614" xml:lang="en"/>
                   <span target="#d1e8614" xml:lang="es"/>
+                  
                   <span target="#d1e8619" xml:lang="en"/>
                   <span target="#d1e8619" xml:lang="es"/>
+                  
                   <span target="#d1e8622" xml:lang="en"/>
                   <span target="#d1e8622" xml:lang="es"/>
+                  
                   <span target="#d1e8624" xml:lang="en"/>
                   <span target="#d1e8624" xml:lang="es"/>
+                  
                   <span target="#d1e8626" xml:lang="en"/>
                   <span target="#d1e8626" xml:lang="es"/>
+                  
                   <span target="#d1e8628" xml:lang="en"/>
                   <span target="#d1e8628" xml:lang="es"/>
                </spanGrp>
@@ -8110,37 +8172,24 @@
                <seg xml:id="d1e8673" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8674">Taku</w>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e8673" xml:lang="en"/>
-                  <span target="#d1e8673" xml:lang="es"/>
-                  <span target="#d1e8674" xml:lang="en"/>
-                  <span target="#d1e8674" xml:lang="es"/>
-               </spanGrp>/<seg xml:id="d1e8680" xml:lang="mix" resp="#TS" type="S">
+               /<seg xml:id="d1e8680" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e8681">tukuni</w>
                </seg>
-               <spanGrp type="translation">
-                  <span target="#d1e8680" xml:lang="en"/>
-                  <span target="#d1e8680" xml:lang="es"/>
-                  <span target="#d1e8681" xml:lang="en"/>
-                  <span target="#d1e8681" xml:lang="es"/>
-               </spanGrp>
             </salute>
             <p>
                <seg xml:id="d1e8687" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8688">Tsa</w>
-                  <w xml:id="d1e8690">ni</w>
-                  <w xml:id="d1e8692">keta</w>
+                  <w xml:id="d1e8688" cert="low">Tsa</w>
+                  <w xml:id="d1e8690">niketa</w>
                   <w xml:id="d1e8694">nii</w>
-                  <w xml:id="d1e8696">nduu</w>
-                  <!-- ntuu = "day" -->
-                  <w xml:id="d1e8698">ni</w>
-                  <w xml:id="d1e8700">sachuun</w>
+                  <w xml:id="d1e8696" orig="nduu">ntuu</w><!-- ntuu = "day" -->
+                  <w xml:id="d1e8698">nisachuun</w>
                   <w xml:id="d1e8702">kue</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#d1e8687" xml:lang="en"/>
                   <span target="#d1e8687" xml:lang="es"/>
+                  
                   <span target="#d1e8688" xml:lang="en"/>
                   <span target="#d1e8688" xml:lang="es"/>
                   <span target="#d1e8690" xml:lang="en"/>
@@ -8160,26 +8209,26 @@
                </spanGrp>
               
                <seg xml:id="d1e8725" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8726">Na</w>
+                  <w xml:id="d1e8726" cert="low">Na</w>
                   <w xml:id="d1e8728">tsinu</w>
                   <w xml:id="d1e8730">sachuun</w>
                   <w xml:id="d1e8732">kue</w>
                   <pc>,</pc>
-                  <w xml:id="d1e8736">ah</w>
+                  <w xml:id="d1e8736" cert="unknown">ah</w>
                   <w xml:id="d1e8738">ta</w>
                   <w xml:id="d1e8740">kua</w>
-                  <w xml:id="d1e8742">iña</w>
+                  <w xml:id="d1e8742">iñu</w>
                   <w xml:id="d1e8744">ra</w>
-                  <w xml:id="d1e8746">ku</w>
-                  <w xml:id="d1e8749">nkuun</w>
+                  <w xml:id="d1e8746">kunku'un</w>
                   <w xml:id="d1e8751">kue</w>
                   <w xml:id="d1e8753">katsaan</w>
                   <w xml:id="d1e8755">kue</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8725" xml:lang="en"/>
+                  <span target="#d1e8725" xml:lang="en">(When|Then?) we finished working at about six o'clock then we were going to go to eat.</span>
                   <span target="#d1e8725" xml:lang="es"/>
+                  
                   <span target="#d1e8726" xml:lang="en"/>
                   <span target="#d1e8726" xml:lang="es"/>
                   <span target="#d1e8728" xml:lang="en"/>
@@ -8211,21 +8260,19 @@
                </spanGrp>
                
                <seg xml:id="d1e8793" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8794">Mi</w>
-                  <w xml:id="d1e8796">chu'tni</w>
+                  <w xml:id="d1e8794">Michu'ni</w>
                   <w xml:id="d1e8798">tsa</w>
                   <w xml:id="d1e8800">kui</w>
                   <w xml:id="d1e8802">ka</w>
-                  <w xml:id="d1e8804">uun</w>-<w xml:id="d1e8807">sava</w> (<w xml:id="d1e8810">5</w>
-                  <pc>:</pc>
-                  <w xml:id="d1e8815">30</w>)<pc>,</pc>
+                  <w xml:id="d1e8804">u'un</w>
+                  <w xml:id="d1e8807">sava</w>
+                  <pc>,</pc>
                   <w xml:id="d1e8820">kua</w>
                   <w xml:id="d1e8822">oko</w>
                   <w xml:id="d1e8824">ka</w>
                   <w xml:id="d1e8826">minutu</w>
                   <w xml:id="d1e8828">ra</w>
-                  <w xml:id="d1e8830">ku</w>
-                  <w xml:id="d1e8832">nkee</w>
+                  <w xml:id="d1e8830">kunkee</w>
                   <w xml:id="d1e8834">kue</w>
                   <w xml:id="d1e8837">nuu</w>
                   <w xml:id="d1e8839">chuun</w>
@@ -8235,6 +8282,7 @@
                <spanGrp type="translation">
                   <span target="#d1e8793" xml:lang="en"/>
                   <span target="#d1e8793" xml:lang="es"/>
+                  
                   <span target="#d1e8794" xml:lang="en"/>
                   <span target="#d1e8794" xml:lang="es"/>
                   <span target="#d1e8796" xml:lang="en"/>
@@ -8280,27 +8328,27 @@
             </p>
             <p>
                <seg xml:id="d1e8898" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8899">Tsa</w>
+                  <w xml:id="d1e8899" cert="unknown">Tsa</w>
                   <w xml:id="d1e8901">ka</w>
                   <w xml:id="d1e8903">iñu</w>
                   <w xml:id="d1e8905">kui</w>
                   <w xml:id="d1e8907">ra</w>
-                  <w xml:id="d1e8909">nii</w>
+                  <w xml:id="d1e8909" cert="unknown">nii</w>
                   <w xml:id="d1e8911">kue</w>
                   <w xml:id="d1e8913">nuu</w>
                   <w xml:id="d1e8915">chuun</w>
                   <w xml:id="d1e8917">yo'o</w>
                   <w xml:id="d1e8919">ra</w>
-                  <w xml:id="d1e8922">ku</w>
-                  <w xml:id="d1e8924">kuun</w>
+                  <w xml:id="d1e8922">kuku'un</w>
                   <w xml:id="d1e8926">kue</w>
                   <w xml:id="d1e8928">katsaan</w>
                   <w xml:id="d1e8930">kue</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e8898" xml:lang="en"/>
+                  <span target="#d1e8898" xml:lang="en">When it was about six o'clock (?) we left work and were going to go out to eat.</span>
                   <span target="#d1e8898" xml:lang="es"/>
+                  
                   <span target="#d1e8899" xml:lang="en"/>
                   <span target="#d1e8899" xml:lang="es"/>
                   <span target="#d1e8901" xml:lang="en"/>
@@ -8336,22 +8384,23 @@
                </spanGrp>
                
                <seg xml:id="d1e8970" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e8971">Mi</w>
-                  <w xml:id="d1e8973">chu'tni</w>
+                  <w xml:id="d1e8971">Michu'ni</w>
                   <w xml:id="d1e8975">tsika</w>
                   <w xml:id="d1e8977">kue</w>
-                  <w xml:id="d1e8979">kuan</w>
+                  <w xml:id="d1e8979">kua'an</w>
                   <w xml:id="d1e8981">kue</w>
                   <pc>,</pc>
                   <w xml:id="d1e8985">tsa</w>
                   <w xml:id="d1e8987">kua</w>
-                  <w xml:id="d1e8989">tsaun</w>-<w xml:id="d1e8993">minutu</w>
+                  <w xml:id="d1e8989">tsa'un</w>
+                  <w xml:id="d1e8993">minutu</w>
                   <w xml:id="d1e8995">tsika</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
                   <span target="#d1e8970" xml:lang="en"/>
                   <span target="#d1e8970" xml:lang="es"/>
+                  
                   <span target="#d1e8971" xml:lang="en"/>
                   <span target="#d1e8971" xml:lang="es"/>
                   <span target="#d1e8973" xml:lang="en"/>
@@ -8377,8 +8426,8 @@
                </spanGrp>
                
                <seg xml:id="d1e9028" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e9029">Sa</w>
-                  <w xml:id="d1e9031">sho</w>
+                  <w xml:id="d1e9029" cert="unknown">Sa</w>
+                  <w xml:id="d1e9031" cert="unknown">sho</w>
                   <w xml:id="d1e9033">ka</w>
                   <w xml:id="d1e9035">tsa</w>
                   <w xml:id="d1e9037">kue</w>
@@ -9335,7 +9384,7 @@
                   <w xml:id="d1e10220">nchavi</w>
                   <w xml:id="d1e10222">kue</w>
                   <w xml:id="d1e10224">ra</w>
-                  <w xml:id="d1e10226">ntakiin</w>
+                  <w xml:id="d1e10226">ntaki'in</w>
                   <w xml:id="d1e10228">kue</w>
                   <w xml:id="d1e10230">ra</w>
                   <w xml:id="d1e10232">kuan</w>
