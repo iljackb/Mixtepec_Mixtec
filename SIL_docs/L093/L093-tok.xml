@@ -236,6 +236,7 @@
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e160" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e163 #d1e165" ana="#ADVP #WH #TEMP"/>
+                  <!-- Is this an accurate grammatical annotation??!!! -->
                   <span type="pos" target="#d1e167" ana="#COP #INCMPL"/>  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e167" ana="#INCMPL"/>                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e167" ana="#3PERS"/>                  <!-- -i:  # -->
@@ -249,6 +250,12 @@
                <spanGrp type="translation">
                   <span target="#d1e160" xml:lang="en">What time is it?</span>
                   <span target="#d1e160" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e163" xml:lang="en">what</span>
+                  <span target="#d1e163" xml:lang="es">qué</span>
+                  <span target="#d1e165" xml:lang="en">time</span>
+                  <span target="#d1e165" xml:lang="es">hora</span>
+                  <span target="#d1e167" xml:lang="en">it is</span>
+                  <span target="#d1e167" xml:lang="es">es</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e163">wh</span>
@@ -256,8 +263,8 @@
                   <span target="#d1e167">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e174"><!-- "discourse": #RESP #Q #WH #TEMP -->
-                  <w xml:id="d1e175" orig="ka">Kaa</w>                  <!-- #COP #REAL : form changed from "ka" -->
+               <seg type="S" subtype="declarative" xml:id="d1e174">
+                  <w xml:id="d1e175" orig="ka">Kaa</w>   
                   <w xml:id="d1e177">iñu</w>
                   <w xml:id="d1e179">ntaa</w>
                   <pc>.</pc>
@@ -265,14 +272,15 @@
                <spanGrp type="translation">
                   <span target="#d1e174" xml:lang="en">It's six o'clock</span>
                   <span target="#d1e174" xml:lang="es">Son las seis</span>
+                  <span target="#d1e175" xml:lang="en">it is</span>
+                  <span target="#d1e175" xml:lang="es">es</span>
+                  <span target="#d1e177 #d1e179" xml:lang="en">six o'clock</span>
+                  <span target="#d1e177 #d1e179" xml:lang="es">las seis</span>
                </spanGrp>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e174" ana="#RESP #Q #WH #TEMP"/>
-                  <!-- sentence: #RESP #Q #WH #TEMP -->
                   <span type="pos" target="#d1e175" ana="#COP #REAL"/>
-                  <!-- #COP #REAL -->
                   <span type="phrase" target="#d1e177 #d1e179" ana="#ADVP #TEMP"/>
-                  <!-- #ADVP #TEMP -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -803,18 +811,13 @@
                <seg type="declarative" xml:id="d1e407">
                   <w xml:id="d1e408" orig="ka">Kaa</w>
                   <w xml:id="d1e410" orig="iin">in</w>
-                  <!-- one -->
                   <w xml:id="d1e412">utsi</w>
-                  <!-- ten -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e407" ana="#RESP #Q #WH #TEMP"/>
-                  <!-- sentence: #RESP #Q #WH #TEMP -->
                   <span type="pos" target="#d1e408" ana="#COP #REAL"/>
-                  <!-- #COP #REAL -->
                   <span type="phrase" target="#d1e410 #d1e412" ana="#ADVP #TEMP"/>
-                  <!-- #ADVP #TEMP -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -842,7 +845,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e424"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e424">
                   <pc>¿</pc>
                   <w xml:id="d1e427" orig="Nchii">Nchi</w>
                   <w xml:id="d1e429">hora</w>
@@ -853,13 +856,9 @@
                   <span type="sentence" target="#d1e424" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e427 #d1e429" ana="#ADVP #WH #TEMP"/>
                   <span type="pos" target="#d1e431" ana="#COP #INCMPL"/>
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e431" ana="#INCMPL"/>
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e431" ana="#3PERS"/>
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e431" ana="#SG"/>
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"

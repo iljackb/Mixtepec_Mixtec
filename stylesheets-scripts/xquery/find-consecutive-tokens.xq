@@ -1,0 +1,1 @@
+//w[contains(.,"tsini")]/following-sibling::w[contains(.,"ñu'u")]/ancestor::seg
