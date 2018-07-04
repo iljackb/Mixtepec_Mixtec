@@ -667,18 +667,18 @@
                <orth>ña'a</orth>
                <pron notation="ipa">ɲàʔá</pron>
                <pron notation="zsampa">J a_F ? a_R</pron>
-               <form type="variant">
-                  <pron notation="ipa">ɲà̰á</pron>
-                  <!-- NP-ADJ_tall_woman_01_JS, NP-ADJ_tall_woman_02_JS-->
-               </form>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Woman">
                <usg type="dom" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
-               <cit type="translation" xml:lang="en">
-                  <orth>woman</orth>
+               
+               <cit type="translation">
+                  <orth xml:lang="en">woman</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">mujer</orth>
                </cit>
             </sense> 
          </entry>
@@ -782,22 +782,26 @@
                   <pron notation="ipa">kùɲùù</pron>
                </form>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense><!-- most broad meaning pertains to all living beings with bodies -->
                <etym type="metonymy" subtype="conceptual"><!-- because this is conceptual metonymy (eg the concepts are considered to be the same by speakers (at least those consulted), the three senses are in the same entry; otherwise there would be 3 separate entries --><!--<cit>'muscle', 'meat'</cit>--></etym>
-               <cit type="translation" xml:lang="en">
-                  <orth>body</orth>
+               
+               <cit type="translation">
+                  <orth xml:lang="en">body</orth>
                </cit>
-               <cit type="translation" xml:lang="es">
-                  <orth>cuerpo</orth>
+               <cit type="translation">
+                  <orth xml:lang="es">cuerpo</orth>
                </cit>
             </sense>
             <sense corresp="http://dbpedia.org/resource/Category:Human_body">
                http://wikidata.org/entity/Q13119823
             </sense>
-            <sense corresp="http://dbpedia.org/resource/Category:Meat"><!-- find uri for 'meat' (e.g. german 'Fleich') --></sense>
+            <sense corresp="http://dbpedia.org/resource/Category:Meat">
+               <!-- find uri for 'meat' (e.g. german 'Fleich') -->
+            
+            </sense>
          </entry>
          <!-- this item can inflect for person, thus this 'form' may need to be given @ 'lemma'; Need to review language data and definitions before making decision.-->
          <!-- Human-Body (Meronymy): kuñu chaa-->
@@ -1586,8 +1590,9 @@
                    xml:id="foot-PRIME"
                    ana="#PRIME">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-               <cit type="example" xml:lang="mix">
-                  <quote>¿A tsinu kue <hi rend="bold">tsa'a</hi> kiti?</quote>
+               
+               <cit type="example">
+                  <quote xml:lang="mix">¿A tsinu kue <oRef>tsa'a</oRef> kiti?</quote>
                   <ptr source="SIL_docs/L097/L097-tok.xml"/>
                </cit>
                <etym/>
@@ -2455,18 +2460,19 @@
             <sense corresp="http://dbpedia.org/resource/Aztec">
                <usg type="dom"
                     corresp="http://dbpedia.org/resource/Indigenous_peoples_of_Mexico">Indigenous_peoples_of_Mexico</usg>
-               <etym type="compounding">
-                  <cit type="etymon">
-                     <orth corresp="#people-offspring">se'e</orth>
-                  </cit>
-                  <cit type="etymon">
-                     <orth corresp="#Mexico">nkoyo</orth>
-                  </cit>
-               </etym>
+               <xr type="synonym">azteka</xr>
                <cit type="translation" xml:lang="en">
                   <orth>aztec</orth>
                </cit>
             </sense>
+            <etym type="compounding">
+               <cit type="etymon">
+                  <orth corresp="#people-offspring">se'e</orth>
+               </cit>
+               <cit type="etymon">
+                  <orth corresp="#Mexico">nkoyo</orth>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="oaxacan" type="compound">
             <form type="lemma">
@@ -2651,20 +2657,24 @@
             <form type="lemma">
                <orth>sa'an ntavi</orth>
                <pron notation="ipa">sáʔà nd̪ávì</pron>
-               <pron notation="zsampa">s a_R ? a_F s a_F v i_R</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Mixtepec_Mixtec">
                <usg type="dom" corresp="http://dbpedia.org/resource/Language">Language</usg>
-               <etym type="blending">
-                  <cit type="etymon">
+               <xr type="synonym" corresp="#MIX-language-rain">sa'an savi</xr>
+               <usg type="plev" resp="#TS">dispreferred</usg>
+               <note resp="#TS #JB">This term which translates as "poor language" is dispreferred by speakers consulted as it is derrogatory. This is so particularly in contrast to the term for the Spanish language which translates as "fancy language".</note>
+               
+               <etym type="compounding">
+                  <cit type="etymon"><!-- head of the phrase -->
                      <pron corresp="#language"/>
                   </cit>
                   <etym type="metonymy">
+                     <desc>The assumption in the use of this term is that those that speak this language are poor.</desc>
                      <cit type="etymon">
-                        <pron corresp="#poor">nd̪á.vì</pron>
+                        <orth corresp="#poor" xml:lang="mix">ntavi</orth>
                         <def>poor</def>
                      </cit>
                   </etym>
@@ -6522,7 +6532,7 @@
          </entry>
          <!-- End Cactus -->
          <!-- Natural Entities-Vegitation(edible)-FRUIT -->
-         <entry xml:id="fruit">
+         <entry xml:id="fruit-MIX">
             <form type="lemma">
                <orth>kui'i</orth>
                <pron notation="ipa">kʷìʔí</pron>
@@ -6549,13 +6559,25 @@
                   <pron notation="ipa">nʧèʔé</pron>
                </form>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense>
-               <usg type="dom">Fruit</usg>
-               <cit type="translation" xml:lang="en">
-                  <orth>peach</orth>
+            <sense> 
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf" corresp="#fruit-MIX">Fruit</xr>
+               <xr type="hyponymOf" corresp="#fruit-MIX" xml:lang="mix">kui'i</xr>
+               
+               <def xml:lang="mix" source="/SIL_docs/cruxigramas-2014/Cruxigramas-tei.xml">
+                  In kui'i ntikuaan kui ra titsia inkaa in tintuu.
+               </def>          
+
+               <cit type="translation">
+                  <orth xml:lang="en">peach</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">durazno</orth>
                </cit>
             </sense>
          </entry>
@@ -6565,13 +6587,18 @@
                <pron notation="ipa">nʤiká</pron>
                <pron notation="zsampa">(dZ)_n\ i_M k a_R</pron>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
                <usg type="dom">Fruit</usg>
-               <cit type="translation" xml:lang="en">
-                  <orth>plantain</orth>
+              
+               
+               <cit type="translation">
+                  <orth xml:lang="en">plantain</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">platano</orth>
                </cit>
             </sense>
          </entry>
@@ -6949,8 +6976,9 @@
                <usg type="dom">typeOf-Food-Dairy-Creme</usg>
                <etym>
                   <lbl>source:</lbl>
-                  <lang>Spanish</lang>
-                  <pron>'krɛma</pron>
+                  <cit type="etymon">
+                     <lang>Spanish</lang>
+                  <pron>'krɛma</pron></cit>
                </etym>
                <cit type="translation" xml:lang="en">
                   <orth>creme</orth>
@@ -7250,7 +7278,8 @@
          </entry>
          <entry xml:id="num-11" type="compound">
             <form type="lemma">
-               <orth>
+               <orig>utsi in</orig>
+               <orth type="segmented">
                   <seg>utsi</seg>
                   <seg>in</seg>
                </orth>
@@ -7263,10 +7292,7 @@
                   <seg>i:_n_H</seg>
                </pron>
                <form type="variant">
-                  <orth type="antiquated">
-                     <seg>utsi</seg>
-                     <seg>iin</seg>
-                  </orth>
+                  <orth type="antiquated">utsi iin</orth>
                </form>
                <gramGrp>
                   <pos>cardinalNumber</pos>
@@ -7307,6 +7333,7 @@
                   </cit>
                   <cit type="etymon">
                      <orth corresp="#num-2">uvi</orth>
+                     <def>two</def>
                   </cit>
                </etym>
                <cit type="translation" xml:lang="en">
@@ -8722,7 +8749,7 @@
          </entry>
          <entry xml:id="num-67">
             <form type="lemma">
-               <orth>uni <seg>xico</seg> utsa</orth>
+               <orth>uni xiko utsa</orth>
             </form>
             <sense>
                <usg type="dom">CardinalNumber</usg>
@@ -8747,7 +8774,7 @@
          </entry>
          <entry xml:id="num-68">
             <form type="lemma">
-               <orth>uni <seg>xico</seg> una</orth>
+               <orth>uni xiko una</orth>
             </form>
             <sense>
                <usg type="dom">CardinalNumber</usg>
@@ -9124,7 +9151,7 @@
                      <pos>noun</pos>
                   </gramGrp>
                </sense>
-               <usg type="dom">Color-Primary-Blue</usg>
+               <usg type="dom">Color</usg>
                <cit type="translation" xml:lang="en">
                   <orth>blue</orth>
                </cit>
@@ -9148,8 +9175,10 @@
                      <pos>noun</pos>
                   </gramGrp>
                </sense>
-               <usg type="dom">Color-Blue-Violet</usg>
-               <etym type="blending">Blend: <cit type="etymon">
+               <usg type="dom">Color</usg>
+               <etym type="blending">
+                  <desc>Blend:</desc>
+                  <cit type="etymon">
                      <pron notation="ipa" corresp="#blue">nʤáá</pron>
                      <def>blue</def>
                   </cit>
@@ -9256,7 +9285,7 @@
                <pron notation="zsampa">(dZ)_n\ a:_H k_w i_F J i_R</pron>
             </form>
             <sense>
-               <usg type="dom">Color-Turquoise-Blue</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="turquoise-blue-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9289,7 +9318,7 @@
                <pron notation="zsampa">k_w a:_n_F k_w a_H ? a_L</pron>
             </form>
             <sense>
-               <usg type="dom">Color-TypeSecondary-YellowOrange</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="yellow-orange-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9306,7 +9335,7 @@
                      <def>yellow</def>
                   </cit>
                   <cit type="etymon">
-                     <pron notation="ipa" corresp="#red">kwá.ʔà</pron>
+                     <pron notation="ipa" corresp="#red">kwáʔà</pron>
                      <def>red</def>
                   </cit>
                </etym>
@@ -9322,7 +9351,7 @@
                <pron notation="zsampa">k_w a_H ? a_L k_w a:_n_F</pron>
             </form>
             <sense>
-               <usg type="dom">Color-TypeSecondary-OrangeYellow</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="orange-yellow-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9357,7 +9386,7 @@
                <pron notation="zsampa">k_w i_F J i_R (dZ)_n\ a:_H</pron>
             </form>
             <sense>
-               <usg type="dom">Color-Turquoise-Green</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="turquoise-green-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9402,7 +9431,7 @@
                      <pos>noun</pos>
                   </gramGrp>
                </sense>
-               <usg type="dom">Color-Green</usg>
+               <usg type="dom">Color</usg>
                <cit type="translation" xml:lang="en">
                   <orth>green</orth>
                </cit>
@@ -9453,7 +9482,7 @@
                </form>
             </form>
             <sense>
-               <usg type="dom">Color-Yellow-Green</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="yellow-green-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9486,7 +9515,7 @@
                <pron notation="zsampa">k_w a:_n_F</pron>
             </form>
             <sense>
-               <usg type="dom">Color-Primary-Yellow</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="yellow-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9553,7 +9582,7 @@
                </form>
             </form>
             <sense>
-               <usg type="dom">Color-Shade-Black</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="black-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9587,7 +9616,7 @@
                </form>
             </form>
             <sense>
-               <usg type="dom">Color-Shade-Black-Grey</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="black-grey-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9628,7 +9657,7 @@
                </form>
             </form>
             <sense>
-               <usg type="dom">Color-Shade-Grey-Black</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="grey-black-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -9662,7 +9691,7 @@
                <pron notation="zsampa">j a_R ? a_</pron>
             </form>
             <sense>
-               <usg type="dom">Color-Shade-Grey</usg>
+               <usg type="dom">Color</usg>
                <sense xml:id="grey-ADJ">
                   <gramGrp>
                      <pos>adj</pos>
@@ -10466,10 +10495,14 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">typeOf-Container-Cup</usg>
+               <usg type="dom">typeOf-Container</usg>
+               <xr type="">Container</xr>
                <etym/>
-               <cit type="translation" xml:lang="en">
-                  <orth>cup</orth>
+               <cit type="translation">
+                  <orth xml:lang="en">cup</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">vaso</orth>
                </cit>
             </sense>
          </entry>
@@ -10480,11 +10513,17 @@
                <pron notation="ipa">nàmá</pron>
                <pron notation="zsampa">n a_L m á</pron>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="dom">Product-usedFor-Hygene</usg>
-               <etym/>
-               <cit type="translation" xml:lang="en">
-                  <orth>soap</orth>
+               <usg type="dom">Hygene</usg>
+               
+               <cit type="translation">
+                  <orth xml:lang="en">soap</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">jabón</orth>
                </cit>
             </sense>
          </entry>
@@ -10553,7 +10592,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">typeOf-Clothing-Shirt</usg>
+               <usg type="dom">typeOf-Clothing</usg>
                <etym/>
                <cit type="translation" xml:lang="en">
                   <orth>shirt</orth>
@@ -10951,8 +10990,10 @@
                </cit>
             </sense>
             <etym type="borrowing">
-               <orth xml:lang="es">enero</orth>
-               <pron xml:lang="es">e.'ne.ro</pron>
+               <cit type="etymon">
+                  <orth xml:lang="es">enero</orth>
+                  <pron xml:lang="es">e.'ne.ro</pron>
+               </cit>
             </etym>
             <!-- encyclopedic knowledge: get MIX version 'January is the first month (of the year)' -->
          </entry>
@@ -10972,8 +11013,9 @@
                </cit>
             </sense>
             <etym type="borrowing">
-               <orth xml:lang="es">febrero</orth>
-               <pron xml:lang="es">fe.'bre.ro</pron>
+               <cit type="etymon">
+                  <orth xml:lang="es">febrero</orth>
+               <pron xml:lang="es">fe.'bre.ro</pron></cit>
             </etym>
             <!-- encyclopedic knowledge: get MIX version 'February is the second month (of the year)' -->
          </entry>
@@ -10993,8 +11035,8 @@
                </cit>
             </sense>
             <etym type="borrowing">
-               <orth xml:lang="es">marso</orth>
-               <pron xml:lang="es">'mar.so</pron>
+               <cit type="etymon"><orth xml:lang="es">marso</orth>
+               <pron xml:lang="es">'mar.so</pron></cit>
             </etym>
             <!-- encyclopedic knowledge: get MIX version 'March is the third month (of the year)' -->
          </entry>
@@ -11055,7 +11097,7 @@
                </cit>
             </sense>
             <etym type="borrowing">
-               <pron xml:lang="es"/>
+               <cit type="etymon"><pron xml:lang="es"/></cit>
             </etym>
             <!-- encyclopedic knowledge: get MIX version 'June is the sixth month (of the year)' -->
          </entry>
@@ -11520,9 +11562,11 @@
          <entry xml:id="DET-INDEF-SG">
             <form type="lemma">
                <orth>in</orth>
-               <orth>iin</orth>
                <pron notation="ipa">ĩ́ĩ́</pron>
                <pron notation="zsampa">i:_n_H</pron>
+               <form type="variant">
+                  <orth notAfter="2012">iin</orth>
+               </form>
                <gramGrp>
                   <pos/>
                </gramGrp>
@@ -11572,10 +11616,26 @@
                </gramGrp>
             </form>
             <sense>
-               <usg/>
-               <etym/>
-               <cit type="translation" xml:lang="en">
-                  <orth>that</orth>
+               <cit type="translation">
+                  <orth xml:lang="en">that</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">aquel, aquella</orth>
+               </cit>
+            </sense>
+            <sense>
+               <usg type="dom">Space</usg>
+               <cit type="translation">
+                  <orth xml:lang="en">there</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">allí</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">ahí</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">allá</orth>
                </cit>
             </sense>
          </entry>
@@ -11625,20 +11685,26 @@
                <pron notation="ipa">jóʔò</pron>
                <pron notation="zsampa">j o_R ? o_F</pron>
                <gramGrp>
-                  <pos/>
+                  <pos>dem</pos>
                </gramGrp>
             </form>
             <sense>
                <usg/>
-               <etym/>
                <sense>
-                  <cit type="translation" xml:lang="en">
-                     <orth>this</orth>
+                  <cit type="translation">
+                     <orth xml:lang="en">this</orth>
+                  </cit>
+                  <cit type="translation">
+                     <orth xml:lang="es">este, esta</orth>
                   </cit>
                </sense>
-               <sense ana="DEM-LOC-PROX"><!--<usg type="dom"></usg>-->
-                  <cit type="translation" xml:lang="en">
-                     <orth>here</orth>
+               <sense ana="DEM-LOC-PROX">
+                  <usg type="dom">Space</usg>
+                  <cit type="translation">
+                     <orth xml:lang="en">here</orth>
+                  </cit>
+                  <cit type="translation">
+                     <orth xml:lang="es">aquí</orth>
                   </cit>
                </sense>
             </sense>
@@ -11770,21 +11836,51 @@
                   <pron notation="zsampa">v i_M (tS) i_M</pron>
                </form>
                <gramGrp>
-                  <pos/>
+                  <pos>adv-temp</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg/>
-               <etym/>
-               <cit type="translation" xml:lang="en">
-                  <orth>currently, now</orth>
+               <usg type="dom">Time</usg>
+               <cit type="translation">
+                  <orth xml:lang="es">ahora</orth>
                </cit>
-               <cit type="example" xml:lang="mix">
-                  <quote>skuachi ñami <hi rend="bold">vichi</hi>
-                  </quote>
+               <cit type="translation">
+                  <orth xml:lang="es">en este momento</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="en">now</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="en">currently</orth>
+               </cit>
+               
+               <cit type="example">
+                  <quote xml:lang="mix">skuachi ñami <hi rend="bold">vichi</hi></quote>
                   <ptr target="#S_chop_1s_yams_today_01_02_JS.wav"/>
                </cit>
             </sense>
+            <re xml:id="rapidly-ADV-MIX">
+               <form type="lemma" subtype="MWE">
+                  <orth xml:lang="mix">vichi vichi</orth>
+               </form>
+               <gramGrp>
+                  <pos>adv</pos>
+               </gramGrp>
+               <sense>
+                  <cit type="translation">
+                     <orth xml:lang="en">quick</orth>
+                  </cit>
+                  <cit type="translation">
+                     <orth xml:lang="en">quickly</orth>
+                  </cit>
+                  <cit type="translation">
+                     <orth xml:lang="es">rápido</orth>
+                  </cit>
+                  <cit type="translation">
+                     <orth xml:lang="es">rápidamente</orth>
+                  </cit>
+               </sense>
+            </re>
          </entry>
          <!--  DEM-TEMP-cit-PREV -->
          <entry xml:id="CONJ-SUBRD-TEMP">
@@ -11847,7 +11943,7 @@
                <pron notation="ipa">kánì</pron>
                <pron notation="zsampa">k a_H n i_L</pron>
                <gramGrp>
-                  <pos/>
+                  <pos>adv</pos>
                </gramGrp>
             </form>
             <sense>
@@ -11898,7 +11994,7 @@
             </form>
             <sense>
                <usg/>
-               <etym/>
+               <etym><!-- "koo" (neg-cop) + "na" (pers-gen) --></etym>
                <cit type="translation" xml:lang="en">
                   <orth>nobody</orth>
                </cit>
@@ -11967,7 +12063,9 @@
                <pron notation="ipa">nd̪íʔì</pron>
                <pron notation="ipa">nt̪íʔì</pron>
                <pron notation="zsampa">d_n\ i_R ? i_F</pron>
-               <gramGrp><!--  --></gramGrp>
+               <gramGrp>
+                  <pos></pos>
+               </gramGrp>
             </form>
             <sense style="http://dbpedia.org/resource/Everything">
                <usg/>
@@ -12064,7 +12162,7 @@
          </entry>
          <entry xml:id="Copula-Incompletive">
             <form type="lemma">
-               <orth>ku</orth>
+               <orth>kuu</orth>
                <form type="variant">
                   <pron notation="ipa">kùù</pron>
                   <pron notation="zsampa">k u:_F</pron>
@@ -12116,13 +12214,15 @@
                <orth>inkaa</orth>
                <!-- this is the orthographic form of lemma but I'm not sure of tones -->
                <gramGrp>
-                  <pos>CopulaLocative</pos>
+                  <pos>copulaLocative</pos>
                </gramGrp>
+               
                <form type="inflected">
                   <orth>
                      <seg>inkaa</seg>
                      <seg>yu</seg>
                   </orth>
+                  
                   <pron notation="ipa">
                      <seg>ŋk̬àa</seg>
                      <seg>jù</seg>
@@ -12140,8 +12240,7 @@
                <!-- other forms -->
                <form type="inflected">
                   <orth>inkaa</orth>
-                  <pron notation="ipa">ŋk̬à<seg>á</seg>
-                  </pron>
+                  <pron notation="ipa">ŋk̬àá</pron>
                   <gramGrp>
                      <per>3rd</per>
                      <number>sg</number>
@@ -12154,8 +12253,12 @@
                <!-- other forms -->
             </form>
             <sense>
-               <cit type="translation" xml:lang="en">
-                  <orth>to be located</orth>
+               
+               <cit type="translation">
+                  <orth xml:lang="en">to be located</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">estar</orth>
                </cit>
             </sense>
          </entry>
@@ -12251,7 +12354,7 @@
                </sense>
                <sense xml:id="tsi-CONJ-COORD">
                   <gramGrp>
-                     <gram>CONJ-COORD-MIX</gram>
+                     <gram>CONJ-COORD</gram>
                   </gramGrp>
                   <cit type="translation" xml:lang="en">
                      <orth>and</orth>
@@ -12351,7 +12454,7 @@
                    
                    (top Of(lm)) xini, ʃì.ní, S i_F n i_R
                    -->
-         <entry xml:id="V-do-make-MIX"><!-- ASK LAURENT ABOUT 'PARADIGM' so that the inflected forms can be grouped by particular feature -->
+         <entry xml:id="V-do-make-MIX">
             <form type="lemma">
                <orth>sava'a</orth>
                <gramGrp>
@@ -12363,8 +12466,7 @@
                      <seg>sava'a</seg>
                      <seg>yu</seg>
                   </orth>
-                  <pron notation="ipa">saváʔ<seg>à</seg>
-                  </pron>
+                  <pron notation="ipa">saváʔà</pron>
                   <gramGrp>
                      <per>1</per>
                      <num>sg</num>
@@ -12599,8 +12701,12 @@
             <sense><!--find uri 'touch' (or) 'kinestetic' -->
                <usg type="dom" corresp="http://dbpedia.org/resource/Category:Senses">Senses</usg>
                <!-- (check if exists)                <usg type="dom" corresp="http://dbpedia.org/resource/Category:Touch">Touch</usg>-->
+               
                <cit type="translation" xml:lang="en">
                   <orth>touch</orth>
+               </cit>
+               <cit type="translation" xml:lang="es">
+                  <orth>tocar</orth>
                </cit>
             </sense>
          </entry>
@@ -12815,7 +12921,8 @@ Activity
                   <pos/>
                   <!-- feel'(x,[happy']) -->
                </gramGrp>
-               <form type="paradigm"><!-- separates; (tens: present, aspect:realis) as conjugations; gramGrp applies to all nested inflected forms (form type="inflected") -->
+               <form type="paradigm">
+                  <!-- separates; (tens: present, aspect:realis) as conjugations; gramGrp applies to all nested inflected forms (form type="inflected") -->
                   <gramGrp>
                      <tns>pres</tns>
                      <gram type="aspect" cert="medium">realis</gram>
@@ -12827,8 +12934,9 @@ Activity
                         <seg>kuacha</seg>
                         <seg>yu</seg>
                      </orth>
-                     <pron notation="ipa" cert="low">
-                        <seg>kwáchá<seg ana="#TONE">à</seg>
+                     <pron notation="ipa">kwátʃáà</pron>
+                     <pron notation="ipa" cert="low" type="segmented">
+                        <seg>kwátʃá<seg ana="#TONE">à</seg>
                         </seg>
                      </pron>
                      <pron notation="zsampa">
@@ -12837,7 +12945,7 @@ Activity
                      </pron>
                      <gramGrp>
                         <per>1</per>
-                        <number>s</number>
+                        <number>sg</number>
                         <!-- feel'(1s,[happy']) -->
                      </gramGrp>
                   </form>
@@ -12857,7 +12965,7 @@ Activity
                      </pron>
                      <gramGrp>
                         <per>2</per>
-                        <number>s</number>
+                        <number>sg</number>
                         <usg type="register">inf</usg>
                         <!-- feel'(2s.inf,[happy']) -->
                      </gramGrp>
@@ -12878,7 +12986,7 @@ Activity
                      </pron>
                      <gramGrp>
                         <per>2</per>
-                        <number>s</number>
+                        <number>sg</number>
                         <usg type="register">form</usg>
                         <!-- feel'(2s.form,[happy']) -->
                      </gramGrp>
@@ -12909,7 +13017,7 @@ Activity
                      </pron>
                      <gramGrp>
                         <per>1</per>
-                        <number>s</number>
+                        <number>sg</number>
                         <!-- PAST [feel'(1s,[happy'])]  -->
                      </gramGrp>
                   </form>
@@ -13009,11 +13117,13 @@ Activity
                   <seg>ndakaniinì</seg>
                   <seg>nʤóʔà</seg>
                </pron>
+               
                <pron notation="zsampa">
                   <seg>d_n\ a_L k a_L n i_F ? i_R n i_F</seg>
                   <seg>(dZ)_n\ o_R ? a_F</seg>
                </pron>
-               <form type="variant"><!-- (@subtype)? -->
+               
+               <form type="variant">
                   <pron notation="ipa">
                      <seg>ndakaninì</seg>
                      <seg>nʤóʔà</seg>
@@ -13023,6 +13133,7 @@ Activity
                      <seg>(dZ)_n\ o_R ? a_F</seg>
                   </pron>
                </form>
+               
                <form type="inflected">
                   <orth>
                      <seg>ntakani'ini</seg>
@@ -13061,7 +13172,7 @@ Activity
          <entry xml:id="angry-MIX">
             <form type="lemma">
                <orth>ntasaa</orth>
-               <pron notation="ipa">ndasàá</pron>
+               <pron notation="ipa">nt̪̬asàá</pron>
                <pron notation="zsampa">d_n\ a_M s a:_F_R</pron>
                <gramGrp>
                   <pos>verb</pos>
@@ -13069,7 +13180,7 @@ Activity
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">emotional_States</usg>
+               <usg type="dom">Emotion</usg>
                <!-- logical structure: -->
                <cit type="translation" xml:lang="en">
                   <orth>to become angry</orth>
@@ -13135,7 +13246,7 @@ Emotional Actions:
                   <pron notation="ipa">ndakaninì</pron>
                   <pron notation="zsampa">d_n\ a_M k a_L n i_R n i_F</pron>
                   <gramGrp>
-                     <usg type="demographic">youth</usg>
+                     <usg type="demographic" cert="medium">youth</usg>
                   </gramGrp>
                </form>
                <gramGrp>
@@ -13153,7 +13264,6 @@ Emotional Actions:
                      <pron/>
                      <gramGrp>
                         <pos>prefix</pos>
-                        <!-- not sure about this, may be a particle -->
                         <gram type="aspect">repetitive</gram>
                      </gramGrp>
                      <def/>
@@ -14263,6 +14373,70 @@ Emotional Actions:
                </cit>
             </etym>
          </entry>
+         <entry xml:id="drink-V-MIX">
+            <form type="lemma">
+               <orth>ko'o</orth>
+               <pron notation="ipa">kóʔō</pron>
+               <ptr type="inflectionParadigm" target="#file:/test/sample-full-verb-paradigm-dict-entry.xml"/><!-- link to full paradigm!!! -->
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
+            
+            <sense>
+               <usg type="dom">BiologicalNeed</usg>
+               <usg type="dom">Ingestion</usg>
+               <!--  generic relation to 'katsi' ("to eat")-->
+               <!-- predicate & valency structure!!?? -->
+  
+               <cit type="translation">
+                  <orth xml:lang="en">drink</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">beber</orth>
+               </cit>
+               <sense>
+               <gramGrp>
+                  <gram type="transitivity">trans</gram><!-- semantic and syntactically transitive -->
+               </gramGrp>
+            
+               <cit type="example">
+                  <quote xml:lang="mix">Michu'ni tsí'i chikuii.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">I'm drinking water now.</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Ahora estoy bebendo agua.</quote>
+                  </cit>
+               </cit>
+            </sense>
+            <sense>
+               <!-- activity -->
+               <gramGrp>
+                  <gram type="transitivity">intrans</gram><!-- semantically transitive and syntactically intransitive -->
+               </gramGrp>
+
+               <!-- predicate  -->
+               <!-- link to full paradigm!!! -->
+               
+               <cit type="example">
+                  <quote xml:lang="mix">Michu'ni tsí'i.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">I'm drinking right now.</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Ahora estoy bebendo.</quote>
+                  </cit>
+               </cit>
+               
+            </sense>
+            </sense>
+            
+         </entry>
+         
+         
+         
+         
          <!-- across 'inkaatsio' COP-LOC+(ADPOS-CONFIG-UNK)+DEM-DIST -->
          <!--
 (1.s) mee, méé, m e:_R
