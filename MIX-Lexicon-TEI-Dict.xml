@@ -475,16 +475,11 @@
                manually however future versions will be made using XSLT processes that mine all
                transcribed, written and glossed MIX data. </p>
          </editorialDecl>
-         <!--  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="FeatureStructures-Ontologies/Lexical_Features-MIX/MIX-Lexical_Feature_Inventory-TEI-fsdDecl.xml"/> 
-          <fsdDecl>
-            <fsdLink type="LexicalFeatures" target="feature-structures/MIX-Lexical_Feature_Inventory-TEI-fsdDecl.xml"/>
-         </fsdDecl>
-         -->
-         <ab>
-            <label/>
-         </ab>
+    <listPrefixDef>
+       <prefixDef ident="paradigm" matchPattern="paradigm([a-zA-Z0-9]+)-V-paradigm-MIX" replacementPattern="../MIX-Paradigms.xml#$"/>
+    </listPrefixDef>
       </encodingDesc>
-      <!-- 
+
       <revisionDesc>
          <change who="#JTB" when-iso="2014-09-21">New entries added, <gi>elementSpec</gi>
             descriptions and elements refined. Entries for numbers further developed and
@@ -540,7 +535,7 @@
             @type=form</change>
 
       </revisionDesc>
-       -->
+
    </teiHeader>
    <text xml:lang="mix">
       <body><!--
@@ -598,7 +593,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">LivingBeing-Human</usg>
+               <usg type="dom">Human</usg>
                <cit type="translation" xml:lang="en">
                   <orth>people</orth>
                </cit>
@@ -676,9 +671,11 @@
                
                <cit type="translation">
                   <orth xml:lang="en">woman</orth>
+                  <ptr corresp="https://en.wiktionary.org/wiki/woman"/>
                </cit>
                <cit type="translation">
                   <orth xml:lang="es">mujer</orth>
+                  <ptr corresp="https://es.wiktionary.org/wiki/mujer"/>
                </cit>
             </sense> 
          </entry>
@@ -845,7 +842,7 @@
                <usg type="relationalSemantics" ana="#LM">LM</usg>
             </sense>
             <etym type="inheritance">
-               <desc resp="#JB">The consistancy of the form of the cognate lexical item meaning "head" in the varieties of Mixtec listed below:</desc>
+               <desc>The consistancy of the form of the cognate lexical item meaning "head" in the varieties of Mixtec listed below:</desc>
                <cit type="etymon" xml:lang="proto-mix" cert="medium"><!-- NO ISO TAG FOR (proto-mixtecan) -->
                   <lang>Proto-Mixtecan</lang>
                   <pron resp="#JB">*ʃīnī</pron>
@@ -853,27 +850,27 @@
                <cit type="cognate" xml:lang="mig">
                   <lang>Chalcatongo Mixtec</lang>
                   <usg type="geo"><placeName>(San Miguel El Grande)</placeName></usg>
-                  <pron notation="trans-macaulay-mig">šinì</pron>
+                  <form><pron notation="trans-macaulay-mig">šinì</pron></form>
                   <ref type="source" target="#Macaulay-ChalcatongoMixtec-1996">(Macaulay, 1996)</ref>
                </cit>
                <cit type="cognate" xml:lang="miy">
                   <lang>Ayutla Mixtec</lang>
-                  <pron notation="trans-hill-1990-miy">shīhih</pron>
+                  <form><pron notation="trans-hill-1990-miy">shīhih</pron></form>
                   <ref target="#Hills-AyutlaMixtec-1990">(Hills, 1990)</ref>
                </cit>
                <cit type="cognate" xml:lang="miz"><!-- Coatzospan Mixtec -->
                   <lang>Coatzospan Mixtec</lang>
-                  <pron notation="trans-smll-miz">rkɨ</pron>
+                  <form><pron notation="trans-smll-miz">rkɨ</pron></form>
                   <ref target="#Small-CoatzospanMix-1990">(Small, 1990)</ref>
                </cit>
                <cit type="cognate" xml:lang="smd"><!--  Mixtec -->
                   <lang>San Martín Duraznos</lang>
-                  <pron notation="ipa">ʃīɲī</pron>
+                  <form><pron notation="ipa">ʃīɲī</pron></form>
                   <ref target="#Padgett-2017">(Padget, 2017)</ref>
                </cit>
                <cit type="cognate" xml:lang="gna"><!--  Mixtec -->
                   <lang>Guadalupe Nundaca</lang>
-                  <pron notation="ipa">ʃīɲī</pron>
+                  <form><pron notation="ipa">ʃīɲī</pron></form>
                   <ref target="#Padgett-2017">(Padget, 2017)</ref>
                </cit>
                <cit type="cognate" xml:lang="src"><!--  Mixtec -->
@@ -883,22 +880,22 @@
                </cit>
                <cit type="cognate" xml:lang="sca"><!--  Mixtec -->
                   <lang>Santa Catarina Noltepec</lang>
-                  <pron notation="ipa">ʃīɲī</pron>
+                  <form><pron notation="ipa">ʃīɲī</pron></form>
                   <ref target="#Padgett-2017">(Padget, 2017)</ref>
                </cit>
                <cit type="cognate" xml:lang="smc"><!--  Mixtec -->
                   <lang>San Miguel Cuevas</lang>
-                  <pron notation="ipa">ʃīɲī</pron>
+                  <form><pron notation="ipa">ʃīɲī</pron></form>
                   <ref target="#Padgett-2017">(Padget, 2017)</ref>
                </cit>
                <cit type="cognate" xml:lang="yuc"><!--  Mixtec -->
                   <lang>Yucunicoco</lang>
-                  <pron notation="ipa">ʃīɲī</pron>
+                  <form><pron notation="ipa">ʃīɲī</pron></form>
                   <ref target="#Padgett-2017">(Padget, 2017)</ref>
                </cit>
                <cit type="cognate" xml:lang="coi"><!--  Mixtec -->
                   <lang>Coicoyán de las Flores</lang>
-                  <pron notation="ipa">ʃìnǐ</pron>
+                  <form><pron notation="ipa">ʃìnǐ</pron></form>
                   <ref target="#Padgett-2017">(Padget, 2017)</ref>
                </cit>
             </etym>
@@ -936,56 +933,113 @@
                </cit>
             </sense>
          </entry>
+         
          <entry xml:id="body-face">
             <form type="lemma">
                <orth>nuu</orth>
                <pron notation="ipa">nũ̀ṹ</pron>
-               <pron notation="zsampa">n u:_n_F</pron>
                <gramGrp>
                   <pos>concreteNoun</pos>
                </gramGrp>
             </form>
-            <sense xml:id="face-PRIME" corresp="http://dbpedia.org/page/Category:Face">
+            
+            <sense xml:id="face-PRIME" corresp="http://dbpedia.org/page/Category:Face" n="1">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-               <!-- add 'frontal configuration' unless it is already in dbpedia entry for 'face' -->
+               
+               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               <!-- should I specify "meronymOf: (BODY or HEAD) or both!? -->
+               
+               <cit type="translation">
+                  <orth xml:lang="en">face</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">cara</orth>
+               </cit>
+            </sense>
+            
+            <sense xml:id="face-regionOfLM" n="2">
+               <graphic url=" SIL_docs/L157/L157-06-cld.png">
+                  <desc xml:lang="en">The image shows the front part of the houses colored yellow.</desc>
+                  <desc xml:lang="mix"/>
+               </graphic>
+               
+               <def xml:lang="en">The front of (sth).</def> 
+               <def xml:lang="es">La parte delantera de (algo).</def>
+               <def xml:lang="mix"/>
+              
+               <cit type="example">
+                  <quote xml:lang="mix">nuu ve'e</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">the front of the house</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">parte delantera de la casa</quote>
+                  </cit>
+               </cit>
+
+               <usg type="dom">Space</usg>
+               <usg type="dom">spatialRelations</usg>
+               <!-- usg (type for TR?) -->
+               <xr type="meronymOf">LM</xr>
+               
+               <gramGrp>
+                  <pos>relationNoun</pos>
+                  <colloc norm="landmark">LM</colloc>
+               </gramGrp>
+
+               <cit type="example">
+                  <orth xml:lang="mix">nuu ve'e</orth>
+                  <cit type="translation">
+                     <orth xml:lang="en">the front of the house</orth>
+                  </cit>
+                  <cit type="translation">
+                     <orth xml:lang="es">parte delantera de la casa</orth>
+                  </cit>
+               </cit>
+               
+                  <etym type="metaphor">
+                     <seg type="desc" xml:lang="en">active zone source profile (aka Ontological Knowledge/Impetus):Relative configuration of the part FACE relative to (LM) BODY. FRONT-REGION partOf BODY<![CDATA[&gt;]]> FRONT-REGION partOf OBJECT</seg>
+                     
+                     <cit type="etymon" corresp="#face-PRIME">
+                        <orth xml:lang="mix">nuu</orth>
+                        <sense>
+                           <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+                           <xr type="meronymOf"><ref target="#body-face" xml:lang="mix"></ref></xr>
+                           <xr type="meronymOf"><ref target="#body-face" xml:lang="en"></ref></xr>
+                           <gloss xml:lang="en">face</gloss>
+                           <gloss xml:lang="en">cara</gloss>
+                        </sense>
+                     </cit>
+                  </etym>
+            </sense>
+            
+            <sense xml:id="face-adjacentSpace-Body" n="3"><!-- metonymy 1 -->
+               
                <cit type="translation" xml:lang="en">
                   <orth>face</orth>
                </cit>
                <cit type="translation" xml:lang="es">
                   <orth>cara</orth>
                </cit>
-            </sense>
-            <sense xml:id="face-regionOfLM">
-               <usg type="dom">spatialRelations</usg>
-               <gramGrp>
-                  <pos>relationNoun</pos>
-                  <colloc>LM</colloc>
-               </gramGrp>
-               <etym type="grammaticalization"><!-- metaphor 1 -->
-                  <etym type="metaphor">
-                     <cit type="etymon">
-                        <orth>nuu</orth>
-                        <pron>nũ̀ṹ</pron>
-                     </cit>
-                     <desc>active zone source profile (aka Ontological Knowledge/Impetus): Relative configuration of the part FACE relative to (LM) BODY</desc>
-                  </etym>
-               </etym>
-               <cit type="example" xml:lang="mix">
-                  <quote/>
+               
+               <cit type="example">
+                  <quote></quote>
                </cit>
-            </sense>
-            <sense xml:id="face-adjacentSpace-Body"><!-- metonymy 1 -->
+               
                <etym type="metonymy">
-                  <note>(frontal) regionOfBody &gt; adjacentSpace to (frontal) regionOfBody</note>
+                  <note>FRONT-REGION partOf BODY <![CDATA[&gt;]]> ADJACENT-SPACE to FRONT-REGION OfBody</note>
                   <note>LM must still be Body(of person or animal)</note>
                </etym>
                <cit type="example" xml:lang="mix">
                   <quote/>
                </cit>
             </sense>
+            
             <note> the lemma form can be inflected to reflect: possessive (person, number, ),
                register, Semantic Role (eg. ..) </note>
          </entry>
+         
          <!-- move this when done -->
          <entry xml:id="ADPOS-REL-CONFIG-FRNT">
             <form type="lemma">
@@ -999,6 +1053,7 @@
                <etym/>
             </sense>
          </entry>
+         
          <entry xml:id="body-face-eye" type="compound">
             <form type="lemma">
                <orth>ntuchinuu</orth>
@@ -1009,27 +1064,32 @@
             </form>
             <sense corresp="http://dbpedia.org/resource/Category:Eye">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-               <etym type="compounding">
-                  <etym type="metaphor">
-                     <cit type="etymon">
-                        <orth corresp="#bean">ntuchi</orth>
-                        <def>bean</def>
-                     </cit>
-                  </etym>
-                  <cit type="etymon">
-                     <orth corresp="#face">nũ̀ũ̀</orth>
-                     <gramGrp>
-                        <pos>concreteNoun</pos>
-                     </gramGrp>
-                     <def>face</def>
-                  </cit>
-               </etym>
+               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               
                <cit type="translation" xml:lang="en">
                   <orth>eye</orth>
                </cit>
                <cit type="translation" xml:lang="es">
                   <orth>ojo</orth>
                </cit>
+               <etym type="compounding">
+                  <etym type="metaphor">
+                     <cit type="etymon">
+                        <orth corresp="#bean">ntuchi</orth>
+                        <gloss xml:lang="en">bean</gloss>
+                        <gloss xml:lang="es">frijol</gloss>
+                     </cit>
+                  </etym>
+                  <cit type="etymon">
+                     <orth corresp="#face">nũ̀ṹ</orth>
+                     <gramGrp>
+                        <pos>noun</pos>
+                     </gramGrp>
+                     <gloss xml:lang="en">face</gloss>
+                     <gloss xml:lang="es">cara</gloss>
+                  </cit>
+               </etym>
             </sense>
             <cit type="cognate" xml:lang="miy">
                <orth>nduchīh nūuh</orth>
@@ -1079,12 +1139,29 @@
             </form>
             <sense corresp="http://dbpedia.org/resource/Category:Mouth">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-               <cit type="translation" xml:lang="en">
-                  <orth>mouth</orth>
+               <cit type="translation">
+                  <orth xml:lang="en">mouth</orth>
                </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">boca</orth>
+               </cit>               
+            </sense>
+            <sense>
+               <!-- yu'u yucha -->  
+               <usg type="dom">SpatialRegion</usg>
+               <def xml:lang="en">Used in combination with another locational noun to refer to a transitional or border region of that item.</def>
+               
+               <cit type="example">
+                  <quote>Sara ntsai <oRef>yu'u yucha</oRef> ka sara ntsikutanchii nuu yuu ka sara nikitsai tsi'a chikuii.</quote>
+                  <ptr source="../SIL_docs/L150"/>
+               </cit>
+               <etym type="metaphor">
+                  <desc></desc>
+                  <usg type="dom">Body</usg>
+               </etym>
             </sense>
          </entry>
-         <entry xml:id="body-mouth-lip">
+         <entry xml:id="body-mouth-lip" cert="low">
             <form type="lemma">
                <orth>yu'u</orth>
                <pron notation="ipa">júʔú</pron>
@@ -1300,10 +1377,10 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="body-arm-hand">
+         <entry xml:id="arm-hand">
             <form type="lemma">
                <orth>nta'a</orth>
-               <pron notation="ipa">ndáʔà</pron>
+               <pron notation="ipa">ndàʔá</pron>
                <pron notation="zsampa">d_n\ a_R ? a_F</pron>
                <gramGrp>
                   <pos>noun</pos>
@@ -1323,18 +1400,18 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="body-hand-left" type="compound">
+         <entry xml:id="body-hand-left" type="compound" resp="#TS">
             <form type="lemma">
                <orth>
-                  <seg corresp="#body-arm-hand">nta'a</seg>
+                  <seg corresp="#arm-hand">nta'a</seg>
                   <seg corresp="#cardinal-directions-east">sachi</seg>
                </orth>
                <pron notation="ipa">
-                  <seg corresp="#body-arm-hand">ndáʔà</seg>
+                  <seg corresp="#arm-hand">ndáʔà</seg>
                   <seg corresp="#cardinal-directions-east">sáʧì</seg>
                </pron>
                <pron notation="zsampa">
-                  <seg corresp="#body-arm-hand">d_n\ a_H ? a_L</seg>
+                  <seg corresp="#arm-hand">d_n\ a_H ? a_L</seg>
                   <seg corresp="#cardinal-directions-east">s a_H (tS) i_L</seg>
                </pron>
                <gramGrp>
@@ -1361,18 +1438,18 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="body-hand-right" type="compound">
+         <entry xml:id="body-hand-right" type="compound" resp="#TS">
             <form type="lemma">
                <orth>
-                  <seg corresp="#body-arm-hand">nta'a</seg>
+                  <seg corresp="#arm-hand">nta'a</seg>
                   <seg corresp="#cardinal-directions-west">kua'a</seg>
                </orth>
                <pron notation="ipa">
-                  <seg corresp="#body-arm-hand">ndáʔà</seg>
+                  <seg corresp="#arm-hand">ndáʔà</seg>
                   <seg corresp="#cardinal-directions-west">kwáʔà</seg>
                </pron>
                <pron notation="zsampa">
-                  <seg corresp="#body-arm-hand">d_n\ a_H ? a_L</seg>
+                  <seg corresp="#arm-hand">d_n\ a_H ? a_L</seg>
                   <seg corresp="#cardinal-directions-west">k_w a_R ? a_F</seg>
                </pron>
                <gramGrp>
@@ -1384,7 +1461,7 @@
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <etym type="blending">
                   <cit type="etymon">
-                     <pron corresp="#body-arm-hand">ndá.ʔà</pron>
+                     <pron corresp="#arm-hand">ndá.ʔà</pron>
                      <def>hand</def>
                      <def>arm</def>
                   </cit>
@@ -1402,15 +1479,15 @@
             <form type="lemma">
                <orth>
                   <seg corresp="#body-face">nuu</seg>
-                  <seg corresp="#body-arm-hand">nta'a</seg>
+                  <seg corresp="#arm-hand">nta'a</seg>
                </orth>
                <pron notation="ipa">
                   <seg corresp="#body-face">nũ̀ũ̀</seg>
-                  <seg corresp="#body-arm-hand">ndáʔà</seg>
+                  <seg corresp="#arm-hand">ndáʔà</seg>
                </pron>
                <pron notation="zsampa">
                   <seg corresp="#body-face">n u:_n_F</seg>
-                  <seg corresp="#body-arm-hand">d_n\ a_H ? a_L</seg>
+                  <seg corresp="#arm-hand">d_n\ a_H ? a_L</seg>
                </pron>
                <gramGrp>
                   <pos>noun</pos>
@@ -1443,15 +1520,15 @@
             <form type="lemma">
                <orth>
                   <seg corresp="#body-back">sata</seg>
-                  <seg corresp="#body-arm-hand">nta'a</seg>
+                  <seg corresp="#arm-hand">nta'a</seg>
                </orth>
                <pron notation="ipa">
                   <seg corresp="#body-back">sátà</seg>
-                  <seg corresp="#body-arm-hand">ndáʔà</seg>
+                  <seg corresp="#arm-hand">ndáʔà</seg>
                </pron>
                <pron notation="zsampa">
                   <seg corresp="#body-back">s a_R t_d a_F</seg>
-                  <seg corresp="#body-arm-hand">d_n\ a_H ? a_L</seg>
+                  <seg corresp="#arm-hand">d_n\ a_H ? a_L</seg>
                </pron>
                <gramGrp>
                   <pos>concreteNoun</pos>
@@ -1485,25 +1562,28 @@
          </entry>
          <entry xml:id="hand-finger" type="compound">
             <form type="lemma">
+               <orth>xiní nta'a</orth>
                <orth>
                   <seg corresp="#body-head">xini</seg>
-                  <seg corresp="#body-arm-hand">nta'a</seg>
+                  <seg corresp="#arm-hand">nta'a</seg>
                </orth>
                <pron notation="ipa">
                   <seg corresp="#body-head">ʃìní</seg>
-                  <seg corresp="#body-arm-hand">ndáʔà</seg>
+                  <seg corresp="#arm-hand">ndáʔà</seg>
                </pron>
                <pron notation="zsampa">
                   <seg corresp="#body-head">S i_F n i_R</seg>
-                  <seg corresp="#body-arm-hand">d_n\ a_R ? a_F</seg>
+                  <seg corresp="#arm-hand">d_n\ a_R ? a_F</seg>
                </pron>
                <gramGrp>
-                  <pos>concreteNoun</pos>
-                  <!-- concrete -->
+                  <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="ttp://dbpedia.org/resource/Finger">
+            <sense corresp="http://dbpedia.org/resource/Finger">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <xr type="meronymOf"><ref target="#hand-arm" xml:lang="en">hand, arm</ref></xr>
+               <xr type="meronymOf"><ref target="#hand-arm" xml:lang="mix">nta'a</ref></xr>
+               
                <etym type="compounding">
                   <etym type="metaphor">
                      <cit type="etymon">
@@ -1588,7 +1668,7 @@
             </form>
             <sense corresp="http://dbpedia.org/resource/Foot"
                    xml:id="foot-PRIME"
-                   ana="#PRIME">
+                   ana="#PRIME" n="1">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                
                <cit type="example">
@@ -1600,8 +1680,8 @@
                   <orth>foot</orth>
                </cit>
             </sense>
-            <sense>
-               <usg type="dom">SPACE</usg>
+            <sense n="2">
+               <usg type="dom">Space</usg>
                <gramGrp>
                   <pos>adposition</pos>
                </gramGrp>
@@ -1615,7 +1695,7 @@
                </cit>
                <etym/>
             </sense>
-            <sense>
+            <sense n="3">
                <gramGrp><!-- Conjunctive Adverb? -->
                   <pos/>
                   <colloc>TR</colloc>
@@ -1633,7 +1713,7 @@
                </cit>
                <etym/>
             </sense>
-            <sense>
+            <sense n="4">
                <gramGrp>
                   <pos/>
                   <!-- dem-top -->
@@ -1658,58 +1738,74 @@
                   <orth>tsa'a ña</orth>
                </form>
                <gramGrp>
-                  <pos>causative conjunction</pos>
+                  <pos norm="causative conjunction">conj-caus</pos>
                   <!-- conj-caus -->
                </gramGrp>
-               <cit type="example" xml:lang="mix">
-                  <quote>
-                     <hi rend="bold">tsa'a ña</hi> ntsini tixikua ka lochi ra ntavi</quote>
-                  <ptr target="#S_the_swallow_fly_away_COMPL_because_he_saw_a_vulture_01_02_03_TS.wav"/>
+               <cit type="example">
+                  <quote xml:lang="mix"><oRef>tsa'a ña</oRef> ntsini tixikua ka lochi ra ntavi</quote>
+                  <ptr source="#S_the_swallow_fly_away_COMPL_because_he_saw_a_vulture_01_02_03_TS.wav"/>
                </cit>
-               <cit type="translation" xml:lang="en">
-                  <orth>because</orth>
+               <cit type="translation">
+                  <orth xml:lang="en">because</orth>
                </cit>
-               <cit type="translation" xml:lang="es">
-                  <orth>debido a</orth>
-               </cit>
-            </re>
+               <cit type="translation">
+                  <orth xml:lang="es">debido a</orth>
+               </cit>          
+                  <etym type="grammaticalization">
+                     <cit type="etymon">
+                        <orth></orth>
+                        <sense>
+                           <gloss xml:lang="en">foot</gloss>
+                           <gloss xml:lang="en"></gloss>
+                        </sense>
+                     </cit>
+                     <cit type="etymon">
+                        <orth></orth>
+                        <gramGrp>
+                           <pos>demonstrative</pos>
+                        </gramGrp>
+                        <sense>
+                           <gloss xml:lang="en">that</gloss>
+                           <gloss xml:lang="en">que</gloss>
+                        </sense>
+                     </cit>
+                  </etym>
+               </re>
          </entry>
-         <entry xml:id="body-toe" type="compound">
-            <form type="lemma">
+         <entry xml:id="body-toe">
+            <form type="lemma" subtype="compound">
                <orth>xini tsa'a</orth>
                <orth type="segmented">
                   <seg corresp="#body-head">xini</seg>
                   <seg corresp="#foot-MIX">tsa'a</seg>
                </orth>
-               <pron notation="ipa">
-                  <seg corresp="#body-head">ʃìní</seg>
-                  <seg corresp="#foot-MIX">tsàʔá</seg>
-               </pron>
-               <pron notation="zsampa">
-                  <seg corresp="#body-head">S i_F n i_R</seg>
-                  <seg corresp="#foot-MIX">(ts) a_F ? a_R</seg>
-               </pron>
             </form>
             <sense corresp="http://dbpedia.org/resource/Toe">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-               <!-- add 'limb' (+ 'lower' if possible)  -->
-               <etym type="blending">
+               <xr type="meronymOf" xml:lang="en">leg</xr>
+               <xr type="meronymOf" xml:lang="mix" corresp="#leg">xiin</xr>       
+               <cit type="translation">
+                  <orth xml:lang="en">toe</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">dedo de pie</orth>
+               </cit>
+               <etym type="compounding">
                   <etym type="metaphor">
                      <cit type="etymon">
-                        <pron corresp="#body-head">ʃìní</pron>
-                        <def>head</def>
+                        <orth corresp="#body-head">xiní</orth>
+                        <def xml:lang="en">head</def>
+                        <usg type="dom">Body</usg>
                      </cit>
                   </etym>
                   <cit type="etymon">
-                     <pron corresp="#foot-MIX">tsàʔá</pron>
-                     <def>foot</def>
+                     <orth corresp="#foot-MIX">tsa'a</orth>
+                     <def xml:lang="en">foot</def>
                   </cit>
                </etym>
-               <cit type="translation" xml:lang="en">
-                  <orth>toe</orth>
-               </cit>
-            </sense>
+            </sense>   
          </entry>
+         
          <!-- External Surface -->
          <entry xml:id="skin">
             <form type="lemma">
@@ -1911,46 +2007,51 @@
             </sense>
          </entry>
          <!-- RESOLVE 'roof' vs 'cieling' -->
-         <entry xml:id="cieling" type="compound">
+         <entry xml:id="cieling" type="compound" cert="medium">
             <form type="lemma">
-               <orth>
-                  <seg corresp="#body-head">xini</seg>
-                  <seg corresp="#house">ve'e</seg>
-               </orth>
-               <pron notation="ipa">
-                  <seg corresp="#body-head">ʃínì</seg>
-                  <seg corresp="#house">véʔè</seg>
-               </pron>
-               <pron notation="zsampa">
-                  <seg corresp="#body-head">x i_R n i_F</seg>
-                  <seg corresp="#house">v e_R ? e_F</seg>
-               </pron>
-               <gramGrp>
-                  <pos>concreteNoun</pos>
-               </gramGrp>
+               <orth>xiní ve'e</orth>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Ceiling">
                <usg type="dom"
-                    corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg>
-               <etym type="blending">
+                  corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg>
+               <xr type="meronymOf"><ref target="#house" xml:lang="mix">ve'e</ref></xr>
+               <xr type="meronymOf"><ref target="#house" xml:lang="en">house</ref></xr>
+               
+               <cit type="translation">
+                  <orth xml:lang="en">cieling</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">techo</orth>
+               </cit>
+               
+               <etym type="compounding">
+                  <seg type="desc" xml:lang="en">This word is derived from a compound of 'head' and 'house/building'. The use of the former represents a shift in the domain of the source term from 'head' as a direct meronym of 'body' to a meronym of 'building'. Thus the semantic profile shift is: 'TOP partOf BODY' to 'TOP partOf BUILDING'.</seg>
                   <etym type="metaphor">
                      <cit type="etymon">
-                        <orth corresp="#body-head">xini</orth>
-                        <pron corresp="#body-head">ʃí.nì</pron>
-                        <def>head</def>
+                        <form>
+                           <orth corresp="#body-head">xiní</orth>
+                        </form>
+                        <gloss xml:lang="en">head</gloss>
+                        <gloss xml:lang="es">cabeza</gloss>
+                        <usg type="dom">AnatomicalStructure</usg>
+                        <xr type="meronymOf"><ref target="#body" xml:lang="mix">kuñu</ref></xr>
+                        <xr type="meronymOf"><ref target="#body" xml:lang="en">body</ref></xr>
                      </cit>
                   </etym>
                   <cit type="etymon">
-                     <orth corresp="#house">ve'e</orth>
-                     <pron corresp="#house">vé.ʔè</pron>
-                     <def>house</def>
+                     <form>
+                        <orth corresp="#house">ve'e</orth>
+                     </form>
+                     <gloss xml:lang="en">house</gloss>
+                     <gloss xml:lang="es">casa</gloss>
                   </cit>
                </etym>
-               <cit type="translation" xml:lang="en">
-                  <orth>cieling</orth>
-               </cit>
             </sense>
          </entry>
+         
          <entry xml:id="roof">
             <form type="lemma">
                <orth>techo</orth>
@@ -2662,9 +2763,13 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Mixtepec_Mixtec">
+               
                <usg type="dom" corresp="http://dbpedia.org/resource/Language">Language</usg>
-               <xr type="synonym" corresp="#MIX-language-rain">sa'an savi</xr>
+               
+               <xr type="hyponymOf"><ref xml:lang="en">language</ref></xr>
+               <xr type="hyponymOf"><ref xml:lang="mix" target="#language">sa'an</ref></xr>
                <usg type="plev" resp="#TS">dispreferred</usg>
+               <xr type="synonymOf"><ref xml:lang="mix" target="#MIX-language-rain">sa'an savi</ref></xr>
                <note resp="#TS #JB">This term which translates as "poor language" is dispreferred by speakers consulted as it is derrogatory. This is so particularly in contrast to the term for the Spanish language which translates as "fancy language".</note>
                
                <etym type="compounding">
@@ -6562,12 +6667,12 @@
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense> 
+            <sense corresp="http://dbpedia.org/resource/Peach" xml:id="fruit-peach-sense"> 
                <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
                
-               <xr type="hyponymOf" corresp="#fruit-MIX">Fruit</xr>
-               <xr type="hyponymOf" corresp="#fruit-MIX" xml:lang="mix">kui'i</xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
                
                <def xml:lang="mix" source="/SIL_docs/cruxigramas-2014/Cruxigramas-tei.xml">
                   In kui'i ntikuaan kui ra titsia inkaa in tintuu.
@@ -6591,7 +6696,11 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">Fruit</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
               
                
                <cit type="translation">
@@ -6610,7 +6719,12 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">Fruit</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
+               
                <cit type="translation" xml:lang="en">
                   <orth>blackberry</orth>
                </cit>
@@ -6624,7 +6738,12 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">Fruit</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
+               
             </sense>
             <ptr target="#SIL_docs/L100/L100-tok.xml"/>
          </entry>
@@ -6636,7 +6755,12 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">Fruit</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
+               
                <cit type="translation" xml:lang="en">
                   <orth>pineapple</orth>
                </cit>
@@ -6650,7 +6774,12 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="dom">Fruit</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
+               
                <cit type="translation" xml:lang="en">
                   <orth>orange</orth>
                </cit>
@@ -6666,7 +6795,13 @@
                </gramGrp>
             </form>
             <sense corresp="http://www.ontologyportal.org/SUMO#Avocado">
-               <usg type="dom">Fruit</usg>
+               
+               <usg type="dom" corresp="http://dbpedia.org/resource/Food">Food</usg>
+               <usg type="dom" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
+               
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="en">fruit</ref></xr>
+               <xr type="hyponymOf"><ref target="#fruit-MIX" xml:lang="mix">kui'i</ref></xr>
+               
                <cit type="translation" xml:lang="en">
                   <orth>avocado</orth>
                </cit>
@@ -6686,6 +6821,7 @@
             <sense corresp="http://dbpedia.org/resource/Pinto_bean">
                <usg type="dom">Legume</usg>
                <usg type="dom">Food</usg>
+               
                <cit type="translation" xml:lang="en">
                   <orth>bean</orth>
                </cit>
