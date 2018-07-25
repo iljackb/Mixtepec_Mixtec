@@ -461,6 +461,13 @@
                   289-305.</bibl>
             </listBibl>
          </sourceDesc>
+         <sourceDesc>
+            <list>
+               <head>External Documents</head>
+               <item><ref xml:id="persons-MIX" type="persons-list" target="../MIX-People.xml"/></item>
+               <item><ref xml:id="places-MIX" type="places-list" target="../MIX-Places.xml"/></item>
+            </list>
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <p>The Mixtepec-Mixtec (MIX) dictionary file contains several hundred lexical entries which
@@ -479,111 +486,9 @@
        <prefixDef ident="paradigm" matchPattern="paradigm([a-zA-Z0-9]+)-V-paradigm-MIX" replacementPattern="../MIX-Paradigms.xml#$"/>
     </listPrefixDef>
       </encodingDesc>
-
-      <revisionDesc>
-         <change who="#JTB" when-iso="2014-09-21">New entries added, <gi>elementSpec</gi>
-            descriptions and elements refined. Entries for numbers further developed and
-               <gi>cit</gi> 's were used to link the components of the compounds of the numbers in
-               <gi>etym</gi> element. Also in the numbers entries, <gi>num</gi> replaced the
-            English-based glosses for Mixtec numbers<val>ia</val> so as to make mapping from
-            different schemes and ontologies to the glosses more semantically straight
-            forward..</change>
-         <change who="#JTB" when-iso="2014-09-22">
-            <gi>oVar</gi> added to account for appearent alterations made in certain orthographic
-            conventions in the language;</change>
-         <change who="JTB" when-iso="2014-10-09">
-            <gi>etym</gi> contents and links in vocabulary groups: Numbers and Colors refined; </change>
-         <change who="#JTB" when-iso="2014-10-12">Element <gi>def</gi> replaced with elements:
-               <gi>cit</gi> containing attributes: @<att>type</att>, and @<att>xml:lang</att>; with
-            the former containing possible values of: '<val>translation</val>',
-            '<val>example</val>', and '<val>encyclopedic-information</val>; and the latter
-            containing the iso code for the the language of translation (currently mostly English
-            but Spanish is included for some items and will continue to be added);</change>
-         <change who="#JTB" when-iso="2014-10-12">Element <gi>cit</gi> moved to after element
-               <gi>form</gi>;</change>
-         <change who="#JTB" when-iso="2014-10-12">Element <gi>lb</gi> inserted after each key
-            element, replacing the error proned used of <gi>styleDefDecl</gi> in formatting the
-            output;</change>
-         <change who="#JTB" when-iso="2014-10-14">New lexical entries added; numerous values of
-            semantic @<att>domain</att> within the <gi>usg</gi> element updated/refined; usage of
-            elements: <gi>gramGrp</gi> and <gi>gram</gi> added to numerous entries; (may still be
-            replaced, possible by feature structures)</change>
-         <change who="#JTB" when-iso="2014-10-17">New examples from language content added to
-            multiple entries in the form of citation elements: '<gi>cit</gi>'; specific lexical
-            item/groups treated were mostly those having to do with global geography</change>
-         <change when-iso="2014-10-21">Overview of Formatting added to specify how contents are
-            organized to viewers of value content only who can't see the names of the element tags
-            (non-XML view); </change>
-         <change when-iso="2014-10-23">New section added in the beginning of the document explaining
-            how the dictionary entries are organized, in which order they occur, and what the
-            motivations are for the formatting of the given data..</change>
-         <change when-iso="2014-10-23">@<att>rend</att> with value of '<val>italic</val>' was added
-            to instances of element '<gi>oVar</gi>' in order to distinguish the antiquated
-            conventions from the current updates;</change>
-         <change when-iso="2014-10-23">First version of temporary placeholder for corresponding
-            (dbPedia) ontological entry for several lexical items (Birds, Places, etc.); <ref target="#MixtecaRegion-MIX"/>
-         </change>
-         <change when-iso="2014-10-24">Numbers section edited; removed extra line break
-            '<gi>lb</gi>' elements; added some where needed; begun to create document table of
-            contents; In etymology element:'<gi>etym</gi>' term 'Import' changed to
-            'Loanword';</change>
-         <change when-iso="2014-10-26">New edits made to formatting, new examples of entries in use
-            in language data set; test links to 'dbpedia' entries of concepts set up for a few
-            items;</change>
-         <change when-iso="2014-12-07">'<val>lemma</val>' added to lexical entries as the value of
-               the<att>type</att> attribute in the <gi>form</gi> element where necessary
-            @type=form</change>
-
-      </revisionDesc>
-
    </teiHeader>
    <text xml:lang="mix">
-      <body><!--
-               
-               <seg><num>8.</num><label>Translations/Examples of Usage/Encyclopedic Information</label>
-               At present these items are not all consistently used throughout the dataset and thus they aren't assigned to a given ordering</seg>
-               
-                  <seg><label>Translations</label></seg>
-                  Entries may contain translations of lexical item (where possible); thus far most that have translations are in English but some have Spanish and eventually they will all have both; 
-                  it should be noted that the translations are not always given, especially with non-concreteNouns.
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <cit type="translation" xml:lang="en">
-                  <quote>fog</quote>
-               </cit>
-               </egXML>
-               
-               <seg><label>Example of Usage</label>
-                  The following is an example of the given item as observed in use within the Mixtepec-Mixtec corpus as a whole: (example from the SIL document 'L154')
-               </seg>            
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <cit type="example" xml:lang="mix">
-                     <quote>Yo'o nantakani iin tu'un yata ña nikuu nisa'a kue <hi rend="bold">nivi</hi> na ntsintee ta tsa na'a.</quote>
-                     <ptr target="SIL_docs/L154/L154-tok.xml"/>
-                  </cit>
-               </egXML>
-               
-               
-               <seg><label>Encyclopedic Information</label>
-                  'Encyclopedic Information' is basic information that is understood about some entity in the world. The more basic or conceptually primitive the entity, the more useful it is to collect encyclopedic information.
-                  Such descriptions are expected to contain similar descriptions across most languages and thus, are the easiest to link to existing external ontologies by using linked data techniques. This is so because the more basic it is,
-                  the more likely it will already be defined. Examples of such the concepts include: natural elements: (tree, water, food, etc.), animals: (dog, cat, lizard, frog, etc.), places (especially those local to the Mixtec people):
-                  (eg. Mexico, Oaxaca, San Juan Mixtepec, etc..).  
-                  Below is one example of the presentation of encyclopedic information within this dataset. While currently (<date when-iso="2014-10-23">2014-10-23</date>) the dataset only contains a few such examples,
-                  acquisition of such info for as many basic, mostly universal areas of local, and general human knowledge would be a great benefit to the legitimacy of this project and dataset. Such information is key to
-                  being able to integrate the language specific data with external models of the ontological concepts and general human knowledge.
-                  <cit type="etymonanimal-fish"/>
-               </seg>
-               <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                  <cit type="encyclopedic-information" xml:lang="mix" ana="#ENCYC-INFO">
-                     <quote>sucha <hi rend="bold">chaka</hi> ka nuu chikuii</quote>
-                     <ptr target="#fish_swim_in_the_water_TS.wav"/>
-                  </cit>
-               </egXML>
-               
-               <seg><num>.</num><label>Sense</label></seg>
-               <eg rend="italic"></eg><note></note>
-            </p>
-         </div> --><!-- Living Beings:  --><!-- categoricalNoun - People -->
+      <body>
          <entry xml:id="people" cert="medium"><!-- this is always a plural noun!! "kue nivi"!!! -->
             <form type="lemma">
                <orth>nivi</orth>

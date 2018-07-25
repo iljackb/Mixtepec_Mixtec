@@ -24,7 +24,95 @@
   </teiHeader>
   <text>
       <body>
-         <p>Some text here.</p>
+         <entry xml:id="body-face">
+            <form type="lemma">
+               <orth>nuu</orth>
+               <pron notation="ipa">nũ̀ṹ</pron>
+               <gramGrp>
+                  <pos>concreteNoun</pos>
+               </gramGrp>
+            </form>
+            
+            <sense xml:id="face-PRIME" corresp="http://dbpedia.org/page/Category:Face">
+               <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               
+               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               <!-- should I specify "meronymOf: (BODY or HEAD) or both!? -->
+               
+               <cit type="translation">
+                  <orth xml:lang="en">face</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">cara</orth>
+               </cit>
+            </sense>
+            
+            <sense xml:id="face-regionOfLM">
+               
+               <usg type="dom">spatialRelations</usg>
+               <gramGrp>
+                  <pos>relationNoun</pos>
+                  <colloc>LM</colloc>
+               </gramGrp>
+               
+               <etym type="grammaticalization">
+                  <desc></desc>
+                  <seg ></seg>
+                  
+                  <etym type="metaphor">
+                     <desc>active zone source profile (aka Ontological Knowledge/Impetus): Relative configuration of the part FACE relative to (LM) BODY</desc>
+                     <cit type="etymon" corresp="#face-PRIME">
+                        <orth xml:lang="mix">nuu</orth>
+                        <pron xml:lang="mix" notation="ipa">nũ̀ṹ</pron>
+                     </cit>
+                  </etym>
+               </etym>
+               
+               <cit type="example" xml:lang="mix">
+                  <quote/>
+               </cit>
+            </sense>
+            
+            <sense xml:id="face-adjacentSpace-Body"><!-- metonymy 1 -->
+               
+               <cit type="translation" xml:lang="en">
+                  <orth>face</orth>
+               </cit>
+               <cit type="translation" xml:lang="es">
+                  <orth>cara</orth>
+               </cit>
+               
+               <cit type="example">
+                  <quote></quote>
+               </cit>
+               
+               <etym type="metonymy">
+                  <note>FRONT-REGION partOf BODY <![CDATA[&gt;]]> ADJACENT-SPACE to FRONT-REGION OfBody</note>
+                  <note>LM must still be Body(of person or animal)</note>
+               </etym>
+               <cit type="example" xml:lang="mix">
+                  <quote/>
+               </cit>
+            </sense>
+            
+            <note> the lemma form can be inflected to reflect: possessive (person, number, ),
+               register, Semantic Role (eg. ..) </note>
+         </entry>
+         
+         <!-- move this when done -->
+         <entry xml:id="ADPOS-REL-CONFIG-FRNT">
+            <form type="lemma">
+               <orth/>
+               <pron notation="ipa"/>
+               <gramGrp>
+                  <pos/>
+               </gramGrp>
+            </form>
+            <sense xml:id="face-adjacentSpace-LM"><!-- metaphor 1 + metony 1 -->
+               <etym/>
+            </sense>
+         </entry>
       </body>
   </text>
 </TEI>
