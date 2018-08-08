@@ -6,17 +6,17 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Mixtepec-Mixtec Working Vocabulary</title>
-            <editor>Jack Bowers</editor>
+            <title>Mixtepec-Mixtec Digital Dictionary</title>
+            <respStmt>
+               <resp>Editor</resp>
+               <name>Jack Bowers</name>
+            </respStmt>
          </titleStmt>
          <editionStmt>
             <edition>Version: <date when="2015-08-20">2015/08/20</date>
             </edition>
          </editionStmt>
          <publicationStmt>
-            <p>This language resource document for the Mixtepec-Mixtec language variety; early version released as part of the TAPAS project; 
-              <ptr target="http://tapas.neu.edu/"/>
-            </p>
             <p>This resource may be freely used by members of the Mixtepec-Mixtec community for any
                purpose. Currently the speaker consultants Juan "Tisu'ma" Salazar and Yavanni Salazar
                are granted the rights to represent the Mixtepec-Mixtec community in any decisions as
@@ -25,11 +25,16 @@
                suggestion of members of the community in the case that incorrect data is included;
                until further notice I only ask that the author be notified before any changes are
                made so that appropriate consultations of the need for alterations can be carried
-               out.Should the appropriate interest and capacity within the community exist, full
+               out. Should the appropriate interest and capacity within the community exist, full
                rights of ownership to the curation, alteration and reproduction of these contents
                will be transferred to the community.</p>
          </publicationStmt>
          <sourceDesc>
+            <list>
+               <head>External Documents</head>
+               <item><ref xml:id="persons-MIX" type="persons-list" target="../MIX-People.xml"/></item>
+               <item><ref xml:id="places-MIX" type="places-list" target="../MIX-Places.xml"/></item>
+            </list>
             <listBibl xml:id="SIL-MEX">
                <head>SIL Mexico Publications</head>
                <bibl xml:id="bibl.L093" xml:base="SIL_docs/L093/L093-tok.xml">
@@ -342,6 +347,8 @@
                      Mixtec</title>., Proceedings of American Indian Languages (August, 17).
                   UCLA.</bibl>
             </listBibl>
+            <bibl xml:id="Pike-Ibach-MIX-1978">
+               <author>Pike, Eunice V.</author> and <author>Thomas Ibach</author>. <date>1978</date>. <title>The phonology of the Mixtepec dialect of Mixtec</title>. Pp. 271-285 in Mohammed Jazayery, Edgar C. Polomé, and Werner Winter, eds. Linguistic and Literary Studies in Honor of Archibald A. Hill, Volume 2: Descriptive Linguistics. The Hague: Mouton.</bibl>
             <listBibl>
                <head>Other Mixtecan Language Publications</head>
                <lb/>
@@ -461,14 +468,23 @@
                   289-305.</bibl>
             </listBibl>
          </sourceDesc>
-         <sourceDesc>
-            <list>
-               <head>External Documents</head>
-               <item><ref xml:id="persons-MIX" type="persons-list" target="../MIX-People.xml"/></item>
-               <item><ref xml:id="places-MIX" type="places-list" target="../MIX-Places.xml"/></item>
-            </list>
-         </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="TS" role="speaker" corresp="MIX-People.xml#JS">
+                  <name>Juan "Tisu'ma" Salazar</name>
+               </person>
+               <person xml:id="JS" role="speaker" corresp="MIX-People.xml#JS">
+                  <name>Geremaia Salaza</name>
+               </person>
+               <person xml:id="JB" role="editor, researcher" corresp="MIX-People.xml#JB">
+                  <name>Jack Bowers</name>
+               </person>
+               <!-- more people here -->
+            </listPerson>
+         </particDesc>
+      </profileDesc>
       <encodingDesc>
          <p>The Mixtepec-Mixtec (MIX) dictionary file contains several hundred lexical entries which
             represent only a fraction of the total vocabulary contents of this project. These items
@@ -575,11 +591,11 @@
                <usg type="dom" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
                
                <cit type="translation">
-                  <orth xml:lang="en">woman</orth>
+                  <form><orth xml:lang="en">woman</orth></form>
                   <ptr corresp="https://en.wiktionary.org/wiki/woman"/>
                </cit>
                <cit type="translation">
-                  <orth xml:lang="es">mujer</orth>
+                  <form><orth xml:lang="es">mujer</orth></form>
                   <ptr corresp="https://es.wiktionary.org/wiki/mujer"/>
                </cit>
             </sense> 
@@ -844,7 +860,7 @@
                <orth>nuu</orth>
                <pron notation="ipa">nũ̀ṹ</pron>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             
@@ -853,7 +869,6 @@
                
                <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
                <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
-               <!-- should I specify "meronymOf: (BODY or HEAD) or both!? -->
                
                <cit type="translation">
                   <orth xml:lang="en">face</orth>
@@ -864,25 +879,7 @@
             </sense>
             
             <sense xml:id="face-regionOfLM" n="2">
-               <graphic url=" SIL_docs/L157/L157-06-cld.png">
-                  <desc xml:lang="en">The image shows the front part of the houses colored yellow.</desc>
-                  <desc xml:lang="mix"/>
-               </graphic>
                
-               <def xml:lang="en">The front of (sth).</def> 
-               <def xml:lang="es">La parte delantera de (algo).</def>
-               <def xml:lang="mix"/>
-              
-               <cit type="example">
-                  <quote xml:lang="mix">nuu ve'e</quote>
-                  <cit type="translation">
-                     <quote xml:lang="en">the front of the house</quote>
-                  </cit>
-                  <cit type="translation">
-                     <quote xml:lang="es">parte delantera de la casa</quote>
-                  </cit>
-               </cit>
-
                <usg type="dom">Space</usg>
                <usg type="dom">spatialRelations</usg>
                <!-- usg (type for TR?) -->
@@ -892,6 +889,20 @@
                   <pos>relationNoun</pos>
                   <colloc norm="landmark">LM</colloc>
                </gramGrp>
+               
+               <def xml:lang="en">The front of (sth).</def> 
+               <def xml:lang="es">La parte delantera de (algo).</def>
+               <def xml:lang="mix"/>
+               
+               <cit type="example">
+                  <quote xml:lang="mix">nuu ve'e</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">the front of the house</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">parte delantera de la casa</quote>
+                  </cit>
+               </cit>
 
                <cit type="example">
                   <orth xml:lang="mix">nuu ve'e</orth>
@@ -903,8 +914,13 @@
                   </cit>
                </cit>
                
+               <graphic url=" SIL_docs/L157/L157-06-cld.png">
+                  <desc xml:lang="en">The image shows the front part of the houses colored yellow.</desc>
+                  <desc xml:lang="mix"/>
+               </graphic>
+               
                   <etym type="metaphor">
-                     <seg type="desc" xml:lang="en">active zone source profile (aka Ontological Knowledge/Impetus):Relative configuration of the part FACE relative to (LM) BODY. FRONT-REGION partOf BODY<![CDATA[&gt;]]> FRONT-REGION partOf OBJECT</seg>
+                     <seg type="desc" xml:lang="en">active zone source profile (aka ontological knowledge/impetus) motivating the metaphor is the relative configuration of the part FACE relative to (LM) BODY. FRONT-REGION partOf BODY<![CDATA[&gt;]]> FRONT-REGION partOf OBJECT</seg>
                      
                      <cit type="etymon" corresp="#face-PRIME">
                         <orth xml:lang="mix">nuu</orth>
@@ -933,7 +949,7 @@
                </cit>
                
                <etym type="metonymy">
-                  <note>FRONT-REGION partOf BODY <![CDATA[&gt;]]> ADJACENT-SPACE to FRONT-REGION OfBody</note>
+                  <seg type="desc" xml:lang="en">FRONT-REGION partOf BODY <![CDATA[&gt;]]> ADJACENT-SPACE to FRONT-REGION OfBody</seg>
                   <note>LM must still be Body(of person or animal)</note>
                </etym>
                <cit type="example" xml:lang="mix">
@@ -969,8 +985,8 @@
             </form>
             <sense corresp="http://dbpedia.org/resource/Category:Eye">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
-               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
+               <xr type="meronymOf"><ref target="#body-face" xml:lang="mix">nuu</ref></xr>
+               <xr type="meronymOf"><ref xml:lang="en">face</ref></xr>
                
                <cit type="translation" xml:lang="en">
                   <orth>eye</orth>
@@ -978,16 +994,17 @@
                <cit type="translation" xml:lang="es">
                   <orth>ojo</orth>
                </cit>
+               
                <etym type="compounding">
                   <etym type="metaphor">
                      <cit type="etymon">
-                        <orth corresp="#bean">ntuchi</orth>
+                        <form><orth corresp="#bean" xml:lang="mix">ntuchi</orth></form>
                         <gloss xml:lang="en">bean</gloss>
                         <gloss xml:lang="es">frijol</gloss>
                      </cit>
                   </etym>
                   <cit type="etymon">
-                     <orth corresp="#face">nũ̀ṹ</orth>
+                     <form><orth corresp="#face" xml:lang="mix">nũ̀ṹ</orth></form>
                      <gramGrp>
                         <pos>noun</pos>
                      </gramGrp>
@@ -996,8 +1013,8 @@
                   </cit>
                </etym>
             </sense>
-            <cit type="cognate" xml:lang="miy">
-               <orth>nduchīh nūuh</orth>
+            <cit type="cognate">
+               <form><orth xml:lang="miy">nduchīh nūuh</orth></form>
                <bibl/>
             </cit>
          </entry>
@@ -1012,6 +1029,8 @@
             </form>
             <sense corresp="http://dbpedia.org/page/Category:Nose">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <xr type="meronymOf"><ref target="#body-face" xml:lang="mix">nuu</ref></xr>
+               <xr type="meronymOf"><ref xml:lang="en">face</ref></xr>
                <cit type="translation" xml:lang="en">
                   <orth>nose</orth>
                </cit>
@@ -1028,6 +1047,8 @@
             </form>
             <sense corresp="http://dbpedia.org/resource/Chin">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <xr type="meronymOf"><ref target="#body-face" xml:lang="mix">nuu</ref></xr>
+               <xr type="meronymOf"><ref xml:lang="en">face</ref></xr>
                <cit type="translation" xml:lang="en">
                   <orth>chin</orth>
                </cit>
@@ -1044,6 +1065,8 @@
             </form>
             <sense corresp="http://dbpedia.org/resource/Category:Mouth">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <xr type="meronymOf"><ref target="#body-face" xml:lang="mix">nuu</ref></xr>
+               <xr type="meronymOf"><ref xml:lang="en">face</ref></xr>
                <cit type="translation">
                   <orth xml:lang="en">mouth</orth>
                </cit>
@@ -1489,6 +1512,13 @@
                <xr type="meronymOf"><ref target="#hand-arm" xml:lang="en">hand, arm</ref></xr>
                <xr type="meronymOf"><ref target="#hand-arm" xml:lang="mix">nta'a</ref></xr>
                
+               <xr type="meronymOf">
+                  <ref target="#hand-arm" xml:lang="en">hand, arm</ref>
+                  <ref target="#hand-arm" xml:lang="mix">nta'a</ref>
+                  <ref type="sense" corresp="http://dbpedia.org/resource/Hand http://dbpedia.org/resource/Arm"/>
+               </xr>
+               
+               
                <etym type="compounding">
                   <etym type="metaphor">
                      <cit type="etymon">
@@ -1578,7 +1608,7 @@
                
                <cit type="example">
                   <quote xml:lang="mix">¿A tsinu kue <oRef>tsa'a</oRef> kiti?</quote>
-                  <ptr source="SIL_docs/L097/L097-tok.xml"/>
+                  <ptr target="SIL_docs/L097/L097-tok.xml"/>
                </cit>
                <etym/>
                <cit type="translation" xml:lang="en">
@@ -3559,10 +3589,10 @@
                   <orth notAfter="2016">chuun</orth>
                </form>
                <form type="variant">
-                  <pron notation="ipa">ʧũ̀ũ̀</pron>
+                  <pron notation="ipa">ʧũ̀ṹ</pron>
                </form>
                <form type="variant">
-                  <pron notation="ipa">ʃũ̀ũ̀</pron>
+                  <pron notation="ipa">ʃũ̀̀ṹ</pron>
                </form>
                <gramGrp>
                   <pos>noun</pos>
@@ -11978,23 +12008,41 @@
             </sense>
          </entry>
          <!--  TEMP-DUR -->
-         <entry xml:id="ADV-TEMP-DUR-long">
+         <entry xml:id="long-MIX">
             <form type="lemma">
                <orth>kani</orth>
                <pron notation="ipa">kánì</pron>
-               <pron notation="zsampa">k a_H n i_L</pron>
                <gramGrp>
-                  <pos>adv</pos>
+                  <pos>adj</pos>
                </gramGrp>
             </form>
-            <sense>
-               <usg type="dom">quantityOf-Time</usg>
-               <etym/>
-               <cit type="translation" xml:lang="en">
-                  <orth>long</orth>
+            <sense n="1" xml:id="long-space">
+               <usg type="dom">Space</usg>
+               <cit type="translation">
+                  <form><orth xml:lang="en">long</orth></form>
                </cit>
-            </sense>
-            <!-- SYN (LONG DISTANCE) -->
+               <cit type="translation">
+                  <form><orth xml:lang="es">lungo</orth></form>
+               </cit>
+               <sense n="2" xml:id="long-time">
+                  <gramGrp>
+                     <pos>adv</pos>
+                  </gramGrp>
+                  <usg type="dom">Time</usg>
+                  <cit type="example">
+                     <quote xml:lang="mix" resp="#TS"><oRef>Kani</oRef> nchu'a ntsi ra.</quote>
+                     <cit type="translation">
+                        <quote xml:lang="en">He lived a long time.</quote>
+                     </cit>
+                  </cit>
+                  <etym type="metaphor" cert="high">
+                     <seg type="desc">Active zone of source profile (aka ontological knowledge/impetus) motivating the metaphor is QUANTITY.  The domain mapping directionality of the sense change is: QUANTITY of SPACE (SIZE or DISTANCE) → QUANTITY of TIME. The domain shift is thus: SPACE → TIME. This directionality is predictable as it follows the pattern of: CONCRETE → ABSTRACT; and of which, the formost is SPACE →  TIME.</seg>
+                     <cit type="etymon" corresp="#long-space">
+                        <usg type="dom">Space</usg>
+                     </cit>
+                  </etym>
+               </sense>
+            </sense>          
          </entry>
          <!-- Quantifiers -->
          <entry xml:id="QNTF-NIL-Ø-INAN">
@@ -14475,7 +14523,29 @@ Emotional Actions:
             
          </entry>
          
-         
+         <entry xml:id="sleep-V-MIX">
+            <form type="lemma">
+               <orth>kusu</orth>
+               <ptr type="inflectionParadigm" target="paradigm:sleep-V-paradigm-MIX"/>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
+            
+            <sense>
+               <usg type="dom">BiologicalNeed</usg>
+               <!--  generic relation to 'awaken' -->
+               <!-- predicate & valency structure!!?? (want to eventually implement a frameNet like system of semantics)-->
+               <!-- transitivity? -->
+               
+               <cit type="translation">
+                  <orth xml:lang="en">sleep</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">dormir</orth>
+               </cit>       
+            </sense>
+         </entry>
          
          
          <!-- across 'inkaatsio' COP-LOC+(ADPOS-CONFIG-UNK)+DEM-DIST -->

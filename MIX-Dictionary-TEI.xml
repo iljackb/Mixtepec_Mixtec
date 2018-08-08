@@ -29,16 +29,17 @@
                <orth>nuu</orth>
                <pron notation="ipa">nũ̀ṹ</pron>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             
-            <sense xml:id="face-PRIME" corresp="http://dbpedia.org/page/Category:Face">
+            <sense xml:id="face-PRIME" corresp="http://dbpedia.org/page/Category:Face" n="1">
                <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                
-               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
-               <xr type="meronymOf"><ref target="" xml:lang=""></ref></xr>
-               <!-- should I specify "meronymOf: (BODY or HEAD) or both!? -->
+               <xr type="meronymOf">
+                  <ref target="" xml:lang=""></ref>
+                  <ref target="" xml:lang=""></ref>
+               </xr>
                
                <cit type="translation">
                   <orth xml:lang="en">face</orth>
@@ -46,35 +47,70 @@
                <cit type="translation">
                   <orth xml:lang="es">cara</orth>
                </cit>
-            </sense>
-            
-            <sense xml:id="face-regionOfLM">
                
-               <usg type="dom">spatialRelations</usg>
-               <gramGrp>
-                  <pos>relationNoun</pos>
-                  <colloc>LM</colloc>
-               </gramGrp>
-               
-               <etym type="grammaticalization">
-                  <desc></desc>
-                  <seg ></seg>
+               <sense xml:id="face-regionOfLM" n="2">
+                  
+                  <usg type="dom">Space</usg>
+                  <usg type="dom">spatialRelations</usg>
+                  <!-- usg (type for TR?) -->
+                  <xr type="meronymOf">LM</xr>
+                  
+                  <gramGrp>
+                     <pos>relationNoun</pos>
+                     <colloc norm="landmark">LM</colloc>
+                  </gramGrp>
+                  
+                  <def xml:lang="en">The front of (sth).</def> 
+                  <def xml:lang="es">La parte delantera de (algo).</def>
+                  <def xml:lang="mix"/>
+                  
+                  <cit type="example">
+                     <quote xml:lang="mix">nuu ve'e</quote>
+                     <cit type="translation">
+                        <quote xml:lang="en">the front of the house</quote>
+                     </cit>
+                     <cit type="translation">
+                        <quote xml:lang="es">parte delantera de la casa</quote>
+                     </cit>
+                  </cit>
+                  
+                  <cit type="example">
+                     <orth xml:lang="mix">nuu ve'e</orth>
+                     <cit type="translation">
+                        <orth xml:lang="en">the front of the house</orth>
+                     </cit>
+                     <cit type="translation">
+                        <orth xml:lang="es">parte delantera de la casa</orth>
+                     </cit>
+                  </cit>
+                  
+                  <graphic url=" SIL_docs/L157/L157-06-cld.png">
+                     <desc xml:lang="en">The image shows the front part of the houses colored yellow.</desc>
+                     <desc xml:lang="mix"/>
+                  </graphic>
                   
                   <etym type="metaphor">
-                     <desc>active zone source profile (aka Ontological Knowledge/Impetus): Relative configuration of the part FACE relative to (LM) BODY</desc>
+                     <seg type="desc" xml:lang="en">active zone source profile (aka ontological knowledge/impetus) motivating the metaphor is the RELATIVE-CONFIGURATION and GENERAL-ORIENTATION of the part FACE (used as a trajector) relative to BODY (the landmark). FRONT-REGION partOf BODY<![CDATA[&gt;]]> FRONT-REGION partOf OBJECT</seg>
+                     
                      <cit type="etymon" corresp="#face-PRIME">
                         <orth xml:lang="mix">nuu</orth>
-                        <pron xml:lang="mix" notation="ipa">nũ̀ṹ</pron>
+                        <sense>
+                           <usg type="dom" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+                           <xr type="meronymOf">
+                              <ref target="#body-face" xml:lang="mix"></ref>
+                              <ref target="#body-face" xml:lang="en"></ref>
+                           </xr>
+                           <gloss xml:lang="en">face</gloss>
+                           <gloss xml:lang="en">cara</gloss>
+                        </sense>
                      </cit>
                   </etym>
-               </etym>
-               
-               <cit type="example" xml:lang="mix">
-                  <quote/>
-               </cit>
+               </sense>
             </sense>
             
-            <sense xml:id="face-adjacentSpace-Body"><!-- metonymy 1 -->
+            
+            
+            <sense xml:id="face-adjacentSpace-Body" n="3"><!-- metonymy 1 -->
                
                <cit type="translation" xml:lang="en">
                   <orth>face</orth>
@@ -88,7 +124,7 @@
                </cit>
                
                <etym type="metonymy">
-                  <note>FRONT-REGION partOf BODY <![CDATA[&gt;]]> ADJACENT-SPACE to FRONT-REGION OfBody</note>
+                  <seg type="desc" xml:lang="en">FRONT-REGION partOf BODY <![CDATA[&gt;]]> ADJACENT-SPACE to FRONT-REGION OfBody</seg>
                   <note>LM must still be Body(of person or animal)</note>
                </etym>
                <cit type="example" xml:lang="mix">
@@ -98,20 +134,6 @@
             
             <note> the lemma form can be inflected to reflect: possessive (person, number, ),
                register, Semantic Role (eg. ..) </note>
-         </entry>
-         
-         <!-- move this when done -->
-         <entry xml:id="ADPOS-REL-CONFIG-FRNT">
-            <form type="lemma">
-               <orth/>
-               <pron notation="ipa"/>
-               <gramGrp>
-                  <pos/>
-               </gramGrp>
-            </form>
-            <sense xml:id="face-adjacentSpace-LM"><!-- metaphor 1 + metony 1 -->
-               <etym/>
-            </sense>
          </entry>
       </body>
   </text>
