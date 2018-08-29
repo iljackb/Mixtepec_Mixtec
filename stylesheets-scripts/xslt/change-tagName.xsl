@@ -23,6 +23,53 @@
         </orth>
     </xsl:template>
     
+    <xsl:template match="//form[@type='lemma']/orth[not(@xml:lang)]">
+            <orth xml:lang="mix">
+                <xsl:copy-of select="@*"/>
+                <xsl:value-of select="."/>
+            </orth>
+    </xsl:template>
+    
+    <xsl:template match="//form[@type='lemma']/pron[not(@xml:lang)]">
+        <pron xml:lang="mix">
+            <xsl:copy-of select="@*"/>
+            <xsl:value-of select="."/>
+        </pron>
+    </xsl:template>
+    
+    
+    
+    <xsl:template match="//cit[@type='translation' and @xml:lang='en']/orth">
+         <form>
+            <orth xml:lang="en">
+                <xsl:copy-of select="@*  except @xml:lang"/>
+                <xsl:value-of select="."/>
+            </orth>
+        </form>
+     
+    </xsl:template>
+    
+    <xsl:template match="//cit[@type='translation' and @xml:lang='es']/orth">
+            <form>
+                <orth xml:lang="es">
+                    <xsl:copy-of select="@*  except @xml:lang"/>
+                    <xsl:value-of select="."/>
+                </orth>
+            </form>
+    </xsl:template>
+    
+    
+    
+    
+    <xsl:template match="//cit[@type='etymon']/orth">
+        <form>
+            <orth xml:lang="mix">
+                <xsl:copy-of select="@*"/>
+                <xsl:value-of select="."/>
+            </orth>
+        </form>
+    </xsl:template>
+    
     <xsl:template match="aspect">
         <gram type="aspect">
             <xsl:copy-of select="@*"/>
