@@ -94,6 +94,33 @@
         - when a compound is made by applying a parent <w> to 2+ <w>'s, the value of the component forms (as seen in orthography view, with spaces) is put into @norm
      -->
     </elementSpec>
+    
+    <elementSpec ident="lang" mode="change" module="dictionaries">
+     <classes mode="change">
+      <memberOf key="model.entryPart"/>
+     </classes>
+    </elementSpec>
+    
+    <elementSpec ident="bibl" mode="change" module="dictionaries">
+     <classes mode="change">
+      <memberOf key="model.entryPart"/>
+     </classes>
+    </elementSpec>
+    
+    
+    <elementSpec ident="cit" mode="change" module="core">
+     <content>
+      <alternate minOccurs="1" maxOccurs="unbounded">
+       <classRef key="model.qLike"/>
+       <classRef key="model.egLike"/>
+       <classRef key="model.biblLike"/>
+       <classRef key="model.ptrLike"/>
+       <classRef key="model.global"/>
+       <classRef key="model.entryPart"/>
+       <classRef key="model.ptrLike.form"/>
+      </alternate>
+     </content>
+    </elementSpec>
 
     <classSpec type="atts" ident="att.lexicographic" mode="change">
      <classes mode="change">
