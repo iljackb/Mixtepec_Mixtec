@@ -89,9 +89,9 @@ declare function local:format-matches($searchString, $matches as element()*) {
   }</results>
 };
 
-let $lang := "es"
-let $searchString := "feo"
+let $lang := "en"
+let $searchString := "play"
 (: match on a substring: "case-insensitive" or "case-sensitive" :)
 (: match on the whole "exact" :)
-let $matches := local:query($searchString, $lang, 'case-sensitive')
+let $matches := local:query($searchString, $lang, 'exact')
 return local:format-matches($searchString, $matches)

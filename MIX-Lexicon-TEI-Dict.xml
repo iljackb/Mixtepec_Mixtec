@@ -474,6 +474,7 @@
                   Motion and Arrival Verbs. International Journal of American Linguistics , 62 (3),
                   289-305.</bibl>
                <bibl type="thesis" xml:id="Padgett2017">Padgett, E. (2017). Tools for assessing relatedness in understudied language varieties: a survey of Mixtec varieties in Western Oaxaca, Mexico. University of North Dakota. </bibl>
+               <bibl type="journalArticle" xml:id="Longacre1961">Longacker, Robert E. and Millon, René. (1961). Proto-Mixtecan and Proto-Amuzgo-Mixtecan vocabularies: a preliminary cultural analysis. Anthropological Linguistics,1–44</bibl>
             </listBibl>
          </sourceDesc>
       </fileDesc>
@@ -906,6 +907,7 @@
                </xr>
                <xr type="meronymOf">
                   <ref target="" xml:lang=""/>
+                  <ref target="" xml:lang=""/>
                </xr>
                <cit type="translation">
                   <orth xml:lang="en">face</orth>
@@ -940,21 +942,19 @@
                   <desc xml:lang="mix"/>
                </graphic>
                <etym type="metaphor">
-                  <seg type="desc" xml:lang="en">active zone source profile (aka ontological knowledge/impetus) motivating the metaphor is the relative configuration of the part FACE relative to (LM) BODY. FRONT-REGION partOf BODY&amp;gt; FRONT-REGION partOf OBJECT</seg>
-                  <cit type="etymon" corresp="#face-PRIME">
-                     <form>
-                        <orth xml:lang="mix">nuu</orth>
-                     </form>
+                  <seg type="desc" xml:lang="en" resp="#JB">active zone source profile (aka ontological knowledge/impetus) motivating the metaphor is the relative configuration of the part FACE relative to (LM) BODY. FRONT-REGION partOf BODY&amp;gt; FRONT-REGION partOf OBJECT</seg>
+                  
+                  <cit type="etymon" corresp="#face-PRIME">          
                      <sense>
-                        <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
-                        <xr type="meronymOf">
-                           <ref target="#body-face" xml:lang="mix"/>
-                        </xr>
-                        <xr type="meronymOf">
-                           <ref target="#body-face" xml:lang="en"/>
-                        </xr>
+                        <usg type="domain">AnatomicalStructure</usg>
                         <gloss xml:lang="en">face</gloss>
                         <gloss xml:lang="en">cara</gloss>
+                        <xr type="meronymOf">
+                           <lbl xml:lang="en">as in:</lbl>
+                           <lbl xml:lang="es">como:</lbl>
+                           <ref target="#body-face" xml:lang="mix">part of the body</ref>
+                           <ref target="#body-face" xml:lang="en">parte del cuerpo</ref>
+                        </xr>
                      </sense>
                   </cit>
                </etym>
@@ -962,12 +962,12 @@
             <sense xml:id="face-adjacentSpace-Body" n="3"><!-- metonymy 1 -->
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">face</orth>
+                     <orth xml:lang="en">in front of</orth>
                   </form>
                </cit>
                <cit type="translation" xml:lang="es">
                   <form>
-                     <orth xml:lang="es">cara</orth>
+                     <orth xml:lang="es">en frente de</orth>
                   </form>
                </cit>
                <cit type="example">
@@ -1022,6 +1022,14 @@
                   <form>
                      <orth xml:lang="es">ojo</orth>
                   </form>
+               </cit>            
+            </sense>
+            <etym type="inheritance" cert="high">
+               <cit type="cognate">
+                  <form>
+                     <orth xml:lang="miy">nduchīh nūuh</orth>
+                  </form>
+                  <bibl/>
                </cit>
                <etym type="compounding">
                   <etym type="metaphor">
@@ -1044,13 +1052,7 @@
                      <gloss xml:lang="es">cara</gloss>
                   </cit>
                </etym>
-            </sense>
-            <cit type="cognate">
-               <form>
-                  <orth xml:lang="miy">nduchīh nūuh</orth>
-               </form>
-               <bibl/>
-            </cit>
+            </etym>         
          </entry>
          <entry xml:id="body-face-nose">
             <form type="lemma">
@@ -1935,33 +1937,6 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="kidney">
-            <form type="lemma">
-               <orth xml:lang="mix">ntuchi</orth>
-               <pron xml:lang="mix" notation="ipa">ndúʧì</pron>
-               <pron xml:lang="mix" notation="zsampa">d_n\ u_H (tS) i_L</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
-            <sense corresp="http://dbpedia.org/resource/Kidney">
-               <usg type="domain" corresp="http://dbpedia.org/resource/Category:Organs">Organs</usg>
-               <etym type="metaphor">
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="mix" corresp="#bean">ntuchi</orth>
-                     </form>
-                     <pron notation="ipa" corresp="#bean">ndú.ʧì</pron>
-                     <def xml:lang="en">bean</def>
-                  </cit>
-               </etym>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">kidney</orth>
-                  </form>
-               </cit>
-            </sense>
-         </entry>
          <entry xml:id="house">
             <form type="lemma">
                <orth xml:lang="mix">ve'e</orth>
@@ -2143,8 +2118,7 @@
          <entry xml:id="mother">
             <form type="lemma">
                <orth xml:lang="mix">maa</orth>
-               <pron xml:lang="mix" notation="ipa">maa</pron>
-               <pron xml:lang="mix" notation="zsampa">m a:_M</pron>
+               <pron xml:lang="mix" notation="ipa">māā</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -2152,20 +2126,20 @@
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
-               <etym type="borrowing">
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es">madre</orth>
-                     </form>
-                     <pron>'ma.dre</pron>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">mother</orth>
                   </form>
-               </cit>
+               </cit>          
             </sense>
+            <etym type="borrowing">
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es">madre</orth>
+                  </form>
+                  <pron xml:lang="es">'madre</pron>
+               </cit>
+            </etym>     
          </entry>
          <entry xml:id="father">
             <form type="lemma">
@@ -3074,8 +3048,9 @@
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Animal" n="1">
+            <sense xml:id="animal" corresp="http://dbpedia.org/resource/Animal" n="1">
                <usg type="domain">livingBeings</usg>
+               <xr></xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">animal</orth>
@@ -3093,18 +3068,21 @@
                   '<pRef>tina</pRef>', '<pRef>tisu'ma</pRef>', " </note>
             </sense>
             
-            <sense corresp="http://dbpedia.org/resource/Horse" n="2">
-               <usg type="domain" corresp="http://dbpedia.org/resource/Animal">ANIMAL</usg>
-               <xr type="hyponymOf"><ref xml:lang="mix">kiti</ref><ref xml:lang="en">animal</ref></xr>
+            <sense xml:id="horse" corresp="http://dbpedia.org/resource/Horse" n="2">
+               <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
+               
+               <xr type="hyponymOf">
+                  <ref xml:lang="mix">kiti</ref>
+                  <ref xml:lang="en">animal</ref>
+               
+               </xr>
                <etym type="metonymy" subtype="categoryForMember">
-                  <seg type="desc" resp="#JB" xml:lang="en">In this lexical item, the language reflects the history, since there were no horses in Mexico until the arrival of the Spanish (sometime after <date notBefore="1492">1492</date>), there was naturally no Mixtecan word for 'horse', thus the categorical noun meaning 'animal' was used to describe the unnamed animal.</seg>
+                  <seg type="desc" resp="#JB" xml:lang="en">In this lexical item, the language reflects the history, since there were no horses in Mexico until the arrival of the Spanish in the Mixtec (sometime after <date notBefore="1521">1521</date>), there was naturally no Mixtecan word for 'horse', thus the categorical noun meaning 'animal' was used to describe the unnamed animal.</seg>
                   <cit type="etymon">
-                     <form>
-                        <orth xml:lang="mix" corresp="#animal">kiti</orth> 
-                        <pron xml:lang="mix" corresp="#animal">kìt̪í</pron>
-                     </form>
-                     <def xml:lang="en">animal</def>
-                     <def xml:lang="es">animal</def>
+                     <sense>
+                        <gloss xml:lang="en">animal</gloss>
+                        <gloss xml:lang="es">animal</gloss>
+                     </sense>
                   </cit>
                </etym>
                <cit type="translation">
@@ -4934,20 +4912,32 @@
          <entry xml:id="sky">
             <form type="lemma">
                <orth xml:lang="mix">antivi</orth>
-               <pron xml:lang="mix" notation="zsampa">a_M d_n\ i_T v i_T</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Sky">
-               <usg type="domain"
-                    corresp="http://dbpedia.org/resource/Category:Basic_meteorological_concepts_and_phenomena">Basic_meteorological_concepts_and_phenomena</usg>
+               <usg type="domain">Meteorology</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">sky</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">cielo</orth>
+                  </form>
+               </cit>
             </sense>
+            <etym type="inheritance">
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="nds-x-clmx">andevui</orth>
+                  </form>
+                  <gloss xml:lang="es">cielo</gloss>
+                  <ref type="bibl" target="#VOCESvocab-tei.xml">Francisco de Alvarado</ref>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="moon">
             <form type="lemma">
@@ -6713,12 +6703,62 @@
                </cit>
             </sense>
          </entry>
-         <!-- 
-            <entry xml:id="tree-branch">
+
+         <entry xml:id="tree-branch" type="compound">
+            <form type="lemma">
+               <orth>nta'a yutu</orth>
+               <pron notation="ipa">ndàʔá jùtú</pron>
+               <gramGrp>
+                  <gram>noun</gram>
+               </gramGrp>
+            </form>
+           
+            <sense>
+               <graphic url=".../imgs/apoala_tree.jpg"/>
+               <usg type="domain">Botany</usg>     
+               <xr type="meronymOf">
+                  <ref xml:lang="mix">yutu</ref>
+                  <ref xml:lang="en">tree</ref>
+               </xr>
+               <cit type="translation">
+                  <form><orth xml:lang="en">branch</orth></form>
+               </cit>
+               <cit type="translation">
+                  <form><orth xml:lang="es">rana</orth></form>
+               </cit>
+            </sense>
+            <etym type="compounding">
+               <etym type="metaphor">
+                  <cit type="etymon">
+                     <form>
+                        <orth>nta'a</orth>
+                     </form>
+                     <sense>          
+                        <usg type="domain">HumanAntomy</usg>
+                        <xr type="meronymOf">
+                           <ref xml:lang="mix">kuñu</ref>
+                           <ref xml:lang="en">body</ref>
+                        </xr>
+                        <gloss xml:lang="en">hand</gloss>
+                        <gloss xml:lang="es">mano</gloss>
+                     </sense>
+               </cit>
+               </etym>
+               <cit type="etymon">
+                  <form>
+                     <orth>jutu</orth>
+                  </form>
+                  <gloss xml:lang="en">tree</gloss>
+                  <gloss xml:lang="es">arbol</gloss>
+               </cit>
+            </etym>
+            
+         </entry>
+
+            <entry xml:id="tree-branch-TS">
                <form type="lemma">
                   <orth>nta'a tiyutsa</orth>
                   <pron notation="ipa">ndá.ʔà t̪í.jù.tsà</pron>
-                  <pron notation="zsampa">d_n\ a_R ? a_F t_d i_R j u_F (ts) a_F</pron>
                   <gramGrp>
                      <gram></gram>
                   </gramGrp>
@@ -6742,7 +6782,7 @@
 
             </entry>
 
-            <entry xml:id="tree-leaf">
+            <entry xml:id="tree-leaf-TS">
                <form type="lemma">
                   <orth>nta'a tijutsa</orth>
                   <pron notation="ipa">ndá.ʔà t̪í.jù.tsà</pron>
@@ -7234,16 +7274,15 @@
          </entry>
          <!-- End Fruit -->
          <!-- Legumes & Vegitables (no categoricalNoun)-->
-         <entry xml:id="bean">
+         <entry xml:id="ntuchi">
             <form type="lemma">
                <orth xml:lang="mix">ntuchi</orth>
                <pron xml:lang="mix" notation="ipa">ndùʧí</pron>
-               <pron xml:lang="mix" notation="zsampa">d_n\ u_F (tS) i_R</pron>
                <gramGrp>
-                  <pos>concreteNoun</pos>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Pinto_bean">
+            <sense xml:id="bean" corresp="http://dbpedia.org/resource/Pinto_bean" n="1">
                <usg type="domain">Legume</usg>
                <usg type="domain">Food</usg>
                <cit type="translation">
@@ -7257,12 +7296,43 @@
                   </form>
                </cit>
             </sense>
+            <sense xml:id="kidney" corresp="http://dbpedia.org/resource/Kidney" n="2">
+               <usg type="domain" corresp="http://dbpedia.org/resource/Category:Organs">Organs</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">kidney</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">riñón</orth>
+                  </form>
+               </cit>
+                  <etym type="metaphor">
+                     <seg type="desc" resp="#JB" xml:lang="en">The motivating source of the metaphor is the similarity in shape and color between the source concept 'bean' and the target object 'kidney'. The directionality of 'bean' →  'kidney' is assumed based on the fact that the later is a basic food staple of Mixtec people and that according to the theory of embodiment, we would expect polysemy to proliferate in the direction of: more basic/prominent → less basic/prominent. While body parts are amongst the most prominent in creating polysemies and new terms, the kidney is an internal organ and thus it is likely a less prominant concept in the embodied experience of the early Mixtecan speakers whose usage gave rise to this lexicalization.</seg>
+                     <cit type="etymon" corresp="#bean">
+                      <sense>
+                         <usg type="domain">Food</usg>
+                         <usg type="domain">InternalOrgan</usg>
+                         <gloss xml:lang="en">bean</gloss>
+                         <gloss xml:lang="es">frijol</gloss>
+                      </sense>
+                     </cit>
+                  </etym>
+            </sense>
+            <etym type="inheritance">
+               <cit type="etymon" cert="medium">
+                  <form>
+                     <pron notation="ipa" orig="*ⁿdu³ⁿdi⁴" xml:lang="nds-PMx">*ⁿdu˧ⁿdi˦</pron>
+                  </form>
+                  <ref source="#Longacre1961">(Longacre and Millon, 1961)</ref>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="yam">
             <form type="lemma">
                <orth xml:lang="mix">ñami</orth>
                <pron xml:lang="mix" notation="ipa">ɲámì</pron>
-               <pron xml:lang="mix" notation="zsampa">J a_R m i_F</pron>
                <gramGrp>
                   <pos>concreteNoun</pos>
                </gramGrp>
@@ -12388,7 +12458,9 @@
                </cit>
             </sense>
             <etym type="borrowing">
-               <pron xml:lang="es"/>
+              <cit type="etymon">
+                 <form><pron xml:lang="es"/></form>
+              </cit>
             </etym>
             <!-- encyclopedic knowledge: get MIX version 'August is the eighth month (of the year)' -->
          </entry>
@@ -16098,6 +16170,20 @@ Emotional Actions:
                   <orth xml:lang="es">dormir</orth>
                </cit>
             </sense>
+         </entry>
+         <entry xml:id="anml-pron-morph">
+            <form type="lemma">
+               <orth>ti</orth>
+            </form>
+            <gramGrp>
+               <gram></gram>
+            </gramGrp>
+            <sense>
+               
+            </sense>
+            <etym>
+               
+            </etym>
          </entry>
       </body>
    </text>

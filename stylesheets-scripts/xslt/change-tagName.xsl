@@ -16,6 +16,14 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="desc">
+        <seg type="desc">
+            <xsl:copy-of select="@*"/>
+            <xsl:value-of select="."/>
+        </seg>
+    </xsl:template>
+    
+    <!-- 
     <xsl:template match="//cit[@type='translation']/quote">
         <orth>
             <xsl:copy-of select="@*"/>
@@ -76,7 +84,7 @@
             <xsl:value-of select="."/>
         </gram>
     </xsl:template>
-    
+     -->
     <!--  
     <xsl:template match="//etym">
         <etym>
