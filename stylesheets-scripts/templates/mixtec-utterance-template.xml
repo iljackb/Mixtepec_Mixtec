@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/Add-missing-ids-2Span.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Speech Elicited <date></date>: <name></name></title>
+            <respStmt>
+               <resp>Researcher, transcriptions</resp>
+               <name>Jack Bowers</name>
+            </respStmt>
+            <respStmt>
+               <resp>Speaker consultant</resp>
+               <name></name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+
+  </teiHeader>
+  <text>
+      <body>
+         <annotationBlock>
+            <u><!-- add stylsheet to add speaker in @who according to value of Speaker consultant -->
+               <seg function="utterance" notation="orth"><!-- add utterance type (eg phrase, lex item, sentence, etc.) in @type -->
+                  <w></w>
+                  <w></w>
+               </seg>
+            </u>
+            <spanGrp type="translation">
+               <span target="#" xml:lang="en"></span>
+               <span target="#" xml:lang="es"></span>
+               
+               <span target="#" xml:lang="en"></span>
+               <span target="#" xml:lang="es"></span>
+            </spanGrp>
+            <spanGrp type="gram">
+               <span type="" target="#" ana="#"/>
+               <span type="" target="#" ana="#"/>
+            </spanGrp>
+         </annotationBlock>
+         
+      </body>
+  </text>
+</TEI>
