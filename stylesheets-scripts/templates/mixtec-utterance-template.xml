@@ -24,30 +24,30 @@
             <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
-
+     <!-- use "shift + cmnd + A"  to add additional utterance annotation templates-->
   </teiHeader>
   <text>
       <body>
          <annotationBlock>
-            <u><!-- add stylsheet to add speaker in @who according to value of Speaker consultant -->
+            <u><!-- add stylesheet to add speaker in @who according to value of Speaker consultant -->
                <seg function="utterance" notation="orth"><!-- add utterance type (eg phrase, lex item, sentence, etc.) in @type -->
+                  <w></w>
+                  <w></w>
+               </seg>
+               <seg function="utterance" notation="ipa"><!-- delete or close <w> elements if not necessary -->
                   <w></w>
                   <w></w>
                </seg>
             </u>
             <spanGrp type="translation">
                <span target="#" xml:lang="en"></span>
-               <span target="#" xml:lang="es"></span>
-               
-               <span target="#" xml:lang="en"></span>
-               <span target="#" xml:lang="es"></span>
+               <span target="#" xml:lang="es"/>
             </spanGrp>
             <spanGrp type="gram">
-               <span type="" target="#" ana="#"/>
+               <span type="pos" target="#" ana="#"/>
                <span type="" target="#" ana="#"/>
             </spanGrp>
          </annotationBlock>
-         
       </body>
   </text>
 </TEI>

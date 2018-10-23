@@ -937,7 +937,7 @@
                      <orth xml:lang="es">parte delantera de la casa</orth>
                   </cit>
                </cit>
-               <graphic url=" SIL_docs/L157/L157-06-cld.png">
+               <graphic url="SIL_docs/L157/L157-06-cld.png">
                   <desc xml:lang="en">The image shows the front part of the houses colored yellow.</desc>
                   <desc xml:lang="mix"/>
                </graphic>
@@ -4912,12 +4912,17 @@
          <entry xml:id="sky">
             <form type="lemma">
                <orth xml:lang="mix">antivi</orth>
+               <pron notation="ipa" cert="medium">and̪i˧vi↘</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Sky">
+            <sense corresp="http://dbpedia.org/resource/Sky" n="1">
                <usg type="domain">Meteorology</usg>
+               <xr type="meronymOf">
+                  <ref xml:lang="en">Earth</ref>
+                  <ref xml:lang="mix">Ñuu Ncha'i</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">sky</orth>
@@ -4929,8 +4934,12 @@
                   </form>
                </cit>
             </sense>
+            <sense corresp="http://dbpedia.org/resource/Heaven" n="2">
+               <usg type="dom">Religion</usg>
+            </sense>
             <etym type="inheritance">
                <cit type="etymon">
+                  <lbl>Attested in</lbl> <lang>Colonial Mixtec</lang>
                   <form>
                      <orth xml:lang="nds-x-clmx">andevui</orth>
                   </form>
@@ -6796,8 +6805,8 @@
                   <etym>
                      domain (partOf-Tree); Blend:
                      <cit type="etymonbody-hand">
-                        ndá.ʔà
-                        hand
+                        <form><orth>ndá.ʔà</orth></form>
+                        <gloss>hand</gloss>
                      </cit>
                         <cit type="etymontree">[t̪í.jù.tsà] 'tree'</cit>
                   </etym><cit type="translation" xml:lang="en">
@@ -6806,7 +6815,7 @@
                </sense>
 
             </entry>
- -->
+
          <entry xml:id="tree-brush">
             <form type="lemma">
                <orth xml:lang="mix">tutu</orth>
@@ -8130,7 +8139,7 @@
          <entry xml:id="num-15" type="compound">
             <form type="lemma">
                <orth xml:lang="mix">tsa'un</orth>
-               <pron xml:lang="mix" notation="zsampa">(ts) a_T ? u_n_T</pron>
+               <pron xml:lang="mix" notation="ipa">tzāʔũ̄</pron>
                <gramGrp>
                   <pos>cardinalNumber</pos>
                </gramGrp>
@@ -10877,10 +10886,10 @@
          <entry xml:id="grey"><!-- Midpoint in 2 dimentional Shade spectrum (Black > White) -->
             <form type="lemma">
                <orth xml:lang="mix">ya'a</orth>
+               
                <pron xml:lang="mix" notation="ipa">jáʔà</pron>
-               <pron xml:lang="mix" notation="zsampa">j a_R ? a_</pron>
             </form>
-            <sense>
+            <sense n="1">
                <usg type="domain">Color</usg>
                <sense xml:id="grey-ADJ">
                   <gramGrp>
@@ -10902,7 +10911,7 @@
          <entry xml:id="white-grey">
             <form type="lemma">
                <form type="lemma">
-                  <orth xml:lang="mix">yaaya'a</orth>
+                  <orth xml:lang="mix">yaa ya'a</orth>
                   <pron xml:lang="mix" notation="ipa">jààjáʔà</pron>
                   <pron xml:lang="mix" notation="zsampa">j a:_Fj a_R ? a_F</pron>
                </form>
@@ -10918,6 +10927,13 @@
                   <gramGrp>
                      <pos>noun</pos>
                   </gramGrp>
+               </sense>
+               <sense n="2">
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">ash</orth>
+                     </form>
+                  </cit>
                </sense>
                <etym type="blending">
                   <cit type="etymon">
@@ -14730,7 +14746,7 @@ Emotional Actions:
          <entry xml:id="study-MIX">
             <form type="lemma">
                <orth xml:lang="mix">skua'a</orth>
-               <pron xml:lang="mix" notation="ipa">skwaʔa</pron>
+               <pron xml:lang="mix" notation="ipa">skwáʔá</pron>
                <gramGrp>
                   <pos>verb</pos>
                   <gram type="transitivity" norm="transitive">trans</gram>

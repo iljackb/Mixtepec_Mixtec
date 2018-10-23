@@ -43,6 +43,22 @@
             </spanGrp>       
         
     </xsl:template>
+    <xsl:template match="seg[@function='utterance']">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+        <spanGrp type="translation">  
+            <span target="#{@xml:id}" xml:lang="en"></span>
+            <span target="#{@xml:id}" xml:lang="es"></span>
+            
+            
+            <xsl:for-each select="w">
+                <span target="#{@xml:id}" xml:lang="en"></span>
+                <span target="#{@xml:id}" xml:lang="es"></span>
+            </xsl:for-each>
+        </spanGrp>       
+        
+    </xsl:template>
 
 <!-- For content in //list/item structures with dual (spanish-mixtec) content -->
     <!--  

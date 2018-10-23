@@ -64,12 +64,35 @@
     </xsl:template>
  -->
 
+<!-- for TEXTS -->
+    <xsl:template match="spanGrp[@type = 'translation']">
+        <xsl:variable name="theSpanGrp" select="."/>
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            
+            <xsl:for-each select="(../seg/@xml:id, ../seg/w/@xml:id)">
+                <xsl:choose>
+                    <xsl:when test="not(concat('#', .) = $theSpanGrp/span/@target)">
+                        <span target="{concat('#',.)}" xml:lang="en"/>
+                        <span target="{concat('#',.)}" xml:lang="es"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="$theSpanGrp/span[@target = concat('#', current())]"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+            </xsl:for-each>
+        </xsl:copy>
+    </xsl:template>
+
+
+<!-- for UTTERANCES (IN PROGRESS) -->
     <xsl:template match="spanGrp[@type = 'translation']">
         <xsl:variable name="theSpanGrp" select="."/>
         <xsl:copy>
             <xsl:apply-templates select="@*"/>
 
-            <xsl:for-each select="(../seg/@xml:id, ../seg/w/@xml:id)">
+            <xsl:for-each select="(../u/seg/@xml:id, ../u/seg/w/@xml:id)">
                 <xsl:choose>
                     <xsl:when test="not(concat('#', .) = $theSpanGrp/span/@target)">
                         <span target="{concat('#',.)}" xml:lang="en"/>
