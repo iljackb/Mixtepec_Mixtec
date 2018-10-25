@@ -5,7 +5,7 @@
     <xsl:output method="xml" indent="yes"/>
 
 
-    <!-- Intercepting the <seg>'s -->
+    <!-- Intercepting the <seg>'s in <p>-->
 
     <xsl:template match="seg[@type = 'S' and parent::p]">
         <annotationBlock>
@@ -23,6 +23,24 @@
         </annotationBlock>
     </xsl:template>
     
+    <!-- Intercepting the <seg>'s in <u>-->   
+    <xsl:template match="seg[@function = 'utterance' and parent::u]">
+        <annotationBlock>
+            <xsl:copy>
+                <xsl:apply-templates select="@* | node()"/>
+            </xsl:copy>
+            <spanGrp type="translation">
+                <span target="#{@xml:id}" xml:lang="en"/>
+                <span target="#{@xml:id}" xml:lang="es"/>
+                <xsl:for-each select="w">
+                    <span target="#{@xml:id}" xml:lang="en"/>
+                    <span target="#{@xml:id}" xml:lang="es"/>
+                </xsl:for-each>
+            </spanGrp>
+        </annotationBlock>
+    </xsl:template>
+    
+    <!--  
     <xsl:template match="annotationBlock">
         <xsl:apply-templates select="@* | seg"/>
     </xsl:template>
@@ -69,7 +87,7 @@
         </xsl:copy>
     </xsl:template>
 
-
+-->
 
     <!-- Generic copy template -->
 
@@ -78,5 +96,5 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
-
+    
 </xsl:stylesheet>

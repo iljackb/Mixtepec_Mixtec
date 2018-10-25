@@ -64,6 +64,8 @@
     </xsl:template>
  -->
 
+
+
 <!-- for TEXTS -->
     <xsl:template match="spanGrp[@type = 'translation']">
         <xsl:variable name="theSpanGrp" select="."/>

@@ -43,6 +43,28 @@
             </spanGrp>       
         
     </xsl:template>
+    
+    <!--  
+    <xsl:template match="seg" priority="1">
+        <seg xml:id="{generate-id(.)}">
+            <xsl:copy-of select="@*"/>
+            <xsl:attribute name="xml:lang">mix</xsl:attribute>
+
+            <xsl:apply-templates select="node()"/>
+        </seg>
+    </xsl:template>
+    
+    
+    <xsl:template match="w" priority="1">
+        <w xml:id="{generate-id(.)}">
+            <xsl:copy-of select="@*"/>
+
+            <xsl:apply-templates select="node()"/>
+        </w>
+    </xsl:template>
+    
+    -->
+    
     <xsl:template match="seg[@function='utterance']">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
