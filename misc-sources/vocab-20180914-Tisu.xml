@@ -57,19 +57,22 @@
                <seg xml:id="d1e47"
                     function="utterance"
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix"
+                  type="S">
                   <w xml:id="d1e48">ntaxita</w>
-                  <w xml:id="d1e50">tachiku</w>
+                  <w xml:id="d1e50">tachi</w>
+                  <w xml:id="d1e51">ku</w>
                </seg>
             </u>
             <spanGrp type="translation">
-               <span target="#" xml:lang="en">to breathe</span>
-               <span type="literal" target="#" xml:lang="en">take in air</span><!-- which is which!? -->
+               <span target="#d1e47" xml:lang="en">you are breathing</span>
+               <span target="#d1e47" xml:lang="en">you breathe</span>
+               <span type="literal" target="#d1e47" xml:lang="en">you take in air</span>
             </spanGrp>
             <spanGrp type="gram">
-               <span type="pos" target="#" ana="#V"/>
-               <span type="transitivity" target="#" cert="medium" ana="#INTRANS"/>
-               <span type="form" target="#" ana="#GLS"/>
+               <span type="pos" target="#d1e48 #d1e50" ana="#V"/>
+               <span type="transitivity" target="#" cert="medium" ana="#TRANS"/>
+               <span type="pos" target="#" ana="#"/>
                <!-- PHRASE? -->
             </spanGrp>
          </annotationBlock>
@@ -166,7 +169,7 @@
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#d1e111 #d1e114" ana="#V"/>
-               <span type="transitivity" target="#d1e111 #d1e114" ana="#TRANS"/><!-- MIGHT BE BOTH TRANS OR INTRANS -->
+               <span type="transitivity" target="#d1e111 #d1e114" ana="#TRANS"/><!-- MIGHT BE BOTH TRANS OR INTRANS: semantically transitive; syntactically can be either -->
                <span type="form" target="#d1e111 #d1e114" ana="#GLS"/>
             </spanGrp>
          </annotationBlock>
@@ -187,7 +190,7 @@
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
-               <span type="" target="#" ana="#"/>
+               <span type="voice" target="#" ana="#CMND"/>
                <span type="" target="#" ana="#"/>
                <span type="" target="#" ana="#"/>
             </spanGrp>
