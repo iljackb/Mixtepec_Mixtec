@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -106,7 +106,8 @@ Kua’an kueni	vayan (go 2pl.form)
             <u n="3" who="#JS">
                <seg xml:id="d1e36" function="utterance" notation="orth" type="imperative" cert="medium">
                   <w xml:id="d1e37">na'a</w>
-                  <w xml:id="d1e39">katsi'<m xml:id="d1e44">ni</m></w>
+                  <w xml:id="d1e39" orig="katsi'ni">katsi</w>
+                  <w xml:id="d1e44">ni</w>
                   <w xml:id="d1e43">staa</w>
                </seg>
             </u>
@@ -114,9 +115,10 @@ Kua’an kueni	vayan (go 2pl.form)
                <span type="" target="" ana=""/>
                <span type="" target="" ana=""/>
             </spanGrp>
+            <!-- 
             <spanGrp type="semantics">
                <span type="" target="" ana=""/>
-            </spanGrp>
+            </spanGrp> -->
             <spanGrp type="translation">
                <span target="#d1e36" xml:lang="en">Let's go eat</span>
                <span target="#d1e36" xml:lang="en">Let's eat</span>
@@ -295,7 +297,25 @@ Kua’an kueni	vayan (go 2pl.form)
                <span target="#" xml:lang="es">¿Estás bien?</span>             
             </spanGrp>          
          </annotationBlock>
+         
+<!-- 
+            that’s right (agreement)	- ntaa [ntàà] - ntaa (ka’un) (=flat)
+sani va’ni  - oh well (va’a ni), be well
+            
+         sa’a (time) (rest of sentence)
 
+kuunaa - carry something with/on you
+ naa - 1sg
+ nai - 2sg.inf
+
+ti tsi’a soko ña ntsatsia uvi chuun - he must have been hungry because he ate two chickens
+         
+         -->
+         <!-- Jerry post (2018/01/12)
+         Su ndisa’a so tsi’i ntia ta tsi’i ra tsi’i ntishi... I don’t always drink but when I do I drink pulque...
+         -->
+         
+         
       </body>
    </text>
 </TEI>

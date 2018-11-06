@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -67,7 +68,10 @@
                <span target="#" xml:lang="es"/>
                <span target="#" xml:lang="en"/>
                <span target="#" xml:lang="es"/>
-            </spanGrp>in (a language) (<hi rend="italic">as in “say it in mixtec”</hi>) nu: nu sa'a
+            </spanGrp>
+            
+            
+            in (a language) (<hi rend="italic">as in “say it in mixtec”</hi>) nu: nu sa'a
             savi </p>
          <p rend="Body">
             <seg xml:id="d1e76" xml:lang="mix">
@@ -81,7 +85,7 @@
                <pc>,</pc>
                <w xml:id="d1e91">koo</w>
                <w xml:id="d1e93">ka</w>
-               <w xml:id="d1e95">iixi</w><!-- ixi -->
+               <w xml:id="d1e95" orig="iixi">ixi</w>
                <w xml:id="d1e97">xini</w>
                <w xml:id="d1e99">ra</w>
             </seg>
@@ -98,12 +102,12 @@
                <span target="#" xml:lang="es"/>
             </spanGrp>
             <seg xml:id="d1e112" xml:lang="mix">
-               <w xml:id="d1e113">Ku</w>'<w xml:id="d1e116">ntu</w>
+               <w xml:id="d1e113">Ku'ntu</w>
             </seg>
             <seg xml:id="d1e118" xml:lang="mix">
                <w xml:id="d1e119">Tina</w>
                <w xml:id="d1e121">ka</w>
-               <w xml:id="d1e123">ku</w>'<w xml:id="d1e126">ntu</w>
+               <w xml:id="d1e123">ku'ntu</w>
                <w xml:id="d1e128">nchui'i</w>
             </seg>
          </p>
@@ -118,8 +122,7 @@
                <w xml:id="d1e139">Nchi'chi</w>
             </seg>
             <seg xml:id="d1e141" xml:lang="mix">
-               <w xml:id="d1e142">Ni</w>
-               <w xml:id="d1e144">kuu</w>
+               <w xml:id="d1e142" orig="Ni kuu">Nikuu</w>
                <w xml:id="d1e146">nchi'chi</w>
                <w xml:id="d1e148">nchu'a</w>
             </seg>
@@ -158,8 +161,8 @@
          </p>
          <p rend="Body">
             <spanGrp type="translation">
-               <span target="#" xml:lang="en">sad</span>
-               <span target="#" xml:lang="es"/>
+               <span target="#d1e194 #d1e196" xml:lang="en">sad</span>
+               <span target="#d1e194 #d1e196" xml:lang="es">triste</span>
             </spanGrp>
             <seg xml:id="d1e193" xml:lang="mix">
                <w xml:id="d1e194">Nta'vi</w>
@@ -321,7 +324,8 @@
             </spanGrp>
             <seg xml:id="d1e408" xml:lang="mix">
                <w xml:id="d1e409">Kaku</w>
-            </seg>: <seg xml:id="d1e412" xml:lang="mix">
+            </seg>: 
+            <seg xml:id="d1e412" xml:lang="mix" type="S">
                <w xml:id="d1e413">Ni</w>
                <w xml:id="d1e415">kaku</w>
                <w xml:id="d1e417">uvi</w>
@@ -338,7 +342,9 @@
             </spanGrp>
             <seg xml:id="d1e430" xml:lang="mix">
                <w xml:id="d1e431">Tsiniñu'u</w>
-            </seg>: <seg xml:id="d1e434" xml:lang="mix">
+            </seg>:
+            
+            <seg xml:id="d1e434" xml:lang="mix" type="S">
                <w xml:id="d1e435">Tsiniñu'u</w>
                <w xml:id="d1e437">katsi</w>
                <w xml:id="d1e439">staa</w>
@@ -382,13 +388,13 @@
             <hi rend="italic">“let's kill it!” (?)</hi>
          </p>
          <p rend="Body">
-            <seg xml:id="d1e484" xml:lang="mix">
-               <w xml:id="d1e485">nintane'e</w>
+            <seg xml:id="d1e484" xml:lang="mix" type="S">
+               <w xml:id="d1e485">Nintane'e</w>
                <w xml:id="d1e487">in</w>
                <w xml:id="d1e489">sa'va</w>
             </seg>
             <spanGrp type="translation">
-               <span target="#" xml:lang="en">I found a frog</span>
+               <span target="#d1e484" xml:lang="en">I found a frog</span>
                <span target="#" xml:lang="es"/>
                <span target="#" xml:lang="en"/>
                <span target="#" xml:lang="es"/>
@@ -398,7 +404,8 @@
             <seg xml:id="d1e498" xml:lang="mix">
                <w xml:id="d1e499">nchi</w>
                <w xml:id="d1e501">kuu</w>
-               <w xml:id="d1e503">ti</w>?</seg>
+               <w xml:id="d1e503">ti</w>
+               <pc>?</pc></seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">What (animal) is it?</span>
                <span target="#" xml:lang="es"/>
@@ -419,7 +426,9 @@
          <p rend="Body">
             <seg xml:id="d1e524" xml:lang="mix">
                <w xml:id="d1e525">nixi</w>
-               <w xml:id="d1e527">nania</w>?</seg> [á] <spanGrp type="translation">
+               <w xml:id="d1e527">nania</w>?</seg>    
+            [á] 
+            <spanGrp type="translation">
                <span target="#" xml:lang="en">What's her name?</span>
                <span target="#" xml:lang="es"/>
                <span target="#" xml:lang="en"/>
@@ -429,7 +438,9 @@
          <p rend="Body">
             <seg xml:id="d1e538" xml:lang="mix">
                <w xml:id="d1e539">ana</w>
-               <w xml:id="d1e541">nta'i</w>?</seg>
+               <w xml:id="d1e541">nta'i</w>
+               <pc>?</pc>
+            </seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">Who's crying?</span>
                <span target="#" xml:lang="es"/>
@@ -476,7 +487,7 @@
          </p>
          <p rend="Body">
             <seg xml:id="d1e592" xml:lang="mix">
-               <w xml:id="d1e593">te</w>'<w xml:id="d1e596">le</w>
+               <w xml:id="d1e593">te'le</w>
             </seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">chicken</span>
@@ -488,7 +499,8 @@
             <seg xml:id="d1e607" xml:lang="mix">
                <w xml:id="d1e608">tsatu</w>
             </seg>
-            <seg xml:id="d1e610" xml:lang="mix" notation="ipa">[<w xml:id="d1e612">tsat̪ù</w>]</seg>
+            <seg xml:id="d1e610" xml:lang="mix" notation="ipa">
+               [<w xml:id="d1e612">tsat̪ù</w>]</seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">pants</span>
                <span target="#" xml:lang="es">pantalones</span>
@@ -513,8 +525,8 @@
             <seg xml:id="d1e639" xml:lang="mix">
                <w xml:id="d1e640">ko'o</w>
             </seg>
-            <seg xml:id="d1e642" xml:lang="mix" notation="ipa">[<w xml:id="d1e644">kò</w>'<w
-                  xml:id="d1e647">ó</w>]</seg>
+            <seg xml:id="d1e642" xml:lang="mix" notation="ipa">
+               [<w xml:id="d1e644">kò'ó</w>]</seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">plate</span>
                <span target="#" xml:lang="es"/>
@@ -524,7 +536,8 @@
             <seg xml:id="d1e655" xml:lang="mix">
                <w xml:id="d1e656">mi'i</w>
             </seg>
-            <seg xml:id="d1e658" xml:lang="mix" notation="ipa">[<w xml:id="d1e660">míʔi</w>]</seg>
+            <seg xml:id="d1e658" xml:lang="mix" notation="ipa">
+               [<w xml:id="d1e660">míʔi</w>]</seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">trash</span>
                <span target="#" xml:lang="es">basura</span>
@@ -645,7 +658,8 @@
             <seg xml:id="d1e796" xml:lang="mix">
                <w xml:id="d1e797">xikui</w>
             </seg>
-            <seg xml:id="d1e799" xml:lang="mix" notation="ipa">[<w xml:id="d1e801">ʃíkwi</w>]</seg>
+            <seg xml:id="d1e799" xml:lang="mix" notation="ipa">
+               [<w xml:id="d1e801">ʃíkwi</w>]</seg>
             <spanGrp type="translation">
                <span target="#" xml:lang="en">milk</span>
                <span target="#" xml:lang="es">leche</span>
