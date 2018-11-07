@@ -2,29 +2,20 @@ NEEDED:
 
 - Eventually add @xml:lang=“mix-x-YCNY” for all relevant speaker sources, make others as needed for other places in region
 
-- Need to extract speaker for each utterance file from the file name of source .wav file!!
-
-
-- (Transcribed speech) Decide on orthographic conventions!
+- (Transcribed speech) Decide on orthographic conventions! (YES USE PUNCTUATION IN COMPLETE SENTENCES)
   e.g.
   	(?) Capitalize 1st word of sentence? 
 	(?) Use periods, question marks (both sentence initial & final as per mixtec orthographic conventions)
   
+
 - How to link a single utterance to a source sound file when taken outside the context of the entire file (the source file names are in the header)
 
 
-
 - ALWAYS add @type to <spanGrp> to distinguish between ‘gloss’ (which should be distinguished as being the Praat TextGrid source and is not the final glossing or annotation) and other future spanGrps.
+
  > the use of <spanGrp> inside the <annotationBlock> is so that in a database search, this information comes up along with associated transcriptions
 
 
-- What to do/how to tag words in orthography tier as “nui”
-	 e.g. 
-		<w>nu</w><w>i</w> (NOTE! Can re-segment textgrid only for vowels, as long as the tone is synched (implicitly or explicitly)
-	>>DECISION:
-		> Only for spoken utterances (e.g. do not apply this to text sources)
-		> format as:
-			<w>nu<m>i</m></w>
 
 
 - Where/how to annotate adjective that only applies to animate nouns? 
@@ -551,6 +542,8 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 		(wiki for mixtecs; can have sub-varieties as normal wiki has languages)
 		(as Vikipetâ; the Guarani version)
 
+
+
 -Translations:
 	> Should I ever translate the “ra” conjunction?
 		There are times where it is equivalent to “then”.
@@ -559,14 +552,7 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 	> Need to decide on consistant way to translate to spanish when there is a pronoun in Mixtec,
 	>>> Should I put a Spanish pronoun in these cases??
 
--How to make sure you can always find content with glottal stops (some sources have apostrophe, others have “ꞌ” (U+A78C)
 
-  > currently putting the alternate form in “@norm” e.g.:
-                     <w xml:id="d1e585" norm="mi'ncha">miꞌncha</w>
-
-	(should put the saltillo version in the attribute because it is a bitch to use the  character pallette)
-
-  >> Thus search must allow for attribute values and element values
 
 - Translations:
 
@@ -593,6 +579,7 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 			“El Tule”
 
 	> what about “in milión”?
+
 		whereas “xiko in” (twenty one) is clearly a single item, one million is possibly different…. (currently grouping in common <w>)
 
 -Translations:
@@ -611,9 +598,6 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 >> Searching:
 	> Add ability to search document source type (get from //text/@decls)
 
->> (RESOLVED) Should <linkGrp> IGT be treated (labeled) as translations? as some are just direct translations!!
-	>>NO!! they should and will also have paralell translations of the same content (whether original(me) or SIL sources)
 
->> In dictionary, should I have all inflected verb forms in the same dictionary with 
 
 >> difference between present tense “to die” and “drink”!!?? “tsi’i”??!!!

@@ -519,6 +519,7 @@
          <entry xml:id="people" cert="medium"><!-- this is always a plural noun!! "kue nivi"!!! -->
             <form type="lemma">
                <orth xml:lang="mix">nivi</orth>
+               <!-- always occurs with plural article "kue" -->
                <gramGrp>
                   <pos>noun</pos>
                   <number>pl</number>
@@ -532,7 +533,7 @@
                   </form>
                </cit>
                <cit type="example" xml:lang="mix">
-                  <quote>Yo'o nantakani iin tu'un yata ña nikuu nisa'a <hi rend="bold">kue nivi</hi> na ntsintee ta tsa na'a.</quote>
+                  <quote>Yo'o nantakani iin tu'un yata ña nikuu nisa'a <oRef>kue nivi</oRef> na ntsintee ta tsa na'a.</quote>
                   <ptr target="SIL_docs/L154/L154-tok.xml"/>
                   <!-- specify further to exact location of item -->
                </cit>
@@ -658,7 +659,6 @@
          <entry xml:id="boy"><!-- make note of speakers -->
             <form type="lemma">
                <orth xml:lang="mix">chaluuka</orth>
-               <orth xml:lang="mix" type="segmented">chaluuka</orth>
                <pron xml:lang="mix" notation="ipa">ʧààlùùɣá</pron>
                <pron xml:lang="mix" notation="zsampa">(tS) a:_Fl u:_Fk_v a_R</pron>
                <gramGrp>
@@ -678,7 +678,8 @@
                   </form>
                </cit>
             </sense>
-            <etym type="lexicalization">
+            <!-- ETYMOLOGY IS WRONG!! -->
+            <etym type="lexicalization" cert="low">
                <etym type="metonymy">
                   <cit type="etymon">
                      <form>
@@ -903,11 +904,10 @@
                    n="1">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <xr type="meronymOf">
-                  <ref target="#body" xml:lang=""/>
+                  <ref target="#body" xml:lang="en"/>
                </xr>
                <xr type="meronymOf">
-                  <ref target="" xml:lang=""/>
-                  <ref target="" xml:lang=""/>
+                  <ref target="#body-head" xml:lang=""/>
                </xr>
                <cit type="translation">
                   <orth xml:lang="en">face</orth>
@@ -1000,7 +1000,7 @@
          <entry xml:id="body-face-eye" type="compound">
             <form type="lemma">
                <orth xml:lang="mix">ntuchinuu</orth>
-               <pron xml:lang="mix" notation="ipa">ndùʧínũ̀ũ</pron>
+               <pron xml:lang="mix" notation="ipa">ndùʧínũ̀ṹ</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -1011,7 +1011,7 @@
                   <ref target="#body-face" xml:lang="mix">nuu</ref>
                </xr>
                <xr type="meronymOf">
-                  <ref xml:lang="en">face</ref>
+                  <ref xml:lang="en" target="#body">face</ref>
                </xr>
                <cit type="translation">
                   <form>
