@@ -1,11 +1,5 @@
 NEEDED:
 
-- Eventually add @xml:lang=“mix-x-YCNY” for all relevant speaker sources, make others as needed for other places in region
-
-- (Transcribed speech) Decide on orthographic conventions! (YES USE PUNCTUATION IN COMPLETE SENTENCES)
-  e.g.
-  	(?) Capitalize 1st word of sentence? 
-	(?) Use periods, question marks (both sentence initial & final as per mixtec orthographic conventions)
   
 
 - How to link a single utterance to a source sound file when taken outside the context of the entire file (the source file names are in the header)
@@ -24,7 +18,6 @@ NEEDED:
 - How to handle alternate translations?
 	>@n
 
-- USING @cert TO MARK EXAMPLES TO COME BACK TO!!!
 
  >> Add @cert to all cases of <c function=“tone”>T</c> (USE XSLT) or Replace tones w/ value “T” with <c cert=“low”/>
 
@@ -34,8 +27,6 @@ NEEDED:
 - Need to add @synch to all <c function=“tone”> and @xml:id for preceding vowel!!
 
 - where I’m currently putting in full uri’s for concepts(sense) and domains as value of @corresp, later may need to change to @ana
-
-- How/whether to combine complex phones currently in separate <c>’s? eg. “nd”, “kw”, “ndʒ”,..etc..
 
 
 - Decide on governing priciple regarding which of the transcriptions are annotated and how to automatically process and extract their data (for when needed)
@@ -164,9 +155,6 @@ NEEDED:
 -Where to put #TM & #LM tags? (semantics or decomposition)??
 
 
-- How to include definitions!? 
-	> Do once in dictionary
-
 - Will need to add the revised orthography of words with tone marked!!
   >>HOW best to do this in utterance transcriptions??!!!??
 
@@ -246,17 +234,12 @@ It will be marked with either in the:
 
 -tagging TPC marker <span type=“pragmatics” ana=“#TPC”/>
 
-- (XSLT CHANGE) Eventually normalize the use of “d”“ʒ”, “d””ʃ”; make sure that all are in same <c>
+
 
 - (FUTURE ADDITIONS) Institute a way to include tags according to other expert sources if terminology differs (eventually you can decide whether or not to unify tags system after considering functionality & theoretical implications)
 
 
-- In tagging gram feature subtypes (e.g. ‘emphatic pronoun’); should I use: “#PRON #EMPH”
-or “#PRON-EMPH”;
-  > ‘emphatic’ doesn’t exist independently of pronoun in old ISOcats;
-  >>Currently using #PRON #EMPH (can always change using XSLT)
-  >>(?) Should the tagging for where these are reflexive be “#PRON #EMPH #RFLX” or “#PRON #RFLX”? 
-  (Wiktionary English categorizes them as #PRON #EMPH & #PRON #RFLX)
+- 
 
 - DECIDE ON NORMALIZATION OF TERM “Particle” in pos classification of what SIL call “enclitics” (?) XSLT : CHANGE (all?) “#PTCL” to “#ENCLT”
 	(yu, ku, ni,… etc.)
@@ -370,11 +353,10 @@ or “#PRON-EMPH”;
 	> May want to consider doing that for all motion verbs even the aforementioned
 
 -How to classify “hello”, “goodbye”, etc.!?
-	> phrase (domain = GRT)
+	> phrase (domain = GRT) or
 
 -Currently marking “Imperative” as “#CMND” (may want to change eventually to “#IMPER”)
 
--(FIGURE OUT: consult literature & Mille) what aspect to label ‘gloss’ verbs (verb nuclei?)
 
 -Should I mark verb as transitive when annotating just an inflected form of a transitive verb? (e.g. it includes just the V and the A)
 
@@ -382,7 +364,9 @@ or “#PRON-EMPH”;
 
 -(FILE ORGANIZATION) Should I put all XML in same file? (that would enable more succinct searching in Oxygen)
 
--(DECIDE) How to tag #WH words? (do I need to assign a traditional POS!? It seems arbitrary as (in english and spanish for example) they all differ in the labeling (sometimes called ‘adverbial’, ‘pronoun’, ‘interrogative pronoun’, etc.)
+-(DECIDE) How to tag #WH words? (do I need to assign a traditional POS!?
+
+ It seems arbitrary as (in english and spanish for example) they all differ in the labeling (sometimes called ‘adverbial’, ‘pronoun’, ‘interrogative pronoun’, etc.)
  > I could call it a particle e.g. #PTCL #WH (#LOC | #TEMP |etc..)
 	>>(Currently using)
 		- nchi (what) <span type="pos" target="#d1e37 #d1e41" cert="low" ana="#WH"/>
@@ -397,7 +381,7 @@ or “#PRON-EMPH”;
 
 - Where to put “usage”? (gram | semantics | other…)?!!
 
-- How to translate context based meanings (where no lexicalized item perminately exists in lexicon)?
+- How to translate context based meanings (where no lexicalized item permenately exists in lexicon)?
 	> (he’s approaching fast)
 
 - tagging “complementizer” as “#CMTZR”
@@ -420,35 +404,14 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 
 - Where to keep my annotation guidelines? (as part of Git repo? or as document in Git repo?)
 
-- Improve XSLT scripts used to extract and display annotated content
-
-- Add the ability to look for translations from <linkGrp> contents in script as well!
 
 - MWE in standoff tag as <span type=“phrase” ana=“#MWE”> 
-  > How to handle when they are interrogative in nature?
+
 
 - Use of LATIN SMALL LETTER SALTILLO “ꞌ”  - (Unicode: U+A78C, UTF-8: EA 9E 8C) vs APOSTROPHE “‘“ (Unicode: U+0027, UTF-8: 27)
   > DISCUSS with Mille 
 
-- Need to add @orig to <w> in order to deal with 
 
-- Make ODD for Utterance files allowing:
- 	> @orig to <w> in order to deal with
-	> @notation in <seg> 
-
-- On what level should greetings and salutations be tagged?
-  - How do we make those that are single word and phrasal in nature are included in the same category? 
-	> Can we have #GRT in both type=“pos” and (type=“discourse” or type=“phrase” or type=“sentence”)?
-
-	>>(Current method for “how are you”?)
-               <seg xml:id="d1e90" xml:lang="mix" function="utterance" notation="orth" type="interrogative">
-
-		….
-               <spanGrp type="gram">
-              	 <span type="sentence" target="#d1e90" ana="#GRT #Q"/>
-
-- Decide, should I tag yes-no question as #Q #YN or #Q-YN?
-	> Currently using #Q-YN
 
 - Annotation of sense info in standoff annotations:
 	> Can include as many additional <span type=“sense” @corresp…> as need be for a given concept observed;
@@ -463,11 +426,8 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
  > what value to specify no white space?
 
 
--Figure out how to encode blank space for answers (workbook style) (L093, L095, & others)
-
 -Figure out how/where to store answers given from speakers to questions in a document? (L095), these could be used as basis for comparing in interactive HTML form version of content.
 
-- Convert markup of L095 to <w> (from <seg>)
 
 -In spanGrp translations, where Mixtec sentence is one word (answer usually), should I point to the sentence level <s> or the word <w>?
   > In L097, I am point to the <w> and the grammatical annotation of the sentence level can point to sentence. 
@@ -489,6 +449,8 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 
 -(ISSUE MADE) Translations: should the present (incompletive) be translated to Spanish as both the gerund and present indicative?
 
+
+
 -Translation: should I translate nouns with “ka” as “the N”? What about when they translate as “the N” when there is no “ka”?
 	> So far not doing this, if you decide to, need to go back and change
 
@@ -496,6 +458,9 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 	> “mancha yuku (ka)”   ’to the forest’
 	
 	>>DO NOT DELETE POINTERS ANYMORE (LEAVE IN CASE YOU ADD THEM LATER)
+
+
+
 
 - Need systematic way of linking questions and answers in <linkGrp> @type
 
@@ -578,15 +543,14 @@ TO TRY TO GET SOLUTIONS TO IN BERLIN
 	>> I have decided not to do that if the word is a loan word from spanish, e.g.
 			“El Tule”
 
-	> what about “in milión”?
+
 
 		whereas “xiko in” (twenty one) is clearly a single item, one million is possibly different…. (currently grouping in common <w>)
 
 -Translations:
 	> what about uses of items that have no translatable meaning?
 
-- General:
-	> How to mark content that may be unique to either one speaker (note need further consultation with other speakers) or possibly a sub-dialectal difference (eg between Yucunani and other MIX regions)?
+
 
 -Metadata in TEI Header
 	> define typology of <ref> content which defines the key XPath structures in which the annotation (translation, sense, gram, etc) contents are found
