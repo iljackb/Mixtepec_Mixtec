@@ -28,38 +28,6 @@
            DIALOGUE
         
         -->
-<!-- 
-	
-"metalanguage"
-	fVal="http://www.isocat.org/datcat/DC-3827"
-	def:"a language used in a multi-language lexical resource as a language of description"
-	
-"meta language"
-   fVal="http://www.isocat.org/datcat/DC-2489"
-	def:"Name of the language that is used as a metalanguage in the resource."
-	
-"interlingua"
-	fVal="http://www.isocat.org/datcat/DC-4079"
-	def:"An abstract intermediary language used in the machine translation of human language."
-	
-"Process"	
-	http://www.isocat.org/datcat/DC-3426
-      gold
-      The class of things that happen and have temporal parts or stages.
-      Examples include extended events like a football match or a race, actions like pursuing and reading, and biological processes.
-      The formal definition is: anything that occurs in time but is not an object.
-      Note that a process may have participants 'inside' it which are objects, such as the players in a football match. 
-      In a 4D ontology, a process is something whose spatiotemporal extent is thought of as dividing into temporal stages roughly perpendicular to the time-axis. [SUMO 2010]
-	
-   eg:
-   DIACHRONIC COGNITIVE-LEXICAL PROCESSES:
-    GRAMMATICALIZATION
-      METONOMY
-      METAPHOR
-      BLENDING
-      
-        
-        -->
 
         
 
@@ -440,12 +408,13 @@ Prefix
                      <symbol value="adverbTemporal" xml:id="ADV-TEMP"/>
                      <symbol value="adverbEnumerative" xml:id="ADV-ENUM"/>
                      <symbol value="adverbManner" xml:id="ADV-mnr"/>
-                     <symbol value="adverbAffirmative" xml:id="ADV-AFRM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2787"/>
-                        <symbol value="adverbNegative" xml:id="ADV-NEG" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1839"/>
+                     <symbol value="adverbAffirmative" xml:id="ADV-AFRM" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-2787"/><!-- change to 'affirmative particle' -->
+                     <symbol value="adverbNegative" xml:id="ADV-NEG" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1839"/><!-- change to 'negative particle' -->
                      <symbol value="adverbDegree" xml:id="ADV-DEG"/>
                   </vAlt>
                </f>
-              
+               
+              <!-- negative particle -->
                
                <!-- negative
                   http://www.isocat.org/datcat/DC-1839
@@ -700,7 +669,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
            </fs>
                      
 
-           
+           <!-- parititve -->
            
            
            
@@ -833,8 +802,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
             <desc>
                
             </desc>
-            <p>The strategies for negation in various Mixtec systems have been examined at length by Macaulay (1990). At least with respect to the ten varieties of Mixtec considered in the aforementioned study, and
-               whose negative markers are displayed in the table (below), MIX appears to present a somewhat unique in how it marks negation, making use of several different negation markers, some corresponding to those below, and some unique.idi We will start by discussing the two negative adverbial markers that appear to not have any cognates in (at least the 10) other Mixtec systems. From the observations of the negative constructions we have collected thus far, the manner in which these forms are used in MIX syntax can be said to correspond rather nicely with the English negation adverbs “no” and “not”.</p>
+            <p>The strategies for negation in various Mixtec systems have been examined at length by Macaulay (1990). At least with respect to the ten varieties of Mixtec considered in the aforementioned study, and whose negative markers are displayed in the table (below), MIX appears to present a somewhat unique in how it marks negation, making use of several different negation markers, some corresponding to those below, and some unique.idi We will start by discussing the two negative adverbial markers that appear to not have any cognates in (at least the 10) other Mixtec systems. From the observations of the negative constructions we have collected thus far, the manner in which these forms are used in MIX syntax can be said to correspond rather nicely with the English negation adverbs “no” and “not”.</p>
      
             <label>Negation Markers (i), (ii) : <seg>[ʔà.ʔà]</seg> ‘<seg rend="italic">no</seg>’; <seg>[kʷɛ]́</seg> ‘<seg rend="italic">not</seg>’</label><lb/>
             
@@ -864,7 +832,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                <seg><seg>adv-neg</seg> <seg>live(at)</seg>  <c>-</c><seg>tpc</seg> <seg>sibling</seg> <c>-</c><seg>1s(=POSS)</seg>  <seg>home</seg></seg>
             </eg><lb/>
             
-            <label>Potentive Negation Marker: [ ma ]</label><lb/><!-- fs: #PRTCL #NEG #POT(INCMPL?) -->
+            <label>Potentive Negation Marker: [ ma ]</label><lb/>
             
             <p>At this juncture in our data processing, we only have one example of the negation marker ‘ma-’ ; the syntactic context in which it appears is sentence-initial. Macuaulay shows that this form has cognates in four of the ten Mixtec varieties sampled in that study.
                The sentence type (Illocutionary Force) in which our example occurs in, is Declarative (see below).</p>
@@ -907,8 +875,8 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                   <vAlt>
                      <symbol value="VAL-GRM0" xml:id="VAL-0"/><!-- Contains neither Actor or Undergoer -->
                      <symbol value="VAL-GRM1" xml:id="VAL-1"/><!-- Contains only Actor or Undergoer -->
-                     <symbol value="VAL-GRM1" xml:id="VAL-2"/><!-- Contains Actor and Undergoer -->
-                     <symbol value="VAL-GRM1" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
+                     <symbol value="VAL-GRM2" xml:id="VAL-2"/><!-- Contains Actor and Undergoer -->
+                     <symbol value="VAL-GRM3" xml:id="VAL-3"/><!-- Contains Actor, Undergoer and Oblique -->
                   </vAlt>
                </f>
             </fs>
@@ -918,7 +886,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                      <symbol xml:id="TRANS" value="transitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275"/>
                      <symbol xml:id="INTRANS" value="intransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3275"/>
                      <symbol xml:id="DITRANS" value="ditransitive" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1275"/>
-                     <symbol xml:id="ATRANS" value="a-transitive"/>
+                     <symbol xml:id="ATRANS" value="a-transitive"/><!-- aka "impersonal" -->
                   </vAlt>
                </f>
             </fs>
@@ -951,7 +919,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                   </row>
                   <row>
                      <cell/>
-                     <cell><seg xml:lang="mix" style="ipa"><seg>tsá.tsí</seg> <seg>we</seg> <seg>jí</seg></seg></cell>
+                     <cell><seg xml:lang="mix"><w>tsatsi</w> <w>kue</w> <w>yi</w></seg></cell>
                   </row>
                   <row>
                      <cell/>
@@ -1051,12 +1019,13 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                <f name="conjunctions">
                   <vAlt>
                      
-                     <symbol value="conjunction" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"/><!-- generic for minimal encoding to be enhanced later -->
+                     <symbol value="conjunction" xml:id="CONJ" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3132"/>
+                     <!-- generic for minimal encoding to be enhanced later -->
                      
-                     <symbol value="coordinatingConjunction" xml:id="CONJ-COORD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1262"/><!-- def:Conjunction that links constituents;	src:MAF -->
+                     <symbol value="coordinatingConjunction" xml:id="CONJ-COORD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1262"/>
+                     <!-- def:Conjunction that links constituents;	src:MAF -->
                      
-                     <symbol value="subordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
-                     
+                     <symbol value="subordinatingConjunction" xml:id="CONJ-SUB" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>                    
                      <!-- def:Conjunction that links constructions by making one of them a constituent of another. The subordinating conjunction typically marks the incorporated constituent. '..when', '…if…' '…therefore...';src:MAF -->
                      <!-- in mix(ipa), this corresponds to the item "saɾa" which is a compound of the basic 'conj' marker and the (temporal particle?) 'sa' ; can be considered to function and have similar semantics to (X happened 'then' Y happened)   -->
 

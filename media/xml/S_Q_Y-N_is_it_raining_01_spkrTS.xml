@@ -45,15 +45,17 @@
                <seg xml:id="d1e43"
                     function="utterance"
                     notation="orth"
-                    type="interrogative">
-                  <w xml:id="d1e44" synch="#T1">a</w>
+                    type="S">
+                  <pc>¿</pc>
+                  <w xml:id="d1e44" synch="#T1">A</w>
                   <w xml:id="d1e46" synch="#T3">kuun</w>
                   <w xml:id="d1e48" synch="#T6">savi</w>
+                  <pc>?</pc>
                </seg>
                <seg xml:id="d1e50"
                     function="utterance"
                     notation="ipa"
-                    type="interrogative">
+                    type="S">
                   <w xml:id="d1e51" synch="#T1">
                      <c>a</c>
                      <c function="tone">T</c>
@@ -80,17 +82,19 @@
             </spanGrp>
 
             <spanGrp type="gram">
-               <span type="" target="" ana=""/>
-               <span type="" target="" ana=""/>
+               <span type="discourse" target="#d1e43 #d1e50" ana="#Q"/>             
+               <span type="discourse" target="#d1e44 #d1e51" ana="#Y-N"/>
+               <span type="pos" target="#d1e44 #d1e51" ana="#PTCL "/>
+               
             </spanGrp>
             
             <spanGrp type="semantics">
-               <span type="" target="" corresp="" ana=""/>
-               <span type="" target="" corresp="" ana=""/>
+               <span type="sense" target="" corresp="" ana=""/>
+               <span type="domain" target="" corresp="" ana=""/>
             </spanGrp>
             <spanGrp type="translation">
-               <span target="" xml:lang="en"/>
-               <span target="" xml:lang="es"/>
+               <span target="#d1e43 #d1e50" xml:lang="en">Is it raining?</span>
+               <span target="#d1e43 #d1e50" xml:lang="es">¿Está lloviendo?</span>
             </spanGrp>
             <!-- S-Q-YN -->
          </annotationBlock>
