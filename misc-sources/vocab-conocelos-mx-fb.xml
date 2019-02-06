@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec content from Facebook group conocelos.mx</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Facebook post by conocelos.mx <ref target="https://www.facebook.com/LenguasMaternasDeMexico"/>
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <annotationBlock>
+            <u><!-- add ref to source date -->
+               <ref target="https://www.facebook.com/LenguasMaternasDeMexico/photos/a.152199158706245/323326581593501">
+                  <date>11/12/2018</date>
+               </ref>
+               <seg xml:id="S01"
+                  function="utterance"
+                  notation="orth"
+                  xml:lang="mix">
+                  <w xml:id="w01">xoo</w>
+                  <w xml:id="w02">koo</w>
+                  <w xml:id="w03">va'a</w>
+                  <w xml:id="w04">ni</w>
+                  <w xml:id="w05">inka</w>
+                  <w xml:id="w06">tuku</w>
+                  <w xml:id="w07">kuia</w>
+               </seg>
+               <!-- happy birthday: (literally) "be well, congratulations on another year"-->
+               <spanGrp type="translation">
+                  <span target="#S01" xml:lang="en">happy birthday</span>
+                  <span target="#S01" xml:lang="es">buen cumpleaños</span>
+                  <span target="#S01" xml:lang="en" type="literal">be well, congratulations on another year</span>
+                  <span target="#S01" xml:lang="es" type="literal" cert="medium">que te sea bien, felicitaciones para un oltro año</span>
+                  <span target="#w01" xml:lang="en"/>
+                  <span target="#w01" xml:lang="es"/>
+                  <span target="#w02" xml:lang="en"/>
+                  <span target="#w02" xml:lang="es"/>
+                  <span target="#w02" xml:lang="en"/>
+                  <span target="#w02" xml:lang="es"/>
+                  <span target="#w03 #w04" xml:lang="en">well</span>
+                  <span target="#w03 #w04" xml:lang="es">bien</span>
+                  <span target="#w05 #w06" xml:lang="en">another</span>
+                  <span target="#w05 #w06" xml:lang="es">oltro</span>
+                  <span target="#w07" xml:lang="en">year</span>
+                  <span target="#w07" xml:lang="es">año</span>
+               </spanGrp>
+               
+            </u>
+            <!--  
+           <spanGrp type="gram">
+              <span type="pos" target="#" ana="#"/>
+              <span type="" target="#" ana="#"/>
+           </spanGrp>
+           -->
+         </annotationBlock>
+      </body>
+   </text>
+</TEI>

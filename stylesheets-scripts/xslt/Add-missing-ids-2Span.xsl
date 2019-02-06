@@ -66,7 +66,7 @@
 
 
 
-<!-- for TEXTS -->
+<!-- for all <seg>'s <u> or not  -->
     <xsl:template match="spanGrp[@type = 'translation']">
         <xsl:variable name="theSpanGrp" select="."/>
         <xsl:copy>
@@ -87,8 +87,29 @@
         </xsl:copy>
     </xsl:template>
 
+    <!-- for all <seg>'s <u> or not 
+    <xsl:template match="spanGrp[@type = 'gram']">
+        <xsl:variable name="theSpanGrp" select="."/>
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            
+            <xsl:for-each select="(../seg/@xml:id, ../seg/w/@xml:id)">
+                <xsl:choose>
+                    <xsl:when test="not(concat('#', .) = $theSpanGrp/span/@target)">
+                        <span target="{concat('#',.)}" ana=""/>
+                        <span target="{concat('#',.)}" ana=""/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates select="$theSpanGrp/span[@target = concat('#', current())]"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+            </xsl:for-each>
+        </xsl:copy>
+    </xsl:template>
+ -->
 
-<!-- for UTTERANCES (IN PROGRESS) -->
+<!-- for UTTERANCES (IN PROGRESS)
     <xsl:template match="spanGrp[@type = 'translation']">
         <xsl:variable name="theSpanGrp" select="."/>
         <xsl:copy>
@@ -108,7 +129,7 @@
             </xsl:for-each>
         </xsl:copy>
     </xsl:template>
-
+ -->
 
 
     <!-- Generic copy template -->
