@@ -1230,13 +1230,12 @@
          <entry xml:id="body-back">
             <form type="lemma">
                <orth xml:lang="mix">sata</orth>
-               <pron xml:lang="mix" notation="ipa">sát̪à</pron>
-               <pron xml:lang="mix" notation="zsampa">s a_R t_d a_F</pron>
+               <pron xml:lang="mix" notation="ipa">sát̪a</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Back" xml:id="back-PRIME">
+            <sense n="1" corresp="http://dbpedia.org/resource/Back" xml:id="back-PRIME">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <!-- 'reverse' general orientation -->
                <cit type="translation">
@@ -1244,6 +1243,70 @@
                      <orth xml:lang="en">back</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">espalda</orth>
+                  </form>
+               </cit>
+            </sense>
+            <sense n="2">
+               <usg type="domain">Spatial Configuration</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">in back</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">detrás de</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">atrás de</orth>
+                  </form>
+               </cit>
+               <etym type="metonymy">
+                  <seg type="desc" xml:lang="en">If the object of reference in not a human, then the sense is also metaphorical.</seg>
+               </etym>
+            </sense>
+            <sense n="3">
+               <gramGrp>
+                  <pos>adv</pos>
+               </gramGrp>
+               <usg type="domain">Spatial Trajectory</usg>
+               <xr> <!-- point to analogous sense for left and right --></xr>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">backwards</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">hacia atrás</orth>
+                  </form>
+               </cit>    
+               <cit type="example" resp="#TS">
+                  <quote xml:lang="mix">Tsika sata.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">I'm walking backwards.</quote>            
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Estoy caminando hacia atrás.</quote> 
+                  </cit>
+               </cit>
+               <cit type="example" resp="#TS" cert="medium">
+                  <quote xml:lang="mix">Kuaka satu.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">Walk backwards.</quote>            
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Camina hacia atrás.</quote> 
+                  </cit>
+               </cit>
+               <etym type="metonymy">
+                  <seg type="desc" xml:lang="en">Denotes REVERSE LOCAL MOTION TRAJECTORY</seg>
+               </etym>
             </sense>
          </entry>
          <entry xml:id="body-belly">
@@ -1251,7 +1314,6 @@
                <orth xml:lang="mix">titsi</orth>
                <pron xml:lang="mix" notation="ipa">t̪ìtsí</pron>
                <pron xml:lang="mix" notation="zsampa">d̪ìtsí</pron>
-               <pron xml:lang="mix" notation="zsampa">t_d i_F (ts) i_R</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -3827,20 +3889,15 @@
          <entry xml:id="bird-chicken">
             <form type="lemma">
                <orth xml:lang="mix">chuún</orth>
+               <pron notation="ipa" cert="medium">ʧũṹ</pron>
                <form type="variant">
                   <orth notation="plain" xml:lang="mix">chuun</orth>
-               </form>
-               <form type="variant">
-                  <pron notation="ipa">ʧũ̀ṹ</pron>
-               </form>
-               <form type="variant">
-                  <pron notation="ipa">ʃũ̀̀ṹ</pron>
                </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Chicken">
+            <sense n="2" corresp="http://dbpedia.org/resource/Chicken">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
                <cit type="translation">
@@ -3848,25 +3905,24 @@
                      <orth xml:lang="en">chicken</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">pollo</orth>
+                  </form>
+               </cit>
             </sense>
-         </entry>
-         <entry xml:id="bird-chicken-f"><!--Hen: is_a Chiken: has_gender: Female -->
-            <form type="lemma">
-               <orth xml:lang="mix">chuun</orth>
-               <pron xml:lang="mix" notation="ipa">ʧũ̀ũ̀</pron>
-               <pron xml:lang="mix" notation="ipa">ʃũ̀ũ̀</pron>
-               <pron xml:lang="mix" notation="zsampa">(tS) u:_n_F</pron>
-               <gramGrp>
-                  <pos>concreteNoun</pos>
-               </gramGrp>
-            </form>
-            <sense corresp="http://dbpedia.org/resource/Hen">
+            <sense n="2" corresp="http://dbpedia.org/resource/Hen">
                <usg type="domain"
-                    corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
+                  corresp="http://dbpedia.org/resource/Bird">Bird</usg>
                <!-- add second domain point: "female" -->
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">hen</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">gallina</orth>
                   </form>
                </cit>
             </sense>
@@ -4971,7 +5027,6 @@
             <form type="lemma">
                <orth xml:lang="mix">chuun</orth>
                <pron xml:lang="mix" notation="ipa">ʧũ̀ũ̀</pron>
-               <pron xml:lang="mix" notation="zsampa">(tS) u:_F</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -4982,6 +5037,11 @@
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">star</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">estrella</orth>
                   </form>
                </cit>
             </sense>
@@ -5245,9 +5305,8 @@
          <entry xml:id="pole-South">
             <form type="lemma">
                <form type="lemma">
-                  <orth xml:lang="mix">PolochiNinu</orth>
-                  <pron xml:lang="mix" notation="ipa">póloʧínìnũ̀ũ̀</pron>
-                  <pron xml:lang="mix" notation="zsampa">p o_H l o_M(tS) i_Rn i_F n u:_F</pron>
+                  <orth xml:lang="mix">Polo chi Ninu</orth>
+                  <pron xml:lang="mix" notation="ipa">pólo ʧí nìnũ̀ũ̀</pron>
                </form>
             </form>
             <sense corresp="http://dbpedia.org/resource/South_pole">
@@ -5361,8 +5420,8 @@
          </entry>
          <entry xml:id="cardinal-directions-South" type="compound">
             <form type="lemma">
-               <orth xml:lang="mix">chiNinu</orth>
-               <pron xml:lang="mix" notation="ipa">ʧínìnùù</pron>
+               <orth xml:lang="mix">chi Ninu</orth>
+               <pron xml:lang="mix" notation="ipa">ʧí nìnùù</pron>
                <pron xml:lang="mix" notation="zsampa">(tS) i_Rn i_F n u:_F</pron>
                <gramGrp>
                   <pos>locationNoun</pos>
@@ -14775,7 +14834,6 @@ Activity
             <form type="lemma">
                <orth xml:lang="mix">ntasaa</orth>
                <pron xml:lang="mix" notation="ipa">nt̪̬asàá</pron>
-               <pron xml:lang="mix" notation="zsampa">d_n\ a_M s a:_F_R</pron>
                <gramGrp>
                   <pos>verb</pos>
                   <gram type="transitivity">intrans</gram>
@@ -14798,6 +14856,9 @@ Activity
 Emotional Actions:
 (do'(x,laugh'(x)))
 (do'(x,cry'(x)))
+
+crying - ntaya (crying)
+he is crying - nstakui
 -->
          <entry xml:id="teach-learn-MIX">
             <form type="lemma">
@@ -14836,6 +14897,11 @@ Emotional Actions:
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">to study</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">estudiar</orth>
                   </form>
                </cit>
             </sense>
@@ -15133,11 +15199,45 @@ Emotional Actions:
                </cit>
             </sense>
          </entry>
-         <entry xml:id="work-MIX">
+         <entry xml:id="work-N">
+            <form type="lemma">
+               <orth xml:lang="mix" cert="low">chuún</orth>
+               <orth xml:lang="mix" cert="low">chuun</orth>
+               <pron notation="ipa" xml:lang="mix" cert="low">tʃṹṹ</pron>
+               <pron notation="ipa" xml:lang="mix" cert="low">tʃũṹ</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Human Activity</usg>
+               <usg type="domain">Economics</usg>
+               <cit type="example">
+                  <quote xml:lang="mix">Ntsaa kue nuu chuun.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">We arrived at work.</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Llegamos a trabajo.</quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">work</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">trabajo</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="work-V-MIX">
             <form type="lemma">
                <orth xml:lang="mix">sachuun</orth>
-               <pron xml:lang="mix" notation="ipa">sàʧũ̀ũ̀</pron>
-               <pron xml:lang="mix" notation="zsampa">s a_L (tS) u:_n_F</pron>
+               <pron xml:lang="mix" notation="ipa" cert="medium">sàʧṹṹ</pron>
+               <pron xml:lang="mix" notation="ipa" cert="medium">sàʧũṹ</pron>
             </form>
             <sense>
                <usg/>
@@ -15150,12 +15250,32 @@ Emotional Actions:
                      <orth xml:lang="en">to work</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">trabajar</orth>
+                  </form>
+               </cit>
             </sense>
-            <sense>
-               <gramGrp>
-                  <gram>noun</gram>
-               </gramGrp>
-            </sense>
+           <etym type="derivation">
+              <seg type="desc" xml:lang="en">From:</seg>
+              <seg type="desc" xml:lang="es">De:</seg>
+              <cit type="etymon">
+                 <form>
+                    <orth xml:lang="mix">sa-</orth>
+                 </form>
+                 <gramGrp>
+                    <gram>prefix</gram>
+                 </gramGrp>
+              </cit>
+              <pc>+</pc>
+              <cit type="etymon">
+                 <form>
+                    <orth xml:lang="mix">chuun</orth>
+                 </form>
+                 <def xml:lang="en">work</def>
+                 <def xml:lang="es">trabajo</def>
+              </cit>
+           </etym>
          </entry>
          <entry xml:id="V-wash-MIX">
             <form type="lemma">
@@ -15239,7 +15359,7 @@ Emotional Actions:
                      <orth xml:lang="en">kill</orth>
                   </form>
                </cit>
-               <cit type="translation" xml:lang="es">
+               <cit type="translation">
                   <form>
                      <orth xml:lang="es">matar</orth>
                   </form>
@@ -15259,9 +15379,23 @@ Emotional Actions:
                </gramGrp>
             </form>
             <sense><!-- decide on <usg type="domain"> -->
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+               </cit>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">give</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">dar</orth>
                   </form>
                </cit>
             </sense>
@@ -15270,7 +15404,6 @@ Emotional Actions:
             <form type="lemma">
                <orth xml:lang="mix">ki'in</orth>
                <pron xml:lang="mix" notation="ipa">kĩ́ʔĩ</pron>
-               <pron xml:lang="mix" notation="zsampa">k i_n_R ? i_n_F</pron>
                <gramGrp>
                   <pos>verb</pos>
                   <gram>ditrans</gram>
@@ -15289,7 +15422,7 @@ Emotional Actions:
                <orth xml:lang="mix">nikuu</orth>
                <gramGrp>
                   <pos>verb</pos>
-                  <gram>a-trans</gram>
+                  <gram>atrans</gram>
                </gramGrp>
             </form>
             <sense><!-- decide on <usg type="domain"> -->
@@ -15305,14 +15438,13 @@ Emotional Actions:
             <form type="lemma">
                <orth xml:lang="mix">ka'a</orth>
                <pron xml:lang="mix" notation="ipa">kàʔá</pron>
-               <pron xml:lang="mix" notation="zsampa">k a_R ? a_F</pron>
                <gramGrp>
                   <pos>verb</pos>
                   <gram type="transitivity" norm="transitive">trans</gram>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">communication</usg>
+               <usg type="domain">Communication</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">speak, say, talk</orth>
@@ -15351,10 +15483,10 @@ Emotional Actions:
                </gramGrp>
             </form>
             <sense>
-               <usg>manner_of_speech</usg>
+               <usg type="domain">Communication</usg>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">to whisper</orth>
+                     <orth xml:lang="en">whisper</orth>
                   </form>
                </cit>
             </sense>
@@ -15363,7 +15495,6 @@ Emotional Actions:
             <form type="lemma">
                <orth xml:lang="mix">ntakani</orth>
                <pron xml:lang="mix" notation="ipa">ndakánì</pron>
-               <pron xml:lang="mix" notation="zsampa">d_n\ a_M k a_R n i_F</pron>
                <gramGrp>
                   <pos>verb</pos>
                   <gram>intrns</gram>
@@ -15381,14 +15512,13 @@ Emotional Actions:
             <form type="lemma">
                <orth xml:lang="mix">nantakani</orth>
                <pron xml:lang="mix" notation="ipa">nandakánì</pron>
-               <pron xml:lang="mix" notation="zsampa">n a_M d_n\ a_M k a_R n i_F</pron>
                <gramGrp>
                   <pos>verb</pos>
                   <gram type="transitivity">intrans</gram>
                </gramGrp>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">re.tell</orth>
+                     <orth xml:lang="en">re tell</orth>
                   </form>
                </cit>
             </form>
@@ -15397,24 +15527,44 @@ Emotional Actions:
             <form type="lemma">
                <orth xml:lang="mix">nani</orth>
                <pron xml:lang="mix" notation="ipa">nánì</pron>
-               <pron xml:lang="mix" notation="zsampa">n a_H n i_L</pron>
+            </form>
                <gramGrp>
                   <pos>verb</pos>
                   <gram type="transitivity">intrans</gram>
                   <!-- inherantly (passive) -->
                </gramGrp>
-               <cit type="translation">
+              <sense n="1">
+                 <cit type="translation">
                   <form>
-                     <orth xml:lang="en">be.named</orth>
+                     <orth xml:lang="en">be named</orth>
                   </form>
                </cit>
-            </form>
+                 <cit type="translation">
+                    <form>
+                       <orth xml:lang="es">llamarse</orth>
+                    </form>
+                 </cit>
+            </sense>
+            <sense n="2">
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">name</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">nobre</orth>
+                  </form>
+               </cit>
+            </sense>
          </entry>
          <entry xml:id="V-get.married">
-            <form type="lemma">
-               <orth xml:lang="mix">nta'a</orth>
-               <pron xml:lang="mix" notation="ipa">ndàʔá</pron>
-               <pron xml:lang="mix" notation="zsampa"> d_n\ a_R ? a_F</pron>
+            <form type="lemma" cert="low">
+               <orth xml:lang="mix">tanta'a</orth>
+               <pron xml:lang="mix" notation="ipa">tandàʔá</pron>
                <gramGrp>
                   <pos>verb</pos>
                </gramGrp>
@@ -15424,6 +15574,11 @@ Emotional Actions:
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">to get married</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">casarse</orth>
                   </form>
                </cit>
             </sense>
@@ -16271,13 +16426,183 @@ Emotional Actions:
                <orth>ti</orth>
             </form>
             <gramGrp>
-               <gram></gram>
+               <gram>pron</gram>
             </gramGrp>
             <sense>
-               
+               <usg type="domain">Animal</usg>
+            </sense>
+            <etym type="grammaticalization">
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="mix">kiti</orth>
+                  </form>
+               </cit>
+            </etym>
+         </entry>
+         
+         <entry xml:id="like-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">ta'an ini</orth>
+               <pron/>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Emotion</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">like</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">gustarse</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         
+        <entry>
+           <form type="lemma">
+              <orth xml:lang="mix">ntusi xeen ini</orth>
+              <pron/>
+           </form>
+           <gramGrp>
+              <pos>verb</pos>
+           </gramGrp>
+           <sense>
+              <usg type="domain">Emotion</usg>
+              <cit type="translation">
+                 <form>
+                    <orth xml:lang="en">hurt one's feelings</orth>
+                 </form>
+              </cit>
+              <cit type="translation">
+                 <form>
+                    <orth xml:lang="es">herir los sentimientos</orth>
+                 </form>
+              </cit>
+           </sense>
+           <etym type="metaphor">
+              <cit type="etymon">
+                 <form>
+                    <orth xml:lang="mix">ntusi</orth>
+                 </form>
+                 <def xml:lang="en">poke</def>
+              </cit>
+              <cit type="etymon">
+                 <form>
+                    <orth xml:lang="mix">xeen</orth>
+                 </form>
+                 <def xml:lang="en">sharp</def>
+              </cit>
+              <cit type="etymon">
+                 <form>
+                    <orth xml:lang="mix">ini</orth>
+                 </form>
+                 <def xml:lang="en">insides</def>
+                 <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+              </cit>
+           </etym>
+        </entry>
+         <entry xml:id="sweat">
+            <form type="lemma">
+               <orth xml:lang="mix">teen</orth>
+               <pron notation="ipa" cert="medium">tẽẽ́</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain" cert="low">Bodily Fluid</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">sweat</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">sudor</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="ini-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">ini</orth>
+               <pron notation="ipa" xml:lang="mix" cert="medium">iní</pron>
+            </form>
+            <gramGrp>
+               <pos>prep</pos>
+            </gramGrp>
+            <sense n="1">
+               <cit type="example">
+                  <quote xml:lang="mix">Containment</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"><!-- add --></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="en"><!-- add --></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">inside</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">in</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">adentro</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">en</orth>
+                  </form>
+               </cit>
+               <etym type="grammaticalization">         
+                  <etym type="metaphor">     
+                     <!-- add -->
+                  </etym>
+               </etym>
+            </sense>
+            <sense n="2">
+               <usg type="domain">Spirituality</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">soul</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">anima</orth>
+                  </form>
+               </cit>
+               <etym type="metaphor">             
+                  <!-- add -->
+               </etym>
+            </sense>
+            <sense n="3">
+               <usg type="domain">Body</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">insides</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
             </sense>
             <etym>
-               
+               <!-- add cognates, examples from Alvarado and Voces... -->
             </etym>
          </entry>
          <!-- nchi kuu ra - who is this? (form) -->
