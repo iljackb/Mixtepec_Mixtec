@@ -13,7 +13,7 @@
     
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="input" as="xs:string" select="'flea-nest_TS.txt'"/>
+    <xsl:param name="input" as="xs:string" select="'cabeza-sombrero_TS.txt'"/>
     
     <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
     <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
@@ -27,16 +27,16 @@
     <xsl:variable name="lines"  as="xs:string*" select="tokenize($input-text, '\r?\n')"/>
     
     <!-- input files mush have iso 639 code (if exists) as header of collumn) -->
-    <!-- 
+      <!--
+    
     <xsl:param name="fileName">	
         <xsl:value-of select="tokenize(substring-before(base-uri(),'-clnd09.xml'),'/')[last()]"/>
     </xsl:param>  
-    
+   
     <xsl:param name="Spkr">	
-        <xsl:value-of select="tokenize(substring-after(base-uri(),'_', ,'.txt'))[last()]"/>
+        <xsl:value-of select="tokenize(substring-after(base-uri(),'_','.txt'))[last()]"/>
     </xsl:param>  
      -->
-    
     <!-- PSEUDO CODE
         
 element "data"

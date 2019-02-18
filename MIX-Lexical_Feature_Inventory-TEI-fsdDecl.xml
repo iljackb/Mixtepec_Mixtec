@@ -199,7 +199,7 @@ Prefix
                  <vRange>
                     <fs>
                        <f name="copula" xml:id="COP" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3142">
-                          <string>COP</string><default/>
+                          <string>COP</string>
                        </f>
                        <f name="locative-copula" xml:id="COP-LOC">
                           <string>COP-LOC</string>
@@ -254,9 +254,7 @@ Prefix
                             </f>
                             <f name="goal-focus" xml:id="GL">
                                <string>GL</string>
-                               <fs type="Focus-Home" xml:id="HM">
-                                    
-                               </fs>
+
                             </f>
                          </fs>
                       </f>      
@@ -325,13 +323,13 @@ Prefix
                  <vRange>
                     <fs>
                        <f name="mood">
-                          <symbol value="realis" xml:id="REAL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
+                          <vAlt>
+                             <symbol value="realis" xml:id="REAL" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393"/>
                           <symbol value="modal" xml:id="MOD" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1329"/>
-                          <symbol value="" xml:id=""/>
-                          <symbol value="" xml:id=""/>
+
                           <!-- others?
                           counter factual
-                          -->
+                          --></vAlt>
                        </f>
                        <f name="realis" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1393" xml:id="REALIS"/>
                        
@@ -496,9 +494,9 @@ negator
             
             <fs>
                <f name="determiners">
-                  <vAlt>
+
                      <symbol value="determiner" xml:id="DET"/>
-                  </vAlt>
+                  
                </f>
             </fs>
             
@@ -607,9 +605,7 @@ negator
                      
            <fs>
               <f name="lexicalRelations">
-                 <vAlt>
-                    
-                 </vAlt>
+
               </f>
               
            </fs>
@@ -637,13 +633,7 @@ negator
                  <!-- win87: Win87
 Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relations In Cognitive Science, 11. Norwood NJ: Ablex Publ. Corp.: 417-444, 1987.
  -->
-                 <vAlt>
-                    <symbol value="" xml:id=""/>
-                    
-                    
-                    <symbol value="" xml:id=""/>
-                    
-                 </vAlt>
+
                  
                  
               </f>
@@ -707,7 +697,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                   </f>
                </fs>
                    -->
-                        <!-- decide whether to use (2017/12/12) -->
+                        <!-- decide whether to use (2017/12/12) --></vAlt></f></fs>
             </div><lb/>
             
             <div xml:id="GrammaticalPerson-MIX">
@@ -758,11 +748,11 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
                   <fs>
                      <f name="person">
                         <vAlt>
-                           <symbol xml:id="1PERS" value="firstPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/>
+                           <symbol xml:id="PERS1" value="firstPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-3198"/>
                            <!-- Francopoulo, Gil; First person deixis is deictic reference that refers to the speaker, or both the speaker and referents grouped with the speaker;www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsFirstPersonDeixis.htm -->
-                           <symbol xml:id="2PERS" value="secondPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/>
+                           <symbol xml:id="PERS2" value="secondPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1384"/>
                            <!--Francopoulo, Gil;Second person deixis is deictic reference to a person or persons identified as addressee.  -->
-                           <symbol xml:id="3PERS" value="thirdPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/>
+                           <symbol xml:id="PERS3" value="thirdPerson" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1402"/>
                            <!--  Third person deixis is deictic reference to a referent(s) not identified as the speaker or addressee.; www.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsThirdPersonDeixis.htm-->
                         </vAlt>
                      </f>
@@ -794,7 +784,7 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
             
                <label>Zero Argument (A-Transitive) Constructions</label>
                <p> In every MIX A-transitive construction thus far observed, the core verbal argument is a combination of the Copula ‘ku˥˩’ with another lexical unit. </p>
-               </div>
+
             
          </div>
          
@@ -1234,42 +1224,38 @@ Winston M.E. - R. Chaffin - D.J. Hermann (1987) A taxonomy of part-whole relatio
             <desc>In the ISOcat entry (from MAF), the interrogative particle is defined as follows:"Particle used to express a question."
                In MIX, 'Yes-No' questions are marked by the interrogative particle "<foreign>a</foreign>" at the beggining of the sentence.</desc> 
             
-            <fs type="interrogative-particle" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1921" feats="#Q-YN" xml:id="Q"/><!-- (typeOf: 'lexical item'; typeOf: 'particle') --><!-- this is MIX specific -->
+            <fs type="interrogative-particle" xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1921" xml:id="Q"><!-- (typeOf: 'lexical item'; typeOf: 'particle') --><!-- this is MIX specific -->
             
             
             
-            
-            <fs xmlns:dcr="http://www.isocat.org/ns/dcr" dcr:datcat="http://www.isocat.org/datcat/DC-1319" xml:id="Q"><!-- Interrogative? -->
                
                <f name="yes-no-question" xml:id="Q-YN" dcr:datcat="http://www.isocat.org/datcat/DC-2297">
                   <string>Q-YN</string>
                </f>
                
-               <f name=""></f>
                
                <f name="wh-questions" dcr:datcat="http://www.isocat.org/datcat/DC-2296" xml:id="Q-WH"><!-- REVIEW: LOOK FOR ISO; FIGURE OUT WHERE TO PUT ID; DEFINE CLAUSE, SENTENCE LEVEL STRUCTURE AND CONDITIONS-->
                   
                   <fs type="WH-actor-focus" xml:id="WH-A" feats="#Q-WH #FOC #A"/>
                   
-                  <fs type="WH-undergoer-focus" xml:id="WH-U" feats="#Q-WH #FOC #U"/><!-- 'who got hit?', 'who died' -->
+                  <!-- <fs type="WH-undergoer-focus" xml:id="WH-U" feats="#Q-WH #FOC #U"/>'who got hit?', 'who died' -->
                     
-                  <fs type="WH-predicate-focus" xml:id="WH-PRED" feats="#Q-WH #FOC #PRED"/><!-- 'what are you doing?'Predicate Focus
+                  <!--<fs type="WH-predicate-focus" xml:id="WH-PRED" feats="#Q-WH #FOC #PRED"/> 'what are you doing?'Predicate Focus
             In the MIX example of Broad Predicate Focus below, the topic of (the car ) is already established in the question, “what happened to your car?”, this fact allows the speaker to refer to that clearly pre-established topic, which is the verb’s only argument by maintaining the the default information structure: V(-U), and by using just the 3rd singular informal personal marking at the end of the verb “break down”.    -->
                   
-                  <fs type="WH-locative-focus" xml:id="WH-LOC"  feats="#Q-WH #FOC #LOC"/><!-- 'where' --><!-- THIS MAY NEED TO BE CONCEPTUALLY DISTINGUISHED FROM 'CONFIG' -->
+                  <!--<fs type="WH-locative-focus" xml:id="WH-LOC"  feats="#Q-WH #FOC #LOC"/> 'where' --><!-- THIS MAY NEED TO BE CONCEPTUALLY DISTINGUISHED FROM 'CONFIG' -->
 
-                  <fs type="WH-temporal-focus" xml:id="WH-TEMP" feats="#Q-WH #FOC #TEMP"/><!-- 'when' or 'what time' (may be further defined in context of other lexical info) -->
+                <!--  <fs type="WH-temporal-focus" xml:id="WH-TEMP" feats="#Q-WH #FOC #TEMP"/> 'when' or 'what time' (may be further defined in context of other lexical info) -->
                        
-                  <fs type="WH-means-stative-focus" xml:id="WH-HOW"  feats="#Q-WH #FOC #HOW"/><!-- 'how' (means focus); i.e. 'how did he do that?' -->
+                <!--  <fs type="WH-means-stative-focus" xml:id="WH-HOW"  feats="#Q-WH #FOC #HOW"/> 'how' (means focus); i.e. 'how did he do that?' -->
                         
-                  <fs type="WH-causative-focus" xml:id="WH-CAUS" feats="#Q-WH #FOC #CAUS"/><!-- 'why' -->
+                  <!-- <fs type="WH-causative-focus" xml:id="WH-CAUS" feats="#Q-WH #FOC #CAUS"/>'why' -->
                   
-                  <fs type="wh-quantity-focus" xml:id="WH-QNTY"  feats="#Q-WH #FOC #QNTY"/><!-- 'how much/many' --> 
+                <!--  <fs type="wh-quantity-focus" xml:id="WH-QNTY"  feats="#Q-WH #FOC #QNTY"/> 'how much/many' --> 
                   
                   <!-- 'which' (as in 'which one of these ...') -->
                </f>
             </fs>
-            
             <fs>
                
             </fs>
