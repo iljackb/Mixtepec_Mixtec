@@ -66,20 +66,24 @@
                                     </orth>
                                 </form>
                                 <xsl:for-each select="$readDoc/descendant::w[. = current()]">
+                                    
                                     <xsl:variable name="wID" select="@xml:id"/>
                                     
                                     <xsl:variable name="target" as="xs:string" select="concat('#',$wID)"/>
-                                    <xsl:message>ids:<xsl:value-of select="$target"/></xsl:message>
                                     
                                     <!-- span pointing to w/@xml:id -->
                                     <!-- <xsl:variable name="wTranslation" select="$readDoc/descendant::(linkGrp|spanGrp)[@type = 'translation']/(link|span)[@target = $target]"/> -->
                                     
                                     <xsl:variable name="wTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en' and @target = $target]"/>
-                                    <xsl:message><xsl:value-of select="$wTranslationEn"/></xsl:message>
+                                    <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
+                                    
                                     <xsl:variable name="wTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $target]"/>
-                                    <xsl:message><xsl:value-of select="$wTranslationEs"/></xsl:message>
+                                    <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
+                                    
+
+                                    
                                     <sense>
-                                        <!-- add en & es translations -->
+                                        <!-- make new sense only if unique...-->
                                         
                                         <cit type="translation">
                                             <form>

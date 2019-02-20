@@ -1,3 +1,5 @@
+#open each textgrid, extract, save table
+
 form 
 	sentence Directory ./
 endform
@@ -12,20 +14,12 @@ for ifile to numberOfFiles
 	object_name$ = "'fileName$'" - ".TextGrid"
 	Read from file... 'directory$''object_name$'.TextGrid
 	
+# get texgridfile
 	select TextGrid 'object_name$'
-	Add on tier 4
-	Add interval tier: 4, "Eng"
-	Rename tier: "Esp"
-
-
-# Then save it as a text file with "TextGrid" extension.
-
-	Write to text file... 'directory$''object_name$'.TextGrid
-
 
 # Create Table file from modified textgrid
 
-Down to Table... no 2 no no
+Down to Table... no 2 yes no
 
 	select Table 'object_name$'
 
