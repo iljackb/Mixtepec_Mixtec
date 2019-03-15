@@ -26,10 +26,10 @@
                 <xsl:for-each select="descendant::seg[@xml:id]">
                 <table border="0">
                     <tr>   
-                        <!-- add numbering here (for each sentence in <div>) -->
+                        <!-- add numbering here (for each sentence in <div>) 
                             <td>
                                 <xsl:value-of select="position()"/><xsl:text>) </xsl:text>
-                            </td>
+                            </td>-->
                             <xsl:for-each select="*">
                             <td>
                                 <!--  
