@@ -27,8 +27,7 @@
     <xsl:variable name="lines"  as="xs:string*" select="tokenize($input-text, '\r?\n')"/>
     
     <!-- input files mush have iso 639 code (if exists) as header of collumn) -->
-    
-    
+    <!-- 
     <xsl:param name="fileName">	
         <xsl:value-of select="tokenize(substring-before(base-uri(),'-clnd09.xml'),'/')[last()]"/>
     </xsl:param>  
@@ -36,6 +35,7 @@
     <xsl:param name="Spkr">	
         <xsl:value-of select="tokenize(substring-after(base-uri(),'_', ,'.txt'))[last()]"/>
     </xsl:param>  
+     -->
     
     <!-- PSEUDO CODE
         

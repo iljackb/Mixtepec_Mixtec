@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Basic Dictionary sample entry to link to paradigm</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+     <encodingDesc>
+        <editorialDecl>
+           <p>
+              
+           </p>
+        </editorialDecl>
+        <listPrefixDef>
+           <prefixDef ident="paradigm" matchPattern="paradigm:([a-zA-Z0-9]+)-V-paradigm-MIX" replacementPattern="../MIX-Paradigms.xml#$1"/>
+        </listPrefixDef>
+     </encodingDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <entry xml:id="drink-V-MIX">
+            <form type="lemma">
+               <orth>ko'o</orth>
+               <pron notation="ipa">kóʔō</pron>
+               <ptr type="inflectionParadigm" target="paradigm:drink-V-paradigm-MIX"/>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
+            
+            <sense>
+               <usg type="dom">BiologicalNeed</usg>
+               <usg type="dom">Ingestion</usg>
+               <!--  generic relation to 'katsi' ("to eat")-->
+               <!-- predicate & valency structure!!?? (want to eventually implement a frameNet like system of semantics)-->
+               <!-- transitivity? -->
+               
+               <cit type="translation">
+                 <form> <orth xml:lang="en">drink</orth></form>
+               </cit>
+               <cit type="translation">
+                  <form><orth xml:lang="es">beber</orth></form>
+               </cit>       
+            </sense>
+         </entry>
+         
+         <entry xml:id="sleep-V-MIX">
+            <form type="lemma">
+               <orth>kusu</orth>
+               <ptr type="inflectionParadigm" target="paradigm:sleep-V-paradigm-MIX"/>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
+            
+            <sense>
+               <usg type="dom">BiologicalNeed</usg>
+               <!--  generic relation to 'awaken' -->
+               <!-- predicate & valency structure!!?? (want to eventually implement a frameNet like system of semantics)-->
+               <!-- transitivity? -->
+               
+               <cit type="translation">
+                  <form><orth xml:lang="en">sleep</orth></form>
+               </cit>
+               <cit type="translation">
+                  <form><orth xml:lang="es">dormir</orth></form>
+               </cit>       
+            </sense>
+         </entry>
+         
+      </body>
+  </text>
+</TEI>
