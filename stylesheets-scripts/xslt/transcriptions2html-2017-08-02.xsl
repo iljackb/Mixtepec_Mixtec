@@ -23,7 +23,7 @@
                     <label><b><xsl:value-of select="head/text()"/></b></label>
                 <br/>
                 <br/>
-                <xsl:for-each select="descendant::seg[@xml:id and @type = 'S']">
+                <xsl:for-each select="descendant::seg[@xml:id]">
                 <table border="0">
                     <tr>   
                         <!-- add numbering here (for each sentence in <div>) -->
