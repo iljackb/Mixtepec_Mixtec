@@ -359,6 +359,10 @@
             <listBibl>
                <head>Other Mixtecan Language Publications</head>
                <lb/>
+               <bibl xml:id="VOCESvocab-tei" xml:base="VOCESvocab-tei.xml">
+                  <title level="m">Vocabulario en Lengua Mixteca. Hecho por los Padres de la Orden de Predicadores</title>
+                  <author> Francisco De Alvarado</author>
+                  <pubPlace>En Mexico</pubPlace><publisher>Con Licencia, en casa de Pedro Balli.</publisher><date>1593</date></bibl>
                <bibl xml:id="Bradley-JicaltepecMixtec-1970">Bradley, C. Henry. 1970. A Linguistic
                   Sketch of Jicaltepec Mixtec. Summer Institute of Linguistics Publications in
                   Linguistics and Related Fields, no. 25. Norman: Summer In-stitute of Linguistics
@@ -770,6 +774,14 @@
                   <form>
                      <pron resp="#JB" notation="ipa" xml:lang="proto-mix">*ʃīnī</pron>
                   </form>
+               </cit>
+               <cit type="etymon">
+                  <lang>Colonial Mixtec</lang>
+                  <usg type="date"><date>1597</date></usg>
+                  <form>
+                     <orth xml:lang="nds-cmx">dzini</orth>
+                  </form>
+                  <ref type="source" target="#VOCESvocab-tei.xml"/>
                </cit>
                <cit type="cognate">
                   <lang>Chalcatongo Mixtec</lang>
@@ -1872,7 +1884,7 @@
          <entry xml:id="skin">
             <form type="lemma">
                <orth xml:lang="mix">iin</orth>
-               <pron xml:lang="mix" notation="ipa">ĩ̀ĩ́</pron>
+               <pron xml:lang="mix" notation="ipa">ĩ́ĩ̀ĩ́</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -1882,6 +1894,11 @@
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">skin</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">piel</orth>
                   </form>
                </cit>
             </sense>
@@ -2365,7 +2382,7 @@
          <entry xml:id="husband">
             <form type="lemma">
                <orth xml:lang="mix">ii</orth>
-               <pron xml:lang="mix" notation="ipa">íì</pron>
+               <pron xml:lang="mix" notation="ipa">íìí</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -2392,7 +2409,15 @@
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
-               <etym type="metonymy">'thing'</etym>
+               <etym type="metonymy">
+                  <cit type="etymon">
+                     <form>
+                        <orth>ña'a</orth>
+                        <gloss xml:lang="en">woman</gloss>
+                        <gloss xml:lang="es">mujer</gloss>
+                     </form>
+                  </cit>
+               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">wife</orth>
@@ -2486,11 +2511,18 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">HumanRelations</usg>
+               <usg type="domain"
+                  corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
+               <def xml:lang="en" cert="low">brother's wife</def><!-- improve markup -->
                <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">sister in-law</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">la cuñada</orth>
                   </form>
                </cit>
             </sense>
@@ -2567,8 +2599,8 @@
          <!-- Peoples of Mexico: Connect to the locations in which they live; Define ontological relations -->
          <entry xml:id="mixtec-people">
             <form type="lemma">
-               <orth xml:lang="mix">se'esavi</orth>
-               <pron xml:lang="mix" notation="ipa">séʔèsàví</pron>
+               <orth xml:lang="mix">se'e savi</orth>
+               <pron xml:lang="mix" notation="ipa">séʔè sàví</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -2602,7 +2634,7 @@
          </entry>
          <entry xml:id="mexican">
             <form type="lemma">
-               <orth xml:lang="mix">se'enkoyo</orth>
+               <orth xml:lang="mix">se'en koyo</orth>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -2630,8 +2662,8 @@
          </entry>
          <entry xml:id="aztec-people" type="compound">
             <form type="lemma">
-               <orth xml:lang="mix">se'enkoyo</orth>
-               <pron xml:lang="mix" notation="ipa">séʔènk̬òjó</pron>
+               <orth xml:lang="mix">se'e nkoyo</orth>
+               <pron xml:lang="mix" notation="ipa">séʔè nk̬òjó</pron>
                <gramGrp>
                   <gram/>
                </gramGrp>
@@ -2661,8 +2693,8 @@
          </entry>
          <entry xml:id="oaxacan" type="compound">
             <form type="lemma">
-               <orth xml:lang="mix">se'entua</orth>
-               <pron xml:lang="mix" notation="ipa">se'endùá</pron>
+               <orth xml:lang="mix">se'e ntua</orth>
+               <pron xml:lang="mix" notation="ipa">se'e ndùá</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -2690,8 +2722,8 @@
          </entry>
          <entry xml:id="oaxacan-YCNY" type="compound"><!-- determine proper tag to insert on @xml:lang -->
             <form type="lemma">
-               <orth xml:lang="mix">se'entuva</orth>
-               <pron xml:lang="mix" notation="ipa">séʔèndùvá</pron>
+               <orth xml:lang="mix">se'e ntuva</orth>
+               <pron xml:lang="mix" notation="ipa">séʔè ndùvá</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -2752,7 +2784,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">unitOf-Language</usg>
+               <usg type="domain">Language</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">word</orth>
@@ -2773,7 +2805,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Ritual-Speech</usg>
+               <usg type="domain">Ritual</usg>
                <etym/>
             </sense>
             <!-- point to, cite 'el parangon' -->
@@ -2886,8 +2918,8 @@
          </entry>
          <entry xml:id="language-spanish" type="compound">
             <form type="lemma">
-               <orth xml:lang="mix">sa'anxchila</orth>
-               <pron xml:lang="mix" notation="ipa">sáʔàsʧílà</pron>
+               <orth xml:lang="mix">sa'an xchila</orth>
+               <pron xml:lang="mix" notation="ipa">sáʔà sʧílà</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -11112,6 +11144,30 @@
                </cit>
             </sense>
          </entry>
+         <entry xml:id="short">
+            <form type="lemma">
+               <orth xml:lang="mix">cha'a</orth>
+               <pron xml:lang="mix" notation="ipa">ʧáʔà</pron>
+               <gramGrp>
+                  <pos>adj</pos>
+               </gramGrp>
+            </form>
+            <sense>
+               <usg type="domain">Height</usg>
+               <etym/>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">short</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">bajo</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         
          <!-- ATTRIBUTE: SIZE-THICKNESS -->
          <entry xml:id="thick">
             <form type="lemma">
