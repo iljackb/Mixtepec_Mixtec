@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -314,6 +314,40 @@ ti tsi’a soko ña ntsatsia uvi chuun - he must have been hungry because he ate
          <!-- Jerry post (2018/01/12)
          Su ndisa’a so tsi’i ntia ta tsi’i ra tsi’i ntishi... I don’t always drink but when I do I drink pulque...
          -->
+         <annotationBlock>
+            <ref type="source">
+               <date>2019-03-26</date>
+            </ref>
+            <u n="10" resp="#TS">
+               <seg xml:id="d1e190" xml:lang="mix" function="utterance" notation="orth" type="S">
+                  <w xml:id="d1e191" orig="Tza ni keta">Tsaniketa</w>
+                  <w xml:id="d1e194" orig="ku'a">kua'a</w>
+                  <w xml:id="d1e195">kii</w>
+                  <w xml:id="d1e196">ta</w>
+                  <w xml:id="d1e197">nika'an</w>
+                  <pc>?</pc>
+               </seg>
+            </u>
+            <spanGrp type="translation">
+               <span target="#d1e190" xml:lang="en">It's been a long time since we spoke.</span>
+               <span target="#d1e190" xml:lang="es"  resp="#JB" cert="medium"></span>
+               
+               <span target="#" xml:lang="en"></span>
+               <span target="#" xml:lang="es"></span>
+            </spanGrp>
+            <spanGrp type="gram">
+               <span type="sentence" target="#d1e90" ana="#"/>
+               <span type="pos" target="#d1e91" ana="#PTCL #Q-YN"/>
+               <span type="phrase" target="#d1e92 #d1e93" ana="#VP"/>
+               <span type="pos" target="#d1e92" ana="#V"/>
+               <span type="pos" target="#d1e93" ana="#ADV"/>
+               
+               <span type="person" target="#d1e93" ana="#1PERS"/>
+               <span type="number" target="#d1e93" ana="#SG"/>
+               <span type="register" target="#d1e93" ana="#INF"/>
+            </spanGrp>
+       
+         </annotationBlock>
          
          
       </body>
