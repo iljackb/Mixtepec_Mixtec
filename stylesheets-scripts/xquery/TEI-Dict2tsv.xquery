@@ -9,14 +9,13 @@ declare variable $local:newline := '&#10;';
 declare variable $local:fields := (
   "Orth (1)",
   "Orth (2)",
-  
   "A"
 );
 
 (:XPath to the contents here:)
 declare function local:format-entry-as-csv($e) {
   let $fields := (
-     $e/form[@type = "lemma"]/orth[2],
+     $e/form[@type = "lemma"]/orth[1],
      $e/form[@type = "lemma" and not(@type='variant')]/pron[not(@source='#Pike-Ibach-MIX-1978')][1],
      $e/form[@type = "lemma"]/pron[2],
      
@@ -100,6 +99,6 @@ declare function local:csv($entries) {
   return local:csv-heading()||$local:newline||string-join($lines, $local:newline)
 };
 
-let $r := //form[@type="hauptlemma"]/orth[not(node())]/ancestor::entry
+let $r := //form/orth[@type="lemma"][1][not(node())]/ancestor::entry
 
 return local:csv($r)
