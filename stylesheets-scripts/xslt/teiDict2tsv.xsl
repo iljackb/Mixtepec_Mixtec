@@ -7,7 +7,7 @@
     <xsl:variable name="orth1" select="//form[@type='lemma']/orth[1]"/>
     
     <xsl:template match="/">
-        <xsl:text>Orth;Pron..;Eng(sense1);Span(sense1);Def</xsl:text>
+             <xsl:text>Orth;Pron(1);Pron(2);Pron(3)..;Eng(sense1);Span(sense1);Def(sense1);Span(sense1);Def(sense1);</xsl:text>
         <xsl:value-of select="$newline" />
         
         <xsl:for-each select="//entry">
@@ -15,8 +15,12 @@
             <xsl:value-of select="concat(form[@type='lemma']/orth[1],$newline)" />
             -->
             <xsl:value-of select="form[@type='lemma']/orth[1]" />
-            <xsl:value-of select="$separator" />
+            <xsl:value-of select="$separator"/>
             <xsl:value-of select="form[@type='lemma']/pron[1]" />
+            <xsl:value-of select="$separator" />
+            <xsl:value-of select="form[@type='lemma' or @type='variant']/pron[2]"/>
+            <xsl:value-of select="$separator" />
+            <xsl:value-of select="form[@type='lemma' or @type='variant']/pron[3]"/>
             <xsl:value-of select="$separator" />
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'][1]"/>
             <xsl:value-of select="$separator" />
