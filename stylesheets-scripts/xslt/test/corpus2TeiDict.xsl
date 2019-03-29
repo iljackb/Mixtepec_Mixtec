@@ -82,6 +82,8 @@
                                     <xsl:variable name="sTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $segTarget]"/>
                                     <xsl:message>es: <xsl:value-of select="$sTranslationEs"/></xsl:message>
                                     
+
+                                    
                                     <!-- span pointing to w/@xml:id -->
                                     <!-- <xsl:variable name="wTranslation" select="$readDoc/descendant::(linkGrp|spanGrp)[@type = 'translation']/(link|span)[@target = $target]"/> -->
                                     
@@ -92,8 +94,10 @@
                                    <!--  <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>--> 
                                                                       
                                     <sense>
+                                        <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>
                                         <!-- make new sense only if unique...-->
-                                        
+                                       <xsl:if test="$distinctSense = 1">
+                                                                             
                                         <cit type="translation">
                                             <form>
                                                 <orth xml:lang="en">
@@ -125,6 +129,7 @@
                                                 </quote>
                                             </cit>
                                         </cit>
+                                       </xsl:if>
                                     </sense>
                                 </xsl:for-each>
                             </entry>
