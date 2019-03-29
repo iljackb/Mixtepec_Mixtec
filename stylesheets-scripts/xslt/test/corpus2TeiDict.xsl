@@ -82,8 +82,6 @@
                                     <xsl:variable name="sTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $segTarget]"/>
                                     <xsl:message>es: <xsl:value-of select="$sTranslationEs"/></xsl:message>
                                     
-
-                                    
                                     <!-- span pointing to w/@xml:id -->
                                     <!-- <xsl:variable name="wTranslation" select="$readDoc/descendant::(linkGrp|spanGrp)[@type = 'translation']/(link|span)[@target = $target]"/> -->
                                     
@@ -92,12 +90,13 @@
                                     
                                     <xsl:variable name="wTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $target]"/>
                                    <!--  <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>--> 
-                                                                      
+                                             
+                                    <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>     
                                     <sense>
-                                        <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>
+                                        <xsl:for-each select="$wTranslationEn">
                                         <!-- make new sense only if unique...-->
-                                       <xsl:if test="$distinctSense = 1">
-                                                                             
+                                         <xsl:message>en: <xsl:value-of select="$distinctSense"/></xsl:message> 
+                                                                                                                                                                                       
                                         <cit type="translation">
                                             <form>
                                                 <orth xml:lang="en">
@@ -129,7 +128,7 @@
                                                 </quote>
                                             </cit>
                                         </cit>
-                                       </xsl:if>
+                                       </xsl:for-each>
                                     </sense>
                                 </xsl:for-each>
                             </entry>

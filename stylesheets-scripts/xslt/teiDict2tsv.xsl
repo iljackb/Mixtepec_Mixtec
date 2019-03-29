@@ -10,7 +10,7 @@
              <xsl:text>Orth;Pron(1);Pron(2);Pron(3)..;Eng(sense1);Span(sense1);Def(sense1);Span(sense1);Def(sense1);</xsl:text>
         <xsl:value-of select="$newline" />
         
-        <xsl:for-each select="//entry">
+        <xsl:for-each select="//entry | //re">
             <!--  
             <xsl:value-of select="concat(form[@type='lemma']/orth[1],$newline)" />
             -->

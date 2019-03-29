@@ -622,7 +622,7 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="child">
+         <entry xml:id="child-MIX">
             <form type="lemma">
                <orth xml:lang="mix" cert="low">suluu</orth>
                <pron xml:lang="mix" notation="ipa">súlùù</pron>
@@ -630,18 +630,26 @@
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Child">
+            <sense corresp="http://dbpedia.org/resource/Child" n="1">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
+               <xr type="synonymOf">
+                  <ref xml:lang="mix" corresp="#litu-MIX">litu</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">child</orth>
                   </form>
                </cit>
             </sense>
-            <sense corresp="http://dbpedia.org/resource/Infant">
+            <sense corresp="http://dbpedia.org/resource/Infant" n="2">
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">baby, infant</orth>
+                     <orth xml:lang="en">baby</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">infant</orth>
                   </form>
                </cit>
             </sense>
@@ -656,7 +664,46 @@
                </cit>
             </etym>
          </entry>
-         <entry xml:id="boy"><!-- make note of speakers -->
+         <entry xml:id="litu-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix" cert="medium">litu</orth>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">lítú</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
+               <xr type="synonymOf">
+                  <ref xml:lang="mix" corresp="#child-MIX">suluu</ref>
+               </xr>
+               <cit type="example">
+                  <quote xml:lang="mix"/>
+                  <cit type="translation">
+                     <quote xml:lang="en"/>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"/>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">kid</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">chico</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">niño</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="boy-MIX"><!-- make note of speakers -->
             <form type="lemma">
                <orth xml:lang="mix">chaluuka</orth>
                <pron xml:lang="mix" notation="ipa">ʧààlùùɣá</pron>
@@ -737,8 +784,8 @@
                   </form>
                </cit>
             </sense>
-            <sense corresp="http://dbpedia.org/resource/Category:Human_body">
-               http://wikidata.org/entity/Q13119823
+            <sense corresp="http://dbpedia.org/resource/Category:Human_body http://wikidata.org/entity/Q13119823">
+               
             </sense>
             <sense corresp="http://dbpedia.org/resource/Category:Meat"><!-- find uri for 'meat' (e.g. german 'Fleich') --></sense>
          </entry>
@@ -2115,7 +2162,7 @@
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense corresp="http://dbpedia.org/resource/Home">
+            <sense corresp="http://dbpedia.org/resource/Home" n="1">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Human_habitats">Human_habitats</usg>
                <cit type="translation">
@@ -2134,7 +2181,7 @@
                   </form>
                </cit>
             </sense>
-            <sense corresp="http://dbpedia.org/resource/Building">
+            <sense corresp="http://dbpedia.org/resource/Building" n="2">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Human_habitats">Human_habitats</usg>
                <cit type="translation">
@@ -2148,27 +2195,125 @@
                   </form>
                </cit>
             </sense>
+            <re xml:id="jail-MIX">
+               <form type="lemma">
+                  <orth xml:lang="mix" cert="low">ve'e kaa</orth>
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ve˥ka˩a˧</pron>
+               </form>
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+               <sense corresp="http://dbpedia.org/resource/Prison">
+                  <usg type="domain">Law</usg>
+                  <usg type="domain">Place</usg>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">building</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">edificio</orth>
+                     </form>
+                  </cit>
+               </sense>
+               <etym type="compounding">
+                  <seg type="desc" xml:lang="en">Compound of:</seg>
+                  <etym>
+                     <seg type="desc">shortened form of:</seg>
+                     <cit type="etymon" corresp="#house-MIX">
+                        <lang>MIX</lang>
+                        <form>
+                           <orth xml:lang="mix">ve'e</orth>
+                        </form>
+                     <def xml:lang="en">house or building</def>
+                     <def xml:lang="es">casa o edificio</def>
+                  </cit>
+                  </etym>
+                  <pc>+</pc>
+                  <etym type="metonymy" subtype="partForWhole">
+                     <cit type="etymon" corresp="#metal-MIX">
+                        <form>
+                           <orth xml:lang="mix">kaa</orth>
+                        </form>
+                        <def xml:lang="en">metal</def>
+                        <def xml:lang="es">metal</def>
+                  </cit>
+                     <seg type="desc" xml:lang="en">Which is Metonymy (part for whole): the metal bars are a prominant part of the concept of jail thus provide a salient lexical reference point for the vocabulary.</seg>
+                  </etym>
+               </etym>
+            </re>
+            <re xml:id="townhall-MIX">
+               <form type="lemma">
+                  <orth xml:lang="mix" cert="high">ve'e chuun</orth>
+                  <form type="variant">
+                     <orth xml:lang="mix" cert="low">vechuun</orth>
+                  </form>
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ve˧tʃĩ˥ũ˧</pron>
+               </form>
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+               <sense corresp="http://dbpedia.org/resource/Seat_of_local_government">
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">townhall</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">alcaldía</orth>
+                     </form>
+                  </cit>
+               </sense>
+               <etym type="compounding">
+                  <seg type="desc" xml:lang="en">Compound of:</seg>
+                  <etym>
+                     <seg type="desc">shortened form of:</seg>
+                     <cit type="etymon" corresp="#house-MIX">
+                        <lang>MIX</lang>
+                        <form>
+                           <orth xml:lang="mix">ve'e</orth>
+                        </form>
+                        <def xml:lang="en">house or building</def>
+                        <def xml:lang="es">casa o edificio</def>
+                     </cit>
+                  </etym>
+                  <pc>+</pc>
+                  <etym type="metonymy" subtype="partForWhole">
+                     <cit type="etymon" corresp="#metal-MIX">
+                        <form>
+                           <orth xml:lang="mix">chuun</orth>
+                        </form>
+                        <def xml:lang="en">work</def>
+                        <def xml:lang="es">trabajo</def>
+                     </cit>
+                     <seg type="desc" xml:lang="en">Which is Metonymy (part for whole): the activity of working is a prominant part of the concept of town hall thus provides a salient lexical reference point for the vocabulary.</seg>
+                  </etym>
+               </etym>
+            </re>
          </entry>
          <!-- Habitiat-Human has_Physical Parts-Configuration  -->
          <entry xml:id="door">
             <form type="lemma">
                <orth xml:lang="mix">ye'e</orth>
                <pron xml:lang="mix" notation="ipa">jéʔè</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Door">
                <usg type="domain"
-                    corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg>
-               <etym type="metonymy">
-                  <note>not sure of the directionality of the metonymy: ('outside' &gt; 'door') or ('door' &gt; 'outside')</note>
-               </etym>
+                    corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg> 
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">door</orth>
                   </form>
                </cit>
+               <etym type="metonymy">
+                  <note>not sure of the directionality of the metonymy: ('outside' &gt; 'door') or ('door' &gt; 'outside')</note>
+               </etym>
+
             </sense>
          </entry>
          <!-- RESOLVE 'roof' vs 'cieling' -->
@@ -2230,10 +2375,10 @@
             <form type="lemma">
                <orth xml:lang="mix">techo</orth>
                <pron xml:lang="mix" notation="ipa">t̪éʧo</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Roof">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg>
@@ -2260,10 +2405,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ta'an</orth>
                <pron xml:lang="mix" notation="ipa">tã́ʔã̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2280,10 +2425,10 @@
             <form type="lemma">
                <orth xml:lang="mix">maa</orth>
                <pron xml:lang="mix" notation="ipa">māā</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2306,10 +2451,10 @@
             <form type="lemma">
                <orth xml:lang="mix">paa</orth>
                <pron xml:lang="mix" notation="ipa">paa</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2332,10 +2477,10 @@
             <form type="lemma">
                <orth xml:lang="mix">matsa'nu</orth>
                <pron xml:lang="mix" notation="ipa">matsáʔnũ̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2362,10 +2507,10 @@
             <form type="lemma">
                <orth xml:lang="mix">patsa'nu</orth>
                <pron xml:lang="mix" notation="ipa">patsáʔnũ̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2393,10 +2538,10 @@
             <form type="lemma">
                <orth xml:lang="mix">se'e</orth>
                <pron xml:lang="mix" notation="ipa">séʔè</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2411,10 +2556,10 @@
             <form type="lemma">
                <orth xml:lang="mix">se'e</orth>
                <pron xml:lang="mix" notation="ipa">séʔè</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2430,10 +2575,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ñani</orth>
                <pron xml:lang="mix" notation="ipa">ɲánì</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2453,10 +2598,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ñani</orth>
                <pron xml:lang="mix" notation="ipa">ɲánì</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2484,10 +2629,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ii</orth>
                <pron xml:lang="mix" notation="ipa">íìí</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2503,10 +2648,10 @@
             <form type="lemma">
                <orth xml:lang="mix">kasa</orth>
                <pron xml:lang="mix" notation="ipa" source="#paster-azcona-2004a">kàása</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2532,10 +2677,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ña'a</orth>
                <pron xml:lang="mix" notation="ipa">ɲàʔá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2559,10 +2704,10 @@
             <form type="lemma">
                <orth xml:lang="mix">kua'a</orth>
                <pron xml:lang="mix" notation="ipa">kwàʔá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2578,10 +2723,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ta'an</orth>
                <pron xml:lang="mix" notation="ipa">tã́́ʔã̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2597,10 +2742,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ta'an</orth>
                <pron xml:lang="mix" notation="ipa">tã́́ʔã̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2616,10 +2761,10 @@
             <form type="lemma">
                <orth xml:lang="mix">xito</orth>
                <pron xml:lang="mix" notation="ipa">ʃitò</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2636,10 +2781,10 @@
             <form type="lemma">
                <orth xml:lang="mix">tsanu</orth>
                <pron xml:lang="mix" notation="ipa">tsànu</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2663,10 +2808,10 @@
             <form type="lemma">
                <orth xml:lang="mix">tsa'nu</orth>
                <pron xml:lang="mix" notation="ipa">tsáʔnũ̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2682,10 +2827,10 @@
             <form type="lemma">
                <orth xml:lang="mix" cert="low">baa</orth>
                <pron xml:lang="mix" notation="ipa">ba˥a˩</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Kinship_and_descent">Kinship_and_descent</usg>
@@ -2706,10 +2851,10 @@
             <form type="lemma">
                <orth xml:lang="mix">skulero</orth>
                <pron xml:lang="mix" notation="ipa">skulérù</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Occupation</usg>
                <etym type="borrowing">
@@ -2737,10 +2882,10 @@
             <form type="lemma">
                <orth xml:lang="mix">sutu</orth>
                <pron xml:lang="mix" notation="ipa">sút̪uù</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Religion</usg>
                <etym/>
@@ -2756,10 +2901,10 @@
             <form type="lemma">
                <orth xml:lang="mix">se'e savi</orth>
                <pron xml:lang="mix" notation="ipa">séʔè sàví</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Mixtec_people">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Indigenous_peoples_of_Mexico">Indigenous_peoples_of_Mexico</usg>
@@ -2790,10 +2935,10 @@
          <entry xml:id="mexican">
             <form type="lemma">
                <orth xml:lang="mix">se'en koyo</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Nationality</usg>
                <etym type="compounding">
@@ -2820,7 +2965,7 @@
                <orth xml:lang="mix">se'e nkoyo</orth>
                <pron xml:lang="mix" notation="ipa">séʔè nk̬òjó</pron>
                <gramGrp>
-                  <gram/>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Aztec">
@@ -2850,10 +2995,10 @@
             <form type="lemma">
                <orth xml:lang="mix">se'e ntua</orth>
                <pron xml:lang="mix" notation="ipa">se'e ndùá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Indigenous_people_of_Oaxaca">
                <usg type="domain">Indigenous_people_of_Mexico</usg>
                <etym type="compounding">
@@ -2879,10 +3024,10 @@
             <form type="lemma">
                <orth xml:lang="mix">se'e ntuva</orth>
                <pron xml:lang="mix" notation="ipa">séʔè ndùvá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Indigenous_people_of_Oaxaca">
                <usg type="domain">Indigenous_people_of_Oaxaca</usg>
                <etym type="compounding">
@@ -3447,7 +3592,10 @@
          <entry xml:id="animal-lamb">
             <form type="lemma">
                <orth xml:lang="mix">lelu</orth>
-               <pron xml:lang="mix" notation="ipa">lélù</pron>
+               <pron xml:lang="mix" notation="ipa" cert="medium">lélù</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">le˧lu˧</pron>
+               </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -4483,16 +4631,25 @@
                <orth xml:lang="mix">ntivi</orth>
                <pron xml:lang="mix" notation="ipa">nt̪ìví</pron>
                <pron xml:lang="mix" notation="ipa">nd̬ìví</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">di˩vi˩˥</pron>
+               </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Egg">
                <usg type="domain">Bird-Reproduction</usg>
+               <usg type="domain">Reproduction</usg>
                <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">egg</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">huevo</orth>
                   </form>
                </cit>
             </sense>
@@ -4542,8 +4699,24 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Insect-Spider</usg>
-               <etym/>
+               <usg type="domain">Insect</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">spider</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="cobweb-MIX"><!-- Check to see if this may mean 'Web' -->
+            <form type="lemma">
+               <orth xml:lang="mix">stu'a</orth>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">stu˩ʔa˩</pron>
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+            </form>
+            <sense>
+               <usg type="domain">Insect</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">spider</orth>
@@ -4810,6 +4983,7 @@
             <form type="lemma">
                <orth xml:lang="mix">ñu'ma</orth>
                <pron xml:lang="mix" notation="ipa">ɲṹʔmà</pron>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ɲu˩ʔma˩</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -4847,11 +5021,12 @@
                <orth xml:lang="mix">kaa</orth>
                <pron xml:lang="mix" notation="ipa">kàa</pron>
                <gramGrp>
-                  <pos/>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Element-Metal</usg>
+               <usg type="domain">Element</usg>
+               <usg type="domain">Material</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">metal</orth>
@@ -7568,6 +7743,9 @@
             <form type="lemma">
                <orth xml:lang="mix">ntuchi</orth>
                <pron xml:lang="mix" notation="ipa">ndùʧí</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">du˧˩ʧi˩˥</pron>
+               </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -7840,29 +8018,64 @@
                <orth xml:lang="mix">staa</orth>
                <pron xml:lang="mix" notation="ipa">stáá</pron>
             </form>
-            <sense>
-               <usg type="domain">Food-byproductOf-Corn</usg>
-               <etym/>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Corn_tortilla">
+               <usg type="domain">Food</usg>
+               <usg type="domain">Corn</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">tortilla</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">tortilla</orth>
+                  </form>
+               </cit>
             </sense>
+            <re xml:id="toasted-tortilla-MIX">
+               <form type="lemma">
+                  <orth xml:lang="mix">tikasu</orth>
+                     <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ti˩ka˩su˩</pron>
+               </form>
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+               <sense>
+                  <usg type="domain">Food</usg>
+                  <usg type="domain">Corn</usg>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">tortilla (toasted)</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">tortilla (tostada)</orth>
+                     </form>
+                  </cit>
+               </sense>
+            </re>
          </entry>
          <entry xml:id="salsa">
             <form type="lemma"><!-- Cultural Staple -->
                <orth xml:lang="mix">ncha'a</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Food-</usg>
-               <etym/>
+               <usg type="domain">Food</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">salsa</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">salsa</orth>
                   </form>
                </cit>
             </sense>
@@ -7874,99 +8087,110 @@
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">pã˥ã˩</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Food</usg>
-               <etym type="borrowing">
-                  <lbl>source:</lbl>
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <pron xml:lang="es" notation="ipa">'pan</pron>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">bread</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">pan</orth>
+                  </form>
+               </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>
+                  <form>
+                     <orth xml:lang="es">pan</orth>
+                     <pron xml:lang="es" notation="ipa">'pan</pron>
+                  </form>
+               </cit>
+            </etym>
          </entry>
-         <entry xml:id="cheese">
+         <entry xml:id="cheese-MIX">
             <form type="lemma"><!--  -->
                <orth xml:lang="mix">keso</orth>
                <pron xml:lang="mix" notation="ipa">késo</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Food</usg>
                <usg type="domain">Dairy</usg>
-               <etym type="borrowing">
-                  <lbl>source:</lbl>
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <pron xml:lang="es">'keso</pron>
-                     </form>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">cheese</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">queso</orth>
+                  </form>
+               </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>
+                  <form>
+                     <orth xml:lang="es">queso</orth>
+                     <pron xml:lang="es" notation="ipa">'ke.so</pron>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="cream">
             <form type="lemma"><!-- Cultural Loanword  -->
                <orth xml:lang="mix">krema</orth>
                <pron xml:lang="mix" notation="ipa">kréma</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Food</usg>
-               <usg type="domain">Dairy</usg>
-               <etym>
-                  <lbl>source:</lbl>
-                  <cit type="etymon">
-                     <lang>Spanish</lang>
-                     <form>
-                        <pron xml:lang="es">'krɛma</pron>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Dairy</usg>   
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">creme</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>
+                  <form>
+                     <orth xml:lang="es">queso</orth>
+                     <pron xml:lang="es" notation="ipa">'krɛma</pron>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <!-- Beverages: KB of 'beveages' include 'undergoers of action drink (define in predicate logic (RRG)) -->
          <entry xml:id="milk-MIX">
-            <form type="lemma"><!-- -->
+            <form type="lemma">
                <orth xml:lang="mix">xikui</orth>
                <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʃi˩kwi˧</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
-            <sense>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/MIlk">
+               <xr type="synonymOf">
+                  <ref corresp="#milk-loan-MIX" xml:lang="mix">leche</ref>
+               </xr>
                <usg type="domain">Dairy</usg>
                <usg type="domain">Beverage</usg>
-               <etym type="etym">
-                  <lbl>source:</lbl>
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <pron xml:lang="es">'le.ʧe</pron>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">milk</orth>
@@ -7979,24 +8203,20 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="milk-loan">
+         <entry xml:id="milk-loan-MIX">
             <form type="lemma"><!-- -->
                <orth xml:lang="mix">leche</orth>
                <pron xml:lang="mix" notation="ipa">léʧè</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
-            <sense>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Milk">
                <usg type="domain">Dairy</usg>
-               <usg type="domain">Beverage</usg>
-               <etym type="etym">
-                  <lbl>source:</lbl>
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <pron xml:lang="es">'le.ʧe</pron>
-                  </cit>
-               </etym>
+               <usg type="domain">Beverage</usg>         
+               <xr type="synonymOf">
+                  <ref corresp="#milk-MIX" xml:lang="mix">xikui</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">milk</orth>
@@ -8008,18 +8228,28 @@
                   </form>
                </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>
+                  <form>
+                     <orth xml:lang="es">leche</orth>
+                     <pron xml:lang="es">'le.ʧe</pron>
+                  </form>
+                  <def xml:lang="en">milk</def>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="coffee">
             <form type="lemma"><!-- Cultural Loanword?  -->
                <orth xml:lang="mix">kafe</orth>
                <pron xml:lang="mix" notation="ipa">káfe</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
-            <sense>
-               <usg type="domain">Beverage</usg>
-               <etym>Loanword: <lang>Spanish</lang>: [<pRef>'ka.fe</pRef>]</etym>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Coffee">
+               <usg type="domain">Beverage</usg>           
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">coffee</orth>
@@ -8032,16 +8262,21 @@
             <form type="lemma"><!--  -->
                <orth xml:lang="mix">tuxi</orth>
                <pron xml:lang="mix" notation="ipa">dùʃì</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
-            <sense>
-               <usg type="domain">Food-byproductOf-Bees</usg>
-               <etym/>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Honey">
+               <usg type="domain">Food</usg>
+               <usg type="domain">Bee</usg> 
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">honey</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">miel</orth>
                   </form>
                </cit>
             </sense>
@@ -8050,16 +8285,13 @@
             <form type="lemma"><!-- Cultural Loanword?  -->
                <orth xml:lang="mix">asukar</orth>
                <pron xml:lang="mix" notation="ipa">asúkàr</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
-            <sense>
-               <usg type="domain">Food-Seasoning</usg>
-               <etym>Loanword: Spanish <cit type="etymon">
-                     <pron>a.'zu."kar</pron>
-                  </cit>
-               </etym>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Sugar">
+               <usg type="domain">Food</usg>
+               <usg type="domain">Seasoning</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">sugar</orth>
@@ -8071,6 +8303,16 @@
                   </form>
                </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>
+                  <form>
+                     <orth xml:lang="es">azucar</orth>
+                     <pron xml:lang="es">a.'zu."kar</pron>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <!--
             <fs xmlns:dcr="http://www.isocat.org/ns/dcr"
@@ -11364,22 +11606,27 @@
          <entry xml:id="holy-water">
             <form type="lemma">
                <form type="lemma">
-                  <orth xml:lang="mix">chikuiiii</orth>
-                  <pron xml:lang="mix" notation="ipa">ʧikwíìí</pron>
+                  <orth xml:lang="mix">chikuii ii</orth>
+                  <pron xml:lang="mix" notation="ipa" cert="low">ʧikwíìí</pron>
                </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">Religious-Object-Catholic</usg>
-               <etym>
-                  <cit type="etymon">
-                     <pron corresp="#water">ʧi.kwí</pron>
+               <usg type="domain">Religion</usg>
+               <usg type="domain">Catholicism</usg>
+               <etym type="compounding">
+                  <cit type="etymon" corresp="#water">
+                     <form>
+                        <pron xml:lang="mix">ʧikwí</pron></form>
                      <def xml:lang="en">water</def>
                   </cit>
-                  <cit type="etymon">
-                     <pron corresp="#sacred">ìí</pron>
+                  <pc>+</pc>
+                  <cit type="etymon" corresp="#sacred">
+                     <form>
+                        <pron xml:lang="mix">ìí</pron>
+                     </form>
                      <def xml:lang="en">sacred</def>
                   </cit>
                </etym>
@@ -11399,7 +11646,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Place</usg>
+               <usg type="domain">Health</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -11430,9 +11677,9 @@
          <entry xml:id="small">
             <form type="lemma">
                <orth xml:lang="mix">luu</orth>
-               <pron xml:lang="mix" notation="ipa">lùù</pron>
+               <pron xml:lang="mix" notation="ipa" cert="medium">lùù</pron>
                <gramGrp>
-                  <pos>attributiveAdjective</pos>
+                  <pos>adj</pos>
                </gramGrp>
             </form>
             <sense n="1">
@@ -11456,28 +11703,73 @@
             <sense n="2">
                <usg type="domain">Age</usg>
                <usg type="domain">LivingBeing</usg>
-               <etym type="metonymy">
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="mix" corresp="#young"/>
-                     </form>
-                     <def/>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">young</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">joven</orth>
+                  </form>
+               </cit>
+               <etym type="metonymy">
+                  <seg type="desc" xml:lang="en">Metonymy:</seg>
+                  <cit type="etymon" corresp="#young">
+                     <form>
+                        <orth xml:lang="mix"/>
+                     </form>
+                     <def/>
+                  </cit>
+               </etym>
             </sense>
+            <re type="derrivative">
+               <form type="lemma">
+                  <orth xml:lang="mix">lulu</orth>
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">lu˧lu˧</pron>
+               </form>
+               <gramGrp>
+                  <pos>adj</pos>
+               </gramGrp>
+               <sense>
+                  <usg type="domain">Size</usg>
+                  <xr type="synonymOf">
+                     <ref xml:lang="mix" corresp="#small">luu</ref>
+                  </xr>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">small</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">pequeño</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">chico</orth>
+                     </form>
+                  </cit>
+               </sense>
+               <etym type="reduplication">
+                  <seg type="desc">Reduplication of:</seg>
+                  <cit type="etymon">
+                     <form>
+                        <orth xml:lang="mix">luu</orth>
+                     </form>
+                     <def xml:lang="en">small</def>
+                  </cit>
+               </etym>
+            </re>
          </entry>
          <entry xml:id="tall-MIX">
             <form type="lemma">
                <orth xml:lang="mix">suku</orth>
                <pron xml:lang="mix" notation="ipa">sukù</pron>
                <gramGrp>
-                  <pos>predicativeAdjective</pos>
-                  <!-- inflects  -->
+                  <pos>adj</pos>
+
                </gramGrp>
                <form type="inflected">
                   <orth>suku <seg ana="#1s">yu</seg>
@@ -11585,7 +11877,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">attributeOf-Shape-Thick</usg>
+               <usg type="domain">Shape</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -11602,7 +11894,19 @@
                   <pos>adj</pos>
                </gramGrp>
             </form>
-            <sense/>
+            <sense>
+               <usg type="domain"/>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en" cert="medium">skinny</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es" cert="medium">flaco</orth>
+                  </form>
+               </cit>
+            </sense>
          </entry>
          <entry xml:id="thin">
             <form type="lemma">
@@ -11613,7 +11917,8 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">attributeOf-Shape-Thin</usg>
+               <usg type="domain">Shape</usg>
+               <usg type="domain">Inanimate Object</usg>            
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">thin</orth>
@@ -11637,7 +11942,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">attributeOf-Shape-Narrow</usg>
+               <usg type="domain">Shape</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -11768,16 +12073,16 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="rope">
+         <entry xml:id="rope-MIX">
             <form type="lemma">
                <orth xml:lang="mix">yo'o</orth>
-               <pron xml:lang="mix" notation="ipa">jòʔó</pron>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">jo˧ʔo˥</pron>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Tool-Rope</usg>
+               <usg type="domain">Tool</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">rope</orth>
@@ -11793,7 +12098,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Tool-Nail</usg>
+               <usg type="domain">Tool</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -11812,7 +12117,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Material-paper</usg>
+               <usg type="domain">Materia</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -11835,7 +12140,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">Furnishing-</usg>
+               <usg type="domain">Furnishing</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -12177,24 +12482,78 @@
             </sense>
          </entry>
          <!-- Trade -->
-         <entry xml:id="money">
+         <entry xml:id="money-MIX">
             <form type="lemma"><!-- categoricalNoun -->
                <orth xml:lang="mix">xu'u</orth>
                <pron xml:lang="mix" notation="ipa">ʧṹʔũ̀</pron>
-               <pron xml:lang="mix" notation="ipa">ʧṹʔm̹̀</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa">ʧṹʔm̹̀</pron>
+               </form>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʧũ˩˥ʔũ˧</pron>
+               </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense>
+            <sense source="http://dbpedia.org/resource/Money">
                <usg type="domain">Currency</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">money</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">dinero</orth>
+                  </form>
+               </cit>
             </sense>
+            <re xml:id="paper-money-MIX">
+               <form type="lemma">
+                  <orth xml:lang="mix" cert="medium">xu'un tutu</orth>
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʧũ˩˥ tu˧tu˩</pron>
+               </form>
+               <gramGrp>
+                  <pos>noun</pos>
+               </gramGrp>
+               <sense corresp="http://dbpedia.org/resource/Cash">
+                  <usg type="domain">Currency</usg>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">paper money</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">bills</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">billete</orth>
+                     </form>
+                  </cit>
+               </sense>
+               <etym type="compounding">
+                  <cit type="etymon" corresp="#money-MIX">
+                     <form>
+                        <orth xml:lang="mix">xu'u</orth>                 
+                     </form>
+                     <def xml:lang="en"></def>
+                  </cit>
+                  <pc>+</pc>
+                  <cit type="etymon" corresp="#paper">
+                     <form>
+                        <orth xml:lang="mix">tutu</orth>
+                     </form>
+                     <def xml:lang="en">paper</def>
+                  </cit>
+                  <ref type="bibl">
+                     <bibl>Pike and Ibach <date>1978</date></bibl>
+                  </ref>
+               </etym>
+            </re>
          </entry>
          <entry xml:id="clothes">
             <form type="lemma"><!-- categoricalNoun -->
@@ -12204,12 +12563,16 @@
                   <pos>noun</pos>
                </gramGrp>
             </form>
-            <sense>
+            <sense corresp="http://dbpedia.org/resource/Clothing">
                <usg type="domain">Clothing</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">clothes</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">ropas</orth>
                   </form>
                </cit>
             </sense>
@@ -12218,16 +12581,20 @@
             <form type="lemma">
                <orth xml:lang="mix">sa'mo</orth>
                <pron xml:lang="mix" notation="ipa">sáʔmò</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
-            <sense>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Shirt">
                <usg type="domain">Clothing</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">shirt</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">camisa</orth>
                   </form>
                </cit>
             </sense>
@@ -12414,7 +12781,6 @@
             </form>
             <sense>
                <usg type="domain">Time</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">today</orth>
@@ -12436,34 +12802,6 @@
             </form>
             <sense>
                <usg type="domain">Time</usg>
-               <etym>
-                  <cit type="etymon">
-                     <form>
-                        <orth>ta</orth>
-                     </form>
-                     <gramGrp>
-                        <pos/>
-                     </gramGrp>
-                     <note>def unclear, but likely having to do with time</note>
-                  </cit>
-                  <cit type="etymon">
-                     <form>
-                        <orth>kuu</orth>
-                     </form>
-                     <gramGrp>
-                        <pos>copula</pos>
-                        <gram type="aspect">incompletive</gram>
-                     </gramGrp>
-                     <def/>
-                  </cit>
-                  <cit type="etymon">
-                     <form>
-                        <orth>ni</orth>
-                     </form>
-                     <gramGrp><!-- prefix--><!-- past tense --></gramGrp>
-                     <def/>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">yesterday</orth>
