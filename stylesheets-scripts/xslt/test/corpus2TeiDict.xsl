@@ -19,7 +19,7 @@
         <xsl:message>My file: <xsl:value-of select="document-uri($readDoc)"/></xsl:message>
         
         <xsl:variable name="theRoot" select="."/>
-        <xsl:variable name="folderName" select="'Entries'"/>
+        <xsl:variable name="folderName" select="'Entries2'"/>
         <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w[ancestor-or-self::*/@xml:lang='mix'])"/>
         
         
@@ -66,22 +66,31 @@
                                     </orth>
                                 </form>
                                 <xsl:for-each select="$readDoc/descendant::w[. = current()]">
+                                                              
+                                    <xsl:variable name="segID" select="parent::seg/@xml:id"/>
                                     
                                     <xsl:variable name="wID" select="@xml:id"/>
-                                    
+
+                                    <xsl:variable name="segTarget" as="xs:string" select="concat('#',$segID)"/>
+
                                     <xsl:variable name="target" as="xs:string" select="concat('#',$wID)"/>
+                                    
+                                    
+                                    <xsl:variable name="sTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en' and @target = $segTarget]"/>
+                                    <xsl:message>en: <xsl:value-of select="$sTranslationEn"/></xsl:message>
+
+                                    <xsl:variable name="sTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $segTarget]"/>
+                                    <xsl:message>es: <xsl:value-of select="$sTranslationEs"/></xsl:message>
                                     
                                     <!-- span pointing to w/@xml:id -->
                                     <!-- <xsl:variable name="wTranslation" select="$readDoc/descendant::(linkGrp|spanGrp)[@type = 'translation']/(link|span)[@target = $target]"/> -->
                                     
                                     <xsl:variable name="wTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en' and @target = $target]"/>
-                                    <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
+                                    <!--  <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>-->
                                     
                                     <xsl:variable name="wTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $target]"/>
-                                    <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
-                                    
-
-                                    
+                                   <!--  <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>--> 
+                                                                      
                                     <sense>
                                         <!-- make new sense only if unique...-->
                                         
@@ -105,7 +114,16 @@
                                             <quote xml:lang="mix">      
                                                 <xsl:value-of select="parent::seg/*" separator=" "/>
                                             </quote>
-                                            <!-- eventually add translation of sentence here -->
+                                            <cit type="translation">
+                                                <quote xml:lang="en">
+                                                    <xsl:value-of select="$sTranslationEn" separator=" "/>
+                                                </quote>
+                                            </cit>
+                                            <cit type="translation">
+                                                <quote xml:lang="es">
+                                                    <xsl:value-of select="$sTranslationEs" separator=" "/>
+                                                </quote>
+                                            </cit>
                                         </cit>
                                     </sense>
                                 </xsl:for-each>
