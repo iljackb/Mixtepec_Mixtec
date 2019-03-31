@@ -584,15 +584,23 @@
             <form type="lemma">
                <orth xml:lang="mix">chaa</orth>
                <pron xml:lang="mix" notation="ipa">ʧàà</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʧa˩a˧</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Man">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">man</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">hombre</orth>
                   </form>
                </cit>
             </sense>
@@ -602,10 +610,13 @@
             <form type="lemma">
                <orth xml:lang="mix">ña'a</orth>
                <pron xml:lang="mix" notation="ipa">ɲàʔá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ɲa˧ʔa˥</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Woman">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
                <cit type="translation">
@@ -626,10 +637,10 @@
             <form type="lemma">
                <orth xml:lang="mix" cert="low">suluu</orth>
                <pron xml:lang="mix" notation="ipa">súlùù</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Child" n="1">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Humans">Humans</usg>
                <xr type="synonymOf">
@@ -653,13 +664,14 @@
                   </form>
                </cit>
             </sense>
-            <etym>
+            <etym type="compounding">
                <cit type="etymon">
-                  <pron>sú</pron>
-                  <note>unknown meaning</note>
+                  <form><orth xml:lang="mix">sú</orth></form>
+                  <def xml:lang="en">unknown meaning</def>
                </cit>
-               <cit type="etymon">
-                  <pron corresp="#small">lùù</pron>
+               <pc>+</pc>
+               <cit type="etymon" corresp="#small">
+                  <form><orth xml:lang="mix">lùù</orth></form>
                   <def xml:lang="en">small</def>
                </cit>
             </etym>
@@ -767,10 +779,10 @@
                <form type="variant">
                   <pron notation="ipa">kùɲùù</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense><!-- most broad meaning pertains to all living beings with bodies -->
                <etym type="metonymy" subtype="conceptual"><!-- because this is conceptual metonymy (eg the concepts are considered to be the same by speakers (at least those consulted), the three senses are in the same entry; otherwise there would be 3 separate entries --><!--<cit>'muscle', 'meat'</cit>--></etym>
                <cit type="translation">
@@ -1276,10 +1288,11 @@
             <form type="lemma">
                <orth xml:lang="mix">yaa</orth>
                <pron xml:lang="mix" notation="ipa">jàá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ja˥˩a˥</pron>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Tongue">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <cit type="translation">
@@ -1455,11 +1468,14 @@
          <entry xml:id="body-belly">
             <form type="lemma">
                <orth xml:lang="mix">titsi</orth>
-               <pron xml:lang="mix" notation="ipa">t̪ìtsí</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <pron xml:lang="mix" notation="ipa" cert="medium">t̪ìtsí</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ti˩tsi˧</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Abdomen">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <!-- front -->
@@ -1470,7 +1486,17 @@
                </cit>
                <cit type="translation">
                   <form>
+                     <orth xml:lang="en">stomach</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
                      <orth xml:lang="en">abdomen</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">estómago</orth>
                   </form>
                </cit>
             </sense>
@@ -1804,17 +1830,57 @@
                </cit>
             </sense>
          </entry>
+         <entry xml:id="joint-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">vau</orth>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">va˩u˥</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Joint">
+               <usg type="domain" cert="medium" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"/>
+                  <cit type="translation">
+                     <quote xml:lang="en"/>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"/>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">joint</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">articulación</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">conjuncto</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
          <entry xml:id="fingernail">
             <form type="lemma">
                <orth xml:lang="mix">chiin</orth>
                <pron xml:lang="mix" notation="ipa">ʧĩ̀ĩ́</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-                  <!-- concrete -->
-               </gramGrp>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʧĩ˥˩ĩ˥</pron>
             </form>
-            <sense>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Fingernail">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
+               <xr type="meronymOf">
+                  <ref corresp="#hand-finger" xml:lang="mix">xini nta'a</ref>
+                  <ref corresp="#hand-finger" xml:lang="en">finger</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">fingernail</orth>
@@ -1864,11 +1930,10 @@
                <orth xml:lang="mix">xa'tu</orth>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʃa˩du˩</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Heel">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <cit type="translation">
@@ -2093,10 +2158,13 @@
             <form type="lemma">
                <orth xml:lang="mix">iin</orth>
                <pron xml:lang="mix" notation="ipa">ĩ́ĩ̀ĩ́</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʔĩ˥˩ĩ˥</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Skin">
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure">AnatomicalStructure</usg>
                <cit type="translation">
@@ -2147,10 +2215,10 @@
                <form type="variant">
                   <orth>anua</orth>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Heart" n="1">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Organs">Organs</usg>
                <usg type="domain"
@@ -2279,10 +2347,10 @@
                <form type="variant">
                   <pron notation="ipa">βɛ́ʔɛ̀</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Home" n="1">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Human_habitats">Human_habitats</usg>
@@ -2998,6 +3066,7 @@
             <form type="lemma">
                <orth xml:lang="mix">tsa'nu</orth>
                <pron xml:lang="mix" notation="ipa">tsáʔnũ̀</pron>
+                 <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">tsa˥ʔnũ˧</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -3016,7 +3085,7 @@
          <entry xml:id="compadre">
             <form type="lemma">
                <orth xml:lang="mix" cert="low">baa</orth>
-               <pron xml:lang="mix" notation="ipa">ba˥a˩</pron>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ba˥a˩</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -3072,16 +3141,23 @@
             <form type="lemma">
                <orth xml:lang="mix">sutu</orth>
                <pron xml:lang="mix" notation="ipa">sút̪uù</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">su˩tu˩</pron>
+               </form>
             </form>
             <gramGrp>
                <pos>noun</pos>
             </gramGrp>
             <sense>
                <usg type="domain">Religion</usg>
-               <etym/>
-               <cit type="translation">
+               <cit type="translation"> 
                   <form>
                      <orth xml:lang="en">preist</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">sacerdote</orth>
                   </form>
                </cit>
             </sense>
@@ -3250,10 +3326,10 @@
                   <!-- include pointer to alternate spellings: title of: 'L331'"./#L331-00-01" -->
                   <pron notation="ipa">sáà</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Language">
                <usg type="domain">Language</usg>
                <etym/>
@@ -3276,10 +3352,10 @@
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">tũ˩tũ˧</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Language</usg>
                <cit type="translation">
@@ -3325,45 +3401,45 @@
          </entry>
          <entry xml:id="MIX-language-rain" type="compound">
             <form type="lemma">
-               <form type="reference">
-                  <orth>sa'an savi</orth>
-                  <pron notation="ipa">sáʔà sàví</pron>
-               </form>
+                <orth xml:lang="mix">sa'an savi</orth>
+                <pron xml:lang="mix" notation="ipa">sáʔà sàví</pron>  
                <form type="variant">
                   <pron notation="ipa">sáà sàví</pron>
-                  <!-- more variants exist -->
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Mixtepec_Mixtec">
                <usg type="domain" corresp="http://dbpedia.org/resource/Language">Language</usg>
-               <etym type="compounding">
-                  <cit type="etymon"><!-- head -->
-                     <pron corresp="#language">sá.ʔà</pron>
-                     <def xml:lang="en">language</def>
-                  </cit>
-                  <cit type="etymon">
-                     <pron corresp="#rain">sà.ví</pron>
-                     <def xml:lang="en">rain</def>
-                  </cit>
-               </etym>
-               <cit type="example" xml:lang="mix">
-                  <quote>Ntusu <hi rend="bold">Sa'an Savi</hi>
-                  </quote>
-                  <ptr target="SIL_docs/L331/L331-tok.xml"/>
-               </cit>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Mixtepec-Mixtec</orth>
                   </form>
+               </cit>          
+               <cit type="example">
+                  <quote xml:lang="mix">Ntusu <oRef>Sa'an Savi</oRef></quote>
+                  <ptr target="SIL_docs/L331/L331-tok.xml"/>
                </cit>
                <note>This description of the entry for the MIX language is from Wikipedia and is in
                   need of editing. I include this link to show that the infrustructure exists for
                   linking this concept to linked open data ontologies is inplace once the
                   information is more refined. </note>
             </sense>
+            <etym type="compounding">
+               <cit type="etymon" corresp="#language"><!-- head -->
+                  <form>
+                     <orth xml:lang="mix">sa'an</orth>
+                  </form>
+                  <def xml:lang="en">language</def>
+               </cit>
+               <cit type="etymon" corresp="#rain">
+                  <form>
+                     <orth xml:lang="mix">savi</orth>
+                  </form>
+                  <def xml:lang="en">rain</def>
+               </cit>
+            </etym>
             <note>
                <label/> This description of the entry for the MIX language is from Wikipedia and is
                in need of editing. I include this link to show that the infrustructure exists for
@@ -3398,9 +3474,9 @@
                   </cit>
                   <etym type="metonymy">
                      <desc>The assumption in the use of this term is that those that speak this language are poor.</desc>
-                     <cit type="etymon">
+                     <cit type="etymon" corresp="#poor">
                         <form>
-                           <orth xml:lang="mix" corresp="#poor">ntavi</orth>
+                           <orth xml:lang="mix">ntavi</orth>
                         </form>
                         <def xml:lang="en">poor</def>
                      </cit>
@@ -3417,10 +3493,10 @@
             <form type="lemma">
                <orth xml:lang="mix">sa'an xchila</orth>
                <pron xml:lang="mix" notation="ipa">sáʔà sʧílà</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Spanish_language">
                <usg type="domain" corresp="http://dbpedia.org/resource/Language">Language</usg>
                <etym type="blending">
@@ -3449,8 +3525,8 @@
                      <orth xml:lang="es">español</orth>
                   </form>
                </cit>
-               <cit type="example" xml:lang="mix">
-                  <quote>Ika ka'an na siin siin sa'an tono sa'an xchila, portugués,
+               <cit type="example">
+                  <quote xml:lang="mix">Ika ka'an na siin siin sa'an tono sa'an xchila, portugués,
                      francés, quechua tsi inka ka kue sa'an.</quote>
                   <ref type="source" target="SIL_docs/L145/L145-tok.xml"/>
                </cit>
@@ -3463,10 +3539,10 @@
          <entry xml:id="language-portuguese-MIX">
             <form type="lemma">
                <orth xml:lang="mix">portugués</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Portuguese_language">
                <usg type="domain" corresp="http://dbpedia.org/resource/Language">Language</usg>
                <cit type="translation">
@@ -3474,12 +3550,19 @@
                      <orth xml:lang="en">Portuguese</orth>
                   </form>
                </cit>
-               <cit type="example" xml:lang="mix">
-                  <quote>Ika ka'an na siin siin sa'an tono sa'an xchila, portugués, francés, quechua tsi inka ka kue sa'an.</quote>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">portugués</orth>
+                  </form>
+               </cit>
+               <cit type="example">
+                  <quote xml:lang="mix">Ika ka'an na siin siin sa'an tono sa'an xchila, portugués, francés, quechua tsi inka ka kue sa'an.</quote>
                </cit>
             </sense>
             <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
                <cit type="etymon">
+                  <lang>Spanish</lang>
                   <form>
                      <orth xml:lang="es">portugués</orth>
                   </form>
@@ -3489,15 +3572,20 @@
          <entry xml:id="language-french-MIX">
             <form type="lemma">
                <orth xml:lang="mix">francés</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/French_language">
                <usg type="domain" corresp="http://dbpedia.org/resource/Language">Language</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">French</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">francés</orth>
                   </form>
                </cit>
                <cit type="example" xml:lang="mix">
@@ -3506,7 +3594,9 @@
                </cit>
             </sense>
             <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
                <cit type="etymon">
+                  <lang>Spanish</lang>
                   <form>
                      <orth xml:lang="es">francés</orth>
                   </form>
@@ -3516,22 +3606,20 @@
          <entry xml:id="language-quechua">
             <form type="lemma">
                <orth xml:lang="mix">quechua</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Quechua_language">
                <usg type="domain" corresp="http://dbpedia.org/resource/Language">Language</usg>
-               <etym type="borrowing">
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es">quechua</orth>
-                     </form>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Quechua</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">quechua</orth>
                   </form>
                </cit>
                <cit type="example" xml:lang="mix">
@@ -3539,31 +3627,56 @@
                   <ref target="SIL_docs/L145/L145-tok.xml"/>
                </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>    
+                  <form>
+                     <orth xml:lang="es">quechua</orth>
+                  </form>
+               </cit>
+            </etym>
          </entry>
-         <entry xml:id="story">
+         <entry xml:id="story-MIX">
             <form type="lemma">
-               <orth xml:lang="mix">yatatu'un</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <orth xml:lang="mix">yata tu'un</orth>
             </form>
-            <sense>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>   
+               <usg/>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">fable, story</orth>
+                     <orth xml:lang="en">story</orth>
                   </form>
                </cit>
-               <usg/>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">fable</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">cuento</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">historia</orth>
+                  </form>
+               </cit>
             </sense>
             <etym type="compounding">
-               <cit type="etymon">
+               <cit type="etymon" corresp="#old-obj">
                   <form>
-                     <orth xml:lang="mix" corresp="#old-obj">yata</orth>
+                     <orth xml:lang="mix">yata</orth>
                   </form>
                </cit>
-               <cit type="etymon">
+               <pc>+</pc>
+               <cit type="etymon" corresp="#word">
                   <form>
-                     <orth xml:lang="mix" corresp="#word">tu'un</orth>
+                     <orth xml:lang="mix">tu'un</orth>
                   </form>
                </cit>
             </etym>
@@ -3612,10 +3725,10 @@
             <form type="lemma">
                <orth xml:lang="mix">kiti</orth>
                <pron xml:lang="mix" notation="ipa">kìt̪í</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense xml:id="animal" corresp="http://dbpedia.org/resource/Animal" n="1">
                <usg type="domain">livingBeings</usg>
                <xr/>
@@ -3642,15 +3755,6 @@
                   <ref xml:lang="en">animal</ref>
                   <ref type="sense" corresp="#horse"/>
                </xr>
-               <etym type="metonymy" subtype="categoryForMember">
-                  <seg type="desc" resp="#JB" xml:lang="en">In this lexical item, the language reflects the history, since there were no horses in Mexico until the arrival of the Spanish in the Mixtec (sometime after <date notBefore="1521">1521</date>), there was naturally no Mixtecan word for 'horse', thus the categorical noun meaning 'animal' was used to describe the unnamed animal.</seg>
-                  <cit type="etymon">
-                     <sense>
-                        <gloss xml:lang="en">animal</gloss>
-                        <gloss xml:lang="es">animal</gloss>
-                     </sense>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">horse</orth>
@@ -3662,15 +3766,24 @@
                   </form>
                </cit>
             </sense>
+            <etym type="metonymy" subtype="categoryForMember">
+               <seg type="desc" resp="#JB" xml:lang="en">In this lexical item, the language reflects the history, since there were no horses in Mexico until the arrival of the Spanish in the Mixtec (sometime after <date notBefore="1521">1521</date>), there was naturally no Mixtecan word for 'horse', thus the categorical noun meaning 'animal' was used to describe the unnamed animal.</seg>
+               <cit type="etymon">
+                  <sense>
+                     <gloss xml:lang="en">animal</gloss>
+                     <gloss xml:lang="es">animal</gloss>
+                  </sense>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="animal-squirrel">
             <form type="lemma">
                <orth xml:lang="mix">ntikua'in</orth>
                <pron xml:lang="mix" notation="ipa">ndìkwã́ĩ̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Squirrel">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <cit type="translation">
@@ -3731,11 +3844,10 @@
                </form>
                <form type="variant">
                   <pron notation="ipa">βílù</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Cat">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <cit type="translation">
@@ -3773,10 +3885,10 @@
          <entry xml:id="animal-sheep">
             <form type="lemma">
                <orth xml:lang="mix">ntikachi</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Sheep">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Livestock">Livestock</usg>
@@ -3793,11 +3905,10 @@
                <pron xml:lang="mix" notation="ipa" cert="medium">lélù</pron>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">le˧lu˧</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Sheep">Sheep</usg>
@@ -4059,10 +4170,10 @@
          <entry xml:id="animal-tortise">
             <form type="lemma">
                <orth xml:lang="mix">ntintitsa</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <etym/>
@@ -4076,15 +4187,20 @@
          <entry xml:id="animal-deer">
             <form type="lemma">
                <orth xml:lang="mix">isu</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Deer">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">deer</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">venado</orth>
                   </form>
                </cit>
             </sense>
@@ -4093,16 +4209,20 @@
             <form type="lemma">
                <orth xml:lang="mix">nkuii</orth>
                <pron xml:lang="mix" notation="ipa">nk̜wìí</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Fox">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">fox</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">zorro</orth>
                   </form>
                </cit>
             </sense>
@@ -4111,10 +4231,10 @@
             <form type="lemma">
                <orth xml:lang="mix">ntiva'u</orth>
                <pron xml:lang="mix" notation="ipa">nt̪iva˧˥ʔo˥˩</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Coyote">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <etym/>
@@ -4139,21 +4259,31 @@
             <sense corresp="http://dbpedia.org/resource/Pig">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Livestock">Livestock</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">pig</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">puerco</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">cerdo</orth>
+                  </form>
+               </cit>
                <etym type="metonymy" cert="medium">
-                  <cit type="etymon">
+                  <cit type="etymon" corresp="#evil">
                      <form>
-                        <orth xml:lang="mix" corresp="#evil">kini</orth>
+                        <orth xml:lang="mix">kini</orth>
                      </form>
                   </cit>
                   <seg type="desc" xml:lang="en">As is the case for horses, pigs were introduced to Mexico by Europeans  during colonization which would explain the need to create a new lexical itemin the language for these animals. I propose that this form may have come from the word for 'evil', as upon introduction to the territory, pigs were known historically
  to have decimated native crops which caused large-scale problems.
                      <!-- point to encyclopedic/literary source of this info--></seg>
                </etym>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">pig</orth>
-                  </form>
-               </cit>
             </sense>
          </entry>
          <entry xml:id="animal-possum">
@@ -4167,7 +4297,6 @@
             </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Possum">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">possum</orth>
@@ -4185,16 +4314,20 @@
                <orth xml:lang="mix">ma'a</orth>
                <pron xml:lang="mix" notation="ipa">máʔà</pron>
                <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ma˥ʔa˩</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Racoon">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">racoon</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">mapache</orth>
                   </form>
                </cit>
             </sense>
@@ -4266,11 +4399,10 @@
                <pron xml:lang="mix" notation="ipa">t̪ikùʧí</pron>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">tsi˩ku˩ʧi˧</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Bat">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <cit type="translation">
@@ -4290,26 +4422,15 @@
             <form type="lemma">
                <orth xml:lang="mix">chaka</orth>
                <pron xml:lang="mix" notation="ipa">ʧàká</pron>
+            </form>
+            <gramGrp>
+               <pos>categoricalNoun</pos>
+            </gramGrp>          
+            <sense corresp="http://dbpedia.org/resource/Fish">
+               <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
-            </form>
-            <sense corresp="http://dbpedia.org/resource/Category:Fish_genera">
-               <usg type="domain"
-                    corresp="http://dbpedia.org/resource/Category:Animal_genera">Animal_genera</usg>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">fish</orth>
-                  </form>
-               </cit>
-            </sense>
-            <cit type="translation">
-               <form>
-                  <orth xml:lang="es">pescado</orth>
-               </form>
-            </cit>
-            <sense corresp="http://dbpedia.org/resource/Fish">
-               <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">fish</orth>
@@ -4332,11 +4453,13 @@
             <form type="lemma">
                <orth xml:lang="mix">saa</orth>
                <pron xml:lang="mix" notation="ipa">sàà</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-                  <!-- categoricalNoun -->
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">sa˧a˩</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>categoricalNoun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Bird">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <cit type="translation">
@@ -4355,25 +4478,7 @@
                   </form>
                </cit>
             </sense>
-            <sense corresp="http://dbpedia.org/resource/Category:Bird_genera">
-               <usg type="domain"
-                    corresp="http://dbpedia.org/resource/Category:Animal_genera">Animal_genera</usg>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">birds</orth>
-                  </form>
-               </cit>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="es">pájaros</orth>
-                  </form>
-               </cit>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="es">aves</orth>
-                  </form>
-               </cit>
-            </sense>
+            
             <etym type="inheritance">
                <cit type="etymon" xml:lang="proto-mix"><!-- value of @xml:lang is a placeholder (not best practice)-->
                   <form>
@@ -4392,11 +4497,10 @@
                </form>
                <form type="variant">
                   <pron notation="ipa">kʷɛlí</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Western_Scrub_Jay">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
@@ -4406,8 +4510,8 @@
                      <orth xml:lang="en">scrub jay</orth>
                   </form>
                </cit>
-               <cit type="example" xml:lang="mix">
-                  <quote>ni ki'in <oRef>kuili</oRef> ka'nu ka ña chi'ntu tsatsi <oRef>kuili</oRef> luu luu ka</quote>
+               <cit type="example">
+                  <quote xml:lang="mix">ni ki'in <oRef>kuili</oRef> ka'nu ka ña chi'ntu tsatsi <oRef>kuili</oRef> luu luu ka</quote>
                   <ptr source="#the_adult_scrub_Jay_took_away_the_acorn_that_the_baby_was_eating_01_02_TS.wav"/>
                </cit>
             </sense>
@@ -4416,10 +4520,10 @@
             <form type="lemma">
                <orth xml:lang="mix">looro</orth>
                <pron xml:lang="mix" notation="ipa">lóórò</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Parrot">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
@@ -4428,8 +4532,14 @@
                      <orth xml:lang="en">parrot</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">loro</orth>
+                  </form>
+               </cit>
             </sense>
             <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
                <cit type="etymon">
                   <lang>Spanish</lang>
                   <form>
@@ -4442,11 +4552,10 @@
             <form type="lemma">
                <orth xml:lang="mix">tikaka</orth>
                <pron xml:lang="mix" notation="ipa">t̪ikaká</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-                  <!-- categoricalNoun -->
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Crow">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
@@ -4468,10 +4577,10 @@
                <pron xml:lang="mix" notation="ipa" cert="low">la˩ku˥ku˧</pron>
                <pron xml:lang="mix" notation="ipa" cert="low">la˧ku˥ku</pron>
                <pron xml:lang="mix" notation="ipa" cert="low">la˧ku˥ku˥</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Mourning_dove">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
                <xr type="hyponymOf">
@@ -4564,11 +4673,10 @@
                <pron notation="ipa" cert="medium">ʧũṹ</pron>
                <form type="variant">
                   <orth notation="plain" xml:lang="mix">chuun</orth>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense n="2" corresp="http://dbpedia.org/resource/Chicken">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Bird_genera">Bird_genera</usg>
@@ -4932,11 +5040,10 @@
                <pron xml:lang="mix" notation="ipa">t̬̪ùmí</pron>
                <form type="variant">
                   <pron notation="ipa">d̪ùmí</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">partOf-Body-Bird-Tail</usg>
                <cit type="translation">
@@ -5330,15 +5437,23 @@
             <form type="lemma">
                <orth xml:lang="mix">ii</orth>
                <pron xml:lang="mix" notation="ipa">ĩ̀ĩ̀</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʔĩ˩ĩ˥</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">typeOf-Mineral-Salt</usg>
+               <usg type="domain">Mineral</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">salt</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">sal</orth>
                   </form>
                </cit>
             </sense>
@@ -5350,11 +5465,10 @@
                <pron xml:lang="mix" notation="ipa">ɲṹʔũ̀</pron>
                <form type="variant">
                   <pron notation="ipa">ɲõ̀ʔṍ</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">typeOf-Element-Fire</usg>
                <cit type="translation">
@@ -5428,11 +5542,10 @@
                </form>
                <form type="variant">
                   <pron notation="ipa">víkò</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Clouds">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Weather">Weather</usg>
                <cit type="translation">
@@ -5486,11 +5599,10 @@
                      <seg>vikó</seg>
                      <seg>nũ̀ũ̀</seg>
                   </pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Fog">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Weather">Weather</usg>
                <cit type="translation">
@@ -5539,6 +5651,9 @@
             <form type="lemma">
                <orth xml:lang="mix">iin</orth>
                <pron xml:lang="mix" notation="ipa">ĩ́ĩ́</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʔĩ́ĩ́</pron>
+               </form>
                <gramGrp>
                   <pos>noun</pos>
                </gramGrp>
@@ -6490,12 +6605,13 @@
             <form type="lemma">
                <orth xml:lang="mix">Ñu'uchi kuchi</orth>
                <pron xml:lang="mix" notation="ipa">ɲùʔúʧi kùʧí</pron>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/North_America_(continent)">
-               <usg type="domain">RegionOf-Earth-Continents</usg>
+               <usg type="domain">Earth</usg>
+               <usg type="domain">Geography</usg>
                <etym type="blending">
                   <cit type="etymon"><!-- HEAD -->
                      <form>
@@ -6533,12 +6649,14 @@
             <form type="lemma">
                <orth xml:lang="mix">Nkoyo</orth>
                <pron xml:lang="mix" notation="ipa">ŋk̬ójò</pron>
-               <gramGrp>
+            </form>
+            <gramGrp>
                   <pos>placeNoun</pos>
                </gramGrp>
-            </form>
             <sense>
-               <usg type="domain">GeopoliticalState-North America</usg>
+               <usg type="domain">North America</usg>
+               <usg type="domain">Earth</usg>
+               <usg type="domain">Geography</usg>
                <etym>
                   <cit type="etymon">
                      <form>
@@ -6567,14 +6685,15 @@
          <entry xml:id="MixtecaRegion-MIX" type="compound">
             <form type="lemma">
                <form type="lemma">
-                  <orth xml:lang="mix">ÑuuSavi</orth>
+                  <orth xml:lang="mix">Ñuu Savi</orth>
                </form>
                <gramGrp>
                   <pos>placeNoun</pos>
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Mixteca_Region,_Oaxaca">
-               <usg type="domain">RegionOfMexico</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
                <etym type="compounding">
                   <cit type="etymon">
                      <form>
@@ -6620,7 +6739,8 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Oaxaca_(Oaxaca)">
-               <usg type="domain">Location-Region-Mexico</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -6643,7 +6763,8 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Oaxaca_(Oaxaca)">
-               <usg type="domain">Location-Civic-Mexico</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -6704,45 +6825,49 @@
          </entry>
          <entry xml:id="Mixtepec-ii" type="compound"><!-- where did I get this!? -->
             <form type="variant">
-               <orth>Nuu Viko</orth>
-               <pron notation="ipa">nũ̀ũ̀ víkò</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <orth xml:lang="mix">Nuu Viko</orth>
+               <pron notation="ipa" xml:lang="mix">nũ̀ũ̀ víkò</pron>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Location-Civic-Mexico-Oaxaca-Juxtlahuaca</usg>
-               <etym type="blending">
-                  <cit type="etymon">
-                     <pron corresp="#body-face">nũ̀ṹ</pron>
-                     <def xml:lang="en">face</def>
-                  </cit>
-                  <cit>
-                     <pron corresp="#cloud">ví.kò</pron>
-                     <def xml:lang="en">cloud(s)</def>
-                  </cit>
-               </etym>
+               <usg type="domain">Oaxaca</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">San Juan Mixtepec</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="blending">
+               <cit type="etymon" corresp="#body-face">
+                  <form><orth xml:lang="mix">nuu</orth></form>
+                  <def xml:lang="en">come down from</def>
+               </cit>
+               <pc>+</pc>
+               <cit type="etymon" corresp="#cloud">
+                  <form><orth xml:lang="mix">viko</orth></form>
+                  <def xml:lang="en">cloud(s)</def>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="Yucanani">
             <form type="lemma">
                <orth xml:lang="mix">Yucanani</orth>
                <pron xml:lang="mix" notation="ipa">jukanánì</pron>
                <form type="variant">
-                  <orth>Yucanany</orth>
+                  <orth xml:lang="mix">Yucanany</orth>
                </form>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Location-Civic-Mexico-Oaxaca-Juxtlahuaca</usg>
-               <etym/>
+               <usg type="domain">Oaxaca</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Yucanani</orth>
@@ -6754,13 +6879,15 @@
             <form type="lemma">
                <orth xml:lang="mix">Skuiia</orth>
                <pron xml:lang="mix" notation="ipa">skwíja</pron>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Location-Civic-Mexico-Oaxaca-Juxtlahuaca</usg>
-               <etym/>
+               <usg type="domain">Oaxaca</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
+          
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Santiago Juxlahuaca</orth>
@@ -6777,25 +6904,26 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Puebla_State">
-               <usg type="domain">CivicLocation-Mexico</usg>
-               <etym type="compounding">
-                  <cit type="etymon">
-                     <pron corresp="#landscape-lake">jù.ʧá</pron>
-                     <def xml:lang="en">lake</def>
-                  </cit>
-                  <etym type="metonymy">
-                     <cit type="etymon">
-                        <pron corresp="#bird-hummingbird">nʧú.ʔù</pron>
-                        <def xml:lang="en">hummingbird</def>
-                     </cit>
-                  </etym>
-               </etym>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>            
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Puebla State</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="compounding">
+               <cit type="etymon">
+                  <pron corresp="#landscape-lake">jù.ʧá</pron>
+                  <def xml:lang="en">lake</def>
+               </cit>
+               <etym type="metonymy">
+                  <cit type="etymon">
+                     <pron corresp="#bird-hummingbird">nʧú.ʔù</pron>
+                     <def xml:lang="en">hummingbird</def>
+                  </cit>
+               </etym>
+            </etym>
          </entry>
          <entry xml:id="Puebla-city" type="compound">
             <form type="lemma">
@@ -6806,42 +6934,45 @@
                </gramGrp>
             </form>
             <sense corresp="http://dbpedia.org/resource/Puebla_City">
-               <usg type="domain">Location-Civic-Mexico-Puebla</usg>
-               <etym type="compounding">
-                  <cit type="etymon">
-                     <pron corresp="#landscape-lake">jù.ʧá</pron>
-                     <def xml:lang="en">lake</def>
-                  </cit>
-                  <etym type="metonymy">
-                     <cit type="etymon">
-                        <pron corresp="#bird-hummingbird">nʧú.ʔù</pron>
-                        <def xml:lang="en">hummingbird</def>
-                     </cit>
-                  </etym>
-               </etym>
-               <note>it is not clear which came first, but the sharing of the place name between the
-                  city and state of Puebla is also a case of Metonymy in that either one of these
-                  scenarios is necessarily true: the part (city) represents the state (or region);
-                  or the whole (the region) represents the part (the city)</note>
+               <usg type="domain">Puebla</usg>
+               <usg type="domain">Mexico</usg>
+               <usg type="domain">Geography</usg>
+
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Puebla City</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="compounding">
+               <cit type="etymon">
+                  <pron corresp="#landscape-lake">jù.ʧá</pron>
+                  <def xml:lang="en">lake</def>
+               </cit>
+               <etym type="metonymy">
+                  <cit type="etymon">
+                     <pron corresp="#bird-hummingbird">nʧú.ʔù</pron>
+                     <def xml:lang="en">hummingbird</def>
+                  </cit>
+               </etym>
+               <note>it is not clear which came first, but the sharing of the place name between the
+                  city and state of Puebla is also a case of Metonymy in that either one of these
+                  scenarios is necessarily true: the part (city) represents the state (or region);
+                  or the whole (the region) represents the part (the city)</note>
+            </etym>
          </entry>
          <entry xml:id="MexicoCity">
             <form type="lemma">
                <orth xml:lang="mix">Nkoyo</orth>
-               <pron xml:lang="mix" notation="ipa">ŋk̬ójò</pron>
-               <!-- unconfirmed pronunciation -->
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
+               <pron xml:lang="mix" notation="ipa" cert="low">ŋk̬ójò</pron>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Geopolitical State-North America</usg>
-               <etym/>
+               <usg type="domain">Mexico</usg>  
+               <usg type="domain">Geography</usg>    
+               <usg type="domain">Earth</usg>        
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Mexico City</orth>
@@ -6859,12 +6990,15 @@
                <orth xml:lang="mix" cert="low">Gaa</orth>
                <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978" cert="low">ga˩˧a˩</pron>
                <!-- unconfirmed pronunciation -->
-               <gramGrp>
+
+            </form>
+            <gramGrp>
                   <pos>placeNoun</pos>
                </gramGrp>
-            </form>
             <sense>
-               <usg type="domain">Geopolitical State-North America</usg>
+               <usg type="domain">Mexico</usg>  
+               <usg type="domain">Geography</usg>    
+               <usg type="domain">Earth</usg>         
                <etym/>
                <cit type="translation">
                   <form>
@@ -6936,46 +7070,41 @@
          <entry xml:id="United-States" type="compound">
             <form type="lemma"><!-- source SIL L145 -->
                <orth xml:lang="mix">Estados Unidos</orth>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Geopolitical State-North America</usg>
-               <etym type="borrowing">
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es"/>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Geography</usg>    
+               <usg type="domain">Earth</usg>            
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">United States</orth>
                   </form>
                </cit>
+               
                <note>'Location-(CONTINENT(i)' is inherantly part of profile, define in
                   Ontology</note>
             </sense>
+            <etym type="borrowing">
+               <lang>Spanish</lang>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="Canada">
             <form type="lemma"><!-- source SIL L145 -->
                <orth xml:lang="mix">Canadá</orth>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Geopolitical State-North America</usg>
-               <etym type="borrowing">
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es"/>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Geography</usg>    
+               <usg type="domain">Earth</usg>   
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Canada</orth>
@@ -6984,24 +7113,24 @@
                <note>'Location-(CONTINENT(i)' is inherantly part of profile, define in
                   Ontology</note>
             </sense>
+            <etym type="borrowing">
+               <lang>Spanish</lang>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="continent-Antarctica">
             <form type="lemma"><!-- source SIL L145 -->
                <orth xml:lang="mix">Antártida</orth>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">RegionOf-Earth-Continent</usg>
-               <etym type="borrowing">
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es"/>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Earth</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Antarctica</orth>
@@ -7009,6 +7138,14 @@
                </cit>
                <note>'Location' is inherantly part of profile, define in Ontology</note>
             </sense>
+            <etym type="borrowing">
+               <lang>Spanish</lang>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="continent-Europe">
             <form type="lemma"><!-- source SIL L145 -->
@@ -7018,15 +7155,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">RegionOf-Earth-Continent-</usg>
-               <etym type="borrowing">
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es"/>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Earth</usg>         
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Europe</orth>
@@ -7034,16 +7163,24 @@
                </cit>
                <note>'Location' is inherantly part of profile, define in Ontology</note>
             </sense>
+            <etym type="borrowing">
+               <lang>Spanish</lang>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="continent-Asia">
             <form type="lemma"><!-- source SIL L145 -->
                <orth xml:lang="mix">Asia</orth>
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">RegionOf-Earth-Continent</usg>
+               <usg type="domain">Earth</usg>    
                <etym type="borrowing">
                   <lang>Spanish</lang>
                   <cit type="etymon">
@@ -7068,15 +7205,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">RegionOf-Earth-Continent</usg>
-               <etym type="borrowing">
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es"/>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Earth</usg>           
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Africa</orth>
@@ -7084,26 +7213,26 @@
                </cit>
                <note>'Location' is inherantly part of profile, define in Ontology</note>
             </sense>
+            <etym type="borrowing">
+               <lang>Spanish</lang>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="continent-Oceania">
             <form type="lemma"><!-- source SIL L145 -->
                <orth xml:lang="mix">Oceanía</orth>
                <pron xml:lang="mix" notation="ipa">oseaníja</pron>
                <!-- unconfirmed pronunciation -->
-               <gramGrp>
-                  <pos>placeNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>placeNoun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">RegionOf-Earth-Continent</usg>
-               <etym type="borrowing">
-                  <lang>Spanish</lang>
-                  <cit type="etymon">
-                     <form>
-                        <orth xml:lang="es"/>
-                     </form>
-                  </cit>
-               </etym>
+               <usg type="domain">Earth</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">Oceana</orth>
@@ -7112,55 +7241,63 @@
                <note>'Location' is inherantly part of profile, define in Ontology; Oceana requires
                   unique definitions</note>
             </sense>
+            <etym type="borrowing">
+               <lang>Spanish</lang>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="es"/>
+                  </form>
+               </cit>
+            </etym>
          </entry>
          <!-- TERRAIN -->
          <entry xml:id="land">
             <form type="lemma">
                <orth xml:lang="mix">ñu'u</orth>
                <pron xml:lang="mix" notation="ipa">ɲùʔú</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">Earth-Land</usg>
-               <etym>Metonomy: 'land', 'soil'</etym>
+               <usg type="domain">Earth</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">land</orth>
                   </form>
                </cit>
             </sense>
+            <etym>Metonomy: 'land', 'soil'</etym>
             <!-- ALSO 'MUD'; use 'sense'? -->
          </entry>
          <entry xml:id="soil">
             <form type="lemma">
                <orth xml:lang="mix">ñu'u</orth>
                <pron xml:lang="mix" notation="ipa">ɲùʔú</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">typeOf-NaturalMaterial-Soil</usg>
-               <etym>Metonomy: 'land', 'soil'</etym>
+               <usg type="domain">NaturalMaterial</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">soil</orth>
                   </form>
                </cit>
             </sense>
+            <etym>Metonomy: 'land', 'soil'</etym>
          </entry>
          <entry xml:id="dirt">
             <form type="lemma">
                <orth xml:lang="mix">yaka</orth>
                <pron xml:lang="mix" notation="ipa">jáká</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">typeOf-NaturalMaterial-Dirt</usg>
+               <usg type="domain">NaturalMaterial</usg>
                <etym/>
                <cit type="translation">
                   <form>
@@ -7173,13 +7310,13 @@
             <form type="lemma">
                <orth xml:lang="mix">yaka</orth>
                <pron xml:lang="mix" notation="ipa">jáká</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">typeOf-NaturalMaterial-Particulate-Dust</usg>
-               <etym/>
+               <usg type="domain">NaturalMaterial</usg>
+               <usg type="domain">Particulate</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">dust</orth>
@@ -7191,13 +7328,15 @@
             <form type="lemma">
                <orth xml:lang="mix">yuti</orth>
                <pron xml:lang="mix" notation="ipa">jút̪ì</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ju˩˥t˧</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">typeOf-NaturalMaterial-Particulate-Sand</usg>
-               <etym/>
+               <usg type="domain">NaturalMaterial</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">sand</orth>
@@ -7209,10 +7348,10 @@
             <form type="lemma">
                <orth xml:lang="mix">yuu</orth>
                <pron xml:lang="mix" notation="ipa">jùú</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">NaturalMaterial</usg>
                <cit type="translation">
@@ -7226,13 +7365,12 @@
             <form type="lemma"><!-- The concept of MUD inherantly entails the mixture of 'WATER' with 'DIRT' -->
                <orth xml:lang="mix">ncha'in</orth>
                <pron xml:lang="mix" notation="ipa">nʤàʔĩ́</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">NaturalMaterial-Dirt-Wet-Mud</usg>
-               <etym/>
+               <usg type="domain">NaturalMaterial</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">mud</orth>
@@ -7247,12 +7385,11 @@
                <orth xml:lang="mix">juku</orth>
                <pron xml:lang="mix" notation="ipa">júkù</pron>
                <gramGrp>
-                  <pos/>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-LandFormation-Mountain</usg>
-               <etym/>
+               <usg type="domain">Landscape</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">mountain</orth>
@@ -7269,8 +7406,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-LandFormation-Hill</usg>
-               <etym/>
+               <usg type="domain">Landscape</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">hill</orth>
@@ -7287,50 +7423,26 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-LandFormation-feild</usg>
-               <etym>
-                  <cit type="etymon">
-                     <pron corresp="#body-face">nũ̀ũ̀</pron>
-                     <def xml:lang="en">face</def>
-                  </cit>
-                  <cit type="etymon">
-                     <pron corresp="#feild">i.t̪ú</pron>
-                     <def xml:lang="en">feild</def>
-                  </cit>
-               </etym>
+               <usg type="domain">Landscape</usg>
+               <usg type="domain">Agriculture</usg>            
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">feild</orth>
                   </form>
                </cit>
             </sense>
-         </entry>
-         <entry xml:id="landscape-cornfield" type="compound">
-            <form type="lemma">
-               <orth xml:lang="mix">nta'a</orth>
-               <pron xml:lang="mix" notation="ipa">nd̪àʔá</pron>
-               <pron xml:lang="mix" notation="ipa">nd̪à̰ʔá̰</pron>
-               <pron xml:lang="mix" notation="ipa">nd̪à̰ˀá̰</pron>
-               <pron xml:lang="mix" notation="ipa">nd̪à̰á̰</pron>
-               <gramGrp>
-                  <pos/>
-               </gramGrp>
-            </form>
-            <sense>
-               <usg type="domain">Earth-Landscape-Agriculture</usg>
-               <etym>
-                  <cit>
-                     <pron corresp="#body-hand">nd̪à.ʔá</pron>
-                     <def xml:lang="en">hand</def>
-                  </cit>
-               </etym>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">cornfeild</orth>
-                  </form>
+            <etym>
+               <cit type="etymon" corresp="#body-face">
+                  <form><orth xml:lang="mix">nuu</orth></form>
+                  <def xml:lang="en">face</def>
                </cit>
-            </sense>
+               <cit type="etymon" corresp="#feild">
+                  <form><orth>itu</orth></form>
+                  <def xml:lang="en">feild</def>
+               </cit>
+            </etym>
          </entry>
+        
          <entry xml:id="landscape-valley" type="compound">
             <form type="lemma">
                <orth xml:lang="mix">yu'u yuku</orth>
@@ -7340,37 +7452,39 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">physicalFormOf-Earth-Landscape</usg>
-               <etym>
-                  <cit type="etymon">
-                     <pron corresp="#body-face-mouth">ju.ʔú</pron>
-                     <def xml:lang="en">mouth</def>
-                  </cit>
-                  <cit type="etymon">
-                     <pron corresp="#hill">jú.kù</pron>
-                     <def xml:lang="en">hill</def>
-                  </cit>
-                  <note>this lexical concept inherantly entails relative configuration of flat
-                     landscape (plain) with regards to hills or mountains</note>
-               </etym>
+               <usg type="domain">Landscape</usg>              
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">valley</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="compounding">
+               <etym type="metaphor"> 
+                  <cit type="etymon" corresp="#body-face-mouth">
+                  <form><orth xml:lang="mix">yu'u</orth></form>
+                  <def xml:lang="en">mouth</def>
+               </cit>
+               </etym>
+               <pc>+</pc>
+               <cit type="etymon" corresp="#hill">
+                  <form><orth xml:lang="mix">yuku</orth></form>
+                  <def xml:lang="en">hill</def>
+               </cit>
+               <note>this lexical concept inherantly entails relative configuration of flat
+                  landscape (plain) with regards to hills or mountains</note>
+            </etym>
          </entry>
          <entry xml:id="landscape-plain">
             <form type="lemma">
                <orth xml:lang="mix">yosoo</orth>
                <pron xml:lang="mix" notation="ipa">josòó</pron>
-               <gramGrp>
-                  <pos/>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">typeOf-Landscape-Plain</usg>
-               <etym/>
+               <usg type="domain">Landscape</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">plain</orth>
@@ -7383,12 +7497,11 @@
                <orth xml:lang="mix">juku</orth>
                <pron xml:lang="mix" notation="ipa">júku</pron>
                <gramGrp>
-                  <pos/>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Landscape-Forest</usg>
-               <etym/>
+               <usg type="domain">Landscape</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">forest</orth>
@@ -7401,93 +7514,133 @@
                <orth xml:lang="mix">kava</orth>
                <pron xml:lang="mix" notation="ipa">kàvá</pron>
                <gramGrp>
-                  <pos/>
+                  <pos>noun</pos>
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain">typeOf-Landscape-Cave</usg>
-               <etym/>
+               <usg type="domain">Landscape</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">cave</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">cava</orth>
+                  </form>
+               </cit>
             </sense>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
+               <cit type="etymon">
+                  <lang>Spanish</lang>
+                  <form>
+                     <orth xml:lang="es">cava</orth>
+                  </form>
+                  <def xml:lang="en">cave</def>
+               </cit>
+            </etym>
          </entry>
          <!-- WATER BASED EARTH FORMATIONS/LANDSCAPES -->
-         <entry xml:id="landscape-river">
+         <entry xml:id="landscape-river-lake-MIX">
             <form type="lemma">
                <orth xml:lang="mix">yucha</orth>
                <pron xml:lang="mix" notation="ipa">júʧà</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ju˩ʧa˧</pron>
+               </form>
             </form>
-            <sense>
-               <usg type="domain">typeOf-Landscape-Water-River</usg>
-               <etym/>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense n="1" corresp="http://dbpedia.org/resource/River">
+               <usg type="domain">Landscape</usg>
+               <usg type="domain">Water</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">river</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">río</orth>
+                  </form>
+               </cit>
             </sense>
-         </entry>
-         <!-- DOUBLE CHECK THAT THESE VOCAB ITEMS ARE THE SAME; MAKE SURE TO DISTINGUISH THAT ONE IS A FLOWING AND THE OTHER IS STILL BODY OF WATER-->
-         <entry xml:id="landscape-lake">
-            <form type="lemma">
-               <orth xml:lang="mix">yucha</orth>
-               <pron xml:lang="mix" notation="ipa">júʧà</pron>
-               <gramGrp>
-                  <pos/>
-               </gramGrp>
-            </form>
-            <sense>
-               <usg type="domain">typeOf-Landscape-Water-Lake</usg>
-               <etym/>
+            <sense n="2" corresp="http://dbpedia.org/resource/Lake">
+               <usg type="domain">Landscape</usg>
+               <usg type="domain">Water</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">lake</orth>
                   </form>
                </cit>
-            </sense>
-         </entry>
-         <entry xml:id="landscape-river_bank">
-            <form type="lemma">
-               <orth xml:lang="mix">yu'u yucha</orth>
-               <pron xml:lang="mix" notation="ipa">juʔú júʧà</pron>
-               <gramGrp>
-                  <pos/>
-               </gramGrp>
-            </form>
-            <sense>
-               <usg type="domain">regionOf-Landscape-Water-River-RiverBank</usg>
-               <etym type="compounding">
-                  <cit type="etymon">
-                     <pron corresp="#body-face-mouth">ju.ʔú</pron>
-                     <def xml:lang="en">mouth</def>
-                  </cit>
-                  <cit type="etymon">
-                     <pron corresp="#landscape-river">jú.ʧà</pron>
-                     <def xml:lang="en">river, lake</def>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">river bank</orth>
+                     <orth xml:lang="en">lago</orth>
                   </form>
                </cit>
             </sense>
          </entry>
+         <!-- DOUBLE CHECK THAT THESE VOCAB ITEMS ARE THE SAME; MAKE SURE TO DISTINGUISH THAT ONE IS A FLOWING AND THE OTHER IS STILL BODY OF WATER-->
+
+         <entry xml:id="landscape-river_bank">
+            <form type="lemma">
+               <orth xml:lang="mix">yu'u yucha</orth>
+               <pron xml:lang="mix" notation="ipa">juʔú júʧà</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Landscape</usg>
+               <usg type="domain">Water</usg>
+               <usg type="domain">River</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">river bank</orth>
+                  </form>
+               </cit>            
+            </sense>
+            <etym type="compounding">
+               <cit type="etymon" corresp="#body-face-mouth">
+                  <form><orth xml:lang="mix">yu'u</orth></form>
+                  <def xml:lang="en">mouth</def>
+               </cit>
+               <cit type="etymon" corresp="#landscape-river">
+                  <form>
+                     <orth xml:lang="mix">yucha</orth>
+                  </form>
+                  <def xml:lang="en">river, lake</def>
+               </cit>
+            </etym>
+         </entry>
          <!-- Natural Entities -VEGITATION -->
          <entry xml:id="tree-MIX-YCNY"><!-- Tree: is_a Vegitation/Plant -->
             <form type="lemma">
-               <orth xml:lang="mix">tijutsa</orth>
-               <pron xml:lang="mix" notation="ipa">t̪íjùtsà</pron>
+               <orth xml:lang="mix">tuyutsa</orth>
+               <pron xml:lang="mix" notation="ipa" resp="#TS">t̪íjùtsà</pron>
             </form>
-            <sense>
-               <usg type="domain">typeOf-Vegition-Tree</usg>
-               <etym/>
+            <sense n="1" corresp="http://dbpedia.org/resource/Pinus_montezumae">
+               <usg type="domain">Botany</usg>
+               <xr type="hypernymOf">
+                  <ref xml:lang="mix" corresp="#tree-jutu">yutu</ref>
+                  <ref xml:lang="en" corresp="#tree-jutu">tree</ref>
+               </xr>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en" cert="low">ocote pine tree</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en" cert="low">ocote</orth>
+                  </form>
+               </cit>
+            </sense>
+            <sense resp="#TS" n="2" cert="low">
+               <usg type="domain">Botany</usg>
+               <note resp="#JB">In discussions with Mille Nieves (2016) this is likely an idiolectal usage of the term by soeaker TS and it is in fact a specific type of tree (Pinus Montezumae).It is likely due to the presence or predominance of this type of tree in the area of origin of speaker TS.</note>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">tree</orth>
@@ -7497,16 +7650,23 @@
             <!-- 'this is the form for 'living tree' given by speaker TS' -->
          </entry>
          <entry xml:id="tree-jutu"><!-- This is in deliberation, this form was given by one speaker but denied by another -->
-            <form type="variant">
-               <orth>yutu</orth>
-               <pron notation="ipa">jút̪ù</pron>
+            <form type="lemma">
+               <orth xml:lang="mix">yutu</orth>
+               <pron xml:lang="mix" notation="ipa">jút̪ù</pron>
             </form>
-            <sense>
-               <usg type="domain">typeOf-Vegition-Dead-Tree</usg>
-               <etym/>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Tree">
+               <usg type="domain">Botany</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">tree</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">árbol</orth>
                   </form>
                </cit>
             </sense>
@@ -7518,30 +7678,42 @@
                <orth xml:lang="mix">yu'u</orth>
                <pron xml:lang="mix" notation="ipa">jùʔú</pron>
             </form>
-            <sense>
-               <usg type="domain">partOf-Tree-Root</usg>
-               <etym/>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Root">
+               <usg type="domain">Botany</usg>
+               <usg type="domain">Tree</usg>
+               <xr type="meronymOf">
+                  <ref xml:lang="mix" corresp="#tree-jutu">yutu</ref>
+                  <ref xml:lang="en" corresp="#tree-jutu">tree</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">root</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">raíz</orth>
                   </form>
                </cit>
             </sense>
          </entry>
          <entry xml:id="tree-branch" type="compound">
             <form type="lemma">
-               <orth>nta'a yutu</orth>
-               <pron notation="ipa">ndàʔá jùtú</pron>
-               <gramGrp>
-                  <gram>noun</gram>
-               </gramGrp>
+               <orth xml:lang="mix">nta'a yutu</orth>
+               <pron xml:lang="mix" notation="ipa">ndàʔá jùtú</pron>
             </form>
-            <sense>
-               <graphic url=".../imgs/apoala_tree.jpg"/>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Branch">
                <usg type="domain">Botany</usg>
+               <usg type="domain">Tree</usg>
                <xr type="meronymOf">
-                  <ref xml:lang="mix">yutu</ref>
-                  <ref xml:lang="en">tree</ref>
+                  <ref xml:lang="mix" corresp="#tree-jutu">yutu</ref>
+                  <ref xml:lang="en" corresp="#tree-jutu">tree</ref>
                </xr>
                <cit type="translation">
                   <form>
@@ -7554,11 +7726,29 @@
                   </form>
                </cit>
             </sense>
+            <sense n="2" corresp="http://dbpedia.org/resource/Leaf">
+               <usg type="domain">Botany</usg>
+               <usg type="domain">Tree</usg>
+               <xr type="meronymOf">
+                  <ref xml:lang="mix" corresp="#tree-jutu">yutu</ref>
+                  <ref xml:lang="en" corresp="#tree-jutu">tree</ref>
+               </xr>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">leaf</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">hoja</orth>
+                  </form>
+               </cit>
+            </sense>
             <etym type="compounding">
                <etym type="metaphor">
                   <cit type="etymon">
                      <form>
-                        <orth>nta'a</orth>
+                        <orth xml:lang="mix">nta'a</orth>
                      </form>
                      <sense>
                         <usg type="domain">HumanAntomy</usg>
@@ -7573,7 +7763,7 @@
                </etym>
                <cit type="etymon">
                   <form>
-                     <orth>jutu</orth>
+                     <orth xml:lang="mix">yutu</orth>
                   </form>
                   <gloss xml:lang="en">tree</gloss>
                   <gloss xml:lang="es">arbol</gloss>
@@ -7582,39 +7772,66 @@
          </entry>
          <entry xml:id="tree-branch-TS">
             <form type="lemma" resp="#TS">
-               <orth>nta'a tiyutsa</orth>
-               <pron notation="ipa">ndá.ʔà t̪í.jù.tsà</pron>
-               <gramGrp>
-                  <gram>noun</gram>
-               </gramGrp>
+               <orth xml:lang="mix">nta'a tuyutsa</orth>
+               <pron notation="ipa" xml:lang="mix" cert="low">ndáʔa t̪jù.tsà</pron>
             </form>
-            <sense n="1">
-               <usg type="domain">partOf-Tree-Branch</usg>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense corresp="http://dbpedia.org/resource/Branch">
+                  <usg type="domain">Botany</usg>
+                  <usg type="domain">Tree</usg>
+                  <xr type="meronymOf">
+                     <ref xml:lang="mix" corresp="#tree-jutu">yutu</ref>
+                     <ref xml:lang="en" corresp="#tree-jutu">tree</ref>
+                  </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">branch</orth>
                   </form>
                </cit>
             </sense>
-            <sense n="2">
+            <sense n="2" corresp="http://dbpedia.org/resource/Leaf">
+               <usg type="domain">Botany</usg>
+               <usg type="domain">Tree</usg>
+               <xr type="meronymOf">
+                  <ref xml:lang="mix" corresp="#tree-jutu">yutu</ref>
+                  <ref xml:lang="en" corresp="#tree-jutu">tree</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">leaf</orth>
                   </form>
                </cit>
-            </sense>
-            <etym>
-               <cit type="etymon">
+               <cit type="translation">
                   <form>
-                     <orth>nta'a</orth>
+                     <orth xml:lang="es">hoja</orth>
                   </form>
-                  <def xml:lang="en">hand</def>
                </cit>
+            </sense>
+            <etym type="compounding">
+               <etym type="metaphor">
+                  <cit type="etymon">
+                     <form>
+                        <orth xml:lang="mix">nta'a</orth>
+                     </form>
+                     <sense>
+                        <usg type="domain">HumanAntomy</usg>
+                        <xr type="meronymOf">
+                           <ref xml:lang="mix">kuñu</ref>
+                           <ref xml:lang="en">body</ref>
+                        </xr>
+                        <gloss xml:lang="en">hand</gloss>
+                        <gloss xml:lang="es">mano</gloss>
+                     </sense>
+                  </cit>
+               </etym>
                <cit type="etymon">
                   <form>
-                     <orth>tuyutsa</orth>
+                     <orth xml:lang="mix">tuyutsa</orth>
                   </form>
-                  <def xml:lang="en">tree</def>
+                  <gloss xml:lang="en">tree</gloss>
+                  <gloss xml:lang="es">arbol</gloss>
                </cit>
             </etym>
          </entry>
@@ -7622,12 +7839,15 @@
             <form type="lemma">
                <orth xml:lang="mix">tutu</orth>
                <pron xml:lang="mix" notation="ipa">t̪ùt̪ù</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">tu˧˩tu˩˥</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense n="1">
-               <usg type="domain">byproduct-Vegitation-Tree</usg>
+               <usg type="domain">Tree</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">tree brush</orth>
@@ -7640,10 +7860,10 @@
             <form type="lemma"><!-- (?) also 'branch'(?) -->
                <orth xml:lang="mix">yutu</orth>
                <pron xml:lang="mix" notation="ipa">jút̪ù</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Vegitation</usg>
                <usg type="domain">Tree</usg>
@@ -7663,14 +7883,13 @@
             <form type="lemma">
                <orth xml:lang="mix">tiki</orth>
                <pron xml:lang="mix" notation="ipa">t̪íki</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Reproduction</usg>
                <usg type="domain">Vegitation</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">seed</orth>
@@ -7706,10 +7925,10 @@
             <form type="lemma">
                <orth xml:lang="mix">icha</orth>
                <pron xml:lang="mix" notation="ipa">iʧá</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Vegitation</usg>
                <cit type="translation">
@@ -7723,37 +7942,42 @@
             <form type="lemma">
                <orth xml:lang="mix">minu xchila</orth>
                <pron xml:lang="mix" notation="ipa">mìnú ʃílà</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Vegitation</usg>
-               <etym>
-                  <cit type="etymon">
-                     <pron corresp="#mint">mì.nú</pron>
-                     <def xml:lang="en">mint, herb</def>
-                  </cit>
-                  <cit type="etymon">
-                     <pron corresp="#fancy">ʃʧí.là</pron>
-                     <def xml:lang="en">fancy</def>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">mint</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="compounding">
+               <cit type="etymon">
+                  <form>
+                     <orth corresp="#mint">minu</orth>
+                  </form>
+                  <def xml:lang="en">mint, herb</def>
+               </cit>
+               <pc>+</pc>
+               <cit type="etymon">
+                  <form>
+                     <orth corresp="#fancy">xchila</orth>
+                  </form>
+                  <def xml:lang="en">fancy</def>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="plant-medicinalHerb">
             <form type="lemma">
                <orth xml:lang="mix">yuku</orth>
                <pron xml:lang="mix" notation="ipa">jùkù</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Herb</usg>
                <usg type="domain">Medicine</usg>
@@ -7785,10 +8009,10 @@
             <form type="lemma">
                <orth xml:lang="mix">yavi</orth>
                <pron xml:lang="mix" notation="ipa">jávì</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
                <cit type="translation">
@@ -7801,10 +8025,10 @@
          <entry xml:id="cactus-nopal-i">
             <form type="lemma">
                <orth xml:lang="mix">tumi'ncha</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
                <cit type="translation">
@@ -7817,10 +8041,10 @@
          <entry xml:id="cactus-nopal-ii"><!-- L105 -->
             <form type="variant">
                <orth>mi'ncha</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
                <cit type="translation">
@@ -7838,10 +8062,10 @@
          <entry xml:id="cactus-tutichi">
             <form type="lemma">
                <orth xml:lang="mix">tuxichi</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
             </sense>
@@ -7849,10 +8073,10 @@
          <entry xml:id="cactus-ntoo">
             <form type="lemma">
                <orth xml:lang="mix">ntoo</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
             </sense>
@@ -7860,10 +8084,10 @@
          <entry xml:id="cactus-tumi-ncha">
             <form type="lemma">
                <orth xml:lang="mix">tumi'ncha</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Vegitation-Cacti</usg>
             </sense>
@@ -7871,10 +8095,10 @@
          <entry xml:id="iñu-cha-a">
             <form type="lemma">
                <orth xml:lang="mix">iñu cha'a</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
             </sense>
@@ -7882,12 +8106,17 @@
          <entry xml:id="cactus-chiki">
             <form type="lemma">
                <orth xml:lang="mix">chiki</orth>
-               <gramGrp>
-                  <pos>categoricalNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>categoricalNoun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Cacti</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">cactus</orth>
+                  </form>
+               </cit>
             </sense>
          </entry>
          <!-- End Cactus -->
@@ -7896,10 +8125,10 @@
             <form type="lemma">
                <orth xml:lang="mix">kui'i</orth>
                <pron xml:lang="mix" notation="ipa">kʷìʔí</pron>
-               <gramGrp>
-                  <pos>categoricalNoun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>categoricalNoun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Plant</usg>
                <usg type="domain">Food</usg>
@@ -7918,10 +8147,10 @@
                <form type="variant">
                   <pron notation="ipa">nʧèʔé</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Peach" xml:id="fruit-peach-sense">
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -7949,10 +8178,10 @@
             <form type="lemma">
                <orth xml:lang="mix">nchika</orth>
                <pron xml:lang="mix" notation="ipa">nʤiká</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -7977,10 +8206,10 @@
          <entry xml:id="fruit-blackberry">
             <form type="lemma">
                <orth xml:lang="mix">ntoko</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -8000,10 +8229,10 @@
          <entry xml:id="fruit-tintixi">
             <form type="lemma">
                <orth xml:lang="mix">tintixi</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -8019,10 +8248,10 @@
          <entry xml:id="fruit-pineapple">
             <form type="lemma">
                <orth xml:lang="mix">vitsi</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -8042,10 +8271,10 @@
          <entry xml:id="fruit-orange">
             <form type="lemma">
                <orth xml:lang="mix">tikuaa</orth>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -8069,10 +8298,10 @@
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">t̬̪i˩˥ʧi</pron>
                </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://www.ontologyportal.org/SUMO#Avocado">
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -8098,10 +8327,10 @@
             <form type="lemma">
                <orth xml:lang="mix" cert="low">kaka</orth>
                <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ka˧ka˩</pron>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense corresp="http://www.ontologyportal.org/SUMO#Avocado">
                <usg type="domain" corresp="http://dbpedia.org/resource/Food">Food</usg>
                <usg type="domain" corresp="http://dbpedia.org/resource/Botany">Botany</usg>
@@ -8136,11 +8365,10 @@
                <pron xml:lang="mix" notation="ipa">ndùʧí</pron>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">du˧˩ʧi˩˥</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense xml:id="bean"
                    corresp="http://dbpedia.org/resource/Pinto_bean"
                    n="1">
@@ -8406,6 +8634,7 @@
             <form type="lemma"><!-- Cultural Staple -->
                <orth xml:lang="mix">staa</orth>
                <pron xml:lang="mix" notation="ipa">stáá</pron>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">sta˩a˥</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -11292,6 +11521,9 @@
                <orth xml:lang="mix">nchaa</orth>
                <pron xml:lang="mix" notation="ipa">nʤáá</pron>
                <pron xml:lang="mix" notation="ipa">nʧáá</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʤa˥a˥</pron>
+               </form>
             </form>
             <sense>
                <sense xml:id="blue-ADJ">
@@ -11308,6 +11540,11 @@
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">blue</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">azul</orth>
                   </form>
                </cit>
             </sense>
@@ -11486,11 +11723,11 @@
                </sense>
                <etym type="blending">
                   <cit type="etymon">
-                     <pron notation="ipa" corresp="#yellow">kwã̀ã̀</pron>
+                     <form><pron notation="ipa" corresp="#yellow">kwã̀ã̀</pron></form>
                      <def xml:lang="en">yellow</def>
                   </cit>
                   <cit type="etymon">
-                     <pron notation="ipa" corresp="#red">kwáʔà</pron>
+                     <form><pron notation="ipa" corresp="#red">kwáʔà</pron></form>
                      <def xml:lang="en">red</def>
                   </cit>
                </etym>
@@ -11577,6 +11814,9 @@
                <pron xml:lang="mix" notation="ipa">kwìjí</pron>
                <pron xml:lang="mix" notation="ipa">kwìʲí</pron>
                <pron xml:lang="mix" notation="ipa">kwìí</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">kwi˥˩i˥</pron>                  
+               </form>
             </form>
             <sense>
                <sense xml:id="green-ADJ">
@@ -11674,6 +11914,7 @@
             <form type="lemma">
                <orth xml:lang="mix">kuaan</orth>
                <pron xml:lang="mix" notation="ipa">kwã̀ã̀</pron>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">kwã˥ã˩</pron>
             </form>
             <sense>
                <usg type="domain">Color</usg>
@@ -12066,11 +12307,10 @@
                <form type="lemma">
                   <orth xml:lang="mix">chikuii ii</orth>
                   <pron xml:lang="mix" notation="ipa" cert="low">ʧikwíìí</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Religion</usg>
                <usg type="domain">Catholicism</usg>
@@ -12334,20 +12574,48 @@
             </sense>
          </entry>
          <!-- ATTRIBUTE: SIZE-THICKNESS -->
-         <entry xml:id="thick">
+         <entry xml:id="thick1-MIX">
             <form type="lemma">
                <orth xml:lang="mix">kuku</orth>
                <pron xml:lang="mix" notation="ipa">kúkú</pron>
-               <gramGrp>
-                  <pos>adj</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Shape</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">thick</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">grueso</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="thick2-MIX" source="#Pike-Ibach-MIX-1978">
+            <form type="lemma">
+               <orth xml:lang="mix" cert="medium">chee</orth>
+               <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978" cert="medium">dʒe˧e˥</pron>
+               <!-- check for prenasalization, Pike and Ibach tend to ignore this
+               -->
+            </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Shape</usg>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">thick</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">grueso</orth>
                   </form>
                </cit>
             </sense>
@@ -12361,7 +12629,7 @@
                </gramGrp>
             </form>
             <sense>
-               <usg type="domain"/>
+               <usg type="domain">Shape</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en" cert="medium">skinny</orth>
@@ -12557,6 +12825,10 @@
          <entry xml:id="broom">
             <form type="lemma">
                <orth xml:lang="mix">ntaku</orth>
+               <pron xml:lang="mix" notation="ipa" cert="medium">ntákù</pron>
+               <form>
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ta˩˧ku˩</pron>
+               </form>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -12940,11 +13212,10 @@
                </form>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa">βáso</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain"/>
                <xr type="hyponymOf">
@@ -13043,11 +13314,10 @@
                </form>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʧũ˩˥ʔũ˧</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense source="http://dbpedia.org/resource/Money">
                <usg type="domain">Currency</usg>
                <cit type="translation">
@@ -13374,11 +13644,10 @@
                </form>
                <form type="variant">
                   <pron notation="ipa">βìʧì</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Time">Time</usg>
                <cit type="translation">
@@ -13466,11 +13735,10 @@
                <pron xml:lang="mix" notation="ipa">ʃʧàà</pron>
                <form type="variant">
                   <pron notation="ipa">sʧàà</pron>
-               </form>
-               <gramGrp>
-                  <pos>noun</pos>
-               </gramGrp>
-            </form>
+               </form></form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Time">Time</usg>
                <etym/>
@@ -14192,6 +14460,10 @@
                <pos>adj</pos>
             </gramGrp>
             <sense>
+               <xr type="antonymOf">
+                  <ref corresp="#bad-MIX" xml:lang="en">bad</ref>
+                  <ref corresp="#bad-MIX" xml:lang="mix">vá'a</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">good</orth>
@@ -14207,7 +14479,7 @@
          <entry xml:id="bad-MIX">
             <form type="lemma">
                <orth xml:lang="mix">vá'a</orth>
-               <pron notation="ipa" xml:lang="mix">va˩˥ʔa˧</pron>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">va˩˥ʔa˧</pron>
             </form>
             <gramGrp>
                <pos>adj</pos>
@@ -15264,8 +15536,8 @@
                      <orth xml:lang="es">hay</orth>
                   </form>
                </cit>
-               <cit type="example" xml:lang="mix">
-                  <quote>Yee <seg>utsi</seg> uni ñuu nuu Ñu'u chi Ninu.</quote>
+               <cit type="example">
+                  <quote xml:lang="mix">Yee <oRef>utsi</oRef> uni ñuu nuu Ñu'u chi Ninu.</quote>
                   <ptr target="SIL_docs/L145/L145-tok.xml"/>
                </cit>
             </sense>
@@ -15513,15 +15785,18 @@
             <form type="lemma">
                <orth xml:lang="mix">ntava</orth>
                <pron xml:lang="mix" notation="ipa">nt̪ávà</pron>
-               <gramGrp>
-                  <pos>verb</pos>
-                  <gram type="transitivity">intrans</gram>
-                  <!-- motion verb? -->
-               </gramGrp>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ta˩va˧</pron>
+               </form>
             </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">intrans</gram>
+            </gramGrp>
             <sense>
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Animal_flight">Animal_flight</usg>
+               <usg type="domain">Motion</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">to fly</orth>
@@ -15538,14 +15813,29 @@
             <form type="lemma">
                <orth xml:lang="mix">ncho'a</orth>
                <pron xml:lang="mix" notation="ipa">nʤóʔà</pron>
-               <gramGrp>
-                  <gram>adv-deg</gram>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <gram>adv</gram>
+            </gramGrp>
             <sense>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">very, a lot</orth>
+                     <orth xml:lang="en">very</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">a lot</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">mucho</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">muy</orth>
                   </form>
                </cit>
             </sense>
@@ -17213,10 +17503,10 @@ he is crying - nstakui
                   </cit>
             </sense>
          </entry>
-         <entry>
+         <entry xml:id="name2-MIX">
             <form type="lemma">
                <orth xml:lang="mix">sivi</orth>
-               <pron notation="ipa" xml:lang="mix"/>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">si˥vi˩˥</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -17225,7 +17515,7 @@ he is crying - nstakui
                <xr type="synonymOf">
                   <ref xml:lang="mix" corresp="#name-MIX">nani</ref>
                </xr>
-               <usg type="domain"></usg>
+               <usg type="domain">Nomenclature</usg>
                <cit type="example">
                   <quote xml:lang="mix">sivi kuu...</quote>
                   <cit type="translation">
@@ -17335,15 +17625,23 @@ he is crying - nstakui
          <entry xml:id="difficult-MIX">
             <form type="lemma">
                <orth xml:lang="mix">nchichi</orth>
-               <pron xml:lang="mix" notation="ipa">nʤiʧì</pron>
-               <gramGrp>
-                  <pos>adj</pos>
-               </gramGrp>
+               <pron xml:lang="mix" notation="ipa" cert="medium">nʤiʧì</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">nʤi˥ʧi˩</pron>                  
+               </form>
             </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
             <sense>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">difficult</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">dificíl</orth>
                   </form>
                </cit>
             </sense>
@@ -19613,6 +19911,160 @@ he is crying - nstakui
                </cit>
             </sense>
          </entry>
+         <entry xml:id="pretty-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix" cert="medium">vii</orth>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">vi˧˥i˥˩</pron>
+            </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Aesthetics</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"/>
+                  <cit type="translation">
+                     <quote xml:lang="en"/>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"/>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">pretty</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">beautifull</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">bonito</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">linda</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">bello</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="iin-EXIST-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">iin</orth>
+               <pron xml:lang="mix" notation="ipa">ĩ́ĩ</pron>
+               <form type="variant">
+                  <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">ʔĩ˥ĩ˧</pron>
+               </form>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram>CopulaExistential</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain"/>
+               <xr type="synonymOf">
+                  <ref xml:lang="mix" corresp="#COP-EXIST">yee</ref>
+               </xr>
+               <cit type="example">
+                  <quote xml:lang="mix"/>
+                  <cit type="translation">
+                     <quote xml:lang="en"/>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"/>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">there is</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">hay</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="corral">
+            <form type="lemma">
+               <orth xml:lang="mix">tsaku</orth>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">tsa˥˩ku˩</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Livestock</usg>
+               <usg type="domain">Agriculture</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"/>
+                  <cit type="translation">
+                     <quote xml:lang="en"/>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"/>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">pen</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">corral</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">corral</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="carry-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix" cert="medium">naa</orth>
+               <pron notation="ipa" xml:lang="mix" source="#Pike-Ibach-MIX-1978">na˧˩a˥</pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">trans</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain"/>
+               <cit type="example">
+                  <quote xml:lang="mix"/>
+                  <cit type="translation">
+                     <quote xml:lang="en"/>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"/>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">carry (in arms)</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">cargar</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+
          <!-- nchi kuu ra - who is this? (form) -->
          <!-- ana nikitsaa? - who arrived? -->
          <!-- nixi nania? - what's his/her name? -->
@@ -19620,7 +20072,6 @@ he is crying - nstakui
          <!-- ana tsi'i soko? - who's hungry? -->
          <!-- kuun - to fall (1)-->
          <!-- ntachí - fall (2) -->
-         <!-- tuyutsa - (es) ocote, (la) pinus montezumae -->
          <!-- kuun ntitsi - diarhea -->
       </body>
    </text>
