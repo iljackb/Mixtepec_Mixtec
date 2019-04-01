@@ -7,7 +7,7 @@
     <xsl:variable name="orth1" select="//form[@type='lemma']/orth[1]"/>
     
     <xsl:template match="/">
-             <xsl:text>Orth;Pron(1);Pron(2);Pron(3)..;Eng(sense1);Span(sense1);Def(sense1);Span(sense1);Def(sense1);</xsl:text>
+             <xsl:text>Orth; Pron(1);Pron(Pike and Ibach); Pron(2);Pron(3)..;Eng(sense1);Span(sense1);Def(sense1);Span(sense1);Def(sense1);</xsl:text>
         <xsl:value-of select="$newline" />
         
         <xsl:for-each select="//entry | //re">
@@ -16,7 +16,9 @@
             -->
             <xsl:value-of select="form[@type='lemma']/orth[1]" />
             <xsl:value-of select="$separator"/>
-            <xsl:value-of select="form[@type='lemma']/pron[1]" />
+            <xsl:value-of select="form[@type='lemma']/pron[not(@source)][1]" />
+            <xsl:value-of select="$separator" />
+            <xsl:value-of select="form[@type='lemma']/pron[@source='#Pike-Ibach-MIX-1978'][1]" />
             <xsl:value-of select="$separator" />
             <xsl:value-of select="form[@type='lemma' or @type='variant']/pron[2]"/>
             <xsl:value-of select="$separator" />
@@ -28,9 +30,8 @@
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'][1]"/>
             <!-- add "if" to add more than one translation in same language -->
             <xsl:value-of select="$separator" />
-            <xsl:if test="sense[1]/def[@xml:lang='en']">
-                <xsl:value-of select="sense[1]/def[@xml:lang='en']"/>
-            </xsl:if>
+           <xsl:value-of select="sense[1]/def[@xml:lang='en']"/>
+            
             <xsl:value-of select="$separator" />
             <xsl:value-of select="sense[2]/cit[@type='translation']/form/orth[@xml:lang='en'][1]"/>
             <xsl:value-of select="$separator" />
@@ -38,9 +39,8 @@
             <xsl:value-of select="sense[2]/cit[@type='translation']/form/orth[@xml:lang='es'][1]"/>
             <!-- add "if" to add more than one translation in same language -->
             <xsl:value-of select="$separator" />
-            <xsl:if test="sense[2]/def[@xml:lang='en']">
-                <xsl:value-of select="sense[2]/def[@xml:lang='en']"/>
-            </xsl:if>
+            <xsl:value-of select="sense[2]/def[@xml:lang='en']"/>
+            
             <xsl:value-of select="$separator" />
          <!--              <xsl:text>&#xD;</xsl:text> <xsl:value-of select="$newline" />
             <xsl:value-of select="$separator" />
