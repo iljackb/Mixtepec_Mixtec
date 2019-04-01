@@ -3597,12 +3597,10 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="language">
+         <entry xml:id="language-MIX">
             <form type="lemma">
-               <form type="reference">
-                  <orth>sa'an</orth>
-                  <pron notation="ipa">sã́ʔã̀</pron>
-               </form>
+               <orth xml:lang="mix">sa'an</orth>
+               <pron xml:lang="mix" notation="ipa">sã́ʔã̀</pron>  
                <form type="variant">
                   <orth type="variant">saan</orth>
                   <!-- include pointer to alternate spellings: title of: 'L331'"./#L331-00-01" -->
@@ -4851,7 +4849,6 @@
             <sense corresp="http://dbpedia.org/resource/Western_Scrub_Jay">
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Bird_genera"
                   >Bird_genera</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">scrub jay</orth>
@@ -4938,6 +4935,10 @@
                   <ref corresp="#bird" xml:lang="mix">saa</ref>
                   <ref type="sense" corresp="http://dbpedia.org/resource/Bird"/>
                </xr>
+               <cit type="example" corresp="/SIL_docs/L152/L152-tok.xml#L152-01-01">
+                  <quote xml:lang="mix">In kii ra in <oRef>lakuku</oRef> kunia tanta'i tsi in ncho'o,
+                     cha koo xu'in sa'i viko.</quote>
+               </cit>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">mourning dove</orth>
@@ -4949,10 +4950,6 @@
                   </form>
                </cit>
             </sense>
-            <cit type="example" corresp="/SIL_docs/L152/L152-tok.xml#L152-01-01">
-               <quote xml:lang="mix">In kii ra in <oRef>lakuku</oRef> kunia tanta'i tsi in ncho'o,
-                  cha koo xu'in sa'i viko.</quote>
-            </cit>
             <!-- could also include references to images (where available) -->
          </entry>
          <entry xml:id="bird-hawk">
@@ -5985,10 +5982,10 @@
             <form type="lemma">
                <orth xml:lang="mix">viko</orth>
                <form type="variant">
-                  <pron notation="ipa">βíkò</pron>
+                  <pron notation="ipa" xml:lang="mix">βíkò</pron>
                </form>
                <form type="variant">
-                  <pron notation="ipa">víkò</pron>
+                  <pron notation="ipa" xml:lang="mix">víkò</pron>
                </form></form>
             <gramGrp>
                <pos>noun</pos>
@@ -6004,29 +6001,16 @@
             </sense>
          </entry>
          <entry xml:id="storm-cloud">
-            <form type="lemma">
                <form type="lemma">
                   <orth xml:lang="mix">yoko xee</orth>
-                  <gramGrp>
-                     <pos>noun</pos>
-                  </gramGrp>
                </form>
-            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Weather"
-                  >Weather</usg>
-               <cit type="etymon">
-                  <form>
-                     <orth xml:lang="mix"/>
-                  </form>
-                  <def/>
-               </cit>
-               <cit type="etymon">
-                  <form>
-                     <orth xml:lang="mix">xee</orth>
-                  </form>
-                  <def xml:lang="en">dangerous</def>
-               </cit>
+                  >Weather</usg>     
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">storm cloud</orth>
@@ -6038,17 +6022,12 @@
             <form type="lemma">
                <orth xml:lang="mix">vikonu</orth>
                <form type="variant">
-                  <pron notation="ipa">
-                     <seg>βikó</seg>
-                     <seg>nũ̀ũ̀</seg>
-                  </pron>
+                  <pron notation="ipa">βikó nũ̀ṹ</pron>
                </form>
                <form type="variant">
-                  <pron notation="ipa">
-                     <seg>vikó</seg>
-                     <seg>nũ̀ũ̀</seg>
-                  </pron>
-               </form></form>
+                  <pron notation="ipa">vikó nũ̀ṹ</pron>
+               </form>
+            </form>
             <gramGrp>
                <pos>noun</pos>
             </gramGrp>
@@ -6060,20 +6039,24 @@
                      <orth xml:lang="en">fog</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">niebla</orth>
+                  </form>
+               </cit>
             </sense>
             <etym type="compounding">
-               <cit type="etymon">
-                  <pron corresp="#cloud">βi.kó</pron>
+               <cit type="etymon" corresp="#cloud">
                   <form>
-                     <orth xml:lang="mix" corresp="#cloud">viko</orth>
+                     <orth xml:lang="mix">viko</orth>
                   </form>
                   <def xml:lang="en">cloud</def>
                </cit>
+               <pc>+</pc>
                <etym type="metonymy">
-                  <cit type="etymon">
-                     <pron corresp="#body-face">nũ̀ũ</pron>
+                  <cit type="etymon" corresp="#body-face">
                      <form>
-                        <orth xml:lang="mix" corresp="#body-face">nu</orth>
+                        <orth xml:lang="mix">nu</orth>
                      </form>
                      <def xml:lang="en">face</def>
                   </cit>
@@ -6542,16 +6525,14 @@
             </sense>
          </entry>
          <entry xml:id="hemosphere-eastern">
-            <form type="lemma">
                <form type="lemma">
                   <orth xml:lang="mix">hemosferio kua'a</orth>
                   <pron xml:lang="mix" notation="ipa">hemosférìo kwáʔà</pron>
                </form>
                <gramGrp>
                   <pos>placeNoun</pos>
-                  <!-- DECIDE ON LABEL -->
                </gramGrp>
-            </form>
+            
             <sense corresp="http://dbpedia.org/resource/Eastern_hemisphere">
                <usg type="domain" corresp="http://dbpedia.org/resource/Hemispheres_of_the_Earth"
                   >Earth</usg>
@@ -6658,12 +6639,11 @@
             </sense>
          </entry>
          <entry xml:id="pole-South">
-            <form type="lemma">
                <form type="lemma">
                   <orth xml:lang="mix">Polo chi Ninu</orth>
                   <pron xml:lang="mix" notation="ipa">pólo ʧí nìnũ̀ũ̀</pron>
                </form>
-            </form>
+            
             <sense corresp="http://dbpedia.org/resource/South_pole">
                <usg type="domain"
                   corresp="http://dbpedia.org/resource/Category:Polar_regions_of_the_Earth"
@@ -6699,19 +6679,18 @@
          </entry>
          <!-- Earth-Cardinal Directions -->
          <entry xml:id="cardinal-directions-MIX">
-            <form type="lemma">
                <form type="lemma"><!-- categoricalNoun -->
                   <orth xml:lang="mix">ntikumi tsio</orth>
                   <orth xml:lang="mix" type="segmented">ntikumitsio</orth>
                   <pron xml:lang="mix" notation="ipa">nd̪ikumítsió</pron>
                   <!-- CHECK TONES -->
-                  <gramGrp>
-                     <pos>categoricalNoun</pos>
-                  </gramGrp>
                </form>
-            </form>
+            <gramGrp>
+               <pos>categoricalNoun</pos>
+            </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Cardinal_Directions">
-               <usg type="domain">Cardinal Direction</usg>
+               <usg type="domain">Geography</usg>
+               <usg type="domain">Space</usg>
                <etym>
                   <cit type="etymon">
                      <form>
@@ -6797,7 +6776,6 @@
             </sense>
          </entry>
          <entry xml:id="cardinal-directions-East">
-            <form type="lemma">
                <form type="lemma">
                   <orth xml:lang="mix">Chi Kua'a</orth>
                   <pron xml:lang="mix" notation="ipa">ʧíkwáʔà</pron>
@@ -6805,7 +6783,6 @@
                      <pos><!-- noun, adjective, adverb --></pos>
                   </gramGrp>
                </form>
-            </form>
             <sense corresp="http://dbpedia.org/resource/East">
                <usg type="domain" corresp="http://dbpedia.org/resource/Cardinal_Directions"
                   >Cardinal_Directions</usg>
@@ -6822,15 +6799,14 @@
             </sense>
          </entry>
          <entry xml:id="cardinal-directions-West">
-            <form type="lemma">
                <form type="lemma">
                   <orth xml:lang="mix">Chi Sachi</orth>
-                  <pron xml:lang="mix" notation="ipa">ʧísáʧì</pron>
-                  <gramGrp>
-                     <pos><!-- noun, adjective, adverb --></pos>
-                  </gramGrp>
+                  <pron xml:lang="mix" notation="ipa">ʧí sáʧì</pron>
                </form>
-            </form>
+            <gramGrp>
+               <pos><!-- noun, adjective, adverb --></pos>
+            </gramGrp>
+            
             <sense corresp="http://dbpedia.org/resource/West">
                <usg type="domain" corresp="http://dbpedia.org/resource/Cardinal_Directions"
                   >Cardinal_Directions</usg>
@@ -7173,13 +7149,12 @@
          </entry>
          <entry xml:id="MixtecaRegion-MIX" type="compound">
             <form type="lemma">
-               <form type="lemma">
                   <orth xml:lang="mix">Ñuu Savi</orth>
-               </form>
+              </form>
                <gramGrp>
                   <pos>placeNoun</pos>
                </gramGrp>
-            </form>
+       
             <sense corresp="http://dbpedia.org/resource/Mixteca_Region,_Oaxaca">
                <usg type="domain">Mexico</usg>
                <usg type="domain">Geography</usg>
@@ -7309,9 +7284,9 @@
                </cit>
             </sense>
          </entry>
-         <entry xml:id="Mixtepec-ii" type="compound">
+         <entry xml:id="Mixtepec-ii" type="compound" cert="medium">
             <!-- where did I get this!? -->
-            <form type="variant">
+            <form type="lemma">
                <orth xml:lang="mix">Nuu Viko</orth>
                <pron notation="ipa" xml:lang="mix">nũ̀ũ̀ víkò</pron>
             </form>
@@ -8608,9 +8583,8 @@
             </sense>
          </entry>
          <entry xml:id="cactus-nopal-ii">
-            <!-- L105 -->
-            <form type="variant">
-               <orth>mi'ncha</orth>
+            <form type="lemma">
+               <orth xml:lang="mix">mi'ncha</orth>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -13044,11 +13018,10 @@
             </etym>
          </entry>
          <entry xml:id="holy-water">
-            <form type="lemma">
                <form type="lemma">
                   <orth xml:lang="mix">chikuii ii</orth>
                   <pron xml:lang="mix" notation="ipa" cert="low">ʧikwíìí</pron>
-               </form></form>
+               </form>
             <gramGrp>
                <pos>noun</pos>
             </gramGrp>
@@ -13443,13 +13416,12 @@
          <entry xml:id="narrow">
             <form type="lemma">
                <orth xml:lang="mix"/>
-               <gramGrp>
-                  <pos>adj</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
             <sense>
                <usg type="domain">Shape</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">narrow</orth>
@@ -13461,13 +13433,13 @@
             <form type="lemma">
                <orth xml:lang="mix">ntika</orth>
                <pron xml:lang="mix" notation="ipa">ndíkà</pron>
-               <gramGrp>
-                  <pos>adj</pos>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
             <sense>
-               <usg type="domain">attributeOf-Shape-Wide</usg>
-               <etym/>
+               <usg type="domain">Shape</usg>
+
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">wide</orth>
