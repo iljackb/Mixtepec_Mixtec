@@ -7,7 +7,8 @@
     <xsl:variable name="orth1" select="//form[@type='lemma']/orth[1]"/>
     
     <xsl:template match="/">
-             <xsl:text>Orth; Pron(1); Pron(Pike and Ibach); Pron(2); Pron(3); EN(sense1.i); EN(sense1.ii);EN(sense1.iii); ES (sense1.i);ES(sense1.ii); ES(sense1.iii); Def(sense1); Example (sense 1); Example (EN); Example (ES); EN(sense2.i); EN(sense2.ii);EN(sense2.iii); ES (sense2.i); ES(sense2.ii); ES(sense2.iii); Def(sense2); Example (sense 2); Example (sense 2) (EN); Example (sense 2) (ES);</xsl:text>
+             <xsl:text>
+                 Orth; Pron(1); Pron(Pike and Ibach); Pron(2); Pron(3); EN(sense1.i); EN(sense1.ii);EN(sense1.iii); ES (sense1.i);ES(sense1.ii); ES(sense1.iii); Def(sense1); Example (sense 1); Example (EN); Example (ES); EN(sense2.i); EN(sense2.ii);EN(sense2.iii); ES (sense2.i); ES(sense2.ii); ES(sense2.iii); Def(sense2); Example (sense 2); Example (sense 2) (EN); Example (sense 2) (ES);</xsl:text>
         <xsl:value-of select="$newline" />
         
         <xsl:for-each select="//entry | //re">
@@ -30,15 +31,11 @@
             <xsl:value-of select="$separator" />
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'][3]"/>
             <xsl:value-of select="$separator" />
-            <!-- add "if" to add more than one translation in same language -->
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'][1]"/>
-            <!-- add "if" to add more than one translation in same language -->
             <xsl:value-of select="$separator" />
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'][2]"/>
-            <!-- add "if" to add more than one translation in same language -->
             <xsl:value-of select="$separator" />
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'][3]"/>
-            <!-- add "if" to add more than one translation in same language -->
             <xsl:value-of select="$separator" />
            <xsl:value-of select="sense[1]/def[@xml:lang='en']"/>
             <xsl:value-of select="sense[1]/cit[@type='example']/quote[@xml:lang='mix'][1]"/>
