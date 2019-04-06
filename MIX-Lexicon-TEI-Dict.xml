@@ -6376,7 +6376,7 @@
          </entry>
          <entry xml:id="salt-MIX">
             <form type="lemma">
-               <orth xml:lang="mix">ii</orth>
+               <orth xml:lang="mix">iín</orth>
                <pron xml:lang="mix" notation="ipa">ĩ̀ĩ̀</pron>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ʔĩ˩ĩ˥</pron>
@@ -18278,8 +18278,7 @@
                   </form>
                </cit>
                <etym cert="medium">
-                  <seg type="desc" part="I">Potentially a derivation between some unknown
-                     etymon:</seg>
+                  <seg type="desc" part="I">Potentially a derivation between some unknown etymon:</seg>
                   <cit type="etymon">
                      <form>
                         <orth>ki</orth>
@@ -18507,6 +18506,11 @@
                      <orth xml:lang="en">to smell</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">olear</orth>
+                  </form>
+               </cit>
             </sense>
          </entry>
          <!-- 
@@ -18528,26 +18532,46 @@
          </entry>
         
          -->
-         <!-- find uri 'taste'-->
-         <!-- 
-         <entry xml:id="V-hear-MIX">
+         <entry xml:id="hear-MIX">
             <form type="lemma">
-               <orth></orth>
-               <pron notation="ipa"></pron>
-               <gramGrp>
-                  <pos>verb</pos>
-                  
-               </gramGrp>
+               <orth xml:lang="mix" cert="medium">ntsini so'o</orth><!-- check to see if prenasal there in present -->
+               <pron notation="ipa" xml:lang="mix"></pron>
             </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">ambitrans</gram>
+            </gramGrp>
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/resource/Category:Senses">Senses</usg>
+               <cit type="example">
+                  <quote xml:lang="mix">Sara in chaa ntuku tutú ntsini so’o ra ña nta’ia ta ntsa’an ra ntsanche’e re nuu ñantu’i.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">Then a man looking for wood heard the crying and came up to and saw where the boy was sitting down.</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es" cert="medium">Y un hombre buscando madera oyó los gritos y vinó y vió dónde el niño se estaba sentado.</quote>
+                  </cit>
+                  <ptr target="/SIL_docs/L146/L146-tok.xml"/>
+               </cit>
                <cit type="translation">
-                  <quote>to taste</quote>
+                  <form>
+                     <orth xml:lang="en">to hear</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">oír</orth>
+                  </form>
                </cit>
             </sense>
+            <etym>
+               <!--  
+               (n)tsini + so'o = ear
+               
+               -->
+            </etym>
          </entry>
-        
-         -->
+         
          <!-- find uri 'hear' (auditory)-->
          <!-- Involuntary - Bodily Sensations, Reflexes-->
          <entry xml:id="hunger-MIX">
@@ -18558,25 +18582,24 @@
                <pos>noun</pos>
             </gramGrp>
             <sense><!-- biological necessity? -->
+               <usg type="domain"></usg>
+               <cit type="example">
+                  <quote xml:lang="mix">Tsi'i yu soko.</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">I'm hungry.</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Tengo hambre.</quote>
+                  </cit>
+               </cit>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">hunger</orth>
                   </form>
                </cit>
-            </sense>
-         </entry>
-         <entry xml:id="VP-be-hungry-MIX" type="phrase">
-            <form type="lemma">
-               <orth xml:lang="mix">tsi'i yu soko</orth>
-            </form>
-            <gramGrp>
-               <per>1</per>
-               <number>sg</number>
-            </gramGrp>
-            <sense>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">I'm hungry</orth>
+                     <orth xml:lang="es">hambre</orth>
                   </form>
                </cit>
             </sense>
@@ -18601,11 +18624,22 @@
                <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense><!-- get uri -->
+               <usg type="domain">Health</usg>
                <usg/>
                <!-- get uri -->
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">feel sick, be sick</orth>
+                     <orth xml:lang="en">feel sick</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">be sick</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">estar enfermo</orth>
                   </form>
                </cit>
             </sense>
@@ -18667,198 +18701,72 @@ Activity
             <form type="lemma">
                <orth xml:lang="mix">kwacha</orth>
                <pron xml:lang="mix" notation="ipa">kwáʧá</pron>
-               <form type="paradigm"><!-- separates; (tens: present, aspect:realis) as conjugations; gramGrp applies to all nested inflected forms (form type="inflected") -->
-                  <gramGrp>
-                     <tns>pres</tns>
-                     <gram type="aspect" cert="medium">realis</gram>
-                  </gramGrp>
-                  <!-- PRES: 1 SG -->
-                  <form type="inflected">
-                     <orth>kuacha yu</orth>
-                     <orth type="segmented">
-                        <seg>kuacha</seg>
-                        <seg>yu</seg>
-                     </orth>
-                     <pron notation="ipa">kwátʃáà</pron>
-                     <pron notation="ipa" cert="low">
-                        <seg>kwátʃá<seg ana="#TONE">à</seg>
-                        </seg>
-                     </pron>
-                     <gramGrp>
-                        <per>1</per>
-                        <number>sg</number>
-                        <!-- feel'(1s,[happy']) -->
-                     </gramGrp>
-                  </form>
-                  <!-- PRES: 1 SG INF -->
-                  <form type="inflected">
-                     <orth>
-                        <seg>kwach</seg>
-                        <seg>u</seg>
-                     </orth>
-                     <pron notation="ipa" cert="low">
-                        <seg>kwách</seg>
-                        <seg>u</seg>
-                     </pron>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>sg</number>
-                        <usg type="register">inf</usg>
-                        <!-- feel'(2s.inf,[happy']) -->
-                     </gramGrp>
-                  </form>
-                  <!-- PRES: 1 SG FORM -->
-                  <form type="inflected">
-                     <orth>
-                        <seg>kwach</seg>
-                        <seg>u</seg>
-                     </orth>
-                     <pron notation="ipa" cert="low">
-                        <seg>kwách</seg>
-                        <seg cert="medium">ní</seg>
-                     </pron>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>sg</number>
-                        <usg type="register">form</usg>
-                        <!-- feel'(2s.form,[happy']) -->
-                     </gramGrp>
-                  </form>
-               </form>
-               <!-- PAST TENSE INFLECTIONS -->
-               <form type="paradigm">
-                  <gramGrp>
-                     <tns>past</tns>
-                     <gram type="aspect" cert="medium">completive</gram>
-                  </gramGrp>
-                  <!--COMPL: 1 SG -->
-                  <form type="inflected">
-                     <orth>
-                        <seg>ni</seg>
-                        <seg>kwacha</seg>
-                        <seg>yu</seg>
-                     </orth>
-                     <pron notation="ipa" cert="low">
-                        <seg>nì</seg>
-                        <seg>kwáchá<seg ana="#TONE">à</seg>
-                        </seg>
-                     </pron>
-                     <gramGrp>
-                        <per>1</per>
-                        <number>sg</number>
-                        <!-- PAST [feel'(1s,[happy'])]  -->
-                     </gramGrp>
-                  </form>
-                  <!-- COMPL: 1 PL -->
-                  <form type="inflected">
-                     <orth>
-                        <seg>ni</seg>
-                        <seg>kwacha</seg>
-                        <seg>kue</seg>
-                        <seg>ko</seg>
-                     </orth>
-                     <pron notation="ipa" cert="low">
-                        <seg>nì</seg>
-                        <seg>kwáchá</seg>
-                        <seg>kue</seg>
-                        <seg>ko</seg>
-                     </pron>
-                     <gramGrp>
-                        <per>1</per>
-                        <number>pl</number>
-                        <gram>(incl/excl)</gram>
-                        <!-- PAST [feel'(1p (all/some),[happy'])] (COMPLETE)? -->
-                     </gramGrp>
-                  </form>
-                  <!-- COMPL: 2 PL INF -->
-                  <form type="inflected">
-                     <orth>
-                        <seg>ni</seg>
-                        <seg>kwacha</seg>
-                        <seg>kue</seg>
-                        <seg>yu</seg>
-                     </orth>
-                     <pron notation="ipa">
-                        <seg>nì</seg>
-                        <seg cert="low">kwacha</seg>
-                        <seg>kwe</seg>
-                        <seg cert="low">ju</seg>
-                     </pron>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>pl</number>
-                        <usg type="register">inf</usg>
-                        <!-- PAST [feel'(1pl.inf,[happy'])] (COMPLETE)? -->
-                     </gramGrp>
-                  </form>
-                  <!-- COMPL: 2 PL FORM -->
-                  <form type="inflected">
-                     <orth>
-                        <seg>ni</seg>
-                        <seg>kwacha</seg>
-                        <seg>kue</seg>
-                        <seg>ni</seg>
-                     </orth>
-                     <pron notation="ipa">
-                        <seg>nì</seg>
-                        <seg cert="low">kwacha</seg>
-                        <seg>kwe</seg>
-                        <seg>ní</seg>
-                     </pron>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>pl</number>
-                        <usg type="register">form</usg>
-                        <!-- PAST [feel'(2pl,form,[happy'])] (COMPLETE)? -->
-                     </gramGrp>
-                  </form>
-               </form>
+               <gramGrp>
+                  <pos>verb</pos>
+                  <gram type="transitivity">intrans</gram>
+               </gramGrp>
             </form>
             <!-- fill in <sense> for lemma! -->
-            <sense/>
+            <sense>
+               <usg type="domain">Emotion</usg>
+               <!-- feel'(x,[happy']) -->
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to be happy</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">ser feliz</orth>
+                  </form>
+               </cit>
+            </sense>
          </entry>
          <entry xml:id="be-sad-worry-MIX" type="phrase">
             <form type="lemma">
                <orth xml:lang="mix">ntakani'ini ncho'a</orth>
                <pron xml:lang="mix" notation="ipa">ndakani inì nʤóʔà</pron>
                <form type="variant">
-                  <pron notation="ipa">
-                     <seg>ndakaninì</seg>
-                     <seg>nʤóʔà</seg>
-                  </pron>
-               </form>
-               <form type="inflected">
-                  <orth>
-                     <seg>ntakani'ini</seg>
-                     <seg>ncho'a</seg>
-                     <seg>yu</seg>
-                  </orth>
-                  <pron notation="ipa">
-                     <seg>ndakaniinì</seg>
-                     <seg>nʤ<seg>ò</seg>ʔà</seg>
-                  </pron>
-                  <form type="variant">
-                     <pron notation="ipa">
-                        <seg>ndakaninì</seg>
-                        <seg>nʤ<seg>ò</seg>ʔà</seg>
-                     </pron>
-                  </form>
-                  <gramGrp>
-                     <per>1</per>
-                     <number>sg</number>
-                  </gramGrp>
+                  <pron notation="ipa">ndakaninì nʤóʔà</pron>
+                  <usg type="socioCultural">youth</usg>
                </form>
                <!-- more forms here -->
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <!-- feel'(x,[happy']) -->
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
-            <sense>
+            
+            <sense n="1">
                <usg type="domain">Emotion</usg>
+               <!-- feel'(x,[sad']) -->
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">to be happy</orth>
+                     <orth xml:lang="en">to be sad</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">ser triste</orth>
+                  </form>
+               </cit>
+            </sense>       
+            <sense n="2">
+               <usg type="domain">Emotion</usg>
+               <!-- feel'(x,[worried']) -->
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to worry</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to be worried</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">preocuparse</orth>
                   </form>
                </cit>
             </sense>
@@ -19107,7 +19015,6 @@ he is crying - nstakui
                   <form>
                      <orth xml:lang="mix">nta</orth>
                   </form>
-                  <pron/>
                   <gramGrp>
                      <pos>prefix</pos>
                      <gram type="aspect">repetitive</gram>
@@ -19244,7 +19151,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>ditrans</gram>
+               <gram type="transitivity">ditrans</gram>
             </gramGrp>
             <sense>
                <cit type="translation">
@@ -19261,7 +19168,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>ditrans</gram>
+               <gram type="transitivity">ditrans</gram>
                <colloc type="thematicRelation"/>
                <!-- S actor/agent -->
                <!-- O undergoer/patient -->
@@ -19282,7 +19189,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>ditrans</gram>
+               <gram type="transitivity">ditrans</gram>
             </gramGrp>
             <sense>
                <cit type="translation">
@@ -19659,7 +19566,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>ditrans</gram>
+               <gram type="transitivity">ditrans</gram>
                <!-- must collocate (grammatically) with an indirect and direct object -->
                <!--  <valence type="semantic">3</valence> -->
             </gramGrp>
@@ -19692,7 +19599,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>ditrans</gram>
+               <gram type="transitivity">ditrans</gram>
             </gramGrp>
             <sense>
                <cit type="translation">
@@ -19708,7 +19615,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>atrans</gram>
+               <gram type="transitivity">atrans</gram>
             </gramGrp>
             <sense><!-- decide on <usg type="domain"> -->
                <cit type="translation">
@@ -19769,6 +19676,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
+               <gram type="transitivity">trans</gram>
             </gramGrp>
             <sense>
                <xr type="synonymOf" cert="medium">
@@ -19804,7 +19712,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>intrns</gram>
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense>
                <usg>manner_of_speech</usg>
@@ -19828,7 +19736,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>intrns</gram>
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense>
                <usg type="domain">Communication</usg>
@@ -19846,7 +19754,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>intrns</gram>
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense><!-- usg? -->
                <usg type="domain">Communication</usg>
@@ -19877,7 +19785,7 @@ he is crying - nstakui
             </form>
             <gramGrp>
                <pos>verb</pos>
-               <gram>intrns</gram>
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense>
                <usg type="domain">Communication</usg>
@@ -20165,6 +20073,11 @@ he is crying - nstakui
                      <orth xml:lang="en">poor</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">pobre</orth>
+                  </form>
+               </cit>
             </sense>
          </entry>
          <entry xml:id="foreign-fancy-rich-MIX">
@@ -20182,12 +20095,22 @@ he is crying - nstakui
                      <orth xml:lang="en">rich</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">rico</orth>
+                  </form>
+               </cit>
             </sense>
             <sense>
                <usg type="domain">Nationality</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">foreign</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">extranjero</orth>
                   </form>
                </cit>
             </sense>
@@ -20209,6 +20132,7 @@ he is crying - nstakui
                <pos>adj</pos>
             </gramGrp>
             <sense>
+               <usg type="domain">Religion</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">sacred</orth>
@@ -20230,6 +20154,7 @@ he is crying - nstakui
                <pos>adj</pos>
             </gramGrp>
             <sense n="1">
+               <usg type="domain">Health</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">dangerous</orth>
@@ -20259,10 +20184,10 @@ he is crying - nstakui
             <form type="lemma">
                <orth xml:lang="mix">mancha</orth>
             </form>
+            <gramGrp>
+               <pos>adv</pos>
+            </gramGrp>
             <sense n="1">
-               <gramGrp>
-                  <pos>adv</pos>
-               </gramGrp>
                <usg type="domain" corresp="http://dbpedia.org/resource/Time">Time</usg>
                <cit type="translation">
                   <form>
@@ -20280,12 +20205,12 @@ he is crying - nstakui
                <usg type="domain">SPACE</usg>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">up to (lm)</orth>
+                     <orth xml:lang="en">up to</orth>
                   </form>
                </cit>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="es">hasta (lm)</orth>
+                     <orth xml:lang="es">hasta</orth>
                   </form>
                </cit>
             </sense>
@@ -20296,14 +20221,19 @@ he is crying - nstakui
                <pron xml:lang="mix" notation="ipa">ʃìnà</pron>
             </form>
             <gramGrp>
-               <pos>relationalAdverb</pos>
+               <pos>adv</pos>
                <colloc/>
                <!-- temporal -->
             </gramGrp>
             <sense>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">before(lm)</orth>
+                     <orth xml:lang="en">before</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">antes</orth>
                   </form>
                </cit>
             </sense>
@@ -20330,15 +20260,15 @@ he is crying - nstakui
                      <orth xml:lang="es">simultaneamente</orth>
                   </form>
                </cit>
-               <etym type="metaphor"><!-- process = metaphor; SOURCE DOMAIN: cardinalNumber - TARGET DOMAIN: TIME-->
-                  <cit type="etymon" corresp="#num-1">
-                     <form>
-                        <orth xml:lang="mix">in</orth>
-                     </form>
-                     <def xml:lang="en">one</def>
-                  </cit>
-               </etym>
             </sense>
+            <etym type="metaphor"><!-- process = metaphor; SOURCE DOMAIN: cardinalNumber - TARGET DOMAIN: TIME-->
+               <cit type="etymon" corresp="#num-1">
+                  <form>
+                     <orth xml:lang="mix">in</orth>
+                  </form>
+                  <def xml:lang="en">one</def>
+               </cit>
+            </etym>
          </entry>
          <!-- Pace: -->
          <entry xml:id="fast-MIX">
@@ -20350,7 +20280,7 @@ he is crying - nstakui
                <pos>adv</pos>
             </gramGrp>
             <sense><!-- motion(space); time; -->
-               <usg/>
+               <usg type="domain">Pace</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">fast</orth>
@@ -20423,10 +20353,10 @@ he is crying - nstakui
             <gramGrp>
                <pos>verb</pos>
                <gram type="transitivity" norm="transitive">trans</gram>
-               <!-- active acomplishment -->
-               <colloc type="MR">A</colloc>
+               <colloc type="MR">A</colloc>               <!-- active acomplishment -->
             </gramGrp>
             <sense>
+               <!-- active acomplishment <colloc type="MR">A</colloc>-->
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">to make fire</orth>
@@ -20447,7 +20377,7 @@ he is crying - nstakui
             <gramGrp>
                <pos>verb</pos>
                <!-- can also be adjective -->
-               <gram>intrns</gram>
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense>
                <cit type="translation">
@@ -20470,7 +20400,7 @@ he is crying - nstakui
             <gramGrp>
                <pos>verb</pos>
                <!-- can also be adjective -->
-               <gram>intrns</gram>
+               <gram type="transitivity">intrans</gram>
             </gramGrp>
             <sense>
                <cit type="translation">
@@ -20488,162 +20418,6 @@ he is crying - nstakui
          <entry xml:id="V-to-live-somewhere-MIX">
             <form type="lemma">
                <orth xml:lang="mix">yee</orth>
-               <form type="paradigm" subtype="incompletive">
-                  <form type="inflected">
-                     <orth>yee yu</orth>
-                     <orth type="segmented">
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>yu</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>1</per>
-                        <number>sg</number>
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>yeu</orth>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>sg</number>
-                        <gram type="register">inf</gram>
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>yee ni</orth>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>sg</number>
-                        <gram type="register">form</gram>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth cert="low">yei</orth>
-                     <!-- CHECK THIS! -->
-                     <gramGrp>
-                        <per>3</per>
-                        <number>sg</number>
-                        <gram type="register">inf</gram>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>ra</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>3</per>
-                        <number>sg</number>
-                        <gram type="register">form</gram>
-                        <gen>m</gen>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>ɲa</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>3</per>
-                        <number>sg</number>
-                        <gram type="register">form</gram>
-                        <gen>f</gen>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>kue</seg>
-                        <seg>ko</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>1</per>
-                        <number>pl</number>
-                        <gram type="register">inf</gram>
-                        <gram/>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>ko</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>1</per>
-                        <number>pl</number>
-                        <gram type="register">inf</gram>
-                        <gram/>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>mee</seg>
-                        <seg>yu</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>pl</number>
-                        <gram type="register">inf</gram>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>kue</seg>
-                        <seg>ni</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>2</per>
-                        <number>pl</number>
-                        <gram type="register">form</gram>
-                        <!-- register (formal/informal) -->
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>kue</seg>
-                        <seg>yi</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>3</per>
-                        <number>pl</number>
-                        <gram type="register">inf</gram>
-                     </gramGrp>
-                  </form>
-                  <form type="inflected">
-                     <orth>
-                        <seg>yee</seg>
-                        <pc/>
-                        <seg>kue</seg>
-                        <seg>na</seg>
-                     </orth>
-                     <gramGrp>
-                        <per>3</per>
-                        <number>pl</number>
-                        <gram type="register">form</gram>
-                     </gramGrp>
-                  </form>
-                  <gramGrp>
-                     <tns>pres</tns>
-                     <gram type="aspect" cert="medium">realis</gram>
-                  </gramGrp>
-               </form>
             </form>
             <gramGrp>
                <pos>verb</pos>
@@ -25717,6 +25491,39 @@ he is crying - nstakui
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">ponerse de pie</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="sit-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">kantu'u</orth>
+               <pron notation="ipa" xml:lang="mix"></pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">intrans</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Posture</usg>
+               <cit type="example">
+                  <quote xml:lang="mix">Ta tsa kantui’i nuu ñu’u ntsini so’i in ntusu yu’u:</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">When they were sitting on the ground they heard a sound from the door:</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Cuando se sentaban por el piso oyeron un sonido de la puerta:</quote>
+                  </cit>
+                  <ptr target="SIL_docs/L159/L159-tok.xml"/>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to sit down</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">sentarse</orth>
                   </form>
                </cit>
             </sense>
