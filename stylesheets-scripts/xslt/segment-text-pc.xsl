@@ -19,18 +19,17 @@
             <xsl:matching-substring>
                 <w><xsl:value-of select="regex-group(1)"/></w>
             </xsl:matching-substring>
-     <!--        <xsl:non-matching-substring>
-                <xsl:analyze-string select="." regex="(\.|;|:|,|')(^|$)">
+            <xsl:non-matching-substring>
+                <xsl:analyze-string select="." regex="(\.|;|:|,|'|\?|¿|!)(^|$)">
                     <xsl:matching-substring>
                         <pc><xsl:value-of select="."/></pc>
                     </xsl:matching-substring>
-                    --> 
                     <xsl:non-matching-substring>
                         <xsl:value-of select="."/>
                     </xsl:non-matching-substring>
-            <!-- 
+
                 </xsl:analyze-string>         
-            </xsl:non-matching-substring> -->
+            </xsl:non-matching-substring> 
         </xsl:analyze-string>
     </xsl:template>
 
