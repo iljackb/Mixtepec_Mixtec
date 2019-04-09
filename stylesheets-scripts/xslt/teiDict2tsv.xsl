@@ -16,6 +16,7 @@
             -->
             <xsl:value-of select="form[@type='lemma']/orth[1]" />
             <xsl:value-of select="$separator"/>
+            <!-- need to add for where variant lemma forms (eg. colors) -->
             <xsl:value-of select="form[@type='lemma']/pron[not(@source)][1]" />
             <xsl:value-of select="$separator" />
             <xsl:value-of select="form[@type='lemma']/pron[@source='#Pastor-Azcona'][1]" />

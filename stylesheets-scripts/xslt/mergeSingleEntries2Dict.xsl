@@ -8,45 +8,45 @@
     <xsl:param name="readDoc" select="document($inputDocs)"/>
     
     <xsl:template match="/">   
-        <xsl:message>My file: <xsl:value-of select="document-uri($readDoc)"/></xsl:message>
+        
         <xsl:variable name="folderName" select="'Entries'"/>
         <xsl:variable name="allEntries" select="$inputDocs//entry"/>
-                <TEI>
-                    <teiHeader>
-                        <fileDesc>
-                            <titleStmt>
-                                <title>Merged TEI single entry files test</title>
-                            </titleStmt>
-                            <publicationStmt>
-                                <!-- add the document path? -->
-
-                            </publicationStmt>
-                            <sourceDesc>
-                                <bibl>
-                                    <!-- add the document path in attribute -->
-                                    <!-- change to only print texts and make output for spanish and english titles -->
-                                    <!-- 
+        <TEI>
+            <teiHeader>
+                <fileDesc>
+                    <titleStmt>
+                        <title>Merged TEI single entry files test</title>
+                    </titleStmt>
+                    <publicationStmt>
+                        <!-- add the document path? -->
+                        
+                    </publicationStmt>
+                    <sourceDesc>
+                        <bibl>
+                            <!-- add the document path in attribute -->
+                            <!-- change to only print texts and make output for spanish and english titles -->
+                            <!-- 
                                         <xsl:value-of select="$readDoc/descendant::titleStmt/title"  separator=" "/>
                                     -->
-                                </bibl>
-                            </sourceDesc>
-                        </fileDesc>
-                    </teiHeader>
-                    <text>
-                        <body>
-                            <xsl:for-each select="$allEntries">
-                                <xsl:copy-of select="."/>
-                            </xsl:for-each>
-                            
-                            <!-- ALSO IN COPYING EXAMPLE SENTENCES, COPY SOURCE FILES (NAME OR IN POINTER!!) -->
-                            <!-- 
+                        </bibl>
+                    </sourceDesc>
+                </fileDesc>
+            </teiHeader>
+            <text>
+                <body>
+                    <xsl:for-each select="$allEntries">
+                        <xsl:copy-of select="."/>
+                    </xsl:for-each>
+                    
+                    <!-- ALSO IN COPYING EXAMPLE SENTENCES, COPY SOURCE FILES (NAME OR IN POINTER!!) -->
+                    <!-- 
                             <xsl:for-each select="$inputDocs">
                                 <xsl:apply-templates select="entry"/>
                             </xsl:for-each>
                              -->
-                        </body>
-                    </text>
-                </TEI>
+                </body>
+            </text>
+        </TEI>
         <!--  
             </xsl:result-document>
             -->
