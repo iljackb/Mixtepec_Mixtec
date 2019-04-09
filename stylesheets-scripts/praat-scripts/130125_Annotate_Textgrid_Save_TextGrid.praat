@@ -40,7 +40,7 @@ for ifile to numberOfFiles
 
 # Creat a text grid file with given tier names
 
-	To TextGrid... "Tones Vowels Gld-Nas-Lat Consonants Sampa Gloss Tokens"
+	To TextGrid... "Mixtec Spanish IPA English"
 	#To TextGrid... "Tones Vowels"
 	#To TextGrid... "Gloss"
 
