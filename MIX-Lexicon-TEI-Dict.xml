@@ -4397,11 +4397,20 @@
                <pos>noun</pos>
             </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Language">
-               <usg type="domain">Language</usg>
-               <etym/>
+               <usg type="domain">Communication</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">language</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">idioma</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">lengua</orth>
                   </form>
                </cit>
             </sense>
@@ -4424,16 +4433,20 @@
             </gramGrp>
             <sense>
                <usg type="domain">Language</usg>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">word</orth>
-                  </form>
-               </cit>
                <cit type="example">
                   <quote xml:lang="mix">tu'un ntusu</quote>
                </cit>
             </sense>
-            <etym/>
+            <cit type="translation">
+               <form>
+                  <orth xml:lang="en">word</orth>
+               </form>
+            </cit>
+            <cit type="translation">
+               <form>
+                  <orth xml:lang="es">palabra</orth>
+               </form>
+            </cit>
             <!-- ./compound-N-holyWord-mix -->
          </entry>
          <entry xml:id="holy-word-MIX">
@@ -4456,17 +4469,17 @@
                <pos>noun</pos>
             </gramGrp>
             <sense>
-               <usg type="domain"/>
+               <usg type="domain">Literacy</usg>
+               <usg type="domain">Language</usg>
                <cit type="example">
-                  <quote xml:lang="mix">
-                     <oRef>Ntusu</oRef> Sa'an Savi</quote>
-                  <ptr target="SIL_docs/L331/L331-tok.xml"/>
+                  <quote xml:lang="mix"><oRef>Ntusu</oRef> Sa'an Savi</quote>
                   <cit type="translation">
                      <quote xml:lang="en">The Mixtepec-Mixtec alphabet</quote>
                   </cit>
                   <cit type="translation">
                      <quote xml:lang="es">El alfabeto Misteko de Mixtepec</quote>
                   </cit>
+                  <ptr target="SIL_docs/L331/L331-tok.xml"/>
                </cit>
                <cit type="translation">
                   <form>
@@ -4571,9 +4584,8 @@
                      </cit>
                   </etym>
                </etym>
-               <cit type="example" xml:lang="mix">
-                  <quote>Tu'un <hi rend="bold">Sa'an Ntavi</hi>
-                  </quote>
+               <cit type="example">
+                  <quote xml:lang="mix">Tu'un <oRef>Sa'an Ntavi</oRef></quote>
                   <ptr target="SIL_docs/L100/L100-tok.xml"/>
                </cit>
             </sense>
@@ -4711,9 +4723,8 @@
                      <orth xml:lang="es">quechua</orth>
                   </form>
                </cit>
-               <cit type="example" xml:lang="mix">
-                  <quote>Ika ka'an na siin siin sa'an tono sa'an xchila, portugués, francés, <hi
-                        rend="bold">quechua</hi> tsi inka ka kue sa'an.</quote>
+               <cit type="example">
+                  <quote xml:lang="mix">Ika ka'an na siin siin sa'an tono sa'an xchila, portugués, francés, <oRef>quechua</oRef> tsi inka ka kue sa'an.</quote>
                   <ref target="SIL_docs/L145/L145-tok.xml"/>
                </cit>
             </sense>
@@ -4820,7 +4831,7 @@
                <pos>noun</pos>
             </gramGrp>
             <sense xml:id="animal" corresp="http://dbpedia.org/resource/Animal" n="1">
-               <usg type="domain">livingBeings</usg>
+               <usg type="domain">Living Being</usg>
                <xr/>
                <cit type="translation">
                   <form>
@@ -5251,6 +5262,11 @@
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">serpiente</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">culebra</orth>
                   </form>
                </cit>
             </sense>
@@ -19101,7 +19117,7 @@
                <usg type="domain">Grammar</usg>
             </sense>
          </entry>
-         <entry xml:id="PRFX-V-REPET">
+         <entry xml:id="PRFX-V-REPET" cert="low">
             <form type="lemma">
                <orth xml:lang="mix">na-</orth>
                <pron xml:lang="mix" notation="ipa">nà</pron>
@@ -19112,7 +19128,6 @@
             <sense>
                <usg/>
                <def xml:lang="en">repetitive prefix</def>
-               <etym/>
             </sense>
          </entry>
          <entry xml:id="tsi-MIX">
@@ -19120,15 +19135,14 @@
                <orth xml:lang="mix">tsi</orth>
                <pron xml:lang="mix" notation="ipa">tsì</pron>
             </form>
+            <ptr type="inflectionParadigm" target="paradigm:with-CONJ"/>
+            <gramGrp>
+               <gram>conj</gram>
+            </gramGrp>
             <sense>
                <note resp="#JB">no known central sense</note>
-               <usg type="GRAM"/>
-               <!--  -->
-               <etym/>
+               <usg type="domain">Grammar</usg>
                <sense xml:id="tsi-CONJ-INCLSV">
-                  <gramGrp>
-                     <gram>conj</gram>
-                  </gramGrp>
                   <cit type="translation">
                      <form>
                         <orth xml:lang="en">with</orth>
@@ -19142,7 +19156,8 @@
                </sense>
                <sense xml:id="tsi-CONJ-COORD">
                   <gramGrp>
-                     <gram>CONJ-COORD</gram>
+                     <pos>conj</pos>
+                     <gram>coord</gram>
                   </gramGrp>
                   <cit type="translation">
                      <form>
@@ -24988,6 +25003,11 @@ he is crying - nstakui
                      <orth xml:lang="es">soyate</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es" cert="medium">palma soyate</orth>
+                  </form>
+               </cit>
             </sense>
          </entry>
          <entry xml:id="run-MIX">
@@ -25032,7 +25052,7 @@ he is crying - nstakui
                <gram>trans</gram>
             </gramGrp>
             <sense>
-               <usg type="domain"></usg>
+               <usg type="domain">Agriculture</usg>
                <cit type="example">
                   <quote xml:lang="mix"></quote>
                   <cit type="translation">
@@ -25044,7 +25064,12 @@ he is crying - nstakui
                </cit>
                <cit type="translation">
                   <form>
-                     <orth xml:lang="en">pinch</orth>
+                     <orth xml:lang="en">pick</orth>
+                  </form>
+               </cit>               
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">harvest</orth>
                   </form>
                </cit>
                <cit type="translation">
@@ -27177,6 +27202,104 @@ he is crying - nstakui
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">vendedor</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="drive-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">skaki</orth>
+               <pron notation="ipa" xml:lang="mix"></pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">ambitrans</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Transportation</usg>
+               <usg type="domain">Motion</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to drive</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">manejar</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="die-ii-MIX">
+            <form type="lemma" cert="medium" source="SIL_docs/Aprendamos-2018/Aprendamos_el_idioma_mixteco_(Mixtepec).xml">
+               <orth xml:lang="mix">kuu</orth>
+               <pron notation="ipa" xml:lang="mix"></pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">intrans</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Biology</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to die</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">morir</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="get-sick-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">ku'u</orth>
+               <pron notation="ipa" xml:lang="mix"></pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">intrans</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Health</usg>
+               <usg type="domain"></usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">to get sick</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">enfermar</orth>
                   </form>
                </cit>
             </sense>

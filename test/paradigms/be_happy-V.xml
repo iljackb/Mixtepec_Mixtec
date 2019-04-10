@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Inflection paradigm test be.happy</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+
+         <entry xml:id="be-happy-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">kwacha</orth>
+               <pron xml:lang="mix" notation="ipa">kwáʧá</pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">intrans</gram>
+            </gramGrp>
+
+            <!-- PRESENT/INCOMPLETIVE -->
+            <form type="paradigm" subtype="present">
+               <gramGrp>
+                  <tns norm="present">pres</tns>
+                  <gram type="aspect" norm="incompletive">incmpl</gram>
+                  <mood norm="indicative">indic</mood>
+                  <gram type="aspect" cert="medium">realis</gram>
+               </gramGrp>
+               
+               <!-- PRES: 1 SG -->
+               <form type="inflected">
+                  <orth xml:lang="mix">kuácha</orth>
+                  <pron xml:lang="mix" notation="ipa">kwátʃáà</pron>
+                  <gramGrp>
+                     <per>1</per>
+                     <number>sg</number>
+                  </gramGrp>
+                  <gloss xml:lang="en">I am happy</gloss>
+                  <gloss xml:lang="es">estoy feliz</gloss>
+               </form>
+               
+               <!-- PRES: 2 SG INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix">kuáchu</orth>
+                  <pron xml:lang="mix" notation="ipa" cert="low">kwáchú</pron>
+                  <gramGrp>
+                     <per>2</per>
+                     <number>sg</number>
+                     <usg type="register">inf</usg>
+                  </gramGrp>
+                  <gloss xml:lang="en">you are happy</gloss>
+                  <gloss xml:lang="es">estás feliz</gloss>
+               </form>
+               
+               <!-- PRES: 2 SG FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix">kuácha ni</orth>
+                  <pron notation="ipa" cert="low" xml:lang="mix">kwácha ní</pron>
+                  <gramGrp>
+                     <per>2</per>
+                     <number>sg</number>
+                     <usg type="register">form</usg>
+                  </gramGrp>
+                  <!-- feel'(2s.form,[happy']) -->
+                  <gloss xml:lang="en">you are happy</gloss>
+                  <gloss xml:lang="es">usted es feliz</gloss>
+               </form>
+               
+               <!-- 3S.INF  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 3S.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"> ti</orth>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML" -->
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+               </form>
+               
+               <!-- 3S.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"> ra</orth>
+                  <pron xml:lang="mix" notation="ipa">rà</pron>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 3S.FORM.F  -->
+               <form type="inflected">
+                  <orth xml:lang="mix">ña</orth>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!--  1PL.EXCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="exclusive">excl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 1PL.INCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 2PL.INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 2PL.FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!--  3PL.INF-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 3PL.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 3PL.FORM.F-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 3PL.FORM.ALL.HUM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                     <gram type="register" norm="formal">form</gram>
+                     <!-- human -->
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+                  <note cert="medium">Alternatively the pronoun could be <oRef>kuena</oRef>.</note>
+               </form>
+               
+               <!-- 3PL.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML" -->
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+            </form>
+
+            <form type="paradigm" subtype="past">
+               
+               <!--PAST/COMPLETIVE  -->
+               <gramGrp>
+                  <tns>past</tns>
+                  <gram type="aspect" norm="completive">cmpl</gram>
+                  <mood norm="indicative">indic</mood>
+               </gramGrp>
+               
+               <!--COMPL: 1 SG -->
+               <form type="inflected">
+                  <orth xml:lang="mix">nikuacha</orth>
+                  <pron xml:lang="mix" notation="ipa" cert="low">nìkwácháà</pron>
+                  <gramGrp>
+                     <per>1</per>
+                     <number>sg</number>
+                  </gramGrp> 
+                  <!-- PAST [feel'(1s,[happy'])]  -->
+                  <gloss xml:lang="en">I was happy</gloss>
+                  <gloss xml:lang="es">yo fui feliz</gloss>
+               </form>
+               
+               <!-- 2S.INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 2S.FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               
+               <!-- 3S.INF  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML" -->
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.FORM.F  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!--  1PL.EXCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="exclusive">excl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- COMPL: 1 PL -->
+               <form type="inflected">
+                  <orth xml:lang="mix">ni kuacha kue ko</orth>
+                  <pron xml:lang="mix" notation="ipa" cert="low">nìkwáchá kue kó</pron>
+                  <gramGrp>
+                     <per>1</per>
+                     <number>pl</number>
+                     <gram type="inclusivity">incl</gram>
+                  </gramGrp>
+                  <!-- PAST [feel'(1p (all/some),[happy'])] (COMPLETE)? -->
+                  <gloss xml:lang="en">we were happy</gloss>
+                  <gloss xml:lang="es">fuimos felizes</gloss>
+               </form>
+               <!-- COMPL: 2 PL INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix">nikuacha kueyu</orth>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number>pl</number>
+                     <usg type="register">inf</usg>
+                  </gramGrp>
+                  <!-- PAST [feel'(1pl.inf,[happy'])] (COMPLETE)? -->
+                  <gloss xml:lang="en">you were happy</gloss>
+                  <gloss xml:lang="es">usteded fueron felizes</gloss>
+               </form>
+               <!-- COMPL: 2 PL FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix">nikuacha kueni</orth>
+                  <pron xml:lang="mix" notation="ipa">nìkwacha kuení</pron>
+                  <gramGrp>
+                     <per>2</per>
+                     <number>pl</number>
+                     <usg type="register">form</usg>
+                  </gramGrp>
+                  <!-- PAST [feel'(2pl,form,[happy'])] (COMPLETE)? -->
+                  <gloss xml:lang="en">you were happy</gloss>
+                  <gloss xml:lang="es">usteded fueron felizes</gloss>
+               </form>
+               <!--  3PL.INF-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.F-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.ALL.HUM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                     <gram type="register" norm="formal">form</gram>
+                     <!-- human -->
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+                  <note cert="medium">Alternatively the pronoun could be <oRef>kuena</oRef>.</note>
+               </form>
+               <!-- 3PL.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML" -->
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+            </form>
+
+            <form type="paradigm" subtype="future">
+               <!-- FUTURE/POTENTIVE -->
+               <gramGrp>
+                  <tns>future</tns>
+                  <gram type="aspect" norm="potential">pot</gram>
+                  <mood norm="indicative">indic</mood>
+               </gramGrp>
+               <!-- 1S -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/><!-- 1sg is important to get pron because the tone affects the inflection -->
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="singular">sg</number>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2S.INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2S.FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.INF  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML" -->
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.FORM.F  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!--  1PL.EXCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="exclusive">excl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 1PL.INCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2PL.INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2PL.FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!--  3PL.INF-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.F-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.ALL.HUM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                     <gram type="register" norm="formal">form</gram>
+                     <!-- human -->
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+                  <note cert="medium">Alternatively the pronoun could be <oRef>kuena</oRef>.</note>
+               </form>
+               <!-- 3PL.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen cert="medium">animl</gen>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <form type="paradigm" subtype="imperative">
+                  <!-- IMPERATIVE/HORATIVE -->
+                  <gramGrp>
+                     <mood norm="imperative">imper</mood>
+                  </gramGrp>
+                  <!-- 2S.INF -->
+                  <form type="inflected">
+                     <orth xml:lang="mix"/>
+                     <pron xml:lang="mix" notation="ipa"/>
+                     <gramGrp>
+                        <per>2</per>
+                        <number norm="singular">sg</number>
+                        <gram type="register" norm="informal">inf</gram>
+                     </gramGrp>
+                     <gloss xml:lang="en"/>
+                     <gloss xml:lang="es"/>
+                  </form>
+                  <!-- 2S.FORM -->
+                  <form type="inflected">
+                     <orth xml:lang="mix"/>
+                     <pron xml:lang="mix" notation="ipa"/>
+                     <gramGrp>
+                        <per>2</per>
+                        <number norm="singular">sg</number>
+                        <gram type="register" norm="formal">form</gram>
+                     </gramGrp>
+                  </form>
+                  <!--  1PL.EXCL -->
+                  <form type="inflected">
+                     <orth xml:lang="mix"/>
+                     <pron xml:lang="mix" notation="ipa"/>
+                     <gramGrp>
+                        <per>1</per>
+                        <number norm="plural">pl</number>
+                        <gram type="inclusivity" norm="exclusive">excl</gram>
+                        <mood cert="low" norm="hortative">hort</mood>
+                     </gramGrp>
+                     <gloss xml:lang="en"/>
+                     <gloss xml:lang="es"/>
+                  </form>
+                  <!-- 1PL.INCL -->
+                  <form type="inflected">
+                     <orth xml:lang="mix"/>
+                     <pron xml:lang="mix" notation="ipa"/>
+                     <gramGrp>
+                        <per>1</per>
+                        <number norm="plural">pl</number>
+                        <gram type="inclusivity" norm="inclusive">incl</gram>
+                        <mood cert="low" norm="hortative">hort</mood>
+                     </gramGrp>
+                     <gloss xml:lang="en"/>
+                     <gloss xml:lang="es"/>
+                  </form>
+                  <!-- 2PL.INF -->
+                  <form type="inflected">
+                     <orth xml:lang="mix"/>
+                     <pron xml:lang="mix" notation="ipa"/>
+                     <gramGrp>
+                        <per>2</per>
+                        <number norm="plural">pl</number>
+                        <gram type="register" norm="informal">inf</gram>
+                        <mood cert="low" norm="hortative">hort</mood>
+                     </gramGrp>
+                     <gloss xml:lang="en"/>
+                     <gloss xml:lang="es"/>
+                  </form>
+                  <!-- 2PL.FORM -->
+                  <form type="inflected">
+                     <orth xml:lang="mix"/>
+                     <pron xml:lang="mix" notation="ipa"/>
+                     <gramGrp>
+                        <per>2</per>
+                        <number norm="plural">pl</number>
+                        <gram type="register" norm="formal">form</gram>
+                        <mood cert="low" norm="hortative">hort</mood>
+                     </gramGrp>
+                  </form>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+            </form>
+
+            <form type="paradigm" subtype="imperfect">
+               <!-- IMPERF/HAB -->
+               <gramGrp>
+                  <tns>past</tns>
+                  <gram type="aspect">imperf</gram>
+                  <mood norm="indicative">indic</mood>
+               </gramGrp>
+               <!-- 1S -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/><!-- 1sg is important to get pron because the tone affects the inflection -->
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="singular">sg</number>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2S.INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2S.FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.INF  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML" -->
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3S.FORM.F  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="singular">sg</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!--  1PL.EXCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="exclusive">excl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 1PL.INCL -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>1</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2PL.INF -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 2PL.FORM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>2</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!--  3PL.INF-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.M -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="masculine">masc</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.F-->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen norm="feminine">fem</gen>
+                     <gram type="register" norm="formal">form</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+               <!-- 3PL.FORM.ALL.HUM -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gram type="inclusivity" norm="inclusive">incl</gram>
+                     <gram type="register" norm="formal">form</gram>
+                     <!-- human -->
+                  </gramGrp>
+                  <note cert="medium">Alternatively the pronoun could be <oRef>kuena</oRef>.</note>
+               </form>
+               <!-- 3PL.ANML  -->
+               <form type="inflected">
+                  <orth xml:lang="mix"/>
+                  <pron xml:lang="mix" notation="ipa"/>
+                  <gramGrp>
+                     <per>3</per>
+                     <number norm="plural">pl</number>
+                     <gen cert="medium">animl</gen>
+                     <gram type="register" norm="informal">inf</gram>
+                  </gramGrp>
+                  <gloss xml:lang="en"/>
+                  <gloss xml:lang="es"/>
+               </form>
+            </form>
+            <!-- possibly add for modal forms also (need more info on the stem pattern) -->
+            <!-- also possible is negative verbs, as certain verbs (though not all) may be inflected via tone to denote negation -->
+
+            <sense>
+               <cit type="translation">
+                  <orth xml:lang="en"/>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es"/>
+               </cit>
+            </sense>
+         </entry>
+      </body>
+   </text>
+</TEI>
