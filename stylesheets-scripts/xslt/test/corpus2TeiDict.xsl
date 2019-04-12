@@ -65,7 +65,7 @@
                                         <xsl:value-of select="."/>
                                     </orth>
                                 </form>
-                                <xsl:for-each select="$readDoc/descendant::w[. = current()]">
+                                <xsl:for-each select="$readDoc/descendant::w[@xml:lang='mix'][. = current()]">
                                                               
                                     <xsl:variable name="segID" select="parent::seg/@xml:id"/>
                                     

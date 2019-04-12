@@ -1,0 +1,3827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="mix">Kue Kiti Ntava</title>
+            <title xml:lang="es">Las Aves</title>
+            <editor>Gisela Beckmann</editor>
+            <respStmt>
+               <resp>TEI Encoding</resp>
+               <resp>Annotation</resp>
+               <name>Jack Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc><!-- 
+            © 2014 por el Instituto Lingüístico de Verano, A.C. Derechos reservados conforme a la ley.
+Las siguientes imágenes provienen de la colección de arte
+para ilustraciones de la Universidad del Sur de Florida, "http://etc.usf.edu/clipart", y son usadas con permiso:
+Halcón Peregrino, p. 5; Halcón Esmerejón, p. 5; Tordo Sargento, p. 7; Codorniz Arlequín, p. 10; Chara Copetona, p. 12; Papamoscas, p. 13; Bisbita de Agua, p. 22
+
+Las siguientes imágenes provienen del CD Bird Illustrations de Dover Electronic Clip Art® y son usadas con permiso: Tecolote Llanero, p. 3; Águila Real, p. 4;
+Aguililla Colicorta, p. 4; Mímido Gris, p. 12;
+Gorrión Doméstico, p. 20; Trepadorcito Americano, p. 20
+
+Las demás ilustraciones son propiedad del Instituto Lingüístico de Verano A.C.,
+y son usadas con el permiso correspondiente.
+Primera edición
+Las Aves
+Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
+            -->
+            <p>Information about the source<ref/>
+            </p>
+         </sourceDesc>
+         <!-- 
+        
+         -->
+         <!-- 
+         Ask author about the variants! if they are location related or other!!
+         -->
+         <!-- 
+         After all have uri's, write program to retrieve and add latin names for each from the wikidata source
+         -->
+         <!--
+         May in later step create a subtypology to distinguish that (domain) Bird is subclass of (domain) Animal
+         -->
+         <!-- 
+         In later step enhance the links with avibase.org entries for each bird (Ask Daniel to help);
+         also link to mexican site with native species and maps: http://www.naturalista.mx/
+         -->
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <normalization>
+               <ab>Saltillos in original contents converted to apostrophe's, original form with saltillo preserved in value of @orig.</ab>
+            </normalization>
+            <ab type="annotation">
+               <list>
+                  <item>Mixtec content found at following locations: <ref>//list/item/w[@xml:lang='mix']</ref></item>
+                  <item>Spanish translations are part of original content and are found at following location: <ref>//list/item/w[@xml:lang='es']</ref></item>
+                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//list/item/linkGrp[@type='translation']/link[@target</ref> and the two equivalent translation values are defined in the value of <ref>//link[@target]</ref></item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//list/item/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref></item>
+               </list>
+               
+            </ab>
+         </editorialDecl>
+         <!--  
+         <segmentation>
+            <p>In the standoff annotation markup, in this document, since there are only single lexical items (simplex, or compound) the pointers in the standoff <tag>span</tag>
+               <att>target</att> will be the <att>xml:id</att> value of the <tag>seg</tag>. This is in contrast to the utterance files where in the case of a single lexical item the value of the<att>xml:id</att> value of the <tag>w</tag> (or all <tag>w</tag> components of a compound/complex lexical item) is pointed to due to the need for consistancy as in those files there is the possibility that the full <tag>seg</tag> may need to be pointed to in order to annotate a full phrase or sentence. Thus this file cannot re-use any extraction scripts that are created for the utterance files without making the needed adaptations to the structural details described above.</p>
+         </segmentation>
+         -->
+      </encodingDesc>
+   </teiHeader>
+   <!-- after all annotations finished convert all //seg[@type="compound"]/* to //w[@type="compound"]/* -->
+   <text>
+      <body>
+         <div><!-- p3 -->
+            <list>
+               <item>
+                  <graphic url="Aves-01.png"/>
+                  <w xml:id="d1e35" xml:lang="mix">
+                     <w xml:id="d1e36">chumi</w>
+                     <w xml:id="d1e38">lunchi</w>
+                  </w>
+                  <w xml:id="d1e40" xml:lang="es">
+                     <w xml:id="d1e41">tecolote</w>
+                     <w xml:id="d1e43">llanero</w>
+                  </w>
+                  <w xml:id="d1e45" xml:lang="es">
+                     <w xml:id="d1e46">tecolote</w>
+                     <w xml:id="d1e48">zancón</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e35" xml:lang="en">Guadalupe Burrowing Owl</span>
+                     <span target="#d1e35" xml:lang="en">Marie Galante Burrowing Owl</span>
+                     <span target="#d1e35" xml:lang="la">Athene cunicularia</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e35 #d1e40"/>
+                     <link target="#d1e35 #d1e45"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e35"
+                           corresp="https://www.wikidata.org/wiki/Q1897132"/>
+                     <span type="sense"
+                           target="#d1e35"
+                           corresp="http://dbpedia.org/resource/Burrowing_owl"/>
+                     <span type="domain"
+                           target="#d1e35"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e35"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-02.png"/>
+                  <w xml:id="d1e53" xml:lang="mix" norm="chumi xini ka'nu">
+                     <w xml:id="d1e54">chumi</w>
+                     <w xml:id="d1e56">xini</w>
+                     <w xml:id="d1e58" orig="kaꞌnu">ka'nu</w>
+                  </w>
+                  <w xml:id="d1e60" xml:lang="es">
+                     <w xml:id="d1e61">tecolote</w>
+                  </w>
+                  <w xml:id="d1e63" xml:lang="es">
+                     <w xml:id="d1e64">búho</w>
+                     <w xml:id="d1e66">cornado</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e53 #d1e60"/>
+                     <link target="#d1e53 #d1e63"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span xml:lang="en" target="#d1e53">Great Horned Owl</span>
+                     <span xml:lang="la" target="#d1e53">Bubo virginianus</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e53" corresp="https://www.wikidata.org/wiki/Q81515"/>
+                     <span type="sense" target="#d1e53" corresp="http://dbpedia.org/resource/Great_horned_owl"/>
+                     <span type="domain" target="#d1e53" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e53" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-03.png"/>
+                  <w xml:id="d1e71" xml:lang="mix" norm="chumi sai">
+                     <w xml:id="d1e72">chumi</w>
+                     <w xml:id="d1e74">sai</w>
+                  </w>
+                  <w xml:id="d1e76" xml:lang="es">
+                     <w xml:id="d1e77">tecolotito</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e71" xml:lang="en">Northern Saw-whet Owl</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e71 #d1e76"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e71"
+                           corresp="https://www.wikidata.org/wiki/Q638019"/>
+                     <span type="sense"
+                           target="#d1e71"
+                           corresp="http://dbpedia.org/resource/Northern_saw-whet_owl"/>
+                     <span type="domain"
+                           target="#d1e71"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e71"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-04.png"/>
+                  <w xml:id="d1e82" xml:lang="mix" norm="kasa kutu">
+                     <w xml:id="d1e83">kasa</w>
+                     <w xml:id="d1e85">kutu</w>
+                  </w>
+                  <w xml:id="d1e87" xml:lang="es">
+                     <w xml:id="d1e88">tecolote</w>
+                     <w xml:id="d1e90">rítmico</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e82" xml:lang="en">Whiskered screech owl</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e82 #d1e87"/>
+                  </linkGrp>
+                  <spanGrp type="gram">
+                     <span type="pos" target="#d1e82" ana="#N"/>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e82" corresp="https://www.wikidata.org/wiki/Q1147207"/>
+                     <span type="sense" target="#d1e82" corresp="http://dbpedia.org/resource/Whiskered_screech_owl"/>
+                     <span type="domain" target="#d1e82" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain" target="#d1e82" corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-05.png"/>
+                  <w xml:id="d1e95" xml:lang="mix">
+                     <w xml:id="d1e96">kukuvi</w>
+                  </w>
+                  <w xml:id="d1e98" xml:lang="es">
+                     <w xml:id="d1e99">tapacamino</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e95" xml:lang="en">Common Poorwill</span>
+                     <span xml:lang="la" cert="medium" target="#d1e95">Nyctibius jamaicensis</span>
+                     <span xml:lang="la" target="#d1e95">Phalaenoptilus nuttallii</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e95 #d1e98"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span cert="medium"
+                           type="sense"
+                           target="#d1e95"
+                           corresp="https://www.wikidata.org/wiki/Q930457"/>
+                     <span type="sense"
+                           target="#d1e95"
+                           corresp="http://dbpedia.org/resource/Common_poorwill"/>
+                     <span type="domain"
+                           target="#d1e95"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e95"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p4 -->
+            <list>
+               <item>
+                  <graphic url="Aves-06.png"/>
+                  <w xml:id="d1e107" xml:lang="mix" norm="kiti ya'a">
+                     <w xml:id="d1e108">kiti</w>
+                     <w xml:id="d1e110" orig="yaꞌa">ya'a</w>
+                  </w>
+                  <!-- synonyms or regional difference? -->
+                  <w xml:id="d1e113" xml:lang="mix" norm="ya'a na'nu">
+                     <w xml:id="d1e114" orig="yaꞌa">ya'a</w>
+                     <w xml:id="d1e116" orig="naꞌnu">na'nu</w>
+                  </w>
+                  <!-- synonyms or regional difference? -->
+                  <w xml:id="d1e119" xml:lang="es">
+                     <w xml:id="d1e120">águila</w>
+                     <w xml:id="d1e122">real</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e107 #d1e113" xml:lang="en">Golden Eagle</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e77 #d1e83"/>
+                     <link target="#d1e80 #d1e83"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e107 #d1e113"
+                           corresp="https://www.wikidata.org/wiki/Q41181"/>
+                     <span type="sense"
+                           target="#d1e107 #d1e113"
+                           corresp="http://dbpedia.org/resource/Golden_eagle"/>
+                     <span type="domain"
+                           target="#d1e107 #d1e113"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e107 #d1e113"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-07.png"/>
+                  <w xml:id="d1e135" xml:lang="mix" norm="tasu lunchi">
+                     <w xml:id="d1e136">tasu</w>
+                     <w xml:id="d1e138">lunchi</w>
+                  </w>
+                  <!-- synonyms or regional difference? -->
+                  <w xml:id="d1e141" xml:lang="mix">
+                     <w xml:id="d1e142">litu</w>
+                  </w>
+                  <!-- synonyms or regional difference? -->
+                  <w xml:id="d1e145" xml:lang="mix">
+                     <w xml:id="d1e146">litsi</w>
+                  </w>
+                  <!-- synonyms or regional difference? -->
+                  <w xml:id="d1e149" xml:lang="es">
+                     <w xml:id="d1e150">halcón</w>
+                     <w xml:id="d1e152">cernícalo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e135 #d1e141 #d1e145 #d1e149"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e135 #d1e141 #d1e145" xml:lang="en">American Kestral</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e135 #d1e141 #d1e145"
+                           corresp="https://www.wikidata.org/wiki/Q651545"/>
+                     <span type="sense"
+                           target="#d1e135 #d1e141 #d1e145"
+                           corresp="http://dbpedia.org/resource/American_kestrel"/>
+                     <span type="domain"
+                           target="#d1e135 #d1e141 #d1e145"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e135 #d1e141 #d1e145"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-08.png"/>
+                  <w xml:id="d1e157" xml:lang="mix" norm="ya'a choko">
+                     <w xml:id="d1e158" orig="yaꞌa">ya'a</w>
+                     <w xml:id="d1e160">choko</w>
+                  </w>
+                  <w xml:id="d1e162" xml:lang="es">
+                     <w xml:id="d1e163">aguililla</w>
+                     <w xml:id="d1e165">colicorta</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e157" xml:lang="en">Short-tailed Hawk</span>
+                  </spanGrp>
+                  <linkGrp type="translation"><!-- get spanish trans by checking value of @xml:lang in target id's -->
+                     <link target="#d1e162 #d1e157"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e157"
+                           corresp="https://www.wikidata.org/wiki/Q586194"/>
+                     <span type="sense"
+                           target="#d1e157"
+                           corresp="http://dbpedia.org/resource/Short-tailed_hawk"/>
+                     <span type="domain"
+                           target="#d1e157"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e157"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-09.png"/>
+                  <w xml:id="d1e170" xml:lang="mix">
+                     <w xml:id="d1e171">tasu</w>
+                  </w>
+                  <w xml:id="d1e173" xml:lang="es">
+                     <w xml:id="d1e174">halcón</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e170 #d1e173"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e170" xml:lang="en">Falcon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e170"
+                           corresp="https://www.wikidata.org/wiki/Q43489"/>
+                     <span type="sense"
+                           target="#d1e170"
+                           corresp="http://dbpedia.org/resource/Falcon"/>
+                     <span type="domain"
+                           target="#d1e170"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e170"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p5 -->
+            <list>
+               <item>
+                  <graphic url="Aves-10.png"/>
+                  <w xml:id="d1e182" xml:lang="mix" norm="xi'an lunchi">
+                     <w xml:id="d1e183" orig="xiꞌan">xi'an</w>
+                     <w xml:id="d1e185">lunchi</w>
+                  </w>
+                  <w xml:id="d1e187" xml:lang="es">
+                     <w xml:id="d1e188">gavilán</w>
+                     <w xml:id="d1e190">pechirufo</w>
+                     <w xml:id="d1e192">menor</w>
+                  </w>
+                  <w xml:id="d1e194" xml:lang="es">
+                     <w xml:id="d1e195">gavilán</w>
+                     <w xml:id="d1e197">pajarero</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e182 #d1e187"/>
+                     <link target="#d1e182 #d1e194"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e182" xml:lang="en">Sharp-shinned hawk</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e182"
+                           corresp="https://www.wikidata.org/wiki/Q386569"/>
+                     <span type="sense"
+                           target="#d1e182"
+                           corresp="http://dbpedia.org/resource/Sharp-shinned_hawk"/>
+                     <span type="domain"
+                           target="#d1e182"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e182"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-11.png"/>
+                  <w xml:id="d1e202" xml:lang="mix" norm="ña'mi yucha">
+                     <w xml:id="d1e203" orig="ñaꞌmi">ña'mi</w>
+                     <w xml:id="d1e205">yucha</w>
+                  </w>
+                  <w xml:id="d1e207" xml:lang="es">
+                     <w xml:id="d1e208">aguililla</w>
+                     <w xml:id="d1e210">negra</w>
+                     <w xml:id="d1e212">menor</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e202 #d1e207"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e202" xml:lang="en">Common Black Hawk</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e202"
+                           corresp="https://www.wikidata.org/wiki/Q1267120"/>
+                     <span type="sense"
+                           target="#d1e202"
+                           corresp="http://dbpedia.org/resource/Common_black_hawk"/>
+                     <span type="domain"
+                           target="#d1e202"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e202"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-12.png"/>
+                  <w xml:id="d1e217" xml:lang="mix" norm="xi'an tintuyu lunchi">
+                     <w xml:id="d1e218" orig="xiꞌan">xi'an</w>
+                     <w xml:id="d1e220">tintuyu</w>
+                     <w xml:id="d1e222">lunchi</w>
+                  </w>
+                  <w xml:id="d1e224" xml:lang="es">
+                     <w xml:id="d1e225">halcón</w>
+                     <w xml:id="d1e227">esmerejón</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e217 #d1e224"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e217" xml:lang="en">Merlin</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e217"
+                           corresp="https://www.wikidata.org/wiki/Q131918"/>
+                     <span type="sense"
+                           target="#d1e217"
+                           corresp="http://dbpedia.org/resource/Merlin"/>
+                     <span type="domain"
+                           target="#d1e217"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e217"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-13.png"/>
+                  <w xml:id="d1e232" xml:lang="mix" norm="xi'an tintuyu">
+                     <w xml:id="d1e233" orig="xiꞌan">xi'an</w>
+                     <w xml:id="d1e235">tintuyu</w>
+                  </w>
+                  <w xml:id="d1e237" xml:lang="es">
+                     <w xml:id="d1e238">halcón</w>
+                     <w xml:id="d1e240">peregrino</w>
+                  </w>
+                  <w xml:id="d1e242" xml:lang="es">
+                     <w xml:id="d1e243">halcón</w>
+                     <w xml:id="d1e245">pollero</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e232 #d1e237"/>
+                     <link target="#d1e232 #d1e242"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e232" xml:lang="en">Peregrin Falcon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span cert="medium"
+                           type="sense"
+                           target="#d1e232"
+                           corresp="https://www.wikidata.org/wiki/Q30535"/>
+                     <span type="sense"
+                           target="#d1e232"
+                           corresp="http://dbpedia.org/resource/Peregrine_falcon"/>
+                     <span type="domain"
+                           target="#d1e232"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e232"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-14.png"/>
+                  <w xml:id="d1e251" xml:lang="mix" norm="xi'an ñu'u">
+                     <w xml:id="d1e252" orig="xiꞌan">xi'an</w>
+                     <w xml:id="d1e254" orig="ñuꞌu">ñu'u</w>
+                  </w>
+                  <w xml:id="d1e256" xml:lang="es">
+                     <w xml:id="d1e257">aguililla</w>
+                     <w xml:id="d1e259">gris</w>
+                  </w>
+                  <w xml:id="d1e262" xml:lang="es">
+                     <w xml:id="d1e263">gavilán</w>
+                     <w xml:id="d1e265">barrado</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span n="1" target="#d1e251" xml:lang="en">Grey Hawk</span>
+                     <span n="2" target="#d1e251" xml:lang="en">Barred Hawk</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e251 #d1e262"/>
+                     <link target="#d1e251 #d1e256"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span n="1"
+                           type="sense"
+                           target="#"
+                           corresp="http://dbpedia.org/resource/Grey-lined_hawk"/>
+                     <span n="2"
+                           type="sense"
+                           target="#"
+                           corresp="http://dbpedia.org/resource/Barred_hawk"/>
+                     <span n="1"
+                           cert="medium"
+                           type="sense"
+                           target="#"
+                           corresp="https://www.wikidata.org/wiki/Q1260070"/>
+                     <span n="2"
+                           cert="medium"
+                           type="sense"
+                           target="#"
+                           corresp="https://www.wikidata.org/wiki/Q1270132"/>
+                     <span type="domain"
+                           target="#d1e262"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e262"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p6 -->
+            <list>
+               <item>
+                  <graphic url="Aves-15.png"/>
+                  <w xml:id="d1e273" xml:lang="mix" norm="lochi nii">
+                     <w xml:id="d1e274">lochi</w>
+                     <w xml:id="d1e276">nii</w>
+                  </w>
+                  <w xml:id="d1e278" xml:lang="es">
+                     <w xml:id="d1e279">aura</w>
+                     <w xml:id="d1e281">cabecirroja</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e273" xml:lang="en">Turkey Vulture</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e273 #d1e278"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e273"
+                           corresp="https://www.wikidata.org/wiki/Q245181"/>
+                     <span type="sense"
+                           target="#d1e273"
+                           corresp="http://dbpedia.org/resource/Turkey_vulture"/>
+                     <span type="domain"
+                           target="#d1e273"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e273"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-16.png"/>
+                  <w xml:id="d1e285" xml:lang="mix" norm="lochi ncha'i">
+                     <w xml:id="d1e286">lochi</w>
+                     <w xml:id="d1e288" orig="nchaꞌi">ncha'i</w>
+                  </w>
+                  <w xml:id="d1e290" xml:lang="es">
+                     <w xml:id="d1e291">zopilote</w>
+                     <w xml:id="d1e293">negro</w>
+                  </w>
+                  <spanGrp type="translation">
+                     <span target="#d1e285" xml:lang="en">Black Vulture</span>
+                  </spanGrp>
+                  <linkGrp type="translation">
+                     <link target="#d1e285 #d1e290"/>
+                  </linkGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e285"
+                           corresp="https://www.wikidata.org/wiki/Q213366"/>
+                     <span type="sense"
+                           target="#d1e285"
+                           corresp="http://dbpedia.org/resource/Black_vulture"/>
+                     <span type="domain"
+                           target="#d1e285"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e285"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-17.png"/>
+                  <w xml:id="d1e297" xml:lang="mix">
+                     <w xml:id="d1e298">tsikoꞌo</w>
+                  </w>
+                  <w xml:id="d1e300" xml:lang="es">
+                     <w xml:id="d1e301">caracara</w>
+                     <w xml:id="d1e303">quebranta</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e297 #d1e300"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e297" xml:lang="en">Crested Caracara</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e297"
+                           corresp="https://www.wikidata.org/wiki/Q40455928"/>
+                     <span type="sense"
+                           target="#d1e297"
+                           corresp="http://dbpedia.org/resource/Caracara_(genus)"/>
+                     <span type="note">Species of crow found in la Mixteca can be further specified. More Research needed. Dbpedia uri is for the more general (genus) of the Caracara included in which is the Crested Caracara. No uri for the more specific meronym subspecies.</span>
+                     <span type="domain"
+                           target="#d1e297"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e297"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-18.png"/>
+                  <w xml:id="d1e307" xml:lang="mix" norm="tsatu yaa">
+                     <w xml:id="d1e308">tsatu</w>
+                     <w xml:id="d1e310">yaa</w>
+                  </w>
+                  <w xml:id="d1e312" xml:lang="es">
+                     <w xml:id="d1e313">aguililla</w>
+                     <w xml:id="d1e315">coliblanca</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e307 #d1e312"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e307" xml:lang="en">White-tailed hawk</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e307"
+                           corresp="https://www.wikidata.org/wiki/Q997713"/>
+                     <span type="sense"
+                           target="#d1e307"
+                           corresp="http://dbpedia.org/resource/White-tailed_hawk"/>
+                     <span type="domain"
+                           target="#d1e307"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e307"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p7 -->
+            <list>
+               <item>
+                  <graphic url="Aves-19.png"/>
+                  <w xml:id="d1e322" xml:lang="mix">
+                     <w xml:id="d1e323">tikunchi</w>
+                  </w>
+                  <w xml:id="d1e325" xml:lang="es">
+                     <w xml:id="d1e326">tordo</w>
+                     <w xml:id="d1e328">ojirojo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e322 #d1e325"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e322" xml:lang="en">Thrush</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e322" corresp="NA"/>
+                     <span type="sense"
+                           target="#d1e322"
+                           corresp="http://dbpedia.org/resource/Thrush_(bird)"/>
+                     <span type="domain"
+                           target="#d1e322"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e322"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-20.png"/>
+                  <w xml:id="d1e332" xml:lang="mix" norm="tikunchi soko kua'a">
+                     <w xml:id="d1e333">tikunchi</w>
+                     <w xml:id="d1e335">soko</w>
+                     <w xml:id="d1e337" orig="kuaꞌa">kua'a</w>
+                  </w>
+                  <w xml:id="d1e339" xml:lang="es">
+                     <w xml:id="d1e340">tordo</w>
+                     <w xml:id="d1e342">sargento</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e332 #d1e339"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e332" xml:lang="en">Red-winged blackbird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e332"
+                           corresp="https://www.wikidata.org/wiki/Q27636532"/>
+                     <span type="sense"
+                           target="#d1e332"
+                           corresp="http://dbpedia.org/resource/Red-winged_blackbird"/>
+                     <span type="domain"
+                           target="#d1e332"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e332"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-21.png"/>
+                  <w xml:id="d1e346" xml:lang="mix" norm="saa ncha'i">
+                     <w xml:id="d1e347">saa</w>
+                     <w xml:id="d1e349">ncha'i</w>
+                  </w>
+                  <w xml:id="d1e354" xml:lang="es">
+                     <w xml:id="d1e355">zanate</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e346 #d1e354"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e346" xml:lang="en">Great-tailed grackle</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e346"
+                           corresp="https://www.wikidata.org/wiki/Q1234856"/>
+                     <span type="sense"
+                           target="#d1e346"
+                           corresp="http://dbpedia.org/resource/Great-tailed_grackle"/>
+                     <span type="domain"
+                           target="#d1e346"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e346"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-22.png"/>
+                  <w xml:id="d1e359" xml:lang="mix">
+                     <w xml:id="d1e360">tikaka</w>
+                  </w>
+                  <w xml:id="d1e362" xml:lang="es">
+                     <w xml:id="d1e363">cuervo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e359 #d1e362"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e359" xml:lang="en">Crow</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e359"
+                           cert="low"
+                           corresp="https://www.wikidata.org/wiki/Q43365"/>
+                     <!-- specific species of mexican crows!? -->
+                     <span type="sense"
+                           target="#d1e359"
+                           corresp="http://dbpedia.org/resource/Crow"/>
+                     <span type="note">Species of crow found in la Mixteca can be further specified. More Research needed.</span>
+                     <span type="domain"
+                           target="#d1e359"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e359"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-23.png"/>
+                  <w xml:id="d1e367" xml:lang="mix" norm="saa ti'la">
+                     <w xml:id="d1e368">saa</w>
+                     <w xml:id="d1e370" orig="tiꞌla">ti'la</w>
+                  </w>
+                  <w xml:id="d1e372" xml:lang="mix" norm="saa tuli">
+                     <w xml:id="d1e373">saa</w>
+                     <w xml:id="d1e375">tuli</w>
+                  </w>
+                  <w xml:id="d1e377" xml:lang="es">
+                     <w xml:id="d1e378">garrapatero</w>
+                     <w xml:id="d1e380">pijuy</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e367 #d1e377"/>
+                     <link target="#d1e372 #d1e377"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e367 #d1e372" xml:lang="en">Groove-billed ani</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e367 #d1e372"
+                           corresp="https://www.wikidata.org/wiki/Q791145"/>
+                     <span type="sense"
+                           target="#d1e367 #d1e372"
+                           corresp="http://dbpedia.org/resource/Groove-billed_ani"/>
+                     <span type="domain"
+                           target="#d1e367 #d1e372"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e367 #d1e372"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p8 -->
+            <list>
+               <item>
+                  <graphic url="Aves-24.png"/>
+                  <w xml:id="d1e387" xml:lang="mix">
+                     <w xml:id="d1e388">sata</w>
+                  </w>
+                  <w xml:id="d1e390" xml:lang="es">
+                     <w xml:id="d1e391">paloma</w>
+                     <w xml:id="d1e393">doméstic</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e387 #d1e390"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e387" xml:lang="en">Pigeon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e387"
+                           corresp="https://www.wikidata.org/wiki/Q7354625"/>
+                     <span type="sense"
+                           target="#d1e387"
+                           corresp="http://dbpedia.org/resource/Pigeon"/>
+                     <span type="domain"
+                           target="#d1e387"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e387"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-25.png"/>
+                  <w xml:id="d1e397" xml:lang="mix" norm="nchuu nukua'a">
+                     <w xml:id="d1e398">nchuu</w>
+                     <w xml:id="d1e400" orig="nukuaꞌa">nukua'a</w>
+                  </w>
+                  <w xml:id="d1e402" xml:lang="mix" norm="nchuu tsa'a kua'a">
+                     <w xml:id="d1e403">nchuu</w>
+                     <w xml:id="d1e405" orig="tsaꞌa">tsa'a</w>
+                     <w xml:id="d1e407" orig="kuaꞌa">kua'a</w>
+                  </w>
+                  <w xml:id="d1e409" xml:lang="es">
+                     <w xml:id="d1e410">paloma</w>
+                     <w xml:id="d1e412">perdiz</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e397 #d1e409"/>
+                     <link target="#d1e402 #d1e409"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e397 #d1e402" xml:lang="en">Tuxtla quail-dove</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e397 #d1e402"
+                           corresp="https://www.wikidata.org/wiki/Q1009577"/>
+                     <span type="sense"
+                           target="#d1e397 #d1e402"
+                           corresp="http://dbpedia.org/resource/Tuxtla_quail-dove"/>
+                     <span type="domain"
+                           target="#d1e397 #d1e402"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e397 #d1e402"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-26.png"/>
+                  <w xml:id="d1e416" xml:lang="mix" norm="nchuu yuku">
+                     <w xml:id="d1e417">nchuu</w>
+                     <w xml:id="d1e419">yuku</w>
+                  </w>
+                  <w xml:id="d1e421" xml:lang="mix" norm="nchuu ya'a">
+                     <w xml:id="d1e422">nchuu</w>
+                     <w xml:id="d1e424" orig="yaꞌa">ya'a</w>
+                  </w>
+                  <w xml:id="d1e426" xml:lang="es">
+                     <w xml:id="d1e427">paloma</w>
+                     <w xml:id="d1e429">arroyera</w>
+                  </w>
+                  <w xml:id="d1e431" xml:lang="es">
+                     <w xml:id="d1e432">paloma</w>
+                     <w xml:id="d1e434">turca</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#1e416 #d1e426"/>
+                     <link target="#1e416 #d1e431"/>
+                     <link target="#d1e421 #d1e426"/>
+                     <link target="#d1e421 #d1e431"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#1e416 #d1e421" xml:lang="en">Eurasian Collared Dove</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#1e416 #d1e421"
+                           corresp="https://www.wikidata.org/wiki/Q54696"/>
+                     <span type="sense"
+                           target="#1e416 #d1e421"
+                           corresp="http://dbpedia.org/resource/Eurasian_collared_dove"/>
+                     <span type="domain"
+                           target="#1e416 #d1e421"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#1e416 #d1e421"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-27.png"/>
+                  <w xml:id="d1e438" xml:lang="mix">
+                     <w xml:id="d1e439">lakuku</w>
+                  </w>
+                  <w xml:id="d1e441" xml:lang="es">
+                     <w xml:id="d1e442">tortolita</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e438 #d1e441"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e438" xml:lang="en">Mourning Dove</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e438"
+                           corresp="https://www.wikidata.org/wiki/Q1386698"/>
+                     <span type="sense"
+                           target="#d1e438"
+                           corresp="http://dbpedia.org/resource/Mourning_dove"/>
+                     <span type="domain"
+                           target="#d1e438"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e438"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-28.png"/>
+                  <w xml:id="d1e446" xml:lang="mix" norm="nchuu lunchi">
+                     <w xml:id="d1e447">nchuu</w>
+                     <w xml:id="d1e449">lunchi</w>
+                  </w>
+                  <w xml:id="d1e451" xml:lang="es">
+                     <w xml:id="d1e452">tórtola</w>
+                     <w xml:id="d1e454">común</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e446 #d1e451"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e446" xml:lang="en">European turtle dove</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e446"
+                           corresp="https://www.wikidata.org/wiki/Q168514"/>
+                     <span type="sense"
+                           target="#d1e446"
+                           corresp="http://dbpedia.org/resource/European_turtle_dove"/>
+                     <span type="domain"
+                           target="#d1e446"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e446"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p9 -->
+            <list>
+               <item>
+                  <graphic url="Aves-29.png"/>
+                  <w xml:id="d1e461" xml:lang="mix" norm="nchuu kava">
+                     <w xml:id="d1e462">nchuu</w>
+                     <w xml:id="d1e464">kava</w>
+                  </w>
+                  <w xml:id="d1e466" xml:lang="es">
+                     <w xml:id="d1e467">paloma</w>
+                     <w xml:id="d1e469">morada</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e461 #d1e466"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e461" xml:lang="en">Pale-vented Pigeon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e461"
+                           corresp="https://www.wikidata.org/wiki/Q1263074"/>
+                     <span type="sense"
+                           target="#d1e461"
+                           corresp="http://dbpedia.org/resource/Pale-vented_pigeon"/>
+                     <span type="domain"
+                           target="#d1e461"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e461"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-30.png"/>
+                  <w xml:id="d1e473" xml:lang="mix" norm="nchuu ku'u">
+                     <w xml:id="d1e474">nchuu</w>
+                     <w xml:id="d1e476" orig="kuꞌu">ku'u</w>
+                  </w>
+                  <w xml:id="d1e478" xml:lang="mix" norm="nchuu nuu ku'u">
+                     <w xml:id="d1e479">nchuu</w>
+                     <w xml:id="d1e481">nuu</w>
+                     <w xml:id="d1e483" orig="kuꞌu">ku'u</w>
+                  </w>
+                  <w xml:id="d1e485" xml:lang="es">
+                     <w xml:id="d1e486">paloma</w>
+                     <w xml:id="d1e488">huilota</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e473 #d1e485"/>
+                     <link target="#d1e478 #d1e485"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e473 #d1e478" xml:lang="en">Ruddy Ground Dove</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e473 #d1e478"
+                           corresp="https://www.wikidata.org/wiki/Q750027"/>
+                     <span type="sense"
+                           target="#d1e473 #d1e478"
+                           corresp="http://dbpedia.org/resource/Ruddy_ground_dove"/>
+                     <span type="domain"
+                           target="#d1e473 #d1e478"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e473 #d1e478"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-31.png"/>
+                  <w xml:id="d1e492" xml:lang="mix" norm="nchuu xchila">
+                     <w xml:id="d1e493">nchuu</w>
+                     <w xml:id="d1e495">xchila</w>
+                  </w>
+                  <w xml:id="d1e497" xml:lang="es">
+                     <w xml:id="d1e498">paloma</w>
+                     <w xml:id="d1e500">doméstica</w>
+                     <w xml:id="d1e502">con</w>
+                     <w xml:id="d1e504">collar</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e492 #d1e497"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e492" xml:lang="en" cert="medium">Collared dove</span>
+                     <!-- not the same as "Streptopelia decaocto"? -->
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e492"
+                           corresp="https://www.wikidata.org/wiki/Q54696"/>
+                     <span type="sense"
+                           target="#d1e492"
+                           corresp="http://dbpedia.org/resource/Eurasian_collared_dove"/>
+                     <span type="domain"
+                           target="#d1e492"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e492"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-32.png"/>
+                  <w xml:id="d1e508" xml:lang="mix" norm="nchuu ntsitsi">
+                     <w xml:id="d1e509">nchuu</w>
+                     <w xml:id="d1e511">ntsitsi</w>
+                  </w>
+                  <w xml:id="d1e513" xml:lang="es">
+                     <w xml:id="d1e514">pintu</w>
+                     <w xml:id="d1e516">paloma</w>
+                     <w xml:id="d1e518">aliblanca</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e508 #d1e513"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e508" xml:lang="en">White-winged Dove</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e508"
+                           corresp="https://www.wikidata.org/wiki/Q917542"/>
+                     <span type="sense"
+                           target="#d1e508"
+                           corresp="http://dbpedia.org/resource/White-winged_dove"/>
+                     <span type="domain"
+                           target="#d1e508"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e508"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p10 -->
+            <list>
+               <item>
+                  <graphic url="Aves-33.png"/>
+                  <w xml:id="d1e525" xml:lang="mix" norm="koni yuku">
+                     <w xml:id="d1e526">koni</w>
+                     <w xml:id="d1e528">yuku</w>
+                  </w>
+                  <w xml:id="d1e530" xml:lang="es">
+                     <w xml:id="d1e531">pava</w>
+                     <w xml:id="d1e533">cojolita</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e525 #d1e530"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e525" xml:lang="en">Crested Guan</span>
+                  </spanGrp>
+                  <spanGrp type="translation">
+                     <span type="literal" target="#d1e525" xml:lang="en">mountain turkey</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e525"
+                           corresp="https://www.wikidata.org/wiki/Q848140"/>
+                     <span type="sense"
+                           target="#d1e525"
+                           corresp="http://dbpedia.org/resource/Crested_guan"/>
+                     <span type="domain"
+                           target="#d1e525"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e525"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-34.png"/>
+                  <w xml:id="d1e537" xml:lang="mix">
+                     <w xml:id="d1e538">lachacha</w>
+                  </w>
+                  <w xml:id="d1e540" xml:lang="es">
+                     <w xml:id="d1e541">chachalaca</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e537 #d1e540"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e537" xml:lang="en">Chachalaca</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e537"
+                           corresp="http://dbpedia.org/resource/Chachalaca"/>
+                     <span type="sense"
+                           target="#d1e537"
+                           corresp="https://www.wikidata.org/wiki/Q777139"/>
+                     <span type="note">Not sure of specific variety of 'chachalaca'.</span>
+                     <span type="domain"
+                           target="#d1e537"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e537"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-35.png"/>
+                  <w xml:id="d1e545" xml:lang="mix">
+                     <w xml:id="d1e546">kañuu</w>
+                  </w>
+                  <w xml:id="d1e548" xml:lang="es">
+                     <w xml:id="d1e549">codorniz</w>
+                     <w xml:id="d1e551">arlequín</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#1e545 #d1e548"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#1e545" xml:lang="en">Montezuma Quail</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#1e545"
+                           corresp="https://www.wikidata.org/wiki/Q1093509"/>
+                     <span type="sense"
+                           target="#1e545"
+                           corresp="http://dbpedia.org/resource/Montezuma_quail"/>
+                     <span type="domain"
+                           target="#1e545"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#1e545"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-36.png"/>
+                  <w xml:id="d1e555" xml:lang="mix">
+                     <w xml:id="d1e556">kañuu</w>
+                  </w>
+                  <w xml:id="d1e558" xml:lang="es">
+                     <w xml:id="d1e559">codorniz</w>
+                     <w xml:id="d1e561">cotuí</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e555 #d1e558"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e555" xml:lang="en">Northern Bobwhite</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e555"
+                           corresp="https://www.wikidata.org/wiki/Q142651"/>
+                     <span type="sense"
+                           target="#d1e555"
+                           corresp="http://dbpedia.org/resource/Northern_bobwhite"/>
+                     <span type="domain"
+                           target="#d1e555"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e555"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-37.png"/>
+                  <w xml:id="d1e565" xml:lang="mix" norm="chuun yuku">
+                     <w xml:id="d1e566">chuun</w>
+                     <w xml:id="d1e568">yuku</w>
+                  </w>
+                  <w xml:id="d1e570" xml:lang="es">
+                     <w xml:id="d1e571">gallina</w>
+                     <w xml:id="d1e573">del</w>
+                     <w xml:id="d1e575">monte</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e565 #d1e570"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e565" xml:lang="en" cert="medium">Buffy-crowned wood partridge</span>
+                     <span target="#d1e565" xml:lang="en" type="literal">mountain chicken</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           cert="medium"
+                           target="#d1e565"
+                           corresp="https://www.wikidata.org/wiki/Q1268985"/>
+                     <span type="sense"
+                           cert="medium"
+                           target="#d1e565"
+                           corresp="http://dbpedia.org/resource/Buffy-crowned_wood_partridge"/>
+                     <span type="domain"
+                           target="#d1e565"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e565"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p11 -->
+            <list>
+               <item>
+                  <graphic url="Aves-38.png"/>
+                  <w xml:id="d1e582" xml:lang="mix" norm="saa mi'ncha">
+                     <w xml:id="d1e583">saa</w>
+                     <w xml:id="d1e585" orig="miꞌncha">mi'ncha</w>
+                  </w>
+                  <w xml:id="d1e587" xml:lang="es">
+                     <w xml:id="d1e588">cuitlacoche</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e582 #d1e587"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e582" xml:lang="en" cert="medium">Ocellated Thrasher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e582"
+                           corresp="https://www.wikidata.org/wiki/Q1923531"/>
+                     <span type="sense"
+                           target="#d1e582"
+                           corresp="http://dbpedia.org/resource/Ocellated_thrasher"/>
+                     <span type="note">
+                        <note resp="#JB" xml:lang="en">Not entirely certain of the specific subspecies of Thrasher, but judging from the content of the following Wikipedia article: <ptr target="https://es.wikipedia.org/wiki/Toxostoma"/> it seems most likely that it is the Ocellated Thrasher.</note>
+                     </span>
+                     <span type="domain"
+                           target="#d1e582"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e582"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-39.png"/>
+                  <w xml:id="d1e592" xml:lang="mix" norm="saa ñu'ma">
+                     <w xml:id="d1e593">saa</w>
+                     <w xml:id="d1e595" orig="ñuꞌma">ñu'ma</w>
+                  </w>
+                  <w xml:id="d1e597" xml:lang="es">
+                     <w xml:id="d1e598">primavera</w>
+                     <w xml:id="d1e600">zorzal</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e592 #d1e597"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e592" xml:lang="en">American Robin</span>
+                     <span target="#d1e592" xml:lang="en">Robin</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e592"
+                           corresp="https://www.wikidata.org/wiki/Q460967"/>
+                     <span type="sense"
+                           target="#d1e592"
+                           corresp="http://dbpedia.org/resource/American_robin"/>
+                     <span type="domain"
+                           target="#d1e592"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e592"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-40.png"/>
+                  <w xml:id="d1e604" xml:lang="mix">
+                     <w xml:id="d1e605" norm="lasuꞌun">lasu'un</w>
+                  </w>
+                  <w xml:id="d1e607" xml:lang="es">
+                     <w xml:id="d1e608">correcaminos</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e604 #d1e607"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e604" xml:lang="en">Roadrunner</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e604"
+                           corresp="https://www.wikidata.org/wiki/Q1452250"/>
+                     <span type="sense"
+                           target="#d1e604"
+                           corresp="http://dbpedia.org/resource/Roadrunner"/>
+                     <span type="domain"
+                           target="#d1e604"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e604"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-41.png"/>
+                  <w xml:id="d1e612" xml:lang="mix">
+                     <w xml:id="d1e613">lasimi</w>
+                  </w>
+                  <w xml:id="d1e615" xml:lang="es">
+                     <w xml:id="d1e616">rascador</w>
+                     <w xml:id="d1e618">oaxaqueño</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e612 #d1e615"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e612" xml:lang="en">White-throated Towhee</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e612"
+                           corresp="https://www.wikidata.org/wiki/Q1935552"/>
+                     <span type="sense"
+                           target="#d1e612"
+                           corresp="http://dbpedia.org/resource/White-throated_towhee"/>
+                     <span type="domain"
+                           target="#d1e612"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e612"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-42.png"/>
+                  <w xml:id="d1e622" xml:lang="mix" norm="saa ntaka">
+                     <w xml:id="d1e623">saa</w>
+                     <w xml:id="d1e625">ntaka</w>
+                  </w>
+                  <w xml:id="d1e627" xml:lang="mix">
+                     <w xml:id="d1e628">lasimi</w>
+                  </w>
+                  <w xml:id="d1e630" xml:lang="es">
+                     <w xml:id="d1e631">rascador</w>
+                     <w xml:id="d1e633">pardo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e622 #d1e630"/>
+                     <link target="#d1e627 #d1e630"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e622" xml:lang="en">Canyon Towhee</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e622 #d1e627"
+                           corresp="https://www.wikidata.org/wiki/Q3180746"/>
+                     <span type="sense"
+                           target="#d1e622 #d1e627"
+                           corresp="http://dbpedia.org/resource/Canyon_towhee"/>
+                     <span type="domain"
+                           target="#d1e622 #d1e627"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e622 #d1e627"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p12 -->
+            <list>
+               <item>
+                  <graphic url="Aves-43.png"/>
+                  <w xml:id="d1e640" xml:lang="mix">
+                     <w xml:id="d1e641">kuili</w>
+                  </w>
+                  <w xml:id="d1e643" xml:lang="es">
+                     <w xml:id="d1e644">chara</w>
+                     <w xml:id="d1e646">azuleja</w>
+                  </w>
+                  <w xml:id="d1e648" xml:lang="es">
+                     <w xml:id="d1e649">chara</w>
+                     <w xml:id="d1e651">pechirrayada</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e640 #d1e643"/>
+                     <link target="#d1e640 #d1e648"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e640" xml:lang="en">Woodhouse's scrub jay</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e640"
+                           cert="high"
+                           corresp="https://www.wikidata.org/wiki/Q14908008"/>
+                     <span type="sense"
+                           target="#d1e640"
+                           cert="high"
+                           corresp="http://dbpedia.org/resource/Woodhouse's_scrub_jay"/>
+                     <span type="sense"
+                           target="#d1e640"
+                           cert="low"
+                           corresp="https://www.wikidata.org/wiki/Q942604"/>
+                     <span type="sense"
+                           target="#d1e640"
+                           cert="low"
+                           corresp="http://dbpedia.org/resource/Mexican_jay"/>
+                     <span type="note">
+                        <note resp="#JB" xml:lang="en">Not clear whether this bird is referring to the Woodhouse's Scrub Jay or the Mexican Scub Jay as their territories overlap and may both be found in La Mixtec (at least according to the maps found in the following locations: <ptr target="https://www.allaboutbirds.org/guide/Woodhouses_Scrub-Jay/id"/>
+                           <ptr target="https://www.allaboutbirds.org/guide/Mexican_Jay/id"/>. However based on the picture in the document, it would appear to be a Woodhouse's Scrub Jay as each have a clear white line over the eye brows.</note>
+                     </span>
+                     <span type="domain"
+                           target="#d1e640"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e640"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-44.png"/>
+                  <w xml:id="d1e655" xml:lang="mix" norm="saa ntakuatu">
+                     <w xml:id="d1e656">saa</w>
+                     <w xml:id="d1e658">ntakuatu</w>
+                  </w>
+                  <w xml:id="d1e660" xml:lang="mix" norm="saa veñu'u">
+                     <w xml:id="d1e661">saa</w>
+                     <w xml:id="d1e663" orig="veñuꞌu">veñu'u</w>
+                  </w>
+                  <w xml:id="d1e665" xml:lang="es">
+                     <w xml:id="d1e666">cenzontle</w>
+                     <w xml:id="d1e668">aliblanco</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e655 #d1e665"/>
+                     <link target="#d1e660 #d1e665"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e655 #d1e660" xml:lang="en">Northern Mockingbird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e655 #d1e660"
+                           corresp="https://www.wikidata.org/wiki/Q829683"/>
+                     <span type="sense"
+                           target="#d1e655 #d1e660"
+                           corresp="http://dbpedia.org/resource/Northern_mockingbird"/>
+                     <span type="domain"
+                           target="#d1e655 #d1e660"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e655 #d1e660"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-45.png"/>
+                  <w xml:id="d1e672" xml:lang="mix" norm="saa nchaa yuku">
+                     <w xml:id="d1e673">saa</w>
+                     <w xml:id="d1e675">nchaa</w>
+                     <w xml:id="d1e677">yuku</w>
+                  </w>
+                  <w xml:id="d1e679" xml:lang="es">
+                     <w xml:id="d1e680">chara</w>
+                     <w xml:id="d1e682">copetona</w>
+                  </w>
+                  <w xml:id="d1e684" xml:lang="es">
+                     <w xml:id="d1e685">chara</w>
+                     <w xml:id="d1e687">crestada</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e672 #d1e679"/>
+                     <link target="#d1e672 #d1e684"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e672" xml:lang="en">Stellar's jay</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e672"
+                           corresp="https://www.wikidata.org/wiki/Q838749"/>
+                     <span type="sense"
+                           target="#d1e672"
+                           corresp="http://dbpedia.org/resource/Steller's_jay"/>
+                     <span type="domain"
+                           target="#d1e672"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e672"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-46.png"/>
+                  <w xml:id="d1e691" xml:lang="mix" norm="saa vilu">
+                     <w xml:id="d1e692">saa</w>
+                     <w xml:id="d1e694">vilu</w>
+                  </w>
+                  <w xml:id="d1e696" xml:lang="es">
+                     <w xml:id="d1e697">mímido</w>
+                     <w xml:id="d1e699">gris</w>
+                  </w>
+                  <w xml:id="d1e701" xml:lang="es">
+                     <w xml:id="d1e702">pájaro</w>
+                     <w xml:id="d1e704">gato</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e691 #d1e696"/>
+                     <link target="#d1e691 #d1e701"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e691" xml:lang="en">Gray catbird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e691"
+                           corresp="https://www.wikidata.org/wiki/Q831597"/>
+                     <span type="sense"
+                           target="#d1e691"
+                           corresp="http://dbpedia.org/resource/Gray_catbird"/>
+                     <span type="domain"
+                           target="#d1e691"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e691"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-47.png"/>
+                  <w xml:id="d1e708" xml:lang="mix" norm="saa nuu nchaa">
+                     <w xml:id="d1e709">saa</w>
+                     <w xml:id="d1e711">nuu</w>
+                     <w xml:id="d1e713">nchaa</w>
+                  </w>
+                  <w xml:id="d1e715" xml:lang="mix" norm="saa nchaa">
+                     <w xml:id="d1e716">saa</w>
+                     <w xml:id="d1e718">nchaa</w>
+                  </w>
+                  <w xml:id="d1e720" xml:lang="mix">
+                     <w xml:id="d1e721">tsili</w>
+                  </w>
+                  <w xml:id="d1e723" xml:lang="es">
+                     <w xml:id="d1e724">cenzontle</w>
+                     <w xml:id="d1e726">azul</w>
+                  </w>
+                  <w xml:id="d1e728" xml:lang="es">
+                     <w xml:id="d1e729">mulato</w>
+                     <w xml:id="d1e731">común</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e708 #d1e723"/>
+                     <link target="#d1e715 #d1e723"/>
+                     <link target="#d1e720 #d1e723"/>
+                     <link target="#d1e708 #d1e728"/>
+                     <link target="#d1e715 #d1e728"/>
+                     <link target="#d1e720 #d1e728"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e708 #d1e715 #d1e720" xml:lang="en">Blue Mockingbird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e708 #d1e715 #d1e720"
+                           corresp="https://www.wikidata.org/wiki/Q1587047"/>
+                     <span type="sense"
+                           target="#d1e708 #d1e715 #d1e720"
+                           corresp="http://dbpedia.org/resource/Blue_mockingbird"/>
+                     <span type="domain"
+                           target="#d1e708 #d1e715 #d1e720"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e708 #d1e715 #d1e720"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p13 -->
+            <list>
+               <item>
+                  <graphic url="Aves-48.png"/>
+                  <w xml:id="d1e738" xml:lang="mix" norm="saa kuun savi">
+                     <w xml:id="d1e739">saa</w>
+                     <w xml:id="d1e741">kuun</w>
+                     <w xml:id="d1e743">savi</w>
+                  </w>
+                  <w xml:id="d1e745" xml:lang="es">
+                     <w xml:id="d1e746">tengofrío</w>
+                     <w xml:id="d1e748">grande</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e738 #d1e745"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e738" xml:lang="en">Greater pewee</span>
+                     <span target="#d1e738" xml:lang="en" type="literal">rain bird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e738"
+                           corresp="https://www.wikidata.org/wiki/Q1263607"/>
+                     <span type="sense"
+                           target="#d1e738"
+                           corresp="http://dbpedia.org/resource/Greater_pewee"/>
+                     <span type="domain"
+                           target="#d1e738"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e738"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-49.png"/>
+                  <w xml:id="d1e752" xml:lang="mix" norm="xini nkava">
+                     <w xml:id="d1e753">xini</w>
+                     <w xml:id="d1e755">nkava</w>
+                  </w>
+                  <w xml:id="d1e757" xml:lang="es">
+                     <w xml:id="d1e758">trogón</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e752 #d1e757"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e752" xml:lang="en">Elegant Trogon</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e752"
+                           corresp="https://www.wikidata.org/wiki/Q632823"/>
+                     <span type="sense"
+                           target="#d1e752"
+                           corresp="http://dbpedia.org/resource/Elegant_trogon"/>
+                     <span type="domain"
+                           target="#d1e752"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e752"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-50.png"/>
+                  <w xml:id="d1e762" xml:lang="mix" norm="saa friu">
+                     <w xml:id="d1e763">saa</w>
+                     <w xml:id="d1e765">friu</w>
+                  </w>
+                  <w xml:id="d1e767" xml:lang="es">
+                     <w xml:id="d1e768">papamoscas</w>
+                     <w xml:id="d1e770">copetón</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e762 #d1e767"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e762" xml:lang="en">Northern tufted flycatcher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e762"
+                           corresp="https://www.wikidata.org/wiki/Q1268784"/>
+                     <span type="sense"
+                           target="#d1e762"
+                           corresp="http://dbpedia.org/resource/Northern_tufted_flycatcher"/>
+                     <span type="domain"
+                           target="#d1e762"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e762"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-51.png"/>
+                  <w xml:id="d1e774" xml:lang="mix">
+                     <w xml:id="d1e775">tixiñu</w>
+                  </w>
+                  <w xml:id="d1e777" xml:lang="mix" norm="saa kula">
+                     <w xml:id="d1e778">saa</w>
+                     <w xml:id="d1e780">kula</w>
+                  </w>
+                  <w xml:id="d1e782" xml:lang="es">
+                     <w xml:id="d1e783">capulinero</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e774 #d1e782"/>
+                     <link target="#d1e777 #d1e782"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e774 #d1e777" xml:lang="en">Grey silky-flycatcher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e774 #d1e777"
+                           corresp="https://www.wikidata.org/wiki/Q3176494"/>
+                     <span type="sense"
+                           target="#d1e774 #d1e777"
+                           corresp="http://dbpedia.org/resource/Grey_silky-flycatcher"/>
+                     <span type="domain"
+                           target="#d1e774 #d1e777"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e774 #d1e777"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-52.png"/>
+                  <w xml:id="d1e787" xml:lang="mix" norm="saa xini tachi">
+                     <w xml:id="d1e788">saa</w>
+                     <w xml:id="d1e790">xini</w>
+                     <w xml:id="d1e792">tachi</w>
+                  </w>
+                  <w xml:id="d1e794" xml:lang="es">
+                     <w xml:id="d1e795">verdugo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e787 #d1e794"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e787" xml:lang="en">Loggerhead shrike</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e787"
+                           corresp="https://www.wikidata.org/wiki/Q430863"/>
+                     <span type="sense"
+                           target="#d1e787"
+                           corresp="http://dbpedia.org/resource/Loggerhead_shrike"/>
+                     <span type="domain"
+                           target="#d1e787"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e787"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p14 -->
+            <list>
+               <item>
+                  <graphic url="Aves-53.png"/>
+                  <w xml:id="d1e803" xml:lang="mix" norm="tixikua na'nu">
+                     <w xml:id="d1e804">tixikua</w>
+                     <w xml:id="d1e806" orig="naꞌnu">na'nu</w>
+                  </w>
+                  <w xml:id="d1e808" xml:lang="es">
+                     <w xml:id="d1e809">vencejo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e803 #d1e808"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e803" xml:lang="en">Common swift</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e803"
+                           corresp="https://www.wikidata.org/wiki/Q25377"/>
+                     <span type="sense"
+                           target="#d1e803"
+                           corresp="http://dbpedia.org/resource/Common_swift"/>
+                     <span type="domain"
+                           target="#d1e803"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e803"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-54.png"/>
+                  <w xml:id="d1e813" xml:lang="mix">
+                     <w xml:id="d1e814">ntintatsa</w>
+                  </w>
+                  <w xml:id="d1e816" xml:lang="mix">
+                     <w xml:id="d1e817">ntikaan</w>
+                  </w>
+                  <w xml:id="d1e819" xml:lang="mix">
+                     <w xml:id="d1e820">lakaan</w>
+                  </w>
+                  <w xml:id="d1e822" xml:lang="es">
+                     <w xml:id="d1e823">korro</w>
+                  </w>
+                  <w xml:id="d1e825" xml:lang="es">
+                     <w xml:id="d1e826">momoto</w>
+                  </w>
+                  <w xml:id="d1e828" xml:lang="es">
+                     <w xml:id="d1e829">turco</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e813 #d1e822"/>
+                     <link target="#d1e813 #d1e825"/>
+                     <link target="#d1e813 #d1e828"/>
+                     <link target="#d1e816 #d1e822"/>
+                     <link target="#d1e816 #d1e825"/>
+                     <link target="#d1e816 #d1e828"/>
+                     <link target="#d1e819 #d1e822"/>
+                     <link target="#d1e819 #d1e825"/>
+                     <link target="#d1e819 #d1e828"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e813 #d1e816 #d1e819" xml:lang="en">Amazonian motmot</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e813 #d1e816 #d1e819" corresp="NA"/>
+                     <span type="sense"
+                           target="#d1e813 #d1e816 #d1e819"
+                           corresp="http://dbpedia.org/resource/Amazonian_motmot"/>
+                     <span type="domain"
+                           target="#d1e813 #d1e816 #d1e819"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e813 #d1e816 #d1e819"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-55.png"/>
+                  <w xml:id="d1e833" xml:lang="mix" norm="saa kuaan ntipintu">
+                     <w xml:id="d1e834">saa</w>
+                     <w xml:id="d1e836">kuaan</w>
+                     <w xml:id="d1e838">ntipintu</w>
+                  </w>
+                  <w xml:id="d1e840" xml:lang="es">
+                     <w xml:id="d1e841">picogrueso</w>
+                     <w xml:id="d1e843">amarillo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e833 #d1e840"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e833" xml:lang="en">Mexican yellow grosbeak</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e833" corresp="NA"/>
+                     <span type="sense"
+                           target="#d1e833"
+                           corresp="http://dbpedia.org/resource/Mexican_yellow_grosbeak"/>
+                     <span type="domain"
+                           target="#d1e833"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e833"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-56.png"/>
+                  <w xml:id="d1e847" xml:lang="mix" norm="sti'in kuaan">
+                     <w xml:id="d1e848" orig="stiꞌin">sti'in</w>
+                     <w xml:id="d1e850">kuaan</w>
+                  </w>
+                  <w xml:id="d1e852" xml:lang="es">
+                     <w xml:id="d1e853">picogrueso</w>
+                     <w xml:id="d1e855">pechicafé</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e847 #d1e852"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e847" xml:lang="en">Black-headed Grosbeak</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e847"
+                           corresp="https://www.wikidata.org/wiki/Q998547"/>
+                     <span type="sense"
+                           target="#d1e847"
+                           corresp="http://dbpedia.org/resource/Black-headed_grosbeak"/>
+                     <span type="domain"
+                           target="#d1e847"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e847"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-57.png"/>
+                  <w xml:id="d1e859" xml:lang="mix" norm="sti'in nchaa">
+                     <w xml:id="d1e860" orig="stiꞌin">sti'in</w>
+                     <w xml:id="d1e862">nchaa</w>
+                  </w>
+                  <w xml:id="d1e864" xml:lang="es">
+                     <w xml:id="d1e865">picogrueso</w>
+                     <w xml:id="d1e867">azul</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e859 #d1e864"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e859" xml:lang="en">Blue grosbeak</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e859"
+                           corresp="https://www.wikidata.org/wiki/Q794337"/>
+                     <span type="sense"
+                           target="#d1e859"
+                           corresp="http://dbpedia.org/resource/Blue_grosbeak"/>
+                     <span type="domain"
+                           target="#d1e859"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e859"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p15 -->
+            <list>
+               <item>
+                  <graphic url="Aves-58.png"/>
+                  <w xml:id="d1e874" xml:lang="mix">
+                     <w xml:id="d1e875">tixikua</w>
+                  </w>
+                  <w xml:id="d1e877" xml:lang="es">
+                     <w xml:id="d1e878">golondrina</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e874 #d1e877"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e874" xml:lang="en">Swallow</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e874"
+                           corresp="https://www.wikidata.org/wiki/Q1401371"/>
+                     <span type="sense"
+                           target="#d1e874"
+                           corresp="http://dbpedia.org/resource/Swallow"/>
+                     <span type="domain"
+                           target="#d1e874"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e874"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-59.png"/>
+                  <w xml:id="d1e882" xml:lang="mix">
+                     <w xml:id="d1e883">letsa</w>
+                  </w>
+                  <w xml:id="d1e885" xml:lang="mix" norm="saa kua'a">
+                     <w xml:id="d1e886">saa</w>
+                     <w xml:id="d1e888" orig="kuaꞌa">kua'a</w>
+                  </w>
+                  <w xml:id="d1e890" xml:lang="mix" norm="saa kusu kiti luu">
+                     <w xml:id="d1e891">saa</w>
+                     <w xml:id="d1e893">kusu</w>
+                     <w xml:id="d1e895">kiti</w>
+                     <w xml:id="d1e897">luu</w>
+                  </w>
+                  <w xml:id="d1e899" xml:lang="es">
+                     <w xml:id="d1e900">mosquero</w>
+                     <w xml:id="d1e902">cardenalito</w>
+                  </w>
+                  <w xml:id="d1e904" xml:lang="es">
+                     <w xml:id="d1e905">venturilla</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e882 #d1e899"/>
+                     <link target="#d1e882 #d1e904"/>
+                     <link target="#d1e885 #d1e899"/>
+                     <link target="#d1e885 #d1e904"/>
+                     <link target="#d1e890 #d1e899"/>
+                     <link target="#d1e890 #d1e904"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e882 #d1e885 #d1e890" xml:lang="en">Vermilion flycatcher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e882 #d1e885 #d1e890"
+                           corresp="https://www.wikidata.org/wiki/Q572657"/>
+                     <span type="sense"
+                           target="#d1e882 #d1e885 #d1e890"
+                           corresp="http://dbpedia.org/resource/Vermilion_flycatcher"/>
+                     <span type="domain"
+                           target="#d1e882 #d1e885 #d1e890"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e882 #d1e885 #d1e890"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-60.png"/>
+                  <w xml:id="d1e909" xml:lang="mix">
+                     <w xml:id="d1e910">tivatsa</w>
+                  </w>
+                  <w xml:id="d1e912" xml:lang="es">
+                     <w xml:id="d1e913">golondrina</w>
+                     <w xml:id="d1e915">cariblanca</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e909 #d1e912"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e909" xml:lang="en">Violet-green Swallow</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e909"
+                           corresp="https://www.wikidata.org/wiki/Q1059968"/>
+                     <span type="sense"
+                           target="#d1e909"
+                           corresp="http://dbpedia.org/resource/Violet-green_swallow"/>
+                     <span type="domain"
+                           target="#d1e909"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e909"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-61.png"/>
+                  <w xml:id="d1e919" xml:lang="mix" norm="saa kua'a">
+                     <w xml:id="d1e920">saa</w>
+                     <w xml:id="d1e922" orig="kuaꞌa">kua'a</w>
+                  </w>
+                  <w xml:id="d1e924" xml:lang="mix" norm="saa cha'a">
+                     <w xml:id="d1e925">saa</w>
+                     <w xml:id="d1e927" orig="chaꞌa">cha'a</w>
+                  </w>
+                  <w xml:id="d1e929" xml:lang="es">
+                     <w xml:id="d1e930">tangara</w>
+                     <w xml:id="d1e932">roja</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e919 #d1e929"/>
+                     <link target="#d1e924 #d1e929"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e919 #d1e924" xml:lang="en">Summer tanager</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e919 #d1e924"
+                           corresp="https://www.wikidata.org/wiki/Q1078246"/>
+                     <span type="sense"
+                           target="#d1e919 #d1e924"
+                           corresp="http://dbpedia.org/resource/Summer_tanager"/>
+                     <span type="domain"
+                           target="#d1e919 #d1e924"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e919 #d1e924"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-62.png"/>
+                  <w xml:id="d1e936" xml:lang="mix" norm="saa kuaan xini kua'a">
+                     <w xml:id="d1e937">saa</w>
+                     <w xml:id="d1e939">kuaan</w>
+                     <w xml:id="d1e941">xini</w>
+                     <w xml:id="d1e943" orig="kuaꞌa">kua'a</w>
+                  </w>
+                  <w xml:id="d1e945" xml:lang="es">
+                     <w xml:id="d1e946">tangara</w>
+                     <w xml:id="d1e948">aliblanco</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e936 #d1e945"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e936" xml:lang="en">Western tanager</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e936"
+                           corresp="https://www.wikidata.org/wiki/Q384342"/>
+                     <span type="sense"
+                           target="#d1e936"
+                           corresp="http://dbpedia.org/resource/Western_tanager"/>
+                     <span type="domain"
+                           target="#d1e936"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e936"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p16 -->
+            <list>
+               <item>
+                  <graphic url="Aves-63.png"/>
+                  <w xml:id="d1e955" xml:lang="mix">
+                     <w xml:id="d1e956">xchio</w>
+                  </w>
+                  <w xml:id="d1e958" xml:lang="mix" norm="saa kuaan">
+                     <w xml:id="d1e959">saa</w>
+                     <w xml:id="d1e961">kuaan</w>
+                  </w>
+                  <w xml:id="d1e963" xml:lang="es">
+                     <w xml:id="d1e964">semillerito</w>
+                     <w xml:id="d1e966">collarejo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e955 #d1e963"/>
+                     <link target="#d1e958 #d1e963"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e955 #d1e958" xml:lang="en">White-collared seedeater</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e955 #d1e958"
+                           corresp="https://www.wikidata.org/wiki/Q3121286"/>
+                     <span type="sense"
+                           target="#d1e955 #d1e958"
+                           corresp="http://dbpedia.org/resource/White-collared_seedeater"/>
+                     <span type="domain"
+                           target="#d1e955 #d1e958"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e955 #d1e958"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-64.png"/>
+                  <w xml:id="d1e970" xml:lang="mix" norm="saa krista">
+                     <w xml:id="d1e971">saa</w>
+                     <w xml:id="d1e973">krista</w>
+                  </w>
+                  <w xml:id="d1e975" xml:lang="mix" norm="saa lirru">
+                     <w xml:id="d1e976">saa</w>
+                     <w xml:id="d1e978">lirru</w>
+                  </w>
+                  <w xml:id="d1e980" xml:lang="es">
+                     <w xml:id="d1e981">pavito</w>
+                     <w xml:id="d1e983">aliblanco</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e970 #d1e980"/>
+                     <link target="#d1e975 #d1e980"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e970 #d1e975" xml:lang="en">Painted whitestart</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e970 #d1e975" corresp="NA"/>
+                     <span type="sense"
+                           target="#d1e970 #d1e975"
+                           corresp="http://dbpedia.org/resource/Painted_whitestart"/>
+                     <span type="domain"
+                           target="#d1e970 #d1e975"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e970 #d1e975"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-65.png"/>
+                  <w xml:id="d1e987" xml:lang="mix" norm="saa pintu">
+                     <w xml:id="d1e988">saa</w>
+                     <w xml:id="d1e990">pintu</w>
+                  </w>
+                  <w xml:id="d1e992" xml:lang="es">
+                     <w xml:id="d1e993">chipe</w>
+                     <w xml:id="d1e995">negriamarillo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e987 #d1e992"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e987" xml:lang="en">Golden-cheeked warbler</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e987"
+                           corresp="https://www.wikidata.org/wiki/Q27075939"/>
+                     <span type="sense"
+                           target="#d1e987"
+                           corresp="http://dbpedia.org/resource/Golden-cheeked_warbler"/>
+                     <span type="domain"
+                           target="#d1e987"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e987"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-66.png"/>
+                  <w xml:id="d1e999" xml:lang="mix" norm="saa tirriti">
+                     <w xml:id="d1e1000">saa</w>
+                     <w xml:id="d1e1002">tirriti</w>
+                  </w>
+                  <w xml:id="d1e1004" xml:lang="es">
+                     <w xml:id="d1e1005">chipe</w>
+                     <w xml:id="d1e1007">grupidorado</w>
+                  </w>
+                  <w xml:id="d1e1009" xml:lang="es">
+                     <w xml:id="d1e1010">verdín</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e999 #d1e1009"/>
+                     <link target="#d1e999 #d1e1004"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e999" xml:lang="en">Yellow-rumped warbler</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e999"
+                           corresp="https://www.wikidata.org/wiki/Q18390024"/>
+                     <span type="sense"
+                           target="#d1e999"
+                           corresp="http://dbpedia.org/resource/Yellow-rumped_warbler"/>
+                     <span type="domain"
+                           target="#d1e999 #d1e1004"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e999 #d1e1004"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-67.png"/>
+                  <w xml:id="d1e1014" xml:lang="mix" norm="saa tsika nuu sa'a kuaan">
+                     <w xml:id="d1e1015">saa</w>
+                     <w xml:id="d1e1017">tsika</w>
+                     <w xml:id="d1e1019">nuu</w>
+                     <w xml:id="d1e1021" orig="saꞌa">sa'a</w>
+                     <w xml:id="d1e1023">kuaan</w>
+                  </w>
+                  <w xml:id="d1e1025" xml:lang="mix" norm="saa nuu sa'a">
+                     <w xml:id="d1e1026">saa</w>
+                     <w xml:id="d1e1028">nuu</w>
+                     <w xml:id="d1e1030" orig="saꞌa">sa'a</w>
+                  </w>
+                  <w xml:id="d1e1032" xml:lang="es">
+                     <w xml:id="d1e1033">monjita</w>
+                     <w xml:id="d1e1035">elegante</w>
+                  </w>
+                  <w xml:id="d1e1037" xml:lang="es">
+                     <w xml:id="d1e1038">eufonia</w>
+                     <w xml:id="d1e1040">gorriazul</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1014 #d1e1032"/>
+                     <link target="#d1e1014 #d1e1032"/>
+                     <link target="#d1e1025 #d1e1037"/>
+                     <link target="#d1e1025 #d1e1037"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1014 #d1e1025" xml:lang="en">Blue-hooded Euphonia</span>
+                     <span target="#d1e1014 #d1e1025" xml:lang="en">Elegant Euphonia</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1014 #d1e1025"
+                           corresp="https://www.wikidata.org/wiki/Q1300998"/>
+                     <span type="sense"
+                           target="#d1e1014 #d1e1025"
+                           corresp="http://dbpedia.org/resource/Elegant_euphonia"/>
+                     <span type="note" target="#d1e1037">The original Spanish species name appears to be misspelled as it should be<name>Eufonia gorro azul</name>.</span>
+                     <span type="domain"
+                           target="#d1e1014 #d1e1025"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1014 #d1e1025"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-68.png"/>
+                  <w xml:id="d1e1044" xml:lang="mix" norm="chariki kuaan">
+                     <w xml:id="d1e1045">chariki</w>
+                     <w xml:id="d1e1047">kuaan</w>
+                  </w>
+                  <w xml:id="d1e1049" xml:lang="es">
+                     <w xml:id="d1e1050">chipe</w>
+                     <w xml:id="d1e1052">corona</w>
+                     <w xml:id="d1e1054">negra</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1044 #d1e1049"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1044" xml:lang="en">Wilson's warbler</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1044"
+                           corresp="https://www.wikidata.org/wiki/Q27076007"/>
+                     <span type="sense"
+                           target="#d1e1044"
+                           corresp="http://dbpedia.org/resource/Wilson's_warbler"/>
+                     <span type="domain"
+                           target="#d1e1044"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1044"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p17 -->
+            <list>
+               <item>
+                  <graphic url="Aves-69.png"/>
+                  <w xml:id="d1e1061" xml:lang="mix" norm="saa tika yoko itu">
+                     <w xml:id="d1e1062">saa</w>
+                     <w xml:id="d1e1064">tika</w>
+                     <w xml:id="d1e1066">yoko</w>
+                     <w xml:id="d1e1068">itu</w>
+                  </w>
+                  <w xml:id="d1e1070" xml:lang="mix" norm="saa kuaan">
+                     <w xml:id="d1e1071">saa</w>
+                     <w xml:id="d1e1073">kuaan</w>
+                  </w>
+                  <!-- ambig with bolsero -->
+                  <w xml:id="d1e1076" xml:lang="es">
+                     <w xml:id="d1e1077">jilguero</w>
+                     <w xml:id="d1e1079">dorsioscuro</w>
+                  </w>
+                  <w xml:id="d1e1081" xml:lang="es">
+                     <w xml:id="d1e1082">dominico</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1061 #d1e1076"/>
+                     <link target="#d1e1061 #d1e1081"/>
+                     <link target="#d1e1070 #d1e1076"/>
+                     <link target="#d1e1070 #d1e1081"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1061 #d1e1070" xml:lang="en" cert="medium">Lesser goldfinch</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1061 #d1e1070"
+                           corresp="https://www.wikidata.org/wiki/Q1301194"
+                           cert="medium"/>
+                     <span type="sense"
+                           target="#d1e1061 #d1e1070"
+                           corresp="http://dbpedia.org/resource/Lesser_goldfinch"
+                           cert="medium"/>
+                     <span type="domain"
+                           target="#d1e1061 #d1e1070"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1061 #d1e1070"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-70.png"/>
+                  <w xml:id="d1e1086" xml:lang="mix" norm="saa tusava">
+                     <w xml:id="d1e1087">saa</w>
+                     <w xml:id="d1e1089">tusava</w>
+                  </w>
+                  <w xml:id="d1e1091" xml:lang="mix" norm="saa kuaan">
+                     <w xml:id="d1e1092">saa</w>
+                     <w xml:id="d1e1094">kuaan</w>
+                  </w>
+                  <!-- ambig with dominico -->
+                  <w xml:id="d1e1097" xml:lang="es">
+                     <w xml:id="d1e1098">calandria</w>
+                  </w>
+                  <w xml:id="d1e1100" xml:lang="es">
+                     <w xml:id="d1e1101">bolsero</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1086 #d1e1097"/>
+                     <link target="#d1e1086 #d1e1100"/>
+                     <link target="#d1e1091 #d1e1097"/>
+                     <link target="#d1e1091 #d1e1100"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1086 #d1e1091" xml:lang="en">Chalk-browed mockingbird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1086 #d1e1091"
+                           corresp="https://www.wikidata.org/wiki/Q1591533"/>
+                     <span type="sense"
+                           target="#d1e1086 #d1e1091"
+                           corresp="http://dbpedia.org/resource/Chalk-browed_mockingbird"/>
+                     <span type="domain"
+                           target="#d1e1086 #d1e1091"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1086 #d1e1091"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-71.png"/>
+                  <w xml:id="d1e1105" xml:lang="mix" norm="saa nuu ku'u">
+                     <w xml:id="d1e1106">saa</w>
+                     <w xml:id="d1e1108">nuu</w>
+                     <w xml:id="d1e1110" orig="kuꞌu">ku'u</w>
+                  </w>
+                  <w xml:id="d1e1112" xml:lang="mix" norm="saa kuaan">
+                     <w xml:id="d1e1113">saa</w>
+                     <w xml:id="d1e1115">kuaan</w>
+                  </w>
+                  <w xml:id="d1e1117" xml:lang="es">
+                     <w xml:id="d1e1118">vireo</w>
+                     <w xml:id="d1e1120">dorado</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1105 #d1e1117"/>
+                     <link target="#d1e1112 #d1e1117"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1105 #d1e1112" xml:lang="en">Golden vireo</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1105 #d1e1112"
+                           corresp="https://www.wikidata.org/wiki/Q1590852"/>
+                     <span type="sense"
+                           target="#d1e1105 #d1e1112"
+                           corresp="http://dbpedia.org/resource/Golden_vireo"/>
+                     <span type="domain"
+                           target="#d1e1105 #d1e1112"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1105 #d1e1112"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-72.png"/>
+                  <w xml:id="d1e1124" xml:lang="mix" norm="saa nuu ntika">
+                     <w xml:id="d1e1125">saa</w>
+                     <w xml:id="d1e1127">nuu</w>
+                     <w xml:id="d1e1129">ntika</w>
+                  </w>
+                  <w xml:id="d1e1131" xml:lang="es">
+                     <w xml:id="d1e1132">chipe</w>
+                     <w xml:id="d1e1134">negrigris</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1124 #d1e1131"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1124" xml:lang="en">Black-throated gray warbler</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1124"
+                           corresp="https://www.wikidata.org/wiki/Q3176524"/>
+                     <span type="sense"
+                           target="#d1e1124"
+                           corresp="http://dbpedia.org/resource/Black-throated_gray_warbler"/>
+                     <span type="domain"
+                           target="#d1e1124"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1124"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-73.png"/>
+                  <w xml:id="d1e1138" xml:lang="mix" norm="saa ntiki luu">
+                     <w xml:id="d1e1139">saa</w>
+                     <w xml:id="d1e1141">ntiki</w>
+                     <w xml:id="d1e1143">luu</w>
+                  </w>
+                  <w xml:id="d1e1145" xml:lang="es">
+                     <w xml:id="d1e1146">chipe</w>
+                     <w xml:id="d1e1148">rey</w>
+                     <w xml:id="d1e1150">mexicano</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1138 #d1e1145"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1138" xml:lang="en">Rufous-capped warbler</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1138"
+                           corresp="https://www.wikidata.org/wiki/Q791200"/>
+                     <span type="sense"
+                           target="#d1e1138"
+                           corresp="http://dbpedia.org/resource/Rufous-capped_warbler"/>
+                     <span type="domain"
+                           target="#d1e1138"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1138"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-74.png"/>
+                  <w xml:id="d1e1154" xml:lang="mix" norm="saa ntiki na'nu">
+                     <w xml:id="d1e1155">saa</w>
+                     <w xml:id="d1e1157">ntiki</w>
+                     <w xml:id="d1e1159" orig="naꞌnu">na'nu</w>
+                  </w>
+                  <w xml:id="d1e1161" xml:lang="es">
+                     <w xml:id="d1e1162">papamoscas</w>
+                     <w xml:id="d1e1164">rayado</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1154 #d1e1161"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1154" xml:lang="en">Streaked flycatcher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1154"
+                           corresp="https://www.wikidata.org/wiki/Q875860"/>
+                     <span type="sense"
+                           target="#d1e1154"
+                           corresp="http://dbpedia.org/resource/Streaked_flycatcher"/>
+                     <span type="domain"
+                           target="#d1e1154"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1154"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p18 -->
+            <list>
+               <item>
+                  <graphic url="Aves-75.png"/>
+                  <w xml:id="d1e1171" xml:lang="mix" norm="saa ntitsa'in">
+                     <w xml:id="d1e1172">saa</w>
+                     <w xml:id="d1e1174" orig="ntitsaꞌin">ntitsa'in</w>
+                  </w>
+                  <w xml:id="d1e1176" xml:lang="es">
+                     <w xml:id="d1e1177">paro</w>
+                     <w xml:id="d1e1179">embozalado</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1171 #d1e1176"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1171" xml:lang="en">Bridled titmouse</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1171"
+                           corresp="https://www.wikidata.org/wiki/Q2888535"/>
+                     <span type="sense"
+                           target="#d1e1171"
+                           corresp="http://dbpedia.org/resource/Bridled_titmouse"/>
+                     <span type="domain"
+                           target="#d1e1171"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1171"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-76.png"/>
+                  <w xml:id="d1e1183" xml:lang="mix" norm="saa ya'a">
+                     <w xml:id="d1e1184">saa</w>
+                     <w xml:id="d1e1186" orig="yaꞌa">ya'a</w>
+                  </w>
+                  <w xml:id="d1e1188" xml:lang="mix" norm="saa kava">
+                     <w xml:id="d1e1189">saa</w>
+                     <w xml:id="d1e1191">kava</w>
+                  </w>
+                  <w xml:id="d1e1193" xml:lang="es">
+                     <w xml:id="d1e1194">troglodita</w>
+                     <w xml:id="d1e1196">saltapared</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1183 #d1e1193"/>
+                     <link target="#d1e1188 #d1e1193"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1183 #d1e1188" xml:lang="en" cert="medium">House wren</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1183 #d1e1188"
+                           corresp="https://www.wikidata.org/wiki/Q524799"
+                           cert="medium"/>
+                     <span type="sense"
+                           target="#d1e1183 #d1e1188"
+                           cert="medium"
+                           corresp="http://dbpedia.org/resource/House_wren"/>
+                     <span type="domain"
+                           target="#d1e1183 #d1e1188"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1183 #d1e1188"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-77.png"/>
+                  <w xml:id="d1e1200" xml:lang="mix">
+                     <w xml:id="d1e1201">tsivii</w>
+                  </w>
+                  <w xml:id="d1e1203" xml:lang="mix" norm="saa nche'en">
+                     <w xml:id="d1e1204">saa</w>
+                     <w xml:id="d1e1206" orig="ncheꞌen">nche'en</w>
+                  </w>
+                  <w xml:id="d1e1208" xml:lang="es">
+                     <w xml:id="d1e1209">troglodita</w>
+                     <w xml:id="d1e1211">colinegro</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1200 #d1e1208"/>
+                     <link target="#d1e1203 #d1e1208"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1200 #d1e1203" xml:lang="en">Bewick's wren</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1200 #d1e1203"
+                           corresp="https://www.wikidata.org/wiki/Q997457"/>
+                     <span type="sense"
+                           target="#d1e1200 #d1e1203"
+                           corresp="http://dbpedia.org/resource/Bewick's_wren"/>
+                     <span type="domain"
+                           target="#d1e1200 #d1e1203"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1200 #d1e1203"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-78.png"/>
+                  <w xml:id="d1e1215" xml:lang="mix" norm="saa nutoto">
+                     <w xml:id="d1e1216">saa</w>
+                     <w xml:id="d1e1218">nutoto</w>
+                  </w>
+                  <w xml:id="d1e1220" xml:lang="mix" norm="saa nuyuú">
+                     <w xml:id="d1e1221">saa</w>
+                     <w xml:id="d1e1223">nuyuú</w>
+                  </w>
+                  <w xml:id="d1e1225" xml:lang="mix" norm="saa i'na">
+                     <w xml:id="d1e1226">saa</w>
+                     <w xml:id="d1e1228" orig="iꞌna">i'na</w>
+                  </w>
+                  <w xml:id="d1e1230" xml:lang="es">
+                     <w xml:id="d1e1231">troglodita</w>
+                     <w xml:id="d1e1233">saltaroca</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1215 #d1e1230"/>
+                     <link target="#d1e1220 #d1e1230"/>
+                     <link target="#d1e1230 #d1e1230"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1215 #d1e1220 #d1e1230" xml:lang="en">Rock wren</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1215 #d1e1220 #d1e1230"
+                           corresp="https://www.wikidata.org/wiki/Q935880"/>
+                     <span type="sense"
+                           target="#d1e1215 #d1e1220 #d1e1230"
+                           corresp="http://dbpedia.org/resource/Rock_wren"/>
+                     <span type="domain"
+                           target="#d1e1215 #d1e1220 #d1e1230"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1215 #d1e1220 #d1e1230"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-79.png"/>
+                  <w xml:id="d1e1237" xml:lang="mix">
+                     <w xml:id="d1e1238">xtii</w>
+                  </w>
+                  <w xml:id="d1e1240" xml:lang="es">
+                     <w xml:id="d1e1241">perlita</w>
+                     <w xml:id="d1e1243">azulgris</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1237 #d1e1240"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1237" xml:lang="en">Blue-gray gnatcatcher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1237"
+                           corresp="https://www.wikidata.org/wiki/Q883006"/>
+                     <span type="sense"
+                           target="#d1e1237"
+                           corresp="http://dbpedia.org/resource/Blue-gray_gnatcatcher"/>
+                     <span type="domain"
+                           target="#d1e1237"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1237"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-80.png"/>
+                  <w xml:id="d1e1247" xml:lang="mix" norm="saa nche'e">
+                     <w xml:id="d1e1248">saa</w>
+                     <w xml:id="d1e1250" orig="ncheꞌe">nche'e</w>
+                  </w>
+                  <w xml:id="d1e1252" xml:lang="es">
+                     <w xml:id="d1e1253">troglodita</w>
+                     <w xml:id="d1e1255">continental</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1247 #d1e1252"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1247" xml:lang="en" cert="unknown"/>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense" target="#d1e1247" cert="unknown" corresp="NA"/>
+                     <span type="sense"
+                           target="#d1e1247"
+                           cert="unknown"
+                           corresp="http://dbpedia.org/resource/NA"/>
+                     <span type="note">Troglidita is the non-standard Spanish name for a type of Wren but not sure which one.</span>
+                     <span type="domain"
+                           target="#d1e1247"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1247"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p19 -->
+            <list>
+               <item>
+                  <graphic url="Aves-81.png"/>
+                  <w xml:id="d1e1262" xml:lang="mix">
+                     <w xml:id="d1e1263">nchoꞌo</w>
+                  </w>
+                  <w xml:id="d1e1265" xml:lang="es">
+                     <w xml:id="d1e1266">colibrí</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1262 #d1e1265"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1262" xml:lang="en">Hummingbird</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1262"
+                           corresp="https://www.wikidata.org/wiki/Q43624"/>
+                     <span type="sense"
+                           target="#d1e1262"
+                           corresp="http://dbpedia.org/resource/Hummingbird"/>
+                     <span type="domain"
+                           target="#d1e1262"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1262"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-82.png"/>
+                  <w xml:id="d1e1270" xml:lang="mix" norm="saa iti">
+                     <w xml:id="d1e1271">saa</w>
+                     <w xml:id="d1e1273">iti</w>
+                  </w>
+                  <w xml:id="d1e1275" xml:lang="es">
+                     <w xml:id="d1e1276">mosquero</w>
+                     <w xml:id="d1e1278">cabezón</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1270 #d1e1275"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1270" xml:lang="en">Rose-throated becard</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1270"
+                           corresp="https://www.wikidata.org/wiki/Q791067"/>
+                     <span type="sense"
+                           target="#d1e1270"
+                           corresp="http://dbpedia.org/resource/Rose-throated_becard"/>
+                     <span type="domain"
+                           target="#d1e1270"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1270"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-83.png"/>
+                  <w xml:id="d1e1282" xml:lang="mix" norm="saa vikó">
+                     <w xml:id="d1e1283">saa</w>
+                     <w xml:id="d1e1285">vikó</w>
+                  </w>
+                  <w xml:id="d1e1287" xml:lang="es">
+                     <w xml:id="d1e1288">reyezuelo</w>
+                     <w xml:id="d1e1290">sencillo</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1282 #d1e1287"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1282" xml:lang="en">Goldcrest</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1282"
+                           corresp="https://www.wikidata.org/wiki/Q26657"/>
+                     <span type="sense"
+                           target="#d1e1282"
+                           corresp="http://dbpedia.org/resource/Goldcrest"/>
+                     <span type="domain"
+                           target="#d1e1282"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1282"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-84.png"/>
+                  <w xml:id="d1e1294" xml:lang="mix" norm="saa ntivilu">
+                     <w xml:id="d1e1295">saa</w>
+                     <w xml:id="d1e1297">ntivilu</w>
+                  </w>
+                  <w xml:id="d1e1299" xml:lang="es">
+                     <w xml:id="d1e1300">chipe</w>
+                     <w xml:id="d1e1302">trepador</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1294 #d1e1299"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1294" xml:lang="en">Black-and-white warbler</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1294"
+                           corresp="https://www.wikidata.org/wiki/Q669888"/>
+                     <span type="sense"
+                           target="#d1e1294"
+                           corresp="http://dbpedia.org/resource/Black-and-white_warbler"/>
+                     <span type="domain"
+                           target="#d1e1294"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1294"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-85.png"/>
+                  <w xml:id="d1e1306" xml:lang="mix" norm="saa chavi">
+                     <w xml:id="d1e1307">saa</w>
+                     <w xml:id="d1e1309">chavi</w>
+                  </w>
+                  <w xml:id="d1e1311" xml:lang="mix" norm="saa yavi">
+                     <w xml:id="d1e1312">saa</w>
+                     <w xml:id="d1e1314">yavi</w>
+                  </w>
+                  <w xml:id="d1e1316" xml:lang="es">
+                     <w xml:id="d1e1317">matraca</w>
+                     <w xml:id="d1e1319">balseña</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1306 #d1e1316"/>
+                     <link target="#d1e1311 #d1e1316"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1306 #d1e1311" xml:lang="en">Boucard's wren</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1306 #d1e1311"
+                           corresp="https://www.wikidata.org/wiki/Q1586939"/>
+                     <span type="sense"
+                           target="#d1e1306 #d1e1311"
+                           corresp="http://dbpedia.org/resource/Boucard's_wren"/>
+                     <span type="domain"
+                           target="#d1e1306 #d1e1311"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1306 #d1e1311"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-86.png"/>
+                  <w xml:id="d1e1323" xml:lang="mix" norm="saa tintuyu">
+                     <w xml:id="d1e1324">saa</w>
+                     <w xml:id="d1e1326">tintuyu</w>
+                  </w>
+                  <w xml:id="d1e1328" xml:lang="es">
+                     <w xml:id="d1e1329">matraca</w>
+                     <w xml:id="d1e1331">barrada</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1323 #d1e1328"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1323" xml:lang="en">Band-backed wren</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1323"
+                           corresp="https://www.wikidata.org/wiki/Q1586963"/>
+                     <span type="sense"
+                           target="#d1e1323"
+                           corresp="http://dbpedia.org/resource/Band-backed_wren"/>
+                     <span type="domain"
+                           target="#d1e1323"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1323"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p20 -->
+            <list>
+               <item>
+                  <graphic url="Aves-87.png"/>
+                  <w xml:id="d1e1338" xml:lang="mix" norm="saa nche'e">
+                     <w xml:id="d1e1339">saa</w>
+                     <w xml:id="d1e1341" orig="ncheꞌe">nche'e</w>
+                  </w>
+                  <w xml:id="d1e1343" xml:lang="mix" norm="saa li'va">
+                     <w xml:id="d1e1344">saa</w>
+                     <w xml:id="d1e1346" orig="liꞌva">li'va</w>
+                  </w>
+                  <w xml:id="d1e1348" xml:lang="mix" norm="saa pario">
+                     <w xml:id="d1e1349">saa</w>
+                     <w xml:id="d1e1351">pario</w>
+                  </w>
+                  <w xml:id="d1e1353" xml:lang="mix" norm="saa mario">
+                     <w xml:id="d1e1354">saa</w>
+                     <w xml:id="d1e1356">mario</w>
+                  </w>
+                  <w xml:id="d1e1358" xml:lang="es">
+                     <w xml:id="d1e1359">pinzón</w>
+                     <w xml:id="d1e1361">mexicano</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1338 #d1e1358"/>
+                     <link target="#d1e1343 #d1e1358"/>
+                     <link target="#d1e1348 #d1e1358"/>
+                     <link target="#d1e1353 #d1e1358"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1338 #d1e1343 #d1e1348 #d1e1353" xml:lang="en">House finch</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
+                           corresp="https://www.wikidata.org/wiki/Q25170208"/>
+                     <span type="sense"
+                           target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
+                           corresp="http://dbpedia.org/resource/House_finch"/>
+                     <span type="domain"
+                           target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-88.png"/>
+                  <w xml:id="d1e1365" xml:lang="mix" norm="taka yuku">
+                     <w xml:id="d1e1366">taka</w>
+                     <w xml:id="d1e1368">yuku</w>
+                  </w>
+                  <w xml:id="d1e1370" xml:lang="es">
+                     <w xml:id="d1e1371">trepador</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1365 #d1e1370"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1365" xml:lang="en">Nuthatch</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1365"
+                           corresp="https://www.wikidata.org/wiki/Q858577"/>
+                     <span type="sense"
+                           target="#d1e1365"
+                           corresp="http://dbpedia.org/resource/Nuthatch"/>
+                     <span type="note">Listed source ambiguous as to specific type of Nuthatch.</span>
+                     <span type="domain"
+                           target="#d1e1365"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1365"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-89.png"/>
+                  <w xml:id="d1e1375" xml:lang="mix" norm="saa pario">
+                     <w xml:id="d1e1376">saa</w>
+                     <w xml:id="d1e1378">pario</w>
+                  </w>
+                  <w xml:id="d1e1380" xml:lang="es">
+                     <w xml:id="d1e1381">gorrión</w>
+                     <w xml:id="d1e1383">doméstico</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1375 #d1e1380"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1375" xml:lang="en">House sparrow</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1375"
+                           corresp="https://www.wikidata.org/wiki/Q14683"/>
+                     <span type="sense"
+                           target="#d1e1375"
+                           corresp="http://dbpedia.org/resource/House_sparrow"/>
+                     <span type="domain"
+                           target="#d1e1375"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1375"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-90.png"/>
+                  <w xml:id="d1e1387" xml:lang="mix" norm="taka lunchi">
+                     <w xml:id="d1e1388">taka</w>
+                     <w xml:id="d1e1390">lunchi</w>
+                  </w>
+                  <w xml:id="d1e1392" xml:lang="es">
+                     <w xml:id="d1e1393">trepadorcito</w>
+                     <w xml:id="d1e1395">americano</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1387 #d1e1392"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1387" xml:lang="en">Brown creeper</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1387"
+                           corresp="https://www.wikidata.org/wiki/Q490294"/>
+                     <span type="sense"
+                           target="#d1e1387"
+                           corresp="http://dbpedia.org/resource/Brown_creeper"/>
+                     <span type="domain"
+                           target="#d1e1387"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1387"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-91.png"/>
+                  <w xml:id="d1e1399" xml:lang="mix" norm="saa icha">
+                     <w xml:id="d1e1400">saa</w>
+                     <w xml:id="d1e1402">icha</w>
+                  </w>
+                  <w xml:id="d1e1404" xml:lang="es">
+                     <w xml:id="d1e1405">gorrión</w>
+                     <w xml:id="d1e1407">arlequín</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1399 #d1e1404"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1399" xml:lang="en">Lark sparrow</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1399"
+                           corresp="https://www.wikidata.org/wiki/Q1528805"/>
+                     <span type="sense"
+                           target="#d1e1399"
+                           corresp="http://dbpedia.org/resource/Lark_sparrow"/>
+                     <span type="domain"
+                           target="#d1e1399"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1399"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p21 -->
+            <list>
+               <item>
+                  <graphic url="Aves-92.png"/>
+                  <w xml:id="d1e1414" xml:lang="mix" norm="taka ya'a">
+                     <w xml:id="d1e1415">taka</w>
+                     <w xml:id="d1e1417" orig="yaꞌa">ya'a</w>
+                  </w>
+                  <w xml:id="d1e1419" xml:lang="es">
+                     <w xml:id="d1e1420">carpintero</w>
+                     <w xml:id="d1e1422">dorado</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1414 #d1e1419"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1414" xml:lang="en">Yellow-browed woodpecker</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1414"
+                           corresp="https://www.wikidata.org/wiki/Q1263819"/>
+                     <span type="sense"
+                           target="#d1e1414"
+                           corresp="http://dbpedia.org/resource/Yellow-browed_woodpecker"/>
+                     <span type="domain"
+                           target="#d1e1414"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1414"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-93.png"/>
+                  <w xml:id="d1e1426" xml:lang="mix" norm="taka ntuxi">
+                     <w xml:id="d1e1427">taka</w>
+                     <w xml:id="d1e1429">ntuxi</w>
+                  </w>
+                  <w xml:id="d1e1431" xml:lang="es">
+                     <w xml:id="d1e1432">carpintero</w>
+                     <w xml:id="d1e1434">aliblanco</w>
+                     <w xml:id="d1e1436">común</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1426 #d1e1431"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1426" xml:lang="en">Yellow-bellied Sapsucker</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1426"
+                           corresp="https://www.wikidata.org/wiki/Q934735"/>
+                     <span type="sense"
+                           target="#d1e1426"
+                           corresp="http://dbpedia.org/resource/Yellow-bellied_sapsucker"/>
+                     <span type="domain"
+                           target="#d1e1426"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1426"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-94.png"/>
+                  <w xml:id="d1e1440" xml:lang="mix" norm="taka yutu">
+                     <w xml:id="d1e1441">taka</w>
+                     <w xml:id="d1e1443">yutu</w>
+                  </w>
+                  <w xml:id="d1e1445" xml:lang="mix" norm="taka xini kua'a">
+                     <w xml:id="d1e1446">taka</w>
+                     <w xml:id="d1e1448">xini</w>
+                     <w xml:id="d1e1450" orig="kuaꞌa">kua'a</w>
+                  </w>
+                  <w xml:id="d1e1452" xml:lang="es">
+                     <w xml:id="d1e1453">carpintero</w>
+                     <w xml:id="d1e1455">mexicano</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1440 #d1e1452"/>
+                     <link target="#d1e1445 #d1e1452"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1440 #d1e1445" xml:lang="en">Ladder-backed woodpecker</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1440 #d1e1445"
+                           corresp="https://www.wikidata.org/wiki/Q27074907"/>
+                     <span type="sense"
+                           target="#d1e1440 #d1e1445"
+                           corresp="http://dbpedia.org/resource/Ladder-backed_woodpecker"/>
+                     <span type="domain"
+                           target="#d1e1440 #d1e1445"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1440 #d1e1445"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-95.png"/>
+                  <w xml:id="d1e1459" xml:lang="mix" norm="taka pintu ncha'i">
+                     <w xml:id="d1e1460">taka</w>
+                     <w xml:id="d1e1462">pintu</w>
+                     <w xml:id="d1e1464" orig="nchaꞌi">ncha'i</w>
+                  </w>
+                  <w xml:id="d1e1466" xml:lang="es">
+                     <w xml:id="d1e1467">carpintero</w>
+                     <w xml:id="d1e1469">arlequín</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1459 #d1e1466"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1459" xml:lang="en">Acorn woodpecker</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1459"
+                           corresp="https://www.wikidata.org/wiki/Q368657"/>
+                     <span type="sense"
+                           target="#d1e1459"
+                           corresp="http://dbpedia.org/resource/Acorn_woodpecker"/>
+                     <span type="domain"
+                           target="#d1e1459"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1459"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-96.png"/>
+                  <w xml:id="d1e1473" xml:lang="mix" norm="taka ñu'u">
+                     <w xml:id="d1e1474">taka</w>
+                     <w xml:id="d1e1476" orig="ñuꞌu">ñu'u</w>
+                  </w>
+                  <w xml:id="d1e1478" xml:lang="es">
+                     <w xml:id="d1e1479">carpintero</w>
+                     <w xml:id="d1e1481">pechigrís</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1473 #d1e1478"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1473" xml:lang="en">Grey-breasted woodpecker</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1473"
+                           corresp="https://www.wikidata.org/wiki/Q1268213"/>
+                     <span type="sense"
+                           target="#d1e1473"
+                           corresp="http://dbpedia.org/resource/Grey-breasted_woodpecker"/>
+                     <span type="domain"
+                           target="#d1e1473"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1473"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p22 -->
+            <list>
+               <item>
+                  <graphic url="Aves-97.png"/>
+                  <w xml:id="d1e1488" xml:lang="mix" norm="patu ncha'i">
+                     <w xml:id="d1e1489">patu</w>
+                     <w xml:id="d1e1491" orig="nchaꞌi">ncha'i</w>
+                  </w>
+                  <w xml:id="d1e1493" xml:lang="es">
+                     <w xml:id="d1e1494">zambullidor</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1488 #d1e1493"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1488" xml:lang="en">Pied-billed grebe</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1488"
+                           corresp="https://www.wikidata.org/wiki/Q579718"/>
+                     <span type="sense"
+                           target="#d1e1488"
+                           corresp="http://dbpedia.org/resource/Pied-billed_grebe"/>
+                     <span type="domain"
+                           target="#d1e1488"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1488"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-98.png"/>
+                  <w xml:id="d1e1498" xml:lang="mix" norm="sutu yucha">
+                     <w xml:id="d1e1499">sutu</w>
+                     <w xml:id="d1e1501">yucha</w>
+                  </w>
+                  <w xml:id="d1e1503" xml:lang="es">
+                     <w xml:id="d1e1504">martín</w>
+                     <w xml:id="d1e1506">pescador</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1498 #d1e1503"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1498" xml:lang="en">Common kingfisher</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1498"
+                           corresp="https://www.wikidata.org/wiki/Q79915"/>
+                     <span type="sense"
+                           target="#d1e1498"
+                           corresp="http://dbpedia.org/resource/Common_kingfisher"/>
+                     <span type="domain"
+                           target="#d1e1498"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1498"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-99.png"/>
+                  <w xml:id="d1e1510" xml:lang="mix" norm="saa yucha">
+                     <w xml:id="d1e1511">saa</w>
+                     <w xml:id="d1e1513">yucha</w>
+                  </w>
+                  <w xml:id="d1e1515" xml:lang="es">
+                     <w xml:id="d1e1516">mosquero</w>
+                     <w xml:id="d1e1518">negro</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1510 #d1e1515"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1510" xml:lang="en">Black phoebe</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1510"
+                           corresp="https://www.wikidata.org/wiki/Q920950"/>
+                     <span type="sense"
+                           target="#d1e1510"
+                           corresp="http://dbpedia.org/resource/Black_phoebe"/>
+                     <span type="domain"
+                           target="#d1e1510"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1510"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-100.png"/>
+                  <w xml:id="d1e1522" xml:lang="mix" norm="saa yucha">
+                     <w xml:id="d1e1523">saa</w>
+                     <w xml:id="d1e1525">yucha</w>
+                  </w>
+                  <w xml:id="d1e1527" xml:lang="es">
+                     <w xml:id="d1e1528">bisbita</w>
+                     <w xml:id="d1e1530">de</w>
+                     <w xml:id="d1e1532">agua</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1522 #d1e1527"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1522" xml:lang="en">Buff-bellied pipit</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1522"
+                           corresp="https://www.wikidata.org/wiki/Q871527"/>
+                     <span type="sense"
+                           target="#d1e1522"
+                           corresp="http://dbpedia.org/resource/Buff-bellied_pipit"/>
+                     <span type="domain"
+                           target="#d1e1522"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1522"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div><!-- p23 -->
+            <list>
+               <item>
+                  <graphic url="Aves-101.png"/>
+                  <w xml:id="d1e1539" xml:lang="mix" norm="chuun yucha">
+                     <w xml:id="d1e1540">chuun</w>
+                     <w xml:id="d1e1542">yucha</w>
+                  </w>
+                  <w xml:id="d1e1544" xml:lang="mix" norm="chuun ntucha">
+                     <w xml:id="d1e1545">chuun</w>
+                     <w xml:id="d1e1547">ntucha</w>
+                  </w>
+                  <w xml:id="d1e1549" xml:lang="es">
+                     <w xml:id="d1e1550">gallareta</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1539 #d1e1549"/>
+                     <link target="#d1e1544 #d1e1549"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1539 #d1e1544" xml:lang="en">White-winged coot</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1539 #d1e1544"
+                           corresp="https://www.wikidata.org/wiki/Q1268737"/>
+                     <span type="sense"
+                           target="#d1e1539 #d1e1544"
+                           corresp="http://dbpedia.org/resource/White-winged_coot"/>
+                     <span type="domain"
+                           target="#d1e1539 #d1e1544"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1539 #d1e1544"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-102.png"/>
+                  <w xml:id="d1e1554" xml:lang="mix" norm="patu yuku">
+                     <w xml:id="d1e1555">patu</w>
+                     <w xml:id="d1e1557">yuku</w>
+                  </w>
+                  <w xml:id="d1e1559" xml:lang="es">
+                     <w xml:id="d1e1560">garcita</w>
+                     <w xml:id="d1e1562">oscura</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1554 #d1e1559"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1554" xml:lang="en">Green heron</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1554"
+                           corresp="https://www.wikidata.org/wiki/Q498228"/>
+                     <span type="sense"
+                           target="#d1e1554"
+                           corresp="http://dbpedia.org/resource/Green_heron"/>
+                     <span type="note">Not sure if the species is the Green Heron (Butorides virescens) or Blue Heron</span>
+                     <span type="domain"
+                           target="#d1e1554"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1554"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-103.png"/>
+                  <w xml:id="d1e1566" xml:lang="mix" norm="skuu yucha">
+                     <w xml:id="d1e1567">skuu</w>
+                     <w xml:id="d1e1569">yucha</w>
+                  </w>
+                  <w xml:id="d1e1571" xml:lang="mix" norm="xku'u yucha">
+                     <w xml:id="d1e1572" orig="xkuꞌu">xku'u</w>
+                     <w xml:id="d1e1574">yucha</w>
+                  </w>
+                  <w xml:id="d1e1576" xml:lang="es">
+                     <w xml:id="d1e1577">ralo</w>
+                  </w>
+                  <w xml:id="d1e1579" xml:lang="es">
+                     <w xml:id="d1e1580">gallina</w>
+                     <w xml:id="d1e1582">de</w>
+                     <w xml:id="d1e1584">agua</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1566 #d1e1576"/>
+                     <link target="#d1e1571 #d1e1579"/>
+                     <link target="#d1e1566 #d1e1576"/>
+                     <link target="#d1e1571 #d1e1579"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1566 #d1e1571" xml:lang="en">Common moorhen</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1566 #d1e1571"
+                           corresp="https://www.wikidata.org/wiki/Q18847"/>
+                     <span type="sense"
+                           target="#d1e1566 #d1e1571"
+                           corresp="http://dbpedia.org/resource/Common_moorhen"/>
+                     <span type="domain"
+                           target="#d1e1566 #d1e1571"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1566 #d1e1571"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-104.png"/>
+                  <w xml:id="d1e1588" xml:lang="mix">
+                     <w xml:id="d1e1589">sami</w>
+                  </w>
+                  <w xml:id="d1e1591" xml:lang="es">
+                     <w xml:id="d1e1592">garza</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1588 #d1e1591"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1588" xml:lang="en">Heron</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1588"
+                           corresp="https://www.wikidata.org/wiki/Q18789"/>
+                     <span type="sense"
+                           target="#d1e1588"
+                           corresp="http://dbpedia.org/resource/Heron"/>
+                     <span type="note">Not sure what specific type of Heron is intended. The external references are for the general Heron family of birds. </span>
+                     <span type="domain"
+                           target="#d1e1588"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1588"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+               <item>
+                  <graphic url="Aves-105.png"/>
+                  <w xml:id="d1e1596" xml:lang="mix" norm="saa koo">
+                     <w xml:id="d1e1597">saa</w>
+                     <w xml:id="d1e1599">koo</w>
+                  </w>
+                  <w xml:id="d1e1601" xml:lang="es">
+                     <w xml:id="d1e1602">pájaro</w>
+                     <w xml:id="d1e1604">culebra</w>
+                  </w>
+                  <linkGrp type="translation">
+                     <link target="#d1e1596 #d1e1601"/>
+                  </linkGrp>
+                  <spanGrp type="translation">
+                     <span target="#d1e1596" xml:lang="en">Anhinga</span>
+                  </spanGrp>
+                  <spanGrp type="semantics">
+                     <span type="sense"
+                           target="#d1e1596"
+                           corresp="https://www.wikidata.org/wiki/Q13168473"/>
+                     <span type="sense"
+                           target="#d1e1596"
+                           corresp="http://dbpedia.org/resource/Anhinga"/>
+                     <span type="domain"
+                           target="#d1e1596"
+                           corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="domain"
+                           target="#d1e1596"
+                           corresp="http://dbpedia.org/resource/Animal"/>
+                  </spanGrp>
+               </item>
+            </list>
+         </div>
+         <div>
+            <index><!-- 
+               <term>Chariki kuaan</term>.......................................... 16
+               Chumi lunchi............................................. 3
+               Chumi sai .................................................. 3
+               Chumi xini kaꞌnu ....................................... 3
+               Chuun ntucha .......................................... 23
+               Chuun yucha ........................................... 23
+               Chuun yuku............................................. 10
+               Kañuu...................................................... 10
+               Kasa kutu .................................................. 3 
+               Kiti yaꞌa..................................................... 4
+               Koni yuku................................................ 10
+               Korro ....................................................... 14
+               Kuili ........................................................ 12
+               Kukuvi ....................................................... 3
+               Lachacha ................................................. 10
+               Lakaan..................................................... 14
+               Lakuku ...................................................... 8
+               Lasimi...................................................... 11
+               Lasuꞌun.................................................... 11 
+               Letsa........................................................ 15
+               Litsi ........................................................... 4
+               Litu............................................................ 4
+               Lochi nchaꞌi............................................... 6
+               Lochi nii .................................................... 6
+               Nchoꞌo..................................................... 19
+               Nchuu kava ................................................9
+               Nchuu kuꞌu.................................................9 
+               Nchuu lunchi..............................................8
+               Nchuu ntsitsi pintu.....................................9
+               Nchuu nukuaꞌa ...........................................8
+               Nchuu tsaꞌa kuaꞌa.......................................8 
+               Nchuu xchila ..............................................9
+               Nchuu yaꞌa .................................................8
+               Nchuu yuku................................................8 
+               Ntikaan ....................................................14
+               Ntintatsa ..................................................14 
+               Ñaꞌmi yucha ...............................................5
+               Patu nchaꞌi ...............................................22 
+               Patu yuku.................................................23
+               Saa chavi ..................................................19
+               Saa chaꞌa ..................................................15
+               Saa friu.....................................................13
+               Saa icha....................................................20 
+               Saa iti.......................................................19 
+               Saa iꞌna ....................................................18
+               Saa kava ...................................................18
+               Saa koo.....................................................23
+               Saa krista..................................................16 
+               Saa kuaan...........................................16, 17
+               Saa kuaan ntipintu ...................................14
+               Saa kuaan xini kuaꞌa ................................15
+               Saa kuaꞌa..................................................15
+               Saa kula....................................................13
+               Saa kusu kiti luu.......................................15
+               Saa kuun savi ...........................................13
+               Saa lirru ...................................................16 
+               Saa liꞌva....................................................20 
+               Saa miꞌncha..............................................11 
+               Saa nchaa .................................................12
+               Saa nchaa yuku ........................................12 
+               Saa nchaꞌi...................................................7
+               Saa ncheꞌe ..........................................18, 20
+               Saa ncheꞌen ..............................................18
+               Saa ntaka..................................................11 
+               Saa ntakuatu ............................................12
+               Saa ntiki luu.............................................17
+               Saa ntiki naꞌnu .........................................17 
+               Saa ntitsaꞌin..............................................18 
+               Saa ntivilu ................................................19
+               Saa nutoto ................................................18 
+               Saa nuu kuꞌu ............................................17 
+               Saa nuu nchaa ..........................................12 
+               Saa nuu ntika ...........................................17
+               Saa nuu saꞌa .............................................16
+               Saa nuyuú ................................................18 
+               Saa ñuꞌma.................................................11
+               Saa pario ..................................................20
+               Saa pintu.................................................. 16
+               Saa tika yoko itu ...................................... 17 
+               Saa tintuyu .............................................. 19
+               Saa tirriti ................................................. 16
+               Saa tiꞌla...................................................... 7
+               Saa tsika nuu saꞌa kuaan .......................... 16
+               Saa tuli ...................................................... 7
+               Saa tusava................................................ 17
+               Saa veñuꞌu ............................................... 12
+               Saa vikó ................................................... 19
+               Saa vilu....................................................12
+               Saa xini tachi ........................................... 13
+               Saa yavi ................................................... 19 
+               Saa yaꞌa ................................................... 18
+               Saa yucha ................................................ 22
+               Sami......................................................... 23 
+               Sata............................................................ 8
+               Skuu yucha .............................................. 23 
+               Stiꞌin kuaan.............................................. 14 
+               Stiꞌin nchaa .............................................. 14 
+               Sutu yucha ............................................... 22
+               Taka lunchi .............................................. 20 
+               Taka ntuxi................................................ 21 
+               Taka ñuꞌu................................................. 21
+               Taka pintu nchaꞌi ..................................... 21 
+               Taka xini kuaꞌa ........................................ 21
+                --></index>
+         </div>
+      </body>
+   </text>
+</TEI>
