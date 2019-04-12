@@ -23,10 +23,7 @@
         <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w[ancestor-or-self::*/@xml:lang='mix'])"/>
         
         
-        
-        
-        
-        
+
         <!-- will need to define variable for getting translations of full sentences.. (point from <span>/<link> to <seg>) -->
         
         <xsl:message>coucou: <xsl:value-of select="$allLemmas"/></xsl:message>
@@ -83,13 +80,15 @@
                                     <xsl:message>es: <xsl:value-of select="$sTranslationEs"/></xsl:message>
                                     
                                     <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
-                                    <xsl:variable name="wTranslationLinkEs" select="$readDoc/descendant::linkGrp[@type = 'translation']/link[@target = $target]"/> -->
+                                    <xsl:variable name="linkTranslationEs" select="$readDoc/descendant::link[contains(@target,$target) and not(@type)]"/>
                                     
                                     <xsl:variable name="wTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en' and @target = $target]"/>
                                     <!--  <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>-->
                                     
                                     <xsl:variable name="wTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es' and @target = $target]"/>
                                     <!--  <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>--> 
+                                    
+                                    <xsl:variable name="wTranslationLat" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='la' and @target = $target]"/>
                                     
                                     <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>     
                                     <sense>
@@ -108,11 +107,21 @@
                                             <cit type="translation">
                                                 <form>
                                                     <orth xml:lang="es">
-                                                        <xsl:value-of select="$wTranslationEs"/>
+                                                        <xsl:value-of select="$linkTranslationEs"/>
                                                     </orth>
                                                 </form>
                                             </cit>
                                             
+                                            <xsl:if test="span[@xml:lang='la']">
+                                            <cit type="translation">
+                                                <form>
+                                                    <orth xml:lang="la">
+                                                        <xsl:value-of select="$wTranslationLat"/>
+                                                    </orth>
+                                                </form>
+                                            </cit>
+                                            </xsl:if>
+                                            <!-- 
                                             <cit type="example">
                                                 <quote xml:lang="mix">      
                                                     <xsl:value-of select="parent::seg/*" separator=" "/>
@@ -128,6 +137,7 @@
                                                     </quote>
                                                 </cit>
                                             </cit>
+                                             -->
                                         </xsl:for-each>
                                     </sense>
                                 </xsl:for-each>
