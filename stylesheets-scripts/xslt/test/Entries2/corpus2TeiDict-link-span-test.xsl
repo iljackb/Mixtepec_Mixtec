@@ -4,6 +4,7 @@
     
     <xsl:output method="xml" indent="yes"/>
     
+    <!-- SPECIFY FOLDER IN VARIABLE "$folderName" RUN ON SELF: Input file and xsl in scenario should be "${currentFile}" -->
     
     <!-- variable for each unique item should be based on english or spanish translation (instead of value of: "distinct-values(descendant::w/@lemma)"  -->
     
@@ -48,74 +49,95 @@
                             <sourceDesc>
                                 <bibl>
                                     <!-- add the document path in attribute -->
-                                    <!-- change to only print texts and make output for spanish and english titles -->
-                                    <xsl:copy-of select="$readDoc/descendant::titleStmt/title"/>
-                                    <!-- 
-                                        <xsl:value-of select="$readDoc/descendant::titleStmt/title"  separator=" "/>
-                                    -->
+                                    <editor><xsl:value-of select="$readDoc/descendant::titleStmt/editor" separator=" "/></editor>, <date><xsl:value-of select="$readDoc/descendant::sourceDesc/bibl/date"/></date>. <title xml:lang="mix"><xsl:value-of select="$readDoc/descendant::titleStmt/title[@xml:lang='mix']" separator=" "/>
+                                    </title>
                                 </bibl>
                             </sourceDesc>
                         </fileDesc>
                     </teiHeader>
                     <text>
                         <body>
+                            
+                            <!-- add @xml:id on <entry> take substring after dbpedia sense[@corresp][starts-with(.,"http://dbpedia.org/resource/")] 
+                                   -->                  
+                     
+                            <xsl:for-each select="$readDoc/descendant::w[@xml:lang='mix'][. = current()]">
+                                
+                                <xsl:variable name="segID" select="parent::seg/@xml:id"/>
+                                
+                                <xsl:variable name="wID" select="@xml:id"/>
+                                
+                                <xsl:variable name="segTarget" as="xs:string" select="concat('#',$segID)"/>
+                                
+                                <xsl:variable name="target" as="xs:string" select="concat('#',$wID)"/>
+                                
+                                
+                                <xsl:variable name="sTranslationEn"
+                                    select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en'
+                                    and @target = $segTarget]"/>
+                                
+                                <xsl:message>en: <xsl:value-of select="$sTranslationEn"/></xsl:message>
+                                
+                                <xsl:variable name="sTranslationEs"
+                                    select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es'
+                                    and @target = $segTarget]"/>
+                                
+                                <xsl:message>es: <xsl:value-of select="$sTranslationEs"/></xsl:message>
+                                
+                                <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
+                                <xsl:variable name="linkTranslationEs"
+                                    select="$readDoc/descendant::linkGrp[@type = 'translation']/link[contains(@target,$target)]"/>
+                                
+                                <xsl:message>es: <xsl:value-of select="$linkTranslationEs"/></xsl:message>
+                                
+                                <!-- NEED TO DISTINGUISH WHOLE STRINGS (CURRENT ERROR MATCHES ANY target that contains ($target) even if not full word -->
+                                <xsl:variable name="wTranslationEn" 
+                                    select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en'][contains(@target,$target)]"/>
+                             <!-- 
+                             <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
+                                 -->   
+                                    <xsl:variable name="wTranslationEs"
+                                        select="$readDoc/descendant::spanGrp[@type = 'translation']/span[contains(.,$target) and @xml:lang='es']"/>
+                                <!--
+                            <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
+                               -->   
+                                <xsl:variable name="wTranslationLat" 
+                                    select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='la'
+                                    and @target = $target]"/>
+                                
+                                <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    
+                                
+                                <xsl:variable name="EntrySenseName" 
+                                    select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='sense'][contains(@target,$target)]/@corresp/substring-after(.,'http://dbpedia.org/resource/')"/>
+                                
+                                <!-- 
+                                <xsl:variable name="entryID" select="concat($EntrySenseName, '-MIX')"/>
+                                 -->
+                                
+                                <!-- NEED TO ADD @CERT ON CERTAIN ITEMS! -->
                             <entry>
+                                <xsl:attribute name="xml:id">
+                                    <xsl:value-of select="$EntrySenseName"/>
+                                </xsl:attribute>
+                                
                                 <form type="lemma">
                                     <orth xml:lang="mix">
                                         <!-- modify to make all lowercase -->
                                         <xsl:value-of select="normalize-space(.)"/>
                                     </orth>
+                                    <pron xml:lang="mix" notation="ipa"></pron>
                                 </form>
                                 <gramGrp>
                                     <pos>noun</pos>
                                 </gramGrp>
-                                <xsl:for-each select="$readDoc/descendant::w[@xml:lang='mix'][. = current()]">
-                                    
-                                    <xsl:variable name="segID" select="parent::seg/@xml:id"/>
-                                    
-                                    <xsl:variable name="wID" select="@xml:id"/>
-                                    
-                                    <xsl:variable name="segTarget" as="xs:string" select="concat('#',$segID)"/>
-                                    
-                                    <xsl:variable name="target" as="xs:string" select="concat('#',$wID)"/>
-                                    
-                                    
-                                    <xsl:variable name="sTranslationEn"
-                                        select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en'
-                                        and @target = $segTarget]"/>
-                                    
-                                    <xsl:message>en: <xsl:value-of select="$sTranslationEn"/></xsl:message>
-                                    
-                                    <xsl:variable name="sTranslationEs"
-                                        select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es'
-                                        and @target = $segTarget]"/>
-                                    
-                                    <xsl:message>es: <xsl:value-of select="$sTranslationEs"/></xsl:message>
-                                    
-                                    <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
-                                    <xsl:variable name="linkTranslationEs"
-                                        select="$readDoc/descendant::linkGrp[@type = 'translation']/link[contains(@target,$target)]"/>
-                                    
-                                    <xsl:message>es: <xsl:value-of select="$linkTranslationEs"/></xsl:message>
-                                    
-                                    <xsl:variable name="wTranslationEn" 
-                                        select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en'
-                                        and @target = $target]"/>
-                                    
-                                    <!--  <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
-                                    <xsl:variable name="wTranslationEs"
-                                        select="$readDoc/descendant::spanGrp[@type = 'translation']/span[contains(.,$target) and @xml:lang='es']"/>-->
-                                    <!--  <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>--> 
-                                    
-                                    <xsl:variable name="wTranslationLat" 
-                                        select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='la'
-                                        and @target = $target]"/>
-                                    
-                                    <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    
-                                    
+
+                                <!-- MAJOR ERRORS WHERE <sense @corresp has two values pointed to;
+                                This happens where there are 2+ Mixtec forms; currently the script correctly makes separate entries for each, 
+                                but the /entry/@xml values don't copy in these cases
+                                -->
                                     <sense>
                                         <xsl:variable name="wSense1" 
-                                            select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='sense' and @target = $target]/@corresp"/>
+                                            select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='sense'][contains(@target,$target)]/@corresp"/>
                                         <xsl:attribute name="corresp">
                                             <xsl:value-of select="$wSense1"/>
                                         </xsl:attribute>   
@@ -136,6 +158,24 @@
                                             <ref type="sense" corresp="http://dbpedia.org/resource/Bird"/>
                                         </xr>
                                              
+                                        <xsl:if test="parent::seg/*">
+                                                 <cit type="example">
+                                                     <quote xml:lang="mix">      
+                                                         <xsl:value-of select="parent::seg/*" separator=" "/>
+                                                     </quote>
+                                                     <cit type="translation">
+                                                         <quote xml:lang="en">
+                                                             <xsl:value-of select="$sTranslationEn" separator=" "/>
+                                                         </quote>
+                                                     </cit>
+                                                     <cit type="translation">
+                                                         <quote xml:lang="es">
+                                                             <xsl:value-of select="$sTranslationEs" separator=" "/>
+                                                         </quote>
+                                                     </cit>
+                                                 </cit>
+                                             </xsl:if>
+                                             
                                         
                                         <xsl:for-each select="$wTranslationEn">
                                             <!-- make new sense only if unique...-->
@@ -149,7 +189,7 @@
                                                 </form>
                                             </cit>
                                             
-                                            <!-- need to allow for multiple spanish terms and "es-MEX" or "es" -->
+                                            <!-- (BUG: need to allow for multiple spanish terms and "es-MEX" or "es" )-->
                                             
                                             <xsl:for-each select="$linkTranslationEs">
                                             <cit type="translation">
@@ -170,18 +210,23 @@
                                             </cit>
                                             </xsl:for-each>
                                             
+                                            <!-- Problem: where multiple latin items: -->
+                                            
+                                            
+                                            <xsl:for-each select="$wTranslationLat">
                                             <cit type="translation">
                                                 <form>
                                                     <orth xml:lang="la">
                                                         <xsl:value-of select="$wTranslationLat"/>
                                                     </orth>
                                                 </form>
-                                            </cit>
-                                            
+                                            </cit>         
+                                            </xsl:for-each>
                                         </xsl:for-each>
                                     </sense>
-                                </xsl:for-each>
+                               
                             </entry>
+                            </xsl:for-each>
                         </body>
                     </text>
                 </TEI>
