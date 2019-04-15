@@ -10,7 +10,7 @@
     
     <xsl:template match="/">
         
-        <xsl:variable name="folderName" select="'Entries'"/>
+        <xsl:variable name="folderName" select="'EntriesTest'"/>
         <xsl:variable name="allEntries" select="$inputDocs//entry"/>
         <TEI xmlns="http://www.tei-c.org/ns/1.0">
             <teiHeader>

@@ -29,12 +29,12 @@
          -->
         
 
-        <!-- will need to define variable for getting translations of full sentences.. (point from <span>/<link> to <seg>) -->
+        <!-- 
         
         <xsl:message>coucou: <xsl:value-of select="$allLemmas"/></xsl:message>
         <xsl:for-each select="$allLemmas">
             <xsl:sort/>
-            <xsl:result-document href="{$folderName}/{normalize-space(.)}.xml" method="xml">
+            <xsl:result-document href="{$folderName}/{normalize-space(.)}.xml" method="xml">-->
                 <TEI>
                     <teiHeader>
                         <fileDesc>
@@ -57,7 +57,10 @@
                     </teiHeader>
                     <text>
                         <body>
-                            
+                            <xsl:message>coucou: <xsl:value-of select="$allLemmas"/></xsl:message>
+                            <xsl:for-each select="$allLemmas">
+                                <xsl:sort/>
+
                             <!-- add @xml:id on <entry> take substring after dbpedia sense[@corresp][starts-with(.,"http://dbpedia.org/resource/")] 
                                    -->                  
                      
@@ -238,13 +241,14 @@
                                             </xsl:for-each>
                
                                     </sense>
-                               
                             </entry>
+                            </xsl:for-each>
+                            
                             </xsl:for-each>
                         </body>
                     </text>
                 </TEI>
-            </xsl:result-document>
-        </xsl:for-each>
+   <!--         </xsl:result-document> 
+        </xsl:for-each>--> 
     </xsl:template>
 </xsl:stylesheet>
