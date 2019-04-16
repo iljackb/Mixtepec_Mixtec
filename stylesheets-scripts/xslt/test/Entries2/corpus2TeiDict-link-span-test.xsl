@@ -152,6 +152,7 @@
                                     <sense>
                                         <xsl:variable name="wSense1" 
                                             select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='sense' and tokenize(@target,' ') = $target]/@corresp"/>
+                                        
                                         <xsl:attribute name="corresp">
                                             <xsl:value-of select="$wSense1"/>
                                         </xsl:attribute>   
@@ -159,10 +160,9 @@
                                         <!-- old way [...and @target = $target]/note -->
                                         <xsl:variable name="senseNote" 
                                             select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='note' and tokenize(@target,' ') = $target]/note"/>
+                                        
                                         <xsl:for-each select="$senseNote">
-                                            <note>
-                                               <xsl:copy-of select="."/>
-                                            </note>
+                                             <xsl:copy-of select="."/>         
                                         </xsl:for-each>
 
                                         
