@@ -194,6 +194,20 @@
                                         
                                         <xsl:for-each select="$wTranslationEn">
                                             <!-- make new sense only if unique...-->
+                                            <!-- (BUG: figure our why produces:
+                                            
+           <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">Buffy-crowned wood partridge mountain chicken</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">Buffy-crowned wood partridge mountain chicken</orth>
+                  </form>
+               </cit>
+                                            
+                                            -->
                                             <xsl:message>en: <xsl:value-of select="$distinctSense"/></xsl:message> 
                                             
                                             <cit type="translation">
