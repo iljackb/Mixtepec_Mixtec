@@ -7,7 +7,7 @@
     <xsl:variable name="orth1" select="//form[@type='lemma']/orth[1]"/>
     
     <xsl:template match="/">
-             <xsl:text>Orth&#009;  Pron(1)&#009; Pron(Pastor and Beam de Azcona)&#009; Pron(Pike and Ibach)&#009; Pron&#009; Pron&#009; POS(sense1)&#009; EN(sense1.i)&#009; EN(sense1.ii)&#009; EN(sense1.iii)&#009; ES (sense1.i)&#009; ES(sense1.ii)&#009; ES(sense1.iii)&#009; Def(sense1)&#009;  Example (sense 1)&#009; Example (EN)&#009; Example (ES)&#009; POS(sense2)&#009; EN(sense2.i)&#009; EN(sense2.ii)&#009; EN(sense2.iii)&#009; ES (sense2.i)&#009; ES(sense2.ii)&#009;  ES(sense2.iii)&#009; Def(sense2)&#009; Example (sense 2)&#009; Example (sense 2) (EN)&#009; Example (sense 2) (ES)</xsl:text>
+             <xsl:text>Orth&#009;  Pron(1)&#009; Pron(Pastor and Beam de Azcona)&#009; Pron(Pike and Ibach)&#009; Pron&#009; Pron&#009; POS(sense1)&#009; EN(sense1.i)&#009; ES (sense1.i)&#009; LA (sense1.i)&#009;  Def(sense1)&#009;  Example (sense 1)&#009; Example (EN)&#009; Example (ES)&#009; POS(sense2)&#009; EN(sense2.i)&#009; EN(sense2.ii)&#009; EN(sense2.iii)&#009; ES (sense2.i)&#009; ES(sense2.ii)&#009;  ES(sense2.iii)&#009; Def(sense2)&#009; Example (sense 2)&#009; Example (sense 2) (EN)&#009; Example (sense 2) (ES)</xsl:text>
         <xsl:value-of select="$newline" />
         
         <xsl:for-each select="//entry | //re">
@@ -42,6 +42,10 @@
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'][2]"/>
             <xsl:value-of select="$separator" />
             <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'][3]"/>
+            <xsl:value-of select="$separator" />
+            <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='la'][1]"/>
+            <xsl:value-of select="$separator" />
+            <xsl:value-of select="sense[1]/cit[@type='translation']/form/orth[@xml:lang='la'][2]"/>
             <xsl:value-of select="$separator" />
            <xsl:value-of select="sense[1]/def[@xml:lang='en']"/>
             <xsl:value-of select="$separator" />
