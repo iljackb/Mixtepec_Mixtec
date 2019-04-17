@@ -16,14 +16,23 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="//cit[@type='translation']/orth">
+        <form>
+            <orth>
+                <xsl:copy-of select="@* "/>
+                <xsl:value-of select="."/>
+            </orth>
+        </form>
+        
+    </xsl:template>
+    <!-- 
     <xsl:template match="desc">
         <seg type="desc">
             <xsl:copy-of select="@*"/>
             <xsl:value-of select="."/>
         </seg>
     </xsl:template>
-    
-    <!-- 
+
     <xsl:template match="//cit[@type='translation']/quote">
         <orth>
             <xsl:copy-of select="@*"/>

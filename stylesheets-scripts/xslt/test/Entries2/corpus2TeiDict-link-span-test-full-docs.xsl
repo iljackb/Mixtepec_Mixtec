@@ -4,7 +4,21 @@
     
     <xsl:output method="xml" indent="yes"/>
     
-    <!-- SPECIFY FOLDER IN VARIABLE "$folderName" RUN ON SELF: Input file and xsl in scenario should be "${currentFile}" -->
+    <!-- 
+    THIS VERSION IS MEANT FOR FILES WHERE ALL <w>'s are in Mixtec
+    -->
+    
+    <!-- 
+    Needs to ADD:
+     - TO INCLUDE MULTI WORD EXPRESSIONS (& COMPOUNDS):IE WHERE TRANSLATION POINTS TO MULTIPLE <w>'s
+     - ONLY MAKE ENTRIES FOR DISTINCT SENSES!!!
+     - DISTINGUISH FROM SPANISH <w>'s IN HEADER!!
+    -->
+    
+    <!--
+        SPECIFY FOLDER IN VARIABLE "$folderName" 
+        RUN ON SELF: 
+        Input file and xsl in scenario should be "${currentFile}" -->
     
     <!-- variable for each unique item should be based on english or spanish translation (instead of value of: "distinct-values(descendant::w/@lemma)"  -->
     
@@ -23,7 +37,7 @@
         
         <xsl:variable name="theRoot" select="."/>
         <xsl:variable name="folderName" select="'EntriesTest'"/>
-        <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w/ancestor-or-self::*[@xml:lang='mix'])"/>
+        <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w)"/>
         <!-- 
         <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w[ancestor-or-self::*/@xml:lang='mix'])"/>
          -->
@@ -64,7 +78,7 @@
                             <!-- add @xml:id on <entry> take substring after dbpedia sense[@corresp][starts-with(.,"http://dbpedia.org/resource/")] 
                                    -->                  
                      
-                                <xsl:for-each select="$readDoc/descendant::w/ancestor-or-self::*[@xml:lang='mix'][. = current()]">
+                                <xsl:for-each select="$readDoc/descendant::w[. = current()]">
                                 
                                 <xsl:variable name="segID" select="parent::seg/@xml:id"/>
                                 
@@ -164,14 +178,7 @@
                                         <xsl:for-each select="$senseNote">
                                              <xsl:copy-of select="."/>         
                                         </xsl:for-each>
-
-                                        
-                                        <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
-                                        <usg type="domain" corresp="http://dbpedia.org/resource/Bird">Bird</usg>
-                                        <xr type="hyponymOf">
-                                            <ref corresp="#bird" xml:lang="mix">saa</ref>
-                                            <ref type="sense" corresp="http://dbpedia.org/resource/Bird"/>
-                                        </xr>
+    
                                              
                                         <xsl:if test="parent::seg/*">
                                                  <cit type="example">

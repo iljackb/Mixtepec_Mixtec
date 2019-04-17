@@ -7,13 +7,20 @@
     version="2.0">
     
     
-    <!-- version 2017-12-09 -->
+    <!-- version 2019-04-17 -->
     
+    <!-- INSTRUCTIONS: 
+        PROCESSES ONE FILE AT A TIME:
+        XSL SHOULD BE IN SAME DIRECTORY    
+        INSERT FILENAME IN $input
+        RUN ON SELF
+        OXYEGEN TRANFORMATION SCENARIO "praat2tei-sil"
+    -->
     <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
     
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="input" as="xs:string" select="'Leccion_01.txt'"/>
+    <xsl:param name="input" as="xs:string" select="'Leccion_02.txt'"/>
     
     <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
     <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
