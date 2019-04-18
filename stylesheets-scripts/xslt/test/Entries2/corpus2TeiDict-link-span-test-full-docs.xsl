@@ -37,10 +37,8 @@
         
         <xsl:variable name="theRoot" select="."/>
         <xsl:variable name="folderName" select="'EntriesTest'"/>
-        <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w)"/>
-        <!-- 
         <xsl:variable name="allLemmas" select="distinct-values($readDoc/descendant::w[ancestor-or-self::*/@xml:lang='mix'])"/>
-         -->
+
         
 
         <!-- 
@@ -180,7 +178,7 @@
                                         </xsl:for-each>
     
                                              
-                                        <xsl:if test="parent::seg/*">
+                                        <xsl:if test="parent::seg[@type='S']/*">
                                                  <cit type="example">
                                                      <quote xml:lang="mix">      
                                                          <xsl:value-of select="parent::seg/*" separator=" "/>
