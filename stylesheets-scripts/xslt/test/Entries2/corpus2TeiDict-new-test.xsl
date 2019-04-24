@@ -60,6 +60,7 @@
                     <xsl:for-each select="$allSpans">
                         <!--<xsl:sort/> -->   
                         
+                        <!-- this will have to be changed if there is also linkGrp annotations! -->
                         <xsl:for-each select="$readDoc/descendant::span[not(@type) and @xml:lang='en'][. = current()]">
                             
                             <xsl:variable name="targetSpan" select="@target"/>
@@ -67,33 +68,28 @@
                             <xsl:message>Boucle: <xsl:value-of select="."/></xsl:message>
                             
                             <xsl:variable name="wIDs" select="tokenize($targetSpan,' ')"/>
+                            <!-- DOES THIS TURN EACH POINTER INTO THIS SAME VARIABLE? -->
                             
                             <xsl:message>Tokens: <xsl:value-of select="$wIDs"/></xsl:message>
                            
-                            <xsl:variable name="segID" select="parent::seg/@xml:id"/><!-- ?? -->
+                            <xsl:variable name="segID" select="descendant::seg/@xml:id"/><!-- HOW TO BIND TO CURRENT? -->
                             
                             <!--<xsl:variable name="segTarget" as="xs:string" select="concat('#',$segID)"/>-->
                             
                             <!-- we could get the context sentence by using segID or by just getting value of span[@type='sentence'] -->
-                            <xsl:variable name="sTranslationEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en'
-                                and @target = $segID]"/>
-                            
-                            <xsl:variable name="sTranslationEs"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es'
-                                and @target = $segID]"/>
-                            <!--  
+
+                             
+                             <!--  
                             <xsl:variable name="linkTranslationEs"
                                 select="$readDoc/descendant::linkGrp[@type = 'translation']/link[tokenize(@target,' ') = $target]"/>
-                            
-                            <xsl:variable name="wTranslationEn" 
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en' and tokenize(@target,' ') = $target]"/>
-                            
+                            -->
+                            <!-- DONT NEED A VARIABLE FOR wTranslationEn because the basis of search is that, so only need to print 'value-of' -->
+                          <!--  
                             <xsl:variable name="wTranslationEs"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[contains(.,$target) and tokenize(@target,' ') = $target]"/>
-               
-                            <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    -->
-                            
+                                select="$readDoc/descendant::span[not(@type) and @xml:lang='es'][. = current()]"/>
+                 
+                            <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>   
+                            -->
                             <entry>
                                 
                                 <form type="lemma">
@@ -125,11 +121,23 @@
                                 <sense>
                                     <!--  
                                     <xsl:for-each select="$distinctSense">   
-                                        -->
-                                        <xsl:if test="parent::seg[@type='S']/*">
-                                            <cit type="example">
-                                                <quote xml:lang="mix">      
-                                                    <xsl:value-of select="parent::seg/*" separator=" "/>
+                                       
+                                    <xsl:if test="preceding-sibling::seg[@type='S']/*"> -->
+                                    <xsl:for-each select="$readDoc/descendant::span[@type]">
+                                       
+                                        
+                                        <xsl:variable name="sTranslationEn"
+                                            select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='en'
+                                            and @target = $segID]"/>
+                                        
+                                        <xsl:variable name="sTranslationEs"
+                                            select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang='es'
+                                            and @target = $segID]"/>
+                                        
+                                        <cit type="example">
+                                                <quote xml:lang="mix">   <!-- currently printing all sentences (not just that of the given token) -->
+                                                    <xsl:value-of select="$readDoc/descendant::seg[@type]/*" separator=" "/>
+                                                    <xsl:message>Le résultat: <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(),'#')]/parent::seg"/></xsl:message>
                                                 </quote>
                                                 <cit type="translation">
                                                     <quote xml:lang="en">
@@ -142,17 +150,18 @@
                                                     </quote>
                                                 </cit>
                                             </cit>
-                                        </xsl:if>
+                                    </xsl:for-each>
+                                          <!--  </xsl:if>-->
 
-                                          <!-- 
+                                       
                                         <cit type="translation">
                                             <form>
                                                 <orth xml:lang="en">
-                                                    <xsl:value-of select="$wTranslationEn"/>
+                                                    <xsl:value-of select="."/>
                                                 </orth>
                                             </form>
                                         </cit>
-                                  <!-\- for where there is a <linkGrp> translation -\-> -->
+                                  <!-- for where there is a <linkGrp> translation --> 
                                         <!--  
                                         <xsl:for-each select="$linkTranslationEs">
                                             <cit type="translation">
@@ -170,7 +179,7 @@
                                             </cit>
                                         </xsl:for-each>
                                         -->
-                                    <!--  
+                                  <!--  
                                         <xsl:for-each select="$wTranslationEs">
                                             <cit type="translation">
                                                 <form>
@@ -180,7 +189,7 @@
                                                 </form>
                                             </cit>
                                         </xsl:for-each>
-                  
+                                    
                                     </xsl:for-each>
                                     -->
                                 </sense>
