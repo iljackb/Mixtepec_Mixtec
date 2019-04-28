@@ -135,10 +135,40 @@
                                 <xsl:attribute name="xml:id">
                                     <xsl:value-of select="$EntrySenseName"/>
                                 </xsl:attribute>
-
+                                
+                                <xsl:choose>
+                                    <xsl:when test="count($wIDs) = 1">
+                                        <form type="lemma">
+                                            <orth xml:lang="mix">
+                                                <xsl:value-of select="normalize-space(.)"/>
+                                            </orth>
+                                            <pron xml:lang="mix" notation="ipa"/>
+                                        </form>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <form type="complexForm">
+                                            <orth xml:lang="mix">
+                                                <xsl:for-each select="$wIDs">
+                                                    <xsl:message>Le résultat: <xsl:value-of
+                                                        select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"
+                                                    /></xsl:message>
+                                                    <seg>
+                                                        <xsl:value-of
+                                                            select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"
+                                                        />
+                                                    </seg>
+                                                </xsl:for-each>
+                                            </orth>
+                                        </form>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                                <gramGrp>
+                                    <pos/>
+                                </gramGrp>
+                                <!-- original lemma below -->
+                                <!-- modify to make all lowercase
                                 <form type="lemma">
                                     <orth xml:lang="mix">
-                                        <!-- modify to make all lowercase -->
                                         <xsl:value-of select="normalize-space(.)"/>
                                     </orth>
                                     <pron xml:lang="mix" notation="ipa"/>
@@ -146,8 +176,9 @@
                                 <gramGrp>
                                     <pos/>
                                 </gramGrp>
-
-                                <!-- if a //span/@target contains more than one pointer, and one of which = $wID; print all the <w>'s pointed to and get gloss-->
+ -->
+                                <!-- original <re> below -->
+                                <!-- if a //span/@target contains more than one pointer, and one of which = $wID; print all the <w>'s pointed to and get gloss
                                 <xsl:if test="count($wIDs) > 1">
                                     <re>
                                         <form type="complexForm">
@@ -167,6 +198,7 @@
                                         </form>
                                     </re>
                                 </xsl:if>
+                                -->
                                 <sense>
 
                                     <!--  
