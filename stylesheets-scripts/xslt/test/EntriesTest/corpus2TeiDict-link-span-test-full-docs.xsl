@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs" version="2.0" xmlns="http://www.tei-c.org/ns/1.0"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0"
+    xmlns="http://www.tei-c.org/ns/1.0" xpath-default-namespace="http://www.tei-c.org/ns/1.0">
 
     <xsl:output method="xml" indent="yes"/>
 
@@ -47,7 +47,8 @@
             <teiHeader>
                 <fileDesc>
                     <titleStmt>
-                        <title>Concordance lexical entry for lemma: <xsl:value-of select="normalize-space(.)"/></title>
+                        <title>Concordance lexical entry for lemma: <xsl:value-of
+                                select="normalize-space(.)"/></title>
                     </titleStmt>
                     <publicationStmt><!-- add the document path? 
                                 <xsl:copy-of select="$readDoc/descendant::publicationStmt/distributor"/>
@@ -74,7 +75,8 @@
 
                             <xsl:variable name="wID" select="@xml:id"/>
 
-                            <xsl:variable name="segTarget" as="xs:string" select="concat('#', $segID)"/>
+                            <xsl:variable name="segTarget" as="xs:string"
+                                select="concat('#', $segID)"/>
 
                             <xsl:variable name="target" as="xs:string" select="concat('#', $wID)"/>
 
@@ -83,17 +85,19 @@
                                     $readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en'
                                     and @target = $segTarget]"/>
 
-                            <xsl:message>English translation: <xsl:value-of select="$sTranslationEn"/></xsl:message>
+                            <xsl:message>English translation: <xsl:value-of select="$sTranslationEn"
+                                /></xsl:message>
 
                             <xsl:variable name="sTranslationEs"
                                 select="
                                     $readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es'
                                     and @target = $segTarget]"/>
 
-                            <xsl:message>Spanish translation: <xsl:value-of select="$sTranslationEs"/></xsl:message>
+                            <xsl:message>Spanish translation: <xsl:value-of select="$sTranslationEs"
+                                /></xsl:message>
 
                             <!-- THIS IN PROGRESS: can't match because can't make a variable of an @ value that is multiple strings (with spaces) -->
-                            
+
                             <!-- Here you were missing the actual test -->
                             <!--<xsl:variable name="spanTargetEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type) and @xml:lang = 'en']/@target"/>-->
@@ -101,7 +105,18 @@
                             <!-- I have added [tokenize(.,' ') = $target] which checks that the token we are looking for is actually referenced in the possibly multiple targets -->
 
                             <xsl:variable name="spanTargetEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type) and @xml:lang = 'en']/@target[tokenize(., ' ') = $target]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'en']/@target[tokenize(., ' ') = $target]"/>
+
+                            <xsl:variable name="spanTargetInflected"
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'inflected']/@target[tokenize(., ' ') = $target]"/>
+
+                            <xsl:variable name="spanTargetPhrase"
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'phrase']/@target[tokenize(., ' ') = $target]"/>
+
+                            <xsl:message>Span Target Phrase:
+                                <xsl:value-of select="$spanTargetPhrase"/>
+                                <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                            </xsl:message>
 
                             <xsl:variable name="wIDs" select="tokenize($spanTargetEn, ' ')"/>
                             <xsl:message>Tokenised Ids: <xsl:value-of select="$wIDs"/></xsl:message>
@@ -109,7 +124,8 @@
                             <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
                             <xsl:variable name="linkTranslationEs"
                                 select="$readDoc/descendant::linkGrp[@type = 'translation']/link[tokenize(@target, ' ') = $target]"/>
-                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs"/></xsl:message>
+                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs"
+                                /></xsl:message>
 
                             <xsl:variable name="wTranslationEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and tokenize(@target, ' ') = $target]"/>
@@ -135,9 +151,63 @@
                                 <xsl:attribute name="xml:id">
                                     <xsl:value-of select="$EntrySenseName"/>
                                 </xsl:attribute>
+
+                                <xsl:if test="count($wIDs) = 1">
+                                    <form type="lemma">
+                                        <orth xml:lang="mix">
+                                            <xsl:value-of select="normalize-space(.)"/>
+                                        </orth>
+                                        <pron xml:lang="mix" notation="ipa"/>
+                                    </form>
+                                </xsl:if>
                                 
+                                <xsl:if test="$spanTargetInflected">
+                                    <!-- also add condition for inflected forms that aren't more than one <w>!! -->
+                                    <form type="inflected">
+                                        <orth xml:lang="mix">                                                    
+                                            <xsl:for-each select="$wIDs">
+                                                <xsl:message>Span Target Inflected:
+                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                </xsl:message>
+                                                <seg>    
+                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]" />
+                                                </seg>
+                                            </xsl:for-each>
+                                        </orth>
+                                        <gramGrp>
+                                            <pos/>
+                                            <per/>
+                                            <number/>
+                                        </gramGrp>
+                                        <!-- add glosses here (instead of translations) -->
+                                        <gloss xml:lang="en">
+                                            <xsl:value-of select="$wTranslationEn"/>
+                                        </gloss>
+                                        <gloss xml:lang="es">
+                                            <xsl:value-of select="$wTranslationEs"/>
+                                        </gloss>
+                                    </form>
+                                </xsl:if>
+                                
+                                <xsl:if test="$spanTargetPhrase"><!-- THIS DOESN'T COPY -->
+                                    <form type="phrase">
+                                        <orth xml:lang="mix">
+                                            <xsl:for-each select="$wIDs">
+                                                <xsl:message>Span Target Phrase:
+                                                    <xsl:value-of select="$spanTargetPhrase"/>
+                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                </xsl:message>
+                                                <seg>
+                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                </seg>
+                                            </xsl:for-each>
+                                        </orth>
+                                    </form>
+                                </xsl:if>
+                                <!-- 
                                 <xsl:choose>
-                                    <xsl:when test="count($wIDs) = 1">
+                                    
+                                      <xsl:when test="count($wIDs) = 1">
                                         <form type="lemma">
                                             <orth xml:lang="mix">
                                                 <xsl:value-of select="normalize-space(.)"/>
@@ -145,26 +215,57 @@
                                             <pron xml:lang="mix" notation="ipa"/>
                                         </form>
                                     </xsl:when>
-                                    <xsl:otherwise>
-                                        <form type="complexForm">
-                                            <orth xml:lang="mix">
-                                                <xsl:for-each select="$wIDs">
-                                                    <xsl:message>Le résultat: <xsl:value-of
-                                                        select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"
-                                                    /></xsl:message>
-                                                    <seg>
-                                                        <xsl:value-of
-                                                            select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"
-                                                        />
-                                                    </seg>
-                                                </xsl:for-each>
-                                            </orth>
-                                        </form>
-                                    </xsl:otherwise>
+                                       
+                                        <xsl:when test="$spanTargetInflected">
+                                         
+                                            <form type="inflected">
+                                                <orth xml:lang="mix">                                                    
+                                                    <xsl:for-each select="$wIDs">
+                                                        <xsl:message>Span Target Inflected:
+                                                            <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                        </xsl:message>
+                                                        <seg>    
+                                                            <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]" />
+                                                        </seg>
+                                                    </xsl:for-each>
+                                                </orth>
+                                                <gramGrp>
+                                                    <pos/>
+                                                    <pers/>
+                                                    <number/>
+                                                </gramGrp>
+                            
+                                                <gloss xml:lang="en">
+                                                    <xsl:value-of select="$wTranslationEn"/>
+                                                </gloss>
+                                                <gloss xml:lang="es">
+                                                    <xsl:value-of select="$wTranslationEs"/>
+                                                </gloss>
+                                            </form>
+                                        </xsl:when>
+                                        
+                                        <xsl:when test="$spanTargetPhrase">
+                                            <form type="phrase">
+                                                <orth xml:lang="mix">
+                                                    <xsl:for-each select="$wIDs">
+                                                        <xsl:message>Span Target Phrase:
+                                                            <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                        </xsl:message>
+                                                        <seg>
+                                                            <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                        </seg>
+                                                    </xsl:for-each>
+                                                </orth>
+                                            </form>
+                                        </xsl:when>
+                                        
+                                    
                                 </xsl:choose>
+                                 -->
                                 <gramGrp>
                                     <pos/>
                                 </gramGrp>
+
                                 <!-- original lemma below -->
                                 <!-- modify to make all lowercase
                                 <form type="lemma">
@@ -225,12 +326,14 @@
                                             </quote>
                                             <cit type="translation">
                                                 <quote xml:lang="en">
-                                                    <xsl:value-of select="$sTranslationEn" separator=" "/>
+                                                  <xsl:value-of select="$sTranslationEn"
+                                                  separator=" "/>
                                                 </quote>
                                             </cit>
                                             <cit type="translation">
                                                 <quote xml:lang="es">
-                                                    <xsl:value-of select="$sTranslationEs" separator=" "/>
+                                                  <xsl:value-of select="$sTranslationEs"
+                                                  separator=" "/>
                                                 </quote>
                                             </cit>
                                         </cit>
@@ -244,7 +347,7 @@
                                         <cit type="translation">
                                             <form>
                                                 <orth xml:lang="en">
-                                                    <xsl:value-of select="$wTranslationEn"/>
+                                                  <xsl:value-of select="$wTranslationEn"/>
                                                 </orth>
                                             </form>
                                         </cit>
@@ -252,12 +355,13 @@
 
                                     <xsl:for-each select="distinct-values($wTranslationEs)">
 
-                                        <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
+                                        <xsl:message>es: <xsl:value-of select="$wTranslationEs"
+                                            /></xsl:message>
 
                                         <cit type="translation">
                                             <form>
                                                 <orth xml:lang="es">
-                                                    <xsl:value-of select="$wTranslationEs"/>
+                                                  <xsl:value-of select="$wTranslationEs"/>
                                                 </orth>
                                             </form>
                                         </cit>
@@ -269,17 +373,18 @@
                                             <form>
                                                 <orth xml:lang="es">
 
-                                                    <xsl:for-each select="tokenize(@target, ' ')">
+                                                  <xsl:for-each select="tokenize(@target, ' ')">
 
-                                                        <xsl:variable name="currentLinkedId"
-                                                            select="substring-after(., '#')"/>
+                                                  <xsl:variable name="currentLinkedId"
+                                                  select="substring-after(., '#')"/>
 
-                                                        <xsl:variable name="currentLinkedObject"
-                                                            select="$readDoc/descendant::w[@xml:id = $currentLinkedId and @xml:lang = 'es']"/>
+                                                  <xsl:variable name="currentLinkedObject"
+                                                  select="$readDoc/descendant::w[@xml:id = $currentLinkedId and @xml:lang = 'es']"/>
 
-                                                        <xsl:value-of select="normalize-space($currentLinkedObject)"/>
+                                                  <xsl:value-of
+                                                  select="normalize-space($currentLinkedObject)"/>
 
-                                                    </xsl:for-each>
+                                                  </xsl:for-each>
 
                                                 </orth>
                                             </form>
