@@ -82,14 +82,17 @@
 
                             <xsl:variable name="sTranslationEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and @target = $segTarget]"/>
-
                             <xsl:message>English translation: <xsl:value-of select="$sTranslationEn"/></xsl:message>
+
+                            <xsl:variable name="cert-sTranslationEn"
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and @target = $segTarget]/@cert"/>
 
                             <xsl:variable name="sTranslationEs"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and @target = $segTarget]"/>
-
-                            <xsl:message>Spanish translation: <xsl:value-of select="$sTranslationEs"
-                                /></xsl:message>
+                            <xsl:message>Spanish translation: <xsl:value-of select="$sTranslationEs"/></xsl:message>
+                            
+                            <xsl:variable name="cert-sTranslationEs"
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and @target = $segTarget]/@cert"/>
 
                             <!-- THIS IN PROGRESS: can't match because can't make a variable of an @ value that is multiple strings (with spaces) -->
 
@@ -125,6 +128,8 @@
                             <xsl:variable name="certTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'en'][@target[tokenize(., ' ') = $target]]/@cert"/>
 
                             <xsl:variable name="certTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]/@cert"/>
+
+
 
                             <xsl:variable name="wTranslationEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and tokenize(@target, ' ') = $target]"/>
@@ -246,20 +251,19 @@
                                                 <xsl:value-of select="parent::seg/*" separator=" "/>
                                             </quote>
                                             <cit type="translation">
-                                                <xsl:if test="$certTranslationEn">
+                                                <xsl:if test="$cert-sTranslationEn">
                                                     <xsl:attribute name="cert">
-                                                        <xsl:value-of select="$certTranslationEn"/>
+                                                        <xsl:value-of select="$cert-sTranslationEn"/>
                                                     </xsl:attribute>
                                                 </xsl:if>
                                                 <quote xml:lang="en">
-                                                  <xsl:value-of select="$sTranslationEn"
-                                                  separator=" "/>
+                                                  <xsl:value-of select="$sTranslationEn" separator=" "/>
                                                 </quote>
                                             </cit>
                                             <cit type="translation">
-                                                <xsl:if test="$certTranslationEs">
+                                                <xsl:if test="$cert-sTranslationEs">
                                                     <xsl:attribute name="cert">
-                                                        <xsl:value-of select="$certTranslationEs"/>
+                                                        <xsl:value-of select="$cert-sTranslationEs"/>
                                                     </xsl:attribute>
                                                 </xsl:if>
                                                 <quote xml:lang="es">
