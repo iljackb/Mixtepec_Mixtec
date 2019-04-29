@@ -119,8 +119,12 @@
                             <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
                             <xsl:variable name="linkTranslationEs"
                                 select="$readDoc/descendant::linkGrp[@type = 'translation']/link[tokenize(@target, ' ') = $target]"/>
-                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs"
-                                /></xsl:message>
+                            
+                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs"/></xsl:message>
+             
+                            <xsl:variable name="certTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'en'][@target[tokenize(., ' ') = $target]]/@cert"/>
+
+                            <xsl:variable name="certTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]/@cert"/>
 
                             <xsl:variable name="wTranslationEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and tokenize(@target, ' ') = $target]"/>
@@ -179,9 +183,19 @@
                                         </gramGrp>
                                         <!-- add glosses here (instead of translations) -->
                                         <gloss xml:lang="en">
-                                            <xsl:value-of select="$wTranslationEn"/>
+                                            <xsl:if test="$certTranslationEn">
+                                                <xsl:attribute name="cert">
+                                                    <xsl:value-of select="$certTranslationEn"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
+                                            <xsl:value-of select="$wTranslationEn"/> 
                                         </gloss>
                                         <gloss xml:lang="es">
+                                            <xsl:if test="$certTranslationEs">
+                                                <xsl:attribute name="cert">
+                                                    <xsl:value-of select="$certTranslationEs"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
                                             <xsl:value-of select="$wTranslationEs"/>
                                         </gloss>
                                     </form>
@@ -232,15 +246,24 @@
                                                 <xsl:value-of select="parent::seg/*" separator=" "/>
                                             </quote>
                                             <cit type="translation">
+                                                <xsl:if test="$certTranslationEn">
+                                                    <xsl:attribute name="cert">
+                                                        <xsl:value-of select="$certTranslationEn"/>
+                                                    </xsl:attribute>
+                                                </xsl:if>
                                                 <quote xml:lang="en">
                                                   <xsl:value-of select="$sTranslationEn"
                                                   separator=" "/>
                                                 </quote>
                                             </cit>
                                             <cit type="translation">
+                                                <xsl:if test="$certTranslationEs">
+                                                    <xsl:attribute name="cert">
+                                                        <xsl:value-of select="$certTranslationEs"/>
+                                                    </xsl:attribute>
+                                                </xsl:if>
                                                 <quote xml:lang="es">
-                                                  <xsl:value-of select="$sTranslationEs"
-                                                  separator=" "/>
+                                                  <xsl:value-of select="$sTranslationEs" separator=" "/>
                                                 </quote>
                                             </cit>
                                         </cit>
@@ -252,6 +275,11 @@
                                             -->
 
                                         <cit type="translation">
+                                            <xsl:if test="$certTranslationEn">
+                                                <xsl:attribute name="cert">
+                                                    <xsl:value-of select="$certTranslationEn"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
                                             <form>
                                                 <orth xml:lang="en">
                                                   <xsl:value-of select="$wTranslationEn"/>
@@ -262,10 +290,14 @@
 
                                     <xsl:for-each select="distinct-values($wTranslationEs)">
 
-                                        <xsl:message>es: <xsl:value-of select="$wTranslationEs"
-                                            /></xsl:message>
+                                        <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
 
                                         <cit type="translation">
+                                            <xsl:if test="$certTranslationEs">
+                                                <xsl:attribute name="cert">
+                                                    <xsl:value-of select="$certTranslationEs"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
                                             <form>
                                                 <orth xml:lang="es">
                                                   <xsl:value-of select="$wTranslationEs"/>
