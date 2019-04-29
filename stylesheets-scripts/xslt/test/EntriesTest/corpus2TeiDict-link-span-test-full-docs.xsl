@@ -81,17 +81,12 @@
                             <xsl:variable name="target" as="xs:string" select="concat('#', $wID)"/>
 
                             <xsl:variable name="sTranslationEn"
-                                select="
-                                    $readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en'
-                                    and @target = $segTarget]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and @target = $segTarget]"/>
 
-                            <xsl:message>English translation: <xsl:value-of select="$sTranslationEn"
-                                /></xsl:message>
+                            <xsl:message>English translation: <xsl:value-of select="$sTranslationEn"/></xsl:message>
 
                             <xsl:variable name="sTranslationEs"
-                                select="
-                                    $readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es'
-                                    and @target = $segTarget]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and @target = $segTarget]"/>
 
                             <xsl:message>Spanish translation: <xsl:value-of select="$sTranslationEs"
                                 /></xsl:message>
@@ -147,9 +142,12 @@
                                  -->
 
                             <!-- NEED TO ADD @CERT ON CERTAIN ITEMS! -->
+                            
+                            <!-- DONT MAKE ENTRY UNLESS THERE IS A TRANSLATION!!-->
+                           <xsl:if test="$wTranslationEn or $wTranslationEs">     
                             <entry>
                                 <xsl:attribute name="xml:id">
-                                    <xsl:value-of select="$EntrySenseName"/>
+                                    <xsl:value-of select="$target"/>
                                 </xsl:attribute>
 
                                 <xsl:if test="count($wIDs) = 1">
@@ -311,7 +309,7 @@
                                             -->
 
                                 </sense>
-                            </entry>
+                            </entry></xsl:if>
                         </xsl:for-each>
 
                     </xsl:for-each>
