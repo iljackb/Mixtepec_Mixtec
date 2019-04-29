@@ -155,7 +155,7 @@
                                 <xsl:if test="count($wIDs) = 1">
                                     <form type="lemma">
                                         <orth xml:lang="mix">
-                                            <xsl:value-of select="normalize-space(.)"/>
+                                            <xsl:value-of select="lower-case(normalize-space(.))"/>
                                         </orth>
                                         <pron xml:lang="mix" notation="ipa"/>
                                     </form>
