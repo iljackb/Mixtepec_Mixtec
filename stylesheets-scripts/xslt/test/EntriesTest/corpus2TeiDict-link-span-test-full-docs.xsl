@@ -94,8 +94,6 @@
                             <xsl:variable name="cert-sTranslationEs"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and @target = $segTarget]/@cert"/>
 
-                            <!-- THIS IN PROGRESS: can't match because can't make a variable of an @ value that is multiple strings (with spaces) -->
-
                             <!-- Here you were missing the actual test -->
                             <!--<xsl:variable name="spanTargetEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type) and @xml:lang = 'en']/@target"/>-->
@@ -115,10 +113,11 @@
                                 <xsl:value-of select="$spanTargetPhrase"/>
                                 <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
                             </xsl:message>
+                            
 
                             <xsl:variable name="wIDs" select="tokenize($spanTargetEn, ' ')"/>
                             <xsl:message>Tokenised Ids: <xsl:value-of select="$wIDs"/></xsl:message>
-
+                            
                             <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
                             <xsl:variable name="linkTranslationEs"
                                 select="$readDoc/descendant::linkGrp[@type = 'translation']/link[tokenize(@target, ' ') = $target]"/>
@@ -129,18 +128,14 @@
 
                             <xsl:variable name="certTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]/@cert"/>
 
-
-
                             <xsl:variable name="wTranslationEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and tokenize(@target, ' ') = $target]"/>
-                            <!-- 
-                             <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
+                            <!-- <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
                                  -->
                             <xsl:variable name="wTranslationEs"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and tokenize(@target, ' ') = $target]"/>
 
                             <!--add other languages if needed by copying spanish
-                                
                                 <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    -->
 
                             <xsl:variable name="EntrySenseName"
