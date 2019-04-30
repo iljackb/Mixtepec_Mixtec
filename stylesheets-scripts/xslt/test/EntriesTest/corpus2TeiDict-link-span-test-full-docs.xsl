@@ -93,13 +93,7 @@
                             
                             <xsl:variable name="cert-sTranslationEs"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and @target = $segTarget]/@cert"/>
-
-                            <!-- Here you were missing the actual test -->
-                            <!--<xsl:variable name="spanTargetEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type) and @xml:lang = 'en']/@target"/>-->
-
-                            <!-- I have added [tokenize(.,' ') = $target] which checks that the token we are looking for is actually referenced in the possibly multiple targets -->
-
+                            
                             <xsl:variable name="spanTargetEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang='en']/@target[tokenize(., ' ') = $target][1]"/>
 
