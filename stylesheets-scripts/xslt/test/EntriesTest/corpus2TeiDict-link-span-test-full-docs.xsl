@@ -101,7 +101,7 @@
                             <!-- I have added [tokenize(.,' ') = $target] which checks that the token we are looking for is actually referenced in the possibly multiple targets -->
 
                             <xsl:variable name="spanTargetEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang='en']/@target[tokenize(., ' ') = $target]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang='en']/@target[tokenize(., ' ') = $target][1]"/>
 
                             <xsl:variable name="spanTargetInflected"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'inflected']/@target[tokenize(., ' ') = $target]"/>
