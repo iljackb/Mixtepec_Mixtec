@@ -147,13 +147,15 @@
                                     <xsl:value-of select="$target"/>
                                 </xsl:attribute>
 
-                                <xsl:if test="count($wIDs) = 1">
-                                    <form type="lemma">
-                                        <orth xml:lang="mix">
-                                            <xsl:value-of select="lower-case(normalize-space(.))"/>
-                                        </orth>
-                                        <pron xml:lang="mix" notation="ipa"/>
-                                    </form>
+                                <xsl:if test="count($wIDs) = 1 and not($spanTargetInflected | $spanTargetPhrase)">
+                                        <form type="lemma">
+                                            <orth xml:lang="mix">
+                                                <xsl:value-of select="lower-case(normalize-space(.))"/>
+                                            </orth>
+                                            <pron xml:lang="mix" notation="ipa"/>
+                                        </form>
+                                    
+                                    
                                 </xsl:if>
                                 
                                 <xsl:if test="$spanTargetInflected">
