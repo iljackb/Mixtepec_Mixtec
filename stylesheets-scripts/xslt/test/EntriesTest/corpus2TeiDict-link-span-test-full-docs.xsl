@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L098-tok-mini.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L098-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -95,7 +95,7 @@
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and @target = $segTarget]/@cert"/>
                             
                             <xsl:variable name="spanTargetEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang='en']/@target[tokenize(., ' ') = $target][1]"/>
+                                select="($readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang='en']/@target[tokenize(., ' ') = $target])[1]"/>
 
                             <xsl:variable name="spanTargetInflected"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'inflected']/@target[tokenize(., ' ') = $target]"/>
