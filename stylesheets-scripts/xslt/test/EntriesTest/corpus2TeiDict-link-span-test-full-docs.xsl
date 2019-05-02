@@ -181,7 +181,7 @@
                                                     <xsl:value-of select="$certTranslationEn"/>
                                                 </xsl:attribute>
                                             </xsl:if>
-                                            <xsl:value-of select="$wTranslationEn"/> 
+                                            <xsl:value-of select="."/> 
                                         </gloss>
                                         <gloss xml:lang="es">
                                             <xsl:if test="$certTranslationEs">
@@ -189,7 +189,7 @@
                                                     <xsl:value-of select="$certTranslationEs"/>
                                                 </xsl:attribute>
                                             </xsl:if>
-                                            <xsl:value-of select="$wTranslationEs"/>
+                                            <xsl:value-of select="."/>
                                         </gloss>
                                     </form>
                                 </xsl:if>
@@ -271,7 +271,7 @@
                                             </xsl:if>
                                             <form>
                                                 <orth xml:lang="en">
-                                                  <xsl:value-of select="$wTranslationEn"/>
+                                                  <xsl:value-of select="."/>
                                                 </orth>
                                             </form>
                                         </cit>
@@ -289,7 +289,7 @@
                                             </xsl:if>
                                             <form>
                                                 <orth xml:lang="es">
-                                                  <xsl:value-of select="$wTranslationEs"/>
+                                                  <xsl:value-of select="."/>
                                                 </orth>
                                             </form>
                                         </cit>
