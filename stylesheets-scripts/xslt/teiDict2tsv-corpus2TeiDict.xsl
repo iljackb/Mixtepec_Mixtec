@@ -45,8 +45,6 @@
             <xsl:value-of select="(sense[1]/cit[@type='example']/cit[@type='translation']/quote[@xml:lang='en'])[1]"/>
             <xsl:value-of select="$separator" />
             <xsl:value-of select="(sense[1]/cit[@type='example']/cit[@type='translation']/quote[@xml:lang='es'])[1]"/>
-            <xsl:value-of select="$separator" />
-          
             <xsl:value-of select="$newline" />
             
         </xsl:for-each>
