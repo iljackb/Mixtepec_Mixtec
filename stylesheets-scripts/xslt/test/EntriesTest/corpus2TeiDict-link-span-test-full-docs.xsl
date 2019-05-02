@@ -241,7 +241,7 @@
                                     <xsl:if test="parent::seg[@type = 'S']/*">
                                         <cit type="example">
                                             <quote xml:lang="mix">
-                                                <xsl:value-of select="parent::seg/*" separator=" "/>
+                                                <xsl:value-of select="parent::seg/*"/>
                                             </quote>
                                             <cit type="translation">
                                                 <xsl:if test="$cert-sTranslationEn">
