@@ -141,7 +141,7 @@
                             <!-- NEED TO ADD @CERT ON CERTAIN ITEMS! -->
                             
                             <!-- DONT MAKE ENTRY UNLESS THERE IS A TRANSLATION!!-->
-                           <xsl:if test="$wTranslationEn or $wTranslationEs">     
+                            <xsl:if test="$wTranslationEn or $wTranslationEs">     
                             <entry>
                                 <xsl:attribute name="xml:id">
                                     <xsl:value-of select="$target"/>
@@ -153,9 +153,7 @@
                                                 <xsl:value-of select="lower-case(normalize-space(.))"/>
                                             </orth>
                                             <pron xml:lang="mix" notation="ipa"/>
-                                        </form>
-                                    
-                                    
+                                        </form>  
                                 </xsl:if>
                                 
                                 <xsl:if test="$spanTargetInflected">
