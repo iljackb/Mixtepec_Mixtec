@@ -18,20 +18,51 @@
             <!--  
             <xsl:value-of select="concat(form[@type='lemma']/orth[1],$newline)" />
             -->
-            <xsl:value-of select="form[@type='lemma']/orth[1]" />
+            <xsl:value-of select="form/orth[1]" />
             <xsl:value-of select="$separator"/>
+            <xsl:if test="not(@gloss)">
+                <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[1]"/>
+            </xsl:if>
+            <xsl:if test="@gloss">
+                <xsl:value-of select="(//form/gloss[@xml:lang='en'])[1]"/>
+            </xsl:if>
+            <xsl:value-of select="$separator" />
+            <xsl:if test="not(@gloss)">
+                <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[2]"/>
+            </xsl:if>
+            <xsl:if test="@gloss">
+                <xsl:value-of select="(//form/gloss[@xml:lang='en'])[2]"/>
+            </xsl:if>
+            <xsl:value-of select="$separator" />
+            <xsl:if test="not(@gloss)">
+                <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[3]"/>
+            </xsl:if>
+            <xsl:if test="@gloss">
+                <xsl:value-of select="(//form/gloss[@xml:lang='en'])[3]"/>
+            </xsl:if>
+            <xsl:value-of select="$separator" />
             
-            <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[1] |(form/gloss[@xml:lang='en'])[1]"/>
+            <xsl:if test="not(@gloss)">
+                <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'])[1]"/>
+            </xsl:if>
+            <xsl:if test="@gloss">
+                <xsl:value-of select="(//form/gloss[@xml:lang='es'])[1]"/>
+            </xsl:if>
             <xsl:value-of select="$separator" />
-            <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[2] |(form/gloss[@xml:lang='en'])[2]"/>
+            
+            <xsl:if test="not(@gloss)">
+                <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'])[2]"/>
+            </xsl:if>
+            <xsl:if test="@gloss">
+                <xsl:value-of select="(//form/gloss[@xml:lang='es'])[2]"/>
+            </xsl:if>
             <xsl:value-of select="$separator" />
-            <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[3] |(form/gloss[@xml:lang='en'])[3]"/>
-            <xsl:value-of select="$separator" />
-            <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'])[1] |(form/gloss[@xml:lang='es'])[1]"/>
-            <xsl:value-of select="$separator" />
-            <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'])[2] |(form/gloss[@xml:lang='es'])[2]"/>
-            <xsl:value-of select="$separator" />
-            <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'])[3] |(form/gloss[@xml:lang='en'])[3]"/>
+            <xsl:if test="not(@gloss)">
+                <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='es'])[3]"/>
+            </xsl:if>
+            <xsl:if test="@gloss">
+                <xsl:value-of select="(//form/gloss[@xml:lang='es'])[3]"/>
+            </xsl:if>
             <xsl:value-of select="$separator" />
             
             <xsl:value-of select="(sense[1]/usg[@type='domain'])[1]"/>
