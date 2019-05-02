@@ -48,7 +48,7 @@
                 <fileDesc>
                     <titleStmt>
                         <title>Concordance lexical entry for lemma: <xsl:value-of
-                                select="normalize-space(.)"/></title>
+                                select="$input"/></title>
                     </titleStmt>
                     <publicationStmt><!-- add the document path? 
                                 <xsl:copy-of select="$readDoc/descendant::publicationStmt/distributor"/>
@@ -157,7 +157,7 @@
                                 </xsl:if>
                                 
                                 <xsl:if test="$spanTargetInflected">
-                                    <!-- also add condition for inflected forms that aren't more than one <w>!! -->
+                                    <!-- also add condition for inflected forms that aren't more than one <w>!! I don't want them in <seg> -->
                                     <form type="inflected">
                                         <orth xml:lang="mix">                                                    
                                             <xsl:for-each select="$wIDs">
@@ -261,10 +261,7 @@
                                         </cit>
                                     </xsl:if>
 
-                                    <xsl:for-each select="distinct-values($wTranslationEn)">
-                                        <!--  
-                                            <xsl:message>en: <xsl:value-of select="$distinctSense"/></xsl:message> 
-                                            -->
+                               <xsl:for-each select="distinct-values($wTranslationEn)">
 
                                         <cit type="translation">
                                             <xsl:if test="$certTranslationEn">
@@ -278,7 +275,7 @@
                                                 </orth>
                                             </form>
                                         </cit>
-                                    </xsl:for-each>
+                                 </xsl:for-each>    <!-- -->
 
                                     <xsl:for-each select="distinct-values($wTranslationEs)">
 
@@ -333,7 +330,8 @@
                                             -->
 
                                 </sense>
-                            </entry></xsl:if>
+                            </entry>
+                            </xsl:if>
                         </xsl:for-each>
 
                     </xsl:for-each>
