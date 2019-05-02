@@ -175,22 +175,27 @@
                                             <number/>
                                         </gramGrp>
                                         <!-- add glosses here (instead of translations) -->
-                                        <gloss xml:lang="en">
-                                            <xsl:if test="$certTranslationEn">
-                                                <xsl:attribute name="cert">
-                                                    <xsl:value-of select="$certTranslationEn"/>
-                                                </xsl:attribute>
-                                            </xsl:if>
-                                            <xsl:value-of select="."/> 
-                                        </gloss>
-                                        <gloss xml:lang="es">
-                                            <xsl:if test="$certTranslationEs">
-                                                <xsl:attribute name="cert">
-                                                    <xsl:value-of select="$certTranslationEs"/>
-                                                </xsl:attribute>
-                                            </xsl:if>
-                                            <xsl:value-of select="."/>
-                                        </gloss>
+                                        <xsl:for-each select="distinct-values($wTranslationEn)">
+                                            <gloss xml:lang="en">
+                                                <xsl:if test="$certTranslationEn">
+                                                    <xsl:attribute name="cert">
+                                                        <xsl:value-of select="$certTranslationEn"/>
+                                                    </xsl:attribute>
+                                                </xsl:if>
+                                                <xsl:value-of select="."/> 
+                                            </gloss>
+                                        </xsl:for-each>
+
+                                        <xsl:for-each select="distinct-values($wTranslationEs)">
+                                            <gloss xml:lang="es">
+                                                <xsl:if test="$certTranslationEs">
+                                                    <xsl:attribute name="cert">
+                                                        <xsl:value-of select="$certTranslationEs"/>
+                                                    </xsl:attribute>
+                                                </xsl:if>
+                                                <xsl:value-of select="."/>
+                                            </gloss>
+                                        </xsl:for-each>
                                     </form>
                                 </xsl:if>
                                 
