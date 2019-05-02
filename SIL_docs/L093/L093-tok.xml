@@ -142,43 +142,6 @@
                </category>
             </taxonomy>
          </classDecl>
-         <projectDesc>
-            <ab>
-               <fs>
-                  <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                     name="LexicalItem"
-                     dcr:datcat="http://www.isocat.org/datcat/DC-3294"
-                     xml:id="lexItm"/>
-                  <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                     name="sentence"
-                     dcr:datcat="http://www.isocat.org/datcat/DC-1386"
-                     xml:id="sntc"/>
-               </fs>
-            </ab>
-            <p>
-               This portion of the lexicography project deals with the only known body of literature in Mixtepec-Mixtec language which is comprised of series of 34* orthographic children's texts published by SIL Mexico (Summer Institute of Linguistics). The target audience of these documents is primarily young MIX speakers and are designed for use as classroom handouts and/or lessons for primary/elementary school-level. The topical content of these publications contain both culturally specific, and non-culturally specific subject matter supplemented by illustrations. Topics covered in these documents include: vocabulary, mathematics, telling time, geography, seasons, weather, local agricultural practices, fables, local Mixtec legends amongst others. These publications make up the second most important collection in this project and they remain the only source of reference for examples of how the working orthography of the Mixtec language is applied to the Mixtepec variety.
-               The encoding of this portion of the MIX Language resources can be divided into the following components:
-               <list>
-                  <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
-                  <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
-               
-               <list>
-                        <item>glossing of orthographical lexical items;</item>
-                        <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
-                        <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
-                        <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
-                        <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
-                     </list>
-                  </item>
-                  <item>iii) Classification of Document Types and Ontology Linking;
-                  <list>
-                        <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
-                        <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
-                     </list>
-                  </item>
-               </list>
-            </p>
-         </projectDesc>
          <editorialDecl>
             <ab resp="#JB">
                <date>2018-01-30</date>Currently the grammatical annotation will only point at "low" as the <tag>w</tag> level, i.e. not <tag>m</tag>. This is because in this stage in which I often need to run quick text searches to find glosses and other like instances of an item, using <tag>m</tag> will add complications to searching for strings. This can be changed at a later time.</ab>
@@ -231,24 +194,19 @@
             <p>
                <seg type="S" xml:id="d1e160" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e163" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e163">Nchii</w>
                   <w xml:id="d1e165">hora</w>
-                  <w xml:id="d1e167">ku<m xml:id="d1e168">i</m>
-                  </w>
+                  <w xml:id="d1e167">ku<m xml:id="d1e168">i</m></w>
                   <pc>?</pc>
                </seg>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e160" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e163 #d1e165" ana="#ADVP #WH #TEMP"/>
-                  <!-- Is this an accurate grammatical annotation??!!! -->
+ 
                   <span type="pos" target="#d1e167" ana="#COP #INCMPL"/>  
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e167" ana="#INCMPL"/>                  
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e167" ana="#3PERS"/>                  
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e167" ana="#SG"/>                  
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -314,7 +272,7 @@
             <p>
                <seg type="S" xml:id="d1e191" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e194" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e194">Nchii</w>
                   <w xml:id="d1e196">hora</w>
                   <w xml:id="d1e198">kui</w>
                   <pc>?</pc>
@@ -387,7 +345,7 @@
             <p>
                <seg type="S" xml:id="d1e222" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e225" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e225">Nchii</w>
                   <w xml:id="d1e227">hora</w>
                   <w xml:id="d1e229">kui</w>
                   <pc>?</pc>
@@ -468,7 +426,7 @@
             <p>
                <seg type="S" xml:id="d1e259" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e262" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e262">Nchii</w>
                   <w xml:id="d1e264">hora</w>
                   <w xml:id="d1e266">kui</w>
                   <pc>?</pc>
@@ -538,7 +496,7 @@
             <p>
                <seg type="S" xml:id="d1e290" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e293" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e293">Nchii</w>
                   <w xml:id="d1e295">hora</w>
                   <w xml:id="d1e297">kui</w>
                   <pc>?</pc>
@@ -613,7 +571,7 @@
             <p>
                <seg type="S" xml:id="d1e321" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e324" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e324">Nchii</w>
                   <w xml:id="d1e326">hora</w>
                   <w xml:id="d1e328">kui</w>
                   <pc>?</pc>
@@ -704,7 +662,7 @@
             <p>
                <seg type="S" xml:id="d1e360" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e363" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e363">Nchii</w>
                   <w xml:id="d1e365">hora</w>
                   <w xml:id="d1e367">kui</w>
                   <pc>?</pc>
@@ -784,7 +742,7 @@
             <p>
                <seg type="S" xml:id="d1e393" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
-                  <w xml:id="d1e396" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e396">Nchii</w>
                   <w xml:id="d1e398">hora</w>
                   <w xml:id="d1e400">kui</w>
                   <pc>?</pc>
@@ -855,7 +813,7 @@
             <p>
                <seg type="S" xml:id="d1e424" xml:lang="mix">
                   <pc>¿</pc>
-                  <w xml:id="d1e427" orig="Nchii">Nchi</w>
+                  <w xml:id="d1e427">Nchii</w>
                   <w xml:id="d1e429">hora</w>
                   <w xml:id="d1e431">kui</w>
                   <pc>?</pc>
