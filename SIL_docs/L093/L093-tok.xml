@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/css" href="../../Stylesheets/test-add-ana-to-seg.xsl" title="add @ana="lexItem" to <seg>" alternate="no"?>
 <?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L093-tok">
    <teiHeader>
@@ -74,12 +73,15 @@
             
             <ab type="annotation">
                <list>
-                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/p/seg/w</ref></item>     
+                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/p/seg/w</ref>
+                  </item>     
                   
                   <item>Spanish translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/p/spanGrp[@type='translation']/span[@target</ref> and the two equivalent translation values are defined in the value of <ref>//span[@target]</ref> 
-                     where preceding sibling is: <ref>//text[@xml:lang='mix']/body/p/seg[@xml:lang='mix']</ref></item>
+                     where preceding sibling is: <ref>//text[@xml:lang='mix']/body/p/seg[@xml:lang='mix']</ref>
+                  </item>
                   
-                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/p/seg[@xml:lang='mix']</ref></item>
+                  <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/p/spanGrp[@type='translation']/span</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where preceding sibling is: <ref>//text[@xml:lang='mix']/body/p/seg[@xml:lang='mix']</ref>
+                  </item>
                   
                </list>
                
@@ -184,7 +186,8 @@
      
             <ab type="annotation">
                <list>
-                  <item>Mixtec content found at following locations: <ref>//p/seg/w[@xml:lang='mix']</ref></item>
+                  <item>Mixtec content found at following locations: <ref>//p/seg/w[@xml:lang='mix']</ref>
+                  </item>
                   
                   <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//p/spanGrp[@type='translation']/span[@xml:lang='en']</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref> where preceding sibling is: <ref>//div/p/seg[@xml:lang='mix']</ref>
                    
@@ -226,21 +229,26 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e160"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e160" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e163" orig="Nchii">Nchi</w>
                   <w xml:id="d1e165">hora</w>
-                  <w xml:id="d1e167">ku<m xml:id="d1e168">i</m></w>
+                  <w xml:id="d1e167">ku<m xml:id="d1e168">i</m>
+                  </w>
                   <pc>?</pc>
                </seg>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e160" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e163 #d1e165" ana="#ADVP #WH #TEMP"/>
                   <!-- Is this an accurate grammatical annotation??!!! -->
-                  <span type="pos" target="#d1e167" ana="#COP #INCMPL"/>  <!-- ku-:  #COP #INCMPL -->
-                  <span type="aspect" target="#d1e167" ana="#INCMPL"/>                  <!-- ku-:  #INCMPL -->
-                  <span type="person" target="#d1e167" ana="#3PERS"/>                  <!-- -i:  # -->
-                  <span type="number" target="#d1e167" ana="#SG"/>                  <!-- -i:  # -->
+                  <span type="pos" target="#d1e167" ana="#COP #INCMPL"/>  
+                  <!-- ku-:  #COP #INCMPL -->
+                  <span type="aspect" target="#d1e167" ana="#INCMPL"/>                  
+                  <!-- ku-:  #INCMPL -->
+                  <span type="person" target="#d1e167" ana="#3PERS"/>                  
+                  <!-- -i:  # -->
+                  <span type="number" target="#d1e167" ana="#SG"/>                  
+                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -264,7 +272,7 @@
                   <span target="#d1e168">3sg</span>
                </spanGrp>
                <lb/>
-               <seg type="S" subtype="declarative" xml:id="d1e174">
+               <seg type="S" subtype="declarative" xml:id="d1e174" xml:lang="mix">
                   <w xml:id="d1e175" orig="ka">Kaa</w>   
                   <w xml:id="d1e177">iñu</w>
                   <w xml:id="d1e179">ntaa</w>
@@ -304,7 +312,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e191"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e191" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e194" orig="Nchii">Nchi</w>
                   <w xml:id="d1e196">hora</w>
@@ -377,7 +385,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e222"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e222" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e225" orig="Nchii">Nchi</w>
                   <w xml:id="d1e227">hora</w>
@@ -458,7 +466,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e259"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e259" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e262" orig="Nchii">Nchi</w>
                   <w xml:id="d1e264">hora</w>
@@ -469,13 +477,9 @@
                   <span type="sentence" target="#d1e259" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e262 #d1e264" ana="#ADVP #WH #TEMP"/>
                   <span type="pos" target="#d1e266" ana="#COP #INCMPL"/>
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e266" ana="#INCMPL"/>
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e266" ana="#3PERS"/>
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e266" ana="#SG"/>
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -532,7 +536,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e290"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e290" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e293" orig="Nchii">Nchi</w>
                   <w xml:id="d1e295">hora</w>
@@ -607,7 +611,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e321"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e321" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e324" orig="Nchii">Nchi</w>
                   <w xml:id="d1e326">hora</w>
@@ -698,7 +702,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e360"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e360" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e363" orig="Nchii">Nchi</w>
                   <w xml:id="d1e365">hora</w>
@@ -735,10 +739,13 @@
                <seg type="declarative" xml:id="d1e374">
                   <w xml:id="d1e375" orig="ka">Kaa</w>
                   <w xml:id="d1e376" norm="utsi in">
-                     <w xml:id="d1e377">utsi</w><!-- ten -->
-                     <w xml:id="d1e379" orig="iin">in</w>  <!-- one (ten+one=11) -->
+                     <w xml:id="d1e377">utsi</w>
+                     <!-- ten -->
+                     <w xml:id="d1e379" orig="iin">in</w>  
+                     <!-- one (ten+one=11) -->
                   </w>
-                  <w xml:id="d1e381">sava</w>    <!-- half-->
+                  <w xml:id="d1e381">sava</w>    
+                  <!-- half-->
                   <pc>.</pc>
                </seg>
                <spanGrp type="gram">
@@ -775,7 +782,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e393"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e393" xml:lang="mix"><!-- #Q #WH #TEMP -->
                   <pc>¿</pc>
                   <w xml:id="d1e396" orig="Nchii">Nchi</w>
                   <w xml:id="d1e398">hora</w>
@@ -846,7 +853,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e424">
+               <seg type="S" xml:id="d1e424" xml:lang="mix">
                   <pc>¿</pc>
                   <w xml:id="d1e427" orig="Nchii">Nchi</w>
                   <w xml:id="d1e429">hora</w>
