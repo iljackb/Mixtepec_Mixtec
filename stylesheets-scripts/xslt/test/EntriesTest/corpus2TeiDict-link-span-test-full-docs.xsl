@@ -103,6 +103,9 @@
                             <xsl:variable name="spanTargetPhrase"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'phrase']/@target[tokenize(., ' ') = $target]"/>
 
+                            <xsl:variable name="spanTargetCompound"
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'compound']/@target[tokenize(., ' ') = $target]"/>
+
                             <xsl:message>Span Target Phrase:
                                 <xsl:value-of select="$spanTargetPhrase"/>
                                 <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
@@ -143,11 +146,17 @@
                             <!-- DONT MAKE ENTRY UNLESS THERE IS A TRANSLATION!!-->
                             <xsl:if test="$wTranslationEn or $wTranslationEs">     
                             <entry>
+                                <xsl:if test="$spanTargetCompound">
+                                    <xsl:attribute name="type">
+                                        <xsl:text>compound</xsl:text>
+                                    </xsl:attribute>
+                                </xsl:if>
+                                <!-- could add id $compound here and then if true, add @type="compound" on <entry> 
                                 <xsl:attribute name="xml:id">
                                     <xsl:value-of select="$target"/>
                                 </xsl:attribute>
-
-                                <xsl:if test="count($wIDs) = 1 and not($spanTargetInflected | $spanTargetPhrase)">
+-->
+                                <xsl:if test="count($wIDs) = 1 and not($spanTargetInflected | $spanTargetPhrase| $spanTargetCompound)">
                                         <form type="lemma">
                                             <orth xml:lang="mix">
                                                 <xsl:value-of select="lower-case(normalize-space(.))"/>
@@ -214,6 +223,22 @@
                                         </orth>
                                     </form>
                                 </xsl:if>
+                                <xsl:if test="$spanTargetCompound">
+                                    <form type="lemma">
+                                        <orth xml:lang="mix">
+                                            <xsl:for-each select="$wIDs">
+                                                <xsl:message>Span Target compound:
+                                                    <xsl:value-of select="$spanTargetCompound"/>
+                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                </xsl:message>
+                                                <seg>
+                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                </seg>
+                                            </xsl:for-each>
+                                        </orth>
+                                    </form>
+                                </xsl:if>
+                                
 
                                 <gramGrp>
                                     <pos/>
@@ -244,21 +269,21 @@
                                                 <xsl:value-of select="parent::seg/*"/>
                                             </quote>
                                             <cit type="translation">
-                                                <xsl:if test="$cert-sTranslationEn">
+                                                <xsl:for-each select="$cert-sTranslationEs">
                                                     <xsl:attribute name="cert">
-                                                        <xsl:value-of select="$cert-sTranslationEn"/>
+                                                        <xsl:value-of select="."/>
                                                     </xsl:attribute>
-                                                </xsl:if>
+                                                </xsl:for-each>
                                                 <quote xml:lang="en">
                                                   <xsl:value-of select="$sTranslationEn" separator=" "/>
                                                 </quote>
                                             </cit>
                                             <cit type="translation">
-                                                <xsl:if test="$cert-sTranslationEs">
+                                                <xsl:for-each select="$cert-sTranslationEs">
                                                     <xsl:attribute name="cert">
-                                                        <xsl:value-of select="$cert-sTranslationEs"/>
+                                                        <xsl:value-of select="."/>
                                                     </xsl:attribute>
-                                                </xsl:if>
+                                                </xsl:for-each>
                                                 <quote xml:lang="es">
                                                   <xsl:value-of select="$sTranslationEs" separator=" "/>
                                                 </quote>
@@ -269,11 +294,12 @@
                                <xsl:for-each select="distinct-values($wTranslationEn)">
 
                                         <cit type="translation">
-                                            <xsl:if test="$certTranslationEn">
+                                            <xsl:for-each select="$certTranslationEn">
                                                 <xsl:attribute name="cert">
-                                                    <xsl:value-of select="$certTranslationEn"/>
+                                                    <xsl:value-of select="."/>
                                                 </xsl:attribute>
-                                            </xsl:if>
+                                            </xsl:for-each>
+
                                             <form>
                                                 <orth xml:lang="en">
                                                   <xsl:value-of select="."/>
@@ -287,11 +313,11 @@
                                         <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
 
                                         <cit type="translation">
-                                            <xsl:if test="$certTranslationEs">
+                                            <xsl:for-each select="$certTranslationEs">
                                                 <xsl:attribute name="cert">
-                                                    <xsl:value-of select="$certTranslationEs"/>
+                                                    <xsl:value-of select="."/>
                                                 </xsl:attribute>
-                                            </xsl:if>
+                                            </xsl:for-each>
                                             <form>
                                                 <orth xml:lang="es">
                                                   <xsl:value-of select="."/>

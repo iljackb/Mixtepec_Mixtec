@@ -14,11 +14,9 @@
         <xsl:text>Orth&#009; EN(sense1.i)&#009; EN(sense1.ii)&#009; EN(sense1.iii)&#009; ES (sense1.i)&#009; ES (sense1.ii)&#009; ES (sense1.iii)&#009; Dom(sense1.i)&#009; POS(sense1)&#009; Example (sense 1)&#009; Example (EN)&#009; Example (ES)&#009;</xsl:text>
         <xsl:value-of select="$newline" />
         
-        <xsl:for-each select="//entry | //re">
-            <!--  
-            <xsl:value-of select="concat(form[@type='lemma']/orth[1],$newline)" />
-            -->
-            <xsl:value-of select="form/orth[1]" />
+        <xsl:for-each select="//entry">
+
+            <xsl:value-of select="form/orth" />
             <xsl:value-of select="$separator"/>
             <xsl:if test="not(@gloss)">
                 <xsl:value-of select="(sense[1]/cit[@type='translation']/form/orth[@xml:lang='en'])[1]"/>
