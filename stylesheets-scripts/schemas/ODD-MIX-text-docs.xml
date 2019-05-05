@@ -142,6 +142,20 @@
     </classSpec>
  -->
     </elementSpec>
+    
+    <elementSpec ident="span" module="analysis" mode="change">
+     <attList>
+      <attDef ident="type" mode="replace" usage="rec">
+       <valList type="open" mode="change">
+        <valItem ident="phrase"/>
+        <valItem ident="inflected"/>
+        <valItem ident="compound"/>
+        <valItem ident="literal"/>
+        <!-- further values to be added there -->
+       </valList>
+      </attDef>
+     </attList>
+    </elementSpec>
    </schemaSpec>
   </body>
   <!-- note all structures the docs can take:

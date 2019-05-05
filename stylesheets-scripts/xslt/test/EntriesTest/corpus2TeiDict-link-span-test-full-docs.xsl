@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L098-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L102-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -134,6 +134,9 @@
                             <!--add other languages if needed by copying spanish
                                 <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    -->
 
+                            <xsl:variable name="note"
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'note' and tokenize(@target, ' ') = $target]"/>
+
                             <xsl:variable name="EntrySenseName"
                                 select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type = 'sense' and tokenize(@target, ' ') = $target]/@corresp/substring-after(., 'http://dbpedia.org/resource/')"/>
 
@@ -186,29 +189,29 @@
                                         <!-- add glosses here (instead of translations) -->
                                         <xsl:for-each select="distinct-values($wTranslationEn)">
                                             <gloss xml:lang="en">
-                                                <xsl:if test="$certTranslationEn">
+                                                <xsl:for-each select="$certTranslationEn">
                                                     <xsl:attribute name="cert">
-                                                        <xsl:value-of select="$certTranslationEn"/>
+                                                        <xsl:value-of select="."/>
                                                     </xsl:attribute>
-                                                </xsl:if>
+                                                </xsl:for-each>
                                                 <xsl:value-of select="."/> 
                                             </gloss>
                                         </xsl:for-each>
 
                                         <xsl:for-each select="distinct-values($wTranslationEs)">
                                             <gloss xml:lang="es">
-                                                <xsl:if test="$certTranslationEs">
+                                                <xsl:for-each select="$certTranslationEs">
                                                     <xsl:attribute name="cert">
-                                                        <xsl:value-of select="$certTranslationEs"/>
+                                                        <xsl:value-of select="."/>
                                                     </xsl:attribute>
-                                                </xsl:if>
+                                                </xsl:for-each>
                                                 <xsl:value-of select="."/>
                                             </gloss>
                                         </xsl:for-each>
                                     </form>
                                 </xsl:if>
                                 
-                                <xsl:if test="$spanTargetPhrase">
+                                <xsl:if test="$spanTargetPhrase and not($spanTargetInflected | $spanTargetCompound)">
                                     <form type="phrase">
                                         <orth xml:lang="mix">
                                             <xsl:for-each select="$wIDs">
@@ -257,11 +260,11 @@
                                     <!-- old way [...and @target = $target]/note 
                                         <xsl:variable name="senseNote" 
                                             select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='note' and tokenize(@target,' ') = $target]/note"/>
-                                        
-                                        <xsl:for-each select="$senseNote">
-                                             <xsl:copy-of select="."/>         
+                                            -->
+                                        <xsl:for-each select="$note">
+                                            <note><xsl:value-of select="."/></note>
                                         </xsl:for-each>
-    -->
+
 
                                     <xsl:if test="parent::seg[@type = 'S']/*">
                                         <cit type="example">
@@ -290,7 +293,7 @@
                                             </cit>
                                         </cit>
                                     </xsl:if>
-
+                                    
                                <xsl:for-each select="distinct-values($wTranslationEn)">
 
                                         <cit type="translation">
@@ -309,7 +312,6 @@
                                  </xsl:for-each>    <!-- -->
 
                                     <xsl:for-each select="distinct-values($wTranslationEs)">
-
                                         <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
 
                                         <cit type="translation">
