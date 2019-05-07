@@ -17,5 +17,8 @@
         </xsl:copy>
     </xsl:template>
     
-    <xsl:template match="pron[@notation='zsampa']"/>
+    
+    <xsl:template match="hi"/>
+    
+
 </xsl:stylesheet>
