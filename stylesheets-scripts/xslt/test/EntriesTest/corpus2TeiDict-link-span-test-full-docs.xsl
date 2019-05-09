@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L102-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'NeededMixtecVocab2-20170807-TS.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -106,6 +106,9 @@
                             <xsl:variable name="spanTargetCompound"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'compound']/@target[tokenize(., ' ') = $target]"/>
 
+                            <xsl:variable name="wPhoneticForm" select="$readDoc/descendant::w[@sameAs= $target]"/>
+                            
+
                             <xsl:message>Span Target Phrase:
                                 <xsl:value-of select="$spanTargetPhrase"/>
                                 <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
@@ -168,7 +171,9 @@
                                             <orth xml:lang="mix">
                                                 <xsl:value-of select="lower-case(normalize-space(.))"/>
                                             </orth>
-                                            <pron xml:lang="mix" notation="ipa"/>
+                                            <pron xml:lang="mix" notation="ipa">
+                                                <xsl:value-of select="$wPhoneticForm"/>
+                                            </pron>
                                         </form>  
                                 </xsl:if>
                                 
@@ -201,7 +206,7 @@
                                                 <xsl:value-of select="."/> 
                                             </gloss>
                                         </xsl:for-each>
-
+<!-- ADD CODE TO CORRECTLY GET <note> when form is inflected (current error places notes in <gloss>) -->
                                         <xsl:for-each select="distinct-values($wTranslationEs)">
                                             <gloss xml:lang="es">
                                                 <xsl:for-each select="$certTranslationEs">
