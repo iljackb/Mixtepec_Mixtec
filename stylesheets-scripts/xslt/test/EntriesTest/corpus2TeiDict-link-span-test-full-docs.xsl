@@ -133,6 +133,10 @@
 
                             <!--add other languages if needed by copying spanish
                                 <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    -->
+                            
+                            <!-- ADD VARIABLE FOR PHONETIC FORM WHICH CONTAINS $target as value of @sameAs: do for <w> and parent <seg> if applicable
+                            (for words you can place and point to the <w> because it is mixtec to mixtec and the segmentation matches orthography)
+                            -->
 
                             <xsl:variable name="note"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@type = 'note' and tokenize(@target, ' ') = $target]"/>

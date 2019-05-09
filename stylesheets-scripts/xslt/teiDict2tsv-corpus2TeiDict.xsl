@@ -13,7 +13,7 @@
     <xsl:template match="/">
         <xsl:text>Orth&#009; EN(sense1.i)&#009; EN(sense1.ii)&#009; EN(sense1.iii)&#009; ES (sense1.i)&#009; ES (sense1.ii)&#009; ES (sense1.iii)&#009; Dom(sense1.i)&#009; POS(sense1)&#009; Example (sense 1)&#009; Example (EN)&#009; Example (ES)&#009;</xsl:text>
         <xsl:value-of select="$newline" />
-        
+        <!-- ADD PLACE FOR NOTE! -->
         <xsl:for-each select="//entry">
 
             <xsl:value-of select="form/orth" />
