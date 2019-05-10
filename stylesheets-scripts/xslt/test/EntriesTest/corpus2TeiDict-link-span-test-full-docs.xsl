@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'NeededMixtecVocab2-20170807-TS.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'NeededMixtecVocabulary20170806-TS.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -128,11 +128,11 @@
                             <xsl:variable name="certTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]/@cert"/>
 
                             <xsl:variable name="wTranslationEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and tokenize(@target, ' ') = $target]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and not(@type= 'note') and tokenize(@target, ' ') = $target]"/>
                             <!-- <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
                                  -->
                             <xsl:variable name="wTranslationEs"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and tokenize(@target, ' ') = $target]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and not(@type= 'note') and tokenize(@target, ' ') = $target]"/>
 
                             <!--add other languages if needed by copying spanish
                                 <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    -->
@@ -216,6 +216,9 @@
                                                 </xsl:for-each>
                                                 <xsl:value-of select="."/>
                                             </gloss>
+                                        </xsl:for-each>
+                                        <xsl:for-each select="$note">
+                                            <note><xsl:value-of select="."/></note>
                                         </xsl:for-each>
                                     </form>
                                 </xsl:if>
