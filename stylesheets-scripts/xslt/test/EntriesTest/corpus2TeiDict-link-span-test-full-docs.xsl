@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'NeededMixtecVocabulary20170806-TS.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'vocab-20180914-Tisu.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
