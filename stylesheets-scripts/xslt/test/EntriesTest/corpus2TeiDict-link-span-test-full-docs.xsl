@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L145-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L147-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -183,10 +183,10 @@
                                         <orth xml:lang="mix">                                                    
                                             <xsl:for-each select="$wIDs">
                                                 <xsl:message>Span Target Inflected:
-                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                    <xsl:value-of select="lower-case($readDoc/descendant::w[@xml:id = substring-after(current(), '#')])"/>
                                                 </xsl:message>
                                                 <seg>    
-                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]" />
+                                                    <xsl:value-of select="lower-case($readDoc/descendant::w[@xml:id = substring-after(current(), '#')])" />
                                                 </seg>
                                             </xsl:for-each>
                                         </orth>
@@ -229,10 +229,10 @@
                                             <xsl:for-each select="$wIDs">
                                                 <xsl:message>Span Target Phrase:
                                                     <xsl:value-of select="$spanTargetPhrase"/>
-                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                    <xsl:value-of select="lower-case($readDoc/descendant::w[@xml:id = substring-after(current(), '#')])"/>
                                                 </xsl:message>
                                                 <seg>
-                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                    <xsl:value-of select="lower-case($readDoc/descendant::w[@xml:id = substring-after(current(), '#')])"/>
                                                 </seg>
                                             </xsl:for-each>
                                         </orth>
@@ -244,10 +244,10 @@
                                             <xsl:for-each select="$wIDs">
                                                 <xsl:message>Span Target compound:
                                                     <xsl:value-of select="$spanTargetCompound"/>
-                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                    <xsl:value-of select="lower-case($readDoc/descendant::w[@xml:id = substring-after(current(), '#')])"/>
                                                 </xsl:message>
                                                 <seg>
-                                                    <xsl:value-of select="$readDoc/descendant::w[@xml:id = substring-after(current(), '#')]"/>
+                                                    <xsl:value-of select="lower-case($readDoc/descendant::w[@xml:id = substring-after(current(), '#')])"/>
                                                 </seg>
                                             </xsl:for-each>
                                         </orth>
