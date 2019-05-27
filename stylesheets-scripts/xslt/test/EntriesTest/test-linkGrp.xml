@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <table cols="2">
+            <row>
+               <cell>
+                  <seg xml:lang="mix" xml:id="s1-mix" type="S">
+                     <w xml:id="d1e298">Nti'o</w>                          <!-- "-o" 1pl-->
+                     <w xml:id="d1e300">nivatsi</w>
+                     <pc>.</pc>
+                  </seg>
+                  <spanGrp type="translation">
+                     <span target="#s1-mix" xml:lang="en" type="S">All of us, came.</span>
+                     <span target="#d1e298" xml:lang="en">all of us</span>
+                     <span target="#d1e300" xml:lang="en" type="inflected">came</span>
+                  </spanGrp>
+
+                  <seg xml:lang="es" xml:id="s1-esp" type="S">
+                     <w xml:id="s1-1-esp">Todos nosotros</w>
+                     <w xml:id="s1-3-esp">venimos</w>
+                     <pc>.</pc>
+                  </seg>
+                  <linkGrp type="translation">
+                     <link target="#s1-esp #s1-mix" type="S"/>
+                     <link target="#s1-1-esp #d1e298"/>
+                     <link target="#s1-3-esp #d1e300" type="inflected"/>
+                  </linkGrp>
+               </cell>
+            </row>
+            <row>
+               <cell>
+                  <seg xml:lang="mix" xml:id="s2.1-mix" type="S" part="I" next="#s2.2-mix">
+                     <w xml:id="d1e321">Ika</w>   <!-- entonces !-->
+                     <pc>,</pc>
+                     <w xml:id="d1e325">tsini</w>
+                     <w xml:id="d1e327">ñu'u</w>
+                     <w xml:id="d1e329">ña</w>
+                     <w xml:id="d1e331">ka'an</w>      <!-- infinitive? necessary that WHO? speaks-->
+                  </seg>
+                  <spanGrp type="translation">
+                     <span target="#s2.1-mix" xml:lang="en" type="S">Therefore, it's necessary to speak.</span>
+                     <span target="#d1e321" xml:lang="en">therefore</span>
+                     <span target="#d1e325 #d1e327" xml:lang="en" type="compound">it's necessary</span>
+                     <span target="#d1e329" xml:lang="en">that</span>
+                     <span target="#d1e331" xml:lang="en">speak</span>
+                  </spanGrp>
+               </cell>
+               <cell>
+                  <seg xml:lang="es" xml:id="s2.1-esp" type="S" part="I" next="#s2.2-esp">
+                     <w xml:id="s2.1-1-esp">Entonces</w>
+                     <pc>,</pc>
+                     <w xml:id="s2.1-2-esp">es necesario</w>
+                     <w xml:id="s2.1-4-esp">que</w>
+                     <w xml:id="s2.1-5-esp">hable</w>
+                  </seg>
+                  <linkGrp type="translation">
+                     <link target="#s2.1-esp #s2.1-mix" type="S"/>
+                     <link target="#s2.1-1-esp #d1e321"/>
+                     <link target="#s2.1-2-esp #d1e325 #d1e327" type="compound"/>
+                     <link target="#s2.1-4-esp #d1e329"/>
+                     <link target="#s2.1-5-esp #d1e331"/>
+                  </linkGrp>
+               </cell>
+            </row>
+         </table>
+      </body>
+  </text>
+</TEI>

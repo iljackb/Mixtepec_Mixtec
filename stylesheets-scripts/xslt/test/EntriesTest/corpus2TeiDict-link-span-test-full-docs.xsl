@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L102-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'test-linkGrp.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -118,19 +118,24 @@
                             <xsl:message>Tokenised Ids: <xsl:value-of select="$wIDs"/></xsl:message>
                             
                             <!-- link pointing to w/@xml:id (there are never any existing english translations so <linkGrp> will only point from spanish and mixtec -->
-                            <xsl:variable name="linkTranslationEs"
-                                select="$readDoc/descendant::linkGrp[@type = 'translation']/link[tokenize(@target, ' ') = $target]"/>
+                            <xsl:variable name="linkTranslationEs-W"
+                                select="$readDoc/descendant::linkGrp[@type = 'translation']/link[not(@type='S')][tokenize(@target, ' ') = $target]"/>
+                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs-W"/></xsl:message>
                             
-                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs"/></xsl:message>
+                            <xsl:variable name="linkTranslationEs-S"
+                                select="$readDoc/descendant::linkGrp[@type = 'translation']/link[@type='S'][tokenize(@target, ' ') = $target]"/>
+                            <xsl:message>es: <xsl:value-of select="$linkTranslationEs-S"/></xsl:message>
              
                             <xsl:variable name="certTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'en'][@target[tokenize(., ' ') = $target]]/@cert"/>
 
                             <xsl:variable name="certTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]/@cert"/>
+                            
+                            <xsl:variable name="literalTranslationEn" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'en'][@target[tokenize(., ' ') = $target]]/@type='literal'"/>
+                            
+                            <xsl:variable name="literalTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]//@type='literal'"/>
 
                             <xsl:variable name="wTranslationEn"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and not(@type= 'note') and tokenize(@target, ' ') = $target]"/>
-                            <!-- <xsl:message>en: <xsl:value-of select="$wTranslationEn"/></xsl:message>
-                                 -->
                             <xsl:variable name="wTranslationEs"
                                 select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and not(@type= 'note') and tokenize(@target, ' ') = $target]"/>
 
@@ -300,7 +305,7 @@
                                                     </xsl:attribute>
                                                 </xsl:for-each>
                                                 <quote xml:lang="es">
-                                                  <xsl:value-of select="$sTranslationEs" separator=" "/>
+                                                  <xsl:value-of select="$sTranslationEs | $linkTranslationEs-S" separator=" "/>
                                                 </quote>
                                             </cit>
                                         </cit>
@@ -311,6 +316,12 @@
                                         <cit type="translation">
                                             <xsl:for-each select="$certTranslationEn">
                                                 <xsl:attribute name="cert">
+                                                    <xsl:value-of select="."/>
+                                                </xsl:attribute>
+                                            </xsl:for-each>
+                                            
+                                            <xsl:for-each select="$literalTranslationEn">
+                                                <xsl:attribute name="subtype">
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
                                             </xsl:for-each>
@@ -332,6 +343,13 @@
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
                                             </xsl:for-each>
+                                            
+                                            <xsl:for-each select="$literalTranslationEs">
+                                                <xsl:attribute name="subtype">
+                                                    <xsl:value-of select="."/>
+                                                </xsl:attribute>
+                                            </xsl:for-each>
+                                            
                                             <form>
                                                 <orth xml:lang="es">
                                                   <xsl:value-of select="."/>
@@ -341,7 +359,7 @@
                                     </xsl:for-each>
                                     <!-- (BUG: need to allow for multiple spanish terms and "es-MEX" or "es" )-->
 
-                                    <xsl:for-each select="$linkTranslationEs">
+                                    <xsl:for-each select="$linkTranslationEs-W">
                                         <cit type="translation">
                                             <form>
                                                 <orth xml:lang="es">
