@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'test-linkGrp.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L148-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -320,11 +320,11 @@
                                                 </xsl:attribute>
                                             </xsl:for-each>
                                             
-                                            <xsl:for-each select="$literalTranslationEn">
+                                            <xsl:if test="$literalTranslationEn">
                                                 <xsl:attribute name="subtype">
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
-                                            </xsl:for-each>
+                                            </xsl:if>
 
                                             <form>
                                                 <orth xml:lang="en">
@@ -344,11 +344,11 @@
                                                 </xsl:attribute>
                                             </xsl:for-each>
                                             
-                                            <xsl:for-each select="$literalTranslationEs">
+                                            <xsl:if test="$literalTranslationEs">
                                                 <xsl:attribute name="subtype">
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
-                                            </xsl:for-each>
+                                            </xsl:if>
                                             
                                             <form>
                                                 <orth xml:lang="es">
