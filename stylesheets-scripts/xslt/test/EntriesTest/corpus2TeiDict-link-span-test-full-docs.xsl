@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L149-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L151-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -222,9 +222,7 @@
                                                 <xsl:value-of select="."/>
                                             </gloss>
                                         </xsl:for-each>
-                                        <xsl:for-each select="$note">
-                                            <note><xsl:value-of select="."/></note>
-                                        </xsl:for-each>
+
                                     </form>
                                 </xsl:if>
                                 
@@ -279,7 +277,17 @@
                                             select="$readDoc/descendant::spanGrp[@type = 'semantics']/span[@type='note' and tokenize(@target,' ') = $target]/note"/>
                                             -->
                                         <xsl:for-each select="$note">
-                                            <note><xsl:value-of select="."/></note>
+                                            <note>
+                                                <xsl:for-each select="$note">
+                                                    <xsl:if test="@resp">
+                                                        <xsl:attribute name="resp">
+                                                            <xsl:value-of select="."/>
+                                                        </xsl:attribute>
+                                                    </xsl:if>
+                                                    <note><xsl:value-of select="."/></note>
+                                                </xsl:for-each>
+                                                <xsl:value-of select="."/>
+                                            </note>
                                         </xsl:for-each>
 
 
