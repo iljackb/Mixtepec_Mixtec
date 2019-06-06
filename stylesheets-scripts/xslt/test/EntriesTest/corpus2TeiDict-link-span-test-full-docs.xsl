@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L152-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L153-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -284,7 +284,6 @@
                                                             <xsl:value-of select="."/>
                                                         </xsl:attribute>
                                                     </xsl:if>
-                                                    <note><xsl:value-of select="."/></note>
                                                 </xsl:for-each>
                                                 <xsl:value-of select="."/>
                                             </note>
