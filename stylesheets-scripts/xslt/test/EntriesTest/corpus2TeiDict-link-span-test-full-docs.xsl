@@ -159,7 +159,7 @@
                             <!-- NEED TO ADD @CERT ON CERTAIN ITEMS! -->
                             
                             <!-- DONT MAKE ENTRY UNLESS THERE IS A TRANSLATION!!-->
-                            <xsl:if test="$wTranslationEn or $wTranslationEs">     
+                            <xsl:if test="$wTranslationEn or $wTranslationEs or $note">     
                             <entry>
                                 <xsl:if test="$spanTargetCompound">
                                     <xsl:attribute name="type">
