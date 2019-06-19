@@ -27,7 +27,7 @@
 
     <!-- SCRIPT IS FOR DOCS WITH NO SENTENCES AND SPANISH ONLY AS <linkGrp> -->
 
-    <xsl:param name="input" as="xs:string" select="'L157-tok.xml'"/>
+    <xsl:param name="input" as="xs:string" select="'L160-tok.xml'"/>
     <xsl:preserve-space elements="*"/>
 
     <!-- read file defined in $input -->
@@ -135,9 +135,9 @@
                             <xsl:variable name="literalTranslationEs" select="$readDoc/descendant::spanGrp[@type = 'translation']/span[not(@type = 'S') and @xml:lang = 'es'][@target[tokenize(., ' ') = $target]]//@type='literal'"/>
 
                             <xsl:variable name="wTranslationEn"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and not(@type= 'note') and tokenize(@target, ' ') = $target]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en' and not(@type= 'note') and not(@type='literal') and tokenize(@target, ' ') = $target]"/>
                             <xsl:variable name="wTranslationEs"
-                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and not(@type= 'note') and tokenize(@target, ' ') = $target]"/>
+                                select="$readDoc/descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'es' and not(@type= 'note') and not(@type='literal') and tokenize(@target, ' ') = $target]"/>
 
                             <!--add other languages if needed by copying spanish
                                 <xsl:variable name="distinctSense" select="distinct-values($wTranslationEn)"/>    -->
@@ -222,7 +222,7 @@
                                                 <xsl:value-of select="."/>
                                             </gloss>
                                         </xsl:for-each>
-
+                                        
                                     </form>
                                 </xsl:if>
                                 
@@ -326,20 +326,26 @@
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
                                             </xsl:for-each>
-                                            
-                                            <xsl:if test="$literalTranslationEn">
-                                                <xsl:attribute name="subtype">
-                                                    <xsl:value-of select="."/>
-                                                </xsl:attribute>
-                                            </xsl:if>
-
+                                           
                                             <form>
                                                 <orth xml:lang="en">
                                                   <xsl:value-of select="."/>
                                                 </orth>
                                             </form>
                                         </cit>
-                                 </xsl:for-each>    <!-- -->
+                                 </xsl:for-each>
+                                    <!-- 
+                                    <xsl:if test="distinct-values($literalTranslationEn)">           
+                                        <cit type="translation" subtype="literal">
+
+                                            <form>
+                                                <orth xml:lang="en">
+                                                    <xsl:value-of select="$literalTranslationEn"/>
+                                                </orth>
+                                            </form>
+                                        </cit>
+                                    </xsl:if>
+                                -->
 
                                     <xsl:for-each select="distinct-values($wTranslationEs)">
                                         <xsl:message>es: <xsl:value-of select="$wTranslationEs"/></xsl:message>
@@ -350,13 +356,13 @@
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
                                             </xsl:for-each>
-                                            
+                                            <!-- 
                                             <xsl:if test="$literalTranslationEs">
                                                 <xsl:attribute name="subtype">
                                                     <xsl:value-of select="."/>
                                                 </xsl:attribute>
                                             </xsl:if>
-                                            
+                                            -->
                                             <form>
                                                 <orth xml:lang="es">
                                                   <xsl:value-of select="."/>
