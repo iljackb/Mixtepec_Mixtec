@@ -534,6 +534,8 @@
          <listPrefixDef>
             <prefixDef ident="paradigm" matchPattern="paradigm([a-zA-Z0-9]+)-V-paradigm-MIX"
                replacementPattern="../MIX-Paradigms.xml#$"/>
+            <prefixDef ident="alvarado" matchPattern="alvarado([a-zA-Z0-9]+)"
+               replacementPattern="../VOCESvocab-tei.xml#$"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -1061,7 +1063,7 @@
                <usg type="domain">spatialRelations</usg>
                <gramGrp>
                   <pos>relationNoun</pos>
-                  <colloc>LM</colloc>
+                  <colloc>+ (LM)</colloc>
                </gramGrp>
                <usg type="relationalSemantics" ana="#LM">LM</usg>
             </sense>
@@ -1071,19 +1073,15 @@
                <cit type="etymon" cert="medium">
                   <lang>Proto-Mixtecan</lang>
                   <form>
-                     <pron resp="#JB" notation="ipa" xml:lang="proto-mix">*ʃīnī</pron>
+                     <pron resp="#JB" notation="ipa" xml:lang="und-x-prtomix">*ʃīnī</pron>
                   </form>
                </cit>
-               <cit type="etymon">
-                  <lang>Colonial Mixtec</lang>
-                  <usg type="date">
-                     <date>1597</date>
-                  </usg>
-                  <form>
-                     <orth xml:lang="nds-cmx">dzini</orth>
-                  </form>
-                  <ref type="source" target="#VOCESvocab-tei.xml"/>
-               </cit>
+               <xr type="crossReference">
+                  <lang>Yucu Ndaa</lang>
+                  <date>1593</date>
+                  <ref type="entry" xml:lang="und-x-cmx">dzini</ref>
+                  <ref type="bibl" source="#VOCESvocab-tei.xml">(Alvarado)</ref>
+               </xr>
                <cit type="cognate">
                   <lang>Chalcatongo Mixtec</lang>
                   <usg type="geo">
@@ -1092,8 +1090,7 @@
                   <form>
                      <pron notation="trans-macaulay-mig" xml:lang="mig">šinì</pron>
                   </form>
-                  <ref type="source" target="#Macaulay-ChalcatongoMixtec-1996">(Macaulay,
-                     1996)</ref>
+                  <ref type="source" target="#Macaulay-ChalcatongoMixtec-1996">(Macaulay, 1996)</ref>
                </cit>
                <cit type="cognate">
                   <lang>Ayutla Mixtec</lang>
@@ -2488,7 +2485,7 @@
                   <pos>adposition</pos>
                </gramGrp>
                <cit type="example">
-                  <quote xml:lang="mix"><oRef>tsa'a</oRef> yuku ka inkaa ve'e</quote>
+                  <quote xml:lang="mix">Tsa'a yuku ka inkaa ve'e</quote>
                   <ptr source="#S_the_house_is_on_the_bottom_of_the_hill_01_02.wav"/>
                   <cit type="example">
                      <quote xml:lang="en">The house is on the bottom of the hill</quote>
@@ -2508,9 +2505,15 @@
                   <colloc>LM</colloc>
                </gramGrp>
                <cit type="example">
-                  <quote xml:lang="mix">ka'an yu <oRef>tsa'a</oRef> Pedro</quote>
+                  <quote xml:lang="mix">Ka'an yu tsa'a Pedro</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">I'm speaking on behalf of Pedro.</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Estoy hablando de parte de Pedro.</quote>
+                  </cit>
                   <ptr source="#S_speak_1s_on_behalf_of_Pedro_01_02_03_TS.wav"/>
-               </cit>
+               </cit>           
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">in lieu of (lm)</orth>
@@ -4652,21 +4655,28 @@
          <entry xml:id="MIX-language-poor">
             <form type="lemma">
                <orth xml:lang="mix">sa'an ntavi</orth>
-               <pron xml:lang="mix" notation="ipa">sáʔà nd̪ávì</pron>
-
+               <pron xml:lang="mix" notation="ipa" cert="low">sáʔã nd̪àvi</pron>
+               <form type="variant">
+                  <orth xml:lang="mix">sa'an nta'vi</orth>
+                  <pron xml:lang="mix" notation="ipa">sáʔã nd̪àʔvi</pron> 
+               </form>
             </form>
             <gramGrp>
                <pos>noun</pos>
             </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Mixtepec_Mixtec">
                <usg type="domain" corresp="http://dbpedia.org/resource/Language">Language</usg>
+               <cit type="example">
+                  <quote xml:lang="mix">Tu'un <oRef>Sa'an Ntavi</oRef></quote>
+                  <ptr target="SIL_docs/L100/L100-tok.xml"/>
+               </cit>
                <xr type="hyponymOf">
                   <ref xml:lang="en">language</ref>
                </xr>
                <xr type="hyponymOf">
                   <ref xml:lang="mix" target="#language">sa'an</ref>
                </xr>
-               <usg type="additude" resp="#TS">dispreferred</usg>
+               <usg type="additude" resp="#TS #JS">dispreferred</usg>
                <xr type="synonymOf">
                   <ref xml:lang="mix" target="#MIX-language-rain">sa'an savi</ref>
                </xr>
@@ -4674,27 +4684,23 @@
                   speakers consulted as it is derrogatory. This is so particularly in contrast to
                   the term for the Spanish language <oRef>sa'an xchila</oRef> which translates as
                   "fancy language".</note>
-               <etym type="compounding">
-                  <cit type="etymon">
-                     <!-- head of the phrase -->
-                     <pron corresp="#language"/>
-                  </cit>
-                  <etym type="metonymy">
-                     <desc>The assumption in the use of this term is that those that speak this
-                        language are poor.</desc>
-                     <cit type="etymon" corresp="#poor">
-                        <form>
-                           <orth xml:lang="mix">ntavi</orth>
-                        </form>
-                        <def xml:lang="en">poor</def>
-                     </cit>
-                  </etym>
-               </etym>
-               <cit type="example">
-                  <quote xml:lang="mix">Tu'un <oRef>Sa'an Ntavi</oRef></quote>
-                  <ptr target="SIL_docs/L100/L100-tok.xml"/>
-               </cit>
             </sense>
+            <etym type="compounding">
+               <cit type="etymon">
+                  <!-- head of the phrase -->
+                  <form><pron corresp="#language"/></form>
+               </cit>
+               <etym type="metonymy">
+                  <seg type="desc">The assumption in the use of this term is that those that speak this
+                     language are poor.</seg>
+                  <cit type="etymon" corresp="#poor">
+                     <form>
+                        <orth xml:lang="mix">ntavi</orth>
+                     </form>
+                     <def xml:lang="en">poor</def>
+                  </cit>
+               </etym>
+            </etym>
          </entry>
          <entry xml:id="language-spanish" type="compound">
             <form type="lemma">
@@ -13370,7 +13376,7 @@
                <cit type="etymon">
                   <form>
                      <lang>Colonial Mixtec</lang>
-                     <orth xml:lang="nds-x-clmx">andevui</orth>
+                     <orth xml:lang="und-x-clmx">andevui</orth>
                   </form>
                   <gloss xml:lang="es">cielo</gloss>
                   <ref type="bibl" target="#VOCESvocab-tei.xml">Francisco de Alvarado</ref>
@@ -16660,7 +16666,7 @@
             <etym type="inheritance">
                <cit type="etymon" cert="medium">
                   <form>
-                     <pron notation="ipa" orig="*ⁿdu³ⁿdi⁴" xml:lang="nds-PMx">*ⁿdu˧ⁿdi˦</pron>
+                     <pron notation="ipa" orig="*ⁿdu³ⁿdi⁴" xml:lang="und-PMx">*ⁿdu˧ⁿdi˦</pron>
                   </form>
                   <ref type="bibl" source="#Longacre1961">(Longacre and Millon, 1961)</ref>
                </cit>
@@ -27699,6 +27705,7 @@ he is crying - nstakui
                   <cit type="translation">
                      <quote xml:lang="es">Alguien me dijó que tu coche se estropeó.</quote>
                   </cit>
+                  <ptr target=".../media/speech-mix/with-txtgrd/S_someone_told_you_2s_inf_your_2s_inf_car_broke_down_JS.wav"/>
                </cit>
                <cit type="translation">
                   <form>
@@ -28022,6 +28029,7 @@ he is crying - nstakui
                   <cit type="translation">
                      <quote xml:lang="es">Llegamos a trabajo.</quote>
                   </cit>
+                  <ptr target="#"/>
                </cit>
                <cit type="translation">
                   <form>
@@ -28595,9 +28603,15 @@ he is crying - nstakui
                <pos>noun</pos>
             </gramGrp>
             <sense>
+               <usg type="domain">Light</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">shade</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">sombra</orth>
                   </form>
                </cit>
             </sense>
@@ -28611,9 +28625,15 @@ he is crying - nstakui
                <pos>verb</pos>
             </gramGrp>
             <sense>
+               <usg type="domain">Light</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">to shine</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">brillar</orth>
                   </form>
                </cit>
             </sense>
