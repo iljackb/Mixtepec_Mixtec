@@ -8,9 +8,9 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2019-07-31T09:22:21Z. .
+# Schema generated from ODD source 2019-08-18T12:37:33Z. .
 # TEI Edition: Version 3.6.0. Last updated on
-#	16th July 2019, revision 4d9d1971f
+#	16th July 2019, revision daa3cc0b9
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
 #
 
@@ -51,7 +51,7 @@ anyElement-content =
     (text | anyElement-content)*
   }
   >> sch:pattern [
-       id = "d2395607e120682-constraint"
+       id = "d12488147e120672-constraint"
        "\x{a}" ~
        "         "
        sch:rule [
@@ -82,7 +82,7 @@ anyElement-datatype =
     (text | anyElement-datatype)*
   }
   >> sch:pattern [
-       id = "d2395607e121949-constraint"
+       id = "d12488147e121939-constraint"
        "\x{a}" ~
        "         "
        sch:rule [
@@ -2264,6 +2264,7 @@ model.phrase =
   | model.specDescLike
   | model.pPart.data
   | model.ptrLike.form
+  | xr
 model.limitedPhrase =
   model.hiLike
   | model.emphLike

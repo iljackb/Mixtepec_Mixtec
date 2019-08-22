@@ -48,6 +48,15 @@
                <item>
                   <ref xml:id="places-MIX" type="places-list" target="../MIX-Places.xml"/>
                </item>
+               <item>
+                  <ref xml:id="inflections-MIX" type="inflection-paradigms" target="../paradigms/"/>
+               </item>
+               <item>
+                  <ref xml:id="oaxaca-MIX" type="sound-files" target="../oaxaca/"/>
+               </item>
+               <item>
+                  <ref xml:id="media" type="sound-files" target="../media/speech-mix/with-txtgrd/"/>
+               </item>
             </list>
             <bibl xml:id="scriptureEarth"
                ><!--  https://scriptureearth.org/00i-Scripture_Index.php?sortby=lang&name=mix&ROD_Code=00000&Variant_Code=#
@@ -531,11 +540,18 @@
                manually however future versions will be made using XSLT processes that mine all
                transcribed, written and glossed MIX data. </p>
          </editorialDecl>
-         <listPrefixDef>
-            <prefixDef ident="paradigm" matchPattern="paradigm([a-zA-Z0-9]+)-V-paradigm-MIX"
-               replacementPattern="../MIX-Paradigms.xml#$"/>
-            <prefixDef ident="alvarado" matchPattern="alvarado([a-zA-Z0-9]+)"
-               replacementPattern="../VOCESvocab-tei.xml#$"/>
+         <listPrefixDef>     
+            <prefixDef ident="alvarado" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../VOCESvocab-tei.xml#$1"/>
+            
+            <prefixDef ident="paradigms" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../paradigms/#$1"/>
+
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../oaxaca-oax/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -1070,17 +1086,17 @@
             <etym type="inheritance">
                <seg type="desc">The consistancy of the form of the cognate lexical item meaning
                   "head" in the varieties of Mixtec listed below:</seg>
-               <cit type="etymon" cert="medium">
+               <cit type="etymon" cert="medium" resp="#JB">
                   <lang>Proto-Mixtecan</lang>
                   <form>
-                     <pron resp="#JB" notation="ipa" xml:lang="und-x-prtomix">*ʃīnī</pron>
+                     <pron notation="ipa" xml:lang="und-x-prtomix">*ʃīnī</pron>
                   </form>
                </cit>
                <xr type="crossReference">
                   <lang>Yucu Ndaa</lang>
                   <date>1593</date>
                   <ref type="entry" xml:lang="und-x-cmx">dzini</ref>
-                  <ref type="bibl" source="#VOCESvocab-tei.xml">(Alvarado)</ref>
+                  <ref type="bibl" source="alvarado:cabeza">(Alvarado)</ref>
                </xr>
                <cit type="cognate">
                   <lang>Chalcatongo Mixtec</lang>
@@ -1565,6 +1581,9 @@
                <orth xml:lang="mix">yu'u</orth>
                <pron xml:lang="mix" notation="ipa">juʔú</pron>
                <pron xml:lang="mix" notation="ipa">ju˧ʔu˥</pron>
+               <form type="variant">
+                  <pron xml:lang="mix" notation="ipa">juú</pron>
+               </form>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -1593,7 +1612,7 @@
                <usg type="domain">SpatialRegion</usg>
                <def xml:lang="en">Used in combination with another locational noun to refer to a transitional or border region of that item.</def>
                <cit type="example">
-                  <quote xml:lang="mix">Sara ntsai <oRef>yu'u yucha</oRef> ka sara ntsikutanchii nuu yuu ka sara nikitsai tsi'a chikuii.</quote>
+                  <quote xml:lang="mix">Sara ntsai yu'u yucha ka sara ntsikutanchii nuu yuu ka sara nikitsai tsi'a chikuii.</quote>
                   <ptr source="../SIL_docs/L150"/>
                </cit>
                <etym type="metaphor">
@@ -3144,6 +3163,11 @@
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">door</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">puerta</orth>
                   </form>
                </cit>
                <etym type="metonymy">
@@ -4944,7 +4968,9 @@
             </gramGrp>
             <sense xml:id="animal" corresp="http://dbpedia.org/resource/Animal" n="1">
                <usg type="domain">Living Being</usg>
-               <xr/>
+               <xr type="hyponymOf">
+                  <ref xml:lang="mix" target="#living-being-MIX">chaku</ref>
+               </xr>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">animal</orth>
@@ -4955,43 +4981,41 @@
                      <orth xml:lang="es">animal</orth>
                   </form>
                </cit>
-               <note>It is my hypothesis that the 'ti' in this lexical item is the source of the: -
-                  animal-type morphological inflexion (occasionally seen in language (add pointer
-                  SIL!)); - and the presence of that segment within multiple lexical items for
-                  different animals (and insects) in the language: eg., '<pRef>tina</pRef>',
-                     '<pRef>tisu'ma</pRef>', " </note>
+               <note>It is my hypothesis that the 'ti' in this lexical item is the source of: the
+                  animal-type enclitic <xr type="crossReference"><ref target="#anml-pron-morph">-ti</ref></xr>;
+                  and the presence of that segment within multiple lexical items for different animals (and insects)
+                  in the language: eg., '<xr type="crossReference"><ref target="#animal-dog">tina</ref></xr>',
+                  '<xr type="crossReference"><ref target="#insect-scorpion">tisu'ma</ref></xr>', " </note>
+               
+               <sense xml:id="horse" corresp="http://dbpedia.org/resource/Horse" n="2">
+                  <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
+                  <xr type="hyponymOf">
+                     <ref xml:lang="mix" target="#animal">kiti</ref>
+                  </xr>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="en">horse</orth>
+                     </form>
+                  </cit>
+                  <cit type="translation">
+                     <form>
+                        <orth xml:lang="es">caballo</orth>
+                     </form>
+                  </cit>
+                  <etym type="metonymy" subtype="categoryForMember">
+                     <seg type="desc" xml:lang="en">In this lexical item, the language reflects
+                        the history, since there were no horses in Mexico until the arrival of the Spanish
+                        in the Mixteca (sometime in <date notBefore="1520">1520</date>), there was
+                        naturally no Mixtecan word for 'horse'. Thus it is clear that the categorical noun meaning 'animal'
+                        was used to describe the unnamed animal and this term lexicalized into the language.</seg>
+                     <cit type="etymon" corresp="#animal">
+                        <xr type="hyponymOf">
+                           <ref xml:lang="mix" target="#living-being-MIX">chaku</ref>
+                        </xr>
+                     </cit>
+                  </etym>
+               </sense>
             </sense>
-            <sense xml:id="horse" corresp="http://dbpedia.org/resource/Horse" n="2">
-               <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
-               <xr type="hyponymOf">
-                  <ref xml:lang="mix">kiti</ref>
-                  <ref xml:lang="en">animal</ref>
-                  <ref type="sense" corresp="#horse"/>
-               </xr>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="en">horse</orth>
-                  </form>
-               </cit>
-               <cit type="translation">
-                  <form>
-                     <orth xml:lang="es">caballo</orth>
-                  </form>
-               </cit>
-            </sense>
-            <etym type="metonymy" subtype="categoryForMember">
-               <seg type="desc" resp="#JB" xml:lang="en">In this lexical item, the language reflects
-                  the history, since there were no horses in Mexico until the arrival of the Spanish
-                  in the Mixtec (sometime after <date notBefore="1521">1521</date>), there was
-                  naturally no Mixtecan word for 'horse', thus the categorical noun meaning 'animal'
-                  was used to describe the unnamed animal.</seg>
-               <cit type="etymon">
-                  <sense>
-                     <gloss xml:lang="en">animal</gloss>
-                     <gloss xml:lang="es">animal</gloss>
-                  </sense>
-               </cit>
-            </etym>
          </entry>
          <entry xml:id="animal-squirrel">
             <form type="lemma">
@@ -6501,7 +6525,7 @@
                </xr>
                <note resp="#JB">Not sure of specific species of scrub jay.</note>
                <cit type="example">
-                  <quote xml:lang="mix">ni ki'in <oRef>kuili</oRef> ka'nu ka ña chi'ntu tsatsi <oRef>kuili</oRef> luu luu ka</quote>
+                  <quote xml:lang="mix">Niki'in kuili ka'nu ka ña chi'ntu tsatsi kuili luu luu ka</quote>
                   <ptr source="#the_adult_scrub_Jay_took_away_the_acorn_that_the_baby_was_eating_01_02_TS.wav"/>
                   <cit type="translation">
                      <quote xml:lang="en">the big scrub jay took the nut that the little scrub jay had.</quote>
@@ -6604,7 +6628,18 @@
                   </form>
                </cit>
             </sense>
-            <ref type="bibl"><bibl>(Beckman 2014)</bibl></ref>
+            <ref type="bibl" target="#La"><bibl>(Beckman 2014)</bibl></ref>
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Altered pronunciation of loanword from:</seg>
+               <etym type="metathesis">
+                  <lang>Spanish</lang>
+                  <cit type="etymon">
+                     <form>
+                        <orth xml:lang="es">chachalaca</orth>
+                     </form>
+                  </cit>
+               </etym>
+            </etym>
          </entry>
          <entry xml:id="Amazonian_motmot-i">
             <form type="lemma">
@@ -9405,6 +9440,14 @@
                </cit>
             </sense>
             <ref type="bibl"><bibl>(Beckman 2014)</bibl></ref>
+            <etym type="compounding">
+               <seg type="desc" xml:lang="en">Likely a compound of </seg>
+               
+               <etym type="metaphor">
+               <!-- bumble bee -->   
+               </etym>
+               
+            </etym>
          </entry>
          <entry xml:id="Elegant_euphonia-ii">
             <form type="lemma">
@@ -22011,6 +22054,33 @@
                   </cit>
                </etym>
             </sense>
+            <sense n="3">
+               <usg type="domain">Social</usg>
+               <usg type="domain">Affection</usg>
+               <gramGrp>
+                  <pos>adj</pos>
+                  <gram>diminutive</gram>
+               </gramGrp>
+               <cit type="example">
+                  <quote xml:lang="mix">Xito luu....</quote>
+                  <cit type="translation">
+                     <quote xml:lang="en">Dear uncle..</quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es">Tíocito....</quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">dear</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">caro</orth>
+                  </form>
+               </cit>
+            </sense>
             <re type="derrivative">
                <form type="lemma">
                   <orth xml:lang="mix">lulu</orth>
@@ -26691,8 +26761,7 @@
                      </form>
                      <def xml:lang="en">foot</def>
                   </cit>
-                  <seg type="desc">The variant observed <oRef target="#arrive-kitsaa-MIX-variant"
-                        >kitsa'á</oRef> might be evidence for such an etymology.</seg>
+                  <seg type="desc">The variant observed <oRef target="#arrive-kitsaa-MIX-variant">kitsa'á</oRef> might be evidence for such an etymology.</seg>
                </etym>
             </sense>
          </entry>
@@ -29373,7 +29442,7 @@ he is crying - nstakui
                      <orth xml:lang="mix">nta-</orth>
                   </form>
                   <gramGrp>
-                     <gram>prefix</gram>
+                     <pos>prefix</pos>
                      <gram>iterative</gram>
                   </gramGrp>
                </cit>
@@ -29383,21 +29452,23 @@ he is crying - nstakui
                      <orth xml:lang="mix">sa-</orth>
                   </form>
                   <gramGrp>
-                     <gram>prefix</gram>
+                     <pos>prefix</pos>
                      <gram>causative</gram>
                   </gramGrp>
                </cit>
                <pc>+</pc>
-               <cit type="etymon">
-                  <form>
-                     <orth xml:lang="mix">xeen</orth>
-                  </form>
-                  <gramGrp>
-                     <pos>adj</pos>
-                  </gramGrp>
-                  <def xml:lang="en">dangerous</def>
-                  <def xml:lang="es">peligroso</def>
-               </cit>
+               <etym type="metonymy" subtype="partForWhole">  
+                  <cit type="etymon">
+                     <form>
+                        <orth xml:lang="mix">xeen</orth>
+                     </form>
+                     <gramGrp>
+                        <pos>adj</pos>
+                     </gramGrp>
+                     <def xml:lang="en">dangerous</def>
+                     <def xml:lang="es">peligroso</def>
+                  </cit>
+               </etym>
             </etym>
          </entry>
          <entry xml:id="eat-I-MIX">
@@ -29544,7 +29615,7 @@ he is crying - nstakui
          <entry xml:id="sleep-V-MIX">
             <form type="lemma">
                <orth xml:lang="mix">kusu</orth>
-               <ptr type="inflectionParadigm" target="paradigm:sleep-V-paradigm-MIX"/>
+               <ptr type="inflectionParadigm" target="#sleep-V-MIX.xml"/>
             </form>
             <gramGrp>
                <pos>verb</pos>
@@ -35717,8 +35788,8 @@ he is crying - nstakui
          </entry>
          <entry xml:id="bumblebee-MIX">
             <form type="lemma">
-               <orth xml:lang="mix">tiri</orth>
-               <pron notation="ipa" xml:lang="mix"></pron>
+               <orth xml:lang="mix">tirri</orth>
+               <pron notation="ipa" xml:lang="mix" cert="medium">tiríí</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -35746,13 +35817,13 @@ he is crying - nstakui
                   </form>
                </cit>
             </sense>
-            <etym type="onomoapeia">
-               <seg type="desc" xml:lang="en">Onomoapeia based on sound made.</seg>
+            <etym type="onomatopeia">
+               <seg type="desc" xml:lang="en">Onomoapeia based on buzzing sound made by bumble bee.</seg>
             </etym>
          </entry>
          <entry xml:id="bumblebee-dog-MIX">
            <form type="lemma">
-              <orth xml:lang="mix">tiri tina</orth>
+              <orth xml:lang="mix">tirri tina</orth>
               <pron notation="ipa" xml:lang="mix"></pron>
            </form>
            <gramGrp>
@@ -35787,7 +35858,7 @@ he is crying - nstakui
         </entry>
          <entry xml:id="bumblebee-poop-MIX">
             <form type="lemma">
-               <orth xml:lang="mix">tiri si'vi</orth>
+               <orth xml:lang="mix">tirri si'vi</orth>
                <pron notation="ipa" xml:lang="mix"></pron>
             </form>
             <gramGrp>
@@ -35822,7 +35893,7 @@ he is crying - nstakui
          </entry>
          <entry xml:id="bumblebee-pumpkin-flower-MIX">
             <form type="lemma">
-               <orth xml:lang="mix">tiri tivaya</orth>
+               <orth xml:lang="mix">tirri tivaya</orth>
                <pron notation="ipa" xml:lang="mix"></pron>
             </form>
             <gramGrp>
@@ -37114,8 +37185,10 @@ he is crying - nstakui
                   </form>
                </cit>
             </sense>
-            <etym type="loanword">
+            <etym type="borrowing">
+               <seg type="desc" xml:lang="en">Loanword from:</seg>
                <cit type="etym">
+                  <lang>Nahuatl</lang>
                   <form>
                      <orth xml:lang="nah">tequitl</orth>
                   </form>
@@ -39609,6 +39682,39 @@ he is crying - nstakui
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">raspar</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="again-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">inka tuku</orth>
+               <pron notation="ipa" xml:lang="mix"></pron>
+               <ref type="soundFile" target="#ADV_again_01_JS.wav"/>
+               <media url=".../ADV_again_01_JS.wav" mimeType="audio/wav"/>
+            </form>
+            <gramGrp>
+               <pos>adv</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain"></usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">again</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">de nuevo</orth>
                   </form>
                </cit>
             </sense>
