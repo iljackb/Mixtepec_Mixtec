@@ -7,25 +7,43 @@ teiHeader { display: none; }
 entry {
     margin:1em;
     display: block;
+    border: 1px solid silver;
+    padding: 20px
 }
 
-/*  
-form {
-    display: inline;
-    background-color: Khaki;
-}
-*/
-
-orth {
-    font-size: 20px;
+form[type="lemma"] {
+    font-size: 22px;
     font-weight: bold;
     display: inline;
 }
 
-pron {
-	display: inline;
-	background-color: PaleGreen;
+
+.variant > orth {
+    font-size: 22px;
+    font-weight: bold;
+    display: inline;
+    color: grey;
 }
+
+pron {
+    font-size: 20px !important;
+    display: inline;
+    background-color: PaleGreen;
+    font-weight: normal !important;
+}
+
+pron::before {
+    content:"["
+}
+
+pron::after {
+    content:"]"
+}
+
+/*  
+ li:nth-of-type(2n) {
+  background: lightslategrey;
+ */
 
 /* things to mark-up on any level */
 
@@ -43,18 +61,82 @@ pc {
 sense {
     display: inline;
     line-break: loose;
+    content: "\A";
 }
+
+/* WHY IS THIS NOT WORKING! */
+xr {
+    text-align: right !important;
+    content: "\A";
+}
+
+xr[type="synonymOf"]::before {
+    content: "(Syn) "
+}
+
+/* FIX!!!  MAKE ONLY APPEAR IN FRONT OF FIRST INSTANCE*/
+xr[type="meronymOf"] > ref.one::before {
+    content: "(Part of) "
+}
+
+/* WHY IS THIS NOT WORKING! */
+usg[type="domain"] {
+    display: inline;
+    line-break: loose;
+    content: "\A";
+    color:blue
+}
+
+.domain {
+    font-variant: small-caps
+}
+
+cit[type="translation"] > form {
+    display: inline;
+    line-break: loose;
+    content: "\A";
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+/* MAKE SPECIFIC FORMATTING FOR TRANSLATIONS OF EXAMPLE */
+
+cit[type="example"] {
+    display: inline;
+    line-break: loose;
+    content: "\A";
+    font-size: 16px;
+    font-style: italic;
+}
+
 
 re {
-    display: inline;
-    background-color: purple;
+    display: block;
+    border: 1px solid silver;
+    font-weight: bold;
+    content: "\A (Related Entry)";
+    /*  
+   decide on what label <re> should have
+*/
 }
 
-etym { display: inline;
-    background-color: seagreen;
-
+etym::before {
+    line-break: loose;
+    text-indent: 50px;
+    font-weight: bold;
+    content: " \A (Etymology)"
 }
 
+etym { 
+    display: block;
+    border: 1px solid silver;
+    line-break: loose;
+    content: "\A";
+}
+
+seg::after {
+    content: "\A";
+}
 
 /* special whitespace handling for minimally better readability */
 lb:before { content: "\a "; }
