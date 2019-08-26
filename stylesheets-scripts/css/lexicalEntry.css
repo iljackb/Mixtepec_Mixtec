@@ -11,18 +11,21 @@ entry {
     padding: 20px
 }
 
-form[type="lemma"] {
+form[type="lemma"] > orth {
     font-size: 22px;
     font-weight: bold;
     display: inline;
 }
 
+form[type="variant"] > orth::before {
+    content: ", "
+}
 
-.variant > orth {
-    font-size: 22px;
+form[type="variant"] > orth {
+    font-size: 22px !important;
     font-weight: bold;
     display: inline;
-    color: grey;
+    color:gray
 }
 
 pron {
@@ -38,6 +41,11 @@ pron::before {
 
 pron::after {
     content:"]"
+}
+
+colloc {
+    font-style:italic;
+    color:gray
 }
 
 /*  
@@ -58,11 +66,29 @@ pc {
 
 /* things to mark-up in etymQuote */
 
+sense:nth-of-type(1)::before {
+    content: "\A (1)"
+}
+    
+sense:nth-of-type(2)::before {
+    content: "\A (2)"
+}   
+
+sense:nth-of-type(3)::before {
+    content: "\A (3)"
+}   
+
+sense:nth-of-type(4)::before {
+    content: "\A (4)"
+}   
+
 sense {
     display: inline;
     line-break: loose;
     content: "\A";
 }
+
+
 
 /* WHY IS THIS NOT WORKING! */
 xr {
@@ -75,20 +101,19 @@ xr[type="synonymOf"]::before {
 }
 
 /* FIX!!!  MAKE ONLY APPEAR IN FRONT OF FIRST INSTANCE*/
-xr[type="meronymOf"] > ref.one::before {
+xr[type="meronymOf"] > ref::before {
     content: "(Part of) "
 }
 
-/* WHY IS THIS NOT WORKING! */
 usg[type="domain"] {
+    text-transform:lowercase; /* just for debugg attempt */
     display: inline;
     line-break: loose;
     content: "\A";
     color:blue
 }
-
 .domain {
-    font-variant: small-caps
+    font-variant:small-caps /* WHY IS THIS NOT WORKING! */
 }
 
 cit[type="translation"] > form {
@@ -98,6 +123,12 @@ cit[type="translation"] > form {
     font-size: 16px !important;
     font-weight: bold;
 }
+
+/*  
+form.one > orth[xml:lang="en"]:nth-of-type(1)::before {
+    content: "\A (1)"
+}*/
+
 
 /* MAKE SPECIFIC FORMATTING FOR TRANSLATIONS OF EXAMPLE */
 
@@ -109,17 +140,39 @@ cit[type="example"] {
     font-style: italic;
 }
 
+cit[type="example"] > cit[type="translation"]  {
+    display: inline;
+    line-break: loose;
+    content: "\A";
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* UPDATE THE FORMATTING OF EXAMPLES */
+cit[type="translation"] > quote  {
+    display: inline;
+    line-break: loose;
+    font-size: 14px;
+    font-style: italic;
+}
+
+
 
 re {
     display: block;
     border: 1px solid silver;
-    font-weight: bold;
-    content: "\A (Related Entry)";
     /*  
-   decide on what label <re> should have
+   rather than a "related entry" label, should have different formatting
 */
 }
 
+re > gramGrp {
+    font-weight: normal !important;
+    display: inline;
+    font-style: italic;
+}
+
+/* figure out why "etym.one::before {" removes ALL labels from etym!*/
 etym::before {
     line-break: loose;
     text-indent: 50px;
@@ -133,6 +186,8 @@ etym {
     line-break: loose;
     content: "\A";
 }
+
+/* add printing for types & subtypes of etymology */
 
 seg::after {
     content: "\A";

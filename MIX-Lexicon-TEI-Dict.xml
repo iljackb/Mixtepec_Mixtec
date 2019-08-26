@@ -515,10 +515,10 @@
       <profileDesc>
          <particDesc>
             <listPerson xml:base="MIX-People.xml">
-               <person xml:id="TS" role="speaker" corresp="MIX-People.xml#TS">
+               <person xml:id="TS" role="speaker, collaborator" corresp="MIX-People.xml#TS">
                   <name>Juan "Tisu'ma" Salazar</name>
                </person>
-               <person xml:id="JS" role="speaker" corresp="MIX-People.xml#JS">
+               <person xml:id="JS" role="speaker, collaborator" corresp="MIX-People.xml#JS">
                   <name>Geremaia Salaza</name>
                </person>
                <person xml:id="JB" role="editor, researcher" corresp="MIX-People.xml#JB">
@@ -1368,14 +1368,10 @@
                <cit type="example">
                   <quote xml:lang="mix">nuu ve'e</quote>
                   <cit type="translation">
-                     <form>
-                        <orth xml:lang="en">the front of the house</orth>
-                     </form>
+                     <quote xml:lang="en">the front of the house</quote>
                   </cit>
                   <cit type="translation">
-                     <form>
-                        <orth xml:lang="es">parte delantera de la casa</orth>
-                     </form>
+                     <quote xml:lang="es">parte delantera de la casa</quote>
                   </cit>
                </cit>
                <graphic url="SIL_docs/L157/L157-06-cld.png">
@@ -1615,7 +1611,6 @@
                   <ptr source="../SIL_docs/L150"/>
                </cit>
                <etym type="metaphor">
-                  <desc/>
                   <usg type="domain">Body</usg>
                </etym>
             </sense>
@@ -2119,23 +2114,23 @@
             <sense>
                <usg type="domain" corresp="http://dbpedia.org/ontology/AnatomicalStructure"
                   >AnatomicalStructure</usg>
-               <etym type="blending">
-                  <cit type="etymon">
-                     <pron corresp="#arm-hand">ndá.ʔà</pron>
-                     <def xml:lang="en">hand</def>
-                     <def xml:lang="en">arm</def>
-                  </cit>
-                  <cit type="etymon">
-                     <pron corresp="#cardinal-directions-West">kwá.ʔà</pron>
-                     <def xml:lang="en">west</def>
-                  </cit>
-               </etym>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">right hand</orth>
                   </form>
                </cit>
             </sense>
+            <etym type="blending">
+               <cit type="etymon">
+                  <pron corresp="#arm-hand">ndá.ʔà</pron>
+                  <def xml:lang="en">hand</def>
+                  <def xml:lang="en">arm</def>
+               </cit>
+               <cit type="etymon">
+                  <pron corresp="#cardinal-directions-West">kwá.ʔà</pron>
+                  <def xml:lang="en">west</def>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="hand-palm" type="compound">
             <form type="lemma">
@@ -2215,7 +2210,7 @@
          <entry xml:id="hand-finger" type="compound">
             <form type="lemma">
                <orth xml:lang="mix">xiní nta'a</orth>
-               <orth xml:lang="mix">xininta'a</orth>
+               <form type="variant"><orth xml:lang="mix">xininta'a</orth></form>
                <pron xml:lang="mix" notation="ipa">ʃìníndáʔà</pron>
             </form>
             <gramGrp>
@@ -2523,13 +2518,13 @@
                </gramGrp>
                <cit type="example">
                   <quote xml:lang="mix">Ka'an yu tsa'a Pedro</quote>
+                  <media url="soundfiles-gen:S_speak_1s_on_behalf_of_Pedro_01_02_03_TS.wav" mimeType="audio/wav"/>
                   <cit type="translation">
                      <quote xml:lang="en">I'm speaking on behalf of Pedro.</quote>
                   </cit>
                   <cit type="translation">
                      <quote xml:lang="es">Estoy hablando de parte de Pedro.</quote>
                   </cit>
-                  <media url="soundfiles-gen:S_speak_1s_on_behalf_of_Pedro_01_02_03_TS.wav" mimeType="audio/wav"/>
                </cit>           
                <cit type="translation">
                   <form>
@@ -2599,10 +2594,8 @@
                      <form>
                         <orth/>
                      </form>
-                     <sense>
                         <gloss xml:lang="en">foot</gloss>
-                        <gloss xml:lang="en"/>
-                     </sense>
+                        <gloss xml:lang="en"/>                
                   </cit>
                   <cit type="etymon">
                      <form>
@@ -2611,10 +2604,8 @@
                      <gramGrp>
                         <pos>demonstrative</pos>
                      </gramGrp>
-                     <sense>
                         <gloss xml:lang="en">that</gloss>
-                        <gloss xml:lang="en">que</gloss>
-                     </sense>
+                        <gloss xml:lang="en">que</gloss>   
                   </cit>
                </etym>
             </re>
