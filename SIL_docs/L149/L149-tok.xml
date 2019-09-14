@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L149-tok">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="mix">
-               <seg xml:id="d1e5">
-                  <w xml:id="d1e6">Tuyu</w> 
-                  <w xml:id="d1e7">kuka'nu</w>
-               </seg>
-            </title>
-            <title xml:lang="es">
-               <seg xml:id="d1e12">El Sabino Grande</seg>
-            </title>
+            <title xml:lang="mix">Tuyuku ka'nu</title>
+            <title xml:lang="es">El Sabino Grande</title>
             <author>Samuel López Santiago</author>
             <editor>Gisela Beckmann</editor>
             <editor>María M. Nieves</editor>
@@ -29,7 +22,7 @@
          <publicationStmt>
             <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of:
                archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix).
-               Encoded documents used with the permission of original authors.</p>
+               Encoded documents used with the permission of original authors and SIL Mexico.</p>
          </publicationStmt>
          <notesStmt>
             <note xml:id="L149-resumen" xml:lang="es">
@@ -51,7 +44,7 @@
                   <resp>narrator</resp>
                   <name>Samuel López Santiago</name>
                </respStmt>
-               Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L149-SabinoGrande-mix.htm"/>
+               Obtained from:<ptr target="http://www.mexico.sil.org/resources/archives/55906"/>
             </bibl>
          </sourceDesc>
       </fileDesc>
@@ -69,10 +62,8 @@
       </profileDesc>
       <encodingDesc>
          <editorialDecl>
-            <normalization>
-               <ab>
-                  <date>2018-02-19</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). In this document the extended senses of "face" - "nuu" were not normalized as I am awaiting discussion as to whether this particular sense should also be changed to "nu". Compound place names were wrapped in a parent <tag>w</tag> and the original (separate) values are represented (and searchable) in the @<att>norm</att>.
-               </ab>
+            <normalization resp="#JB">
+               <ab><date>2019-02-19</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated working orthographic principles in:<ref target="../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml">GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Normalized forms are replaced in the value of <tag>w</tag> directly and the original (non-normalized) from is kept and recorded in the value of <att>orig</att>. Original forms which were normalized are  Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). Additionally, all saltillos <c>ꞌ</c> in the original content were changed to apostrophes <c>'</c> with the reasoning that most people, writing in Mixtec, as well as using and searching thses resources will more easily have access to and use an apostrophe than a saltillo. This could be changed again in the future if waranted.</ab>
             </normalization>
             
             <ab type="annotation">

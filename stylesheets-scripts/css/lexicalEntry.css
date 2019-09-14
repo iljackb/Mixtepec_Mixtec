@@ -18,7 +18,8 @@ form[type="lemma"] > orth {
 }
 
 form[type="variant"] > orth::before {
-    content: ", "
+    content: ", ";
+    color:black !important
 }
 
 form[type="variant"] > orth {
@@ -29,9 +30,8 @@ form[type="variant"] > orth {
 }
 
 pron {
-    font-size: 20px !important;
+    font-size: 18px !important;
     display: inline;
-    background-color: PaleGreen;
     font-weight: normal !important;
 }
 
@@ -97,12 +97,24 @@ xr {
 }
 
 xr[type="synonymOf"]::before {
-    content: "(Syn) "
+    content: "(Syn) ";
+    font-size: 12px 
+}
+
+
+xr[type="hyponymOf"]::before {
+    content: "(Is a) ";
+    font-size: 12px 
 }
 
 /* FIX!!!  MAKE ONLY APPEAR IN FRONT OF FIRST INSTANCE*/
 xr[type="meronymOf"] > ref::before {
-    content: "(Part of) "
+    content: "(Part of) ";
+    font-size: 12px 
+}
+
+ref {
+     font-style: italic;
 }
 
 usg[type="domain"] {
@@ -110,10 +122,25 @@ usg[type="domain"] {
     display: inline;
     line-break: loose;
     content: "\A";
-    color:blue
+    color:blue;
+    font-size: 14px 
 }
+
+usg[type="domain"]::before {
+    content: "["
+}
+
+usg[type="domain"]::after {
+    content: "]"
+}
+
 .domain {
     font-variant:small-caps /* WHY IS THIS NOT WORKING! */
+}
+
+.en::before {       /* WHY IS THIS NOT WORKING! */
+  content: "(en)";
+  font-size: 14px !important;
 }
 
 cit[type="translation"] > form {
@@ -122,6 +149,14 @@ cit[type="translation"] > form {
     content: "\A";
     font-size: 16px !important;
     font-weight: bold;
+}
+
+cit + cit {
+    content: ",";
+}
+
+gloss + gloss { /* CHANGE THIS ISN'T GOOD */
+    content: ",";
 }
 
 /*  
@@ -160,6 +195,7 @@ cit[type="translation"] > quote  {
 
 re {
     display: block;
+    margin:1em;
     border: 1px solid silver;
     /*  
    rather than a "related entry" label, should have different formatting
@@ -173,7 +209,7 @@ re > gramGrp {
 }
 
 /* figure out why "etym.one::before {" removes ALL labels from etym!*/
-etym::before {
+entry > etym::before {
     line-break: loose;
     text-indent: 50px;
     font-weight: bold;
@@ -182,6 +218,7 @@ etym::before {
 
 etym { 
     display: block;
+    margin:1em;
     border: 1px solid silver;
     line-break: loose;
     content: "\A";

@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/css" href="display-working-text-docs.css"?>
-<?xml-stylesheet type="text/css" href="display-working-text-docs.css"?>
-<?xml-model href="../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Tisu's Vienna Trip Diary</title>
-            <respStmt>
-               <resp>Author</resp>
-               <name xml:id="TS">Juan "Tisu'ma" Salazar</name>
-            </respStmt>
+            <title xml:lang="en">Tisu's Vienna Trip Diary</title>
+            <author xml:id="TS">Juan "Tisu'ma" Salazar</author>
+            <editor xml:id="JB">Jack Bowers</editor>
            <respStmt>
-              <resp>Editor</resp>
               <resp>translation</resp>
-              <name xml:id="JB">Jack Bowers</name>
+              <name>Jack Bowers</name>
            </respStmt>
          </titleStmt>
          <publicationStmt>
             <p>public information </p>
          </publicationStmt>
          <sourceDesc>
-            <p> Journal was created by speaker Tisu during and about the activities of his trip to <placeName>Vienna</placeName> <date>3rd-14th August 2017</date>.</p>
+            <p>Journal was created by speaker Tisu during and about the activities of his trip to <placeName>Vienna</placeName> <date>3rd-14th August 2017</date>.</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <editorialDecl>
-            <normalization>
-               <ab>Where there was a spelling by the author which separately wrote two items that should be written as one (such as future (potential) prefixes in front of a verb, these are wrapped in a common <tag>w</tag> and the <att>norm</att> is used to show the normalized value (without) whitespace.</ab>
+            <normalization resp="#JB">
+               <ab>Normalizations were made to the original text by the author by the editor in order to adhere to the established practice and precedent set in the spelling SIL publication. Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per: <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>.
+                  
+                  Normalized forms are changed in the text and (unless the item was a typo with no underlying linguistic or cognitive relevance) the original form written by the author are recorded in the <att>orig</att>. In certain cases of normalized content keeping the original form may be insightfull with regards to the author/native speaker's perception of the lexical content being written.
+                  
+                  Where there was a spelling by the author which separately wrote two items that should be written as one (such as future (potential) prefixes in front of a verb, these are wrapped in a common <tag>w</tag> and the <att>orig</att> is used to show the normalized value (without) whitespace.</ab>
+               
+               
                <ab>Where the original did not follow spelling conventions and no white-space was involved and the items were changed to reflect the most up-to-date orthography conventions and the original form written by Tisu is recorded in the <att>orig</att>.</ab>
                
             </normalization>

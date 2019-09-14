@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L157-tok">
    <teiHeader>
       <fileDesc>
@@ -35,16 +35,13 @@
          <publicationStmt>
             <p> This is an XML-TEI markup of the original publications by SIL Mexico for the purposes of: archival and for the creation of a body of Mixtepec-Mixtec language resources (LR) (ISO: mix). Encoded documents used with the permission of original authors.</p>
          </publicationStmt>
-         <notesStmt>
-            <note xml:id="L157-resumen" xml:lang="es"> Cuenta la leyenda que la gente de Mixtepec fue hasta Puebla a conseguir unas campanas para su iglesia. De regreso, anunciaron su llegada desde un monte tocando las campanas. Es por eso que ese cerro se llama “Monte de la Campana”. Además, esta leyenda explica la razón por la que las campanas de Pinotepa Nacional suenan igual que las de Mixtepec.</note>
-         </notesStmt>
          <sourceDesc>
             <bibl xml:id="bibl.L156">
                <title>Tu'un yata tsa'a kue kaa kaxi Xnuviko</title>
                <author>Mendoza Santiago, Francisco</author>; <editor>Beckmann, Gisela</editor>
                <editor>Nieves, María M.</editor>. <date>2008</date>. <edition>(2nd ed.)</edition>.<publisher>Instituto Lingüístico de Verano, A.C.</publisher>
                <pubPlace>Tlalpan, D.F., México</pubPlace>
-               Obtained from:<ptr target="http://www-01.sil.org/mexico/mixteca/mixtepec/L157-Campanas-mix.htm"/>
+               Obtained from: <ptr target="http://www.mexico.sil.org/resources/archives/51095"/>
             </bibl>
          </sourceDesc>
       </fileDesc>
@@ -53,23 +50,26 @@
             <channel mode="w">@mode:'w' means that the primary means of utilising this document is by reading it's written form; </channel>
             <constitution type="single"/>
             <derivation type="original">this document is labeled "original" because the XML-TEI markup of it's contents have not made any alterations to the original content;</derivation>
-            <domain type="rooster"/>
+            <domain type="church"/>
             <factuality type="fiction"/>
             <interaction type="none"/>
             <preparedness type="NA">not applicable</preparedness>
             <purpose type="entertain"/>
          </textDesc>
+         <abstract xml:lang="es" xml:id="L157-resumen">
+            <p>Cuenta la leyenda que la gente de Mixtepec fue hasta Puebla a conseguir unas campanas para su iglesia. De regreso, anunciaron su llegada desde un monte tocando las campanas. Es por eso que ese cerro se llama “Monte de la Campana”. Además, esta leyenda explica la razón por la que las campanas de Pinotepa Nacional suenan igual que las de Mixtepec.</p>
+         </abstract>
       </profileDesc>
       <encodingDesc>
          <editorialDecl>
             <normalization>
                <ab>
-                  <date>2018-03-27</date>Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per<ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille (or other person working on orthography). </ab>
+                  <date>2018-03-27</date> Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per<ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>. Instances of "ña" still remain to be changed pending consultation with Mille Nieves or Gisela Beckman (or other person working on orthography). </ab>
             </normalization>
             
             <ab type="annotation">
                <list>
-                  <item>Mixtec content found at following locations: <ref>//text[@xml:lang='mix']/body/div/p/seg/w</ref>
+                  <item>Mixtec content found at following locations: <ref>//text/body/div/p/seg[@xml:lang='mix']/w</ref>
                      
                   </item>
                   <item>English translations are defined in relation to their Mixtec equivalents in the following location: <ref>//text[@xml:lang='mix']/body/div/p/spanGrp[@type='translation']/span[@xml:lang='en']</ref> the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>where a preceding sibling is: <ref>//text[@xml:lang='mix']/body/div/p/seg</ref>
@@ -124,15 +124,15 @@
                   <w xml:id="d1e186">nivi</w>                  
                   <w xml:id="d1e188">ntaku</w>                  
                   <w xml:id="d1e190">nchu'a</w>
-                  <w xml:id="d1e192" cert="low">ntsio</w>
+                  <w xml:id="d1e192">ntsio</w>
                   <w xml:id="d1e194">na</w>
                   <pc>,</pc>
                   <w xml:id="d1e198">ntsikuu</w>        
                   <w xml:id="d1e201">kuena</w>
                   <w xml:id="d1e203">nivi</w>
-                  <w xml:id="d1e205">na'nu</w>        <!-- old, grown up  -->
+                  <w xml:id="d1e205">na'nu</w> 
                   <pc>,</pc>
-                  <w xml:id="d1e209">suku</w>     <!-- high or priest? -->
+                  <w xml:id="d1e209">suku</w>
                   <w xml:id="d1e211">ntsio</w>             
                   <w xml:id="d1e213">na</w>
                   <pc>.</pc>
@@ -183,7 +183,7 @@
                   <w xml:id="d1e228">kaa</w>             <!-- metal -->
                   <w xml:id="d1e230" cert="low">skaxi</w>             <!--  ? (if this meant "ring" why is the "kaa" there?!!-->
                   <w xml:id="d1e232">na</w>
-                  <w xml:id="d1e234">veñu'u</w><!-- (ve'e +ñu'u = house of fire (TS) house of Sun (from Mixtec Sun-centric universe view) -->
+                  <w xml:id="d1e234">veñu'u</w>
                   <w xml:id="d1e236">ñuu</w>
                   <pc>.</pc>
                </seg>
@@ -251,15 +251,15 @@
             <p>
                <seg xml:id="L157-02-01" type="S" xml:lang="mix">
                   <w xml:id="d1e260">Ika</w>
-                  <w xml:id="d1e262" cert="low">ntsa'an</w>          <!-- went (why not inflected?)-->
+                  <w xml:id="d1e262">ntsa'an</w>          <!-- went (why not inflected?)-->
                   <w xml:id="d1e264">ntakuaan</w>          <!-- buy -->
                   <w xml:id="d1e266">kuera</w>              <!-- they -->
-                  <w xml:id="d1e268" cert="low">kaa</w>    <!-- metal (why not "iin kaa kaxi"?) -->
+                  <w xml:id="d1e268">kaa</w>    <!-- metal (why not "iin kaa kaxi"?) -->
                   <w xml:id="d1e270">kaxi</w>     
                   <pc>,</pc>
                   <w xml:id="d1e274">nuu</w>      <!--  when ?-->
                   <w xml:id="d1e276">nine'e</w>      <!-- took, got, grabbed (?)-->
-                  <w xml:id="d1e278" cert="low">kuera</w>
+                  <w xml:id="d1e278">kuera</w>
                   <w xml:id="d1e280">ña</w>       <!-- it -->
                   <pc>.</pc>
                </seg>
@@ -295,7 +295,7 @@
                   <w xml:id="d1e288">sata</w>      
                   <w xml:id="d1e290">kuera</w>
                   <w xml:id="d1e292">ña</w>       <!--it (U) -->
-                  <w xml:id="d1e294" cert="low">vatsi</w>             <!--(TS) arrived;? (JB) approached? -->
+                  <w xml:id="d1e294">vatsi</w>             <!--(TS) arrived;? (JB) approached? -->
                   <w xml:id="d1e296">kuera</w>        <!-- 3pl.form.m (the men) -->
                   <pc>,</pc>
                   <w xml:id="d1e300">cha</w>
