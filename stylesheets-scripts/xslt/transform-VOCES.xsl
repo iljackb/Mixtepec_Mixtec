@@ -23,7 +23,7 @@
                 <form>
                     <orth/>
                 </form>
-                <def xml:lang="es"/>2
+                <def xml:lang="es"/>
             </cit>
         </etym>
     </xsl:template>
