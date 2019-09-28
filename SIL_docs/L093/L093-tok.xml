@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L093-tok">
    <teiHeader>
       <fileDesc>
@@ -214,8 +214,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e160" xml:lang="en">What time is it?</span>
-                  <span target="#d1e160" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e160" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e160" xml:lang="es" type="S">¿Qué hora son?</span>
                   <span target="#d1e163" xml:lang="en">what</span>
                   <span target="#d1e163" xml:lang="es">qué</span>
                   <span target="#d1e165" xml:lang="en">time</span>
@@ -237,8 +237,8 @@
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e174" xml:lang="en">It's six o'clock</span>
-                  <span target="#d1e174" xml:lang="es">Son las seis</span>
+                  <span target="#d1e174" xml:lang="en" type="S">It's six o'clock</span>
+                  <span target="#d1e174" xml:lang="es" type="S">Son las seis</span>
                   <span target="#d1e175" xml:lang="en">it is</span>
                   <span target="#d1e175" xml:lang="es">es</span>
                   <span target="#d1e177 #d1e179" xml:lang="en">six o'clock</span>
@@ -278,8 +278,8 @@
                   <pc>?</pc>
                </seg>
                <spanGrp type="translation">
-                  <span target="#d1e191" xml:lang="en">What time is it?</span>
-                  <span target="#d1e191" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e191" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e191" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e191" ana="#Q #WH #TEMP"/>
@@ -304,7 +304,7 @@
                   <span target="#d1e198">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e205" cert="medium"><!-- what to label the response?  -->
+               <seg type="S" xml:id="d1e205" cert="medium"><!-- what to label the response?  -->
                   <w xml:id="d1e206" orig="ka">Kaa</w>
                   <w xml:id="d1e208">uni</w>
                   <w xml:id="d1e210">ntaa</w>
@@ -324,8 +324,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e205" xml:lang="en">It's three o'clock.</span>
-                  <span target="#d1e205" xml:lang="es">Son las tres.</span>
+                  <span target="#d1e205" xml:lang="en" type="S">It's three o'clock.</span>
+                  <span target="#d1e205" xml:lang="es" type="S">Son las tres.</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e206">cop-real</span>
@@ -368,8 +368,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e222" xml:lang="en">What time is it?</span>
-                  <span target="#d1e222" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e222" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e222" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e225">wh</span>
@@ -377,25 +377,19 @@
                   <span target="#d1e229">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e236" cert="low"><!-- a quarter to six (kaa ra kuu ka=minus?) -->
+               <seg type="S" xml:id="d1e236" cert="low"><!-- a quarter to six (kaa ra kuu ka=minus?) -->
                   <w xml:id="d1e237">Tsa'un</w>
-                  <!-- 15 -->
                   <w xml:id="d1e239">kaa</w>
                   <w xml:id="d1e241">ra</w>
-                  <!-- conj -->
                   <w xml:id="d1e243">kuu</w>
                   <w xml:id="d1e245">ka</w>
                   <w xml:id="d1e247">iñu</w>
-                  <!-- 6 -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="gram" cert="medium">
                   <span type="sentence" target="#d1e236" ana="#RESP #Q #WH #TEMP"/>
-                  <!-- sentence: #RESP #Q #WH #TEMP -->
                   <span type="pos" target="#" ana="#COP #REAL"/>
-                  <!-- #COP #REAL -->
                   <span type="phrase" target="# #" ana="#ADVP #TEMP"/>
-                  <!-- #ADVP #TEMP -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -403,8 +397,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e236" xml:lang="en">It's a quarter to six.</span>
-                  <span target="#d1e236" xml:lang="es">Faltan quince para las seis.</span>
+                  <span target="#d1e236" xml:lang="en" type="S">It's a quarter to six.</span>
+                  <span target="#d1e236" xml:lang="es" type="S">Faltan quince para las seis.</span>
                </spanGrp>
                <!-- 
                <spanGrp type="igt">
@@ -445,8 +439,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e259" xml:lang="en">What time is it?</span>
-                  <span target="#d1e259" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e259" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e259" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e262">wh</span>
@@ -454,20 +448,16 @@
                   <span target="#d1e266">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e273">
+               <seg type="S" xml:id="d1e273">
                   <w xml:id="d1e274" orig="ka">Kaa</w>
                   <w xml:id="d1e276">kumi</w>
                   <w xml:id="d1e278">sava</w>
-                  <!-- half (= "four and a half") -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e273" ana="#RESP #Q #WH #TEMP"/>
-                  <!-- sentence: #RESP #Q #WH #TEMP -->
                   <span type="pos" target="#d1e274" ana="#COP #REAL"/>
-                  <!-- #COP #REAL -->
                   <span type="phrase" target="#d1e276 #d1e278" ana="#ADVP #TEMP"/>
-                  <!-- #ADVP #TEMP -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -475,8 +465,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e273" xml:lang="en">It's four thirty.</span>
-                  <span target="#d1e273" xml:lang="es">Son las cuatro y media.</span>
+                  <span target="#d1e273" xml:lang="en" type="S">It's four thirty.</span>
+                  <span target="#d1e273" xml:lang="es" type="S">Son las cuatro y media.</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e274">cop-real</span>
@@ -494,7 +484,7 @@
             </label>
             <lb/>
             <p>
-               <seg type="S" xml:id="d1e290" xml:lang="mix"><!-- #Q #WH #TEMP -->
+               <seg type="S" xml:id="d1e290" xml:lang="mix">
                   <pc>¿</pc>
                   <w xml:id="d1e293">Nchii</w>
                   <w xml:id="d1e295">hora</w>
@@ -505,13 +495,9 @@
                   <span type="sentence" target="#d1e290" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e293 #d1e295" ana="#ADVP #WH #TEMP"/>
                   <span type="pos" target="#d1e297" ana="#COP #INCMPL"/>
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e297" ana="#INCMPL"/>
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e297" ana="#3PERS"/>
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e297" ana="#SG"/>
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -519,8 +505,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e290" xml:lang="en">What time is it?</span>
-                  <span target="#d1e290" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e290" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e290" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e295">wh</span>
@@ -528,21 +514,16 @@
                   <span target="#d1e299">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e304">
+               <seg type="S" xml:id="d1e304">
                   <w xml:id="d1e305" orig="ka">Kaa</w>
                   <w xml:id="d1e307">iin</w>
-                  <!-- nine -->
                   <w xml:id="d1e309">tsa'un</w>
-                  <!-- fifteen -->
                   <pc>.</pc>
                </seg>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e304" ana="#RESP #Q #WH #TEMP"/>
-                  <!-- sentence: #RESP #Q #WH #TEMP -->
                   <span type="pos" target="#d1e305" ana="#COP #REAL"/>
-                  <!-- #COP #REAL -->
                   <span type="phrase" target="#d1e307 #d1e309" ana="#ADVP #TEMP"/>
-                  <!-- #ADVP #TEMP -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -550,8 +531,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e304" xml:lang="en">It's nine fifteen.</span>
-                  <span target="#d1e304" xml:lang="es">Son las nueve y cuarto.</span>
+                  <span target="#d1e304" xml:lang="en" type="S">It's nine fifteen.</span>
+                  <span target="#d1e304" xml:lang="es" type="S">Son las nueve y cuarto.</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e305">cop-real</span>
@@ -580,13 +561,9 @@
                   <span type="sentence" target="#d1e321" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e324 #d1e36" ana="#ADVP #WH #TEMP"/>
                   <span type="pos" target="#d1e328" ana="#COP #INCMPL"/>
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e328" ana="#INCMPL"/>
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e328" ana="#3PERS"/>
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e328" ana="#SG"/>
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -594,8 +571,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e321" xml:lang="en">What time is it?</span>
-                  <span target="#d1e321" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e321" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e321" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e324">wh</span>
@@ -603,24 +580,19 @@
                   <span target="#d1e328">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e335"><!-- twenty five to five = (336)oko u'un kaa ra kuu kaa u'un(348)-->
-                  <w xml:id="d1e335b">
-                     <w xml:id="d1e336">Oko</w>
-                     <w xml:id="d1e338">u'un</w>
-                  </w>
+               <seg type="S" xml:id="d1e335" xml:lang="mix">
+                  <w xml:id="d1e336" orig="Oko u'un">Oko-u'un</w>
                   <w xml:id="d1e340">kaa</w>
-                  <!-- COP -->
                   <w xml:id="d1e342">ra</w>
                   <w xml:id="d1e344">kuu</w>
-                  <w xml:id="d1e346" orig="ka">kaa</w>
+                  <w xml:id="d1e346" orig="ka">kaa</w><!-- why is this here!?? ASK MILLE!!! -->
                   <w xml:id="d1e348">u'un</w>
                   <pc>.</pc>
                </seg>
             </p>
-            <!-- twenty five to five = ((335b)oko u'un) kaa ra kuu kaa u'un(348)-->
             <spanGrp type="gram">
                <span type="sentence" target="#d1e335" ana="#RESP #Q #WH #TEMP"/>
-               <!-- sentence: #RESP #Q #WH #TEMP -->
+               <span type="pos" target="#d1e336" ana="#ADV #TEMP"/>
                <span type="pos" target="#d1e340" ana="#COP #REAL"/>
                <span type="pos" target="#d1e342" ana="#CONJ"/>
                <span type="pos" target="#d1e344" ana="#COP #POT"/>
@@ -636,14 +608,14 @@
             <!-- Add cog grammar relations: TR-LM -->
             <!-- should "kuu kaa u'un" have it's own translation? -->
             <spanGrp type="translation">
-               <span target="#d1e335" xml:lang="en">It's twenty five to five.</span>
-               <span target="#d1e335" xml:lang="en">It's four thirty five.</span>
-               <span target="#d1e335" xml:lang="es">Son venticinco para las cinco.</span>
-               <span target="#d1e335" xml:lang="es">Son las cinco menos venicinco.</span>
+               <span target="#d1e335" xml:lang="en" type="S">It's twenty five to five.</span>
+               <span target="#d1e335" xml:lang="en" type="S">It's four thirty five.</span>
+               <span target="#d1e335" xml:lang="es" type="S">Son venticinco para las cinco.</span>
+               <span target="#d1e335" xml:lang="es" type="S">Son las cinco menos venicinco.</span>
                <!-- others? -->
             </spanGrp>
             <spanGrp type="igt">
-               <span target="#d1e335b">twenty five</span>
+               <span target="#d1e336">twenty five</span>
                <span target="#d1e340">cop-real</span>
                <span target="#d1e342">conj</span>
                <span target="#d1e344">cop-pot</span>
@@ -671,13 +643,9 @@
                   <span type="sentence" target="#d1e360" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e363 #d1e366" ana="#ADVP #WH #TEMP"/>
                   <span type="pos" target="#d1e367" ana="#COP #INCMPL"/>
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e367" ana="#INCMPL"/>
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e367" ana="#3PERS"/>
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e367" ana="#SG"/>
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -685,8 +653,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e360" xml:lang="en">What time is it?</span>
-                  <span target="#d1e360" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e360" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e360" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e363">wh</span>
@@ -694,25 +662,20 @@
                   <span target="#d1e367">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e374">
+               <seg type="S" xml:id="d1e374">
                   <w xml:id="d1e375" orig="ka">Kaa</w>
-                  <w xml:id="d1e376" norm="utsi in">
-                     <w xml:id="d1e377">utsi</w>
-                     <!-- ten -->
-                     <w xml:id="d1e379" orig="iin">in</w>  
-                     <!-- one (ten+one=11) -->
+                  <w xml:id="d1e376" orig="utsi iin">utsi-in</w>  
+                  <w norm="utsi-in">
+                     <w>utsi</w>
+                     <w>iin</w>
                   </w>
                   <w xml:id="d1e381">sava</w>    
-                  <!-- half-->
                   <pc>.</pc>
                </seg>
                <spanGrp type="gram">
                   <span type="sentence" target="#d1e374" ana="#RESP #Q #WH #TEMP"/>
-                  <!-- sentence: #RESP #Q #WH #TEMP -->
                   <span type="pos" target="#d1e375" ana="#COP #REAL"/>
-                  <!-- #COP #REAL -->
                   <span type="phrase" target="#d1e376 #d1e381" ana="#ADVP #TEMP"/>
-                  <!-- #ADVP #TEMP -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -720,9 +683,9 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e374" xml:lang="en">It's eleven thirty.</span>
-                  <span target="#d1e374" xml:lang="en">It's half passed eleven.</span>
-                  <span target="#d1e374" xml:lang="es">Son las once y media.</span>
+                  <span target="#d1e374" xml:lang="en" type="S">It's eleven thirty.</span>
+                  <span target="#d1e374" xml:lang="en" type="S">It's half passed eleven.</span>
+                  <span target="#d1e374" xml:lang="es" type="S">Son las once y media.</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e375">cop-real</span>
@@ -751,13 +714,9 @@
                   <span type="sentence" target="#d1e393" ana="#Q #WH #TEMP"/>
                   <span type="phrase" target="#d1e396 #d1e398" ana="#ADVP #WH #TEMP"/>
                   <span type="pos" target="#d1e400" ana="#COP #INCMPL"/>
-                  <!-- ku-:  #COP #INCMPL -->
                   <span type="aspect" target="#d1e400" ana="#INCMPL"/>
-                  <!-- ku-:  #INCMPL -->
                   <span type="person" target="#d1e400" ana="#3PERS"/>
-                  <!-- -i:  # -->
                   <span type="number" target="#d1e400" ana="#SG"/>
-                  <!-- -i:  # -->
                </spanGrp>
                <spanGrp type="semantics">
                   <span type="domain"
@@ -765,8 +724,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e393" xml:lang="en">What time is it?</span>
-                  <span target="#d1e393" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e393" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e393" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e396">wh</span>
@@ -774,7 +733,7 @@
                   <span target="#d1e400">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e407">
+               <seg type="S" xml:id="d1e407">
                   <w xml:id="d1e408" orig="ka">Kaa</w>
                   <w xml:id="d1e410" orig="iin">in</w>
                   <w xml:id="d1e412">utsi</w>
@@ -791,9 +750,9 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e407" xml:lang="en">It's one ten.</span>
-                  <span target="#d1e407" xml:lang="en">It's ten after one.</span>
-                  <span target="#d1e407" xml:lang="es">Es la una y cinco.</span>
+                  <span target="#d1e407" xml:lang="en" type="S">It's one ten.</span>
+                  <span target="#d1e407" xml:lang="en" type="S">It's ten after one.</span>
+                  <span target="#d1e407" xml:lang="es" type="S">Es la una y cinco.</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e408">cop-real</span>
@@ -832,8 +791,8 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e424" xml:lang="en">What time is it?</span>
-                  <span target="#d1e424" xml:lang="es">¿Qué hora son?</span>
+                  <span target="#d1e424" xml:lang="en" type="S">What time is it?</span>
+                  <span target="#d1e424" xml:lang="es" type="S">¿Qué hora son?</span>
                </spanGrp>
                <spanGrp type="igt">
                   <span target="#d1e427">wh</span>
@@ -841,7 +800,7 @@
                   <span target="#d1e431">cop-incmpl;3s</span>
                </spanGrp>
                <lb/>
-               <seg type="declarative" xml:id="d1e438">
+               <seg type="S" xml:id="d1e438">
                   <w xml:id="d1e439">Kotsuu</w>
                   <w xml:id="d1e441">Ñuu</w>
                </seg>
@@ -856,9 +815,9 @@
                         corresp="http://dbpedia.org/resource/Horology"/>
                </spanGrp>
                <spanGrp type="translation">
-                  <span target="#d1e438" xml:lang="en" resp="#TS">It's twelve o'clock.</span>
-                  <span target="#d1e438" xml:lang="en" resp="#TS">It's midnight.</span>
-                  <span target="#d1e438" xml:lang="es" resp="#TS">Es media noche.</span>
+                  <span target="#d1e438" xml:lang="en" resp="#TS" type="S">It's twelve o'clock.</span>
+                  <span target="#d1e438" xml:lang="en" resp="#TS" type="S">It's midnight.</span>
+                  <span target="#d1e438" xml:lang="es" resp="#TS" type="S">Es media noche.</span>
                </spanGrp>
                <!--  
                <spanGrp type="igt">

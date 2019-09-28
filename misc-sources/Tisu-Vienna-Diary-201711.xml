@@ -26,7 +26,7 @@
             <normalization resp="#JB">
                <ab>Normalizations were made to the original text by the author by the editor in order to adhere to the established practice and precedent set in the spelling SIL publication. Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per: <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>.
                   
-                  Normalized forms are changed in the text and (unless the item was a typo with no underlying linguistic or cognitive relevance) the original form written by the author are recorded in the <att>orig</att>. In certain cases of normalized content keeping the original form may be insightfull with regards to the author/native speaker's perception of the lexical content being written.
+                  Normalized forms are changed in the text and (unless the item was a typo with no underlying linguistic or cognitive relevance) the original form written by the author are recorded in the <tag>w</tag> elemant in the <att>orig</att> attribute. In certain cases of normalized content keeping the original form may be insightfull with regards to the author/native speaker's perception of the lexical content being written.
                   
                   Where there was a spelling by the author which separately wrote two items that should be written as one (such as future (potential) prefixes in front of a verb, these are wrapped in a common <tag>w</tag> and the <att>orig</att> is used to show the normalized value (without) whitespace.</ab>
                
@@ -14819,15 +14819,17 @@
                </seg>
                <spanGrp type="translation">
                   <span target="#d1e17092" xml:lang="en">When we are finished eating i'm going to shower because tomorrow I'm going to get up early because I'm leaving.</span>
-                  <span target="#d1e17092" xml:lang="es"/>
-                  <span target="#d1e17093" xml:lang="en"/>
-                  <span target="#d1e17093" xml:lang="es"/>
-                  <span target="#d1e17095" xml:lang="en"/>
-                  <span target="#d1e17095" xml:lang="es"/>
-                  <span target="#d1e17097" xml:lang="en"/>
-                  <span target="#d1e17097" xml:lang="es"/>
-                  <span target="#d1e17099" xml:lang="en"/>
-                  <span target="#d1e17099" xml:lang="es"/>
+                  
+                  <span target="#d1e17093" xml:lang="es" type="inflected">when finished</span>
+                  <span target="#d1e17093" xml:lang="en" type="inflected"></span>
+                  
+                  <span target="#d1e17097 #d1e17099" xml:lang="en" type="inflected"></span>
+                  <span target="#d1e17097 #d1e17099" xml:lang="es" type="inflected"></span>
+                  
+                  <span target="#d1e17097" xml:lang="en" type="inflected"></span>
+                  <span target="#d1e17097" xml:lang="en" type="note">is this the potential form of "tsitsa'an"?</span>
+                  <span target="#d1e17097" xml:lang="es" type="inflected"></span>
+
                   <span target="#d1e17101" xml:lang="en"/>
                   <span target="#d1e17101" xml:lang="es"/>
                   <span target="#d1e17103" xml:lang="en"/>

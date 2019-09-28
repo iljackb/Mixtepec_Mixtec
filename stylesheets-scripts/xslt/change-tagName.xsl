@@ -15,11 +15,12 @@
             <xsl:apply-templates select="node()|@*"/>
         </xsl:copy>
     </xsl:template>
+   
+    <xsl:template match="f[@name='zsampa']"/>
     
-    <xsl:template match="//cit[@type='translation']/orth">
+    <xsl:template match="//cit[@type='translation']/quote">
         <form>
-            <orth>
-                <xsl:copy-of select="@* "/>
+            <orth xml:lang="es">
                 <xsl:value-of select="."/>
             </orth>
         </form>
