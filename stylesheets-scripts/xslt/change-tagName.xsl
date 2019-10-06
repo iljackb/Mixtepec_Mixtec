@@ -15,7 +15,7 @@
             <xsl:apply-templates select="node()|@*"/>
         </xsl:copy>
     </xsl:template>
-   
+   <!--
     <xsl:template match="f[@name='zsampa']"/>
     
     <xsl:template match="//cit[@type='translation']/quote">
@@ -25,6 +25,32 @@
             </orth>
         </form>
         
+    </xsl:template>
+    
+    <xsl:template match="seg[@type='blank']">
+        <seg>
+            <xsl:copy-of select="@*"/>
+            <span><xsl:value-of select="."/></span>
+        </seg>
+    </xsl:template>
+      
+   
+    <xsl:template match="//s/seg">
+        <w>
+            <xsl:copy-of select="@*"/>
+            <xsl:value-of select="."/>
+        </w>
+    </xsl:template>
+    --> 
+    <xsl:template match="c">
+        <pc>
+            <xsl:value-of select="."/>
+        </pc>
+    </xsl:template>
+    <xsl:template match="s">
+        <seg type='S'>
+            <xsl:copy-of select="node()|@*"/>
+        </seg>
     </xsl:template>
     <!-- 
     <xsl:template match="desc">

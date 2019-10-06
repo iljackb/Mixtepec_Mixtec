@@ -34,6 +34,9 @@
         </usg>
     </xsl:template>
 
+
+
+
     <!-- 
     <xsl:template match="usg/text()[contains(.,'metáfora')]">
         <xsl:analyze-string select="." regex="^(dicho por metáfora|por metáfora|es por metáfora)$">
