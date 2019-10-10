@@ -16,49 +16,57 @@
          </titleStmt>
          <publicationStmt>
             <p>public information </p>
-         </publicationStmt>
+         </publicationStmt> 
          <sourceDesc>
             <p>Journal was created by speaker Tisu during and about the activities of his trip to <placeName>Vienna</placeName> <date>3rd-14th August 2017</date>.</p>
          </sourceDesc>
+         
       </fileDesc>
+      <profileDesc>
+         
+      </profileDesc>
       <encodingDesc>
          <editorialDecl>
             <normalization resp="#JB">
-               <ab>Normalizations were made to the original text by the author by the editor in order to adhere to the established practice and precedent set in the spelling SIL publication. Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per: <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>.
+               <ab>Normalizations were made to the original text by the author by the editor in order to adhere to the established practice and precedent set in the spelling SIL publication. They are encoded in <code lang="xpath">//w[@orig]</code>. Spelling of lexical items which in the old orthography were homographs and which have been changed according to updated orthographic principles as per: <ref>../Mille/GUIA_ORTOGRAFICA_PRELIMINAR_Short_version.xml</ref>.
                   
                   Normalized forms are changed in the text and (unless the item was a typo with no underlying linguistic or cognitive relevance) the original form written by the author are recorded in the <tag>w</tag> elemant in the <att>orig</att> attribute. In certain cases of normalized content keeping the original form may be insightfull with regards to the author/native speaker's perception of the lexical content being written.
                   
                   Where there was a spelling by the author which separately wrote two items that should be written as one (such as future (potential) prefixes in front of a verb, these are wrapped in a common <tag>w</tag> and the <att>orig</att> is used to show the normalized value (without) whitespace.</ab>
-               
                
                <ab>Where the original did not follow spelling conventions and no white-space was involved and the items were changed to reflect the most up-to-date orthography conventions and the original form written by Tisu is recorded in the <att>orig</att>.</ab>
                
             </normalization>
             <ab type="annotation">
                <list>
-                  <item>Mixtec content found at following locations: 
-                     <ref>//div/p/seg[@xml:lang='mix']/w</ref>  and 
-                     <ref>//div/salute/seg[@xml:lang='mix']/w</ref>
+                  <item>
+                     <p>Mixtec content found at following locations: 
+                        <code lang="xpath">//div/p/seg[@xml:lang='mix']/w</code>  and 
+                        <code lang="xpath">//div/salute/seg[@xml:lang='mix']/w</code>
+                     </p>
                   </item>
-                  
-                  <item>English translations are defined in relation to their Mixtec equivalents in the following locations:
-                     <ref>//div/p/spanGrp[@type='translation']/span[xml:lang='en']</ref> (where preceding sibling is //seg[@xml:lang='mix']) and 
-                     <ref>//div/salute</ref> (where preceding sibling is //seg[@xml:lang='mix']);
-                     
-                     In both (<ref>//div/p/seg[@xml:lang='mix']/w</ref>  and  <ref>//div/salute/seg[@xml:lang='mix']/w</ref>):
-                     the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>
+                  <item>
+                     <p>English translations are defined in relation to their Mixtec equivalents in the following locations:
+                        <code lang="xpath">//div/p/spanGrp[@type='translation']/span[xml:lang='en']</code> (where preceding sibling is <code lang="xpath">//seg[@xml:lang='mix']</code>) and 
+                        <code lang="xpath">//div/salute</code> (where preceding sibling is <code lang="xpath">//seg[@xml:lang='mix']</code>);
+                     </p>
+                     <p>In both (<code lang="xpath">//div/p/seg[@xml:lang='mix']/w</code>  and  <code lang="xpath">//div/salute/seg[@xml:lang='mix']/w</code>):
+                     the value of <code lang="xpath">//span[@target] is the pointer to the Mixtec translation equivalent</code>
+                     </p>
                   </item>
-                  
-                  <item>Spanish translations are defined in relation to their Mixtec equivalents in the following locations: <ref>//div/p/spanGrp[@type='translation']/span[xml:lang='es']</ref> (where preceding sibling is //seg) and <ref>//div/salute</ref> (where preceding sibling is //seg[@xml:lang='mix']);  in both the value of <ref>//span[@target] is the pointer to the Mixtec translation equivalent</ref>
+                  <item>
+                     <p>Spanish translations are defined in relation to their Mixtec equivalents in the following locations: <code lang="xpath">//div/p/spanGrp[@type='translation']/span[xml:lang='es']</code> (where preceding sibling is //seg) and <code lang="xpath">//div/salute</code> (where preceding sibling is <code lang="xpath">//seg[@xml:lang='mix']</code>);  in both the value of <code lang="xpath">//span[@target] is the pointer to the Mixtec translation equivalent</code>
+                     </p>
                   </item>
                </list>
                
             </ab>
          </editorialDecl>
       </encodingDesc>
+      
       <revisionDesc>
          <listChange>
-            <change>Normalization of original text are being made in //w[@norm]. Where two items (such as a verb and prefix) are written by Tisu separately, the separate w's are being wrapped in common w and this is where the translation will point to and the @norm attribute will be entered.</change>
+            <change>Normalization of original text are being made in <code lang="xpath">//w[@orig]</code>. Where two items (such as a verb and prefix) are written by Tisu separately, the separate w's are being wrapped in common w and this is where the translation will point to and the @norm attribute will be entered.</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
@@ -73,7 +81,7 @@
                <spanGrp type="translation">
                   <span target="#d1e29" xml:lang="en">hello</span>
                   <span target="#d1e29" xml:lang="es">olá</span>
-               </spanGrp> /
+               </spanGrp> 
                <seg xml:id="d1e32" xml:lang="mix" resp="#TS">
                   <w xml:id="d1e33">tukuni</w>
                </seg>
@@ -86,22 +94,20 @@
             </salute>
             <p>
                <seg xml:id="d1e41" n="1" xml:lang="mix" resp="#TS" type="S">
-                  <w xml:id="d1e42" orig="Ni kitsi">Nikitsi</w><!-- came (over) -->
+                  <w xml:id="d1e42" orig="Ni kitsi">Nikitsi</w>
                   <w xml:id="d1e48">ñani</w>
                   <w xml:id="d1e50">yu</w>
                   <w xml:id="d1e52">Donny</w>
                   <w xml:id="d1e54">ka</w>
-                  <w xml:id="d1e56">kua</w>      <!-- around -->
-                  <w xml:id="d1e59" cert="low">ka</w><!-- should this be *kaa?  -->
-                  <w xml:id="d1e60" norm="uni-sava">
-                     <w xml:id="d1e61">uni</w>-<w xml:id="d1e64">sava</w>
-                  </w>
-                  <w xml:id="d1e67" cert="low">tanki'an</w><!-- to pick up/gather (spelling?/TENSE?)-->
+                  <w xml:id="d1e56">kua</w>  
+                  <w xml:id="d1e59">ka</w>
+                  <w xml:id="d1e60">uni-sava</w>
+                  <w xml:id="d1e67">tanki'an</w>
                   <w xml:id="d1e70" orig="kue yu">kueyu</w>
                   <w xml:id="d1e77">sara</w>
-                  <w xml:id="d1e79">skaki</w> <!-- drove (skaka = pres) -->
-                  <w xml:id="d1e82">tsa'an</w>        <!-- to go -->
-                  <w xml:id="d1e85">kue</w>     <!-- 1pl -->
+                  <w xml:id="d1e79">skaki</w>
+                  <w xml:id="d1e82">tsa'an</w>
+                  <w xml:id="d1e85">kue</w>
                   <w xml:id="d1e88">nuu</w>
                   <w xml:id="d1e91">inkaa</w>
                   <w xml:id="d1e94">metro</w>
@@ -177,7 +183,7 @@
                <!-- -->
                <seg xml:id="d1e105" n="2" xml:lang="mix" resp="#TS" type="S">
                   <w xml:id="d1e106">Sara</w>
-                  <w xml:id="d1e108" cert="medium">nuu</w>    <!-- nuu kue - come down [núu] or [núú] -->
+                  <w xml:id="d1e108">nuu</w>    <!-- nuu kue - come down [núu] or [núú] -->
                   <w xml:id="d1e111">kue</w><!-- 1pl -->
                   <pc>,</pc>
                   <w xml:id="d1e116">mee</w>
@@ -263,14 +269,14 @@
                   <w xml:id="d1e177">Donny</w>
                   <w xml:id="d1e179">ka</w>
                   <pc>,</pc>
-                  <w xml:id="d1e183">katcha</w><!-- he said -->
+                  <w xml:id="d1e183">katcha</w>
                   <w xml:id="d1e187">ña</w>
                   <w xml:id="d1e189">va'a</w>
-                  <w xml:id="d1e192">nchu'a</w>  <!-- very -->
-                  <w xml:id="d1e194">yee</w>    <!-- be -->
-                  <w xml:id="d1e197">nuu</w>        <!-- where -->
-                  <w xml:id="d1e200" orig="ku ku'un">kunku'un</w>   <!-- go -->
-                  <w xml:id="d1e207">yu</w><!-- 1sg -->
+                  <w xml:id="d1e192">nchu'a</w> 
+                  <w xml:id="d1e194">yee</w>  
+                  <w xml:id="d1e197">nuu</w>  
+                  <w xml:id="d1e200" orig="ku ku'un">kunku'un</w>  
+                  <w xml:id="d1e207">yu</w>
                   <pc>.</pc>
                </seg>
                <spanGrp type="translation">
@@ -434,7 +440,7 @@
                   <span target="#d1e335" xml:lang="en">It took us an hour to get to the airport.</span>
                   <span target="#d1e335" xml:lang="es" cert="medium">Nos llevó una hora para llegar al aeropuerto.</span>
                   
-                  <span target="#d1e336 #d1e341 #d1e343 #d1e345" xml:lang="en">it took one hour</span>
+                  <span target="#d1e336 #d1e341 #d1e343 #d1e345" xml:lang="en">it took us one hour</span>
                   <span target="#d1e336 #d1e341 #d1e343 #d1e345" xml:lang="es" cert="low">nos llevó una hora</span>
                   
                   <span target="#d1e341" xml:lang="en"/>

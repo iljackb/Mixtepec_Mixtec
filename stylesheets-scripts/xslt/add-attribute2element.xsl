@@ -11,13 +11,22 @@
         </xsl:copy>
     </xsl:template>
     
-    
-    <xsl:template match="seg[@type='S' and not(@xml:lang)]">
-        <xsl:copy>
-            <xsl:copy-of select="@*"/> 
+    <!--  
+    <xsl:template match="//seg[@type='S' and not(@xml:lang)]">
+        <seg>
             <xsl:attribute name="xml:lang">mix</xsl:attribute>
-            <xsl:apply-templates select="node()"/>
-        </xsl:copy>
+            <xsl:copy-of select="node()|@*"/>
+        </seg>
+        
+    </xsl:template>
+    -->
+    
+    <xsl:template match="//w[not(@xml:lang)]">
+        <w>
+            <xsl:attribute name="xml:lang">mix</xsl:attribute>
+            <xsl:copy-of select="node()|@*"/>
+        </w>
+        
     </xsl:template>
     
 </xsl:stylesheet>

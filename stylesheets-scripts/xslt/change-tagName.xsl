@@ -41,7 +41,7 @@
             <xsl:value-of select="."/>
         </w>
     </xsl:template>
-    --> 
+  
     <xsl:template match="c">
         <pc>
             <xsl:value-of select="."/>
@@ -50,6 +50,15 @@
     <xsl:template match="s">
         <seg type='S'>
             <xsl:copy-of select="node()|@*"/>
+        </seg>
+    </xsl:template>
+      --> 
+    <xsl:template match="w">
+        <seg type="caption" xml:lang="mix">
+            <w>
+                <xsl:copy-of select="@* except @xml:lang"/>
+                <xsl:value-of select="."/>
+            </w>
         </seg>
     </xsl:template>
     <!-- 
