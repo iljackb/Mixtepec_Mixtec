@@ -139,5 +139,24 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
-
+    
+    <xsl:template match="//seg/w">
+        <xsl:copy>
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="generate-id()"/>
+            </xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="//seg/text()">
+        <xsl:analyze-string select="." regex="\, | \.">
+            <xsl:matching-substring>
+                <pc><xsl:value-of select="regex-group(1)"/></pc>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
 </xsl:stylesheet>
