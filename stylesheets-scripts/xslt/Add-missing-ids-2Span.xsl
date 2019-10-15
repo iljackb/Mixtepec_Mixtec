@@ -150,9 +150,9 @@
     </xsl:template>
     
     <xsl:template match="//seg/text()">
-        <xsl:analyze-string select="." regex="\, | \.">
+        <xsl:analyze-string select="." regex="(, | \.|^')">
             <xsl:matching-substring>
-                <pc><xsl:value-of select="regex-group(1)"/></pc>
+                <pc><xsl:value-of select="normalize-space(regex-group(1))"/></pc>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
                 <xsl:value-of select="."/>
