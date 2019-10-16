@@ -49,7 +49,17 @@
         </xsl:copy>
         
     </xsl:template>
+    <xsl:template match="titleStmt">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+            <respStmt>
+                <resp>Speaker</resp>
+                <name xml:id="TS">Tisu'ma Salazar</name>
+            </respStmt>
+        </xsl:copy>   
+    </xsl:template>
 
+<!-- 
     <xsl:template match="fileDesc">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -61,30 +71,20 @@
                             <resp>Elicitation</resp>
                             <name>Jack Bowers</name>
                         </respStmt>
-                        <respStmt>
-                            <resp>Recording</resp>
-                            <resp>Elicitation</resp>
-                            <name>Andrea Guerra</name>
-                        </respStmt>
-                        <respStmt>
-                            <resp>Recording</resp>
-                            <resp>Elicitation</resp>
-                            <name>Larry "Kryn" Corpuz Jr.</name>
-                        </respStmt>
                         <equipment>
-                            <ab>Audio recorded using a Sony PCM-D50 Linear PCM Recorder at a rate of 96kHz/24-bit.</ab>
+                            <ab>Audio recorded using a built-in microphone on a Macbook pro (2009 model) using Praat software at a rate of 96kHz/24-bit.</ab>
                         </equipment>
                         <ab>
                             <location>
-                                <placeName>San José State University</placeName>
-                                <placeName>San José</placeName>
+                                <placeName>Potrero Hill</placeName>
+                                <placeName>San Francisco</placeName>
                                 <region>California</region>
                                 <country>USA</country>
                             </location>
-                        </ab>
-                        <date notBefore="2011-01" notAfter="2011-12">2011</date>
+                        </ab>          
+                        <date>2013-12</date> <ab>(Note: specific day of meeting not known)</ab>
+                        <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
                     </recording>
-                    <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
                 </recordingStmt>
             </sourceDesc>
         </xsl:copy>
@@ -97,4 +97,5 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template> 
+    -->
 </xsl:stylesheet>
