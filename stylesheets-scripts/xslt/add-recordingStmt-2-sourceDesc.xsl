@@ -49,6 +49,8 @@
         </xsl:copy>
         
     </xsl:template>
+
+    <!-- CHANGE AS NEEDED!! -->
     <xsl:template match="titleStmt">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -59,7 +61,7 @@
         </xsl:copy>   
     </xsl:template>
 
-<!-- 
+
     <xsl:template match="fileDesc">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -81,8 +83,9 @@
                                 <region>California</region>
                                 <country>USA</country>
                             </location>
-                        </ab>          
-                        <date>2013-12</date> <ab>(Note: specific day of meeting not known)</ab>
+                        </ab>
+                        <date>2013-12</date>
+                        <ab>(Note: specific day of meeting not known)</ab>
                         <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
                     </recording>
                 </recordingStmt>
@@ -97,5 +100,5 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template> 
-    -->
+
 </xsl:stylesheet>
