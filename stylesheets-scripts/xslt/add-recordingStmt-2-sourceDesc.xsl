@@ -10,7 +10,7 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
-
+<!-- 
     <xsl:template match="teiHeader">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -49,8 +49,8 @@
         </xsl:copy>
         
     </xsl:template>
-
-    <!-- CHANGE AS NEEDED!! -->
+ -->
+    <!-- CHANGE AS NEEDED!! 
     <xsl:template match="titleStmt">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -60,8 +60,8 @@
             </respStmt>
         </xsl:copy>   
     </xsl:template>
-
-
+-->
+<!--  
     <xsl:template match="fileDesc">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -101,4 +101,30 @@
         </xsl:copy>
     </xsl:template> 
 
+    <xsl:template match="/titleStmt/respStmt/name">
+        <xsl:if test="text()[matches(.,'Jack Bowers')]">
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="JB"/>
+            </xsl:attribute>
+        </xsl:if>
+    </xsl:template>
+  -->  
+    <xsl:template match="encodingDesc">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        
+        <listPrefixDef>       
+
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)"
+                replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)"
+                replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>     
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)"
+                replacementPattern="../oaxaca/#$1"/>    
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)"
+                replacementPattern="../media/stimuli/#$1"/>
+            
+        </listPrefixDef>
+        </xsl:copy>
+    </xsl:template>
 </xsl:stylesheet>
