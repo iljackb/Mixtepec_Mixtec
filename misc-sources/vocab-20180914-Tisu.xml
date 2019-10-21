@@ -20,18 +20,58 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Vocabulary mostly ilicited via English translations from predetermined vocab list
-               made by the researcher. Meeting took place at Coffee shop on Park Street in <placeName><settlement>Alameda</settlement>, <region>CA</region>.</placeName></p>
+            <ab>Vocabulary mostly <term ana="#elicitation-translation">ilicited via English translations</term> from predetermined vocab list made by the researcher.</ab>
+            <ab>
+               Meeting took place at Coffee shop on Park Street on <date>2018-09-14</date> in <location><placeName><settlement>Alameda</settlement>, <region>CA</region> <country>USA</country>.</placeName></location>
+            </ab>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy>
+               <desc>Typology of linguistic speech events captured in recordings as per: <bibl>Himmelmann (<date>1998</date>)</bibl>. aka Typology of "naturalness".</desc>
+               <category xml:id="observed">
+                  <catDesc>
+                     <term>Observed communicative event:</term> the extent of external interference is limited to the knowledge of the speakers that the speech is being recorded or observed.</catDesc>
+               </category>
+               <category xml:id="staged">
+                  <catDesc>
+                     <term>Staged communicative event:</term> speech events realized for the purpose of recording (i.e. elicited speech). Events are not really being realized for the purpose of communication but for the benefit of the investigator.</catDesc>
+                  <category xml:id="staged-free-topical">
+                     <catDesc>
+                        <term>Staged-Topical</term>Prompt to speak freely about topic</catDesc>
+                  </category>
+                  <category xml:id="staged-stimuli">
+                     <catDesc>
+                        <term>Staged-Stimuli</term> events based on stimuli to be described in speakers own words</catDesc>
+                  </category>
+               </category>
+               <category xml:id="elicitation">
+                  <catDesc>
+                     <term>Elicitation:</term> speech act for the sole purpose of linguistic investigation. (A new type of speech event for most communities).</catDesc>
+                  <category xml:id="elicitation-contextualizing">
+                     <catDesc>
+                        <term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for a item or construction as prompted by the investigator.</catDesc>
+                  </category>
+                  <category xml:id="elicitation-translation">
+                     <catDesc>
+                        <term>Translation-based elicitation:</term> native speaker asked to translate item from second language</catDesc>
+                  </category>
+                  <category xml:id="elicitation-judgement">
+                     <catDesc>
+                        <term>Judgement:</term> where native speakers are asked to judge the acceptibility of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
    </teiHeader>
    <text>
       <body>
          <p>
                <seg xml:id="d1e32"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e33">ki’vi</w>
                </seg>
            
@@ -48,9 +88,8 @@
          
             <p>
                <seg xml:id="d1e47"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e48">ntaxita</w>
                   <w xml:id="d1e50">tachi</w>
                   <w xml:id="d1e51">ku</w>
@@ -74,12 +113,11 @@
          
             <p>
                <seg xml:id="d1e64"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e65">kaxa</w>
                </seg>
-            
+  
             <spanGrp type="translation">
                <span target="#d1e65" xml:lang="en">to sneeze</span>
                <span target="#d1e65" xml:lang="en" cert="medium">sneeze</span>
@@ -96,17 +134,15 @@
          </p>
             <p>
                <seg xml:id="d1e78"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e79">kaxa</w>
                </seg>
                <seg xml:id="d1e81"
                     notation="ipa"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e82" sameAs="#d1e79">káʃà</w>
-               </seg>
-            
+               </seg>       
             <spanGrp type="translation">
                <span target="#d1e79" xml:lang="en" type="inflected">I sneeze</span>
                <span target="#d1e79" xml:lang="es" type="inflected">estordudo</span>
@@ -121,15 +157,13 @@
          
             <p>
                <seg xml:id="d1e94"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e95">kaxu</w>
                </seg>
                <seg xml:id="d1e97"
-
                     notation="ipa"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e98" sameAs="#d1e95">káʃú</w>
                </seg>
             
@@ -144,13 +178,13 @@
                <span type="number" target="#d1e95 #d1e98" ana="#SG"/>
                <span type="register" target="#d1e95 #d1e98" ana="#INF"/>
             </spanGrp>
-</p>
+            </p>
          
            <p> 
-               <seg xml:id="d1e110" notation="orth" xml:lang="mix">
+              <seg xml:id="d1e110" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e111">koko</w>
                </seg>
-               <seg xml:id="d1e113" notation="ipa" xml:lang="mix">
+              <seg xml:id="d1e113" notation="ipa" xml:lang="mix" type="term">
                   <w xml:id="d1e114" sameAs="#d1e111">kōkó</w>
                </seg>
             
@@ -160,7 +194,7 @@
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#d1e111 #d1e114" ana="#V"/>
-               <span type="transitivity" target="#d1e111 #d1e114" ana="#TRANS"/><!-- MIGHT BE BOTH TRANS OR INTRANS: semantically transitive; syntactically can be either -->
+               <span type="transitivity" target="#d1e111 #d1e114" ana="#AMBITRANS"/>
                <span type="form" target="#d1e111 #d1e114" ana="#GLS"/>
             </spanGrp>
 </p>
@@ -182,16 +216,14 @@
                <span target="#d1e128" xml:lang="en">vitamins</span>
                <span target="#d1e128" xml:lang="es">vitaminas</span>
             </spanGrp>
-</p>
+            </p>
          
             <p>
                <seg xml:id="d1e141"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e142">katsi</w>
-               </seg>
-            
+               </seg>    
             <spanGrp type="translation">
                <span target="#d1e142" xml:lang="en" cert="low">chew</span>
                <span target="#d1e142" xml:lang="es">masticar</span>
@@ -205,9 +237,8 @@
          
            <p> 
                <seg xml:id="d1e153"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e154">katsi</w>
                   <w xml:id="d1e156">lulu</w>
                </seg>
@@ -221,13 +252,12 @@
                <span type="transitivity" target="#" ana="#"/>
                <span type="form" target="#" ana="#"/>
             </spanGrp>
-</p>
+           </p>
          
             <p>
                <seg xml:id="d1e169"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e170">sa'a</w>
                   <w xml:id="d1e172">lucha</w>
                </seg>
@@ -246,9 +276,8 @@
          
             <p>
                <seg xml:id="d1e185"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e186">kata</w>
                </seg>
                <seg xml:id="d1e188"
@@ -270,10 +299,7 @@
 </p>
          
             <p>
-               <seg xml:id="d1e201"
-
-                    notation="orth"
-                    xml:lang="mix" type="S">
+               <seg xml:id="d1e201" notation="orth" xml:lang="mix" type="S">
                   <w xml:id="d1e202">Kata</w>
                   <w xml:id="d1e204">nta'a</w>
                   <pc>.</pc>
@@ -395,16 +421,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e300"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e300" notation="orth" xml:lang="mix">
                   <w xml:id="d1e301">tsa'un</w>
                </seg>
-               <seg xml:id="d1e303"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e303" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e304" sameAs="#d1e301">tzāʔū̃̃</w>
                </seg>
             
@@ -415,16 +435,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e312"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e312" notation="orth" xml:lang="mix">
                   <w xml:id="d1e313">ñu’ma</w>
                </seg>
-               <seg xml:id="d1e315"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e315" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e316" sameAs="#d1e313">ɲúʔmà</w>
                </seg>
             
@@ -441,16 +455,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e329"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e329" notation="orth" xml:lang="mix">
                   <w xml:id="d1e330">ntavi</w>
                </seg>
-               <seg xml:id="d1e332"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e332" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e333" sameAs="#d1e330">ndàvì</w>
                </seg>
             
@@ -468,16 +476,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e346"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e346" notation="orth" xml:lang="mix">
                   <w xml:id="d1e347" cert="low">ntsinuun</w>
                </seg>
-               <seg xml:id="d1e349"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e349" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e350" sameAs="#d1e347">ntsinːũ̌</w>
                </seg>
             
@@ -493,16 +495,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e361"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e361" notation="orth" xml:lang="mix">
                   <w xml:id="d1e362">ntaku</w>
                </seg>
-               <seg xml:id="d1e364"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e364" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e365" sameAs="#d1e362">ndàkú</w>
                </seg>
             
@@ -516,10 +512,7 @@
 </p>
          
             <p>
-               <seg xml:id="d1e376"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e376" notation="orth" xml:lang="mix">
                   <w xml:id="d1e377">ntaku</w>
                   <w xml:id="d1e379">ncho’ai</w>
                </seg>
@@ -534,18 +527,12 @@
 </p>
          
             <p>
-               <seg xml:id="d1e395"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e395" notation="orth" xml:lang="mix">
                   <w xml:id="d1e396">koo</w>
                   <w xml:id="d1e398" cert="low">nchii</w>
                   <!-- how to spell!? this "i" is extra long!! -->
                </seg>
-               <seg xml:id="d1e401"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e401" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e402"/>
                </seg>
             
@@ -559,17 +546,11 @@
 </p>
          
             <p>
-               <seg xml:id="d1e412"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e412" notation="orth" xml:lang="mix">
                   <w xml:id="d1e413" cert="low">nchii</w>
                   <!-- how to spell!? this "i" is extra long!! -->
                </seg>
-               <seg xml:id="d1e416"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e416" notation="ipa"  xml:lang="mix">
                   <w xml:id="d1e417" sameAs="#d1e413">ndʒììí</w>
                </seg>
             
@@ -584,16 +565,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e428"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e428" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e429">vita</w>
                </seg>
-               <seg xml:id="d1e431"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e431" notation="ipa" xml:lang="mix" type="term">
                   <w xml:id="d1e432" sameAs="#d1e429">vitá</w>
                </seg>
             
@@ -613,16 +588,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e449"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e449" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e450">ntsitsa</w>
                </seg>
-               <seg xml:id="d1e452"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e452" notation="ipa" xml:lang="mix" type="term">
                   <w xml:id="d1e453" cert="medium" sameAs="#d1e450">ntzitsa</w>
                </seg>
             
@@ -643,9 +612,8 @@
          
             <p>
                <seg xml:id="d1e468"
-
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="P">
                   <w xml:id="d1e469" cert="medium">kue</w>
                   <w xml:id="d1e471">ntai</w>
                </seg>
@@ -661,16 +629,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e484"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e484" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e485">jaa</w>
                </seg>
-               <seg xml:id="d1e487"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e487" notation="ipa" xml:lang="mix">
                   <w xml:id="d1e488" cert="medium" sameAs="#d1e485">jaá</w>
                </seg>
             
@@ -685,16 +647,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e500"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e500" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e501">yuchi</w>
                </seg>
-               <seg xml:id="d1e503"
-
-                    notation="ipa"
-                    xml:lang="mix">
+               <seg xml:id="d1e503" notation="ipa" xml:lang="mix" type="term">
                   <w xml:id="d1e504" cert="medium" sameAs="#d1e501">jutʃi</w>
                </seg>
             
@@ -708,10 +664,7 @@
 </p>
          
             <p>
-               <seg xml:id="d1e515"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e515" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e516">nu’u</w>
                   <w xml:id="d1e518">ntaa</w>
                </seg>
@@ -727,10 +680,7 @@
 </p>
          
             <p>
-               <seg xml:id="d1e533"
-
-                    notation="orth"
-                    xml:lang="mix">
+               <seg xml:id="d1e533" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e534">sto’o</w>
                   <w xml:id="d1e536">nchuxi</w>
                </seg>
@@ -746,10 +696,10 @@
 </p>
          
             <p>
-               <seg xml:id="d1e551" notation="orth" xml:lang="mix">
+               <seg xml:id="d1e551" notation="orth" xml:lang="mix" type="term">
                   <w xml:id="d1e552">nana</w>
                </seg>
-               <seg xml:id="d1e554" notation="ipa" xml:lang="mix">
+               <seg xml:id="d1e554" notation="ipa" xml:lang="mix" type="term">
                   <w xml:id="d1e555" sameAs="#d1e552">nànà</w>
                </seg>
             
@@ -767,7 +717,7 @@
             <p>
                <seg xml:id="d1e569"
                     notation="orth"
-                    xml:lang="mix">
+                    xml:lang="mix" type="term">
                   <w xml:id="d1e570">tata</w>
                </seg>
             
