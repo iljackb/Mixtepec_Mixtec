@@ -6,14 +6,17 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
+    <!-- File should be moved or copied to folder w files undergoing transformation -->
     
-    <!-- version 2017-12-09 -->
+    <!-- version 2019-10-24-->
     
     <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
     
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="input" as="xs:string" select="'flea-nest_TS.txt'"/>
+    <xsl:param name="input" as="xs:string" select="'190710_0260-ORIG.txt'"/>
+    <!-- TRY THIS W/O "@select" and see if it runs on all files in directory -->
+    
     
     <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
     <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
@@ -27,16 +30,17 @@
     <xsl:variable name="lines"  as="xs:string*" select="tokenize($input-text, '\r?\n')"/>
     
     <!-- input files mush have iso 639 code (if exists) as header of collumn) -->
-    <!-- 
-    <xsl:param name="fileName">	
-        <xsl:value-of select="tokenize(substring-before(base-uri(),'-clnd09.xml'),'/')[last()]"/>
+
+   <xsl:param name="speakerInit">
+       <xsl:value-of select="'JS'"/>
+   </xsl:param>
+   
+    <xsl:param name="speakerName">	
+        <!--  
+        <xsl:value-of select=" substring-after( substring-before($input,'.txt'),'_')"/>-->
+        <xsl:value-of select="'Jeremaia Salazar'"/>
     </xsl:param>  
-    
-    <xsl:param name="Spkr">	
-        <xsl:value-of select="tokenize(substring-after(base-uri(),'_', ,'.txt'))[last()]"/>
-    </xsl:param>  
-     -->
-    
+
     <!-- PSEUDO CODE
         
 element "data"
@@ -57,7 +61,7 @@ end of element "data"
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>TEI output for tab separated bilingual text files exported from file <!-- insert filename here!! --></title>
+                    <title>TEI output for Praat transcriptions of file: <!-- insert filename here!! --></title>
                     <respStmt>
                         <resp>Annotation</resp>
                         <resp>Encoding</resp>
@@ -65,7 +69,8 @@ end of element "data"
                     </respStmt>
                     <respStmt>
                         <resp>Speaker</resp>
-                        <name>
+                        <name xml:id="{$speakerInit}">
+                            <xsl:value-of select="$speakerName"/>
                             <!-- ADD FROM END OF FILENAME STRING!! -->
                             <!-- CREATE VARIABLES FOR EACH SPEAKER
                                 & ASSIGN DESIGNATED INITIALS AS VALUE 
@@ -81,16 +86,90 @@ end of element "data"
                     <note>add note</note>
                 </notesStmt>
                 <sourceDesc>
-                    <p>Information about the source(ADD POINTER TO SOURCE FILE) <ptr target="{base-uri()}"/>
-                        <!--
-                   ADD POINTER TO <fs> INVENTORY WHERE TAGS ARE!! -->
+                    <p>This file was converted from of the speech file <ptr target="soundfiles-oax:  .txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-oax: .wav"/>
                     </p>
                 </sourceDesc>
+                <sourceDesc>
+                    <recordingStmt>
+                        <recording type="audio">
+                            <respStmt>
+                                <resp>Recording</resp>
+                                <resp>Elicitation</resp>
+                                <name>Jack Bowers</name>
+                            </respStmt>
+                            <equipment>
+                                <ab>Audio recorded using a Tascam DR-05X Linear PCM Recorder at a rate of 96kHz/24-bit.</ab>
+                            </equipment>
+                            <ab>
+                                <location>
+                                    <placeName>Santiago Juxtlahuaca</placeName>
+                                    <region>Oaxaxa</region>
+                                    <country>Mexico</country>
+                                </location>
+                            </ab>
+                            <date>2010-07-10</date>
+                            <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
+                        </recording>
+                    </recordingStmt>
+                </sourceDesc>
             </fileDesc>
+            <encodingDesc>
+                <classDecl>
+                    <taxonomy>
+                        <desc>Typology of linguistic speech events captured in recordings as per: <bibl>Himmelmann (<date>1998</date>)</bibl>. aka Typology of "naturalness".</desc>
+                        <category xml:id="observed">
+                            <catDesc>
+                                <term>Observed communicative event:</term> the extent of external interference is limited to the knowledge of the speakers that the speech is being recorded or observed.</catDesc>
+                        </category>
+                        <category xml:id="staged">
+                            <catDesc>
+                                <term>Staged communicative event:</term> speech events realized for the purpose of recording (i.e. elicited speech). Events are not really being realized for the purpose of communication but for the benefit of the investigator.</catDesc>
+                            <category xml:id="staged-free-topical">
+                                <catDesc>
+                                    <term>Staged-Topical</term>Prompt to speak freely about topic</catDesc>
+                            </category>
+                            <category xml:id="staged-stimuli">
+                                <catDesc>
+                                    <term>Staged-Stimuli</term> events based on stimuli to be described in speakers own words</catDesc>
+                            </category>
+                        </category>
+                        <category xml:id="elicitation">
+                            <catDesc>
+                                <term>Elicitation:</term> speech act for the sole purpose of linguistic investigation. (A new type of speech event for most communities).</catDesc>
+                            <category xml:id="elicitation-contextualizing">
+                                <catDesc>
+                                    <term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for a item or construction as prompted by the investigator.</catDesc>
+                            </category>
+                            <category xml:id="elicitation-translation">
+                                <catDesc>
+                                    <term>Translation-based elicitation:</term> native speaker asked to translate item from second language</catDesc>
+                            </category>
+                            <category xml:id="elicitation-judgement">
+                                <catDesc>
+                                    <term>Judgement:</term> where native speakers are asked to judge the acceptibility of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
+                            </category>
+                        </category>
+                    </taxonomy>
+                </classDecl>
+                <listPrefixDef>
+                    <prefixDef ident="praat-export"
+                        matchPattern="([a-zA-Z0-9]+)"
+                        replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+                    <prefixDef ident="soundfiles-gen"
+                        matchPattern="([a-zA-Z0-9]+)"
+                        replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+                    <prefixDef ident="soundfiles-oax"
+                        matchPattern="([a-zA-Z0-9]+)"
+                        replacementPattern="../oaxaca/#$1"/>
+                    <prefixDef ident="stimuli"
+                        matchPattern="([a-zA-Z0-9]+)"
+                        replacementPattern="../media/stimuli/#$1"/>
+                </listPrefixDef>
+            </encodingDesc>
         </teiHeader>
     </xsl:variable>
-    
-    
+
+    <!-- adapt to not select headers!!! -->
     <xsl:variable name="lines-into-tabs" as="element()*">
         <xsl:for-each select="$lines[. != '']">
             <xsl:variable name="lpos" select="position()"/>
@@ -123,6 +202,7 @@ end of element "data"
     <xsl:variable name="praat-parsed" as="element()*">
         <xsl:for-each-group select="$lines-into-tabs" group-by="start">
             <xsl:for-each select="current-group()">
+                <xsl:message>tier: <xsl:value-of select="tier"/> </xsl:message>
                 <xsl:element name="{tier}">
                     <xsl:attribute name="start" select="start"/>
                     <xsl:attribute name="end" select="end"/>
@@ -153,12 +233,13 @@ end of element "data"
                                                
                             <xsl:for-each-group select="$praat-parsed" group-starting-with="Tokens">
                             <!-- DEFINED VARIABLES FOR TIMEPOINTS IN TIMELINE -->
-                                
+                             
+                             <!-- make variant script or variable that can handle where there are 2 or more glosses -->
                             <xsl:variable name="whens" as="element()*">
                                 
                                 <xsl:for-each select="
                                     distinct-values(
-                                    (current-group()[self::Orth|self::Pron|self::Esp|self::Eng]/@start, current-group()[self::Esp]/@end)
+                                    (current-group()[self::Mixtec|self::IPA|self::Spanish|self::English]/@start, current-group()[self::Spanish]/@end)
                                     )">
                                     <when xml:id="T{position()}" interval="{.}"/>
                                 </xsl:for-each>
@@ -170,7 +251,7 @@ end of element "data"
                                     
                                     <!-- output content from "Orth" -->
                                     <seg function="utterance" notation="orth" xml:id="{concat('T','-seg-orth-',@start)}"><!--concat(tier+timestamp) -->
-                                        <xsl:for-each select="current-group()/self::Orth">
+                                        <xsl:for-each select="current-group()/self::Mixtec">
                                             <xsl:variable name="start" select="@start"/>
                                             <w synch="{concat('#T',@start)}" xml:id="{concat('T','-orth',@start)}">
                                                 <xsl:value-of select="."/>
@@ -180,7 +261,7 @@ end of element "data"
                                     
                                     <!-- output content from "Pron" -->
                                     <seg function="utterance" notation="ipa" xml:id="{concat('T','-seg-pron-',@start)}">
-                                        <xsl:for-each select="current-group()/self::Pron">
+                                        <xsl:for-each select="current-group()/self::IPA">
                                             <xsl:variable name="start" select="@start"/>
                                             <w synch="{concat('#T',@start)}" xml:id="{concat('T','-pron',@start)}">
                                                 <xsl:value-of select="."/>
@@ -191,7 +272,7 @@ end of element "data"
 
                             <spanGrp type="translation">
 
-                                <xsl:for-each select="current-group()/self::Esp">            
+                                <xsl:for-each select="current-group()/self::Spanish">            
                                     <span xml:lang="es" target="">
                                         <xsl:value-of select="."/>
                                         <!-- for each additional <w> in <seg>:
@@ -199,7 +280,7 @@ end of element "data"
                                         -->
                                     </span>
                                 </xsl:for-each>
-                                <xsl:for-each select="current-group()/self::Eng">
+                                <xsl:for-each select="current-group()/self::English">
                                     <span xml:lang="en" target="">
                                         <xsl:value-of select="."/>
                                         <!-- for each additional <w> in <seg>:

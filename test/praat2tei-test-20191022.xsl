@@ -13,7 +13,7 @@
     
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="input" as="xs:string" select="'Leccion_01.txt'"/>
+    <xsl:param name="input" as="xs:string" select="'f190710_0260.txt'"/>
     
     <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
     <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
@@ -158,7 +158,7 @@ end of element "data"
                                 
                                 <xsl:for-each select="
                                     distinct-values(
-                                    (current-group()[self::Mixtec|self::Spanish|self::IPA|self::English]/@start, current-group()[self::Spanish]/@end)
+                                    (current-group()[self::Mixtec|self::Spanish|self::IPA|self::English]/@start, current-group()[self::English]/@end)
                                     )">
                                     <when xml:id="T{position()}" interval="{.}"/>
                                 </xsl:for-each>
@@ -190,15 +190,14 @@ end of element "data"
                                 </u>
                                 
                                 <spanGrp type="translation">
-                                    <!--
+
                                     <xsl:for-each select="current-group()/self::Spanish">            
                                         <span xml:lang="es" target="">
                                             <xsl:value-of select="."/>
-                                            for each additional <w> in <seg>:
-                                                add another <span xml:lang="es" target="# #">
-                                    
+                                            <!--  for each additional <w> in <seg>:
+                                                add another <span xml:lang="es" target="# #"> -->
                                         </span>
-                                    </xsl:for-each>    -->
+                                    </xsl:for-each>   
                                     <xsl:for-each select="current-group()/self::English">
                                         <span xml:lang="en" target="">
                                             <xsl:value-of select="."/>
