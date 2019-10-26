@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2019-08-24T13:23:48Z. .
+# Schema generated from ODD source 2019-10-24T12:37:13Z. .
 # TEI Edition: Version 3.6.0. Last updated on
 #	16th July 2019, revision daa3cc0b9
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -51,7 +51,7 @@ anyElement-content =
     (text | anyElement-content)*
   }
   >> sch:pattern [
-       id = "d2642333e120673-constraint"
+       id = "d42258441e120686-constraint"
        "\x{a}" ~
        "         "
        sch:rule [
@@ -82,7 +82,7 @@ anyElement-datatype =
     (text | anyElement-datatype)*
   }
   >> sch:pattern [
-       id = "d2642333e121940-constraint"
+       id = "d42258441e121953-constraint"
        "\x{a}" ~
        "         "
        sch:rule [
@@ -4153,8 +4153,58 @@ span =
     att.pointing.attributes,
     
     ## 
-    ## Sample values include: 1] phrase; 2] inflected; 3] compound; 4] literal
-    attribute type { text }?,
+    ## Suggested values include: 1] note; 2] sentence; 3] phrase; 4] inflected; 5] compound; 6] literal; 7] pos; 8] person; 9] number; 10] tense; 11] mood; 12] macrorole; 13] transitivity; 14] inclusitivity; 15] register; 16] gender
+    attribute type {
+      
+      ##
+      "note"
+      | 
+        ##
+        "sentence"
+      | 
+        ##
+        "phrase"
+      | 
+        ##
+        "inflected"
+      | 
+        ##
+        "compound"
+      | 
+        ##
+        "literal"
+      | 
+        ##
+        "pos"
+      | 
+        ##
+        "person"
+      | 
+        ##
+        "number"
+      | 
+        ##
+        "tense"
+      | 
+        ##
+        "mood"
+      | 
+        ##
+        "macrorole"
+      | 
+        ##
+        "transitivity"
+      | 
+        ##
+        "inclusitivity"
+      | 
+        ##
+        "register"
+      | 
+        ##
+        "gender"
+      | xsd:Name
+    }?,
     [
       a:documentation [
         "gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a "

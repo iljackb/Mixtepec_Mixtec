@@ -25,7 +25,7 @@
  <text>
   <body>
    <head>TEI Complete</head>
-   <p> of the TEI (P5) modules. This is a very useful&#13; starting place for manually creating your own customizations&#13; — it is much easier to delete the modules you do not&#13; want than to add
+   <p> <!-- of the TEI (P5) modules. This is a very useful&#13; starting place for manually creating your own customizations&#13; — it is much easier to delete the modules you do not&#13; want than to add
     the modules you do. Furthermore this&#13; customization often proves helpful for testing TEI&#13; software.This TEI customization describes a schema that includes&#13; all of the TEI (P5) modules.
     This is a very useful&#13; starting place for manually creating your own customizations&#13; — it is much easier to delete the modules you do not&#13; want than to add the modules you do.
     Furthermore this&#13; customization often proves helpful for testing TEI&#13; software.all of the TEI (P5) modules. This is a very useful&#13; starting place for manually creating your own
@@ -34,7 +34,7 @@
     is much easier to delete the modules you do not&#13; want than to add the modules you do. Furthermore this&#13; customization often proves helpful for testing TEI&#13; software.</p>
    <p>However, this particular TEI customization is <emph>not recommended</emph> for actual use for encoding documents. It produces schemas and reference documentation that will be much larger, and
     include many more elements, than almost anyone could conceivably ever need. Tempting though it may be simply to have absolutely everything, and <q>just ignore</q> elements not required, experience
-    has shown that their presence makes the documentation harder to read and use, and makes a schema that is far more lax than desired.</p>
+    has shown that their presence makes the documentation harder to read and use, and makes a schema that is far more lax than desired. --></p>
    <schemaSpec ident="tei_all" start="TEI teiCorpus">
     <moduleRef key="tei"/>
     <!-- required -->
@@ -129,33 +129,53 @@
       </alternate>
      </content>
     </elementSpec>
-  
+  <!--
     <elementSpec ident="m" module="analysis" mode="change">
      <classes mode="change">
       <memberOf key="att.lexicographic" mode="add"/>
-      <memberOf key="att.datcat" mode="delete"/>
+      <memberOf key="att.datacat" mode="delete"/>
      </classes>
-     <!--
+    </elementSpec>
+     
     <classSpec type="atts" ident="att.lexicographic" mode="change">
      <classes mode="change">
      
      </classes>
     </classSpec>
 
-    </elementSpec>
+    -->
 
     <elementSpec ident="span" module="analysis" mode="change">
-     <attList>
-      <attDef ident="type" mode="replace" usage="rec">
+     
+     <attList> 
+      <attDef ident="type" mode="change" usage="rec">
        <valList type="open" mode="change">
+        <valItem ident="note"/>
+        <valItem ident="sentence"/>
         <valItem ident="phrase"/>
         <valItem ident="inflected"/>
         <valItem ident="compound"/>
         <valItem ident="literal"/>
-  
+        <valItem ident="pos"/>
+        <valItem ident="person"/>
+        <valItem ident="number"/>
+        <valItem ident="tense"/>
+        <valItem ident="mood"/>
+        <valItem ident="macrorole"/>
+        <valItem ident="transitivity"/>
+        <valItem ident="inclusitivity"/>
+        <valItem ident="register"/>
+        <valItem ident="gender"/>
        </valList>
       </attDef>
-     </attList>-->
+      <!--  finish later!
+      <attDef ident="ana" mode="change" usage="rec">
+       <valList type="open" mode="change">
+        <valItem ident=""></valItem>
+       </valList>
+      </attDef>
+      -->
+     </attList>
     </elementSpec>
    
    </schemaSpec>

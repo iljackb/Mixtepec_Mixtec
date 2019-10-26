@@ -53,6 +53,26 @@
         </seg>
     </xsl:template>
       --> 
+    <xsl:template match="c[@function]" priority="1">
+        <m>
+            <xsl:attribute name="xml:id">
+                <xsl:value-of select="generate-id()"/>
+            </xsl:attribute>
+            <xsl:value-of select="."/>
+        </m>
+    </xsl:template>
+    <xsl:template match="c[not(@function)]" priority="2">
+        <xsl:value-of select="text()"/>
+    </xsl:template>
+    
+    <xsl:template match="@function"/>
+    
+    <!-- make variable for  <w> id! (if value of @synch the same on IPA and orth, get value of orth and put in @sameAs="#" on the IPA span-->
+    
+    
+    
+      <!--  <xsl:template priority="2" match="c"/>
+   
     <xsl:template match="w">
         <seg type="caption" xml:lang="mix">
             <w>
@@ -61,7 +81,7 @@
             </w>
         </seg>
     </xsl:template>
-    <!-- 
+  
     <xsl:template match="desc">
         <seg type="desc">
             <xsl:copy-of select="@*"/>
