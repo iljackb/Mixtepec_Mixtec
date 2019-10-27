@@ -14,7 +14,7 @@
     
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="input" as="xs:string" select="'leña-papel_TS.txt'"/>
+    <xsl:param name="input" as="xs:string" select="'cabeza-sombrero_TS.txt'"/>
     <!-- TRY THIS W/O "@select" and see if it runs on all files in directory -->
     
     
@@ -61,7 +61,7 @@ end of element "data"
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>TEI output for Praat transcriptions of file: leña-papel_TS.wav</title>
+                    <title>TEI output for Praat transcriptions of file: bueno-malo_TS.wav</title>
                     <respStmt>
                         <resp>Annotation</resp>
                         <resp>Encoding</resp>
@@ -97,6 +97,10 @@ end of element "data"
                             </equipment>
                             <ab>
                                 <location>
+                                    <address>
+                                        <addrLine>12 Wohlebengasse</addrLine>
+                                    </address>
+                                    <affiliation>Austrian Academy of Sciences</affiliation>
                                     <placeName>Vienna</placeName>
                                     <country>Austria</country>
                                 </location>
@@ -240,11 +244,11 @@ end of element "data"
                             </xsl:variable>
                         
                             <annotationBlock>
-                                <u n="{current-group()[1]}" xml:id="{generate-id(.)}"><!-- ID's ok-->
+                                <u n="{current-group()[1]}" xml:id="{generate-id(.)}" who="{$speakerInit}"><!-- ID's ok-->
                                     <xsl:copy-of select="current-group()[1]/(@start, @end)"/>
                                     
                                     <!-- output content from "Orth" -->
-                                    <seg xml:lang="mix" function="utterance" notation="orth" xml:id="{concat('T','-seg-orth-',@start)}"><!--concat(tier+timestamp) -->
+                                    <seg xml:lang="mix" notation="orth" xml:id="{concat('T','-seg-orth-',@start)}">
                                         <xsl:for-each select="current-group()/self::Mixtec">
                                             <xsl:variable name="start" select="@start"/>
                                             <w synch="{concat('#T',@start)}" xml:id="{concat('T','-orth',@start)}">
@@ -254,10 +258,10 @@ end of element "data"
                                     </seg>
                                     
                                     <!-- output content from "Pron" -->
-                                    <seg xml:lang="mix" function="utterance" notation="ipa" xml:id="{concat('T','-seg-pron-',@start)}" sameAs="">
+                                    <seg xml:lang="mix" notation="ipa" xml:id="{concat('T','-seg-pron-',@start)}" sameAs="{concat('#','T','-seg-orth-',@start)}">
                                         <xsl:for-each select="current-group()/self::IPA">
                                             <xsl:variable name="start" select="@start"/>
-                                            <w synch="{concat('#T',@start)}" xml:id="{concat('T','-pron',@start)}" sameAs="">
+                                            <w synch="{concat('#T',@start)}" xml:id="{concat('T','-pron',@start)}" sameAs="{concat('#','T','-orth',@start)}">
                                                 <xsl:value-of select="."/>
                                             </w>
                                         </xsl:for-each>
@@ -267,28 +271,32 @@ end of element "data"
                             <spanGrp type="translation">
                                 
                                 <xsl:for-each select="current-group()/self::English">
-                                    <span xml:lang="en" target="">
+                                    <span xml:lang="en" target="{concat('#','T','-orth',@start)}">
                                         <xsl:value-of select="."/>
-                                        <!-- for each additional <w> in <seg>:
-                                                add another <span xml:lang="es" target="# #">
-                                        -->
                                     </span>
                                 </xsl:for-each>
 
                                 <xsl:for-each select="current-group()/self::Spanish">            
-                                    <span xml:lang="es" target="">
+                                    <span xml:lang="es" target="{concat('#','T','-orth',@start)}">
                                         <xsl:value-of select="."/>
-                                        <!-- for each additional <w> in <seg>:
-                                                add another <span xml:lang="es" target="# #">
-                                        -->
+                                    </span>
+                                </xsl:for-each>
+                                
+                                <xsl:for-each select="current-group()/self::Mixtec">
+                                    <span xml:lang="en" target="{concat('#','T','-orth',@start)}">
+                                      
+                                    </span>
+                                    <span xml:lang="es" target="{concat('#','T','-orth',@start)}">
+                                 
                                     </span>
                                 </xsl:for-each>
                             </spanGrp>
                             
                             <!-- add //spanGrp[@type="gram"] -->
                             <spanGrp type="gram">
-                                <span type="" target="#" ana=""/>
-                                <span type="" target="#" ana=""/>
+                                <xsl:for-each select="current-group()/self::Mixtec">
+                                    <span type="pos" target="{concat('#','T','-orth',@start)}" ana=""/>
+                                </xsl:for-each>
                             </spanGrp>
                                 <!-- add //spanGrp[@type="semantics"] -->
                                 

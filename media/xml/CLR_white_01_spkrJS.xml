@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -55,7 +55,7 @@
                   <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
                </recording>
             </recordingStmt>
-         </sourceDesc>   
+         </sourceDesc>
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -120,33 +120,27 @@
             <when xml:id="T4" interval="0.58"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e33" n="1" start="0" end="0.68" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e34"
-                    function="utterance"
-                    notation="orth">
+            <u who="#JS"
+               xml:id="d1e33"
+               n="1"
+               start="0"
+               end="0.68"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e34" notation="orth">
                   <w xml:id="d1e35" synch="#T1">yaa</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e38" synch="#T1">
-                     <c>j</c>
-                     <c>aː</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e37" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">jaː<m xml:id="d1e154">↘</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T4">ADJ.white</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" n="1" target="#d1e35 #d1e38" ana="#N"/>
                <span type="pos" n="2" target="#d1e35 #d1e38" ana="#ADJ"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e35 #d1e38"
@@ -155,7 +149,6 @@
                      target="#d1e35 #d1e38"
                      corresp="http://dbpedia.org/resource/Color"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e35 #d1e38" xml:lang="en">white</span>
                <span target="#d1e35 #d1e38" xml:lang="es">blanco</span>

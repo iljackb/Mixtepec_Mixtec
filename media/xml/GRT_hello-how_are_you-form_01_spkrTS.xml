@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -19,7 +19,8 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:GRT_hello-how_are_you-form_01_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:GRT_hello-how_are_you-form_01_spkrTS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:GRT_hello-how_are_you-form_01_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
+                      url="soundfiles-gen:GRT_hello-how_are_you-form_01_spkrTS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -125,49 +126,34 @@
             <when xml:id="T10" interval="0.85"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e39" n="1" start="0" end="1.03" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#TS"
+               xml:id="d1e39"
+               n="1"
+               start="0"
+               end="1.03"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e40" notation="orth" type="phrase">
                   <w xml:id="d1e41" synch="#T1">taku</w>
                   <w xml:id="d1e42" synch="#T7">ni</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e43"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e44" synch="#T1">
-                     <c>t̪</c>
-                     <c>a</c>
-                     <c function="tone">˩</c>
-                     <c>k</c>
-                     <c>u</c>
-                     <c function="tone">˩</c>
+               <seg xml:lang="mix" xml:id="d1e43" notation="ipa" type="phrase">
+                  <w xml:id="d1e44" synch="#T1">t̪a<m xml:id="d1e160">˩</m>ku<m xml:id="d1e166">˩</m>
                   </w>
-                  <w xml:id="d1e47" synch="#T7">
-                     <c>n</c>
-                     <c>i</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e47" synch="#T7">ni<m xml:id="d1e173">↗</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T10">GRT-FORM.hello-how_are_you</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="discourse" target="#d1e40 #d1e43" ana="#GRT"/>
-               
                <span type="pos" target="#d1e42 #d1e47" ana="#PTCL"/>
                <!-- #HON? -->
                <span type="person" target="#d1e42 #d1e47" ana="#2PERS"/>
                <span type="number" target="#d1e42 #d1e47" ana="#SG"/>
                <span type="register" target="#d1e42 #d1e47" ana="#FORM"/>
-            </spanGrp>         
-            
+            </spanGrp>
             <spanGrp type="semantics">
                <span type="domain"
                      target="#d1e40 #d1e43"
@@ -177,12 +163,10 @@
                      target="#d1e40 #d1e43"
                      corresp="http://dbpedia.org/resource/Greeting"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e40 #d1e43" n="1" xml:lang="en">Hello</span>
                <span target="#d1e40 #d1e43" n="1" xml:lang="es" cert="unknown">Holá</span>
                <!-- other translatible phrases in spanish (not specific to time of day?)  -->
-               
                <span target="#d1e40 #d1e43" n="2" xml:lang="en">How are you?</span>
                <span target="#d1e40 #d1e43" n="2" xml:lang="es">Cómo está?</span>
             </spanGrp>

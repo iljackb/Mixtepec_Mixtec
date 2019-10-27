@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -124,29 +123,20 @@
             <when xml:id="T7" interval="0.91"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e36" n="1" start="0" end="1.00" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#JS"
+               xml:id="d1e36"
+               n="1"
+               start="0"
+               end="1.00"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e37" notation="orth" type="phrase">
                   <w xml:id="d1e38" synch="#T1">chuun</w>
                   <w xml:id="d1e40" synch="#T4">ko</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e42"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e43" synch="#T1">
-                     <c>tʃ</c>
-                     <c>ũː</c>
-                     <c function="tone">↘↗</c>
+               <seg xml:lang="mix" xml:id="d1e42" notation="ipa" type="phrase">
+                  <w xml:id="d1e43" synch="#T1">tʃũː<m xml:id="d1e159">↘↗</m>
                   </w>
-                  <w xml:id="d1e50" synch="#T4">
-                     <c>ɣ</c>
-                     <c>o</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e50" synch="#T4">ɣo<m xml:id="d1e166">↗</m>
                   </w>
                </seg>
             </u>
@@ -154,18 +144,14 @@
                <span from="#T1" to="#T4">N.chicken</span>
                <span from="#T4" to="#T7">1PL</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e37 #d1e42" ana="#NP #POSS"/>
-               
                <span type="pos" target="#d1e38 #d1e43" ana="#N"/>
-               
                <span type="pos" target="#d1e40 #d1e50" ana="#PTCL"/>
                <span type="person" target="#d1e40 #d1e50" ana="#1PERS"/>
                <span type="number" target="#d1e40 #d1e50" ana="#PL"/>
                <span type="inclusivity" target="#d1e40 #d1e50" ana="#EXCL"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e38 #d1e43"
@@ -179,7 +165,6 @@
                      target="#d1e38 #d1e43"
                      corresp="http://dbpedia.org/resource/Animal"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e37 #d1e42" xml:lang="en">our chicken</span>
                <span target="#d1e37 #d1e42" xml:lang="es">nuestro pollo</span>

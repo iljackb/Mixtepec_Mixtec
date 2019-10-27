@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -117,29 +117,20 @@
             <when xml:id="T7" interval="0.46"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e36" n="1" start="0" end="2.18" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#TS"
+               xml:id="d1e36"
+               n="1"
+               start="0"
+               end="2.18"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e37" notation="orth" type="phrase">
                   <w xml:id="d1e38" synch="#T1">maa</w>
                   <w xml:id="d1e40" synch="#T4">yu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e42"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e43" synch="#T1">
-                     <c>m</c>
-                     <c>ãː</c>
-                     <c function="tone">˧</c>
+               <seg xml:lang="mix" xml:id="d1e42" notation="ipa" type="phrase">
+                  <w xml:id="d1e43" synch="#T1">mãː<m xml:id="d1e150">˧</m>
                   </w>
-                  <w xml:id="d1e50" synch="#T4">
-                     <c>j</c>
-                     <c>u</c>
-                     <c function="tone">↘</c>
+                  <w xml:id="d1e50" synch="#T4">ju<m xml:id="d1e157">↘</m>
                   </w>
                </seg>
             </u>
@@ -147,7 +138,6 @@
                <span from="#T1" to="#T4">N.mother</span>
                <span from="#T4" to="#T7">-1S</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e37 #d1e42" ana="#NP #POSS"/>
                <span type="pos" target="#d1e38 #d1e43" ana="#N"/>
@@ -155,7 +145,6 @@
                <span type="person" target="#d1e40 #d1e50" ana="#1PERS"/>
                <span type="number" target="#d1e40 #d1e50" ana="#SG"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e38 #d1e43"
@@ -169,7 +158,6 @@
                      target="#d1e38 #d1e43"
                      corresp="http://dbpedia.org/resource/Family"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e37 #d1e42" xml:lang="en">my mother</span>
                <span target="#d1e37 #d1e42" xml:lang="es">mi madre</span>

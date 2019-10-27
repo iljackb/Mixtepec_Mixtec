@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -52,7 +52,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -121,29 +120,20 @@
             <when xml:id="T8" interval="1.38"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e37" n="1" start="0" end="1.65" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e38"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#"
+               xml:id="d1e37"
+               n="1"
+               start="0"
+               end="1.65"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e38" notation="orth" type="phrase">
                   <w xml:id="d1e39" synch="#T1">saa</w>
                   <w xml:id="d1e41" synch="#T4">tsaa</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e43"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e44" synch="#T1">
-                     <c>s</c>
-                     <c>a:</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e43" notation="ipa" type="phrase">
+                  <w xml:id="d1e44" synch="#T1">sa:<m xml:id="d1e155">↘</m>
                   </w>
-                  <w xml:id="d1e51" synch="#T4">
-                     <c>ts</c>
-                     <c>a:</c>
-                     <c function="tone">↗↘</c>
+                  <w xml:id="d1e51" synch="#T4">tsa:<m xml:id="d1e162">↗↘</m>
                   </w>
                </seg>
             </u>
@@ -151,14 +141,11 @@
                <span from="#T1" to="#T7">N.bird</span>
                <span from="#T4" to="#T8">ADJ.new</span>
             </spanGrp>
-            
             <spanGrp type="gram">
-               <span type="pos" target="#d1e39 #d1e44" ana="#N"/>             
+               <span type="pos" target="#d1e39 #d1e44" ana="#N"/>
                <span type="pos" target="#d1e41 #d1e51" ana="#ADJ"/>
-               
                <span type="phrase" target="#d1e38 #d1e43" ana="#NP"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e39 #d1e44"
@@ -168,14 +155,11 @@
                      target="#d1e39 #d1e44"
                      corresp="http://dbpedia.org/resource/Animal"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span type="component" target="#d1e39 #d1e44" xml:lang="en">bird</span>
                <span type="component" target="#d1e39 #d1e44" xml:lang="es">pajaro</span>
-               
                <span type="component" target="#d1e41 #d1e51" xml:lang="en">new</span>
                <span type="component" target="#d1e41 #d1e51" xml:lang="es">nuevo</span>
-
                <span target="#d1e38 #d1e43" xml:lang="en">new bird</span>
                <span target="#d1e38 #d1e43" xml:lang="es">pajaro nuevo</span>
             </spanGrp>

@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -19,7 +19,8 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:body_part_relations_penis_legs_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:body_part_relations_penis_legs_01_02_TS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:body_part_relations_penis_legs_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
+                      url="soundfiles-gen:body_part_relations_penis_legs_01_02_TS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -138,11 +139,13 @@
             <when xml:id="T31" interval="6.67"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e62" n="2" start="3.75" end="6.92" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e63"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e62"
+               n="2"
+               start="3.75"
+               end="6.92"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e63" notation="orth">
                   <w xml:id="d1e64" synch="#T1">tisa</w>
                   <w xml:id="d1e66" synch="#T6">ku</w>
                   <w xml:id="d1e68" synch="#T9">ra</w>
@@ -152,51 +155,18 @@
                   <w xml:id="d1e74" synch="#T23">si'un</w>
                   <!-- neet to poin to inflection "-un" marking 2s.inf -->
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e76"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e77" synch="#T1">
-                     <c>t̪</c>
-                     <c>i</c>
-                     <c function="tone">˧</c>
-                     <c>s</c>
-                     <c>a</c>
-                     <c function="tone">˩</c>
+               <seg xml:lang="mix" xml:id="d1e76" notation="ipa">
+                  <w xml:id="d1e77" synch="#T1">t̪i<m xml:id="d1e183">˧</m>sa<m xml:id="d1e189">˩</m>
                   </w>
-                  <w xml:id="d1e90" synch="#T6">
-                     <c>ɣ</c>
-                     <c>u</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e90" synch="#T6">ɣu<m xml:id="d1e196">↗</m>
                   </w>
-                  <w xml:id="d1e97" synch="#T9">
-                     <c>r</c>
-                     <c>a</c>
-                     <c function="tone">∙</c>
+                  <w xml:id="d1e97" synch="#T9">ra<m xml:id="d1e203">∙</m>
                   </w>
-                  <w xml:id="d1e104" synch="#T12">
-                     <c>ĩ</c>
-                     <c>ŋ</c>
-                     <c>k̬</c>
-                     <c cert="low" xml:id="d1e105">ai</c>
-                     <!-- need to normalize transcriptions of diphthongs or is this ok where needed? (i.e. where duration too small to segment further w/o compromising tone alignment) -->
-                     <c function="tone">↘</c>
+                  <w xml:id="d1e104" synch="#T12">ĩŋk̬ai<!-- need to normalize transcriptions of diphthongs or is this ok where needed? (i.e. where duration too small to segment further w/o compromising tone alignment) --><m xml:id="d1e215">↘</m>
                   </w>
-                  <w xml:id="d1e115" synch="#T17">
-                     <c>m</c>
-                     <c>a</c>
-                     <c function="tone">˧</c>
-                     <c>ʔ</c>
-                     <c>ĩ</c>
-                     <c function="tone">∙</c>
+                  <w xml:id="d1e115" synch="#T17">ma<m xml:id="d1e222">˧</m>ʔĩ<m xml:id="d1e228">∙</m>
                   </w>
-                  <w xml:id="d1e128" synch="#T23">
-                     <c>s</c>
-                     <c>ĩ</c>
-                     <c function="tone">∙</c>
-                     <c>ʔ</c>
-                     <c xml:id="d1e129">ũ</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e128" synch="#T23">sĩ<m xml:id="d1e235">∙</m>ʔũ<m xml:id="d1e241">↗</m>
                      <!-- @synch with preceeding <c> -->
                   </w>
                </seg>
@@ -209,20 +179,19 @@
                <span from="#T17" to="#T23">ADPOS-CONFIG.middle</span>
                <span from="#T23" to="#T31">N.leg[2S-INF]</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e64 #d1e77" ana="#N"/>
                <span type="person" target="#d1e66 #d1e90" ana="#2PERS"/>
                <span type="number" target="#d1e66 #d1e90" ana="#SG"/>
-               <span type="register" target="#d1e66 #d1e90" ana="#INF"/>  
+               <span type="register" target="#d1e66 #d1e90" ana="#INF"/>
                <span type="pos" target="#d1e68 #d1e97" ana="#UNK" cert="low"/>
                <!-- FIGURE OUT FUNCTION & POS!! "ra"-->
                <span type="pos" target="#d1e70 #d1e104" ana="#COP #LOC"/>
-               <span type="person" target="#d1e105" ana="#3PERS"/>  
+               <span type="person" target="#d1e105" ana="#3PERS"/>
                <!-- HOW/WHERE TO POINT IN ORTH!? -->
-               <span type="number" target="#d1e105" ana="#SG"/>  
+               <span type="number" target="#d1e105" ana="#SG"/>
                <!-- HOW/WHERE TO POINT IN ORTH!? -->
-               <span type="register" target="#d1e105" ana="INF"/>  
+               <span type="register" target="#d1e105" ana="INF"/>
                <!-- HOW/WHERE TO POINT IN ORTH!? -->
                <span type="pos" target="#d1e72 #d1e115" ana="#ADPOS"/>
                <!-- ADPOS-CONFIG (ADD #CONFIG!?) -->
@@ -231,21 +200,18 @@
                <span type="number" target="#d1e129" ana="#SG"/>
                <span type="register" target="#d1e129" ana="#INF"/>
             </spanGrp>
-            
             <spanGrp type="semantics" cert="low">
                <span type="spatialRel" target="#d1e64 #d1e77" ana="#TR"/>
                <!-- add Zatlev's subcategorization-->
                <span type="spatialRel" target="#d1e74 #d1e128" ana="#LM"/>
                <!-- reconcile the terminology "spatial Rel" make distict from value of "domain"!! -->
                <!-- search domain!? Review literature!! -->
-               
                <span type="sense"
                      target="#d1e64 #d1e77"
                      corresp="http://dbpedia.org/resource/Penis"/>
                <span type="sense"
                      target="#d1e74 #d1e128"
                      corresp="http://dbpedia.org/resource/Leg"/>
-               
                <span type="domain"
                      target="#d1e64 #d1e77"
                      corresp="http://dbpedia.org/resource/Human_body"/>
@@ -253,20 +219,17 @@
                <span type="domain"
                      target="#d1e74 #d1e128"
                      corresp="http://dbpedia.org/resource/Human_body"/>
-               
                <span target="#d1e63 #d1e76"
                      type="domain"
-                     corresp="http://dbpedia.org/resource/Spatial_relation"> </span>
+                     corresp="http://dbpedia.org/resource/Spatial_relation"/>
                <!-- TAGGING SENTENCE -->
                <!-- TAG SENTENCE OR ONLY SPECIFIC ELEMENTS!?-->
                <!-- SHOULD THIS BE CALLED "FRAME" OR OTHER? -->
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e63 #d1e76" xml:lang="en">Your penis is between your legs</span>
                <span target="#d1e63 #d1e76" xml:lang="es">Tu pene está entre tus piernas</span>
             </spanGrp>
-            
          </annotationBlock>
       </body>
    </text>

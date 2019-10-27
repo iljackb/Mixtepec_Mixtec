@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -55,7 +55,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -122,39 +121,31 @@
             <when xml:id="T6" interval="0.76"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e35" n="1" start="0" end="0.76" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e36"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e35"
+               n="1"
+               start="0"
+               end="0.76"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e36" notation="orth">
                   <w xml:id="d1e37" synch="#T2">nchii</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e39"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e41" synch="#T2">
-                     <c>n</c>
-                     <c>ʤ</c>
-                     <c>iː</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e39" notation="ipa">
+                  <w xml:id="d1e41" synch="#T2">nʤiː<m xml:id="d1e156">˥</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T6">WH-LOC.where</span>
             </spanGrp>
-            
-           <spanGrp type="gram" cert="medium">
-              <span type="pos" target="#d1e37 #d1e41" ana="#WH #LOC"/>
-              <!-- usg: interrogative; -->
-           </spanGrp>
-            
+            <spanGrp type="gram" cert="medium">
+               <span type="pos" target="#d1e37 #d1e41" ana="#WH #LOC"/>
+               <!-- usg: interrogative; -->
+            </spanGrp>
             <spanGrp type="semantics">
                <span type="profile" target="#d1e37 #d1e41" ana="#LOC" cert="medium"/>
                <!-- need to reconcile this and method (using @ana) and normal method of tagging semantics as well as decide whether to keep the #LOC tag on "pos" also! -->
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e37 #d1e41"
                      xml:lang="en"

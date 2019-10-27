@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -19,7 +19,8 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:S_Q_where_did_Claudia_eat_02_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:S_Q_where_did_Claudia_eat_02_spkrTS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:S_Q_where_did_Claudia_eat_02_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
+                      url="soundfiles-gen:S_Q_where_did_Claudia_eat_02_spkrTS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -135,12 +136,13 @@
             <when xml:id="T20" interval="2.01"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e50" n="1" start="0" end="2.32" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e51"
-                    function="utterance"
-                    notation="orth"
-                    type="S">
+            <u who="#TS"
+               xml:id="d1e50"
+               n="1"
+               start="0"
+               end="2.32"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e51" notation="orth" type="S">
                   <pc>¿</pc>
                   <w xml:id="d1e52" synch="#T1">nchii</w>
                   <w xml:id="d1e54" synch="#T5">ntsi</w>
@@ -148,39 +150,14 @@
                   <w xml:id="d1e58" synch="#T14">Claudia</w>
                   <pc>?</pc>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e60"
-                    function="utterance"
-                    notation="ipa"
-                    type="S">
-                  <w xml:id="d1e61" synch="#T1">
-                     <c>n</c>
-                     <c>dʒ</c>
-                     <c>iː</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e60" notation="ipa" type="S">
+                  <w xml:id="d1e61" synch="#T1">ndʒiː<m xml:id="d1e181">˥</m>
                   </w>
-                  <w xml:id="d1e70" synch="#T5">
-                     <c>n</c>
-                     <c>ts</c>
-                     <c>i</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e70" synch="#T5">ntsi<m xml:id="d1e190">˩</m>
                   </w>
-                  <w xml:id="d1e79" synch="#T8">
-                     <c>ts</c>
-                     <c>ã</c>
-                     <c function="tone">˥</c>
-                     <c>ʔ</c>
-                     <c>ã</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e79" synch="#T8">tsã<m xml:id="d1e197">˥</m>ʔã<m xml:id="d1e203">˩</m>
                   </w>
-                  <w xml:id="d1e92" synch="#T14">
-                     <c>k</c>
-                     <c>l</c>
-                     <c>au</c>
-                     <c function="tone">˧</c>
-                     <c>d</c>
-                     <c>ia</c>
-                     <c function="tone">˥↘</c>
+                  <w xml:id="d1e92" synch="#T14">klau<m xml:id="d1e212">˧</m>dia<m xml:id="d1e218">˥↘</m>
                   </w>
                </seg>
             </u>
@@ -190,7 +167,6 @@
                <span from="#T8" to="#T14">V.eat</span>
                <span from="#T14" to="#T20">N-PROP.Claudia</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="sentence" target="#d1e51 #d1e60" ana="#Q #WH #LOC"/>
                <span type="pos" target="#d1e52 #d1e61" ana="#WH #LOC"/>

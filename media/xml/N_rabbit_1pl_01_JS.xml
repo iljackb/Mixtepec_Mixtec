@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -128,35 +127,20 @@
             <when xml:id="T11" interval="1.19"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e40" n="1" start="0" end="1.36" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e41"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#JS"
+               xml:id="d1e40"
+               n="1"
+               start="0"
+               end="1.36"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e41" notation="orth" type="phrase">
                   <w xml:id="d1e42" synch="#T1">salurru</w>
                   <w xml:id="d1e44" synch="#T8">ko</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e46"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e47" synch="#T1">
-                     <c>s</c>
-                     <c>a</c>
-                     <c function="tone">˥</c>
-                     <c>l</c>
-                     <c>uː</c>
-                     <c function="tone">˥ꜛ</c>
-                     <c>r</c>
-                     <c>u</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e46" notation="ipa" type="phrase">
+                  <w xml:id="d1e47" synch="#T1">sa<m xml:id="d1e163">˥</m>luː<m xml:id="d1e169">˥ꜛ</m>ru<m xml:id="d1e175">↘</m>
                   </w>
-                  <w xml:id="d1e66" synch="#T8">
-                     <c>ɣ</c>
-                     <c>o</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e66" synch="#T8">ɣo<m xml:id="d1e182">↗</m>
                   </w>
                </seg>
             </u>
@@ -164,18 +148,14 @@
                <span from="#T1" to="#T8">N.rabbit</span>
                <span from="#T8" to="#T11">1PL</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e41 #d1e46" ana="#NP #POSS"/>
-               
                <span type="pos" target="#d1e42 #d1e47" ana="#N"/>
-               
                <span type="pos" target="#d1e44 #d1e66" ana="#PTCL"/>
                <span type="person" target="#d1e44 #d1e66" ana="#1PERS"/>
                <span type="number" target="#d1e44 #d1e66" ana="#SG"/>
                <span type="exclusivity" target="#d1e44 #d1e66" ana="#EXCL"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e42 #d1e47"
@@ -185,7 +165,6 @@
                      target="#d1e42 #d1e47"
                      corresp="http://dbpedia.org/resource/Animal"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e41 #d1e46" xml:lang="en">our rabbit</span>
                <span target="#d1e41 #d1e46" xml:lang="es">nuestro conejo</span>

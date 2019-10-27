@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -116,38 +116,26 @@
             <when xml:id="T10" interval="0.74"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e39" n="1" start="0" end="0.91" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e39"
+               n="1"
+               start="0"
+               end="0.91"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e40" notation="orth">
                   <w xml:id="d1e41" synch="#T1">lakuku</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e44"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e45" synch="#T1">
-                     <c>l</c>
-                     <c>a</c>
-                     <c function="tone">˩</c>
-                     <c>k</c>
-                     <c>u</c>
-                     <c function="tone">˥</c>
-                     <c>k</c>
-                     <c>u</c>
-                     <c function="tone">˧˥</c>
+               <seg xml:lang="mix" xml:id="d1e44" notation="ipa">
+                  <w xml:id="d1e45" synch="#T1">la<m xml:id="d1e146">˩</m>ku<m xml:id="d1e152">˥</m>ku<m xml:id="d1e158">˧˥</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T10">N.mourning_dove</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e41 #d1e45" ana="#N"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e41 #d1e45"
@@ -165,7 +153,6 @@
                      corresp="http://dbpedia.org/resource/Category:Bird_genera">typeOf:Bird</span>
                 -->
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e41 #d1e45"
                      xml:lang="en"

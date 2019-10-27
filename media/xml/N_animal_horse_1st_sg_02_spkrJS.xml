@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -123,43 +122,30 @@
             <when xml:id="T6" interval="0.74"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e35" n="2" start="0" end="0.85" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e36"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
-                  <w xml:id="d1e37" synch="#T1">kit<c xml:id="d1e38">i̠</c>
-                  </w>
+            <u who="#JS"
+               xml:id="d1e35"
+               n="2"
+               start="0"
+               end="0.85"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e36" notation="orth" type="phrase">
+                  <w xml:id="d1e37" synch="#T1">kiti̠</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e39"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e40" synch="#T1">
-                     <c>k</c>
-                     <c>i</c>
-                     <c function="tone">↘</c>
-                     <c>t̪</c>
-                     <c xml:id="d1e41">iː</c>
-                     <c xml:id="d1e42" function="tone" synch="#d1e41">R_F</c>
+               <seg xml:lang="mix" xml:id="d1e39" notation="ipa" type="phrase">
+                  <w xml:id="d1e40" synch="#T1">ki<m xml:id="d1e158">↘</m>t̪iː<m xml:id="d1e42">R_F</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T6">N.animal-horse\1S</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e36 #d1e39" ana="#NP #POSS"/>
-               
                <span type="pos" target="#d1e37 #d1e40" ana="#N"/>
                <span type="morph" target="#d1e38 #d1e42" ana="#TONE"/>
                <span type="person" target="#d1e38 #d1e42" ana="#1PERS"/>
                <span type="number" target="#d1e38 #d1e42" ana="#SG"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      n="1"
@@ -172,7 +158,6 @@
                      cert="low"
                      corresp="http://dbpedia.org/resource/Living_being"/>
                <!-- need to confirm uri, dbpedia server down at time of annotation-->
-               
                <span type="sense"
                      n="2"
                      target="#d1e37 #d1e40"
@@ -183,11 +168,9 @@
                      target="#d1e37 #d1e40"
                      corresp="http://dbpedia.org/resource/Animal"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e36 #d1e39" n="1" xml:lang="en">my horse</span>
                <span target="#d1e36 #d1e39" n="1" xml:lang="es">mi caballo</span>
-               
                <span target="#d1e36 #d1e39" n="2" xml:lang="en">my animal</span>
                <span target="#d1e36 #d1e39" n="2" xml:lang="es">mi animal</span>
             </spanGrp>

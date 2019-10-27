@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -55,7 +55,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -126,46 +125,28 @@
             <when xml:id="T10" interval="0.78"/>
          </timeline>
          <annotationBlock>
-            <u n="1" start="0" end="0.78" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="orth"
-                    type="MWE">
+            <u who="#TS" n="1" start="0" end="0.78" xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e40" notation="orth" type="MWE">
                   <w xml:id="d1e41" synch="#T2">nchi</w>
                   <w xml:id="d1e43" synch="#T6">kii</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e45"
-                    function="utterance"
-                    notation="ipa"
-                    type="MWE">
-                  <w xml:id="d1e47" synch="#T2">
-                     <c>n</c>
-                     <c>ʤ</c>
-                     <c>i</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e45" notation="ipa" type="MWE">
+                  <w xml:id="d1e47" synch="#T2">nʤi<m xml:id="d1e162">↘</m>
                   </w>
-                  <w xml:id="d1e56" synch="#T6">
-                     <c>k</c>
-                     <c>i</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e56" synch="#T6">ki<m xml:id="d1e169">↗</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T10">WH-TEMP.when</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e40 #d1e47" ana="#ADVP #TEMP"/>
                <span type="" target="" ana=""/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="domain" target="#d1e40 #d1e47" ana="#TIME" corresp=""/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e40 #d1e47" xml:lang="en" corresp=""/>
                <span target="#d1e40 #d1e47" xml:lang="es" corresp=""/>

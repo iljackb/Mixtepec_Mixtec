@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -142,14 +142,14 @@
             <when xml:id="T26" interval="9.29"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e57"
+            <u who="#TS"
+               xml:id="d1e57"
                n="3"
                start="7.50"
                end="11.49"
                xml:lang="mix">
                <seg xml:lang="mix"
                     xml:id="d1e58"
-                    function="utterance"
                     notation="orth"
                     type="declarative">
                   <w xml:id="d1e59" synch="#T1">ii</w>
@@ -158,42 +158,14 @@
                   <!-- ask MIX expert! Should I have a 'yu' added in there?! -->
                   <w xml:id="d1e65" synch="#T16">michuni</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e67"
-                    function="utterance"
-                    notation="ipa"
-                    type="declarative">
-                  <w xml:id="d1e68" synch="#T1">
-                     <c>i</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e67" notation="ipa" type="declarative">
+                  <w xml:id="d1e68" synch="#T1">i<m xml:id="d1e183">↘</m>
                   </w>
-                  <w xml:id="d1e73" synch="#T3">
-                     <c>n</c>
-                     <c>d̪</c>
-                     <c>u</c>
-                     <c function="tone">˥</c>
-                     <c>ʔ</c>
-                     <c xml:id="d1e74">u</c>
-                     <c function="tone" xml:id="d1e75">L</c>
+                  <w xml:id="d1e73" synch="#T3">nd̪u<m xml:id="d1e192">˥</m>ʔu<m xml:id="d1e75">L</m>
                   </w>
-                  <w xml:id="d1e88" synch="#T10">
-                     <c>β</c>
-                     <c>ɛ</c>
-                     <c function="tone">˥</c>
-                     <c>ʔ</c>
-                     <c>e</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e88" synch="#T10">βɛ<m xml:id="d1e205">˥</m>ʔe<m xml:id="d1e211">˩</m>
                   </w>
-                  <w xml:id="d1e101" synch="#T16">
-                     <c>m</c>
-                     <c>i</c>
-                     <c function="tone">˩</c>
-                     <c>tʃ</c>
-                     <c>u</c>
-                     <c function="tone">∙</c>
-                     <c>n</c>
-                     <c>i</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e101" synch="#T16">mi<m xml:id="d1e218">˩</m>tʃu<m xml:id="d1e224">∙</m>ni<m xml:id="d1e230">↗</m>
                   </w>
                </seg>
             </u>
@@ -203,7 +175,7 @@
                <span from="#T10" to="#T16">N-LOC.home</span>
                <span from="#T16" to="#T26">ADV-TEMP.now</span>
             </spanGrp>
-            <spanGrp type="gram" cert="low">               <!-- how to mark 1ST PERSON on tone!?!? -->
+            <spanGrp type="gram" cert="low"><!-- how to mark 1ST PERSON on tone!?!? -->
                <span type="pos" target="#d1e59 #d1e68" ana="#UNK" cert="low"/>
                <!-- maybe some mood or aspectual marker -->
                <span type="pos" target="#d1e61 #d1e73" ana="#V"/>
@@ -211,26 +183,20 @@
                <!-- keep both in same @ana or make another cat for #LOC? -->
                <span type="pos" target="#d1e101 #d1e65" ana="#ADV #TEMP"/>
                <!-- keep both in same @ana or make another cat for #TEMP? -->
-
             </spanGrp>
             <spanGrp type="semantics">
                <span type="spatialRel" target="#d1e74 #d1e75" ana="#TR"/>
                <!-- add Zatlev's subcategorization-->
                <span type="spatialRel" target="#d1e63 #d1e88" ana="#LM"/>
             </spanGrp>
-            <spanGrp type="translation">
-            <!-- NO TRANSLATION FOR 'II' -->
-               
+            <spanGrp type="translation"><!-- NO TRANSLATION FOR 'II' -->
                <span target="#d1e61 #d1e73" xml:lang="en" cert="low">be at, sit</span>
                <!-- should I translate to/from lemma or inflected!? -->
                <span target="#d1e61 #d1e73" xml:lang="es">estar, sentar</span>
-               
                <span target="#d1e63 #d1e88" xml:lang="en">home</span>
                <span target="#d1e63 #d1e88" xml:lang="es">casa</span>
-               
                <span target="#d1e101 #d1e65" xml:lang="en">right now</span>
                <span target="#d1e101 #d1e65" xml:lang="es">ahora</span>
-               
                <span target="#d1e58 #d1e67" xml:lang="en">I'm at home right now</span>
                <!-- translation of full sentence (all child elements) -->
                <span target="#d1e58 #d1e67" xml:lang="es">Estoy a casa ahora</span>

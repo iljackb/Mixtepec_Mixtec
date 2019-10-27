@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -121,37 +120,30 @@
             <when xml:id="T4" interval="0.76"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e33" n="1" start="0" end="0.93" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e34"
-                    function="utterance"
-                    notation="orth">
+            <u who="#JS"
+               xml:id="d1e33"
+               n="1"
+               start="0"
+               end="0.93"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e34" notation="orth">
                   <w xml:id="d1e35" synch="#T1">niin</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e38" synch="#T1">
-                     <c>n</c>
-                     <c>ĩː</c>
-                     <c function="tone">↗</c>
+               <seg xml:lang="mix" xml:id="d1e37" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">nĩː<m xml:id="d1e154">↗</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T4">N.blood</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e35 #d1e38" ana="#N"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e35 #d1e38"
                      corresp="http://dbpedia.org/resource/Blood"/>
-               
                <!-- is_part of: -->
                <span type="domain"
                      target="#d1e35 #d1e38"
@@ -159,7 +151,6 @@
                      corresp="http://dbpedia.org/ontology/AnatomicalStructure"/>
                <!-- this is a different uri from other BPT concepts, I want it to be more directly defined as being correlated!!! -->
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e35 #d1e38" xml:lang="en">blood</span>
                <span target="#d1e35 #d1e38" xml:lang="es">sangre</span>

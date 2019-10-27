@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -120,35 +119,30 @@
             <when xml:id="T3" interval="0.61"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e32" n="1" start="0" end="0.64" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e33"
-                    function="utterance"
-                    notation="orth">
+            <u who="#JS"
+               xml:id="d1e32"
+               n="1"
+               start="0"
+               end="0.64"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e33" notation="orth">
                   <w xml:id="d1e34" synch="#T1">iin</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e36"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e37" synch="#T1">
-                     <c>ĩː</c>
-                     <c function="tone">↘↗</c>
+               <seg xml:lang="mix" xml:id="d1e36" notation="ipa">
+                  <w xml:id="d1e37" synch="#T1">ĩː<m xml:id="d1e151">↘↗</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T3">N.husband</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e34 #d1e37" ana="#N"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e34 #d1e37"
-                     corresp="http://dbpedia.org/resource/Husband"/>               
+                     corresp="http://dbpedia.org/resource/Husband"/>
                <span type="domain"
                      target="#d1e34 #d1e37"
                      corresp="http://dbpedia.org/resource/Family"/>
@@ -156,7 +150,6 @@
                      target="#d1e34 #d1e37"
                      corresp="http://dbpedia.org/resource/Marriage"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e34 #d1e37"
                      xml:lang="en"

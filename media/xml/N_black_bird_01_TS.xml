@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -117,33 +117,20 @@
             <when xml:id="T11" interval="1.00"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e40" n="1" start="0" end="1.15" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e41"
-                    function="utterance"
-                    notation="orth"
-                    type="compound">
+            <u who="#TS"
+               xml:id="d1e40"
+               n="1"
+               start="0"
+               end="1.15"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e41" notation="orth" type="compound">
                   <w xml:id="d1e42" synch="#T1">saa</w>
                   <w xml:id="d1e44" synch="#T4">ncha'i</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e46"
-                    function="utterance"
-                    notation="ipa"
-                    type="compound">
-                  <w xml:id="d1e47" synch="#T1">
-                     <c>s</c>
-                     <c>a:</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e46" notation="ipa" type="compound">
+                  <w xml:id="d1e47" synch="#T1">sa:<m xml:id="d1e149">↘</m>
                   </w>
-                  <w xml:id="d1e54" synch="#T4">
-                     <c>n</c>
-                     <c>ʤ</c>
-                     <c function="tone">˥</c>
-                     <c>a</c>
-                     <c>ʔ</c>
-                     <c>i</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e54" synch="#T4">nʤ<m xml:id="d1e156">˥</m>aʔi<m xml:id="d1e164">˩</m>
                   </w>
                </seg>
             </u>
@@ -151,11 +138,9 @@
                <span from="#T1" to="#T10">N.bird</span>
                <span from="#T4" to="#T11">ADJ.black</span>
             </spanGrp>
-            
             <spanGrp type="gram">
-               <span type="pos" target="#d1e41 #d1e46" ana="#N"/>             
+               <span type="pos" target="#d1e41 #d1e46" ana="#N"/>
             </spanGrp>
-            
             <!-- if wanted, can add a "decomposition" block and tag components as #N and #ADJ -->
             <spanGrp type="semantics">
                <span type="sense"
@@ -165,10 +150,8 @@
                <span type="domain"
                      target="#d1e41 #d1e46"
                      corresp="http://dbpedia.org/resource/Bird"/>
-          
             </spanGrp>
-            
-            <spanGrp type="translation">               
+            <spanGrp type="translation">
                <span target="#d1e41 #d1e46" xml:lang="en">blackbird</span>
                <span target="#d1e41 #d1e46" xml:lang="es">zanate</span>
             </spanGrp>

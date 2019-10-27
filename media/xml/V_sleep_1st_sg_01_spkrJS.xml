@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -127,56 +126,40 @@
             <when xml:id="T10" interval="0.77"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e39" n="1" start="0" end="0.79" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#JS"
+               xml:id="d1e39"
+               n="1"
+               start="0"
+               end="0.79"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e40" notation="orth" type="phrase">
                   <w xml:id="d1e41" synch="#T1">kixi</w>
                   <w xml:id="d1e43" synch="#T8">yu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e45"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e46" synch="#T1">
-                     <c>k</c>
-                     <c>i</c>
-                     <c function="tone">˥</c>
-                     <c>ʃ</c>
-                     <c>i</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e45" notation="ipa" type="phrase">
+                  <w xml:id="d1e46" synch="#T1">ki<m xml:id="d1e162">˥</m>ʃi<m xml:id="d1e168">↘</m>
                   </w>
-                  <w xml:id="d1e59" synch="#T8">
-                     <c>j</c>
-                     <c>u</c>
-                  </w>
+                  <w xml:id="d1e59" synch="#T8">ju</w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T8">V.sleep</span>
                <span from="#T8" to="#T10">-1S</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e41 #d1e46" ana="#V"/>
                <span type="aspect" target="#d1e41 #d1e46" ana="#INCMPL"/>
                <span type="pos" target="#d1e43 #d1e59" ana="#PTCL #ENCLT"/>
                <span type="person" target="#d1e43 #d1e59" ana="#1PERS"/>
                <span type="number" target="#d1e43 #d1e59" ana="#SG"/>
-               
                <span type="phrase" target="#d1e40 #d1e45" ana="#VP"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e41 #d1e46"
                      corresp="http://dbpedia.org/resource/Sleep"/>
                <!-- UNKOWN DOMAIN! BUT IT IS A UNIVERSAL FOR ANIMALS -->
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e40 #d1e45" xml:lang="en">I'm sleeping</span>
                <span target="#d1e40 #d1e45" xml:lang="es">Estoy durmiendo</span>

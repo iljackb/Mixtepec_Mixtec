@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -121,21 +120,18 @@
             <when xml:id="T4" interval="0.56"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e33" n="1" start="0" end="0.62" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e34"
-                    function="utterance"
-                    notation="orth">
+            <u who="#JS"
+               xml:id="d1e33"
+               n="1"
+               start="0"
+               end="0.62"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e34" notation="orth">
                   <w xml:id="d1e35" synch="#T1">in</w>
                   <!-- spelling not changed in source sound file -->
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e38" synch="#T1">
-                     <c>ĩː</c>
-                     <c function="tone">˧</c>
+               <seg xml:lang="mix" xml:id="d1e37" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">ĩː<m xml:id="d1e153">˧</m>
                      <!-- tone not  yet changed in source sound file -->
                   </w>
                </seg>
@@ -143,14 +139,12 @@
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T4">NUM.one</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" n="1" target="#d1e35 #d1e38" ana="#NUM"/>
                <span type="pos" n="2" target="#d1e35 #d1e38" ana="#ARTCL #INDEF"/>
                <span type="number" n="2" target="#d1e35 #d1e38" ana="#SG"/>
             </spanGrp>
-            
-            <spanGrp type="semantics"> 
+            <spanGrp type="semantics">
                <span type="sense"
                      n="1"
                      target="#d1e35 #d1e38"
@@ -160,7 +154,6 @@
                      target="#d1e35 #d1e38"
                      corresp="http://dbpedia.org/resource/Number"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e35 #d1e38"
                      n="1"
@@ -170,7 +163,6 @@
                      n="1"
                      xml:lang="es"
                      corresp="https://es.wiktionary.org/wiki/uno">uno</span>
-
                <span target="#d1e35 #d1e38"
                      n="2"
                      xml:lang="en"

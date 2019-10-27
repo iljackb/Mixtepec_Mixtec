@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -131,24 +131,17 @@
             <when xml:id="T21" interval="2.23"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e51" n="1" start="0" end="0.69" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e52"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e51"
+               n="1"
+               start="0"
+               end="0.69"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e52" notation="orth">
                   <w xml:id="d1e53" synch="#T1">kuñu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e55"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e56" synch="#T1">
-                     <c>k</c>
-                     <c>ũ</c>
-                     <c function="tone">↗</c>
-                     <c>ɲ</c>
-                     <c>ũ</c>
-                     <c function="tone">∙</c>
+               <seg xml:lang="mix" xml:id="d1e55" notation="ipa">
+                  <w xml:id="d1e56" synch="#T1">kũ<m xml:id="d1e163">↗</m>ɲũ<m xml:id="d1e169">∙</m>
                   </w>
                </seg>
             </u>
@@ -157,49 +150,39 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e73" n="2" start="0.69" end="1.54" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e74"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e73"
+               n="2"
+               start="0.69"
+               end="1.54"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e74" notation="orth">
                   <w xml:id="d1e75" synch="#T7">kuñu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e77"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e78" synch="#T7">
-                     <c>k</c>
-                     <c>ũ</c>
-                     <c function="tone">↗</c>
-                     <c>ɲ</c>
-                     <c>ũ</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e77" notation="ipa">
+                  <w xml:id="d1e78" synch="#T7">kũ<m xml:id="d1e185">↗</m>ɲũ<m xml:id="d1e191">↘</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T7" to="#T20">N.body</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e75 #d1e78" ana="#N"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      n="1"
                      target="#d1e75 #d1e78"
-                     corresp="http://dbpedia.org/resource/Human_body"/>           
+                     corresp="http://dbpedia.org/resource/Human_body"/>
                <span type="sense"
                      n="2"
                      target="#d1e75 #d1e78"
-                     corresp="http://dbpedia.org/resource/Muscle"/>         
+                     corresp="http://dbpedia.org/resource/Muscle"/>
                <span type="sense"
                      n="3"
                      target="#d1e75 #d1e78"
                      corresp="http://dbpedia.org/resource/Meat"/>
-                       
                <span type="domain"
                      n="1"
                      target="#d1e75 #d1e78"
@@ -209,18 +192,13 @@
                      n="2"
                      target="#d1e75 #d1e78"
                      corresp="http://dbpedia.org/resource/Anatomy"/>
-               
                <span type="domain"
                      n="3"
                      target="#d1e75 #d1e78"
                      corresp="http://dbpedia.org/resource/Food"/>
-               
                <!-- need semantic relations also!? i.e. (is_a) (part_of), etc...  -->
             </spanGrp>
-            
-            <spanGrp type="translation">
-               <!-- these are different concepts in spanish and english, should there be separate translations? -->
-               <!-- Do these need to formally point to the "sense" uri or is the @n att-value pair enough? -->
+            <spanGrp type="translation"><!-- these are different concepts in spanish and english, should there be separate translations? --><!-- Do these need to formally point to the "sense" uri or is the @n att-value pair enough? -->
                <span target="#d1e75 #d1e78"
                      n="1"
                      xml:lang="en"
@@ -229,7 +207,6 @@
                      n="1"
                      xml:lang="es"
                      corresp="https://es.wiktionary.org/wiki/cuerpo">cuerpo</span>
-               
                <span target="#d1e75 #d1e78"
                      n="2"
                      xml:lang="en"
@@ -238,7 +215,6 @@
                      n="2"
                      xml:lang="es"
                      corresp="https://es.wiktionary.org/wiki/músculo">músculo</span>
-               
                <span target="#d1e75 #d1e78"
                      n="3"
                      xml:lang="en"
@@ -248,27 +224,19 @@
                      xml:lang="es"
                      corresp="https://es.wiktionary.org/wiki/carne">carne</span>
             </spanGrp>
-            
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e95" n="3" start="1.54" end="2.38" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e96"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e95"
+               n="3"
+               start="1.54"
+               end="2.38"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e96" notation="orth">
                   <w xml:id="d1e97" synch="#T13">kuñu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e99"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e100" synch="#T13">
-                     <c>k</c>
-                     <c>ũ</c>
-                     <c function="tone">↗</c>
-                     <c>ɲ</c>
-                     <c>ũ</c>
-                     <c function="tone">∙</c>
+               <seg xml:lang="mix" xml:id="d1e99" notation="ipa">
+                  <w xml:id="d1e100" synch="#T13">kũ<m xml:id="d1e233">↗</m>ɲũ<m xml:id="d1e239">∙</m>
                   </w>
                </seg>
             </u>

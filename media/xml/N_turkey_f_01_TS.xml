@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -113,36 +113,27 @@
             <when xml:id="T7" interval="0.67"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e36" n="1" start="0" end="0.85" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e36"
+               n="1"
+               start="0"
+               end="0.85"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e37" notation="orth">
                   <w xml:id="d1e38" synch="#T1">koni</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e41" synch="#T1">
-                     <c>k</c>
-                     <c>o</c>
-                     <c function="tone">˥</c>
-                     <c>n</c>
-                     <c>i</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e40" notation="ipa">
+                  <w xml:id="d1e41" synch="#T1">ko<m xml:id="d1e143">˥</m>ni<m xml:id="d1e149">˥</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T7">N.turkey_female</span>
             </spanGrp>
-
             <spanGrp type="gram">
                <span type="pos" target="#d1e38 #d1e41" ana="#N"/>
                <!-- sense 1 & 2 share pos info -->
             </spanGrp>
-
             <spanGrp type="semantics">
                <span type="sense"
                      n="1"
@@ -153,7 +144,6 @@
                      n="1"
                      target="#d1e38 #d1e41"
                      corresp="http://dbpedia.org/resource/Turkey"/>
-               
                <span type="sense"
                      n="2"
                      target="#d1e38 #d1e41"
@@ -170,7 +160,6 @@
                      corresp="http://dbpedia.org/resource/Animal"/>
                <!-- sense 1 & 2 share this domain infor -->
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e38 #d1e41" n="1" xml:lang="en" cert="unknown">female turkey</span>
                <!-- no translation equivalent to male turkey -->
@@ -178,7 +167,6 @@
                      n="1"
                      xml:lang="es"
                      corresp="https://es.wiktionary.org/wiki/pava">pava</span>
-               
                <span target="#d1e38 #d1e41" n="2" xml:lang="en" cert="unknown">turkey</span>
                <!-- sense 2 is for entire species -->
                <span target="#d1e38 #d1e41"

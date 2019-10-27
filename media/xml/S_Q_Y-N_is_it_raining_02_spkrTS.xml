@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -121,39 +121,25 @@
             <when xml:id="T11" interval="1.05"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e40" n="1" start="0" end="1.21" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e41"
-                    function="utterance"
-                    notation="orth"
-                    type="S">
+            <u who="#TS"
+               xml:id="d1e40"
+               n="1"
+               start="0"
+               end="1.21"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e41" notation="orth" type="S">
                   <pc>¿</pc>
                   <w xml:id="d1e42" synch="#T1">A</w>
                   <w xml:id="d1e44" synch="#T2">kuun</w>
                   <w xml:id="d1e46" synch="#T5">savi</w>
                   <pc>?</pc>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e48"
-                    function="utterance"
-                    notation="ipa"
-                    type="S">
-                  <w xml:id="d1e49" synch="#T1">
-                     <c>a</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e48" notation="ipa" type="S">
+                  <w xml:id="d1e49" synch="#T1">a<m xml:id="d1e158">˥</m>
                   </w>
-                  <w xml:id="d1e54" synch="#T2">
-                     <c>k</c>
-                     <c>ũː</c>
-                     <c function="tone">↘</c>
+                  <w xml:id="d1e54" synch="#T2">kũː<m xml:id="d1e165">↘</m>
                   </w>
-                  <w xml:id="d1e61" synch="#T5">
-                     <c>s</c>
-                     <c>a</c>
-                     <c function="tone">↘</c>
-                     <c>v</c>
-                     <c>i</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e61" synch="#T5">sa<m xml:id="d1e172">↘</m>vi<m xml:id="d1e178">↗</m>
                   </w>
                </seg>
             </u>
@@ -162,16 +148,13 @@
                <span from="#T2" to="#T5">COP-UNK</span>
                <span from="#T5" to="#T11">V.rain</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="sentence" target="#d1e41 #d1e48" ana="#Q #Y-N"/>
                <span type="pos" target="#d1e42 #d1e49" ana="#PTCL #Y-N"/>
                <span type="pos" target="#d1e44 #d1e54" ana="#V #INTRANS"/>
                <span type="pos" target="#d1e46 #d1e61" ana="#N"/>
             </spanGrp>
-            
-            <spanGrp type="semantics">
-               <!-- should I include both the verb "kuun" and rain "savi" or just rain!? -->
+            <spanGrp type="semantics"><!-- should I include both the verb "kuun" and rain "savi" or just rain!? -->
                <span type="sense"
                      target="#d1e46 #d1e61"
                      corresp="http://dbpedia.org/resource/Rain"/>
@@ -186,7 +169,6 @@
                <span target="#d1e44 #d1e46 #d1e54 #d1e61"
                      xml:lang="es"
                      corresp="https://es.wiktionary.org/wiki/llover">llover</span>
-               
                <span target="#d1e41 #d1e48" xml:lang="en">Is it raining?</span>
                <span target="#d1e41 #d1e48" xml:lang="es">¿Está lloviendo?</span>
             </spanGrp>

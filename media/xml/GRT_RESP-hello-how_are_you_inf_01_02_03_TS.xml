@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -19,7 +19,8 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:GRT_RESP-hello-how_are_you_inf_01_02_03_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:GRT_RESP-hello-how_are_you_inf_01_02_03_TS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:GRT_RESP-hello-how_are_you_inf_01_02_03_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
+                      url="soundfiles-gen:GRT_RESP-hello-how_are_you_inf_01_02_03_TS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -149,34 +150,23 @@
             <when xml:id="T34" interval="3.53"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e66" n="1" start="0" end="1.43" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e67"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e66"
+               n="1"
+               start="0"
+               end="1.43"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e67" notation="orth">
                   <w xml:id="d1e68" synch="#T1">va'a</w>
                   <w xml:id="d1e70" synch="#T6">yee</w>
                   <w xml:id="d1e72" synch="#T9">yu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e74"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e75" synch="#T1">
-                     <c>m</c>
-                     <c>b</c>
-                     <c>a̰ː</c>
-                     <c function="tone">∙</c>
+               <seg xml:lang="mix" xml:id="d1e74" notation="ipa">
+                  <w xml:id="d1e75" synch="#T1">mba̰ː<m xml:id="d1e191">∙</m>
                   </w>
-                  <w xml:id="d1e86" synch="#T6">
-                     <c>j</c>
-                     <c>eː</c>
-                     <c function="tone">˥</c>
+                  <w xml:id="d1e86" synch="#T6">jeː<m xml:id="d1e198">˥</m>
                   </w>
-                  <w xml:id="d1e91" synch="#T9">
-                     <c>j</c>
-                     <c>u</c>
-                     <c function="tone">↘</c>
+                  <w xml:id="d1e91" synch="#T9">ju<m xml:id="d1e205">↘</m>
                   </w>
                </seg>
             </u>
@@ -185,54 +175,35 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e102"
+            <u who="#TS"
+               xml:id="d1e102"
                n="2"
                start="1.43"
                end="2.64"
                xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e103"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+               <seg xml:lang="mix" xml:id="d1e103" notation="orth" type="phrase">
                   <w xml:id="d1e104" synch="#T11">va'a</w>
                   <w xml:id="d1e106" synch="#T14">yee</w>
                   <w xml:id="d1e108" synch="#T17">yu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e110"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e111" synch="#T11">
-                     <c>b</c>
-                     <c>a̰ː</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e110" notation="ipa" type="phrase">
+                  <w xml:id="d1e111" synch="#T11">ba̰ː<m xml:id="d1e225">˥</m>
                   </w>
-                  <w xml:id="d1e118" synch="#T14">
-                     <c>j</c>
-                     <c>eː</c>
-                     <c function="tone">↗↘</c>
+                  <w xml:id="d1e118" synch="#T14">jeː<m xml:id="d1e232">↗↘</m>
                   </w>
-                  <w xml:id="d1e125" synch="#T17">
-                     <c>j</c>
-                     <c>u</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e125" synch="#T17">ju<m xml:id="d1e239">˩</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T11" to="#T33">GRT-RSPNS.I_am_well</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="usage" target="#d1e103 #d1e110" ana="#RESP"/>
-               
                <span type="pos" target="#d1e108 #d1e125" ana="#PTCL"/>
                <span type="person" target="#d1e108 #d1e125" ana="#1PERS"/>
                <span type="number" target="#d1e108 #d1e125" ana="#SG"/>
             </spanGrp>
-            
             <spanGrp type="semantics" cert="low"><!-- HOW TO LABEL THE SPECIFIC PHRASE IT IS A RESPONSE TO!? -->
                <span type="domain"
                      target="#d1e103 #d1e110"
@@ -242,47 +213,29 @@
                      target="#d1e103 #d1e110"
                      corresp="http://dbpedia.org/resource/Greeting"/>
             </spanGrp>
-            
-            <spanGrp type="translation">
-               <!-- can add translation of components as @type="component" as desired-->
-               
+            <spanGrp type="translation"><!-- can add translation of components as @type="component" as desired-->
                <span target="#d1e103 #d1e110" xml:lang="en">I am well</span>
                <span target="#d1e103 #d1e110" xml:lang="es">Estoy bien</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e136"
+            <u who="#TS"
+               xml:id="d1e136"
                n="3"
                start="2.64"
                end="3.73"
                xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e137"
-                    function="utterance"
-                    notation="orth">
+               <seg xml:lang="mix" xml:id="d1e137" notation="orth">
                   <w xml:id="d1e138" synch="#T20">va'a</w>
                   <w xml:id="d1e140" synch="#T25">yee</w>
                   <w xml:id="d1e142" synch="#T29">yu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e144"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e145" synch="#T20">
-                     <c>m</c>
-                     <c>β</c>
-                     <c>a̰ː</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e144" notation="ipa">
+                  <w xml:id="d1e145" synch="#T20">mβa̰ː<m xml:id="d1e277">↘</m>
                   </w>
-                  <w xml:id="d1e158" synch="#T25">
-                     <c>j</c>
-                     <c>eː</c>
-                     <c function="tone">↗↘</c>
+                  <w xml:id="d1e158" synch="#T25">jeː<m xml:id="d1e284">↗↘</m>
                   </w>
-                  <w xml:id="d1e165" synch="#T29">
-                     <c>j</c>
-                     <c>u</c>
-                     <c function="tone">↘</c>
+                  <w xml:id="d1e165" synch="#T29">ju<m xml:id="d1e291">↘</m>
                   </w>
                </seg>
             </u>

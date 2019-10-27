@@ -6,9 +6,10 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Mixtec data collected from JS and TTS on <date>2017.05.28</date></title>
+            <title>Mixtec data collected from JS and TTS on <date>2017.05.28</date>
+            </title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -95,8 +96,7 @@
       </encodingDesc>
    </teiHeader>
    <text>
-      <body>
-         <!-- 
+      <body><!-- 
          (TTS)
 iií	dolor
 iiín	sal
@@ -113,71 +113,97 @@ Na’a ni katsi staa	“let’s eat”	(lit: “let’s go eat tortillas”)
 Kua’an kueni	vayan (go 2pl.form)
          -->
          <annotationBlock>
-           <u> 
-              <seg xml:id="d1e24" xml:lang="mix" notation="orth" cert="low" resp="#JS">
-               <w xml:id="d1e25">nchikaa</w>
-            </seg>
-           </u>
+            <u who="#TTS">
+               <seg xml:id="d1e24"
+                    xml:lang="mix"
+                    notation="orth"
+                    cert="low"
+                    resp="#JS">
+                  <w xml:id="d1e25">nchikaa</w>
+               </seg>
+            </u>
             <spanGrp type="translation">
-               <span target="#d1e25" xml:lang="en" corresp="https://en.wiktionary.org/wiki/plantain">plantain</span>
-               <span target="#d1e25" xml:lang="es" corresp="https://es.wiktionary.org/wiki/plátano">plátano</span>
+               <span target="#d1e25"
+                     xml:lang="en"
+                     corresp="https://en.wiktionary.org/wiki/plantain">plantain</span>
+               <span target="#d1e25"
+                     xml:lang="es"
+                     corresp="https://es.wiktionary.org/wiki/plátano">plátano</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#d1e25" ana="#N"/>
             </spanGrp>
             <spanGrp type="semantics">
-               <span type="sense" target="#d1e25" corresp="http://dbpedia.org/resource/Plantain"/>
+               <span type="sense"
+                     target="#d1e25"
+                     corresp="http://dbpedia.org/resource/Plantain"/>
                <!-- is_a:fruit -->
-               <span type="domain" target="#d1e25" corresp="http://dbpedia.org/resource/Fruit"/>
+               <span type="domain"
+                     target="#d1e25"
+                     corresp="http://dbpedia.org/resource/Fruit"/>
             </spanGrp>
-         <u>
-            <seg xml:id="d1e36" xml:lang="mix" notation="orth" type="S" cert="medium" resp="#JS">
-               <w xml:id="d1e37">na'a</w>
-               <w xml:id="d1e39">katsi</w>
-               <w xml:id="d1e44">ni</w>
-               <w xml:id="d1e43">staa</w>
-            </seg>
-         </u>
+            <u who="#TTS">
+               <seg xml:id="d1e36"
+                    xml:lang="mix"
+                    notation="orth"
+                    type="S"
+                    cert="medium"
+                    resp="#JS">
+                  <w xml:id="d1e37">na'a</w>
+                  <w xml:id="d1e39">katsi</w>
+                  <w xml:id="d1e44">ni</w>
+                  <w xml:id="d1e43">staa</w>
+               </seg>
+            </u>
             <spanGrp type="translation">
                <span target="#d1e37 #d1e39 #d1e44 #d1e43" xml:lang="en" type="phrase">Let's go eat (formal)</span>
                <span target="#d1e37 #d1e39 #d1e44 #d1e43" xml:lang="en" type="phrase">Let's eat</span>
                <span target="#d1e37 #d1e39 #d1e44 #d1e43" xml:lang="es" type="phrase">Vamos comer (formal)</span>
             </spanGrp>
-            <u>
-            <seg xml:id="d1e66" xml:lang="mix" notation="orth" type="S" resp="#JS">
-               <w xml:id="d1e67">na'a</w>
-               <w xml:id="d1e68">katsu</w>
-               <w xml:id="d1e69">staa</w>
-            </seg>
+            <u who="#TTS">
+               <seg xml:id="d1e66"
+                    xml:lang="mix"
+                    notation="orth"
+                    type="S"
+                    resp="#JS">
+                  <w xml:id="d1e67">na'a</w>
+                  <w xml:id="d1e68">katsu</w>
+                  <w xml:id="d1e69">staa</w>
+               </seg>
             </u>
             <spanGrp type="translation">
                <span target="#d1e67 #d1e68 #d1e69" xml:lang="en" type="phrase">Let's go eat</span>
                <span target="#d1e67 #d1e68 #d1e69" xml:lang="en" type="phrase">Let's eat</span>
                <span target="#d1e67 #d1e68 #d1e69" xml:lang="es" type="phrase">Vamos comer</span>
             </spanGrp>
-            <u>
-            <seg xml:id="d1e54" xml:lang="mix" notation="orth" resp="#JS #TTS">
-               <w xml:id="d1e55">kua'an</w>
-               <w xml:id="d1e57">kueni</w>
-            </seg>
-            <spanGrp type="translation">
-               <span target="#d1e55 #d1e57" xml:lang="en" type="phrase">you are going</span>
-               <span target="#d1e55 #d1e57" xml:lang="es" cert="medium" type="phrase">Ustedes vayan</span>
-               <span target="#d1e55 #d1e57" xml:lang="es" cert="medium" type="phrase">Ustedes están indo</span>
-            </spanGrp>
-            <spanGrp type="gram">
-               <span type="phrase" target="#d1e54" ana="#VP #MTN"/>
-               <span type="pos" target="#d1e55" ana="#V #MTN" cert="medium"/>
-               <!-- focus, type? -->
-               <span type="aspect" target="#d1e55" ana="#INCMPL"/>
-               <span type="pos" target="#d1e57" ana="#PTCL #HON"/>
-               <span type="person" target="#d1e57" ana="#2PERS"/>
-               <span type="number" target="#d1e57" ana="#PL"/>
-               <span type="register" target="#d1e57" ana="#FORM"/>
-            </spanGrp>
+            <u who="#TTS">
+               <seg xml:id="d1e54" xml:lang="mix" notation="orth" resp="#JS #TTS">
+                  <w xml:id="d1e55">kua'an</w>
+                  <w xml:id="d1e57">kueni</w>
+               </seg>
+               <spanGrp type="translation">
+                  <span target="#d1e55 #d1e57" xml:lang="en" type="phrase">you are going</span>
+                  <span target="#d1e55 #d1e57"
+                        xml:lang="es"
+                        cert="medium"
+                        type="phrase">Ustedes vayan</span>
+                  <span target="#d1e55 #d1e57"
+                        xml:lang="es"
+                        cert="medium"
+                        type="phrase">Ustedes están indo</span>
+               </spanGrp>
+               <spanGrp type="gram">
+                  <span type="phrase" target="#d1e54" ana="#VP #MTN"/>
+                  <span type="pos" target="#d1e55" ana="#V #MTN" cert="medium"/>
+                  <!-- focus, type? -->
+                  <span type="aspect" target="#d1e55" ana="#INCMPL"/>
+                  <span type="pos" target="#d1e57" ana="#PTCL #HON"/>
+                  <span type="person" target="#d1e57" ana="#2PERS"/>
+                  <span type="number" target="#d1e57" ana="#PL"/>
+                  <span type="register" target="#d1e57" ana="#FORM"/>
+               </spanGrp>
             </u>
          </annotationBlock>
-         
       </body>
    </text>
 </TEI>

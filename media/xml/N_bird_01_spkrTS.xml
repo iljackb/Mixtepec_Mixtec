@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -110,32 +110,26 @@
             <when xml:id="T4" interval="0.53"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e33" n="1" start="0" end="0.60" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e34"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e33"
+               n="1"
+               start="0"
+               end="0.60"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e34" notation="orth">
                   <w xml:id="d1e35" synch="#T1">saa</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e38" synch="#T1">
-                     <c>s</c>
-                     <c>aː</c>
-                     <c function="tone" cert="low">L</c>
+               <seg xml:lang="mix" xml:id="d1e37" notation="ipa">
+                  <w xml:id="d1e38" synch="#T1">saː<m xml:id="d1e140">L</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T4">N.bird</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e35 #d1e38" ana="#N"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e35 #d1e38"
@@ -145,7 +139,6 @@
                      target="#d1e35 #d1e38"
                      corresp="http://dbpedia.org/resource/Animal"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e35 #d1e38" xml:lang="en">bird</span>
                <span target="#d1e35 #d1e38" xml:lang="es">pajaro</span>

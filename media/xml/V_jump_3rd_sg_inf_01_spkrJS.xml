@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -125,35 +124,24 @@
             <when xml:id="T8" interval="0.59"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e37" n="1" start="0" end="0.74" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e38"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#JS"
+               xml:id="d1e37"
+               n="1"
+               start="0"
+               end="0.74"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e38" notation="orth" type="phrase">
                   <w xml:id="d1e39" synch="#T1">kant<m xml:id="d1e40">i</m>
                   </w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e41"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e42" synch="#T1">
-                     <c>kʰ</c>
-                     <c>a</c>
-                     <c function="tone">˧</c>
-                     <c>n</c>
-                     <c>d̪</c>
-                     <c xml:id="d1e43">i</c>
-                     <c xml:id="d1e44" function="tone" synch="#d1e43">F</c>
+               <seg xml:lang="mix" xml:id="d1e41" notation="ipa" type="phrase">
+                  <w xml:id="d1e42" synch="#T1">kʰa<m xml:id="d1e160">˧</m>nd̪i<m xml:id="d1e44">F</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T8">V.jump[3S-INF]</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e38 #d1e41" ana="#VP"/>
                <span type="pos" target="#d1e39 #d1e42" ana="#V"/>
@@ -162,9 +150,7 @@
                <span type="number" target="#d1e40 #d1e43" ana="#SG"/>
                <span type="register" target="#d1e40 #d1e43" ana="#INF"/>
             </spanGrp>
-            <spanGrp type="semantics">
-               <!-- sense: jump -->
-               <!-- typeOf: Motion -->
+            <spanGrp type="semantics"><!-- sense: jump --><!-- typeOf: Motion -->
                <span type="domain" target="#d1e38 #d1e41" ana="#MTN"/>
             </spanGrp>
             <spanGrp type="translation">

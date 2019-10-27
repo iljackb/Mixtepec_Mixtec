@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -124,35 +123,24 @@
             <when xml:id="T7" interval="0.94"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e36" n="1" start="0" end="1.04" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#JS"
+               xml:id="d1e36"
+               n="1"
+               start="0"
+               end="1.04"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e37" notation="orth" type="phrase">
                   <w xml:id="d1e38" synch="#T2">skuach<m xml:id="d1e39">i̠</m>
                   </w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e43" synch="#T2">
-                     <c>sk</c>
-                     <c>w</c>
-                     <c>a</c>
-                     <c function="tone">˧</c>
-                     <c>ʧ</c>
-                     <c xml:id="d1e44">i</c>
-                     <c xml:id="d1e45" function="tone" synch="#d1e44">F</c>
+               <seg xml:lang="mix" xml:id="d1e40" notation="ipa" type="phrase">
+                  <w xml:id="d1e43" synch="#T2">skwa<m xml:id="d1e161">˧</m>ʧi<m xml:id="d1e45">F</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T2" to="#T7">V.cut\1S</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e37 #d1e40" ana="#VP"/>
                <span type="pos" target="#d1e38 #d1e43" ana="#V"/>
@@ -160,7 +148,6 @@
                <span type="person" target="#d1e38 #d1e45" ana="#1PERS"/>
                <span type="number" target="#d1e38 #d1e45" ana="#SG"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e37 #d1e40" xml:lang="en">I cut</span>
                <span target="#d1e37 #d1e40" xml:lang="en">I'm cutting</span>

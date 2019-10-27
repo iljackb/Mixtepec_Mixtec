@@ -15,6 +15,12 @@
             <xsl:apply-templates select="node()|@*"/>
         </xsl:copy>
     </xsl:template>
+   
+    
+    <xsl:variable name="spkrInit">
+        <xsl:value-of select="//respStmt[2]/name/@xml:id"/>
+    </xsl:variable>
+
    <!--
     <xsl:template match="f[@name='zsampa']"/>
     
@@ -53,11 +59,23 @@
         </seg>
     </xsl:template>
       --> 
+    <xsl:template match="u" priority="1">
+        <xsl:copy>
+            <xsl:attribute name="who"><xsl:value-of select="concat('#',$spkrInit)"/></xsl:attribute>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+    </xsl:template>
+    
     <xsl:template match="c[@function]" priority="1">
         <m>
-            <xsl:attribute name="xml:id">
-                <xsl:value-of select="generate-id()"/>
-            </xsl:attribute>
+            <xsl:if test="@xml:id">
+                <xsl:copy-of select="@xml:id"/>
+            </xsl:if>
+            <xsl:if test="not(@xml:id)">
+                <xsl:attribute name="xml:id">
+                    <xsl:value-of select="generate-id()"/>
+                </xsl:attribute> 
+            </xsl:if>
             <xsl:value-of select="."/>
         </m>
     </xsl:template>
@@ -67,6 +85,11 @@
     
     <xsl:template match="@function"/>
     
+    <xsl:template match="//titleStmt/respStmt/name[text() = 'Jack Bowers']">
+        <name xml:id="JB">
+            <xsl:value-of select="."/>
+        </name>
+    </xsl:template>
     <!-- make variable for  <w> id! (if value of @synch the same on IPA and orth, get value of orth and put in @sameAs="#" on the IPA span-->
     
     

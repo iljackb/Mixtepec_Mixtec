@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -125,32 +125,20 @@
             <when xml:id="T10" interval="0.66"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e39" n="1" start="0" end="0.76" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="orth"
-                    type="phrase">
+            <u who="#TS"
+               xml:id="d1e39"
+               n="1"
+               start="0"
+               end="0.76"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e40" notation="orth" type="phrase">
                   <w xml:id="d1e41" synch="#T1">ka'an</w>
                   <w xml:id="d1e43" synch="#T7">yu</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e45"
-                    function="utterance"
-                    notation="ipa"
-                    type="phrase">
-                  <w xml:id="d1e46" synch="#T1">
-                     <c>k</c>
-                     <c>ã</c>
-                     <c function="tone">˥</c>
-                     <c>ʔ</c>
-                     <c>ã̰</c>
-                     <c function="tone">↘</c>
+               <seg xml:lang="mix" xml:id="d1e45" notation="ipa" type="phrase">
+                  <w xml:id="d1e46" synch="#T1">kã<m xml:id="d1e160">˥</m>ʔã̰<m xml:id="d1e166">↘</m>
                   </w>
-                  <w xml:id="d1e59" synch="#T7">
-                     <c>j</c>
-                     <c>u</c>
-                     <c function="tone">↘</c>
+                  <w xml:id="d1e59" synch="#T7">ju<m xml:id="d1e173">↘</m>
                   </w>
                </seg>
             </u>
@@ -158,7 +146,6 @@
                <span from="#T1" to="#T7">V.speak</span>
                <span from="#T7" to="#T10">-1S</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="phrase" target="#d1e40 #d1e45" ana="#VP"/>
                <span type="pos" cert="low" target="#d1e41 #d1e46" ana="#V #TRANS"/>
@@ -169,7 +156,6 @@
                <!-- THIS IS THE BASE FORM!! -->
                <!-- usg: colloc U = (a language) -->
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e40 #d1e45"
@@ -178,7 +164,6 @@
                      target="#d1e40 #d1e45"
                      corresp="http://dbpedia.org/resource/Language"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span xml:lang="en"
                      target="#d1e38 #d1e41"

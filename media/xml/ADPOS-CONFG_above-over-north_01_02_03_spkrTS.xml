@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -19,7 +20,8 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
+                      url="soundfiles-gen:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -136,30 +138,20 @@
             <when xml:id="T29" interval="2.36"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e65" n="1" start="0" end="0.75" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e66"
-                    function="utterance"
-                    notation="orth"><!-- or should I tag this: @type="lexicalItem" @subtype="compound" -->
+            <u who="#TS"
+               xml:id="d1e65"
+               n="1"
+               start="0"
+               end="0.75"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e66" notation="orth" type="term"><!-- or should I tag this: @type="lexicalItem" @subtype="compound" -->
                   <w xml:id="d1e67" synch="#T1">chi</w>
                   <w xml:id="d1e69" synch="#T4">Kuchi</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e71"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e72" synch="#T1">
-                     <c>tʃ</c>
-                     <c>i</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e71" notation="ipa" type="term">
+                  <w xml:id="d1e72" synch="#T1">tʃi<m xml:id="d1e172">˥</m>
                   </w>
-                  <w xml:id="d1e79" synch="#T4">
-                     <c>k</c>
-                     <c>u</c>
-                     <c function="tone">˩</c>
-                     <c>tʃ</c>
-                     <c>i</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e79" synch="#T4">ku<m xml:id="d1e179">˩</m>tʃi<m xml:id="d1e185">˩</m>
                   </w>
                </seg>
             </u>
@@ -168,67 +160,58 @@
             </spanGrp>
             <!-- also should be specified that (sense 1) needs to modify a landmark argument (lm) -->
             <spanGrp type="gram" n="1">
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" type="pos" ana="#ADPOS"/>
+               <span target="#d1e67 #d1e69" type="pos" ana="#ADPOS"/>
                <!-- these two  -->
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" type="pos" ana="#ADJ"/>
+               <span target="#d1e67 #d1e69" type="pos" ana="#ADJ"/>
                <!-- do I really need to make this distinction? -->
             </spanGrp>
             <spanGrp type="gram" n="2">
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" type="pos" ana="#ADPOS"/>
+               <span target="#d1e67 #d1e69" type="pos" ana="#ADPOS"/>
                <!-- these two  -->
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" type="pos" ana="#ADJ"/>
+               <span target="#d1e67 #d1e69" type="pos" ana="#ADJ"/>
             </spanGrp>
             <spanGrp type="semantics" n="1"><!-- above (lm) sense -->
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79"
+               <span target="#d1e67 #d1e69"
                      type="domain"
                      corresp="http://dbpedia.org/resource/Spatial_relation">SPATIAL RELATION</span>
             </spanGrp>
             <spanGrp type="semantics" n="2"><!-- north -->
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" type="domain">SPATIAL RELATION</span>
+               <span target="#d1e67 #d1e69" type="domain">SPATIAL RELATION</span>
                <!-- should i replace the term 'configuration' with 'spatial relation'? everywhere? -->
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" type="domain">CARDINAL DIRECTIONS</span>
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79"
+               <span target="#d1e67 #d1e69" type="domain">CARDINAL DIRECTIONS</span>
+               <span target="#d1e67 #d1e69"
                      corresp="http://dbpedia.org/resource/Geography"
                      type="domain">GEOGRAPHY</span>
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79"
+               <span target="#d1e67 #d1e69"
                      corresp="http://dbpedia.org/resource/North"
                      type="sense"/>
                <!-- should this have id? goes in <sense>-->
             </spanGrp>
             <spanGrp type="translation" n="1">
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" xml:lang="en">above, over</span>
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" xml:lang="es">encima de</span>
+               <span target="#d1e67 #d1e69" xml:lang="en" type="compound">above</span>
+               <span target="#d1e67 #d1e69" xml:lang="es" type="compound">encima de</span>
+               <span target="#d1e67 #d1e69" xml:lang="en" type="compound">over</span>
             </spanGrp>
             <spanGrp type="translation" n="2">
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" xml:lang="en">north</span>
-               <span target="#d1e67 #d1e69 #d1e72 #d1e79" xml:lang="es">norte</span>
+               <span target="#d1e67 #d1e69" xml:lang="en" type="compound">north</span>
+               <span target="#d1e67 #d1e69" xml:lang="es" type="compound">norte</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e96" n="2" start="0.75" end="1.62" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e97"
-                    function="utterance"
-                    notation="orth">
+            <u who="#TS"
+               xml:id="d1e96"
+               n="2"
+               start="0.75"
+               end="1.62"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e97" notation="orth">
                   <w xml:id="d1e98" synch="#T10">chi</w>
                   <w xml:id="d1e100" synch="#T13">Kuchi</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e102"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e103" synch="#T10">
-                     <c>tʃ</c>
-                     <c>i</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e102" notation="ipa">
+                  <w xml:id="d1e103" synch="#T10">tʃi<m xml:id="d1e238">˥</m>
                   </w>
-                  <w xml:id="d1e110" synch="#T13">
-                     <c>k</c>
-                     <c>u</c>
-                     <c function="tone">˩</c>
-                     <c>tʃ</c>
-                     <c>i</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e110" synch="#T13">ku<m xml:id="d1e245">˩</m>tʃi<m xml:id="d1e251">˩</m>
                   </w>
                </seg>
             </u>
@@ -237,34 +220,20 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u xml:id="d1e127"
+            <u who="#TS"
+               xml:id="d1e127"
                n="3"
                start="1.62"
                end="2.38"
                xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e128"
-                    function="utterance"
-                    notation="orth">
+               <seg xml:lang="mix" xml:id="d1e128" notation="orth">
                   <w xml:id="d1e129" synch="#T19">chi</w>
                   <w xml:id="d1e131" synch="#T22">Kuchi</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e133"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e134" synch="#T19">
-                     <c>tʃ</c>
-                     <c>i</c>
-                     <c function="tone">˥</c>
+               <seg xml:lang="mix" xml:id="d1e133" notation="ipa">
+                  <w xml:id="d1e134" synch="#T19">tʃi<m xml:id="d1e269">˥</m>
                   </w>
-                  <w xml:id="d1e141" synch="#T22">
-                     <c>k</c>
-                     <c>u</c>
-                     <c function="tone">˩</c>
-                     <c>tʃ</c>
-                     <c>i</c>
-                     <c function="tone">˩</c>
+                  <w xml:id="d1e141" synch="#T22">ku<m xml:id="d1e276">˩</m>tʃi<m xml:id="d1e282">˩</m>
                   </w>
                </seg>
             </u>

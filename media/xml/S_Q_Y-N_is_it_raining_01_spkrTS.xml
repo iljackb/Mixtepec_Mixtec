@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -122,39 +122,25 @@
             <when xml:id="T12" interval="0.94"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e42" n="1" start="0" end="1.09" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e43"
-                    function="utterance"
-                    notation="orth"
-                    type="S">
+            <u who="#TS"
+               xml:id="d1e42"
+               n="1"
+               start="0"
+               end="1.09"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e43" notation="orth" type="S">
                   <pc>¿</pc>
                   <w xml:id="d1e44" synch="#T1">A</w>
                   <w xml:id="d1e46" synch="#T3">kuun</w>
                   <w xml:id="d1e48" synch="#T6">savi</w>
                   <pc>?</pc>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e50"
-                    function="utterance"
-                    notation="ipa"
-                    type="S">
-                  <w xml:id="d1e51" synch="#T1">
-                     <c>a</c>
-                     <c function="tone">∙</c>
+               <seg xml:lang="mix" xml:id="d1e50" notation="ipa" type="S">
+                  <w xml:id="d1e51" synch="#T1">a<m xml:id="d1e160">∙</m>
                   </w>
-                  <w xml:id="d1e56" synch="#T3">
-                     <c>k</c>
-                     <c>ũː</c>
-                     <c function="tone">˥↘</c>
+                  <w xml:id="d1e56" synch="#T3">kũː<m xml:id="d1e167">˥↘</m>
                   </w>
-                  <w xml:id="d1e63" synch="#T6">
-                     <c>s</c>
-                     <c>a</c>
-                     <c function="tone">∙</c>
-                     <c>v</c>
-                     <c>i</c>
-                     <c function="tone">↗</c>
+                  <w xml:id="d1e63" synch="#T6">sa<m xml:id="d1e174">∙</m>vi<m xml:id="d1e180">↗</m>
                   </w>
                </seg>
             </u>
@@ -163,14 +149,11 @@
                <span from="#T3" to="#T6">COP-UNK</span>
                <span from="#T6" to="#T12">V.rain</span>
             </spanGrp>
-
             <spanGrp type="gram">
-               <span type="discourse" target="#d1e43 #d1e50" ana="#Q"/>             
+               <span type="discourse" target="#d1e43 #d1e50" ana="#Q"/>
                <span type="discourse" target="#d1e44 #d1e51" ana="#Y-N"/>
                <span type="pos" target="#d1e44 #d1e51" ana="#PTCL "/>
-               
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense" target="" corresp="" ana=""/>
                <span type="domain" target="" corresp="" ana=""/>

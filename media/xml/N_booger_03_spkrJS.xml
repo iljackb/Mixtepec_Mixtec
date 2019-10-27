@@ -5,7 +5,7 @@
          <titleStmt>
             <title>Mixtepec-Mixtec TEI output for Praat TextGrid Transcriptions</title>
             <respStmt>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
@@ -56,7 +56,6 @@
                </recording>
             </recordingStmt>
          </sourceDesc>
-         
       </fileDesc>
       <encodingDesc>
          <classDecl>
@@ -124,50 +123,38 @@
             <when xml:id="T7" interval="0.61"/>
          </timeline>
          <annotationBlock>
-            <u xml:id="d1e36" n="1" start="0" end="0.78" xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e37"
-                    function="utterance"
-                    notation="orth">
+            <u who="#JS"
+               xml:id="d1e36"
+               n="1"
+               start="0"
+               end="0.78"
+               xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e37" notation="orth">
                   <w xml:id="d1e38" synch="#T1">la'la</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e40"
-                    function="utterance"
-                    notation="ipa">
-                  <w xml:id="d1e41" synch="#T1">
-                     <c>l</c>
-                     <c>a</c>
-                     <c function="tone">˩</c>
-                     <c>ʔ</c>
-                     <c>l</c>
-                     <c>a</c>
-                     <c function="tone">˩</c>
+               <seg xml:lang="mix" xml:id="d1e40" notation="ipa">
+                  <w xml:id="d1e41" synch="#T1">la<m xml:id="d1e157">˩</m>ʔla<m xml:id="d1e165">˩</m>
                   </w>
                </seg>
             </u>
             <spanGrp type="praatGloss">
                <span from="#T1" to="#T7">N.booger-mucus</span>
             </spanGrp>
-            
             <spanGrp type="gram">
                <span type="pos" target="#d1e38 #d1e41" ana="#N"/>
             </spanGrp>
-            
             <spanGrp type="semantics">
                <span type="sense"
                      target="#d1e38 #d1e41"
-                     corresp="http://dbpedia.org/resource/Mucus"/>             
+                     corresp="http://dbpedia.org/resource/Mucus"/>
                <!-- is_a: -->
                <span type="domain"
                      target="#d1e38 #d1e41"
                      corresp="http://dbpedia.org/resource/Category:Body_fluids"/>
             </spanGrp>
-            
             <spanGrp type="translation">
                <span target="#d1e38 #d1e41" n="1" xml:lang="en">mucus</span>
                <span target="#d1e38 #d1e41" n="1" xml:lang="es">mucosidad</span>
-               
                <span target="#d1e38 #d1e41" n="2" xml:lang="en">booger</span>
                <span target="#d1e38 #d1e41" n="2" xml:lang="es">moco</span>
             </spanGrp>
