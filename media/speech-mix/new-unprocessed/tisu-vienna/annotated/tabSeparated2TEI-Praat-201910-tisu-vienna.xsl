@@ -244,7 +244,7 @@ end of element "data"
                             </xsl:variable>
                         
                             <annotationBlock>
-                                <u n="{current-group()[1]}" xml:id="{generate-id(.)}" who="{$speakerInit}"><!-- ID's ok-->
+                                <u n="{current-group()[1]}" xml:id="{generate-id(.)}" who="#{$speakerInit}"><!-- ID's ok-->
                                     <xsl:copy-of select="current-group()[1]/(@start, @end)"/>
                                     
                                     <!-- output content from "Orth" -->

@@ -15,13 +15,19 @@
             <xsl:apply-templates select="node()|@*"/>
         </xsl:copy>
     </xsl:template>
-   
+    
+    <xsl:template match="span/@type[.='S']">
+        <xsl:attribute name="type">sentence</xsl:attribute>
+    </xsl:template>
+    
+
+    <!--
     
     <xsl:variable name="spkrInit">
         <xsl:value-of select="//respStmt[2]/name/@xml:id"/>
     </xsl:variable>
 
-   <!--
+  
     <xsl:template match="f[@name='zsampa']"/>
     
     <xsl:template match="//cit[@type='translation']/quote">
@@ -58,7 +64,7 @@
             <xsl:copy-of select="node()|@*"/>
         </seg>
     </xsl:template>
-      --> 
+     
     <xsl:template match="u" priority="1">
         <xsl:copy>
             <xsl:attribute name="who"><xsl:value-of select="concat('#',$spkrInit)"/></xsl:attribute>
@@ -89,13 +95,13 @@
         <name xml:id="JB">
             <xsl:value-of select="."/>
         </name>
-    </xsl:template>
+    </xsl:template> --> 
     <!-- make variable for  <w> id! (if value of @synch the same on IPA and orth, get value of orth and put in @sameAs="#" on the IPA span-->
     
     
     
-      <!--  <xsl:template priority="2" match="c"/>
-   
+  <xsl:template priority="2" match="c"/>
+       <!--  
     <xsl:template match="w">
         <seg type="caption" xml:lang="mix">
             <w>
