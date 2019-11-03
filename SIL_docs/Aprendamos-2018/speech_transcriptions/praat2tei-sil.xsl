@@ -193,11 +193,9 @@ end of element "data"
                         <xsl:variable name="espSegID">
                            <xsl:value-of select="current-group()/seg[@xml:lang='es']/@xml:id"/>
                         </xsl:variable>
-                        <spanGrp type="translation">
+                        <spanGrp type="annotations">
                            <xsl:for-each select="current-group()/self::English">
-                              <span xml:lang="en" target="#{$mixSegID}">
-                                 <xsl:value-of select="."/>
-                              </span>
+                              <span xml:lang="en" target="#{$mixSegID}" type="translation"/>
                            </xsl:for-each>
                         </spanGrp>
                         <linkGrp type="translation">

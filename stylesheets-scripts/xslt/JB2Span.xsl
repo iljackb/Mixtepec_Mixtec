@@ -26,24 +26,38 @@
     </xsl:template>
     -->
     <!-- standard document format -->
-    <!--  -->
-    <xsl:template match="seg[@type='S']">
-            <xsl:copy>
-                <xsl:apply-templates select="@* | node()"/>
-            </xsl:copy>
-            <spanGrp type="translation">  
-                    <span target="#{@xml:id}" xml:lang="en"></span>
-                    <span target="#{@xml:id}" xml:lang="es"></span>
+    <!--   
+    <xsl:template match="u/seg[@type]">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+                           
+            <spanGrp type="annotations">  
+                <span type="translation" target="#{@xml:id}" xml:lang="en" ana="#"></span>
+                <span type="translation" target="#{@xml:id}" xml:lang="es" ana="#"></span>
                 
                 
                 <xsl:for-each select="w">
-                    <span target="#{@xml:id}" xml:lang="en"></span>
-                    <span target="#{@xml:id}" xml:lang="es"></span>
+                    <span type="translation" target="#{@xml:id}" xml:lang="en"></span>
+                    <span type="translation" target="#{@xml:id}" xml:lang="es"></span>
                 </xsl:for-each>
             </spanGrp>       
-        
+
     </xsl:template>
-    
+
+    <xsl:template match="spanGrp[@type='annotations']">
+        <xsl:copy>
+            <xsl:apply-templates select="@* | node()"/>
+        </xsl:copy>
+        <xsl:for-each select="span[@type='translation' and @xml:lang='es']">
+            <xsl:copy>
+                <xsl:attribute name="type">gram</xsl:attribute>
+                <xsl:attribute name="ana"></xsl:attribute>
+                <xsl:copy-of select="@*  except @type and @ana"/>
+
+            </xsl:copy>
+        </xsl:for-each>
+    </xsl:template>   -->
     <!--  
     <xsl:template match="seg" priority="1">
         <seg xml:id="{generate-id(.)}">
@@ -65,15 +79,58 @@
     
     -->
     
-    <xsl:template match="seg[@function='utterance']">
+    <xsl:template match="annotationBlock">
+        <xsl:for-each select="//u">
+            
+            <xsl:copy>
+                <xsl:apply-templates select="@* | node()"/>
+            </xsl:copy>
+            
+            <spanGrp type="annotations">  
+                    <xsl:for-each select="seg[@type='S' and @notation='orth']">    
+                        <xsl:variable name="orthID">
+                            <xsl:value-of select="@xml:id"/>
+                        </xsl:variable>                   
+                        <span type="translation" target="#{$orthID}" xml:lang="en" ana="#S"></span>
+                        <span type="translation" target="#{$orthID}" xml:lang="es" ana="#S"></span>       
+                    </xsl:for-each>
+                
+                <xsl:for-each select="seg[@notation='orth']/w">
+                    <xsl:variable name="wID">
+                        <xsl:value-of select="@xml:id"/>
+                    </xsl:variable>
+                    <span type="translation" target="#{$wID}" xml:lang="en"></span>
+                    <span type="translation" target="#{$wID}" xml:lang="es"></span>
+                    <span type="gram" target="#{$wID}" ana="#"/>            
+                </xsl:for-each>
+                
+                <xsl:for-each select="seg[@notation='ipa']/w/m">
+                    <xsl:variable name="mID">
+                        <xsl:value-of select="@xml:id"/>
+                    </xsl:variable>
+                    <span type="gram" target="#{$mID}" ana="#"/>
+                </xsl:for-each>
+            </spanGrp>     
+        </xsl:for-each>
+            
+    </xsl:template>
+      
+
+            
+    <!--  
+    <xsl:template match="//u[descendant::seg[@notation]]">
+        <xsl:variable name="orthID">
+            <xsl:value-of select="//u/seg[@notation='orth']/@xml:id"/>
+        </xsl:variable>
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
-        <spanGrp type="translation">  
-            <span target="#{@xml:id}" xml:lang="en"></span>
-            <span target="#{@xml:id}" xml:lang="es"></span>
-            
-            
+        <spanGrp type="annotations">  
+            <xsl:if test="//u/seg[@type='S']">
+                <span target="#{$orthID}" xml:lang="en"></span>
+                <span target="#{$orthID}" xml:lang="es"></span>       
+            </xsl:if>
+
             <xsl:for-each select="w">
                 <span target="#{@xml:id}" xml:lang="en"></span>
                 <span target="#{@xml:id}" xml:lang="es"></span>
@@ -81,7 +138,7 @@
         </spanGrp>       
         
     </xsl:template>
-
+-->
 <!-- For content in //list/item structures with dual (spanish-mixtec) content -->
     <!--  
     <xsl:template match="item">

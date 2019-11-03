@@ -25,7 +25,7 @@
         </annotationBlock>
     </xsl:template>
     -->
-    <xsl:template match="seg[@type='S']"><!-- Need more specific tagging to identify only those <seg>'s with spatial expressions!!-->
+    <xsl:template match="seg[@type][last()]"><!-- Need more specific tagging to identify only those <seg>'s with spatial expressions!!-->
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>

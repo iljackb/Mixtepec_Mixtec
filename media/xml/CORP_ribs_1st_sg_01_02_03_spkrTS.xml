@@ -172,7 +172,7 @@
                <span from="#T8" to="#T23">N.ribs\1S</span>
             </spanGrp>
             <spanGrp type="gram">
-               <span type="phrase" target="#d1e80 #d1e83" ana="#NP #POSS"/>
+               <span ana="#NP #POSS" target="#d1e80 #d1e83" type="translation"/>
                <span type="pos" target="#d1e81 #d1e84" ana="#N"/>
                <span type="morph" target="#d1e82 #d1e86" ana="#TONE"/>
                <span type="person" target="#d1e82 #d1e86" ana="#1PERS"/>
@@ -186,9 +186,12 @@
                      target="#d1e81 #d1e84"
                      corresp="http://dbpedia.org/resource/Anatomy"/>
             </spanGrp>
-            <spanGrp type="translation">
-               <span target="#d1e80 #d1e83" xml:lang="en">my ribs</span>
-               <span target="#d1e80 #d1e83" xml:lang="es" cert="medium">mis costillas</span>
+            <spanGrp type="annotations">
+               <span target="#d1e80 #d1e83" xml:lang="en" type="translation">my ribs</span>
+               <span target="#d1e80 #d1e83"
+                     xml:lang="es"
+                     cert="medium"
+                     type="translation">mis costillas</span>
                <!-- in general spanish doesn't put possesives on body parts, but should it be translated with posessive to indicated emphasis? -->
             </spanGrp>
          </annotationBlock>

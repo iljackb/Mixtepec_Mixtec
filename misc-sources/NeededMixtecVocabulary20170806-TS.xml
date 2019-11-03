@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Needed Mixtec Vocabulary (2017/08/07)</title>
+            <title>Needed Mixtec Vocabulary (2017/08/06)</title>
             <author>unknown author</author>
             <respStmt>
                <resp>Mixtec language consultant</resp>
@@ -14,32 +14,62 @@
                <name xml:id="JB">Jack Bowers</name>
             </respStmt>
          </titleStmt>
-         <editionStmt>
-            <edition>
-               <date>unknown date</date>
-            </edition>
-         </editionStmt>
          <publicationStmt>
             <p>unknown</p>
          </publicationStmt>
-         <sourceDesc>
-            <p>Converted from a Word document</p>
-         </sourceDesc>
+      <sourceDesc>
+         <ab>
+            Vocabulary collected on: <date>2017-08-06</date> at:
+            <location>
+               <address>
+                  <addrLine>12 Wohlebengasse</addrLine>
+               </address>
+               <affiliation>Austrian Academy of Sciences</affiliation>
+               <placeName>Vienna</placeName>
+               <country>Austria</country>
+            </location>
+         </ab>
+         <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using a list of desired vocab terms and phrases <lang>English</lang> and/or <lang>Spanish</lang>; and <term ana="#elicitation-contextualizing">Contextual elicitations</term> in which the speaker gave examples of the elicited terms in various sentence contexts.</ab>
+      </sourceDesc>
       </fileDesc>
       <encodingDesc>
-         <appInfo>
-            <application xml:id="docxtotei" ident="TEI_fromDOCX" version="2.15.0">
-               <label>DOCX to TEI</label>
-            </application>
-         </appInfo>
+         <classDecl>
+            <taxonomy>
+               <desc>Typology of linguistic speech events captured in recordings as per: <bibl>Himmelmann (<date>1998</date>)</bibl>. aka Typology of "naturalness".</desc>
+               <category xml:id="observed">
+                  <catDesc>
+                     <term>Observed communicative event:</term> the extent of external interference is limited to the knowledge of the speakers that the speech is being recorded or observed.</catDesc>  
+               </category>
+               <category xml:id="staged">
+                  <catDesc><term>Staged communicative event:</term> speech events realized for the purpose of recording (i.e. elicited speech). Events are not really being realized for the purpose of communication but for the benefit of the investigator.</catDesc>   
+                  <category xml:id="staged-free-topical">
+                     <catDesc><term>Staged-Topical:</term> Prompt to speak freely about topic</catDesc>
+                  </category>                  
+                  <category xml:id="staged-stimuli">
+                     <catDesc><term>Staged-Stimuli:</term> events based on stimuli to be described in speakers own words</catDesc>
+                  </category>
+               </category> 
+               <category xml:id="elicitation">
+                  <catDesc><term>Elicitation:</term> speech act for the sole purpose of linguistic investigation. (A new type of speech event for most communities).</catDesc>    
+                  <category xml:id="elicitation-contextualizing">
+                     <catDesc><term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for a item or construction as prompted by the investigator.</catDesc>
+                  </category>      
+                  <category xml:id="elicitation-translation">
+                     <catDesc><term>Translation-based elicitation:</term> native speaker asked to translate item from second language</catDesc>
+                  </category>          
+                  <category xml:id="elicitation-judgement">
+                     <catDesc><term>Judgement:</term> where native speakers are asked to judge the acceptibility of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>            <!-- 
+                 "kulisto ku" to  "kulisto kuu"
+                "cha ntsanu'u" to "chaa"
+                -->
       </encodingDesc>
-      <revisionDesc>
-         <listChange>
-            <change>
-               <date>2017-08-18T14:21:16Z</date>
-               <name>Jack Bowers</name>
-                <!-- changed capital letters -->
-                <!-- changed spelling of: 
+      
+               <!-- changed capital letters -->
+               <!-- changed spelling of: 
                     "nchi" (where) to "nchii";
                     "Saana inu" (forget) to "sana inu" (as per conventions)
                    "nishi" (how) to "nixi" (as per conventions)
@@ -60,9 +90,6 @@
                     Added last example "¿Nixi kachi ni?" (formal version of previous) needs confirmation w/expert
                     
                 -->
-            </change>
-         </listChange>
-      </revisionDesc>
    </teiHeader>
    <text>
       <body>
@@ -71,72 +98,82 @@
                <w xml:id="d1e45">ntsitu</w>
                <w xml:id="d1e47">titsi</w>
             </seg>
-            <spanGrp type="translation">
-                <span target="#d1e45 #d1e47" xml:lang="en" type="phrase">to be full</span>
-                <span target="#d1e45 #d1e47" xml:lang="es" type="phrase">estar lleno</span>
-            </spanGrp>      
+            <spanGrp type="annotations">
+               <span ana="#PHRS"
+                     target="#d1e45 #d1e47"
+                     xml:lang="en"
+                     type="translation">to be full</span>
+               <span ana="#PHRS"
+                     target="#d1e45 #d1e47"
+                     xml:lang="es"
+                     type="translation">estar lleno</span>
+            </spanGrp>
          </p>
          <p>
-             <seg xml:id="d1e54" xml:lang="mix">
-                 <w xml:id="d1e55">ntsitu</w>
-                 <w xml:id="d1e57">titsi</w>
-             </seg>
-             <spanGrp type="translation"><!--  -->
-                 <span target="#d1e55 #d1e57" xml:lang="en" type="inflected">I'm full</span>
-                 <span target="#d1e55 #d1e57" xml:lang="en" type="inflected">my stomach is full</span>
-                 <span target="#d1e55 #d1e57" xml:lang="en" type="note">low tone on final "i" in "titsi" for 1sg</span>
-                 <span target="#d1e55 #d1e57" xml:lang="en" type="note">literal translation</span>
-                 <span target="#d1e55 #d1e57" xml:lang="es" type="inflected">estoy lleno</span>
-               </spanGrp>       
+            <seg xml:id="d1e54" xml:lang="mix">
+               <w xml:id="d1e55">ntsitu</w>
+               <w xml:id="d1e57">titsi</w>
+            </seg>
+            <spanGrp type="annotations"><!--  -->
+               <span ana="#INFL"
+                     target="#d1e55 #d1e57"
+                     xml:lang="en"
+                     type="translation">I'm full</span>
+               <span ana="#INFL"
+                     target="#d1e55 #d1e57"
+                     xml:lang="en"
+                     type="translation">my stomach is full</span>
+               <span target="#d1e55 #d1e57" xml:lang="en" type="note">low tone on final "i" in "titsi" for 1sg</span>
+               <span target="#d1e55 #d1e57" xml:lang="en" type="note">literal translation</span>
+               <span ana="#INFL"
+                     target="#d1e55 #d1e57"
+                     xml:lang="es"
+                     type="translation">estoy lleno</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e68" xml:lang="mix">
-               <w xml:id="d1e69" cert="medium">kunau'u</w><!-- SIL spells it "kuna'a" -->
+               <w xml:id="d1e69" cert="medium">kunau'u</w>
+               <!-- SIL spells it "kuna'a" -->
             </seg>
-             <spanGrp type="translation">
-                 <span target="#d1e69" xml:lang="en">to remember</span>
-                 <span target="#d1e69" xml:lang="en" type="note">SIL spells it "kuna'a"</span>
-                 <span target="#d1e69" xml:lang="es">recordar</span>
-               </spanGrp>
-            
+            <spanGrp type="annotations">
+               <span target="#d1e69" xml:lang="en" type="translation">to remember</span>
+               <span target="#d1e69" xml:lang="en" type="note">SIL spells it "kuna'a"</span>
+               <span target="#d1e69" xml:lang="es" type="translation">recordar</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e78" xml:lang="mix" type="S">
                <w xml:id="d1e79">Kunau'u</w>
                <w xml:id="d1e81">nchíí</w>
-               <w xml:id="d1e83">kaku</w><!-- same as 'put down' -->
+               <w xml:id="d1e83">kaku</w>
                <w xml:id="d1e85">xu'un</w>
             </seg>
-             -
-                    <spanGrp type="translation">
-                        <span target="#d1e78" xml:lang="en" type="S">Remember where you left the money</span>
-                        <span target="#d1e78" xml:lang="es" type="S">Recuerda dónde pusiste el dinero.</span>
-                        
-                        <span xml:lang="en" target="#d1e79" type="inflected">remember</span>
-                        <span xml:lang="es" target="#d1e79" type="inflected">recuerda</span>
-                        
-                        <span xml:lang="es" target="#d1e81">where</span>
-                        <span xml:lang="es" target="#d1e81">dónde</span>
-                        
-                        <span xml:lang="es" target="#d1e83" type="inflected">you put</span>
-                        <span xml:lang="es" target="#d1e83" type="note">same as "put down"</span>
-                        <span xml:lang="es" target="#d1e83" type="inflected">pusiste</span>
-                        
-                        <span xml:lang="es" target="#d1e85">money</span>
-                        <span xml:lang="es" target="#d1e85">dinero</span>
-                    </spanGrp>
+            <spanGrp type="annotations">
+               <span ana="#S" target="#d1e78" xml:lang="en" type="translation">Remember where you left the money</span>
+               <span ana="#S" target="#d1e78" xml:lang="es" type="translation">Recuerda dónde pusiste el dinero.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e79" type="translation">remember</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e79" type="translation">recuerda</span>
+               <span xml:lang="es" target="#d1e81" type="translation">where</span>
+               <span xml:lang="es" target="#d1e81" type="translation">dónde</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e83" type="translation">you put</span>
+               <span xml:lang="es" target="#d1e83" type="note">same as "put down"</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e83" type="translation">pusiste</span>
+               <span xml:lang="es" target="#d1e85" type="translation">money</span>
+               <span xml:lang="es" target="#d1e85" type="translation">dinero</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e97" xml:lang="mix">
-               <w xml:id="d1e98" cert="medium">tsituninu</w><!-- understand (glossform - tsitunini?) -->
+               <w xml:id="d1e98" cert="medium">tsituninu</w>
+               <!-- understand (glossform - tsitunini?) -->
             </seg>
             : 
-                <spanGrp type="translation">
-                    <span target="#d1e98" xml:lang="en">to understand</span>
-                    <span target="#d1e98" xml:lang="en" type="note">should glossform be "tsitunini" or "tsitu nini"?</span>
-                    <span target="#d1e98" xml:lang="es">entender</span>
-               </spanGrp>
-            
+                <spanGrp type="annotations">
+               <span target="#d1e98" xml:lang="en" type="translation">to understand</span>
+               <span target="#d1e98" xml:lang="en" type="note">should glossform be "tsitunini" or "tsitu nini"?</span>
+               <span target="#d1e98" xml:lang="es" type="translation">entender</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e107" xml:lang="mix" type="S">
@@ -145,128 +182,146 @@
                <w xml:id="d1e112">nixi</w>
                <w xml:id="d1e114">ka'an</w>
                <w xml:id="d1e116">yu</w>
-            </seg> - 
-                
-                    <spanGrp type="translation">
-                        <span target="#d1e107" xml:lang="en" type="S" cert="medium">Do you understand how I am speaking?</span>
-                        <span target="#d1e107" xml:lang="en" type="S" cert="medium">Do you understand what I am saying?</span>
-                        <span target="#d1e107" xml:lang="es" type="S" cert="medium">Entiendes como estoy hablando?</span>
-                        
-                        <span xml:lang="en" target="#d1e110" type="inflected">you understand</span>
-                        <span xml:lang="en" target="#d1e110" type="inflected">entiendes</span>
-                        
-                        <span xml:lang="en" target="#d1e112">how</span>
-                        <span xml:lang="en" target="#d1e112">cómo</span>
-                        
-                        <span xml:lang="en" target="#d1e114 #d1e116" type="inflected">I'm saying</span>
-                        <span xml:lang="en" target="#d1e114 #d1e116" type="inflected">I'm speaking</span>
-                        <span xml:lang="en" target="#d1e114 #d1e116" type="inflected">estoy diciendo</span>
-                        <span xml:lang="en" target="#d1e114 #d1e116" type="inflected">estoy hablando</span>
-                    </spanGrp>
+            </seg> 
+            <spanGrp type="annotations">
+               <span ana="#S"
+                     target="#d1e107"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">Do you understand how I am speaking?</span>
+               <span ana="#S"
+                     target="#d1e107"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">Do you understand what I am saying?</span>
+               <span ana="#S"
+                     target="#d1e107"
+                     xml:lang="es"
+                     cert="medium"
+                     type="translation">Entiendes como estoy hablando?</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e110" type="translation">you understand</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e110" type="translation">entiendes</span>
+               <span xml:lang="en" target="#d1e112" type="translation">how</span>
+               <span xml:lang="en" target="#d1e112" type="translation">cómo</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e114 #d1e116"
+                     type="translation">I'm saying</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e114 #d1e116"
+                     type="translation">I'm speaking</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e114 #d1e116"
+                     type="translation">estoy diciendo</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e114 #d1e116"
+                     type="translation">estoy hablando</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e129" xml:lang="mix">
                <w xml:id="d1e130">sana</w>
-               <w xml:id="d1e132">ini</w><!-- inflects on last vowel -->
+               <w xml:id="d1e132">ini</w>
+               <!-- inflects on last vowel -->
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e129" xml:lang="en" type="compound">forget</span>
-                   <span target="#d1e129" xml:lang="es" type="compound">olividar</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#CMPND" target="#d1e129" xml:lang="en" type="translation">forget</span>
+               <span ana="#CMPND" target="#d1e129" xml:lang="es" type="translation">olividar</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e141" xml:lang="mix" type="S">
                <w xml:id="d1e142">Sana</w>
                <w xml:id="d1e144">ini</w>
-               <w xml:id="d1e146">yu</w><!-- is this right? -->
+               <w xml:id="d1e146">yu</w>
+               <!-- is this right? -->
                <w xml:id="d1e148">nixi</w>
                <w xml:id="d1e150">nanu</w>
             </seg> - 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e141" xml:lang="en" type="S">I forgot what your name is.</span>
-                   <span target="#d1e141" xml:lang="es" type="S">Olividé cómo te llamas.</span>
-                   
-                   <span xml:lang="en" target="#d1e142 #d1e144 #d1e146" type="inflected">I forgot</span>
-                   <span xml:lang="es" target="#d1e142 #d1e144 #d1e146" type="inflected">olividé</span>
-                   
-                   <span xml:lang="en" target="#d1e148"/>
-                   <span xml:lang="es" target="#d1e148"/>
-                   
-                   <span xml:lang="en" target="#d1e150" type="inflected">your name</span>
-                   <span xml:lang="es" target="#d1e150" type="inflected">te llamas</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e141" xml:lang="en" type="translation">I forgot what your name is.</span>
+               <span ana="#S" target="#d1e141" xml:lang="es" type="translation">Olividé cómo te llamas.</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e142 #d1e144 #d1e146"
+                     type="translation">I forgot</span>
+               <span ana="#INFL"
+                     xml:lang="es"
+                     target="#d1e142 #d1e144 #d1e146"
+                     type="translation">olividé</span>
+               <span xml:lang="en" target="#d1e148" type="translation"/>
+               <span xml:lang="es" target="#d1e148" type="translation"/>
+               <span ana="#INFL" xml:lang="en" target="#d1e150" type="translation">your name</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e150" type="translation">te llamas</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e159" xml:lang="mix">
                <w xml:id="d1e160">ntane'e</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e160" xml:lang="en">to pick up</span><!-- pick up (something) -->
-                   <span target="#d1e160" xml:lang="es">recoger</span><!-- recoger (algo) -->
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e160" xml:lang="en" type="translation">to pick up</span>
+               <!-- pick up (something) -->
+               <span target="#d1e160" xml:lang="es" type="translation">recoger</span>
+               <!-- recoger (algo) -->
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e172" xml:lang="mix" type="S">
-               <w xml:id="d1e173">Ntane'e</w><!-- cmnd -->
+               <w xml:id="d1e173">Ntane'e</w>
+               <!-- cmnd -->
                <w xml:id="d1e178">sa'mu</w>
             </seg> -       
                 
-               <spanGrp type="translation">
-                   <span target="#d1e172" xml:lang="en" type="S">Pick up your clothes.</span>
-                   <span target="#d1e172" xml:lang="es" type="S">Recoge tus ropas.</span>
-                   
-                   <span xml:lang="en" target="#d1e173" type="inflected">pick up</span>
-                   <span xml:lang="es" target="#d1e173" type="inflected">recoge</span>
-                   
-                   <span xml:lang="en" target="#d1e178" type="inflected">your clothes</span>
-                   <span xml:lang="es" target="#d1e178" type="inflected">tus ropas</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e172" xml:lang="en" type="translation">Pick up your clothes.</span>
+               <span ana="#S" target="#d1e172" xml:lang="es" type="translation">Recoge tus ropas.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e173" type="translation">pick up</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e173" type="translation">recoge</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e178" type="translation">your clothes</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e178" type="translation">tus ropas</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e187" xml:lang="mix">
-               <w xml:id="d1e188" cert="medium">kaki</w><!-- check infinitive!! -->
+               <w xml:id="d1e188" cert="medium">kaki</w>
+               <!-- check infinitive!! -->
             </seg>:
                 
-               <spanGrp type="translation">
-                   <span target="#d1e188" xml:lang="en">to put down</span>
-                   <span target="#d1e188" xml:lang="en" type="note">to put down (something)</span>
-                   <span target="#d1e188" xml:lang="es">dejar</span>
-                   <span target="#d1e188" xml:lang="es">colocar</span>
-                   <span target="#d1e188" xml:lang="es">poner</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e188" xml:lang="en" type="translation">to put down</span>
+               <span target="#d1e188" xml:lang="en" type="note">to put down (something)</span>
+               <span target="#d1e188" xml:lang="es" type="translation">dejar</span>
+               <span target="#d1e188" xml:lang="es" type="translation">colocar</span>
+               <span target="#d1e188" xml:lang="es" type="translation">poner</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e198" xml:lang="mix" type="S">
                <w xml:id="d1e199">Kaki</w>
-               <w xml:id="d1e201" cert="medium">sulu</w><!-- check spelling!! -->
-               <w xml:id="d1e205" cert="low">ntsa</w><!-- that!? -->
+               <w xml:id="d1e201" cert="medium">sulu</w>
+               <w xml:id="d1e205" cert="low">ntsa</w>  <!-- that!? -->
                <w xml:id="d1e207">nuu</w>
                <w xml:id="d1e209">sa'ma</w>
             </seg> - 
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e198" xml:lang="en" type="S">Put that baby on the clothes</span>
-                        <span target="#d1e198" xml:lang="es" type="S">Ponga este bebé su las ropas.</span>
-                        
-                        <span xml:lang="en" target="#d1e199">put down</span>
-                        <span xml:lang="es" target="#d1e199">ponga</span>
-                        
-                        <span xml:lang="en" target="#d1e205">?</span>
-                        <span xml:lang="es" target="#d1e205">?</span>
-                        
-                        <span xml:lang="en" target="#d1e205">on</span>
-                        <span xml:lang="es" target="#d1e205">su</span>
-                        
-                        <span xml:lang="en" target="#d1e209">clothes</span>
-                        <span xml:lang="es" target="#d1e209">ropas</span>                        
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e198" xml:lang="en" type="translation">Put that baby on the clothes</span>
+               <span ana="#S" target="#d1e198" xml:lang="es" type="translation">Ponga este bebé su las ropas.</span>
+               <span xml:lang="en" target="#d1e199" type="translation">put down</span>
+               <span xml:lang="es" target="#d1e199" type="translation">ponga</span>
+               <span xml:lang="en" target="#d1e205" type="translation">?</span>
+               <span xml:lang="es" target="#d1e205" type="translation">?</span>
+               <span xml:lang="en" target="#d1e205" type="translation">on</span>
+               <span xml:lang="es" target="#d1e205" type="translation">su</span>
+               <span xml:lang="en" target="#d1e209" type="translation">clothes</span>
+               <span xml:lang="es" target="#d1e209" type="translation">ropas</span>
             </spanGrp>
          </p>
          <p>
@@ -274,11 +329,10 @@
                <w xml:id="d1e223">tina</w>
                <w xml:id="d1e225">luu</w>
             </seg>
-                <spanGrp type="translation">
-                    <span target="#d1e222" xml:lang="en">puppy</span>
-                    <span target="#d1e222" xml:lang="es">cachorro</span>
-               </spanGrp>
-            
+            <spanGrp type="annotations">
+               <span target="#d1e222" xml:lang="en" type="translation">puppy</span>
+               <span target="#d1e222" xml:lang="es" type="translation">cachorro</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e234" xml:lang="mix" type="S">
@@ -290,34 +344,47 @@
                <w xml:id="d1e245">yucha</w>
             </seg> -
                 
-               <spanGrp type="translation">
-                   <span target="#d1e234" xml:lang="en" cert="medium" type="S">The puppy is running on the rivier.</span><!-- into the river? in the river? -->
-                   <span target="#d1e234" xml:lang="es" type="S">El cachorro corre por el río.</span>
-                   
-                   <span xml:lang="en" target="#d1e235 #d1e237" type="compound">puppy</span>
-                   <span xml:lang="es" target="#d1e235 #d1e237" type="compound">cachorro</span>
-                   
-                   <span xml:lang="en" target="#d1e239 #d1e241" type="inflected">is running</span>
-                   <span xml:lang="es" target="#d1e239 #d1e241" type="inflected">está corriendo</span>
-                   
-                   <span xml:lang="en" target="#d1e243">into</span>
-                   <span xml:lang="es" target="#d1e243">por</span>
-                   
-                   <span xml:lang="en" target="#d1e245">river</span>
-                   <span xml:lang="es" target="#d1e245">río</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S"
+                     target="#d1e234"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">The puppy is running on the rivier.</span>
+               <!-- into the river? in the river? -->
+               <span ana="#S" target="#d1e234" xml:lang="es" type="translation">El cachorro corre por el río.</span>
+               <span ana="#CMPND"
+                     xml:lang="en"
+                     target="#d1e235 #d1e237"
+                     type="translation">puppy</span>
+               <span ana="#CMPND"
+                     xml:lang="es"
+                     target="#d1e235 #d1e237"
+                     type="translation">cachorro</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e239 #d1e241"
+                     type="translation">is running</span>
+               <span ana="#INFL"
+                     xml:lang="es"
+                     target="#d1e239 #d1e241"
+                     type="translation">está corriendo</span>
+               <span xml:lang="en" target="#d1e243" type="translation">into</span>
+               <span xml:lang="es" target="#d1e243" type="translation">por</span>
+               <span xml:lang="en" target="#d1e245" type="translation">river</span>
+               <span xml:lang="es" target="#d1e245" type="translation">río</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e254" xml:lang="mix">
                <w xml:id="d1e255">ntasama</w>
             </seg>:
                 
-               <spanGrp type="translation">
-                   <span target="#d1e255" xml:lang="en">to change</span><!-- change (something) -->
-                   <span target="#d1e255" xml:lang="es">cambiar</span><!-- cambiar (algo) -->
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e255" xml:lang="en" type="translation">to change</span>
+               <!-- change (something) -->
+               <span target="#d1e255" xml:lang="es" type="translation">cambiar</span>
+               <!-- cambiar (algo) -->
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e264" xml:lang="mix" type="S">
@@ -326,18 +393,16 @@
                <w xml:id="d1e269">yo'o</w>
             </seg> - 
                 
-                <spanGrp type="translation">
-                    <span target="#d1e264" xml:lang="en" type="S">Change this money.</span>
-                    <span target="#d1e264" xml:lang="es" type="S">Cambias este dinero.</span>
-                    
-                    <span xml:lang="en" target="#d1e265" type="inflected">change</span>
-                    <span xml:lang="es" target="#d1e265" type="inflected">cambia</span><!-- cmnd -->
-                    
-                    <span target="#d1e267" xml:lang="en">money</span>
-                    <span target="#d1e267" xml:lang="es">dinero</span>
-                    
-                    <span target="#d1e269" xml:lang="en">this</span>
-                    <span target="#d1e269" xml:lang="es">este</span>
+                <spanGrp type="annotations">
+               <span ana="#S" target="#d1e264" xml:lang="en" type="translation">Change this money.</span>
+               <span ana="#S" target="#d1e264" xml:lang="es" type="translation">Cambias este dinero.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e265" type="translation">change</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e265" type="translation">cambia</span>
+               <!-- cmnd -->
+               <span target="#d1e267" xml:lang="en" type="translation">money</span>
+               <span target="#d1e267" xml:lang="es" type="translation">dinero</span>
+               <span target="#d1e269" xml:lang="en" type="translation">this</span>
+               <span target="#d1e269" xml:lang="es" type="translation">este</span>
             </spanGrp>
          </p>
          <p>
@@ -345,44 +410,39 @@
                <w xml:id="d1e283">nisa</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e283" xml:lang="en">how much?</span>
-                   <span target="#d1e283" xml:lang="es">quanto?</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e283" xml:lang="en" type="translation">how much?</span>
+               <span target="#d1e283" xml:lang="es" type="translation">quanto?</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e294" xml:lang="mix" type="S">
                <w xml:id="d1e295">Nisa</w>
-               <w xml:id="d1e299" cert="low">ya'vi</w><!-- ?? cost -->
+               <w xml:id="d1e299" cert="low">ya'vi</w>
+               <!-- ?? cost -->
                <w xml:id="d1e304">vilu</w>
                <w xml:id="d1e306">ka</w>
             </seg> -             
-               <spanGrp type="translation">
-                   <span target="#d1e294" xml:lang="en" type="S">How much is that cat?</span>
-                   <span target="#d1e294" xml:lang="es" type="S">¿Cuanto cuesta este gato?</span>
-                   
-                   <span target="#d1e295" xml:lang="en">how much</span>
-                   <span target="#d1e295" xml:lang="es">cuanto</span>
-                   
-                   <span target="#d1e299" xml:lang="en" type="inflected">costs</span>
-                   <span target="#d1e299" xml:lang="es" type="inflected">cuesta</span>
-                   
-                   <span target="#d1e304" xml:lang="en">cat</span>
-                   <span target="#d1e304" xml:lang="es">gato</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e294" xml:lang="en" type="translation">How much is that cat?</span>
+               <span ana="#S" target="#d1e294" xml:lang="es" type="translation">¿Cuanto cuesta este gato?</span>
+               <span target="#d1e295" xml:lang="en" type="translation">how much</span>
+               <span target="#d1e295" xml:lang="es" type="translation">cuanto</span>
+               <span ana="#INFL" target="#d1e299" xml:lang="en" type="translation">costs</span>
+               <span ana="#INFL" target="#d1e299" xml:lang="es" type="translation">cuesta</span>
+               <span target="#d1e304" xml:lang="en" type="translation">cat</span>
+               <span target="#d1e304" xml:lang="es" type="translation">gato</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e315" xml:lang="mix">
                <w xml:id="d1e316">ntakuaan</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e316" xml:lang="en">to buy</span>
-                   <span target="#d1e316" xml:lang="es">comprar</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e316" xml:lang="en" type="translation">to buy</span>
+               <span target="#d1e316" xml:lang="es" type="translation">comprar</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e325" xml:lang="mix" type="S">
@@ -391,12 +451,11 @@
                <w xml:id="d1e330">yo'o</w>
             </seg> - 
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e325" xml:lang="en" type="S">Buy these clothes.</span>
-                        <span target="#d1e325" xml:lang="es" type="S">Compra esta ropa.</span>
-                        
-                        <span xml:lang="en" target="#d1e326" type="inflected">buy</span>
-                        <span xml:lang="es" target="#d1e326" type="inflected">compra</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e325" xml:lang="en" type="translation">Buy these clothes.</span>
+               <span ana="#S" target="#d1e325" xml:lang="es" type="translation">Compra esta ropa.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e326" type="translation">buy</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e326" type="translation">compra</span>
             </spanGrp>
          </p>
          <p>
@@ -404,11 +463,10 @@
                <w xml:id="d1e344">cha'vi</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e344" xml:lang="en">to pay</span>
-                   <span target="#d1e344" xml:lang="es">pagar</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e344" xml:lang="en" type="translation">to pay</span>
+               <span target="#d1e344" xml:lang="es" type="translation">pagar</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e356" xml:lang="mix" type="S">
@@ -417,22 +475,18 @@
                <w xml:id="d1e364">ve'e</w>
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e356" xml:lang="en" type="S">Pay for the house.</span>
-                        <span target="#d1e356" xml:lang="es" type="S">Paga por la casa.</span>
-                        
-                        <span xml:lang="en" target="#d1e357" type="inflected">pay</span>
-                        <span xml:lang="es" target="#d1e357" type="inflected">paga</span>
-                        
-                        <span xml:lang="en" target="#d1e357" type="phrase">pay for</span>
-                        <span xml:lang="en" target="#d1e357" type="note">collocate: "tsa'a" (foot)</span>
-                        <span xml:lang="es" target="#d1e357" type="phrase">paga por</span>
-                        
-                        <span target="#d1e362" xml:lang="en">for</span>
-                        <span target="#d1e362" xml:lang="es">por</span>
-                        
-                        <span target="#d1e364" xml:lang="en">house</span>
-                        <span target="#d1e364" xml:lang="es">casa</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e356" xml:lang="en" type="translation">Pay for the house.</span>
+               <span ana="#S" target="#d1e356" xml:lang="es" type="translation">Paga por la casa.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e357" type="translation">pay</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e357" type="translation">paga</span>
+               <span ana="#PHRS" xml:lang="en" target="#d1e357" type="translation">pay for</span>
+               <span xml:lang="en" target="#d1e357" type="note">collocate: "tsa'a" (foot)</span>
+               <span ana="#PHRS" xml:lang="es" target="#d1e357" type="translation">paga por</span>
+               <span target="#d1e362" xml:lang="en" type="translation">for</span>
+               <span target="#d1e362" xml:lang="es" type="translation">por</span>
+               <span target="#d1e364" xml:lang="en" type="translation">house</span>
+               <span target="#d1e364" xml:lang="es" type="translation">casa</span>
             </spanGrp>
          </p>
          <p>
@@ -440,11 +494,10 @@
                <w xml:id="d1e382">xiko</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e382" xml:lang="en">to sell</span>
-                   <span target="#d1e382" xml:lang="es">vender</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e382" xml:lang="en" type="translation">to sell</span>
+               <span target="#d1e382" xml:lang="es" type="translation">vender</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e391" xml:lang="mix" type="S">
@@ -453,33 +506,28 @@
                <w xml:id="d1e396">ka'nu</w>
             </seg> - 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e392" xml:lang="en" type="S">Sell the big cow.</span>
-                   <span target="#d1e392" xml:lang="es" type="S">Vende la vaca grande.</span>
-                   
-                   <span target="#d1e392" xml:lang="en" type="inflected">sell</span>
-                   <span target="#d1e392" xml:lang="es" type="inflected">vende</span>
-                   
-                   <span target="#d1e394" xml:lang="en">cow</span>
-                   <span target="#d1e394" xml:lang="es">vaca</span>
-                   
-                   <span target="#d1e396" xml:lang="en">big</span>
-                   <span target="#d1e396" xml:lang="es">grande</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e392" xml:lang="en" type="translation">Sell the big cow.</span>
+               <span ana="#S" target="#d1e392" xml:lang="es" type="translation">Vende la vaca grande.</span>
+               <span ana="#INFL" target="#d1e392" xml:lang="en" type="translation">sell</span>
+               <span ana="#INFL" target="#d1e392" xml:lang="es" type="translation">vende</span>
+               <span target="#d1e394" xml:lang="en" type="translation">cow</span>
+               <span target="#d1e394" xml:lang="es" type="translation">vaca</span>
+               <span target="#d1e396" xml:lang="en" type="translation">big</span>
+               <span target="#d1e396" xml:lang="es" type="translation">grande</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e408" xml:lang="mix">
                <w xml:id="d1e409">sava'a</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e409" xml:lang="en">to cook</span>
-                   <span target="#d1e409" xml:lang="es">cocinar</span>
-                   <span target="#d1e409" xml:lang="en">to prepare</span>
-                   <span target="#d1e409" xml:lang="es">preparar</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e409" xml:lang="en" type="translation">to cook</span>
+               <span target="#d1e409" xml:lang="es" type="translation">cocinar</span>
+               <span target="#d1e409" xml:lang="en" type="translation">to prepare</span>
+               <span target="#d1e409" xml:lang="es" type="translation">preparar</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e421" xml:lang="mix" type="S">
@@ -488,34 +536,33 @@
                <w xml:id="d1e426">nakatso</w>
             </seg> --
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e421" xml:lang="en" type="S">Cook the chicken for us to eat</span>
-                        <span target="#d1e421" xml:lang="es" cert="medium" type="S">Cocina el pollo, para que comamos.</span>
-                        
-                        <span xml:lang="en" target="#d1e422" type="inflected">cook</span>
-                        <span xml:lang="es" target="#d1e422" type="inflected">cocina</span>
-                        
-                        <span target="#d1e424" xml:lang="en">chicken</span>
-                        <span target="#d1e424" xml:lang="es">pollo</span>
-                        
-                        <span xml:lang="en" target="#d1e426">for us to eat</span>
-                        <span xml:lang="es" target="#d1e426">para que comamos</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e421" xml:lang="en" type="translation">Cook the chicken for us to eat</span>
+               <span ana="#S"
+                     target="#d1e421"
+                     xml:lang="es"
+                     cert="medium"
+                     type="translation">Cocina el pollo, para que comamos.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e422" type="translation">cook</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e422" type="translation">cocina</span>
+               <span target="#d1e424" xml:lang="en" type="translation">chicken</span>
+               <span target="#d1e424" xml:lang="es" type="translation">pollo</span>
+               <span xml:lang="en" target="#d1e426" type="translation">for us to eat</span>
+               <span xml:lang="es" target="#d1e426" type="translation">para que comamos</span>
             </spanGrp>
-                
          </p>
          <p>
             <seg xml:id="d1e441" xml:lang="mix">
                <w xml:id="d1e442">saan</w>
             </seg>:
                 
-               <spanGrp type="translation">
-                   <span target="#d1e442" xml:lang="en">before</span>
-                   <span target="#d1e442" xml:lang="es">antes</span>
-               </spanGrp>
-               <spanGrp type="semantics">
-                   <span type="domain" target="#d1e442" ana="#TIME">Time</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e442" xml:lang="en" type="translation">before</span>
+               <span target="#d1e442" xml:lang="es" type="translation">antes</span>
+            </spanGrp>
+            <spanGrp type="semantics">
+               <span type="domain" target="#d1e442" ana="#TIME">Time</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e454" xml:lang="mix" type="S">
@@ -525,66 +572,97 @@
                <w xml:id="d1e461">Ncho'o</w>
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e454" xml:lang="en" resp="#TS" type="S">Before I lived in Puebla</span>
-                        <span xml:lang="en" target="#d1e454" resp="#JB" type="S">I used to live in Puebla</span>
-                        <span target="#d1e454" xml:lang="es" type="S">Antes, yo viviá en Puebla.</span>
-                        
-                        <span xml:lang="en" target="#d1e455">before</span>
-                        <span xml:lang="es" target="#d1e455">antes</span>
-                        
-                         <span xml:lang="en" target="#d1e457" type="inflected">I lived</span>
-                        <span xml:lang="es" target="#d1e457" type="inflected">yo vivía</span>
-                        
-                        <span xml:lang="en" target="#d1e459 #d1e461" type="compound">Puebla</span>
-                        <span xml:lang="es" target="#d1e459 #d1e461" type="compound">Puebla</span>
-                        
+                    <spanGrp type="annotations">
+               <span ana="#S"
+                     target="#d1e454"
+                     xml:lang="en"
+                     resp="#TS"
+                     type="translation">Before I lived in Puebla</span>
+               <span ana="#S"
+                     xml:lang="en"
+                     target="#d1e454"
+                     resp="#JB"
+                     type="translation">I used to live in Puebla</span>
+               <span ana="#S" target="#d1e454" xml:lang="es" type="translation">Antes, yo viviá en Puebla.</span>
+               <span xml:lang="en" target="#d1e455" type="translation">before</span>
+               <span xml:lang="es" target="#d1e455" type="translation">antes</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e457" type="translation">I lived</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e457" type="translation">yo vivía</span>
+               <span ana="#CMPND"
+                     xml:lang="en"
+                     target="#d1e459 #d1e461"
+                     type="translation">Puebla</span>
+               <span ana="#CMPND"
+                     xml:lang="es"
+                     target="#d1e459 #d1e461"
+                     type="translation">Puebla</span>
             </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e477" xml:lang="mix">
-               <w xml:id="d1e478">takaa</w><!-- JB: used with "kaa" maybe should be "takaa (U) kaa" -->
-                <w xml:id="d1e480">kaa</w>
+               <w xml:id="d1e478">takaa</w>
+               <!-- JB: used with "kaa" maybe should be "takaa (U) kaa" -->
+               <w xml:id="d1e480">kaa</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e478 #d1e480" xml:lang="en" type="phrase">to look like</span>
-                   <span target="#d1e478 #d1e480" xml:lang="en" cert="medium" type="phrase">be the same as</span>
-                   <span target="#d1e478 #d1e480" xml:lang="en" type="note">Used with "kaa"; maybe should be "takaa (U) kaa"</span>
-                   <span target="#d1e478 #d1e480" xml:lang="es" type="phrase">parecerse a</span>
-               </spanGrp>
-             
-             
+               <spanGrp type="annotations">
+               <span ana="#PHRS"
+                     target="#d1e478 #d1e480"
+                     xml:lang="en"
+                     type="translation">to look like</span>
+               <span ana="#PHRS"
+                     target="#d1e478 #d1e480"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">be the same as</span>
+               <span target="#d1e478 #d1e480" xml:lang="en" type="note">Used with "kaa"; maybe should be "takaa (U) kaa"</span>
+               <span ana="#PHRS"
+                     target="#d1e478 #d1e480"
+                     xml:lang="es"
+                     type="translation">parecerse a</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e487" xml:lang="mix" type="S">
                <w xml:id="d1e488">Takaa</w>
-               <w xml:id="d1e490">xito</w><!-- uncle -->
-               <w xml:id="d1e492">ku</w><!-- (poss) 2sg.inf -->
-               <w xml:id="d1e494">kau</w><!-- cop (equative) -u (2sg.inf) -->
+               <w xml:id="d1e490">xito</w>
+               <!-- uncle -->
+               <w xml:id="d1e492">ku</w>
+               <!-- (poss) 2sg.inf -->
+               <w xml:id="d1e494">kau</w>
+               <!-- cop (equative) -u (2sg.inf) -->
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e487" xml:lang="en" type="S">You look like your uncle.</span>
-                        <span target="#d1e487" xml:lang="es" type="S">Pareces a tu tío.</span>
-                        
-                        <span target="#d1e488 #d1e494" xml:lang="en" type="inflected">you look like</span>
-                        <span target="#d1e488 #d1e494" xml:lang="es" type="inflected">parecese a</span>
-                        
-                        <span target="#d1e490 #d1e492" xml:lang="en" type="inflected">your uncle</span>
-                        <span target="#d1e490 #d1e492" xml:lang="es" type="inflected">yu tío</span>
-                    </spanGrp>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e487" xml:lang="en" type="translation">You look like your uncle.</span>
+               <span ana="#S" target="#d1e487" xml:lang="es" type="translation">Pareces a tu tío.</span>
+               <span ana="#INFL"
+                     target="#d1e488 #d1e494"
+                     xml:lang="en"
+                     type="translation">you look like</span>
+               <span ana="#INFL"
+                     target="#d1e488 #d1e494"
+                     xml:lang="es"
+                     type="translation">parecese a</span>
+               <span ana="#INFL"
+                     target="#d1e490 #d1e492"
+                     xml:lang="en"
+                     type="translation">your uncle</span>
+               <span ana="#INFL"
+                     target="#d1e490 #d1e492"
+                     xml:lang="es"
+                     type="translation">yu tío</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e507" xml:lang="mix">
                <w xml:id="d1e508">vitsi</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e508" xml:lang="en">cold</span>
-                   <span target="#d1e508" xml:lang="es">frío</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e508" xml:lang="en" type="translation">cold</span>
+               <span target="#d1e508" xml:lang="es" type="translation">frío</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e517" xml:lang="mix" type="S">
@@ -596,33 +674,46 @@
                <w xml:id="d1e528">savi</w>
             </seg> -
                 
-               <spanGrp type="translation">
-                   <span target="#d1e517" xml:lang="en" type="S">It's very cold when it rains.</span>
-                   <span target="#d1e517" xml:lang="es" type="S">Hace muy frío quando llueve.</span>
-                   
-                   <span xml:lang="en" target="#d1e518 #d1e520 #d1e522" type="phrase">it is very cold</span>
-                   <span xml:lang="es" target="#d1e518 #d1e520 #d1e522" type="phrase">hace muy frío</span>
-                   
-                   <span xml:lang="en" target="#d1e524">when</span>
-                   <span xml:lang="es" target="#d1e524">quando</span>
-                   
-                   <span xml:lang="en" target="#d1e526 #d1e528" type="phrase">it rains</span>
-                   <span xml:lang="en" target="#d1e526 #d1e528" type="phrase">it's raining</span>
-                   <span xml:lang="es" target="#d1e526 #d1e528" type="phrase">llueve</span>
-                   <span xml:lang="es" target="#d1e526 #d1e528" type="phrase">está llueviendo</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e517" xml:lang="en" type="translation">It's very cold when it rains.</span>
+               <span ana="#S" target="#d1e517" xml:lang="es" type="translation">Hace muy frío quando llueve.</span>
+               <span ana="#PHRS"
+                     xml:lang="en"
+                     target="#d1e518 #d1e520 #d1e522"
+                     type="translation">it is very cold</span>
+               <span ana="#PHRS"
+                     xml:lang="es"
+                     target="#d1e518 #d1e520 #d1e522"
+                     type="translation">hace muy frío</span>
+               <span xml:lang="en" target="#d1e524" type="translation">when</span>
+               <span xml:lang="es" target="#d1e524" type="translation">quando</span>
+               <span ana="#PHRS"
+                     xml:lang="en"
+                     target="#d1e526 #d1e528"
+                     type="translation">it rains</span>
+               <span ana="#PHRS"
+                     xml:lang="en"
+                     target="#d1e526 #d1e528"
+                     type="translation">it's raining</span>
+               <span ana="#PHRS"
+                     xml:lang="es"
+                     target="#d1e526 #d1e528"
+                     type="translation">llueve</span>
+               <span ana="#PHRS"
+                     xml:lang="es"
+                     target="#d1e526 #d1e528"
+                     type="translation">está llueviendo</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e537" xml:lang="mix">
                <w xml:id="d1e538">kuntsitsi</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e538" xml:lang="en">to wear</span>
-                   <span target="#d1e538" xml:lang="es">traer</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e538" xml:lang="en" type="translation">to wear</span>
+               <span target="#d1e538" xml:lang="es" type="translation">traer</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e550" xml:lang="mix" type="S">
@@ -632,33 +723,29 @@
                <w xml:id="d1e559">yo'o</w>
             </seg> -
                 
-                    <spanGrp type="translation"> 
-                        <span target="#d1e550" xml:lang="en" type="S">Wear these big clothes.</span>
-                        <span target="#d1e550" xml:lang="es" type="S">Lleva estas ropas grandes.</span>
-                        
-                        <span target="#d1e551" xml:lang="en" type="inflected">wear</span>
-                        <span target="#d1e551" xml:lang="es" type="inflected">lleva</span>
-                        
-                        <span target="#d1e555" xml:lang="en">clothes</span>
-                        <span target="#d1e555" xml:lang="es">ropas</span>
-                        
-                        <span target="#d1e557" xml:lang="en">big</span>
-                        <span target="#d1e557" xml:lang="es">grande</span>
-                        
-                        <span target="#d1e559" xml:lang="en">these</span>
-                        <span target="#d1e559" xml:lang="es">estas</span>
-                    </spanGrp>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e550" xml:lang="en" type="translation">Wear these big clothes.</span>
+               <span ana="#S" target="#d1e550" xml:lang="es" type="translation">Lleva estas ropas grandes.</span>
+               <span ana="#INFL" target="#d1e551" xml:lang="en" type="translation">wear</span>
+               <span ana="#INFL" target="#d1e551" xml:lang="es" type="translation">lleva</span>
+               <span target="#d1e555" xml:lang="en" type="translation">clothes</span>
+               <span target="#d1e555" xml:lang="es" type="translation">ropas</span>
+               <span target="#d1e557" xml:lang="en" type="translation">big</span>
+               <span target="#d1e557" xml:lang="es" type="translation">grande</span>
+               <span target="#d1e559" xml:lang="en" type="translation">these</span>
+               <span target="#d1e559" xml:lang="es" type="translation">estas</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e572" xml:lang="mix">
                <w xml:id="d1e573">ixi</w>
             </seg>:
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e573" xml:lang="en">fur</span>
-                        <span target="#d1e573" xml:lang="es">pelo</span>
-                        <span target="#d1e573" xml:lang="es">lana</span>
-                        <span target="#d1e573" xml:lang="es">pelaje</span>
+                    <spanGrp type="annotations">
+               <span target="#d1e573" xml:lang="en" type="translation">fur</span>
+               <span target="#d1e573" xml:lang="es" type="translation">pelo</span>
+               <span target="#d1e573" xml:lang="es" type="translation">lana</span>
+               <span target="#d1e573" xml:lang="es" type="translation">pelaje</span>
             </spanGrp>”
          </p>
          <p>
@@ -666,30 +753,42 @@
                <w xml:id="d1e588">Ixi</w>
                <w xml:id="d1e590">ntikachi</w>
                <w xml:id="d1e592">ka</w>
-               <w xml:id="d1e594">va'i</w><!-- good (-i) -->
+               <w xml:id="d1e594">va'i</w>
+               <!-- good (-i) -->
                <w xml:id="d1e596">sa'a</w>
-                <w xml:id="d1e597">na</w>
+               <w xml:id="d1e597">na</w>
                <w xml:id="d1e598">sa'ma</w>
             </seg>
              -
-                    <spanGrp type="translation">
-                        <span target="#d1e587" xml:lang="en" type="S">The sheep's fur is good to make clothes with.</span>
-                        <span target="#d1e587" xml:lang="es" type="S">La lana de oveja es bueno para hacer ropas.</span>
-                        
-                        <span target="#d1e588 #d1e590" xml:lang="en" type="compound">wool</span>
-                        <span target="#d1e588 #d1e590" xml:lang="es" type="compound">lana</span>
-                        
-                        <span target="#d1e594" xml:lang="en">is good</span>
-                        <span target="#d1e594" xml:lang="es">es buena</span>
-                        
-                        <span target="#d1e596 #d1e597" xml:lang="en" type="inflected" cert="medium">they make</span>
-                        <span target="#d1e596 #d1e597" xml:lang="en" type="note" cert="medium">is this "na" for 'they' as in the inflection of the verb?</span>
-                        <span target="#d1e596 #d1e597" xml:lang="es" type="inflected">hacen</span>
-                        
-                        <span target="#d1e598" xml:lang="en">clothes</span>
-                        <span target="#d1e598" xml:lang="es">ropas</span>
-               </spanGrp>
-            
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e587" xml:lang="en" type="translation">The sheep's fur is good to make clothes with.</span>
+               <span ana="#S" target="#d1e587" xml:lang="es" type="translation">La lana de oveja es bueno para hacer ropas.</span>
+               <span ana="#CMPND"
+                     target="#d1e588 #d1e590"
+                     xml:lang="en"
+                     type="translation">wool</span>
+               <span ana="#CMPND"
+                     target="#d1e588 #d1e590"
+                     xml:lang="es"
+                     type="translation">lana</span>
+               <span target="#d1e594" xml:lang="en" type="translation">is good</span>
+               <span target="#d1e594" xml:lang="es" type="translation">es buena</span>
+               <span ana="#INFL"
+                     target="#d1e596 #d1e597"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">they make</span>
+               <span target="#d1e596 #d1e597"
+                     xml:lang="en"
+                     type="note"
+                     cert="medium">is this "na" for 'they' as in the inflection of the verb?</span>
+               <span ana="#INFL"
+                     target="#d1e596 #d1e597"
+                     xml:lang="es"
+                     type="translation">hacen</span>
+               <span target="#d1e598" xml:lang="en" type="translation">clothes</span>
+               <span target="#d1e598" xml:lang="es" type="translation">ropas</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e607" xml:lang="mix">
@@ -697,53 +796,47 @@
                <w xml:id="d1e610">ka'an</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e607" xml:lang="en" type="phrase">goodbye</span>
-                   <span target="#d1e607" resp="#TS" type="note">Not really translated to "good bye" but that what you would say when you are saying goodbye, but it means, we will talk again</span>
-                   <span target="#d1e607" xml:lang="es" type="phrase">adíos</span>
-                   <span target="#d1e607" xml:lang="es" type="phrase">hasta luego</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#PHRS" target="#d1e607" xml:lang="en" type="translation">goodbye</span>
+               <span target="#d1e607" resp="#TS" type="note">Not really translated to "good bye" but that what you would say when you are saying goodbye, but it means, we will talk again</span>
+               <span ana="#PHRS" target="#d1e607" xml:lang="es" type="translation">adíos</span>
+               <span ana="#PHRS" target="#d1e607" xml:lang="es" type="translation">hasta luego</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e624" xml:lang="mix">
                <w xml:id="d1e625">tienda</w>
             </seg>:
                 
-               <spanGrp type="translation">
-                   <span target="#d1e625" xml:lang="en">store</span>
-                   <span target="#d1e625" xml:lang="es">tienda</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e625" xml:lang="en" type="translation">store</span>
+               <span target="#d1e625" xml:lang="es" type="translation">tienda</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e634" xml:lang="mix" type="S" cert="medium"><!-- no "takua" or "na" needed? -->
                <w xml:id="d1e635">Nako'on</w>
                <w xml:id="d1e637">tienda</w>
                <pc>,</pc>
-               <w xml:id="d1e641">ntakuaan</w><!--  is this just the infinitive? why no "ntakuaan ko" or other inflected form? -->
+               <w xml:id="d1e641">ntakuaan</w>
+               <!--  is this just the infinitive? why no "ntakuaan ko" or other inflected form? -->
                <w xml:id="d1e643">mi'ncha</w>
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e634" xml:lang="en" type="S">Let's go to the store to buy nopales.</span>
-                        <span target="#d1e634" xml:lang="es" type="S">Vamos a la tienda para comprar nopales.</span>
-                        
-                        <span xml:lang="en" target="#d1e635">let's go</span>
-                        <span xml:lang="es" target="#d1e635">vamos</span>
-                        
-                        <span xml:lang="en" target="#d1e637">store</span>
-                        <span xml:lang="es" target="#d1e637">tienda</span>
-                        
-                        <span target="#d1e641" xml:lang="en">to buy</span>
-                        <span target="#d1e641" xml:lang="en" type="note">why is this in infinitive? (and not in 1pl)?</span>
-                        <span target="#d1e641" xml:lang="es">comprar</span>
-                                                
-                        <span xml:lang="en" target="#d1e643">prickly pear</span>
-                        <span xml:lang="es" target="#d1e643">nopal</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e634" xml:lang="en" type="translation">Let's go to the store to buy nopales.</span>
+               <span ana="#S" target="#d1e634" xml:lang="es" type="translation">Vamos a la tienda para comprar nopales.</span>
+               <span xml:lang="en" target="#d1e635" type="translation">let's go</span>
+               <span xml:lang="es" target="#d1e635" type="translation">vamos</span>
+               <span xml:lang="en" target="#d1e637" type="translation">store</span>
+               <span xml:lang="es" target="#d1e637" type="translation">tienda</span>
+               <span target="#d1e641" xml:lang="en" type="translation">to buy</span>
+               <span target="#d1e641" xml:lang="en" type="note">why is this in infinitive? (and not in 1pl)?</span>
+               <span target="#d1e641" xml:lang="es" type="translation">comprar</span>
+               <span xml:lang="en" target="#d1e643" type="translation">prickly pear</span>
+               <span xml:lang="es" target="#d1e643" type="translation">nopal</span>
             </spanGrp>
-                <!-- Gram: sentence type ="hortative" -->
-                
+            <!-- Gram: sentence type ="hortative" -->
          </p>
          <p>
             <seg xml:id="d1e657" xml:lang="mix" resp="#TS">
@@ -751,39 +844,43 @@
                <w xml:id="d1e660">tiutsa</w>
             </seg>:
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e657" xml:lang="en" type="compound">tree bark</span>
-                        <span target="#d1e657" xml:lang="en" type="compound">bark</span>
-                        <span target="#d1e657" xml:lang="es" type="compound">corteza</span>
+                    <spanGrp type="annotations">
+               <span ana="#CMPND" target="#d1e657" xml:lang="en" type="translation">tree bark</span>
+               <span ana="#CMPND" target="#d1e657" xml:lang="en" type="translation">bark</span>
+               <span ana="#CMPND" target="#d1e657" xml:lang="es" type="translation">corteza</span>
             </spanGrp>
-             
-             <seg xml:id="d1e662" xml:lang="mix" resp="#JS">
-                 <w xml:id="d1e664">sata</w>
-                 <w xml:id="d1e666">yutu</w>
-             </seg>
-             
-             <spanGrp type="translation">
-                 <span target="#d1e662" xml:lang="en" type="compound">tree bark</span>
-                 <span target="#d1e662" xml:lang="en" type="compound">bark</span>
-                 <span target="#d1e662" xml:lang="es" type="compound">corteza</span>
-             </spanGrp>
-         </p>       
+            <seg xml:id="d1e662" xml:lang="mix" resp="#JS">
+               <w xml:id="d1e664">sata</w>
+               <w xml:id="d1e666">yutu</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#CMPND" target="#d1e662" xml:lang="en" type="translation">tree bark</span>
+               <span ana="#CMPND" target="#d1e662" xml:lang="en" type="translation">bark</span>
+               <span ana="#CMPND" target="#d1e662" xml:lang="es" type="translation">corteza</span>
+            </spanGrp>
+         </p>
          <p>
             <seg xml:id="d1e673" xml:lang="mix" cert="low" type="S"><!-- should this be "nikai"? does he mean past tense  -->
-                <w xml:id="d1e674">Nikai</w><!-- (difference between "burn" and "climbed"?) -->
-               <w xml:id="d1e678">sata</w><!-- (U) -->
+               <w xml:id="d1e674">Nikai</w>
+               <!-- (difference between "burn" and "climbed"?) -->
+               <w xml:id="d1e678">sata</w>
+               <!-- (U) -->
                <w xml:id="d1e680">tiutsa</w>
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e673" xml:lang="en" type="S">The tree bark was burning.</span>
-                        <span target="#d1e673" xml:lang="es" type="S">La corteza estaba quemando.</span>
-                        
-                        <span target="#d1e674" xml:lang="en" type="inflected">was burning</span>
-                        <span target="#d1e674" xml:lang="es" type="inflected">estaba quemando</span>
-                        
-                        <span target="#d1e678 #d1e680" xml:lang="en" type="compound">bark</span>
-                        <span target="#d1e678 #d1e680" xml:lang="es" type="compound">corteza</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e673" xml:lang="en" type="translation">The tree bark was burning.</span>
+               <span ana="#S" target="#d1e673" xml:lang="es" type="translation">La corteza estaba quemando.</span>
+               <span ana="#INFL" target="#d1e674" xml:lang="en" type="translation">was burning</span>
+               <span ana="#INFL" target="#d1e674" xml:lang="es" type="translation">estaba quemando</span>
+               <span ana="#CMPND"
+                     target="#d1e678 #d1e680"
+                     xml:lang="en"
+                     type="translation">bark</span>
+               <span ana="#CMPND"
+                     target="#d1e678 #d1e680"
+                     xml:lang="es"
+                     type="translation">corteza</span>
             </spanGrp>
          </p>
          <p>
@@ -791,41 +888,40 @@
                <w xml:id="d1e694">kua'a</w>
             </seg>
             :
-                <spanGrp type="translation">
-                    <span target="#d1e694" xml:lang="en">sister</span>
-                    <span target="#d1e694" xml:lang="es">hermana</span>
-               </spanGrp>
-            
+                <spanGrp type="annotations">
+               <span target="#d1e694" xml:lang="en" type="translation">sister</span>
+               <span target="#d1e694" xml:lang="es" type="translation">hermana</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e703" xml:lang="mix" type="S">
-                <w xml:id="d1e704">In</w>
+               <w xml:id="d1e704">In</w>
                <w xml:id="d1e706">kua'a</w>
                <w xml:id="d1e708">ka</w>
-               <w xml:id="d1e710">skua'i</w><!-- is this past or present!? -->
+               <w xml:id="d1e710">skua'i</w>
+               <!-- is this past or present!? -->
                <w xml:id="d1e712">nuu</w>
                <w xml:id="d1e714">universdad</w>
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e703" xml:lang="en" type="S">A sister of mine studied at the university.</span>
-                        <span target="#d1e703" xml:lang="es" type="S">Mi hermana estudió a la universidad.</span>
-                        
-                        <span target="#d1e704" xml:lang="en">a</span>
-                        <span target="#d1e704" xml:lang="es">una</span>
-                        
-                        <span target="#d1e706" xml:lang="en" cert="medium" type="inflected">my sister</span>
-                        <span target="#d1e706" xml:lang="en" cert="medium" type="note">This is inflected for 1sg right?</span>
-                        <span target="#d1e706" xml:lang="es" cert="medium">mi hermana</span>
-                        
-                        <span target="#d1e710" xml:lang="en" type="inflected">studied</span>
-                        <span target="#d1e710" xml:lang="es" type="inflected">estudió</span>
-                        
-                        <span target="#d1e712" xml:lang="en">at</span>
-                        <span target="#d1e712" xml:lang="es">a</span>
-                        
-                        <span target="#d1e714" xml:lang="en">university</span>
-                        <span target="#d1e714" xml:lang="es">universdad</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e703" xml:lang="en" type="translation">A sister of mine studied at the university.</span>
+               <span ana="#S" target="#d1e703" xml:lang="es" type="translation">Mi hermana estudió a la universidad.</span>
+               <span target="#d1e704" xml:lang="en" type="translation">a</span>
+               <span target="#d1e704" xml:lang="es" type="translation">una</span>
+               <span ana="#INFL"
+                     target="#d1e706"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">my sister</span>
+               <span target="#d1e706" xml:lang="en" cert="medium" type="note">This is inflected for 1sg right?</span>
+               <span target="#d1e706" xml:lang="es" cert="medium" type="translation">mi hermana</span>
+               <span ana="#INFL" target="#d1e710" xml:lang="en" type="translation">studied</span>
+               <span ana="#INFL" target="#d1e710" xml:lang="es" type="translation">estudió</span>
+               <span target="#d1e712" xml:lang="en" type="translation">at</span>
+               <span target="#d1e712" xml:lang="es" type="translation">a</span>
+               <span target="#d1e714" xml:lang="en" type="translation">university</span>
+               <span target="#d1e714" xml:lang="es" type="translation">universdad</span>
             </spanGrp>
          </p>
          <p>
@@ -834,9 +930,15 @@
                <w xml:id="d1e731">tachi</w>
             </seg>:
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e729 #d1e731" xml:lang="en" type="compound">to breath</span>
-                        <span target="#d1e729 #d1e731" xml:lang="es" type="compound">respirar</span>
+                    <spanGrp type="annotations">
+               <span ana="#CMPND"
+                     target="#d1e729 #d1e731"
+                     xml:lang="en"
+                     type="translation">to breath</span>
+               <span ana="#CMPND"
+                     target="#d1e729 #d1e731"
+                     xml:lang="es"
+                     type="translation">respirar</span>
             </spanGrp>
          </p>
          <p>
@@ -846,15 +948,19 @@
                <w xml:id="d1e749">anu</w>
             </seg>, -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e744" xml:lang="en" type="S">Breath into your heart.</span>
-                        <span target="#d1e744" xml:lang="es" type="S">Respira en la corazón.</span>
-                        
-                        <span xml:lang="en" target="#d1e745 #d1e747" type="inflected">breathe</span>
-                        <span xml:lang="es" target="#d1e745 #d1e747" type="inflected">respira</span>
-                        
-                        <span target="#d1e749" xml:lang="en" type="inflected">your heart</span>
-                        <span target="#d1e749" xml:lang="es" type="inflected">tu corazón</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e744" xml:lang="en" type="translation">Breath into your heart.</span>
+               <span ana="#S" target="#d1e744" xml:lang="es" type="translation">Respira en la corazón.</span>
+               <span ana="#INFL"
+                     xml:lang="en"
+                     target="#d1e745 #d1e747"
+                     type="translation">breathe</span>
+               <span ana="#INFL"
+                     xml:lang="es"
+                     target="#d1e745 #d1e747"
+                     type="translation">respira</span>
+               <span ana="#INFL" target="#d1e749" xml:lang="en" type="translation">your heart</span>
+               <span ana="#INFL" target="#d1e749" xml:lang="es" type="translation">tu corazón</span>
             </spanGrp>
          </p>
          <p>
@@ -862,11 +968,10 @@
                <w xml:id="d1e763">ntakoo</w>
             </seg>
             :
-                <spanGrp type="translation">
-                    <span target="#d1e763" xml:lang="en">to wake up</span>
-                    <span target="#d1e763" xml:lang="es">despertarse</span>
-               </spanGrp>
-            
+                <spanGrp type="annotations">
+               <span target="#d1e763" xml:lang="en" type="translation">to wake up</span>
+               <span target="#d1e763" xml:lang="es" type="translation">despertarse</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e772" xml:lang="mix" type="S">
@@ -876,45 +981,38 @@
                <w xml:id="d1e783">nuu</w>
                <w xml:id="d1e785">yav'i</w>
             </seg>
-            
-               <spanGrp type="translation">
-                   <span target="#d1e772" xml:lang="en" type="S">Wake up, lets go to the plaza.</span>
-                   <span target="#d1e772" xml:lang="es" type="S">Despiértate, vamos a la plaza.</span>
-                   
-                   <span xml:lang="en" target="#d1e773" type="inflected">wake up</span>
-                   <span xml:lang="es" target="#d1e773" type="inflected">despiértate</span>
-                   
-                   <span target="#d1e779" xml:lang="en" type="inflected">let's go</span>
-                   <span target="#d1e779" xml:lang="es" type="inflected">vamos</span>
-                   
-                   <span target="#d1e783" xml:lang="en">to</span>
-                   <span target="#d1e783" xml:lang="es">a</span>
-                   
-                   <span target="#d1e785" xml:lang="en">plaza</span>
-                   <span target="#d1e785" xml:lang="es">plaza</span>
-               </spanGrp>
-            
+            <spanGrp type="annotations">
+               <span ana="#S" target="#d1e772" xml:lang="en" type="translation">Wake up, lets go to the plaza.</span>
+               <span ana="#S" target="#d1e772" xml:lang="es" type="translation">Despiértate, vamos a la plaza.</span>
+               <span ana="#INFL" xml:lang="en" target="#d1e773" type="translation">wake up</span>
+               <span ana="#INFL" xml:lang="es" target="#d1e773" type="translation">despiértate</span>
+               <span ana="#INFL" target="#d1e779" xml:lang="en" type="translation">let's go</span>
+               <span ana="#INFL" target="#d1e779" xml:lang="es" type="translation">vamos</span>
+               <span target="#d1e783" xml:lang="en" type="translation">to</span>
+               <span target="#d1e783" xml:lang="es" type="translation">a</span>
+               <span target="#d1e785" xml:lang="en" type="translation">plaza</span>
+               <span target="#d1e785" xml:lang="es" type="translation">plaza</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e800" xml:lang="mix">
                <w xml:id="d1e801">Xito</w>
             </seg> -
                 
-               <spanGrp type="translation">
-                  <span target="#" xml:lang="en">uncle</span>
-                  <span target="#" xml:lang="es">tío</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#" xml:lang="en" type="translation">uncle</span>
+               <span target="#" xml:lang="es" type="translation">tío</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e811" xml:lang="mix">
                <w xml:id="d1e812">Xixi</w>
             </seg> - 
-               <spanGrp type="translation">
-                   <span target="#d1e812" xml:lang="en">aunt</span>
-                   <span target="#d1e812" resp="#TS" type="note">This is how you would refer to them all (i.e. all older women)</span>
-                   <span target="#d1e812" xml:lang="es">tía</span>
-               </spanGrp>
+               <spanGrp type="annotations">
+               <span target="#d1e812" xml:lang="en" type="translation">aunt</span>
+               <span target="#d1e812" resp="#TS" type="note">This is how you would refer to them all (i.e. all older women)</span>
+               <span target="#d1e812" xml:lang="es" type="translation">tía</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e825" xml:lang="mix" type="S">
@@ -923,19 +1021,29 @@
                <w xml:id="d1e830">inkau</w>
             </seg> -
                 
-               <spanGrp type="translation">
-                   <span target="#d1e825" xml:lang="en" type="S">How old are you?</span>
-                   <span target="#d1e825" xml:lang="es" type="S">¿Quantos años tienes?</span>
-                   
-                   <span target="#d1e826 #d1e828" xml:lang="en" type="phrase">how old</span>
-                   <span target="#d1e826 #d1e828" xml:lang="es" type="phrase">quantos año</span>
-                   
-                   <span target="#d1e830" xml:lang="en" type="inflected" cert="medium">you have</span>
-                   <span target="#d1e830" xml:lang="en" type="note" cert="medium">New sense of "inkaa" meaning 'to have'. But this also exists with "yee", and "iin" so it's not really too surprising.</span>
-                   <span target="#d1e830" xml:lang="es" type="inflected" cert="medium">tienes</span>
-                   
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e825" xml:lang="en" type="translation">How old are you?</span>
+               <span ana="#S" target="#d1e825" xml:lang="es" type="translation">¿Quantos años tienes?</span>
+               <span ana="#PHRS"
+                     target="#d1e826 #d1e828"
+                     xml:lang="en"
+                     type="translation">how old</span>
+               <span ana="#PHRS"
+                     target="#d1e826 #d1e828"
+                     xml:lang="es"
+                     type="translation">quantos año</span>
+               <span ana="#INFL"
+                     target="#d1e830"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">you have</span>
+               <span target="#d1e830" xml:lang="en" type="note" cert="medium">New sense of "inkaa" meaning 'to have'. But this also exists with "yee", and "iin" so it's not really too surprising.</span>
+               <span ana="#INFL"
+                     target="#d1e830"
+                     xml:lang="es"
+                     cert="medium"
+                     type="translation">tienes</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e840" xml:lang="mix" type="MWE">
@@ -943,11 +1051,10 @@
                <w xml:id="d1e843">xeen</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e841" xml:lang="en" type="compound">ugly</span>
-                   <span target="#d1e841" xml:lang="es" type="compound">feo</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#CMPND" target="#d1e841" xml:lang="en" type="translation">ugly</span>
+               <span ana="#CMPND" target="#d1e841" xml:lang="es" type="translation">feo</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e853" xml:lang="mix" type="S">
@@ -957,15 +1064,19 @@
                <pc>.</pc>
             </seg> -
                  
-                    <spanGrp type="translation">
-                        <span target="#d1e853" xml:lang="en" type="S">You're ugly.</span>
-                        <span target="#d1e853" xml:lang="es" type="S">Eres feo.</span>
-                        
-                        <span target="#d1e854 #d1e856" xml:lang="en" type="compound">ugly</span>
-                        <span target="#d1e854 #d1e856" xml:lang="es" type="compound">feo</span>
-                        
-                        <span target="#d1e858" xml:lang="en">you're</span>
-                        <span target="#d1e858" xml:lang="es">eres</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e853" xml:lang="en" type="translation">You're ugly.</span>
+               <span ana="#S" target="#d1e853" xml:lang="es" type="translation">Eres feo.</span>
+               <span ana="#CMPND"
+                     target="#d1e854 #d1e856"
+                     xml:lang="en"
+                     type="translation">ugly</span>
+               <span ana="#CMPND"
+                     target="#d1e854 #d1e856"
+                     xml:lang="es"
+                     type="translation">feo</span>
+               <span target="#d1e858" xml:lang="en" type="translation">you're</span>
+               <span target="#d1e858" xml:lang="es" type="translation">eres</span>
             </spanGrp>
          </p>
          <p>
@@ -973,11 +1084,10 @@
                <w xml:id="d1e875">yakua</w>
             </seg>: 
                 
-               <spanGrp type="translation">
-                   <span target="#d1e875" xml:lang="en">dirty</span>
-                   <span target="#d1e875" xml:lang="es">sucio</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span target="#d1e875" xml:lang="en" type="translation">dirty</span>
+               <span target="#d1e875" xml:lang="es" type="translation">sucio</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e886" xml:lang="mix" type="S">
@@ -985,15 +1095,13 @@
                <w xml:id="d1e889">kau</w>
             </seg> -
                 
-                    <spanGrp type="translation">
-                        <span target="#d1e886" xml:lang="en" type="S">you're dirty</span>
-                        <span target="#d1e886" xml:lang="es" type="S">estas sucio</span>
-                        
-                        <span target="#d1e887" xml:lang="en">dirty</span>
-                        <span target="#d1e887" xml:lang="es">sucio</span>
-                        
-                        <span target="#d1e889" xml:lang="en">you're</span>
-                        <span target="#d1e889" xml:lang="es">eres</span>
+                    <spanGrp type="annotations">
+               <span ana="#S" target="#d1e886" xml:lang="en" type="translation">you're dirty</span>
+               <span ana="#S" target="#d1e886" xml:lang="es" type="translation">estas sucio</span>
+               <span target="#d1e887" xml:lang="en" type="translation">dirty</span>
+               <span target="#d1e887" xml:lang="es" type="translation">sucio</span>
+               <span target="#d1e889" xml:lang="en" type="translation">you're</span>
+               <span target="#d1e889" xml:lang="es" type="translation">eres</span>
             </spanGrp>
          </p>
          <p>
@@ -1003,61 +1111,63 @@
                <w xml:id="d1e908">ño'o</w>
             </seg> -
                 
-               <spanGrp type="translation">
-                   <span target="#d1e903" xml:lang="en" type="S">What is this?</span>
-                   <span target="#d1e903" xml:lang="es" type="S">¿Qué es este?</span>
-                   
-                   <span target="#d1e904" xml:lang="en">what</span>
-                   <span target="#d1e904" xml:lang="es">qué</span>
-                   
-                   <span target="#d1e906" xml:lang="en">is</span>
-                   <span target="#d1e906" xml:lang="es">es</span>
-                   
-                   <span target="#d1e908" xml:lang="en">this</span>
-                   <span target="#d1e908" xml:lang="es">este</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#S" target="#d1e903" xml:lang="en" type="translation">What is this?</span>
+               <span ana="#S" target="#d1e903" xml:lang="es" type="translation">¿Qué es este?</span>
+               <span target="#d1e904" xml:lang="en" type="translation">what</span>
+               <span target="#d1e904" xml:lang="es" type="translation">qué</span>
+               <span target="#d1e906" xml:lang="en" type="translation">is</span>
+               <span target="#d1e906" xml:lang="es" type="translation">es</span>
+               <span target="#d1e908" xml:lang="en" type="translation">this</span>
+               <span target="#d1e908" xml:lang="es" type="translation">este</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e918" xml:lang="mix" type="S">
-                <pc>¿</pc>
+               <pc>¿</pc>
                <w xml:id="d1e919">Nixi</w>
-               <w xml:id="d1e921">kunia</w><!-- want (-a) (it) -->
-               <w xml:id="d1e923">kachia</w><!-- say (-a) (it)-->
-                <pc>?</pc>
+               <w xml:id="d1e921">kunia</w>
+               <!-- want (-a) (it) -->
+               <w xml:id="d1e923">kachia</w>
+               <!-- say (-a) (it)-->
+               <pc>?</pc>
             </seg> -
                 
-               <spanGrp type="translation">
-                   <span target="#d1e918" xml:lang="en" type="phrase">What does (X) mean?</span>
-                   <span target="#d1e918" xml:lang="es" type="phrase">¿Qué significa (X)?</span>
-               </spanGrp>
-            
+               <spanGrp type="annotations">
+               <span ana="#PHRS" target="#d1e918" xml:lang="en" type="translation">What does (X) mean?</span>
+               <span ana="#PHRS" target="#d1e918" xml:lang="es" type="translation">¿Qué significa (X)?</span>
+            </spanGrp>
          </p>
          <p>
             <seg xml:id="d1e933" xml:lang="mix" type="S">
-                <pc>¿</pc>
+               <pc>¿</pc>
                <w xml:id="d1e934">Nixi</w>
-               <w xml:id="d1e936">kachu</w><!-- informal -->
-                <pc>?</pc>
+               <w xml:id="d1e936">kachu</w>
+               <!-- informal -->
+               <pc>?</pc>
             </seg> -
-                <spanGrp type="translation">
-                    <span target="#d1e933" xml:lang="en" type="phrase">How do you say?</span>
-                    <span target="#d1e933" xml:lang="es" type="phrase">Cómo se dice?</span>
-               </spanGrp><lb/>
-                
-             
-             <seg xml:id="d1e943" xml:lang="mix" type="S" resp="#JB" cert="high">
-                 <pc>¿</pc>
-                 <w xml:id="d1e944">Nixi</w>
-                 <w xml:id="d1e946">kachi</w>
-                 <w xml:id="d1e948">ni</w><!-- formal -->
-                 <pc>?</pc>
-             </seg> -
-             <spanGrp type="translation">
-                 <span target="#d1e943" xml:lang="en" type="phrase">How do you say...?</span>
-                 <span target="#d1e943" xml:lang="es" type="phrase">Cómo se dice...?</span>
-             </spanGrp><lb/>
-             
+                <spanGrp type="annotations">
+               <span ana="#PHRS" target="#d1e933" xml:lang="en" type="translation">How do you say?</span>
+               <span ana="#PHRS" target="#d1e933" xml:lang="es" type="translation">Cómo se dice?</span>
+            </spanGrp>
+            <lb/>
+            <seg xml:id="d1e943"
+                 xml:lang="mix"
+                 type="S"
+                 resp="#JB"
+                 cert="high">
+               <pc>¿</pc>
+               <w xml:id="d1e944">Nixi</w>
+               <w xml:id="d1e946">kachi</w>
+               <w xml:id="d1e948">ni</w>
+               <!-- formal -->
+               <pc>?</pc>
+            </seg> -
+             <spanGrp type="annotations">
+               <span ana="#PHRS" target="#d1e943" xml:lang="en" type="translation">How do you say...?</span>
+               <span ana="#PHRS" target="#d1e943" xml:lang="es" type="translation">Cómo se dice...?</span>
+            </spanGrp>
+            <lb/>
          </p>
       </body>
    </text>

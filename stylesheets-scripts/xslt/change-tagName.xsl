@@ -15,13 +15,83 @@
             <xsl:apply-templates select="node()|@*"/>
         </xsl:copy>
     </xsl:template>
+  
+   <!--
+    <xsl:template match="span[@xml:lang and not(@type)]">  
+        <xsl:copy>
+            <xsl:copy-of select="@* "/>
+            <xsl:attribute name="type">translation</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+  
+    <xsl:template match="span[@type='S']">  
+        <xsl:copy>
+            <xsl:attribute name="ana">#S</xsl:attribute>
+            <xsl:copy-of select="@*  except @type"/>
+            <xsl:attribute name="type">translation</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+  
+   
+    <xsl:template match="spanGrp/@type[.='translation']">
+        <xsl:attribute name="type">annotations</xsl:attribute>
+    </xsl:template>
+ -->
+   
+    <xsl:template match="//spanGrp[@type='gram']/span">  
+        <xsl:copy>
+            <xsl:copy-of select="@*  except @type"/>
+            <xsl:attribute name="type">gram</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+   
+    <xsl:template match="span[@type='sentence']">  
+        <xsl:copy>
+            <xsl:attribute name="ana">#S</xsl:attribute>
+            <xsl:copy-of select="@*  except @type"/>
+            <xsl:attribute name="type">translation</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="span[@type='inflected']">
+        <xsl:copy>
+            <xsl:attribute name="ana">#INFL</xsl:attribute>
+            <xsl:copy-of select="@*  except @type"/>
+            <xsl:attribute name="type">translation</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+         
+    <xsl:template match="span[@type='phrase']">
+        <xsl:copy>
+            <xsl:attribute name="ana">#PHRS</xsl:attribute>
+            <xsl:copy-of select="@*  except @type"/>
+            <xsl:attribute name="type">translation</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
     
+    <xsl:template match="span[@type='compound']">
+        <xsl:copy>
+            <xsl:attribute name="ana">#CMPND</xsl:attribute>
+            <xsl:copy-of select="@*  except @type"/>
+            <xsl:attribute name="type">translation</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+  
+    
+    <!--  
     <xsl:template match="span/@type[.='S']">
         <xsl:attribute name="type">sentence</xsl:attribute>
     </xsl:template>
     
 
-    <!--
+  
     
     <xsl:variable name="spkrInit">
         <xsl:value-of select="//respStmt[2]/name/@xml:id"/>

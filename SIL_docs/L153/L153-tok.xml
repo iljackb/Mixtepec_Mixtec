@@ -123,32 +123,32 @@
                The encoding of this portion of the MIX Language resources can be divided into the following components:
                <list>
                   <item>i) TEI-XML markup of documents that supports reuse and extension within this project and/or for other interested parties;</item>
-                  <spanGrp type="translation"/>
+                  <spanGrp type="annotations"/>
                   <item>ii) Annotation and glossing of lexical information and structures in documents; tasks include;
                      
                      <list>
                         <item>glossing of orthographical lexical items;</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                         <item>assignment of lexical properties to sentences, phrases and lexical items (morpho-/syntactic; pragmatic; semantic etc.);</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                         <item>linking corresponding bilingual items (Spanish-Mixtec) within each document;</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                         <item>entry of analyzed, glossed and categorized lexical information into TEI-Dictionary;</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                         <item>link orthographical forms of lexical items with phonetic transcriptions of spoken forms;</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                      </list>
                   </item>
-                  <spanGrp type="translation"/>
+                  <spanGrp type="annotations"/>
                   <item>iii) Classification of Document Types and Ontology Linking;
                      <list>
                         <item>replace current SIL document classification model<ref target="#tax.sil-mix"/> with established and expansible document system which can be used to classify any new document or literature produced in the language in the future;</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                         <item>as per the goal of the overall project, the use of language-specific glosses (including 'Interlingua') will be replaced by grounding the semantic profile of each lexical item by referencing ontological entities (from existing ontologies such as DBpedia, SKOS, etc.);</item>
-                        <spanGrp type="translation"/>
+                        <spanGrp type="annotations"/>
                      </list>
                   </item>
-                  <spanGrp type="translation"/>
+                  <spanGrp type="annotations"/>
                </list>
             </p>
          </projectDesc>
@@ -174,35 +174,47 @@
                   <w xml:id="d1e192b">Ka'nu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-01-01" xml:lang="en">This is a story that was told about the tree of Mixtepec.</span>
-                  <span type="sentence" target="#L153-01-01" xml:lang="es"/>
-                  <span target="#d1e178" xml:lang="en" cert="medium">this here</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-01-01" xml:lang="en" type="translation">This is a story that was told about the tree of Mixtepec.</span>
+                  <span ana="#S" target="#L153-01-01" xml:lang="es" type="translation"/>
+                  <span target="#d1e178" xml:lang="en" cert="medium" type="translation">this here</span>
                   <span target="#d1e178" xml:lang="en" cert="medium" type="note">why "ña-" here?</span>
-                  <span target="#d1e178" xml:lang="es" cert="medium">este</span>
-                  <span target="#d1e180" xml:lang="en" cert="medium">is</span>
+                  <span target="#d1e178" xml:lang="es" cert="medium" type="translation">este</span>
+                  <span target="#d1e180" xml:lang="en" cert="medium" type="translation">is</span>
                   <!-- tense? -->
-                  <span target="#d1e180" xml:lang="es">es</span>
-                  <span target="#d1e182" xml:lang="en" cert="unknown">?</span>
+                  <span target="#d1e180" xml:lang="es" type="translation">es</span>
+                  <span target="#d1e182"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e182" xml:lang="en" cert="unknown" type="note">what is "iin" here?</span>
-                  <span target="#d1e182" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e184" xml:lang="en" cert="medium">about</span>
-                  <span target="#d1e184" xml:lang="es" cert="medium">sobre</span>
-                  <span target="#d1e186" xml:lang="en" type="inflected">told</span>
-                  <span target="#d1e186" xml:lang="es" cert="low" type="inflected">dijó</span>
-                  <span target="#d1e188" xml:lang="en">the story</span>
+                  <span target="#d1e182"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e184" xml:lang="en" cert="medium" type="translation">about</span>
+                  <span target="#d1e184" xml:lang="es" cert="medium" type="translation">sobre</span>
+                  <span ana="#INFL" target="#d1e186" xml:lang="en" type="translation">told</span>
+                  <span ana="#INFL"
+                        target="#d1e186"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">dijó</span>
+                  <span target="#d1e188" xml:lang="en" type="translation">the story</span>
                   <span target="#d1e188" xml:lang="en" type="note">why "ña-" here?</span>
-                  <span target="#d1e188" xml:lang="es" cert="medium">el cuento</span>
-                  <span target="#d1e190" xml:lang="en">sabine tree</span>
-                  <span target="#d1e190" xml:lang="es">sabino</span>
-                  <span target="#d1e192a #d1e192b"
+                  <span target="#d1e188" xml:lang="es" cert="medium" type="translation">el cuento</span>
+                  <span target="#d1e190" xml:lang="en" type="translation">sabine tree</span>
+                  <span target="#d1e190" xml:lang="es" type="translation">sabino</span>
+                  <span ana="#CMPND"
+                        target="#d1e192a #d1e192b"
                         xml:lang="en"
                         cert="medium"
-                        type="compound">The Big Town</span>
-                  <span target="#d1e192a #d1e192b"
+                        type="translation">The Big Town</span>
+                  <span ana="#CMPND"
+                        target="#d1e192a #d1e192b"
                         xml:lang="es"
                         cert="medium"
-                        type="compound">El Pueblo Grande</span>
+                        type="translation">El Pueblo Grande</span>
                </spanGrp>
                <seg xml:id="L153-01-02" type="S" xml:lang="mix">
                   <w xml:id="d1e197">Tatsa</w>
@@ -227,42 +239,59 @@
                   <!-- very -->
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-01-02" xml:lang="en">A long time ago in Mixtepec there stood a big tree that had two branches, it was really high up.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-01-02" xml:lang="en" type="translation">A long time ago in Mixtepec there stood a big tree that had two branches, it was really high up.</span>
+                  <span ana="#S"
                         target="#L153-01-02"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e197 #d1e199" xml:lang="en" type="phrase">?</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span ana="#PHRS"
+                        target="#d1e197 #d1e199"
+                        xml:lang="en"
+                        type="translation">?</span>
                   <span target="#d1e197 #d1e199"
                         xml:lang="en"
                         cert="unknown"
                         type="note">what is this? is it related to "tatsa'vu?" 'thank you'?</span>
-                  <span target="#d1e197 #d1e199" xml:lang="es" cert="unknown">?</span>
+                  <span target="#d1e197 #d1e199"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
                   <!-- is the expression: "Tatsa na'a"? -->
-                  <span target="#d1e199" xml:lang="en" cert="unknown"/>
-                  <span target="#d1e199" xml:lang="es" cert="unknown"/>
+                  <span target="#d1e199"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e199"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
                   <span target="#d1e199" xml:lang="en" cert="unknown" type="note">is the expression: "Tatsa na'a"?</span>
-                  <span target="#d1e201" xml:lang="en">town</span>
-                  <span target="#d1e201" xml:lang="es">pueblo</span>
-                  <span target="#d1e203" xml:lang="en">San Juan Mixtepec</span>
-                  <span target="#d1e203" xml:lang="es">San Juan Mixtepec</span>
-                  <span target="#d1e205" xml:lang="en" type="inflected">stood</span>
-                  <span target="#d1e205" xml:lang="es" cert="low" type="inflected">había</span>
-                  <span target="#d1e209" xml:lang="en">sabine tree</span>
-                  <span target="#d1e209" xml:lang="es">sabino</span>
-                  <span target="#d1e211" xml:lang="en" type="inflected">had</span>
-                  <span target="#d1e211" xml:lang="es" type="inflected">tenía</span>
-                  <span target="#d1e213" xml:lang="en">two</span>
-                  <span target="#d1e213" xml:lang="es">rama</span>
-                  <span target="#d1e215" xml:lang="en">branch</span>
-                  <span target="#d1e215" xml:lang="es">rama</span>
-                  <span target="#d1e220" xml:lang="en" type="inflected">it stood</span>
-                  <span target="#d1e220" xml:lang="es" type="inflected">estaba al pie</span>
-                  <span target="#d1e222" xml:lang="en">high</span>
-                  <span target="#d1e222" xml:lang="es">alto</span>
-                  <span target="#d1e224" xml:lang="en">very</span>
-                  <span target="#d1e224" xml:lang="es">muy</span>
+                  <span target="#d1e201" xml:lang="en" type="translation">town</span>
+                  <span target="#d1e201" xml:lang="es" type="translation">pueblo</span>
+                  <span target="#d1e203" xml:lang="en" type="translation">San Juan Mixtepec</span>
+                  <span target="#d1e203" xml:lang="es" type="translation">San Juan Mixtepec</span>
+                  <span ana="#INFL" target="#d1e205" xml:lang="en" type="translation">stood</span>
+                  <span ana="#INFL"
+                        target="#d1e205"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">había</span>
+                  <span target="#d1e209" xml:lang="en" type="translation">sabine tree</span>
+                  <span target="#d1e209" xml:lang="es" type="translation">sabino</span>
+                  <span ana="#INFL" target="#d1e211" xml:lang="en" type="translation">had</span>
+                  <span ana="#INFL" target="#d1e211" xml:lang="es" type="translation">tenía</span>
+                  <span target="#d1e213" xml:lang="en" type="translation">two</span>
+                  <span target="#d1e213" xml:lang="es" type="translation">rama</span>
+                  <span target="#d1e215" xml:lang="en" type="translation">branch</span>
+                  <span target="#d1e215" xml:lang="es" type="translation">rama</span>
+                  <span ana="#INFL" target="#d1e220" xml:lang="en" type="translation">it stood</span>
+                  <span ana="#INFL" target="#d1e220" xml:lang="es" type="translation">estaba al pie</span>
+                  <span target="#d1e222" xml:lang="en" type="translation">high</span>
+                  <span target="#d1e222" xml:lang="es" type="translation">alto</span>
+                  <span target="#d1e224" xml:lang="en" type="translation">very</span>
+                  <span target="#d1e224" xml:lang="es" type="translation">muy</span>
                </spanGrp>
                <seg xml:id="L153-01-03" type="S" xml:lang="mix">
                   <w xml:id="d1e229">Sara</w>
@@ -276,27 +305,33 @@
                   <w xml:id="d1e243" orig="viko">vikó</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-01-03" xml:lang="en">And the peak of that tree extended all the way to the clouds.</span>
-                  <span type="sentence" target="#L153-01-03" xml:lang="es">Y la punta de aquel árbol llegó hasta las nubes.</span>
-                  <span target="#d1e229" xml:lang="en">and</span>
-                  <span target="#d1e229" xml:lang="es">y</span>
-                  <span target="#d1e231" xml:lang="en">peak</span>
-                  <span target="#d1e231" xml:lang="es">punta</span>
-                  <span target="#d1e233" xml:lang="en">of that</span>
-                  <span target="#d1e233" xml:lang="es">de aquel</span>
-                  <span target="#d1e233 #d1e235" xml:lang="en" type="phrase">of that tree</span>
-                  <span target="#d1e233 #d1e235" xml:lang="es" type="phrase">de aquel árbol</span>
-                  <span target="#d1e235" xml:lang="en">tree</span>
-                  <span target="#d1e235" xml:lang="es">árbol</span>
-                  <span target="#d1e239" xml:lang="en">extended</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-01-03" xml:lang="en" type="translation">And the peak of that tree extended all the way to the clouds.</span>
+                  <span ana="#S" target="#L153-01-03" xml:lang="es" type="translation">Y la punta de aquel árbol llegó hasta las nubes.</span>
+                  <span target="#d1e229" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e229" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e231" xml:lang="en" type="translation">peak</span>
+                  <span target="#d1e231" xml:lang="es" type="translation">punta</span>
+                  <span target="#d1e233" xml:lang="en" type="translation">of that</span>
+                  <span target="#d1e233" xml:lang="es" type="translation">de aquel</span>
+                  <span ana="#PHRS"
+                        target="#d1e233 #d1e235"
+                        xml:lang="en"
+                        type="translation">of that tree</span>
+                  <span ana="#PHRS"
+                        target="#d1e233 #d1e235"
+                        xml:lang="es"
+                        type="translation">de aquel árbol</span>
+                  <span target="#d1e235" xml:lang="en" type="translation">tree</span>
+                  <span target="#d1e235" xml:lang="es" type="translation">árbol</span>
+                  <span target="#d1e239" xml:lang="en" type="translation">extended</span>
                   <!-- also 'finished' -->
-                  <span target="#d1e239" xml:lang="es" cert="medium">llegó</span>
+                  <span target="#d1e239" xml:lang="es" cert="medium" type="translation">llegó</span>
                   <!-- number inflection? -->
-                  <span target="#d1e241" xml:lang="en">all the way to</span>
-                  <span target="#d1e241" xml:lang="es">hasta</span>
-                  <span target="#d1e243" xml:lang="en">clouds</span>
-                  <span target="#d1e243" xml:lang="es">nubes</span>
+                  <span target="#d1e241" xml:lang="en" type="translation">all the way to</span>
+                  <span target="#d1e241" xml:lang="es" type="translation">hasta</span>
+                  <span target="#d1e243" xml:lang="en" type="translation">clouds</span>
+                  <span target="#d1e243" xml:lang="es" type="translation">nubes</span>
                </spanGrp>
                <seg xml:id="L153-01-04" type="S" xml:lang="mix">
                   <w xml:id="d1e248">Tsa'a</w>
@@ -314,32 +349,62 @@
                   <w xml:id="d1e268">Xnuviko</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-01-04" xml:lang="en" cert="low">That's why the name of the town is "Plain of the Mixtepec" or "Down from the Clouds".</span>
-                  <span type="sentence" target="#L153-01-04" xml:lang="es" cert="low">Por esto (?) el nobre del pueble es "Pueblo de las Nubes" o "Bajan las Nubes".</span>
-                  <span target="#d1e248 #d1e250" xml:lang="en" type="compound">that's why</span>
-                  <span target="#d1e248 #d1e250" xml:lang="es" type="compound">por esto</span>
-                  <span target="#d1e252 #d1e254" xml:lang="en" type="inflected"/>
+               <spanGrp type="annotations">
+                  <span ana="#S"
+                        target="#L153-01-04"
+                        xml:lang="en"
+                        cert="low"
+                        type="translation">That's why the name of the town is "Plain of the Mixtepec" or "Down from the Clouds".</span>
+                  <span ana="#S"
+                        target="#L153-01-04"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">Por esto (?) el nobre del pueble es "Pueblo de las Nubes" o "Bajan las Nubes".</span>
+                  <span ana="#CMPND"
+                        target="#d1e248 #d1e250"
+                        xml:lang="en"
+                        type="translation">that's why</span>
+                  <span ana="#CMPND"
+                        target="#d1e248 #d1e250"
+                        xml:lang="es"
+                        type="translation">por esto</span>
+                  <span ana="#INFL"
+                        target="#d1e252 #d1e254"
+                        xml:lang="en"
+                        type="translation"/>
                   <span target="#d1e252 #d1e254"
                         xml:lang="en"
                         cert="unknown"
                         type="note">ntsaki ti lay down. eg "i layed it down"</span>
-                  <span target="#d1e252 #d1e254"
+                  <span ana="#INFL"
+                        target="#d1e252 #d1e254"
                         xml:lang="es"
                         cert="unknown"
-                        type="inflected"/>
-                  <span target="#d1e256" xml:lang="en">name</span>
+                        type="translation"/>
+                  <span target="#d1e256" xml:lang="en" type="translation">name</span>
                   <span target="#d1e256" xml:lang="en" type="note">noun - "context "si'vi kuu..." 'my name is...'</span>
-                  <span target="#d1e256" xml:lang="es">nobre</span>
-                  <span target="#d1e258" xml:lang="en">town</span>
-                  <span target="#d1e258" xml:lang="es">pueblo</span>
-                  <span target="#d1e256 #d1e258" xml:lang="en" type="phrase">the name of the town</span>
-                  <span target="#d1e256 #d1e258" xml:lang="es" type="phrase">el nobre del pueblo</span>
-                  <span target="#d1e264a #d1e264b" xml:lang="en" type="compound">Town of the Clouds</span>
+                  <span target="#d1e256" xml:lang="es" type="translation">nobre</span>
+                  <span target="#d1e258" xml:lang="en" type="translation">town</span>
+                  <span target="#d1e258" xml:lang="es" type="translation">pueblo</span>
+                  <span ana="#PHRS"
+                        target="#d1e256 #d1e258"
+                        xml:lang="en"
+                        type="translation">the name of the town</span>
+                  <span ana="#PHRS"
+                        target="#d1e256 #d1e258"
+                        xml:lang="es"
+                        type="translation">el nobre del pueblo</span>
+                  <span ana="#CMPND"
+                        target="#d1e264a #d1e264b"
+                        xml:lang="en"
+                        type="translation">Town of the Clouds</span>
                   <span target="#d1e264a #d1e264b" xml:lang="en" type="note">literal translation</span>
-                  <span target="#d1e264a #d1e264b" xml:lang="es" type="compound">Pueblo de las Nubes</span>
-                  <span target="#d1e266" xml:lang="en">or</span>
-                  <span target="#d1e266" xml:lang="es">o</span>
+                  <span ana="#CMPND"
+                        target="#d1e264a #d1e264b"
+                        xml:lang="es"
+                        type="translation">Pueblo de las Nubes</span>
+                  <span target="#d1e266" xml:lang="en" type="translation">or</span>
+                  <span target="#d1e266" xml:lang="es" type="translation">o</span>
                   <span target="#d1e268" xml:lang="en" type="literal">Down from the Clouds</span>
                   <span target="#d1e268" xml:lang="es" type="literal">Bajan las Nubes</span>
                </spanGrp>
@@ -372,38 +437,64 @@
                   <w xml:id="d1e313">ka</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-02-01" xml:lang="en" cert="low">And then on the tree, in the middle of the trunk where the tree stood a bald eagle lived in the tree.</span>
-                  <span type="sentence" target="#L153-02-01" xml:lang="es" cert="low"/>
-                  <span target="#d1e278" xml:lang="en">then</span>
-                  <span target="#d1e278" xml:lang="es">y</span>
-                  <span target="#d1e280" xml:lang="en" cert="low">when</span>
-                  <span target="#d1e280" xml:lang="es" cert="low">cuando</span>
-                  <span target="#d1e282" xml:lang="en">tree</span>
-                  <span target="#d1e282" xml:lang="es">árbol</span>
-                  <span target="#d1e288" xml:lang="en">then</span>
-                  <span target="#d1e288" xml:lang="es">y</span>
-                  <span target="#d1e292" xml:lang="en" cert="low">top</span>
+               <spanGrp type="annotations">
+                  <span ana="#S"
+                        target="#L153-02-01"
+                        xml:lang="en"
+                        cert="low"
+                        type="translation">And then on the tree, in the middle of the trunk where the tree stood a bald eagle lived in the tree.</span>
+                  <span ana="#S"
+                        target="#L153-02-01"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation"/>
+                  <span target="#d1e278" xml:lang="en" type="translation">then</span>
+                  <span target="#d1e278" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e280" xml:lang="en" cert="low" type="translation">when</span>
+                  <span target="#d1e280" xml:lang="es" cert="low" type="translation">cuando</span>
+                  <span target="#d1e282" xml:lang="en" type="translation">tree</span>
+                  <span target="#d1e282" xml:lang="es" type="translation">árbol</span>
+                  <span target="#d1e288" xml:lang="en" type="translation">then</span>
+                  <span target="#d1e288" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e292" xml:lang="en" cert="low" type="translation">top</span>
                   <span target="#d1e292" xml:lang="en" cert="low" type="note">isn't this leaf in some cases?</span>
-                  <span target="#d1e292" xml:lang="es" cert="low">la punta</span>
-                  <span target="#d1e290 #d1e292" xml:lang="en" type="phrase">in the middle of the top</span>
-                  <span target="#d1e290 #d1e292" xml:lang="es" type="phrase">en el medio de la punta</span>
-                  <span target="#d1e294" xml:lang="en" cert="medium">that</span>
-                  <span target="#d1e294" xml:lang="es" cert="medium">que</span>
-                  <span target="#d1e296" xml:lang="en" type="inflected">stood</span>
-                  <span target="#d1e296" xml:lang="es" type="inflected">estaba</span>
-                  <span target="#d1e301 #d1e303" xml:lang="en" type="compound">bald eagle</span>
-                  <span target="#d1e301 #d1e303" xml:lang="es" type="compound">águila calva</span>
-                  <span target="#d1e305" xml:lang="en">that</span>
-                  <span target="#d1e305" xml:lang="es">que</span>
-                  <span target="#d1e307" xml:lang="en">lived</span>
-                  <span target="#d1e307" xml:lang="es">vivía</span>
-                  <span target="#d1e309" xml:lang="en">in</span>
-                  <span target="#d1e309" xml:lang="es">en</span>
-                  <span target="#d1e311" xml:lang="en">Sabine</span>
-                  <span target="#d1e311" xml:lang="es">sabino</span>
-                  <span target="#d1e309 #d1e311" xml:lang="en" type="phrase">in the Sabine</span>
-                  <span target="#d1e309 #d1e311" xml:lang="es" type="phrase">en el sabino</span>
+                  <span target="#d1e292" xml:lang="es" cert="low" type="translation">la punta</span>
+                  <span ana="#PHRS"
+                        target="#d1e290 #d1e292"
+                        xml:lang="en"
+                        type="translation">in the middle of the top</span>
+                  <span ana="#PHRS"
+                        target="#d1e290 #d1e292"
+                        xml:lang="es"
+                        type="translation">en el medio de la punta</span>
+                  <span target="#d1e294" xml:lang="en" cert="medium" type="translation">that</span>
+                  <span target="#d1e294" xml:lang="es" cert="medium" type="translation">que</span>
+                  <span ana="#INFL" target="#d1e296" xml:lang="en" type="translation">stood</span>
+                  <span ana="#INFL" target="#d1e296" xml:lang="es" type="translation">estaba</span>
+                  <span ana="#CMPND"
+                        target="#d1e301 #d1e303"
+                        xml:lang="en"
+                        type="translation">bald eagle</span>
+                  <span ana="#CMPND"
+                        target="#d1e301 #d1e303"
+                        xml:lang="es"
+                        type="translation">águila calva</span>
+                  <span target="#d1e305" xml:lang="en" type="translation">that</span>
+                  <span target="#d1e305" xml:lang="es" type="translation">que</span>
+                  <span target="#d1e307" xml:lang="en" type="translation">lived</span>
+                  <span target="#d1e307" xml:lang="es" type="translation">vivía</span>
+                  <span target="#d1e309" xml:lang="en" type="translation">in</span>
+                  <span target="#d1e309" xml:lang="es" type="translation">en</span>
+                  <span target="#d1e311" xml:lang="en" type="translation">Sabine</span>
+                  <span target="#d1e311" xml:lang="es" type="translation">sabino</span>
+                  <span ana="#PHRS"
+                        target="#d1e309 #d1e311"
+                        xml:lang="en"
+                        type="translation">in the Sabine</span>
+                  <span ana="#PHRS"
+                        target="#d1e309 #d1e311"
+                        xml:lang="es"
+                        type="translation">en el sabino</span>
                </spanGrp>
                <seg xml:id="L153-02-02" type="S" xml:lang="mix">
                   <w xml:id="d1e318">Sara</w>
@@ -422,38 +513,60 @@
                   <w xml:id="d1e345">ntsikava</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S"
                         target="#L153-02-02"
                         xml:lang="en"
-                        cert="unknown">And under the tree where there was water, there was a red bowl that was floating.</span>
-                  <span type="sentence"
+                        cert="unknown"
+                        type="translation">And under the tree where there was water, there was a red bowl that was floating.</span>
+                  <span ana="#S"
                         target="#L153-02-02"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e318" xml:lang="en">and</span>
-                  <span target="#d1e318" xml:lang="es">y</span>
-                  <span target="#d1e320 #d1e322" xml:lang="en" type="phrase">below the sabine</span>
-                  <span target="#d1e320 #d1e322" xml:lang="es" type="phrase">debajo del sabino</span>
-                  <span target="#d1e326" xml:lang="en">where</span>
-                  <span target="#d1e326" xml:lang="es">donde</span>
-                  <span target="#d1e328" xml:lang="en">there was</span>
-                  <span target="#d1e328" xml:lang="es">había</span>
-                  <span target="#d1e330" xml:lang="en">water</span>
-                  <span target="#d1e330" xml:lang="es">agua</span>
-                  <span target="#d1e334" xml:lang="en" type="inflected">stood</span>
-                  <span target="#d1e334" xml:lang="es" type="inflected">estaba al pie</span>
-                  <span target="#d1e338" xml:lang="en">bowl</span>
-                  <span target="#d1e338" xml:lang="es">plato hondo</span>
-                  <span target="#d1e341" xml:lang="en" cert="unknown">red</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e318" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e318" xml:lang="es" type="translation">y</span>
+                  <span ana="#PHRS"
+                        target="#d1e320 #d1e322"
+                        xml:lang="en"
+                        type="translation">below the sabine</span>
+                  <span ana="#PHRS"
+                        target="#d1e320 #d1e322"
+                        xml:lang="es"
+                        type="translation">debajo del sabino</span>
+                  <span target="#d1e326" xml:lang="en" type="translation">where</span>
+                  <span target="#d1e326" xml:lang="es" type="translation">donde</span>
+                  <span target="#d1e328" xml:lang="en" type="translation">there was</span>
+                  <span target="#d1e328" xml:lang="es" type="translation">había</span>
+                  <span target="#d1e330" xml:lang="en" type="translation">water</span>
+                  <span target="#d1e330" xml:lang="es" type="translation">agua</span>
+                  <span ana="#INFL" target="#d1e334" xml:lang="en" type="translation">stood</span>
+                  <span ana="#INFL" target="#d1e334" xml:lang="es" type="translation">estaba al pie</span>
+                  <span target="#d1e338" xml:lang="en" type="translation">bowl</span>
+                  <span target="#d1e338" xml:lang="es" type="translation">plato hondo</span>
+                  <span target="#d1e341"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">red</span>
                   <!-- big? red? alot? -->
                   <span target="#d1e341" xml:lang="en" cert="unknown" type="note">is this 'big', 'red', or 'a lot'?</span>
-                  <span target="#d1e341" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e343" xml:lang="en">that</span>
-                  <span target="#d1e343" xml:lang="es">que</span>
-                  <span target="#d1e345" xml:lang="en" cert="unknown" type="inflected">floated</span>
+                  <span target="#d1e341"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e343" xml:lang="en" type="translation">that</span>
+                  <span target="#d1e343" xml:lang="es" type="translation">que</span>
+                  <span ana="#INFL"
+                        target="#d1e345"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">floated</span>
                   <span target="#d1e345" xml:lang="en" cert="unknown" type="note">"ntsi-" + "kava": flip, turn, float</span>
-                  <span target="#d1e345" xml:lang="es" cert="unknown" type="inflected">?</span>
+                  <span ana="#INFL"
+                        target="#d1e345"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
                </spanGrp>
             </p>
          </div>
@@ -475,26 +588,30 @@
                   <w xml:id="d1e366">ka</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-03-01" xml:lang="en">Then the little kids wanted to take out the bowl.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-03-01" xml:lang="en" type="translation">Then the little kids wanted to take out the bowl.</span>
+                  <span ana="#S"
                         target="#L153-03-01"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e354" xml:lang="en">and</span>
-                  <span target="#d1e354" xml:lang="es">y</span>
-                  <span target="#d1e356" xml:lang="en">they</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e354" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e354" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e356" xml:lang="en" type="translation">they</span>
                   <!-- why the word order "kueña kuachi"? -->
-                  <span target="#d1e356" xml:lang="es">ellos</span>
-                  <span target="#d1e358" xml:lang="en" cert="low">little ones</span>
-                  <span target="#d1e358" xml:lang="es" cert="low">pequeños</span>
-                  <span target="#d1e360" xml:lang="en">used to have</span>
-                  <span target="#d1e360" xml:lang="es">tenían</span>
-                  <span target="#d1e362" xml:lang="en">take out</span>
+                  <span target="#d1e356" xml:lang="es" type="translation">ellos</span>
+                  <span target="#d1e358" xml:lang="en" cert="low" type="translation">little ones</span>
+                  <span target="#d1e358" xml:lang="es" cert="low" type="translation">pequeños</span>
+                  <span target="#d1e360" xml:lang="en" type="translation">used to have</span>
+                  <span target="#d1e360" xml:lang="es" type="translation">tenían</span>
+                  <span target="#d1e362" xml:lang="en" type="translation">take out</span>
                   <span target="#d1e362" xml:lang="en" cert="unknown" type="note">is this "tava" inflected? if so, what does it mean?</span>
-                  <span target="#d1e362" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e364" xml:lang="en" cert="medium">bowl</span>
-                  <span target="#d1e364" xml:lang="es" cert="medium">plato hondo</span>
+                  <span target="#d1e362"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e364" xml:lang="en" cert="medium" type="translation">bowl</span>
+                  <span target="#d1e364" xml:lang="es" cert="medium" type="translation">plato hondo</span>
                </spanGrp>
                <seg xml:id="L153-03-02" type="S" xml:lang="mix">
                   <w xml:id="d1e371">Cha</w>
@@ -514,37 +631,52 @@
                   <w xml:id="d1e398">ka</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-03-02" xml:lang="en">And they were able to take it out and they were falling in the water.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-03-02" xml:lang="en" type="translation">And they were able to take it out and they were falling in the water.</span>
+                  <span ana="#S"
                         target="#L153-03-02"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e371" xml:lang="en">and</span>
-                  <span target="#d1e371" xml:lang="es">y</span>
-                  <span target="#d1e373" xml:lang="en">never</span>
-                  <span target="#d1e373" xml:lang="es">nunca</span>
-                  <span target="#d1e375 #d1e377 #d1e379"
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e371" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e371" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e373" xml:lang="en" type="translation">never</span>
+                  <span target="#d1e373" xml:lang="es" type="translation">nunca</span>
+                  <span ana="#PHRS"
+                        target="#d1e375 #d1e377 #d1e379"
                         xml:lang="en"
                         cert="unknown"
-                        type="phrase">not able to</span>
+                        type="translation">not able to</span>
                   <span target="#d1e375 #d1e377 #d1e379"
                         xml:lang="en"
                         cert="unknown"
                         type="note">"ni-" + "tsi-" + "kuu"? Is this a phrase or is the "tava" part of the verb (MWE)?</span>
-                  <span target="#d1e375 #d1e377 #d1e379"
+                  <span ana="#PHRS"
+                        target="#d1e375 #d1e377 #d1e379"
                         xml:lang="es"
                         cert="unknown"
-                        type="phrase"/>
-                  <span target="#d1e381" xml:lang="en" cert="low">it</span>
-                  <span target="#d1e381" xml:lang="es" cert="low">lo</span>
+                        type="translation"/>
+                  <span target="#d1e381" xml:lang="en" cert="low" type="translation">it</span>
+                  <span target="#d1e381" xml:lang="es" cert="low" type="translation">lo</span>
                   <!-- the meaning of this depends on the previous -->
-                  <span target="#d1e385" xml:lang="en">and</span>
-                  <span target="#d1e385" xml:lang="es">y</span>
-                  <span target="#d1e387 #d1e389 #d1e391" xml:lang="en" type="inflected">fell</span>
-                  <span target="#d1e387 #d1e389 #d1e391" xml:lang="es" type="inflected">se cayeron</span>
-                  <span target="#d1e394 #d1e396" xml:lang="en" type="phrase">into the water</span>
-                  <span target="#d1e394 #d1e396" xml:lang="es" type="phrase">en el agua</span>
+                  <span target="#d1e385" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e385" xml:lang="es" type="translation">y</span>
+                  <span ana="#INFL"
+                        target="#d1e387 #d1e389 #d1e391"
+                        xml:lang="en"
+                        type="translation">fell</span>
+                  <span ana="#INFL"
+                        target="#d1e387 #d1e389 #d1e391"
+                        xml:lang="es"
+                        type="translation">se cayeron</span>
+                  <span ana="#PHRS"
+                        target="#d1e394 #d1e396"
+                        xml:lang="en"
+                        type="translation">into the water</span>
+                  <span ana="#PHRS"
+                        target="#d1e394 #d1e396"
+                        xml:lang="es"
+                        type="translation">en el agua</span>
                </spanGrp>
                <seg xml:id="L153-03-03" type="S" xml:lang="mix">
                   <w xml:id="d1e403">Sara</w>
@@ -557,19 +689,39 @@
                   <w xml:id="d1e415">kueyi</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-03-03" xml:lang="en" cert="low">And many of the people and their children used to always drink there.</span>
-                  <span type="sentence" target="#L153-03-03" xml:lang="es" cert="low">Y mucha gente y sus niño bebían allí.</span>
-                  <span target="#d1e403" xml:lang="en">and</span>
-                  <span target="#d1e403" xml:lang="es">y</span>
-                  <span target="#d1e405 #d1e407" xml:lang="en" type="phrase">many</span>
-                  <span target="#d1e405 #d1e407" xml:lang="es" type="phrase">muchos</span>
-                  <span target="#d1e409" xml:lang="en">they</span>
-                  <span target="#d1e409" xml:lang="es">ellos</span>
-                  <span target="#d1e411" xml:lang="en" cert="low">children</span>
-                  <span target="#d1e411" xml:lang="es" cert="low">niño</span>
-                  <span target="#d1e413 #d1e415" xml:lang="en" type="inflected">used to drink</span>
-                  <span target="#d1e413 #d1e415" xml:lang="es" type="inflected">bebíban</span>
+               <spanGrp type="annotations">
+                  <span ana="#S"
+                        target="#L153-03-03"
+                        xml:lang="en"
+                        cert="low"
+                        type="translation">And many of the people and their children used to always drink there.</span>
+                  <span ana="#S"
+                        target="#L153-03-03"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">Y mucha gente y sus niño bebían allí.</span>
+                  <span target="#d1e403" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e403" xml:lang="es" type="translation">y</span>
+                  <span ana="#PHRS"
+                        target="#d1e405 #d1e407"
+                        xml:lang="en"
+                        type="translation">many</span>
+                  <span ana="#PHRS"
+                        target="#d1e405 #d1e407"
+                        xml:lang="es"
+                        type="translation">muchos</span>
+                  <span target="#d1e409" xml:lang="en" type="translation">they</span>
+                  <span target="#d1e409" xml:lang="es" type="translation">ellos</span>
+                  <span target="#d1e411" xml:lang="en" cert="low" type="translation">children</span>
+                  <span target="#d1e411" xml:lang="es" cert="low" type="translation">niño</span>
+                  <span ana="#INFL"
+                        target="#d1e413 #d1e415"
+                        xml:lang="en"
+                        type="translation">used to drink</span>
+                  <span ana="#INFL"
+                        target="#d1e413 #d1e415"
+                        xml:lang="es"
+                        type="translation">bebíban</span>
                </spanGrp>
             </p>
          </div>
@@ -590,22 +742,22 @@
                   <w xml:id="d1e438">yutu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-04-01" xml:lang="en">Then the elders began to chop down the tree.</span>
-                  <span type="sentence" target="#L153-04-01" xml:lang="es">Y los ancianos empezaron a cortar el árbol.</span>
-                  <span target="#d1e424" xml:lang="en">and</span>
-                  <span target="#d1e424" xml:lang="es">y</span>
-                  <span target="#d1e426" xml:lang="en">the</span>
-                  <span target="#d1e426" xml:lang="es">los</span>
-                  <span target="#d1e428" xml:lang="en">elder</span>
-                  <span target="#d1e428" xml:lang="es">anciano</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-04-01" xml:lang="en" type="translation">Then the elders began to chop down the tree.</span>
+                  <span ana="#S" target="#L153-04-01" xml:lang="es" type="translation">Y los ancianos empezaron a cortar el árbol.</span>
+                  <span target="#d1e424" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e424" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e426" xml:lang="en" type="translation">the</span>
+                  <span target="#d1e426" xml:lang="es" type="translation">los</span>
+                  <span target="#d1e428" xml:lang="en" type="translation">elder</span>
+                  <span target="#d1e428" xml:lang="es" type="translation">anciano</span>
                   <span target="#d1e430 #d1e432" xml:lang="en" type="inflection">they began</span>
                   <span target="#d1e430 #d1e432" xml:lang="es" type="inflection">empezaron</span>
-                  <span target="#d1e434" xml:lang="en">chop down</span>
+                  <span target="#d1e434" xml:lang="en" type="translation">chop down</span>
                   <span target="#d1e434" xml:lang="en" type="note">why is this in singular</span>
-                  <span target="#d1e434" xml:lang="es">cortar</span>
-                  <span target="#d1e438" xml:lang="en">tree</span>
-                  <span target="#d1e438" xml:lang="es">árbol</span>
+                  <span target="#d1e434" xml:lang="es" type="translation">cortar</span>
+                  <span target="#d1e438" xml:lang="en" type="translation">tree</span>
+                  <span target="#d1e438" xml:lang="es" type="translation">árbol</span>
                </spanGrp>
                <seg xml:id="L153-04-02" type="S" xml:lang="mix">
                   <w xml:id="d1e443">Ma</w>
@@ -618,30 +770,61 @@
                   <w xml:id="d1e457">kii</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-04-02" xml:lang="en">The men couldn't cut it down in a single day.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-04-02" xml:lang="en" type="translation">The men couldn't cut it down in a single day.</span>
+                  <span ana="#S"
                         target="#L153-04-02"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e443 #d1e445 #d1e447" xml:lang="en" type="phrase">they didn't see</span>
-                  <span target="#d1e443 #d1e445 #d1e447" xml:lang="es" type="phrase">no vieron</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span ana="#PHRS"
+                        target="#d1e443 #d1e445 #d1e447"
+                        xml:lang="en"
+                        type="translation">they didn't see</span>
+                  <span ana="#PHRS"
+                        target="#d1e443 #d1e445 #d1e447"
+                        xml:lang="es"
+                        type="translation">no vieron</span>
                   <span target="#d1e445 #d1e447" xml:lang="en" type="inflection">they saw</span>
                   <span target="#d1e445 #d1e447" xml:lang="es" type="inflection">vieron</span>
-                  <span target="#d1e449" xml:lang="en" cert="unknown">?</span>
+                  <span target="#d1e449"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e449" xml:lang="en" cert="unknown" type="note">Is this a variant of "ka'ncha" 'to chop'?</span>
-                  <span target="#d1e449" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e451" xml:lang="en" cert="unknown">?</span>
+                  <span target="#d1e449"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e451"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e451" xml:lang="en" cert="unknown" type="note">is this a conjunction or a person marker?</span>
-                  <span target="#d1e451" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e453" xml:lang="en" cert="unknown">it</span>
+                  <span target="#d1e451"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e453"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">it</span>
                   <span target="#d1e453" xml:lang="en" cert="unknown" type="note">(the tree)</span>
-                  <span target="#d1e453" xml:lang="es" cert="unknown">lo</span>
-                  <span target="#d1e455" xml:lang="en" cert="unknown">?</span>
+                  <span target="#d1e453"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">lo</span>
+                  <span target="#d1e455"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e455" xml:lang="en" cert="unknown" type="note">is this 'one' ("in"), 'be'/'have' or other meaning?</span>
-                  <span target="#d1e455" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e457" xml:lang="en" cert="medium">day</span>
-                  <span target="#d1e457" xml:lang="es" cert="medium">dia</span>
+                  <span target="#d1e455"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e457" xml:lang="en" cert="medium" type="translation">day</span>
+                  <span target="#d1e457" xml:lang="es" cert="medium" type="translation">dia</span>
                </spanGrp>
                <seg xml:id="L153-04-03" type="S" xml:lang="mix">
                   <w xml:id="d1e462">Cha</w>
@@ -660,33 +843,52 @@
                   <w xml:id="d1e478">tu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-04-03" xml:lang="en">And when the next day came, the tree went back to how it was before.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-04-03" xml:lang="en" type="translation">And when the next day came, the tree went back to how it was before.</span>
+                  <span ana="#S"
                         target="#L153-04-03"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e462" xml:lang="en">and</span>
-                  <span target="#d1e462" xml:lang="es">y</span>
-                  <span target="#d1e464" xml:lang="en">when</span>
-                  <span target="#d1e464" xml:lang="es">cuando</span>
-                  <span target="#d1e466" xml:lang="en">daytime</span>
-                  <span target="#d1e466" xml:lang="es">día</span>
-                  <span target="#d1e466 #d1e468" xml:lang="en" type="phrase">the next day</span>
-                  <span target="#d1e466 #d1e468" xml:lang="es" type="phrase">el proximo día</span>
-                  <span target="#d1e468" xml:lang="en">the next</span>
-                  <span target="#d1e468" xml:lang="es">el proximo</span>
-                  <span target="#d1e470" xml:lang="en">day</span>
-                  <span target="#d1e470" xml:lang="es">día</span>
-                  <span target="#d1e472" xml:lang="en" type="inflected">went back to </span>
-                  <span target="#d1e472" xml:lang="es" type="inflected">se volvió</span>
-                  <span target="#d1e474" xml:lang="en" cert="unknown">when</span>
-                  <span target="#d1e474" xml:lang="es" cert="unknown">cuando</span>
-                  <span target="#d1e476" xml:lang="en" cert="unknown">?</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e462" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e462" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e464" xml:lang="en" type="translation">when</span>
+                  <span target="#d1e464" xml:lang="es" type="translation">cuando</span>
+                  <span target="#d1e466" xml:lang="en" type="translation">daytime</span>
+                  <span target="#d1e466" xml:lang="es" type="translation">día</span>
+                  <span ana="#PHRS"
+                        target="#d1e466 #d1e468"
+                        xml:lang="en"
+                        type="translation">the next day</span>
+                  <span ana="#PHRS"
+                        target="#d1e466 #d1e468"
+                        xml:lang="es"
+                        type="translation">el proximo día</span>
+                  <span target="#d1e468" xml:lang="en" type="translation">the next</span>
+                  <span target="#d1e468" xml:lang="es" type="translation">el proximo</span>
+                  <span target="#d1e470" xml:lang="en" type="translation">day</span>
+                  <span target="#d1e470" xml:lang="es" type="translation">día</span>
+                  <span ana="#INFL" target="#d1e472" xml:lang="en" type="translation">went back to </span>
+                  <span ana="#INFL" target="#d1e472" xml:lang="es" type="translation">se volvió</span>
+                  <span target="#d1e474"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">when</span>
+                  <span target="#d1e474"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">cuando</span>
+                  <span target="#d1e476"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e476" xml:lang="en" cert="unknown" type="note">'it was' or 'bring up'?</span>
-                  <span target="#d1e476" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e478" xml:lang="en">it (tree)</span>
-                  <span target="#d1e478" xml:lang="es">lo (árbol)</span>
+                  <span target="#d1e476"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e478" xml:lang="en" type="translation">it (tree)</span>
+                  <span target="#d1e478" xml:lang="es" type="translation">lo (árbol)</span>
                </spanGrp>
                <seg xml:id="L153-04-04" type="S" xml:lang="mix">
                   <w xml:id="d1e483">Sara</w>
@@ -706,51 +908,81 @@
                   <w xml:id="d1e512">tu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S"
                         target="#L153-04-04"
-                        xml:lang="en"
-                        cert="unknown">Then they started again to chop the tree down, they chopped it all day long and then it was felled.</span>
-                  <span type="sentence"
-                        target="#L153-04-04"
-                        xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e483" xml:lang="en">then</span>
-                  <span target="#d1e483" xml:lang="es">pues</span>
-                  <span target="#d1e485 #d1e487" xml:lang="en" type="inflected">they started</span>
-                  <span target="#d1e485 #d1e487" xml:lang="es" type="inflected">empezaron</span>
-                  <span target="#d1e489 #d1e491" xml:lang="en" type="compound">again</span>
-                  <span target="#d1e489 #d1e491" xml:lang="es" type="compound">de nuevo</span>
-                  <span target="#d1e493 #d1e495" xml:lang="en" type="inflected">they chopped</span>
-                  <span target="#d1e493 #d1e495" xml:lang="es" type="inflected">cortaron</span>
-                  <span target="#d1e497" xml:lang="en">it (tree)</span>
-                  <span target="#d1e497" xml:lang="es">lo (árbol)</span>
-                  <span target="#d1e499 #d1e501 #d1e503"
                         xml:lang="en"
                         cert="unknown"
-                        type="phrase">all day long</span>
+                        type="translation">Then they started again to chop the tree down, they chopped it all day long and then it was felled.</span>
+                  <span ana="#S"
+                        target="#L153-04-04"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e483" xml:lang="en" type="translation">then</span>
+                  <span target="#d1e483" xml:lang="es" type="translation">pues</span>
+                  <span ana="#INFL"
+                        target="#d1e485 #d1e487"
+                        xml:lang="en"
+                        type="translation">they started</span>
+                  <span ana="#INFL"
+                        target="#d1e485 #d1e487"
+                        xml:lang="es"
+                        type="translation">empezaron</span>
+                  <span ana="#CMPND"
+                        target="#d1e489 #d1e491"
+                        xml:lang="en"
+                        type="translation">again</span>
+                  <span ana="#CMPND"
+                        target="#d1e489 #d1e491"
+                        xml:lang="es"
+                        type="translation">de nuevo</span>
+                  <span ana="#INFL"
+                        target="#d1e493 #d1e495"
+                        xml:lang="en"
+                        type="translation">they chopped</span>
+                  <span ana="#INFL"
+                        target="#d1e493 #d1e495"
+                        xml:lang="es"
+                        type="translation">cortaron</span>
+                  <span target="#d1e497" xml:lang="en" type="translation">it (tree)</span>
+                  <span target="#d1e497" xml:lang="es" type="translation">lo (árbol)</span>
+                  <span ana="#PHRS"
+                        target="#d1e499 #d1e501 #d1e503"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">all day long</span>
                   <span target="#d1e499 #d1e501 #d1e503"
                         xml:lang="en"
                         cert="unknown"
                         type="note">"ntuu" + "ñu" + "so" (what are the parts to this!?)</span>
-                  <span target="#d1e499 #d1e501 #d1e503"
+                  <span ana="#PHRS"
+                        target="#d1e499 #d1e501 #d1e503"
                         xml:lang="es"
                         cert="unknown"
-                        type="phrase">?</span>
-                  <span target="#d1e506" xml:lang="en">then</span>
-                  <span target="#d1e506" xml:lang="es">y</span>
-                  <span target="#d1e508" xml:lang="en" cert="unknown">?</span>
+                        type="translation">?</span>
+                  <span target="#d1e506" xml:lang="en" type="translation">then</span>
+                  <span target="#d1e506" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e508"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e508" xml:lang="en" cert="unknown" type="note">sense of "sana" here? 'again'?</span>
-                  <span target="#d1e508" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e510 #d1e512"
+                  <span target="#d1e508"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span ana="#INFL"
+                        target="#d1e510 #d1e512"
                         xml:lang="en"
                         cert="low"
-                        type="inflected">it was chopped down</span>
+                        type="translation">it was chopped down</span>
                   <span target="#d1e510 #d1e512" xml:lang="en" cert="low" type="note">is this a passive?</span>
-                  <span target="#d1e510 #d1e512"
+                  <span ana="#INFL"
+                        target="#d1e510 #d1e512"
                         xml:lang="es"
                         cert="unknown"
-                        type="inflected">lo cortaron</span>
+                        type="translation">lo cortaron</span>
                </spanGrp>
             </p>
          </div>
@@ -778,39 +1010,49 @@
                   <w xml:id="d1e546">Tixitu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-05-01" xml:lang="en">Then a trunk fell to the North towards Yucha Ita in a place called Tixitu.</span>
-                  <span type="sentence" target="#L153-05-01" xml:lang="es"/>
-                  <span target="#d1e521" xml:lang="en">then</span>
-                  <span target="#d1e521" xml:lang="es">y</span>
-                  <span target="#d1e525" xml:lang="en">peak</span>
-                  <span target="#d1e525" xml:lang="es">punta</span>
-                  <span target="#d1e527" xml:lang="en" type="inflected">fell</span>
-                  <span target="#d1e527" xml:lang="es" type="inflected">cayó</span>
-                  <span target="#d1e529 #d1e531 #d1e533"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-05-01" xml:lang="en" type="translation">Then a trunk fell to the North towards Yucha Ita in a place called Tixitu.</span>
+                  <span ana="#S" target="#L153-05-01" xml:lang="es" type="translation"/>
+                  <span target="#d1e521" xml:lang="en" type="translation">then</span>
+                  <span target="#d1e521" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e525" xml:lang="en" type="translation">peak</span>
+                  <span target="#d1e525" xml:lang="es" type="translation">punta</span>
+                  <span ana="#INFL" target="#d1e527" xml:lang="en" type="translation">fell</span>
+                  <span ana="#INFL" target="#d1e527" xml:lang="es" type="translation">cayó</span>
+                  <span ana="#PHRS"
+                        target="#d1e529 #d1e531 #d1e533"
                         xml:lang="en"
                         cert="unknown"
-                        type="phrase">?</span>
+                        type="translation">?</span>
                   <span target="#d1e529 #d1e531 #d1e533"
                         xml:lang="en"
                         cert="unknown"
                         type="note">'fell to the north side'?!</span>
-                  <span target="#d1e529 #d1e531 #d1e533"
+                  <span ana="#PHRS"
+                        target="#d1e529 #d1e531 #d1e533"
                         xml:lang="es"
                         cert="unknown"
-                        type="phrase">?</span>
-                  <span target="#d1e537 #d1e539"
+                        type="translation">?</span>
+                  <span ana="#CMPND"
+                        target="#d1e537 #d1e539"
                         xml:lang="en"
                         cert="low"
-                        type="compound">below</span>
-                  <span target="#d1e537 #d1e539"
+                        type="translation">below</span>
+                  <span ana="#CMPND"
+                        target="#d1e537 #d1e539"
                         xml:lang="es"
                         cert="low"
-                        type="compound">debajo de</span>
-                  <span target="#d1e541a #d1e541b" xml:lang="en" type="compound">Flower lake</span>
-                  <span target="#d1e541a #d1e541b" xml:lang="es" type="compound">lago de Flor</span>
-                  <span target="#d1e544" xml:lang="en" type="inflected">it is called</span>
-                  <span target="#d1e544" xml:lang="es" type="inflected">se llama</span>
+                        type="translation">debajo de</span>
+                  <span ana="#CMPND"
+                        target="#d1e541a #d1e541b"
+                        xml:lang="en"
+                        type="translation">Flower lake</span>
+                  <span ana="#CMPND"
+                        target="#d1e541a #d1e541b"
+                        xml:lang="es"
+                        type="translation">lago de Flor</span>
+                  <span ana="#INFL" target="#d1e544" xml:lang="en" type="translation">it is called</span>
+                  <span ana="#INFL" target="#d1e544" xml:lang="es" type="translation">se llama</span>
                   <span target="#d1e546" xml:lang="en" type="literal">large peak</span>
                   <span target="#d1e546" xml:lang="es" type="literal">punta larga</span>
                </spanGrp>
@@ -841,42 +1083,66 @@
                   <w xml:id="d1e584b">Xitu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-06-01" xml:lang="en">And there was a short red cactus sitting below where the the branch landed at a place called Yuku Xitu (algea forest)</span>
-                  <span type="sentence" target="#L153-06-01" xml:lang="es"/>
-                  <span target="#d1e555" xml:lang="en">and</span>
-                  <span target="#d1e555" xml:lang="es">y</span>
-                  <span target="#d1e557" xml:lang="en" cert="medium">other</span>
-                  <span target="#d1e557" xml:lang="es" cert="medium">oltro</span>
-                  <span target="#d1e559 #d1e561" xml:lang="en" cert="unknown">(red round cactus)</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-06-01" xml:lang="en" type="translation">And there was a short red cactus sitting below where the the branch landed at a place called Yuku Xitu (algea forest)</span>
+                  <span ana="#S" target="#L153-06-01" xml:lang="es" type="translation"/>
+                  <span target="#d1e555" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e555" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e557" xml:lang="en" cert="medium" type="translation">other</span>
+                  <span target="#d1e557" xml:lang="es" cert="medium" type="translation">oltro</span>
+                  <span target="#d1e559 #d1e561"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">(red round cactus)</span>
                   <span target="#d1e559 #d1e561"
                         xml:lang="en"
                         cert="unknown"
                         type="note">'big', 'red', 'right', 'sister'?</span>
-                  <span target="#d1e561" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e563" xml:lang="en" cert="unknown">?</span>
+                  <span target="#d1e561"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e563"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">?</span>
                   <span target="#d1e563" xml:lang="en" cert="unknown" type="note">is this a verb "ña-"+ "tsika" or is this different? Meaning?</span>
-                  <span target="#d1e563" xml:lang="es" cert="unknown">?</span>
-                  <span target="#d1e565 #d1e567" xml:lang="en">under</span>
-                  <span target="#d1e565 #d1e567" xml:lang="es">debajo de</span>
-                  <span target="#d1e569" xml:lang="en">where</span>
-                  <span target="#d1e569" xml:lang="es">donde</span>
-                  <span target="#d1e571" xml:lang="en">fell</span>
-                  <span target="#d1e571" xml:lang="es">cayó</span>
-                  <span target="#d1e573" xml:lang="en">other</span>
-                  <span target="#d1e573" xml:lang="es">otra</span>
-                  <span target="#d1e575" xml:lang="en">peak</span>
-                  <span target="#d1e575" xml:lang="es">punta</span>
-                  <span target="#d1e578" xml:lang="en">tree</span>
-                  <span target="#d1e578" xml:lang="es">árbol</span>
-                  <span target="#d1e573 #d1e575 #d1e578" xml:lang="en">the tree's other peak</span>
-                  <span target="#d1e573  #d1e575 #d1e578" xml:lang="es">la otra punta del árbol</span>
-                  <span target="#d1e582" xml:lang="en">is called</span>
-                  <span target="#d1e582" xml:lang="es">se llama</span>
-                  <span target="#d1e584a #d1e584b" xml:lang="en" type="compound">Mountain of the Peak</span>
-                  <span target="#d1e584a #d1e584b" xml:lang="en" type="compound">The Shoot</span>
-                  <span target="#d1e584a #d1e584b" xml:lang="es" type="compound">Monte de la Punta</span>
-                  <span target="#d1e584a #d1e584b" xml:lang="es" type="compound">El Retoño</span>
+                  <span target="#d1e563"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation">?</span>
+                  <span target="#d1e565 #d1e567" xml:lang="en" type="translation">under</span>
+                  <span target="#d1e565 #d1e567" xml:lang="es" type="translation">debajo de</span>
+                  <span target="#d1e569" xml:lang="en" type="translation">where</span>
+                  <span target="#d1e569" xml:lang="es" type="translation">donde</span>
+                  <span target="#d1e571" xml:lang="en" type="translation">fell</span>
+                  <span target="#d1e571" xml:lang="es" type="translation">cayó</span>
+                  <span target="#d1e573" xml:lang="en" type="translation">other</span>
+                  <span target="#d1e573" xml:lang="es" type="translation">otra</span>
+                  <span target="#d1e575" xml:lang="en" type="translation">peak</span>
+                  <span target="#d1e575" xml:lang="es" type="translation">punta</span>
+                  <span target="#d1e578" xml:lang="en" type="translation">tree</span>
+                  <span target="#d1e578" xml:lang="es" type="translation">árbol</span>
+                  <span target="#d1e573 #d1e575 #d1e578" xml:lang="en" type="translation">the tree's other peak</span>
+                  <span target="#d1e573  #d1e575 #d1e578" xml:lang="es" type="translation">la otra punta del árbol</span>
+                  <span target="#d1e582" xml:lang="en" type="translation">is called</span>
+                  <span target="#d1e582" xml:lang="es" type="translation">se llama</span>
+                  <span ana="#CMPND"
+                        target="#d1e584a #d1e584b"
+                        xml:lang="en"
+                        type="translation">Mountain of the Peak</span>
+                  <span ana="#CMPND"
+                        target="#d1e584a #d1e584b"
+                        xml:lang="en"
+                        type="translation">The Shoot</span>
+                  <span ana="#CMPND"
+                        target="#d1e584a #d1e584b"
+                        xml:lang="es"
+                        type="translation">Monte de la Punta</span>
+                  <span ana="#CMPND"
+                        target="#d1e584a #d1e584b"
+                        xml:lang="es"
+                        type="translation">El Retoño</span>
                </spanGrp>
                <seg xml:id="L153-06-02" type="S" xml:lang="mix">
                   <w xml:id="d1e589" orig="inka">Inkaa</w>
@@ -895,49 +1161,71 @@
                   <w xml:id="d1e616">veñu'u</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-06-02" xml:lang="en"/>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-06-02" xml:lang="en" type="translation"/>
+                  <span ana="#S"
                         target="#L153-06-02"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e589" xml:lang="en">there was</span>
-                  <span target="#d1e589" xml:lang="es">habia</span>
-                  <span target="#d1e591" xml:lang="en">around</span>
-                  <span target="#d1e591" xml:lang="es">cerca</span>
-                  <span target="#d1e593" xml:lang="en" cert="unknown"/>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e589" xml:lang="en" type="translation">there was</span>
+                  <span target="#d1e589" xml:lang="es" type="translation">habia</span>
+                  <span target="#d1e591" xml:lang="en" type="translation">around</span>
+                  <span target="#d1e591" xml:lang="es" type="translation">cerca</span>
+                  <span target="#d1e593"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation"/>
                   <span target="#d1e593" xml:lang="en" cert="unknown" type="note">what's the function here?</span>
-                  <span target="#d1e593" xml:lang="es" cert="unknown"/>
-                  <span target="#d1e595 #d1e597" xml:lang="en" cert="unknown">open area</span>
+                  <span target="#d1e593"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e595 #d1e597"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">open area</span>
                   <span target="#d1e595 #d1e597"
                         xml:lang="en"
                         cert="unknown"
                         type="note">is this "kua('a)" + "tsika"?</span>
-                  <span target="#d1e597" xml:lang="es" cert="unknown"/>
-                  <span target="#d1e599 #d1e601 #d1e603" xml:lang="en" type="phrase">in the middle of town</span>
-                  <span target="#d1e599 #d1e601 #d1e603" xml:lang="es" type="phrase">en el centro del pueblo</span>
-                  <span target="#d1e603" xml:lang="en">town</span>
-                  <span target="#d1e603" xml:lang="es">pueblo</span>
-                  <span target="#d1e605" xml:lang="en">where</span>
-                  <span target="#d1e605" xml:lang="es">donde</span>
-                  <span target="#d1e607" xml:lang="en" type="inflected">stood</span>
-                  <span target="#d1e607" xml:lang="es" type="inflected">estaba al pie</span>
-                  <span target="#d1e609" xml:lang="en">sabine tree</span>
-                  <span target="#d1e609" xml:lang="es">sabino</span>
-                  <span target="#d1e612 #d1e614"
+                  <span target="#d1e597"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
+                  <span ana="#PHRS"
+                        target="#d1e599 #d1e601 #d1e603"
+                        xml:lang="en"
+                        type="translation">in the middle of town</span>
+                  <span ana="#PHRS"
+                        target="#d1e599 #d1e601 #d1e603"
+                        xml:lang="es"
+                        type="translation">en el centro del pueblo</span>
+                  <span target="#d1e603" xml:lang="en" type="translation">town</span>
+                  <span target="#d1e603" xml:lang="es" type="translation">pueblo</span>
+                  <span target="#d1e605" xml:lang="en" type="translation">where</span>
+                  <span target="#d1e605" xml:lang="es" type="translation">donde</span>
+                  <span ana="#INFL" target="#d1e607" xml:lang="en" type="translation">stood</span>
+                  <span ana="#INFL" target="#d1e607" xml:lang="es" type="translation">estaba al pie</span>
+                  <span target="#d1e609" xml:lang="en" type="translation">sabine tree</span>
+                  <span target="#d1e609" xml:lang="es" type="translation">sabino</span>
+                  <span ana="#CMPND"
+                        target="#d1e612 #d1e614"
                         xml:lang="en"
                         cert="medium"
-                        type="compound">across from</span>
-                  <span target="#d1e612 #d1e614"
+                        type="translation">across from</span>
+                  <span ana="#CMPND"
+                        target="#d1e612 #d1e614"
                         xml:lang="en"
                         cert="medium"
-                        type="compound">in front of</span>
-                  <span target="#d1e612 #d1e614"
+                        type="translation">in front of</span>
+                  <span ana="#CMPND"
+                        target="#d1e612 #d1e614"
                         xml:lang="es"
                         cert="medium"
-                        type="compound">en frente de</span>
-                  <span target="#d1e616" xml:lang="en">church</span>
-                  <span target="#d1e616" xml:lang="es">iglesia</span>
+                        type="translation">en frente de</span>
+                  <span target="#d1e616" xml:lang="en" type="translation">church</span>
+                  <span target="#d1e616" xml:lang="es" type="translation">iglesia</span>
                </spanGrp>
             </p>
          </div>
@@ -967,35 +1255,68 @@
                   <!-- nopal -->
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-07-01" xml:lang="en">And that's how it happened that the eagle came to Mexico city and landed on the prickly pear cactus.</span>
-                  <span type="sentence" target="#L153-07-01" xml:lang="es">Y así es como ocurrió que la águila vino a la Cuidade de México y arerrizó en el nopal.</span>
-                  <span target="#d1e625" xml:lang="en">and</span>
-                  <span target="#d1e625" xml:lang="es">y</span>
-                  <span target="#d1e627" xml:lang="en">that's how</span>
-                  <span target="#d1e627" xml:lang="es">así es como</span>
-                  <span target="#d1e629" xml:lang="en" cert="medium" type="inflected">it occured</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-07-01" xml:lang="en" type="translation">And that's how it happened that the eagle came to Mexico city and landed on the prickly pear cactus.</span>
+                  <span ana="#S" target="#L153-07-01" xml:lang="es" type="translation">Y así es como ocurrió que la águila vino a la Cuidade de México y arerrizó en el nopal.</span>
+                  <span target="#d1e625" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e625" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e627" xml:lang="en" type="translation">that's how</span>
+                  <span target="#d1e627" xml:lang="es" type="translation">así es como</span>
+                  <span ana="#INFL"
+                        target="#d1e629"
+                        xml:lang="en"
+                        cert="medium"
+                        type="translation">it occured</span>
                   <span target="#d1e629" xml:lang="en" cert="medium" type="note">past tense</span>
-                  <span target="#d1e629" xml:lang="es" cert="medium" type="inflected">ocurrió</span>
-                  <span target="#d1e631" xml:lang="en">eagle</span>
-                  <span target="#d1e631" xml:lang="es">águila</span>
-                  <span target="#d1e635 #d1e637" xml:lang="en" type="inflected">it came</span>
-                  <span target="#d1e635 #d1e637"
+                  <span ana="#INFL"
+                        target="#d1e629"
                         xml:lang="es"
                         cert="medium"
-                        type="inflected">élla vino</span>
-                  <span target="#d1e639" xml:lang="en">Mexico City</span>
-                  <span target="#d1e639" xml:lang="es">Ciudad de México</span>
-                  <span target="#d1e643 #d1e645" xml:lang="en" type="inflected">it was sitting</span>
-                  <span target="#d1e643 #d1e645" xml:lang="en" type="inflected">it was landing</span>
-                  <span target="#d1e643 #d1e645" xml:lang="es" type="inflected">sentaba</span>
-                  <span target="#d1e643 #d1e645" xml:lang="es" type="inflected">aterrizaba</span>
-                  <span target="#d1e648 #d1e650" xml:lang="en" type="phrase">on a prickly pear cactus</span>
-                  <span target="#d1e648 #d1e650" xml:lang="en" type="phrase">on a opuntia</span>
-                  <span target="#d1e648 #d1e650" xml:lang="es" type="phrase">en un nopal</span>
-                  <span target="#d1e650" xml:lang="en">prickly pear cactus</span>
-                  <span target="#d1e650" xml:lang="en">opuntia</span>
-                  <span target="#d1e650" xml:lang="es">nopal</span>
+                        type="translation">ocurrió</span>
+                  <span target="#d1e631" xml:lang="en" type="translation">eagle</span>
+                  <span target="#d1e631" xml:lang="es" type="translation">águila</span>
+                  <span ana="#INFL"
+                        target="#d1e635 #d1e637"
+                        xml:lang="en"
+                        type="translation">it came</span>
+                  <span ana="#INFL"
+                        target="#d1e635 #d1e637"
+                        xml:lang="es"
+                        cert="medium"
+                        type="translation">élla vino</span>
+                  <span target="#d1e639" xml:lang="en" type="translation">Mexico City</span>
+                  <span target="#d1e639" xml:lang="es" type="translation">Ciudad de México</span>
+                  <span ana="#INFL"
+                        target="#d1e643 #d1e645"
+                        xml:lang="en"
+                        type="translation">it was sitting</span>
+                  <span ana="#INFL"
+                        target="#d1e643 #d1e645"
+                        xml:lang="en"
+                        type="translation">it was landing</span>
+                  <span ana="#INFL"
+                        target="#d1e643 #d1e645"
+                        xml:lang="es"
+                        type="translation">sentaba</span>
+                  <span ana="#INFL"
+                        target="#d1e643 #d1e645"
+                        xml:lang="es"
+                        type="translation">aterrizaba</span>
+                  <span ana="#PHRS"
+                        target="#d1e648 #d1e650"
+                        xml:lang="en"
+                        type="translation">on a prickly pear cactus</span>
+                  <span ana="#PHRS"
+                        target="#d1e648 #d1e650"
+                        xml:lang="en"
+                        type="translation">on a opuntia</span>
+                  <span ana="#PHRS"
+                        target="#d1e648 #d1e650"
+                        xml:lang="es"
+                        type="translation">en un nopal</span>
+                  <span target="#d1e650" xml:lang="en" type="translation">prickly pear cactus</span>
+                  <span target="#d1e650" xml:lang="en" type="translation">opuntia</span>
+                  <span target="#d1e650" xml:lang="es" type="translation">nopal</span>
                </spanGrp>
                <seg xml:id="L153-07-02" type="S" xml:lang="mix">
                   <w xml:id="d1e655">Sara</w>
@@ -1008,30 +1329,44 @@
                   <w xml:id="d1e669">ti</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S"
                         target="#L153-07-02"
                         xml:lang="en"
-                        cert="unknown">Then the older people arrived and grabbed it.</span>
-                  <span type="sentence"
+                        cert="unknown"
+                        type="translation">Then the older people arrived and grabbed it.</span>
+                  <span ana="#S"
                         target="#L153-07-02"
                         xml:lang="es"
-                        cert="unknown">Y los ancianos llegaron y (?).</span>
-                  <span target="#d1e655" xml:lang="en">then</span>
-                  <span target="#d1e655" xml:lang="es">y</span>
-                  <span target="#d1e657" xml:lang="en" type="inflected">arrived</span>
-                  <span target="#d1e657" xml:lang="es" type="inflected">llegaron</span>
-                  <span target="#d1e659 #d1e661 #d1e663" xml:lang="en" type="phrase">the older people</span>
-                  <span target="#d1e659 #d1e661 #d1e663" xml:lang="es" type="phrase">los ancianos</span>
-                  <span target="#d1e665 #d1e667" xml:lang="en" type="inflected">they grabbed</span>
+                        cert="unknown"
+                        type="translation">Y los ancianos llegaron y (?).</span>
+                  <span target="#d1e655" xml:lang="en" type="translation">then</span>
+                  <span target="#d1e655" xml:lang="es" type="translation">y</span>
+                  <span ana="#INFL" target="#d1e657" xml:lang="en" type="translation">arrived</span>
+                  <span ana="#INFL" target="#d1e657" xml:lang="es" type="translation">llegaron</span>
+                  <span ana="#PHRS"
+                        target="#d1e659 #d1e661 #d1e663"
+                        xml:lang="en"
+                        type="translation">the older people</span>
+                  <span ana="#PHRS"
+                        target="#d1e659 #d1e661 #d1e663"
+                        xml:lang="es"
+                        type="translation">los ancianos</span>
+                  <span ana="#INFL"
+                        target="#d1e665 #d1e667"
+                        xml:lang="en"
+                        type="translation">they grabbed</span>
                   <span target="#d1e665 #d1e667"
                         xml:lang="en"
                         cert="unknown"
                         type="note">(ntii na)? what is "ntii"?</span>
-                  <span target="#d1e665 #d1e667" xml:lang="es" type="inflected">agarraron</span>
+                  <span ana="#INFL"
+                        target="#d1e665 #d1e667"
+                        xml:lang="es"
+                        type="translation">agarraron</span>
                   <!-- 3pl.form -->
-                  <span target="#d1e669" xml:lang="en">it (animal)</span>
-                  <span target="#d1e669" xml:lang="es">la (animal)</span>
+                  <span target="#d1e669" xml:lang="en" type="translation">it (animal)</span>
+                  <span target="#d1e669" xml:lang="es" type="translation">la (animal)</span>
                </spanGrp>
                <seg xml:id="L153-07-03" type="S" xml:lang="mix">
                   <w xml:id="d1e674">Ntakani</w>
@@ -1044,30 +1379,40 @@
                   <!-- ? what is this doing here? -->
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S"
                         target="#L153-07-03"
                         xml:lang="en"
-                        cert="medium">They told the story a long time ago.</span>
-                  <span type="sentence"
+                        cert="medium"
+                        type="translation">They told the story a long time ago.</span>
+                  <span ana="#S"
                         target="#L153-07-03"
                         xml:lang="es"
-                        cert="medium">Contaron el cuento hace much tiempo.</span>
-                  <span target="#d1e674 #d1e676" xml:lang="en" type="inflected">they told</span>
-                  <span target="#d1e674 #d1e676" xml:lang="es" type="inflected">contaron</span>
-                  <span target="#d1e678 #d1e680"
+                        cert="medium"
+                        type="translation">Contaron el cuento hace much tiempo.</span>
+                  <span ana="#INFL"
+                        target="#d1e674 #d1e676"
+                        xml:lang="en"
+                        type="translation">they told</span>
+                  <span ana="#INFL"
+                        target="#d1e674 #d1e676"
+                        xml:lang="es"
+                        type="translation">contaron</span>
+                  <span ana="#PHRS"
+                        target="#d1e678 #d1e680"
                         xml:lang="en"
                         cert="high"
-                        type="phrase">a long time ago</span>
-                  <span target="#d1e678 #d1e680"
+                        type="translation">a long time ago</span>
+                  <span ana="#PHRS"
+                        target="#d1e678 #d1e680"
                         xml:lang="es"
                         cert="high"
-                        type="phrase">hace much tiempo</span>
-                  <span target="#d1e682" xml:lang="en">story</span>
-                  <span target="#d1e682" xml:lang="es">cuento</span>
-                  <span target="#d1e684" xml:lang="en" cert="low">it?</span>
+                        type="translation">hace much tiempo</span>
+                  <span target="#d1e682" xml:lang="en" type="translation">story</span>
+                  <span target="#d1e682" xml:lang="es" type="translation">cuento</span>
+                  <span target="#d1e684" xml:lang="en" cert="low" type="translation">it?</span>
                   <span target="#d1e684" xml:lang="en" type="note">what is this "ña" doing here?</span>
-                  <span target="#d1e684" xml:lang="es" cert="low">lo?</span>
+                  <span target="#d1e684" xml:lang="es" cert="low" type="translation">lo?</span>
                </spanGrp>
             </p>
          </div>
@@ -1090,27 +1435,51 @@
                   <w xml:id="d1e713">Nkoyo</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-08-01" xml:lang="en">And that's why there is an eagle in the middle of the Mexican flag.</span>
-                  <span type="sentence" target="#L153-08-01" xml:lang="es">Y por esto hay una ágila en el medio de la bandera Méxicana.</span>
-                  <span target="#d1e693 #d1e695" xml:lang="en" type="compound">that's why</span>
-                  <span target="#d1e693 #d1e695" xml:lang="es" type="compound">por esto</span>
-                  <span target="#d1e697" xml:lang="en">there is</span>
-                  <span target="#d1e697" xml:lang="es">hay</span>
-                  <span target="#d1e701" xml:lang="en">eagle</span>
-                  <span target="#d1e701" xml:lang="es">águila</span>
-                  <span target="#d1e703 #d1e705" xml:lang="en" type="phrase">in the middle</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-08-01" xml:lang="en" type="translation">And that's why there is an eagle in the middle of the Mexican flag.</span>
+                  <span ana="#S" target="#L153-08-01" xml:lang="es" type="translation">Y por esto hay una ágila en el medio de la bandera Méxicana.</span>
+                  <span ana="#CMPND"
+                        target="#d1e693 #d1e695"
+                        xml:lang="en"
+                        type="translation">that's why</span>
+                  <span ana="#CMPND"
+                        target="#d1e693 #d1e695"
+                        xml:lang="es"
+                        type="translation">por esto</span>
+                  <span target="#d1e697" xml:lang="en" type="translation">there is</span>
+                  <span target="#d1e697" xml:lang="es" type="translation">hay</span>
+                  <span target="#d1e701" xml:lang="en" type="translation">eagle</span>
+                  <span target="#d1e701" xml:lang="es" type="translation">águila</span>
+                  <span ana="#PHRS"
+                        target="#d1e703 #d1e705"
+                        xml:lang="en"
+                        type="translation">in the middle</span>
                   <span target="#d1e703 #d1e705" xml:lang="en" type="note">decide on where to put this in dictionary, should be related entry, maybe inside "ma'in"</span>
-                  <span target="#d1e703 #d1e705" xml:lang="es" type="phrase">en el medio</span>
-                  <span target="#d1e707 #d1e709" xml:lang="en" type="compound">flag</span>
-                  <span target="#d1e707 #d1e709" xml:lang="es" type="compound">bandera</span>
+                  <span ana="#PHRS"
+                        target="#d1e703 #d1e705"
+                        xml:lang="es"
+                        type="translation">en el medio</span>
+                  <span ana="#CMPND"
+                        target="#d1e707 #d1e709"
+                        xml:lang="en"
+                        type="translation">flag</span>
+                  <span ana="#CMPND"
+                        target="#d1e707 #d1e709"
+                        xml:lang="es"
+                        type="translation">bandera</span>
                   <span target="#d1e707 #d1e709" xml:lang="en" type="note">literal translation: 'big cloth'</span>
-                  <span target="#d1e711" xml:lang="en">of</span>
-                  <span target="#d1e711" xml:lang="es">de</span>
-                  <span target="#d1e707 #d1e709 #d1e713" xml:lang="en" type="phrase">the Mexican flag</span>
-                  <span target="#d1e707 #d1e709 #d1e713" xml:lang="es" type="phrase">bandera Méxicana</span>
-                  <span target="#d1e713" xml:lang="en">Mexico</span>
-                  <span target="#d1e713" xml:lang="es">México</span>
+                  <span target="#d1e711" xml:lang="en" type="translation">of</span>
+                  <span target="#d1e711" xml:lang="es" type="translation">de</span>
+                  <span ana="#PHRS"
+                        target="#d1e707 #d1e709 #d1e713"
+                        xml:lang="en"
+                        type="translation">the Mexican flag</span>
+                  <span ana="#PHRS"
+                        target="#d1e707 #d1e709 #d1e713"
+                        xml:lang="es"
+                        type="translation">bandera Méxicana</span>
+                  <span target="#d1e713" xml:lang="en" type="translation">Mexico</span>
+                  <span target="#d1e713" xml:lang="es" type="translation">México</span>
                </spanGrp>
                <seg xml:id="L153-08-02" type="S" xml:lang="mix">
                   <w xml:id="d1e719">Sara</w>
@@ -1127,39 +1496,56 @@
                   <w xml:id="d1e742">Nkoyo</w>
                   <pc>;</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-08-02" xml:lang="en">And it remains on the cloth, a thing called a flag of Mexico.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-08-02" xml:lang="en" type="translation">And it remains on the cloth, a thing called a flag of Mexico.</span>
+                  <span ana="#S"
                         target="#L153-08-02"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e719" xml:lang="en">and</span>
-                  <span target="#d1e719" xml:lang="es">y</span>
-                  <span target="#d1e721 #d1e723" xml:lang="en" type="inflected">remained</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e719" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e719" xml:lang="es" type="translation">y</span>
+                  <span ana="#INFL"
+                        target="#d1e721 #d1e723"
+                        xml:lang="en"
+                        type="translation">remained</span>
                   <!-- V,past + PRON-ANML -->
                   <span target="#d1e721 #d1e723" xml:lang="en" type="note">"kintoo" stay behind</span>
-                  <span target="#d1e721 #d1e723" xml:lang="es" type="inflected">quedó</span>
-                  <span target="#d1e725 #d1e727"
+                  <span ana="#INFL"
+                        target="#d1e721 #d1e723"
+                        xml:lang="es"
+                        type="translation">quedó</span>
+                  <span ana="#PHRS"
+                        target="#d1e725 #d1e727"
                         xml:lang="en"
                         cert="medium"
-                        type="phrase">on the cloth</span>
-                  <span target="#d1e725 #d1e727"
+                        type="translation">on the cloth</span>
+                  <span ana="#PHRS"
+                        target="#d1e725 #d1e727"
                         xml:lang="es"
                         cert="medium"
-                        type="phrase">en la tela</span>
-                  <span target="#d1e729" xml:lang="en" cert="unknown"/>
+                        type="translation">en la tela</span>
+                  <span target="#d1e729"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation"/>
                   <span target="#d1e729" xml:lang="en" cert="unknown" type="note">what "ii" is this!!?</span>
-                  <span target="#d1e729" xml:lang="es" cert="unknown"/>
-                  <span target="#d1e731" xml:lang="en">that</span>
-                  <span target="#d1e731" xml:lang="es">che</span>
-                  <span target="#d1e733" xml:lang="en" type="inflected">it's called</span>
-                  <span target="#d1e733" xml:lang="es" type="inflected">se llama</span>
-                  <span target="#d1e735 #d1e737 #d1e739 #d1e742"
-                        xml:lang="en"
-                        type="phrase">Mexican flag</span>
-                  <span target="#d1e735 #d1e737 #d1e739 #d1e742"
+                  <span target="#d1e729"
                         xml:lang="es"
-                        type="phrase">la bandera de México</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e731" xml:lang="en" type="translation">that</span>
+                  <span target="#d1e731" xml:lang="es" type="translation">che</span>
+                  <span ana="#INFL" target="#d1e733" xml:lang="en" type="translation">it's called</span>
+                  <span ana="#INFL" target="#d1e733" xml:lang="es" type="translation">se llama</span>
+                  <span ana="#PHRS"
+                        target="#d1e735 #d1e737 #d1e739 #d1e742"
+                        xml:lang="en"
+                        type="translation">Mexican flag</span>
+                  <span ana="#PHRS"
+                        target="#d1e735 #d1e737 #d1e739 #d1e742"
+                        xml:lang="es"
+                        type="translation">la bandera de México</span>
                </spanGrp>
                <seg xml:id="L153-08-03" type="S" xml:lang="mix">
                   <w xml:id="d1e747">nikintoo</w>
@@ -1170,24 +1556,32 @@
                   <w xml:id="d1e755">xu'un</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S"
                         target="#L153-08-03"
                         xml:lang="en"
-                        cert="medium">It is found also on money.</span>
-                  <span type="sentence"
+                        cert="medium"
+                        type="translation">It is found also on money.</span>
+                  <span ana="#S"
                         target="#L153-08-03"
                         xml:lang="es"
-                        cert="medium">Se lo encuentra también en el dinero.</span>
-                  <span target="#d1e747 #d1e751" xml:lang="en" cert="low">it appears</span>
+                        cert="medium"
+                        type="translation">Se lo encuentra también en el dinero.</span>
+                  <span target="#d1e747 #d1e751"
+                        xml:lang="en"
+                        cert="low"
+                        type="translation">it appears</span>
                   <span target="#d1e747 #d1e751" xml:lang="en" cert="low" type="note">why "ni-"!?</span>
-                  <span target="#d1e747 #d1e751" xml:lang="es" cert="low">se lo encuentra</span>
-                  <span target="#d1e749" xml:lang="en">also</span>
-                  <span target="#d1e749" xml:lang="es">también</span>
-                  <span target="#d1e753" xml:lang="en">on</span>
-                  <span target="#d1e753" xml:lang="es" cert="medium">en</span>
-                  <span target="#d1e755" xml:lang="en">money</span>
-                  <span target="#d1e755" xml:lang="es" cert="medium">dinero</span>
+                  <span target="#d1e747 #d1e751"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">se lo encuentra</span>
+                  <span target="#d1e749" xml:lang="en" type="translation">also</span>
+                  <span target="#d1e749" xml:lang="es" type="translation">también</span>
+                  <span target="#d1e753" xml:lang="en" type="translation">on</span>
+                  <span target="#d1e753" xml:lang="es" cert="medium" type="translation">en</span>
+                  <span target="#d1e755" xml:lang="en" type="translation">money</span>
+                  <span target="#d1e755" xml:lang="es" cert="medium" type="translation">dinero</span>
                </spanGrp>
                <seg xml:id="L153-08-04" type="S" xml:lang="mix">
                   <w xml:id="d1e760">Ntakani</w>
@@ -1206,29 +1600,49 @@
                   <w xml:id="d1e785">Nkoyo</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-08-04" xml:lang="en" cert="low">The people told about how a Sabine tree used to stand and how an eagle that used to live (here) and left to go to Mexico City. </span>
-                  <span type="sentence" target="#L153-08-04" xml:lang="es" cert="low">La gente contaron de como había un sabino estaba y como una ágila (?) ocurrió a venir a la Ciudad de México.</span>
-                  <span target="#d1e760 #d1e762" xml:lang="en" type="inflected">they told</span>
-                  <span target="#d1e760 #d1e762" xml:lang="es" type="inflected">contaron</span>
-                  <span target="#d1e764" xml:lang="en">how</span>
-                  <span target="#d1e764" xml:lang="es">como</span>
-                  <span target="#d1e766" xml:lang="en" type="inflected">stood</span>
-                  <span target="#d1e766" xml:lang="es" type="inflected">estaba</span>
-                  <span target="#d1e768" xml:lang="en">Sabine tree</span>
-                  <span target="#d1e768" xml:lang="es">sabino</span>
-                  <span target="#d1e770" xml:lang="en">and</span>
-                  <span target="#d1e770" xml:lang="es">y</span>
-                  <span target="#d1e774" xml:lang="en">eagle</span>
-                  <span target="#d1e774" xml:lang="es">águila</span>
-                  <span target="#d1e776" xml:lang="en" type="inflected">happened</span>
-                  <span target="#d1e776" xml:lang="es" type="inflected">ocurrió</span>
-                  <span target="#d1e778" xml:lang="en">animal</span>
-                  <span target="#d1e778" xml:lang="es">animal</span>
-                  <span target="#d1e780" xml:lang="en" type="inflected">came</span>
-                  <span target="#d1e780" xml:lang="es" type="inflected">vino</span>
-                  <span target="#d1e783 #d1e785" xml:lang="en" type="compound">Mexico City</span>
-                  <span target="#d1e783 #d1e785" xml:lang="es" type="compound">Ciudad de México</span>
+               <spanGrp type="annotations">
+                  <span ana="#S"
+                        target="#L153-08-04"
+                        xml:lang="en"
+                        cert="low"
+                        type="translation">The people told about how a Sabine tree used to stand and how an eagle that used to live (here) and left to go to Mexico City. </span>
+                  <span ana="#S"
+                        target="#L153-08-04"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">La gente contaron de como había un sabino estaba y como una ágila (?) ocurrió a venir a la Ciudad de México.</span>
+                  <span ana="#INFL"
+                        target="#d1e760 #d1e762"
+                        xml:lang="en"
+                        type="translation">they told</span>
+                  <span ana="#INFL"
+                        target="#d1e760 #d1e762"
+                        xml:lang="es"
+                        type="translation">contaron</span>
+                  <span target="#d1e764" xml:lang="en" type="translation">how</span>
+                  <span target="#d1e764" xml:lang="es" type="translation">como</span>
+                  <span ana="#INFL" target="#d1e766" xml:lang="en" type="translation">stood</span>
+                  <span ana="#INFL" target="#d1e766" xml:lang="es" type="translation">estaba</span>
+                  <span target="#d1e768" xml:lang="en" type="translation">Sabine tree</span>
+                  <span target="#d1e768" xml:lang="es" type="translation">sabino</span>
+                  <span target="#d1e770" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e770" xml:lang="es" type="translation">y</span>
+                  <span target="#d1e774" xml:lang="en" type="translation">eagle</span>
+                  <span target="#d1e774" xml:lang="es" type="translation">águila</span>
+                  <span ana="#INFL" target="#d1e776" xml:lang="en" type="translation">happened</span>
+                  <span ana="#INFL" target="#d1e776" xml:lang="es" type="translation">ocurrió</span>
+                  <span target="#d1e778" xml:lang="en" type="translation">animal</span>
+                  <span target="#d1e778" xml:lang="es" type="translation">animal</span>
+                  <span ana="#INFL" target="#d1e780" xml:lang="en" type="translation">came</span>
+                  <span ana="#INFL" target="#d1e780" xml:lang="es" type="translation">vino</span>
+                  <span ana="#CMPND"
+                        target="#d1e783 #d1e785"
+                        xml:lang="en"
+                        type="translation">Mexico City</span>
+                  <span ana="#CMPND"
+                        target="#d1e783 #d1e785"
+                        xml:lang="es"
+                        type="translation">Ciudad de México</span>
                </spanGrp>
             </p>
          </div>
@@ -1253,38 +1667,65 @@
                   <w xml:id="d1e819">yo</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-09-01" xml:lang="en">It it had have been this way, they chopped the tree where it stood here at the gate of the church of Mixtepec.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-09-01" xml:lang="en" type="translation">It it had have been this way, they chopped the tree where it stood here at the gate of the church of Mixtepec.</span>
+                  <span ana="#S"
                         target="#L153-09-01"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e794 #d1e796 #d1e798" xml:lang="en" type="phrase">if this had been otherwis</span>
-                  <span target="#d1e794 #d1e796 #d1e798" xml:lang="es" type="phrase">se</span>
-                  <span target="#d1e794" xml:lang="en">if</span>
-                  <span target="#d1e794" xml:lang="es">se</span>
-                  <span target="#d1e796" xml:lang="en" type="inflected">been</span>
-                  <span target="#d1e796" xml:lang="es" type="inflected">fue</span>
-                  <span target="#d1e798" xml:lang="en" cert="low">such?</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span ana="#PHRS"
+                        target="#d1e794 #d1e796 #d1e798"
+                        xml:lang="en"
+                        type="translation">if this had been otherwis</span>
+                  <span ana="#PHRS"
+                        target="#d1e794 #d1e796 #d1e798"
+                        xml:lang="es"
+                        type="translation">se</span>
+                  <span target="#d1e794" xml:lang="en" type="translation">if</span>
+                  <span target="#d1e794" xml:lang="es" type="translation">se</span>
+                  <span ana="#INFL" target="#d1e796" xml:lang="en" type="translation">been</span>
+                  <span ana="#INFL" target="#d1e796" xml:lang="es" type="translation">fue</span>
+                  <span target="#d1e798" xml:lang="en" cert="low" type="translation">such?</span>
                   <!-- such? -->
-                  <span target="#d1e798" xml:lang="es" cert="low">así?</span>
+                  <span target="#d1e798" xml:lang="es" cert="low" type="translation">así?</span>
                   <!-- así -->
-                  <span target="#d1e802 #d1e804" xml:lang="en" type="inflected">they chopped down</span>
-                  <span target="#d1e802 #d1e804" xml:lang="es" type="inflected">cortaron</span>
-                  <span target="#d1e806" xml:lang="en">sabine tree</span>
-                  <span target="#d1e806" xml:lang="es">sabino</span>
-                  <span target="#d1e808" xml:lang="en" cert="low" type="inflected">stood</span>
-                  <span target="#d1e808" xml:lang="es" cert="low" type="inflected">estaba al pie</span>
-                  <span target="#d1e810" xml:lang="en">outside</span>
-                  <span target="#d1e810" xml:lang="es">afuera</span>
-                  <span target="#d1e812" xml:lang="en">the church</span>
-                  <span target="#d1e812" xml:lang="es">la iglesia</span>
-                  <span target="#d1e814" xml:lang="en">town</span>
-                  <span target="#d1e814" xml:lang="es">publo</span>
-                  <span target="#d1e817" xml:lang="en">Mixtepec</span>
-                  <span target="#d1e817" xml:lang="es">Mixtepec</span>
-                  <span target="#d1e819" xml:lang="en" cert="unknown">(what is this doing?)</span>
-                  <span target="#d1e819" xml:lang="es" cert="unknown"/>
+                  <span ana="#INFL"
+                        target="#d1e802 #d1e804"
+                        xml:lang="en"
+                        type="translation">they chopped down</span>
+                  <span ana="#INFL"
+                        target="#d1e802 #d1e804"
+                        xml:lang="es"
+                        type="translation">cortaron</span>
+                  <span target="#d1e806" xml:lang="en" type="translation">sabine tree</span>
+                  <span target="#d1e806" xml:lang="es" type="translation">sabino</span>
+                  <span ana="#INFL"
+                        target="#d1e808"
+                        xml:lang="en"
+                        cert="low"
+                        type="translation">stood</span>
+                  <span ana="#INFL"
+                        target="#d1e808"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation">estaba al pie</span>
+                  <span target="#d1e810" xml:lang="en" type="translation">outside</span>
+                  <span target="#d1e810" xml:lang="es" type="translation">afuera</span>
+                  <span target="#d1e812" xml:lang="en" type="translation">the church</span>
+                  <span target="#d1e812" xml:lang="es" type="translation">la iglesia</span>
+                  <span target="#d1e814" xml:lang="en" type="translation">town</span>
+                  <span target="#d1e814" xml:lang="es" type="translation">publo</span>
+                  <span target="#d1e817" xml:lang="en" type="translation">Mixtepec</span>
+                  <span target="#d1e817" xml:lang="es" type="translation">Mixtepec</span>
+                  <span target="#d1e819"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">(what is this doing?)</span>
+                  <span target="#d1e819"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
                </spanGrp>
                <seg xml:id="L153-09-02" type="S" xml:lang="mix">
                   <w xml:id="d1e824">Ñuu</w>
@@ -1296,28 +1737,34 @@
                   <w xml:id="d1e834">Nkoyo</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-09-02" xml:lang="en">This town would have been a big town just like Mexico City.</span>
-                  <span type="sentence" target="#L153-09-02" xml:lang="es" cert="low"/>
-                  <span target="#d1e824" xml:lang="en">this</span>
-                  <span target="#d1e824" xml:lang="es">este</span>
-                  <span target="#d1e826" xml:lang="en">town</span>
-                  <span target="#d1e826" xml:lang="es">pueblo</span>
-                  <span target="#d1e828" xml:lang="en" type="inflected">will be</span>
-                  <span target="#d1e828" xml:lang="es" type="inflected">va a ser</span>
-                  <span target="#d1e830a #d1e830b"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-09-02" xml:lang="en" type="translation">This town would have been a big town just like Mexico City.</span>
+                  <span ana="#S"
+                        target="#L153-09-02"
+                        xml:lang="es"
+                        cert="low"
+                        type="translation"/>
+                  <span target="#d1e824" xml:lang="en" type="translation">this</span>
+                  <span target="#d1e824" xml:lang="es" type="translation">este</span>
+                  <span target="#d1e826" xml:lang="en" type="translation">town</span>
+                  <span target="#d1e826" xml:lang="es" type="translation">pueblo</span>
+                  <span ana="#INFL" target="#d1e828" xml:lang="en" type="translation">will be</span>
+                  <span ana="#INFL" target="#d1e828" xml:lang="es" type="translation">va a ser</span>
+                  <span ana="#PHRS"
+                        target="#d1e830a #d1e830b"
                         xml:lang="en"
                         cert="medium"
-                        type="phrase">Big City</span>
-                  <span target="#d1e830a #d1e830b"
+                        type="translation">Big City</span>
+                  <span ana="#PHRS"
+                        target="#d1e830a #d1e830b"
                         xml:lang="es"
                         cert="medium"
-                        type="phrase">Ciudad Grande</span>
+                        type="translation">Ciudad Grande</span>
                   <!-- is this a place name? Are they saying the name of SJM will be changed to "Big City" in the future? -->
-                  <span target="#d1e832" xml:lang="en">like</span>
-                  <span target="#d1e832" xml:lang="es">como</span>
-                  <span target="#d1e834" xml:lang="en" cert="medium">Mexico City</span>
-                  <span target="#d1e834" xml:lang="es" cert="medium">Ciudad de México</span>
+                  <span target="#d1e832" xml:lang="en" type="translation">like</span>
+                  <span target="#d1e832" xml:lang="es" type="translation">como</span>
+                  <span target="#d1e834" xml:lang="en" cert="medium" type="translation">Mexico City</span>
+                  <span target="#d1e834" xml:lang="es" cert="medium" type="translation">Ciudad de México</span>
                   <!-- -->
                </spanGrp>
             </p>
@@ -1347,30 +1794,37 @@
                   <w xml:id="d1e872">Ntua</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-01" xml:lang="en">There is a very big Sabine tree that is in a town, which is called "El Tule" in Oaxaca City.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-01" xml:lang="en" type="translation">There is a very big Sabine tree that is in a town, which is called "El Tule" in Oaxaca City.</span>
+                  <span ana="#S"
                         target="#L153-10-01"
                         xml:lang="es"
-                        cert="medium">Hay un sabino muy grande que es en un pueblo, que se llama "El Tule" en la Ciudad de Oaxaca.</span>
-                  <span target="#d1e843" xml:lang="en">there is</span>
-                  <span target="#d1e843" xml:lang="es">hay</span>
-                  <span target="#d1e847" xml:lang="en">Sabine tree</span>
-                  <span target="#d1e847" xml:lang="es">sabino</span>
-                  <span target="#d1e849 #d1e851" xml:lang="en" type="phrase">very big</span>
-                  <span target="#d1e849 #d1e851" xml:lang="es" type="phrase">muy grande</span>
-                  <span target="#d1e853" xml:lang="en">that</span>
-                  <span target="#d1e853" xml:lang="es">que</span>
-                  <span target="#d1e855" xml:lang="en">is</span>
-                  <span target="#d1e855" xml:lang="es" cert="medium">es</span>
-                  <span target="#d1e859" xml:lang="en">town</span>
-                  <span target="#d1e859" xml:lang="es">pueblo</span>
-                  <span target="#d1e861" xml:lang="en" type="compound">is called</span>
-                  <span target="#d1e861" xml:lang="es" type="compound">se llama</span>
+                        cert="medium"
+                        type="translation">Hay un sabino muy grande que es en un pueblo, que se llama "El Tule" en la Ciudad de Oaxaca.</span>
+                  <span target="#d1e843" xml:lang="en" type="translation">there is</span>
+                  <span target="#d1e843" xml:lang="es" type="translation">hay</span>
+                  <span target="#d1e847" xml:lang="en" type="translation">Sabine tree</span>
+                  <span target="#d1e847" xml:lang="es" type="translation">sabino</span>
+                  <span ana="#PHRS"
+                        target="#d1e849 #d1e851"
+                        xml:lang="en"
+                        type="translation">very big</span>
+                  <span ana="#PHRS"
+                        target="#d1e849 #d1e851"
+                        xml:lang="es"
+                        type="translation">muy grande</span>
+                  <span target="#d1e853" xml:lang="en" type="translation">that</span>
+                  <span target="#d1e853" xml:lang="es" type="translation">que</span>
+                  <span target="#d1e855" xml:lang="en" type="translation">is</span>
+                  <span target="#d1e855" xml:lang="es" cert="medium" type="translation">es</span>
+                  <span target="#d1e859" xml:lang="en" type="translation">town</span>
+                  <span target="#d1e859" xml:lang="es" type="translation">pueblo</span>
+                  <span ana="#CMPND" target="#d1e861" xml:lang="en" type="translation">is called</span>
+                  <span ana="#CMPND" target="#d1e861" xml:lang="es" type="translation">se llama</span>
                   <!-- shojuld this be literal? -->
                   <!-- https://es.wikipedia.org/wiki/Schoenoplectus_acutus -->
-                  <span target="#d1e870 #d1e872" xml:lang="en">Oaxaca City</span>
-                  <span target="#d1e870 #d1e872" xml:lang="es">Ciudad de Oaxaca</span>
+                  <span target="#d1e870 #d1e872" xml:lang="en" type="translation">Oaxaca City</span>
+                  <span target="#d1e870 #d1e872" xml:lang="es" type="translation">Ciudad de Oaxaca</span>
                </spanGrp>
                <seg xml:id="L153-10-02" type="S" xml:lang="mix">
                   <w xml:id="d1e877" cert="low">Inkaa</w>
@@ -1392,40 +1846,62 @@
                   <w xml:id="d1e902">ta</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-02" xml:lang="en">It was two thousand years old and it was big, around fourty two meters; very tall.</span>
-                  <span type="sentence" target="#L153-10-02" xml:lang="es">Tenía dos mil años de edad y era grande, cerca de cuarenta y dos metros; muy alto.</span>
-                  <span target="#d1e877 #d1e879 #d1e881 #d1e883"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-02" xml:lang="en" type="translation">It was two thousand years old and it was big, around fourty two meters; very tall.</span>
+                  <span ana="#S" target="#L153-10-02" xml:lang="es" type="translation">Tenía dos mil años de edad y era grande, cerca de cuarenta y dos metros; muy alto.</span>
+                  <span ana="#PHRS"
+                        target="#d1e877 #d1e879 #d1e881 #d1e883"
                         xml:lang="en"
-                        type="phrase">it was two thousand years old</span>
+                        type="translation">it was two thousand years old</span>
                   <span target="#d1e877 #d1e879 #d1e881 #d1e883" xml:lang="en" type="note">phrase formula for age: "inkaa + (pron) + (num) + kuia"</span>
-                  <span target="#d1e877 #d1e879 #d1e881 #d1e883"
+                  <span ana="#PHRS"
+                        target="#d1e877 #d1e879 #d1e881 #d1e883"
                         xml:lang="es"
-                        type="phrase">tenía dos mil años de edad</span>
-                  <span target="#d1e881a #d1e881b" xml:lang="en" type="compound">two thousand</span>
-                  <span target="#d1e881a #d1e881b" xml:lang="es" type="compound">dos mil</span>
-                  <span target="#d1e883" xml:lang="en">year</span>
-                  <span target="#d1e883" xml:lang="es">año</span>
-                  <span target="#d1e885" xml:lang="en">and</span>
-                  <span target="#d1e885" xml:lang="es">y</span>
-                  <span target="#d1e887 #d1e889" xml:lang="en" type="inflected">it was big</span>
+                        type="translation">tenía dos mil años de edad</span>
+                  <span ana="#CMPND"
+                        target="#d1e881a #d1e881b"
+                        xml:lang="en"
+                        type="translation">two thousand</span>
+                  <span ana="#CMPND"
+                        target="#d1e881a #d1e881b"
+                        xml:lang="es"
+                        type="translation">dos mil</span>
+                  <span target="#d1e883" xml:lang="en" type="translation">year</span>
+                  <span target="#d1e883" xml:lang="es" type="translation">año</span>
+                  <span target="#d1e885" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e885" xml:lang="es" type="translation">y</span>
+                  <span ana="#INFL"
+                        target="#d1e887 #d1e889"
+                        xml:lang="en"
+                        type="translation">it was big</span>
                   <!---->
                   <span target="#d1e887 #d1e889" xml:lang="en" type="note">predicating adj</span>
-                  <span target="#d1e887 #d1e889" xml:lang="es" type="inflected">era grande</span>
-                  <span target="#d1e891" xml:lang="en">around</span>
-                  <span target="#d1e891" xml:lang="es">cerca</span>
-                  <span target="#d1e893a #d1e893b" xml:lang="en" type="compound">forty two</span>
-                  <span target="#d1e893a #d1e893b" xml:lang="es" type="compound">cuarenta y dos</span>
-                  <span target="#d1e895" xml:lang="en">meters</span>
-                  <span target="#d1e895" xml:lang="es">metros</span>
-                  <span target="#d1e900 #d1e902"
+                  <span ana="#INFL"
+                        target="#d1e887 #d1e889"
+                        xml:lang="es"
+                        type="translation">era grande</span>
+                  <span target="#d1e891" xml:lang="en" type="translation">around</span>
+                  <span target="#d1e891" xml:lang="es" type="translation">cerca</span>
+                  <span ana="#CMPND"
+                        target="#d1e893a #d1e893b"
+                        xml:lang="en"
+                        type="translation">forty two</span>
+                  <span ana="#CMPND"
+                        target="#d1e893a #d1e893b"
+                        xml:lang="es"
+                        type="translation">cuarenta y dos</span>
+                  <span target="#d1e895" xml:lang="en" type="translation">meters</span>
+                  <span target="#d1e895" xml:lang="es" type="translation">metros</span>
+                  <span ana="#PHRS"
+                        target="#d1e900 #d1e902"
                         xml:lang="en"
                         cert="medium"
-                        type="phrase">very tall</span>
-                  <span target="#d1e900 #d1e902"
+                        type="translation">very tall</span>
+                  <span ana="#PHRS"
+                        target="#d1e900 #d1e902"
                         xml:lang="es"
                         cert="medium"
-                        type="phrase">muy alto</span>
+                        type="translation">muy alto</span>
                </spanGrp>
                <seg xml:id="L153-10-04" type="S" xml:lang="mix">
                   <w xml:id="d1e907">Ña</w>
@@ -1440,28 +1916,47 @@
                   <w xml:id="d1e921">metru</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-04" xml:lang="en">The size of it's base is around fifty eight meters wide.</span>
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-04" xml:lang="en" type="translation">The size of it's base is around fifty eight meters wide.</span>
+                  <span ana="#S"
                         target="#L153-10-04"
                         xml:lang="es"
-                        cert="unknown"/>
-                  <span target="#d1e907" xml:lang="en">given that</span>
-                  <span target="#d1e907" xml:lang="es"/>
-                  <span target="#d1e909" xml:lang="en" cert="low">size</span>
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e907" xml:lang="en" type="translation">given that</span>
+                  <span target="#d1e907" xml:lang="es" type="translation"/>
+                  <span target="#d1e909" xml:lang="en" cert="low" type="translation">size</span>
                   <!-- I need this verb before I can translate the rest -->
-                  <span target="#d1e909" xml:lang="es" cert="unknown"/>
-                  <span target="#d1e911 #d1e913" xml:lang="en" type="inflected">it's base (?)</span>
-                  <span target="#d1e911 #d1e913" xml:lang="en" type="inflected">it's trunk (?)</span>
-                  <span target="#d1e911 #d1e913" xml:lang="es" type="inflected">su tronco (?)</span>
-                  <span target="#d1e915" xml:lang="en">was</span>
-                  <span target="#d1e915" xml:lang="es">era</span>
-                  <span target="#d1e917" xml:lang="en">around</span>
-                  <span target="#d1e917" xml:lang="es">cerca</span>
-                  <span target="#d1e919a #d1e919b #d1e919c" xml:lang="en" type="compound">fifty seven</span>
-                  <span target="#d1e919a #d1e919b #d1e919c" xml:lang="es" type="compound">cincuenta y siete</span>
-                  <span target="#d1e921" xml:lang="en">meter</span>
-                  <span target="#d1e921" xml:lang="es">metro</span>
+                  <span target="#d1e909"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
+                  <span ana="#INFL"
+                        target="#d1e911 #d1e913"
+                        xml:lang="en"
+                        type="translation">it's base (?)</span>
+                  <span ana="#INFL"
+                        target="#d1e911 #d1e913"
+                        xml:lang="en"
+                        type="translation">it's trunk (?)</span>
+                  <span ana="#INFL"
+                        target="#d1e911 #d1e913"
+                        xml:lang="es"
+                        type="translation">su tronco (?)</span>
+                  <span target="#d1e915" xml:lang="en" type="translation">was</span>
+                  <span target="#d1e915" xml:lang="es" type="translation">era</span>
+                  <span target="#d1e917" xml:lang="en" type="translation">around</span>
+                  <span target="#d1e917" xml:lang="es" type="translation">cerca</span>
+                  <span ana="#CMPND"
+                        target="#d1e919a #d1e919b #d1e919c"
+                        xml:lang="en"
+                        type="translation">fifty seven</span>
+                  <span ana="#CMPND"
+                        target="#d1e919a #d1e919b #d1e919c"
+                        xml:lang="es"
+                        type="translation">cincuenta y siete</span>
+                  <span target="#d1e921" xml:lang="en" type="translation">meter</span>
+                  <span target="#d1e921" xml:lang="es" type="translation">metro</span>
                </spanGrp>
                <seg xml:id="L153-10-05" type="S" xml:lang="mix">
                   <w xml:id="d1e926">Tuyuku</w>
@@ -1475,19 +1970,22 @@
                   <pc>"</pc>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-05" xml:lang="en">This sabine tree is also called "Evergreen cypress".</span>
-                  <span type="sentence" target="#L153-10-05" xml:lang="es">Este sabino se llama también "ahuehuete".</span>
-                  <span target="#d1e926 #d1e928" xml:lang="en" cert="medium">this sabine tree</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-05" xml:lang="en" type="translation">This sabine tree is also called "Evergreen cypress".</span>
+                  <span ana="#S" target="#L153-10-05" xml:lang="es" type="translation">Este sabino se llama también "ahuehuete".</span>
+                  <span target="#d1e926 #d1e928"
+                        xml:lang="en"
+                        cert="medium"
+                        type="translation">this sabine tree</span>
                   <!-- is an evergreen cyprus a type of sabine tree?  -->
-                  <span target="#d1e926 #d1e928" xml:lang="es">este sabino</span>
-                  <span target="#d1e930" xml:lang="en">is called</span>
-                  <span target="#d1e930" xml:lang="es">se llama</span>
-                  <span target="#d1e932" xml:lang="en" cert="medium">also</span>
-                  <span target="#d1e932" xml:lang="es" cert="medium">también</span>
-                  <span target="#d1e936" xml:lang="en">Evergreen cypress</span>
+                  <span target="#d1e926 #d1e928" xml:lang="es" type="translation">este sabino</span>
+                  <span target="#d1e930" xml:lang="en" type="translation">is called</span>
+                  <span target="#d1e930" xml:lang="es" type="translation">se llama</span>
+                  <span target="#d1e932" xml:lang="en" cert="medium" type="translation">also</span>
+                  <span target="#d1e932" xml:lang="es" cert="medium" type="translation">también</span>
+                  <span target="#d1e936" xml:lang="en" type="translation">Evergreen cypress</span>
                   <span target="#d1e936" xml:lang="en" type="note">loanword</span>
-                  <span target="#d1e936" xml:lang="es">ahuehuete</span>
+                  <span target="#d1e936" xml:lang="es" type="translation">ahuehuete</span>
                </spanGrp>
                <seg xml:id="L153-10-06" type="S" xml:lang="mix">
                   <w xml:id="d1e943">Kue</w>
@@ -1504,37 +2002,51 @@
                   <pc>"</pc>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence"
+               <spanGrp type="annotations">
+                  <span ana="#S"
                         target="#L153-10-06"
-                        xml:lang="en"
-                        cert="medium">The people named it "the sabine Evergreen cypress tree".</span>
-                  <span type="sentence"
-                        target="#L153-10-06"
-                        xml:lang="es"
-                        cert="medium">La gente lo llaman "el sabino ahuehuete".</span>
-                  <span target="#d1e943 #d1e945" xml:lang="en" type="phrase">the people</span>
-                  <span target="#d1e943 #d1e945" xml:lang="es" type="phrase">la gente</span>
-                  <span target="#d1e947 #d1e949"
                         xml:lang="en"
                         cert="medium"
-                        type="inflected">they named</span>
+                        type="translation">The people named it "the sabine Evergreen cypress tree".</span>
+                  <span ana="#S"
+                        target="#L153-10-06"
+                        xml:lang="es"
+                        cert="medium"
+                        type="translation">La gente lo llaman "el sabino ahuehuete".</span>
+                  <span ana="#PHRS"
+                        target="#d1e943 #d1e945"
+                        xml:lang="en"
+                        type="translation">the people</span>
+                  <span ana="#PHRS"
+                        target="#d1e943 #d1e945"
+                        xml:lang="es"
+                        type="translation">la gente</span>
+                  <span ana="#INFL"
+                        target="#d1e947 #d1e949"
+                        xml:lang="en"
+                        cert="medium"
+                        type="translation">they named</span>
                   <span target="#d1e947 #d1e949"
                         xml:lang="en"
                         cert="medium"
                         type="note">tense?</span>
-                  <span target="#d1e947 #d1e949" xml:lang="es" type="inflected">llaman</span>
-                  <span target="#d1e951" xml:lang="en">it</span>
+                  <span ana="#INFL"
+                        target="#d1e947 #d1e949"
+                        xml:lang="es"
+                        type="translation">llaman</span>
+                  <span target="#d1e951" xml:lang="en" type="translation">it</span>
                   <span target="#d1e951" xml:lang="en" type="note">why not use "tu" here?</span>
-                  <span target="#d1e951" xml:lang="es">lo</span>
-                  <span target="#d1e955a #d1e955b #d1e955c"
+                  <span target="#d1e951" xml:lang="es" type="translation">lo</span>
+                  <span ana="#CMPND"
+                        target="#d1e955a #d1e955b #d1e955c"
                         xml:lang="en"
                         cert="low"
-                        type="compound">the sabine evergreen cypress tree</span>
-                  <span target="#d1e955a #d1e955b #d1e955c"
+                        type="translation">the sabine evergreen cypress tree</span>
+                  <span ana="#CMPND"
+                        target="#d1e955a #d1e955b #d1e955c"
                         xml:lang="es"
                         cert="low"
-                        type="compound">el sabino ahuehuete</span>
+                        type="translation">el sabino ahuehuete</span>
                </spanGrp>
                <seg xml:id="L153-10-07" type="S" xml:lang="mix">
                   <w xml:id="d1e962">Yee</w>
@@ -1559,43 +2071,63 @@
                   <pc>"</pc>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-07" xml:lang="en">There is another small sabine, very small nearby where El Tule and it is called "The Very Small Tule".</span>
-                  <span type="sentence" target="#L153-10-07" xml:lang="es">Hay un otro pequeño sabino, muy pequeño cerca de donde está El Tule y se llama "El Tulito".</span>
-                  <span target="#d1e962" xml:lang="en">there is</span>
-                  <span target="#d1e962" xml:lang="es">hay</span>
-                  <span target="#d1e964" xml:lang="en">another</span>
-                  <span target="#d1e964" xml:lang="es">un otro</span>
-                  <span target="#d1e966" xml:lang="en">sabine tree</span>
-                  <span target="#d1e966" xml:lang="es">sabino</span>
-                  <span target="#d1e968" xml:lang="en">small</span>
-                  <span target="#d1e968" xml:lang="es">pequeño</span>
-                  <span target="#d1e972 #d1e974" xml:lang="en" type="phrase">very small</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-07" xml:lang="en" type="translation">There is another small sabine, very small nearby where El Tule and it is called "The Very Small Tule".</span>
+                  <span ana="#S" target="#L153-10-07" xml:lang="es" type="translation">Hay un otro pequeño sabino, muy pequeño cerca de donde está El Tule y se llama "El Tulito".</span>
+                  <span target="#d1e962" xml:lang="en" type="translation">there is</span>
+                  <span target="#d1e962" xml:lang="es" type="translation">hay</span>
+                  <span target="#d1e964" xml:lang="en" type="translation">another</span>
+                  <span target="#d1e964" xml:lang="es" type="translation">un otro</span>
+                  <span target="#d1e966" xml:lang="en" type="translation">sabine tree</span>
+                  <span target="#d1e966" xml:lang="es" type="translation">sabino</span>
+                  <span target="#d1e968" xml:lang="en" type="translation">small</span>
+                  <span target="#d1e968" xml:lang="es" type="translation">pequeño</span>
+                  <span ana="#PHRS"
+                        target="#d1e972 #d1e974"
+                        xml:lang="en"
+                        type="translation">very small</span>
                   <span target="#d1e972 #d1e974" xml:lang="en" type="note">is "xoo" commonly used as a degree adverb 'very'? Get other uses, add to dictionary.</span>
-                  <span target="#d1e972 #d1e974" xml:lang="es" type="phrase">muy pequeño</span>
-                  <span target="#d1e976" xml:lang="en">nearby</span>
-                  <span target="#d1e976" xml:lang="es">cerca de</span>
-                  <span target="#d1e978" xml:lang="en">where</span>
-                  <span target="#d1e978" xml:lang="es">donde</span>
-                  <span target="#d1e980" xml:lang="en">is located</span>
-                  <span target="#d1e980" xml:lang="es">está</span>
-                  <span target="#d1e982" xml:lang="en">El Tule</span>
-                  <span target="#d1e982" xml:lang="es">El Tule</span>
-                  <span target="#d1e985" xml:lang="en" cert="unknown">this(?)</span>
+                  <span ana="#PHRS"
+                        target="#d1e972 #d1e974"
+                        xml:lang="es"
+                        type="translation">muy pequeño</span>
+                  <span target="#d1e976" xml:lang="en" type="translation">nearby</span>
+                  <span target="#d1e976" xml:lang="es" type="translation">cerca de</span>
+                  <span target="#d1e978" xml:lang="en" type="translation">where</span>
+                  <span target="#d1e978" xml:lang="es" type="translation">donde</span>
+                  <span target="#d1e980" xml:lang="en" type="translation">is located</span>
+                  <span target="#d1e980" xml:lang="es" type="translation">está</span>
+                  <span target="#d1e982" xml:lang="en" type="translation">El Tule</span>
+                  <span target="#d1e982" xml:lang="es" type="translation">El Tule</span>
+                  <span target="#d1e985"
+                        xml:lang="en"
+                        cert="unknown"
+                        type="translation">this(?)</span>
                   <span target="#d1e985" xml:lang="en" cert="unknown" type="note">what is this sense of "yo"?!</span>
-                  <span target="#d1e985" xml:lang="es" cert="unknown"/>
-                  <span target="#d1e987" xml:lang="en">and</span>
-                  <span target="#d1e987" xml:lang="es">y</span>
-                  <span target="#d1e989 #d1e991" xml:lang="en" type="inflected">it is called</span>
-                  <span target="#d1e989 #d1e991" xml:lang="es" type="inflected">se llama</span>
-                  <span target="#d1e995a #d1e995b"
+                  <span target="#d1e985"
+                        xml:lang="es"
+                        cert="unknown"
+                        type="translation"/>
+                  <span target="#d1e987" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e987" xml:lang="es" type="translation">y</span>
+                  <span ana="#INFL"
+                        target="#d1e989 #d1e991"
+                        xml:lang="en"
+                        type="translation">it is called</span>
+                  <span ana="#INFL"
+                        target="#d1e989 #d1e991"
+                        xml:lang="es"
+                        type="translation">se llama</span>
+                  <span ana="#CMPND"
+                        target="#d1e995a #d1e995b"
                         xml:lang="en"
                         cert="low"
-                        type="compound">Little Tule</span>
-                  <span target="#d1e995a #d1e995b"
+                        type="translation">Little Tule</span>
+                  <span ana="#CMPND"
+                        target="#d1e995a #d1e995b"
                         xml:lang="es"
                         cert="medium"
-                        type="compound">El Tulito</span>
+                        type="translation">El Tulito</span>
                </spanGrp>
                <seg xml:id="L153-10-08" type="S" xml:lang="mix">
                   <w xml:id="d1e1004">Cha</w>
@@ -1607,21 +2139,29 @@
                   <w xml:id="d1e1012">kuia</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-08" xml:lang="en">And it was one thousand years old.</span>
-                  <span type="sentence" target="#L153-10-08" xml:lang="es">Y tenía mil años de edad.</span>
-                  <span target="#d1e1004" xml:lang="en">and</span>
-                  <span target="#d1e1004" xml:lang="es">y</span>
-                  <span target="#d1e1006 #d1e1008 #d1e1010 #d1e1012"
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-08" xml:lang="en" type="translation">And it was one thousand years old.</span>
+                  <span ana="#S" target="#L153-10-08" xml:lang="es" type="translation">Y tenía mil años de edad.</span>
+                  <span target="#d1e1004" xml:lang="en" type="translation">and</span>
+                  <span target="#d1e1004" xml:lang="es" type="translation">y</span>
+                  <span ana="#PHRS"
+                        target="#d1e1006 #d1e1008 #d1e1010 #d1e1012"
                         xml:lang="en"
-                        type="phrase">it was one thousand years old</span>
-                  <span target="#d1e1006 #d1e1008 #d1e1010 #d1e1012"
+                        type="translation">it was one thousand years old</span>
+                  <span ana="#PHRS"
+                        target="#d1e1006 #d1e1008 #d1e1010 #d1e1012"
                         xml:lang="es"
-                        type="phrase">tenía mil años de edad</span>
-                  <span target="#d1e1010a #d1e1010b" xml:lang="en" type="compound">one thousand</span>
-                  <span target="#d1e1010a #d1e1010b" xml:lang="es" type="compound">mil</span>
-                  <span target="#d1e1012" xml:lang="en">year</span>
-                  <span target="#d1e1012" xml:lang="es">año</span>
+                        type="translation">tenía mil años de edad</span>
+                  <span ana="#CMPND"
+                        target="#d1e1010a #d1e1010b"
+                        xml:lang="en"
+                        type="translation">one thousand</span>
+                  <span ana="#CMPND"
+                        target="#d1e1010a #d1e1010b"
+                        xml:lang="es"
+                        type="translation">mil</span>
+                  <span target="#d1e1012" xml:lang="en" type="translation">year</span>
+                  <span target="#d1e1012" xml:lang="es" type="translation">año</span>
                </spanGrp>
                <seg xml:id="L153-10-09" type="S" xml:lang="mix">
                   <w xml:id="d1e1017">Kachi</w>
@@ -1636,21 +2176,45 @@
                   <w xml:id="d1e1035">tu</w>
                   <pc>.</pc>
                </seg>
-               <spanGrp type="translation">
-                  <span type="sentence" target="#L153-10-09" xml:lang="en">They say that El Tulito is the offspring of the big Tule.</span>
-                  <span type="sentence" target="#L153-10-09" xml:lang="es">Dicen que El Tulito es la cría del Tule grande.</span>
-                  <span target="#d1e1017 #d1e1019" xml:lang="en" type="inflected">they say</span>
-                  <span target="#d1e1017 #d1e1019" xml:lang="es" type="inflected">dicen</span>
-                  <span target="#d1e1021" xml:lang="en">that</span>
-                  <span target="#d1e1021" xml:lang="es">que</span>
-                  <span target="#d1e1023a #d1e1023b" xml:lang="en" type="compound">Little Tule</span>
-                  <span target="#d1e1023a #d1e1023b" xml:lang="es" type="compound">El Tulito</span>
-                  <span target="#d1e1027" xml:lang="en">offspring</span>
-                  <span target="#d1e1027" xml:lang="es" cert="low">la cría</span>
-                  <span target="#d1e1029 #d1e1031" xml:lang="en" type="phrase">the big Tule</span>
-                  <span target="#d1e1029 #d1e1031" xml:lang="es" type="phrase">El Tule grande</span>
-                  <span target="#d1e1033 #d1e1035" xml:lang="en" type="inflected">it is</span>
-                  <span target="#d1e1033 #d1e1035" xml:lang="es" type="inflected">es</span>
+               <spanGrp type="annotations">
+                  <span ana="#S" target="#L153-10-09" xml:lang="en" type="translation">They say that El Tulito is the offspring of the big Tule.</span>
+                  <span ana="#S" target="#L153-10-09" xml:lang="es" type="translation">Dicen que El Tulito es la cría del Tule grande.</span>
+                  <span ana="#INFL"
+                        target="#d1e1017 #d1e1019"
+                        xml:lang="en"
+                        type="translation">they say</span>
+                  <span ana="#INFL"
+                        target="#d1e1017 #d1e1019"
+                        xml:lang="es"
+                        type="translation">dicen</span>
+                  <span target="#d1e1021" xml:lang="en" type="translation">that</span>
+                  <span target="#d1e1021" xml:lang="es" type="translation">que</span>
+                  <span ana="#CMPND"
+                        target="#d1e1023a #d1e1023b"
+                        xml:lang="en"
+                        type="translation">Little Tule</span>
+                  <span ana="#CMPND"
+                        target="#d1e1023a #d1e1023b"
+                        xml:lang="es"
+                        type="translation">El Tulito</span>
+                  <span target="#d1e1027" xml:lang="en" type="translation">offspring</span>
+                  <span target="#d1e1027" xml:lang="es" cert="low" type="translation">la cría</span>
+                  <span ana="#PHRS"
+                        target="#d1e1029 #d1e1031"
+                        xml:lang="en"
+                        type="translation">the big Tule</span>
+                  <span ana="#PHRS"
+                        target="#d1e1029 #d1e1031"
+                        xml:lang="es"
+                        type="translation">El Tule grande</span>
+                  <span ana="#INFL"
+                        target="#d1e1033 #d1e1035"
+                        xml:lang="en"
+                        type="translation">it is</span>
+                  <span ana="#INFL"
+                        target="#d1e1033 #d1e1035"
+                        xml:lang="es"
+                        type="translation">es</span>
                </spanGrp>
             </p>
          </div>

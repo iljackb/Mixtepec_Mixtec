@@ -144,35 +144,58 @@
             <when xml:id="T32" interval="4.14"/>
          </timeline>
          <annotationBlock>
-            <u who="#TS"  xml:id="d1e63" n="1" start="0" end="2.10" xml:lang="mix">
+            <u who="#TS"
+               xml:id="d1e63"
+               n="1"
+               start="0"
+               end="2.10"
+               xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e64" notation="orth" type="S">
                   <w xml:id="d1e65" synch="#T1">sketa</w>
                   <w xml:id="d1e67" synch="#T6">takuni</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e69" sameAs="#d1e64" notation="ipa" type="S">
-                  <w xml:id="d1e70" synch="#T1" sameAs="#d1e65">skɛ<m xml:id="d1e177">˩</m>t̪a<m xml:id="d1e181">↘</m></w>
+               <seg xml:lang="mix"
+                    xml:id="d1e69"
+                    sameAs="#d1e64"
+                    notation="ipa"
+                    type="S">
+                  <w xml:id="d1e70" synch="#T1" sameAs="#d1e65">skɛ<m xml:id="d1e177">˩</m>t̪a<m xml:id="d1e181">↘</m>
+                  </w>
                   <w xml:id="d1e83" synch="#T6" sameAs="#d1e67">t̪a˥ku↘ni˧</w>
                </seg>
             </u>
-            <spanGrp>
-               <span from="#T1" to="#T29">CMPL\V-MTN.run\1S</span>
-               <span from="#T6" to="#T30">ADV-TEMP.yesterday</span>
+            <spanGrp type="annotations">
+               <span ana="#S" xml:lang="es" target="#d1e64" type="translation">I ran yesterday.</span>
+               <span ana="#S" xml:lang="en" target="#d1e64" type="translation">Corrí ayer.</span>
+               <span ana="#INFL" target="#d1e65" xml:lang="en" type="translation">I run</span>
+               <span ana="#INFL" target="#d1e65" xml:lang="es" type="translation">corro</span>
+               <span target="#d1e65" ana="#V #INTRANS #INCOMPL #1PERS #SG"/>
+               <!-- specifies the full info of the orthographic form (need to match what will be in the text only docs) -->
+               <span target="#d1e177" ana="#INCOMPL"/>
+               <!-- this specifies exactly where the tense is marked (need @type="tone"?) -->
+               <span target="#d1e181" ana="#1PERS #SG"/>
+               <!-- this specifies exactly where the 1sg is marked -->
+               <span target="#d1e67" xml:lang="en" type="translation">every day</span>
+               <span target="#d1e67" xml:lang="es" type="translation">todos los días</span>
+               <span target="#d1e67" ana="#ADV"/>
             </spanGrp>
-            <spanGrp type="translation">
-               <span xml:lang="es" target="#d1e64" type="sentence">I ran yesteray.</span>
-               <span xml:lang="en" target="#d1e64" type="sentence">Corrí ayer.</span>               
-               <span target="#d1e65" xml:lang="en" type="inflected">I run</span>        
-               <span target="#d1e65" xml:lang="es" type="inflected">corro</span>        
-               <span target="#d1e67" xml:lang="en">every day</span>        
-               <span target="#d1e67" xml:lang="es">todos los días</span>   
-            </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#d1e70" ana="#V"/>
-               <span type="transitivity" target="#d1e70" ana="#INTRANS"/>
-               <span type="tense" target="#d1e177" ana="#INCOMPL"/>
-               <span type="person" target="#d1e181" ana="#1PERS"/>
-               <span type="number" target="#d1e181" ana="#SG"/>
-               <span type="pos" target="#d1e83" ana="#ADV"/>
+            <spanGrp type="annotations">
+               <span xml:lang="es" target="#d1e64" type="translation" ana="#S">I ran yesterday.</span>
+               <!-- convert @type="sentence to @ana="#S" -->
+               <span xml:lang="en" target="#d1e64" type="translation" ana="#S">Corrí ayer.</span>
+               <!-- convert @type to "translation" -->
+               <span target="#d1e65" xml:lang="en" type="translation" ana="#INFL">I run</span>
+               <!-- convert @type="inflected" to @ana="#INFL" -->
+               <span target="#d1e65" xml:lang="es" type="translation" ana="#INFL">corro</span>
+               <span type="gram" target="#d1e65" ana="#V #INTRANS #INCOMPL #1PERS #SG"/>
+               <!-- @type="gram" (this is where the IGT would be specified if combined) -->
+               <span type="gram" target="#d1e177" ana="#INCOMPL"/>
+               <!-- points to tone feature in IPA -->
+               <span type="gram" target="#d1e181" ana="#1PERS #SG"/>
+               <!-- points to tone feature in IPA -->
+               <span target="#d1e67" xml:lang="en" type="translation">every day</span>
+               <span target="#d1e67" xml:lang="es" type="translation">todos los días</span>
+               <span type="gram" target="#d1e67" ana="#ADV"/>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
@@ -187,7 +210,8 @@
                   <w xml:id="d1e112" synch="#T21">takuni</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e114" notation="ipa" type="S">
-                  <w xml:id="d1e115" synch="#T15">skɛ<m xml:id="d1e222">˩</m>t̪a<m xml:id="d1e228">˥↘</m></w>
+                  <w xml:id="d1e115" synch="#T15">skɛ<m xml:id="d1e222">˩</m>t̪a<m xml:id="d1e228">˥↘</m>
+                  </w>
                   <w xml:id="d1e128" synch="#T21">t̪a˥ku↘n˧i</w>
                </seg>
             </u>

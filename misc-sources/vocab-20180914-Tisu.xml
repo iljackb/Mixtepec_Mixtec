@@ -9,11 +9,11 @@
             <title>Speech Elicited <date>2018/09/14</date>: Tisu</title>
             <respStmt>
                <resp>Researcher, transcriptions</resp>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
             </respStmt>
             <respStmt>
                <resp>Speaker consultant</resp>
-               <name>Tisu'ma Salazar</name>
+               <name xml:id="TS">Tisu'ma Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -21,8 +21,11 @@
          </publicationStmt>
          <sourceDesc>
             <ab>Vocabulary mostly <term ana="#elicitation-translation">ilicited via English translations</term> from predetermined vocab list made by the researcher.</ab>
-            <ab>
-               Meeting took place at Coffee shop on Park Street on <date>2018-09-14</date> in <location><placeName><settlement>Alameda</settlement>, <region>CA</region> <country>USA</country>.</placeName></location>
+            <ab>Meeting took place at Coffee shop on Park Street on <date>2018-09-14</date> in <location>
+                  <placeName>
+                     <settlement>Alameda</settlement>, <region>CA</region>
+                     <country>USA</country>.</placeName>
+               </location>
             </ab>
          </sourceDesc>
       </fileDesc>
@@ -69,270 +72,207 @@
    <text>
       <body>
          <p>
-               <seg xml:id="d1e32"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e33">ki’vi</w>
-               </seg>
-           
-            <spanGrp type="translation">
-               <span target="#d1e33" xml:lang="en">to get stuck</span>
-               <span target="#d1e33" xml:lang="es">atascarse</span>
+            <seg xml:id="d1e32" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e33">ki’vi</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e33" xml:lang="en" type="translation">to get stuck</span>
+               <span target="#d1e33" xml:lang="es" type="translation">atascarse</span>
+               <span type="gram" target="#d1e33" ana="#V #INTRANS"/>
             </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#d1e33" ana="#V"/>
-               <span type="transitivity" target="#d1e33" ana="#INTRANS"/>
-               <span type="form" target="#d1e33" ana="#GLS"/>
-            </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e47"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e48">ntaxita</w>
-                  <w xml:id="d1e50">tachi</w>
-                  <w xml:id="d1e51">ku</w>
-                  <pc>.</pc>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e47" xml:lang="en" type="inflected">you are breathing</span>
-               <span target="#d1e47" xml:lang="en" type="inflected">you breathe</span>
+         </p>
+         <p>
+            <seg xml:id="d1e47" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e48">ntaxita</w>
+               <w xml:id="d1e50">ntachi</w>
+               <w xml:id="d1e51">ku</w>
+               <pc>.</pc>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#INFL" target="#d1e47" xml:lang="en" type="translation">you are breathing</span>
+               <span ana="#INFL" target="#d1e47" xml:lang="en" type="translation">you breathe</span>
                <span type="note" target="#d1e47" xml:lang="en">(Literal:) you take in air</span>
-               <span target="#d1e47" xml:lang="es" type="inflected">estas respirando</span>
-               <span target="#d1e47" xml:lang="es" type="S">respiras</span>
-            </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#d1e48 #d1e50" ana="#V"/>
-               <span type="transitivity" target="#" cert="medium" ana="#TRANS"/>
-               <span type="pos" target="#" ana="#"/>
-               <!-- PHRASE? -->
-            </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e64"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e65">kaxa</w>
-               </seg>
-  
-            <spanGrp type="translation">
-               <span target="#d1e65" xml:lang="en">to sneeze</span>
-               <span target="#d1e65" xml:lang="en" cert="medium">sneeze</span>
-               <span target="#d1e65" xml:lang="en" type="note">onomonapeia?</span>
-               <span target="#d1e65" xml:lang="es">estornudar</span>
-               <span target="#d1e65" xml:lang="es">estornudo</span>
-            </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#d1e65" ana="#V"/>
-               <span type="form" target="#d1e65" ana="#GLS"/>
-               <span type="transitivity" target="#d1e65" ana="#INTRANS"/>
+               <span ana="#INFL" target="#d1e47" xml:lang="es" type="translation">estas respirando</span>
+               <span ana="#INFL" target="#d1e47" xml:lang="es" type="translation">respiras</span>
+               <span type="gram" target="#d1e48 #d1e50" ana="#V #TRANS #ITER"/>
+               <span type="gram" target="#d1e48 #d1e50" ana="#V #TRANS"/>
             </spanGrp>
 
          </p>
-            <p>
-               <seg xml:id="d1e78"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e79">kaxa</w>
-               </seg>
-               <seg xml:id="d1e81"
-                    notation="ipa"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e82" sameAs="#d1e79">káʃà</w>
-               </seg>       
-            <spanGrp type="translation">
-               <span target="#d1e79" xml:lang="en" type="inflected">I sneeze</span>
-               <span target="#d1e79" xml:lang="es" type="inflected">estordudo</span>
+         <p>
+            <seg xml:id="d1e64" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e65">kaxa</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e65" xml:lang="en" type="translation">to sneeze</span>
+               <span target="#d1e65" xml:lang="en" cert="medium" type="translation">sneeze</span>
+               <span target="#d1e65" xml:lang="en" type="note">onomonapeia?</span>
+               <span target="#d1e65" xml:lang="es" type="translation">estornudar</span>
+               <span target="#d1e65" xml:lang="es" type="translation">estornudo</span>
+               <span type="gram" target="#d1e65" ana="#V #INTRANS"/>
+            </spanGrp>
+         </p>
+         <p>
+            <seg xml:id="d1e78" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e79">kaxa</w>
+            </seg>
+            <seg xml:id="d1e81" notation="ipa" xml:lang="mix" type="term">
+               <w xml:id="d1e82" sameAs="#d1e79">káʃ<m xml:id="d1e83">à</m></w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#INFL" target="#d1e79" xml:lang="en" type="translation">I sneeze</span>
+               <span ana="#INFL" target="#d1e79" xml:lang="es" type="translation">estordudo</span>
             </spanGrp>
             <spanGrp type="gram">
-               <span type="pos" target="#d1e79 #d1e81" ana="#V"/>
-               <span type="transitivity" target="#d1e79 #d1e81" ana="#INTRANS"/>
-               <span type="person" target="#d1e79 #d1e81" ana="#1PERS"/>
-               <span type="number" target="#d1e79 #d1e81" ana="#SG"/>
+               <span type="gram" target="#d1e79 #d1e81" ana="#V #INTRANS #1PERS #SG"/>
+               <span type="gram" target="#d1e83" ana="#1PERS #SG"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e94"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e95">kaxu</w>
-               </seg>
-               <seg xml:id="d1e97"
-                    notation="ipa"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e98" sameAs="#d1e95">káʃú</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e95" xml:lang="en" type="inflected">you sneeze</span>
-               <span target="#d1e95" xml:lang="es" type="inflected">estornudas</span>
+         </p>
+         <p>
+            <seg xml:id="d1e94" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e95">kaxu</w>
+            </seg>
+            <seg xml:id="d1e97" notation="ipa" xml:lang="mix" type="term">
+               <w xml:id="d1e98" sameAs="#d1e95">káʃú</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#INFL" target="#d1e95" xml:lang="en" type="translation">you sneeze</span>
+               <span ana="#INFL" target="#d1e95" xml:lang="es" type="translation">estornudas</span>
+               <span type="gram" target="#d1e95 #d1e98" ana="#V #INTRANS #2PERS #SG #INF"/>
+               <span type="gram" target="#d1e95 #d1e98" ana="#2PERS #SG #INF"/>
             </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#d1e95 #d1e98" ana="#V"/>
-               <span type="transitivity" target="#d1e95 #d1e98" ana="#INTRANS"/>
-               <span type="person" target="#d1e95 #d1e98" ana="#2PERS"/>
-               <span type="number" target="#d1e95 #d1e98" ana="#SG"/>
-               <span type="register" target="#d1e95 #d1e98" ana="#INF"/>
+         </p>
+         <p>
+            <seg xml:id="d1e110" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e111">koko</w>
+            </seg>
+            <seg xml:id="d1e113" notation="ipa" xml:lang="mix" type="term">
+               <w xml:id="d1e114" sameAs="#d1e111">kōkó</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e111" xml:lang="en" type="translation">to swallow</span>
+               <span target="#d1e111" xml:lang="es" type="translation">tragar</span>
+               <span type="gram" target="#d1e111 #d1e114" ana="#V #AMBITRANS"/>
             </spanGrp>
-            </p>
-         
-           <p> 
-              <seg xml:id="d1e110" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e111">koko</w>
-               </seg>
-              <seg xml:id="d1e113" notation="ipa" xml:lang="mix" type="term">
-                  <w xml:id="d1e114" sameAs="#d1e111">kōkó</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e111" xml:lang="en">to swallow</span>
-               <span target="#d1e111" xml:lang="es">tragar</span>
+         </p>
+         <p>
+            <seg xml:id="d1e125" notation="orth" xml:lang="mix" type="S">
+               <w xml:id="d1e126">Koko</w>
+               <w xml:id="d1e128">vitaminas</w>
+               <pc>.</pc>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#S" target="#d1e125" xml:lang="en" type="translation">Take (swallow) your vitamins</span>
+               <span ana="#S" target="#d1e125" xml:lang="es" type="translation">Toma tus vitaminas.</span>
+               <span type="gram" target="#d1e125" ana="#CMND"/>
+               <span ana="#INFL" target="#d1e126" xml:lang="en" type="translation">swallow</span>
+               <span ana="#INFL" target="#d1e126" xml:lang="es" type="translation">tragas</span>
+               <span type="gram" target="#d1e126" ana="#V #TRANS #2PERS #SG #INF #CMND"/>
+               <span target="#d1e128" xml:lang="en" type="translation">vitamins</span>
+               <span target="#d1e128" xml:lang="es" type="translation">vitaminas</span>
+               <span type="gram" target="#d1e128" ana="#N"/>
             </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#d1e111 #d1e114" ana="#V"/>
-               <span type="transitivity" target="#d1e111 #d1e114" ana="#AMBITRANS"/>
-               <span type="form" target="#d1e111 #d1e114" ana="#GLS"/>
+         </p>
+         <p>
+            <seg xml:id="d1e141" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e142">katsi</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e142" xml:lang="en" cert="low" type="translation">chew</span>
+               <span target="#d1e142" xml:lang="es" type="translation">masticar</span>
+               <span type="gram" target="#d1e142" ana="#V #AMBITRANS"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e125" notation="orth" xml:lang="mix" type="S">
-                  <w xml:id="d1e126">Koko</w>
-                  <w xml:id="d1e128">vitaminas</w>
-                  <pc>.</pc>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e125" xml:lang="en" type="sentence">Take (swallow) your vitamins</span>
-               <span target="#d1e125" xml:lang="es" type="sentence">Toma tus vitaminas.</span>
-               
-               <span target="#d1e126" xml:lang="en" type="inflected">swallow</span>
-               <span target="#d1e126" xml:lang="es" type="inflected">tragas</span>
-               
-               <span target="#d1e128" xml:lang="en">vitamins</span>
-               <span target="#d1e128" xml:lang="es">vitaminas</span>
-            </spanGrp>
-            </p>
-         
-            <p>
-               <seg xml:id="d1e141"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e142">katsi</w>
-               </seg>    
-            <spanGrp type="translation">
-               <span target="#d1e142" xml:lang="en" cert="low">chew</span>
-               <span target="#d1e142" xml:lang="es">masticar</span>
-            </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#" ana="#"/>
-               <span type="transitivity" target="#" ana="#"/>
-               <span type="form" target="#" ana="#"/>
-            </spanGrp>
-</p>
-         
-           <p> 
-               <seg xml:id="d1e153"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e154">katsi</w>
-                  <w xml:id="d1e156">lulu</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e154 #d1e156" xml:lang="en" type="phrase">to try (food)</span>
-               <span target="#d1e154 #d1e156" xml:lang="es" type="phrase">probar (comida)</span>
+         </p>
+         <p>
+            <seg xml:id="d1e153" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e154">katsi</w>
+               <w xml:id="d1e156">lulu</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#PHRS"
+                     target="#d1e154 #d1e156"
+                     xml:lang="en"
+                     type="translation">to try (food)</span>
+               <span ana="#PHRS"
+                     target="#d1e154 #d1e156"
+                     xml:lang="es"
+                     type="translation">probar (comida)</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
                <span type="transitivity" target="#" ana="#"/>
                <span type="form" target="#" ana="#"/>
             </spanGrp>
-           </p>
-         
-            <p>
-               <seg xml:id="d1e169"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e170">sa'a</w>
-                  <w xml:id="d1e172">lucha</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e170 #d1e172" xml:lang="en" type="phrase">to try to do well</span>
-               <span target="#d1e170 #d1e172" xml:lang="en" type="phrase">to strive</span>
-               <span target="#d1e170 #d1e172" xml:lang="es" cert="medium" type="phrase">esforzarse por</span>
+         </p>
+         <p>
+            <seg xml:id="d1e169" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e170">sa'a</w>
+               <w xml:id="d1e172">lucha</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#PHRS"
+                     target="#d1e170 #d1e172"
+                     xml:lang="en"
+                     type="translation">to try to do well</span>
+               <span ana="#PHRS"
+                     target="#d1e170 #d1e172"
+                     xml:lang="en"
+                     type="translation">to strive</span>
+               <span ana="#PHRS"
+                     target="#d1e170 #d1e172"
+                     xml:lang="es"
+                     cert="medium"
+                     type="translation">esforzarse por</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
                <span type="transitivity" target="#" ana="#"/>
                <span type="form" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e185"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e186">kata</w>
-               </seg>
-               <seg xml:id="d1e188"
-
-                    notation="ipa"
-                    xml:lang="mix">
-                  <w xml:id="d1e189" sameAs="#d1e186">kátá</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e186" xml:lang="en">to itch</span>
-               <span target="#d1e186" xml:lang="es">picar</span>
+         </p>
+         <p>
+            <seg xml:id="d1e185" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e186">kata</w>
+            </seg>
+            <seg xml:id="d1e188" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e189" sameAs="#d1e186">kátá</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e186" xml:lang="en" type="translation">to itch</span>
+               <span target="#d1e186" xml:lang="es" type="translation">picar</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
                <span type="transitivity" target="#" ana="#"/>
                <span type="form" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e201" notation="orth" xml:lang="mix" type="S">
-                  <w xml:id="d1e202">Kata</w>
-                  <w xml:id="d1e204">nta'a</w>
-                  <pc>.</pc>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e201" xml:lang="en" type="S">My arm iches.</span>
-               <span target="#d1e201" xml:lang="es" type="S">Me pica el brazo.</span>
-               
-               <span target="#d1e202" xml:lang="en" type="inflected">itches</span>
-               <span target="#d1e202" xml:lang="es" type="inflected">pica</span>
-               
-               <span target="#d1e204" xml:lang="en" type="inflected">my arm</span>
-               <span target="#d1e204" xml:lang="es" type="inflected">el brazo</span>
+         </p>
+         <p>
+            <seg xml:id="d1e201" notation="orth" xml:lang="mix" type="S">
+               <w xml:id="d1e202">Kata</w>
+               <w xml:id="d1e204">nta'a</w>
+               <pc>.</pc>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#S" target="#d1e201" xml:lang="en" type="translation">My arm iches.</span>
+               <span ana="#S" target="#d1e201" xml:lang="es" type="translation">Me pica el brazo.</span>
+               <span ana="#INFL" target="#d1e202" xml:lang="en" type="translation">itches</span>
+               <span ana="#INFL" target="#d1e202" xml:lang="es" type="translation">pica</span>
+               <span ana="#INFL" target="#d1e204" xml:lang="en" type="translation">my arm</span>
+               <span ana="#INFL" target="#d1e204" xml:lang="es" type="translation">el brazo</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
-               
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e219"
-
-                    notation="orth"
-                    xml:lang="mix">
-                  <w xml:id="d1e220" cert="medium">ntaa</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e220" xml:lang="en">to be certain (about something)</span>
+         </p>
+         <p>
+            <seg xml:id="d1e219" notation="orth" xml:lang="mix">
+               <w xml:id="d1e220" cert="medium">ntaa</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e220" xml:lang="en" type="translation">to be certain (about something)</span>
                <span target="#d1e220" xml:lang="en" type="note">always used with: "ntsin(u) ni"? (to know?); Is the infinitive really "ntsin(u)" or "ntsin(i)"?</span>
-               <span target="#d1e220" xml:lang="es">estar seguro (de algo)</span>
+               <span target="#d1e220" xml:lang="es" type="translation">estar seguro (de algo)</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
@@ -341,241 +281,237 @@
                <span type="form" target="#" ana="#"/>
             </spanGrp>
             <!-- related to flat -->
-</p>
-         
-            <p>
-               <seg xml:id="d1e234"
-
-                    notation="orth"
-                    xml:lang="mix" type="S">
-                  <pc>¿</pc>
-                  <w xml:id="d1e237">A</w>
-                  <w xml:id="d1e239">ntaa</w>
-                  <w xml:id="d1e241">ntsinu</w>
-                  <w xml:id="d1e243" cert="low">nia</w>
-                  <pc>?</pc>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e234" xml:lang="en" type="phrase">Are you sure?</span>
-               <span target="#d1e234" xml:lang="es" type="phrase">¿Éstas seguro?</span>
+         </p>
+         <p>
+            <seg xml:id="d1e234" notation="orth" xml:lang="mix" type="S">
+               <pc>¿</pc>
+               <w xml:id="d1e237">A</w>
+               <w xml:id="d1e239">ntaa</w>
+               <w xml:id="d1e241">ntsinu</w>
+               <w xml:id="d1e243" cert="low">nia</w>
+               <pc>?</pc>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#PHRS" target="#d1e234" xml:lang="en" type="translation">Are you sure?</span>
+               <span ana="#PHRS" target="#d1e234" xml:lang="es" type="translation">¿Éstas seguro?</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
                <!--  (2s.inf) -->
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e259"
-
-                    notation="orth"
-                    xml:lang="mix" type="S">
-                  <w xml:id="d1e260" cert="medium">Kue</w>
-                  <w xml:id="d1e262">ntaa</w>
-                  <w xml:id="d1e264">ni</w>
-                  <w xml:id="d1e266">ntsinu</w>
-                  <w xml:id="d1e268">nia</w>
-                  <pc>.</pc>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e259" xml:lang="en" type="S">He/she isn't sure about it.</span>
-               <span target="#d1e259" xml:lang="es" type="S">No está seguro.</span>
-               
-               <span target="#d1e260" xml:lang="en">not</span>
-               <span target="#d1e260" xml:lang="es">no</span>
-               
-               <span target="#d1e262 #d1e264 #d1e266" xml:lang="en" type="inflected">sure (formal)</span>
-               <span target="#d1e262 #d1e264 #d1e266" xml:lang="es" type="inflected">seguro (formal)</span>
-               
-               <span target="#d1e268" xml:lang="en" cert="low">about it</span>
-               <span target="#d1e268" xml:lang="es" cert="unknown"/>
+         </p>
+         <p>
+            <seg xml:id="d1e259" notation="orth" xml:lang="mix" type="S">
+               <w xml:id="d1e260" cert="medium">Kue</w>
+               <w xml:id="d1e262">ntaa</w>
+               <w xml:id="d1e264">ni</w>
+               <w xml:id="d1e266">ntsinu</w>
+               <w xml:id="d1e268">nia</w>
+               <pc>.</pc>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#S" target="#d1e259" xml:lang="en" type="translation">He/she isn't sure about it.</span>
+               <span ana="#S" target="#d1e259" xml:lang="es" type="translation">No está seguro.</span>
+               <span target="#d1e260" xml:lang="en" type="translation">not</span>
+               <span target="#d1e260" xml:lang="es" type="translation">no</span>
+               <span ana="#INFL"
+                     target="#d1e262 #d1e264 #d1e266"
+                     xml:lang="en"
+                     type="translation">sure (formal)</span>
+               <span ana="#INFL"
+                     target="#d1e262 #d1e264 #d1e266"
+                     xml:lang="es"
+                     type="translation">seguro (formal)</span>
+               <span target="#d1e268" xml:lang="en" cert="low" type="translation">about it</span>
+               <span target="#d1e268"
+                     xml:lang="es"
+                     cert="unknown"
+                     type="translation"/>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e283"
-
-                    notation="orth"
-                    xml:lang="mix">
-                  <w xml:id="d1e284">tsa'un</w>
-               </seg>
-               <seg xml:id="d1e286" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e287" sameAs="#d1e284">tzáʔū̃̃</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e284" xml:lang="en">to smoke</span>
-               <span target="#d1e284" xml:lang="en">to burn</span>
-               <span target="#d1e284" xml:lang="es">fumar</span>
-               <span target="#d1e284" xml:lang="es">quemar</span>
+         </p>
+         <p>
+            <seg xml:id="d1e283" notation="orth" xml:lang="mix">
+               <w xml:id="d1e284">tsa'un</w>
+            </seg>
+            <seg xml:id="d1e286" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e287" sameAs="#d1e284">tzáʔū̃̃</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e284" xml:lang="en" type="translation">to smoke</span>
+               <span target="#d1e284" xml:lang="en" type="translation">to burn</span>
+               <span target="#d1e284" xml:lang="es" type="translation">fumar</span>
+               <span target="#d1e284" xml:lang="es" type="translation">quemar</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#V"/>
                <span type="transitivity" target="#" ana="#TRANS"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e300" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e301">tsa'un</w>
-               </seg>
-               <seg xml:id="d1e303" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e304" sameAs="#d1e301">tzāʔū̃̃</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e301" xml:lang="en">fifteen</span>
-               <span target="#d1e301" xml:lang="es">quinze</span>
+         </p>
+         <p>
+            <seg xml:id="d1e300" notation="orth" xml:lang="mix">
+               <w xml:id="d1e301">tsa'un</w>
+            </seg>
+            <seg xml:id="d1e303" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e304" sameAs="#d1e301">tzāʔū̃̃</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e301" xml:lang="en" type="translation">fifteen</span>
+               <span target="#d1e301" xml:lang="es" type="translation">quinze</span>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e312" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e313">ñu’ma</w>
-               </seg>
-               <seg xml:id="d1e315" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e316" sameAs="#d1e313">ɲúʔmà</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e313" xml:lang="en">to give off smoke</span>
-               <span xml:lang="en" target="#d1e313">be smoking</span>
-               <span target="#d1e313" xml:lang="es" cert="unknown">?</span>
-            </spanGrp>
-            <spanGrp type="gram">
-               <span type="pos" target="#" ana="#"/>
-               <span type="transitivity" target="#" ana="#"/>
-               <span type="form" target="#" ana="#"/>
-            </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e329" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e330">ntavi</w>
-               </seg>
-               <seg xml:id="d1e332" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e333" sameAs="#d1e330">ndàvì</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e330" xml:lang="en">to roast</span>
-               <span target="#d1e330" xml:lang="en">to toast</span>
-               <span target="#d1e330" xml:lang="es">asar</span>
-               <span target="#d1e330" xml:lang="es">tostar</span>
+         </p>
+         <p>
+            <seg xml:id="d1e312" notation="orth" xml:lang="mix">
+               <w xml:id="d1e313">ñu’ma</w>
+            </seg>
+            <seg xml:id="d1e315" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e316" sameAs="#d1e313">ɲúʔmà</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e313" xml:lang="en" type="translation">to give off smoke</span>
+               <span xml:lang="en" target="#d1e313" type="translation">be smoking</span>
+               <span target="#d1e313"
+                     xml:lang="es"
+                     cert="unknown"
+                     type="translation">?</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
                <span type="transitivity" target="#" ana="#"/>
                <span type="form" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e346" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e347" cert="low">ntsinuun</w>
-               </seg>
-               <seg xml:id="d1e349" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e350" sameAs="#d1e347">ntsinːũ̌</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e347" xml:lang="en" type="inflected" cert="medium">you're drunk</span>
-               <span target="#d1e347" xml:lang="es" type="inflected" cert="medium">eres boracho</span>
+         </p>
+         <p>
+            <seg xml:id="d1e329" notation="orth" xml:lang="mix">
+               <w xml:id="d1e330">ntavi</w>
+            </seg>
+            <seg xml:id="d1e332" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e333" sameAs="#d1e330">ndàvì</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e330" xml:lang="en" type="translation">to roast</span>
+               <span target="#d1e330" xml:lang="en" type="translation">to toast</span>
+               <span target="#d1e330" xml:lang="es" type="translation">asar</span>
+               <span target="#d1e330" xml:lang="es" type="translation">tostar</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
                <span type="transitivity" target="#" ana="#"/>
                <span type="form" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e361" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e362">ntaku</w>
-               </seg>
-               <seg xml:id="d1e364" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e365" sameAs="#d1e362">ndàkú</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e362" xml:lang="en">strong</span>
-               <span target="#d1e362" xml:lang="es">fuerte</span>
+         </p>
+         <p>
+            <seg xml:id="d1e346" notation="orth" xml:lang="mix">
+               <w xml:id="d1e347" cert="low">ntsinuun</w>
+            </seg>
+            <seg xml:id="d1e349" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e350" sameAs="#d1e347">ntsinːũ̌</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#INFL"
+                     target="#d1e347"
+                     xml:lang="en"
+                     cert="medium"
+                     type="translation">you're drunk</span>
+               <span ana="#INFL"
+                     target="#d1e347"
+                     xml:lang="es"
+                     cert="medium"
+                     type="translation">eres boracho</span>
+            </spanGrp>
+            <spanGrp type="gram">
+               <span type="pos" target="#" ana="#"/>
+               <span type="transitivity" target="#" ana="#"/>
+               <span type="form" target="#" ana="#"/>
+            </spanGrp>
+         </p>
+         <p>
+            <seg xml:id="d1e361" notation="orth" xml:lang="mix">
+               <w xml:id="d1e362">ntaku</w>
+            </seg>
+            <seg xml:id="d1e364" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e365" sameAs="#d1e362">ndàkú</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e362" xml:lang="en" type="translation">strong</span>
+               <span target="#d1e362" xml:lang="es" type="translation">fuerte</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e376" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e377">ntaku</w>
-                  <w xml:id="d1e379">ncho’ai</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e377 #d1e379" xml:lang="en" type="inflected">he/she is very strong</span>
-               <span target="#d1e377 #d1e379" xml:lang="es" type="inflected">él/ella es muy forte</span>
+         </p>
+         <p>
+            <seg xml:id="d1e376" notation="orth" xml:lang="mix">
+               <w xml:id="d1e377">ntaku</w>
+               <w xml:id="d1e379">ncho’ai</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#INFL"
+                     target="#d1e377 #d1e379"
+                     xml:lang="en"
+                     type="translation">he/she is very strong</span>
+               <span ana="#INFL"
+                     target="#d1e377 #d1e379"
+                     xml:lang="es"
+                     type="translation">él/ella es muy forte</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e395" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e396">koo</w>
-                  <w xml:id="d1e398" cert="low">nchii</w>
-                  <!-- how to spell!? this "i" is extra long!! -->
-               </seg>
-               <seg xml:id="d1e401" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e402"/>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e396 #d1e398" xml:lang="en" type="compound">weak</span>
-               <span target="#d1e396 #d1e398" xml:lang="es" type="compound">débil</span>
+         </p>
+         <p>
+            <seg xml:id="d1e395" notation="orth" xml:lang="mix">
+               <w xml:id="d1e396">koo</w>
+               <w xml:id="d1e398" cert="low">nchii</w>
+               <!-- how to spell!? this "i" is extra long!! -->
+            </seg>
+            <seg xml:id="d1e401" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e402"/>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#CMPND"
+                     target="#d1e396 #d1e398"
+                     xml:lang="en"
+                     type="translation">weak</span>
+               <span ana="#CMPND"
+                     target="#d1e396 #d1e398"
+                     xml:lang="es"
+                     type="translation">débil</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e412" notation="orth" xml:lang="mix">
-                  <w xml:id="d1e413" cert="low">nchii</w>
-                  <!-- how to spell!? this "i" is extra long!! -->
-               </seg>
-               <seg xml:id="d1e416" notation="ipa"  xml:lang="mix">
-                  <w xml:id="d1e417" sameAs="#d1e413">ndʒììí</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e413" xml:lang="en">strength</span>
+         </p>
+         <p>
+            <seg xml:id="d1e412" notation="orth" xml:lang="mix">
+               <w xml:id="d1e413" cert="low">nchii</w>
+               <!-- how to spell!? this "i" is extra long!! -->
+            </seg>
+            <seg xml:id="d1e416" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e417" sameAs="#d1e413">ndʒììí</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e413" xml:lang="en" type="translation">strength</span>
                <span target="#d1e413" xml:lang="en" type="note">how to spell! (need to avoid homograph with "what" and "where")</span>
-               <span target="#d1e413" xml:lang="es">fuerza</span>
+               <span target="#d1e413" xml:lang="es" type="translation">fuerza</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e428" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e429">vita</w>
-               </seg>
-               <seg xml:id="d1e431" notation="ipa" xml:lang="mix" type="term">
-                  <w xml:id="d1e432" sameAs="#d1e429">vitá</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e429" xml:lang="en">flexible</span>
+         </p>
+         <p>
+            <seg xml:id="d1e428" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e429">vita</w>
+            </seg>
+            <seg xml:id="d1e431" notation="ipa" xml:lang="mix" type="term">
+               <w xml:id="d1e432" sameAs="#d1e429">vitá</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e429" xml:lang="en" type="translation">flexible</span>
                <span type="note" xml:lang="en" target="#d1e429">Adjective for a solid object that can bend.</span>
-               <span target="#d1e429" xml:lang="es">flexible</span>
+               <span target="#d1e429" xml:lang="es" type="translation">flexible</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
@@ -583,22 +519,26 @@
             <spanGrp type="semantics">
                <span type="def" xml:lang="en" target="#">of a solid object that can bend</span>
                <span type="sense" target="#" corresp="#"/>
-               <span type="domain" target="#" corresp="#"/>    
+               <span type="domain" target="#" corresp="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e449" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e450">ntsitsa</w>
-               </seg>
-               <seg xml:id="d1e452" notation="ipa" xml:lang="mix" type="term">
-                  <w xml:id="d1e453" cert="medium" sameAs="#d1e450">ntzitsa</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e450" xml:lang="en" cert="unknown">?</span>
+         </p>
+         <p>
+            <seg xml:id="d1e449" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e450">ntsitsa</w>
+            </seg>
+            <seg xml:id="d1e452" notation="ipa" xml:lang="mix" type="term">
+               <w xml:id="d1e453" cert="medium" sameAs="#d1e450">ntzitsa</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e450"
+                     xml:lang="en"
+                     cert="unknown"
+                     type="translation">?</span>
                <span target="#d1e450" xml:lang="en" cert="unknown" type="note">regarding texture?</span>
-               <span target="#d1e450" xml:lang="es" cert="unknown">?</span>
+               <span target="#d1e450"
+                     xml:lang="es"
+                     cert="unknown"
+                     type="translation">?</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
@@ -608,128 +548,131 @@
                <span type="domain" target="#" corresp="#">Texture</span>
                <span type="semanticRelations" target="#" corresp="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e468"
-                    notation="orth"
-                    xml:lang="mix" type="P">
-                  <w xml:id="d1e469" cert="medium">kue</w>
-                  <w xml:id="d1e471">ntai</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e469" xml:lang="en" cert="low" type="phrase">not flat (bumpy)</span><!-- -->
+         </p>
+         <p>
+            <seg xml:id="d1e468" notation="orth" xml:lang="mix" type="P">
+               <w xml:id="d1e469" cert="medium">kue</w>
+               <w xml:id="d1e471">ntai</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#PHRS"
+                     target="#d1e469"
+                     xml:lang="en"
+                     cert="low"
+                     type="translation">not flat (bumpy)</span>
+               <!-- -->
                <span target="#d1e469" xml:lang="en" cert="low" type="note">given "i" in "ntai" is this a statement meaning "it is not flat" rather than a gloss?</span>
-               <span target="#d1e469" xml:lang="es" type="phrase" cert="low">agitado</span>
+               <span ana="#PHRS"
+                     target="#d1e469"
+                     xml:lang="es"
+                     cert="low"
+                     type="translation">agitado</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e484" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e485">jaa</w>
-               </seg>
-               <seg xml:id="d1e487" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e488" cert="medium" sameAs="#d1e485">jaá</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e485" xml:lang="en">ash</span>
-               <span target="#d1e485" xml:lang="es">ceniza</span>
+         </p>
+         <p>
+            <seg xml:id="d1e484" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e485">jaa</w>
+            </seg>
+            <seg xml:id="d1e487" notation="ipa" xml:lang="mix">
+               <w xml:id="d1e488" cert="medium" sameAs="#d1e485">jaá</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e485" xml:lang="en" type="translation">ash</span>
+               <span target="#d1e485" xml:lang="es" type="translation">ceniza</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
             <!-- same as "white" -->
-</p>
-         
-            <p>
-               <seg xml:id="d1e500" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e501">yuchi</w>
-               </seg>
-               <seg xml:id="d1e503" notation="ipa" xml:lang="mix" type="term">
-                  <w xml:id="d1e504" cert="medium" sameAs="#d1e501">jutʃi</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e501" xml:lang="en">knife</span>
-               <span target="#d1e501" xml:lang="es">cuchillo</span>
+         </p>
+         <p>
+            <seg xml:id="d1e500" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e501">yuchi</w>
+            </seg>
+            <seg xml:id="d1e503" notation="ipa" xml:lang="mix" type="term" sameAs="#d1e500">
+               <w xml:id="d1e504" cert="medium" sameAs="#d1e501">jutʃi</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e501" xml:lang="en" type="translation">knife</span>
+               <span target="#d1e501" xml:lang="es" type="translation">cuchillo</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e515" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e516">nu’u</w>
-                  <w xml:id="d1e518">ntaa</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e516 #d1e518" xml:lang="en" type="compound">valley</span>
+         </p>
+         <p>
+            <seg xml:id="d1e515" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e516">nu’u</w>
+               <w xml:id="d1e518">ntaa</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#CMPND"
+                     target="#d1e516 #d1e518"
+                     xml:lang="en"
+                     type="translation">valley</span>
                <span type="note" target="#" xml:lang="en">(literal:) flat land</span>
-               <span target="#d1e516 #d1e518" xml:lang="es" type="compound">valle</span>
+               <span ana="#CMPND"
+                     target="#d1e516 #d1e518"
+                     xml:lang="es"
+                     type="translation">valle</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e533" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e534">sto’o</w>
-                  <w xml:id="d1e536">nchuxi</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e534 #d1e536" xml:lang="en" type="compound">god</span>
+         </p>
+         <p>
+            <seg xml:id="d1e533" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e534">sto’o</w>
+               <w xml:id="d1e536">nchuxi</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span ana="#CMPND"
+                     target="#d1e534 #d1e536"
+                     xml:lang="en"
+                     type="translation">god</span>
                <span type="note" target="#" xml:lang="en">(literal:) god of the foreigners</span>
-               <span target="#d1e534 #d1e536" xml:lang="es"  type="compound"/>
+               <span ana="#CMPND"
+                     target="#d1e534 #d1e536"
+                     xml:lang="es"
+                     type="translation"/>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#" ana="#"/>
             </spanGrp>
-</p>
-         
-            <p>
-               <seg xml:id="d1e551" notation="orth" xml:lang="mix" type="term">
-                  <w xml:id="d1e552">nana</w>
-               </seg>
-               <seg xml:id="d1e554" notation="ipa" xml:lang="mix" type="term">
-                  <w xml:id="d1e555" sameAs="#d1e552">nànà</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e552" xml:lang="en">mother</span>
-               <span target="#d1e552" xml:lang="en">woman</span>
-               <span target="#d1e552" xml:lang="es"/>
+         </p>
+         <p>
+            <seg xml:id="d1e551" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e552">nana</w>
+            </seg>
+            <seg xml:id="d1e554" notation="ipa" xml:lang="mix" type="term">
+               <w xml:id="d1e555" sameAs="#d1e552">nànà</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e552" xml:lang="en" type="translation">mother</span>
+               <span target="#d1e552" xml:lang="en" type="translation">woman</span>
+               <span target="#d1e552" xml:lang="es" type="translation"/>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#d1e552 #d1e553" ana="#N"/>
             </spanGrp>
             <!-- (used in talking to children) -->
-</p>
-         
-            <p>
-               <seg xml:id="d1e569"
-                    notation="orth"
-                    xml:lang="mix" type="term">
-                  <w xml:id="d1e570">tata</w>
-               </seg>
-            
-            <spanGrp type="translation">
-               <span target="#d1e570" xml:lang="en">father</span>
-               <span target="#d1e570" xml:lang="es">padre</span>
+         </p>
+         <p>
+            <seg xml:id="d1e569" notation="orth" xml:lang="mix" type="term">
+               <w xml:id="d1e570">tata</w>
+            </seg>
+            <spanGrp type="annotations">
+               <span target="#d1e570" xml:lang="en" type="translation">father</span>
+               <span target="#d1e570" xml:lang="es" type="translation">padre</span>
             </spanGrp>
             <spanGrp type="gram">
                <span type="pos" target="#d1e570" ana="#N"/>
             </spanGrp>
             <!--  (rare)-->
-</p>
+         </p>
       </body>
    </text>
 </TEI>
