@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -194,7 +195,7 @@
                start="0"
                end="2.14"
                xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e117" notation="orth">
+               <seg xml:lang="mix" xml:id="d1e117" notation="orth" type="S">
                   <w xml:id="d1e118" synch="#T1">yachi</w>
                   <w xml:id="d1e120" synch="#T6">inkaa</w>
                   <w xml:id="d1e122" synch="#T9">tuyutsa</w>
@@ -202,24 +203,47 @@
                   <w xml:id="d1e126" synch="#T17">inkaa</w>
                   <w xml:id="d1e128" synch="#T20">yu</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e130" notation="ipa">
-                  <w xml:id="d1e131" synch="#T1">j<m xml:id="d1e233">˥ꜜ</m>atʃi<m xml:id="d1e241">↘</m>
-                  </w>
-                  <w xml:id="d1e144" synch="#T6">ŋk̬<m xml:id="d1e248">↘</m>aː</w>
-                  <w xml:id="d1e153" synch="#T9">t̪j<m xml:id="d1e257">↘</m>uts<m xml:id="d1e263">↗</m>a</w>
-                  <w xml:id="d1e168" synch="#T14">nũ<m xml:id="d1e272">↘↗</m>
-                  </w>
-                  <w xml:id="d1e175" synch="#T17">ŋk̬<m xml:id="d1e279">↘</m>aː</w>
-                  <w xml:id="d1e184" synch="#T20">j<m xml:id="d1e286">↘</m>u</w>
+               <seg xml:lang="mix" xml:id="d1e130" notation="ipa" type="S">
+                  <w xml:id="d1e131" synch="#T1" sameAs="#d1e118">ja˥ꜜtʃi↘</w>
+                  <w xml:id="d1e144" synch="#T6" sameAs="#d1e120">ŋk̬aː↘</w>
+                  <w xml:id="d1e153" synch="#T9" sameAs="#d1e122">t̪j↘utsa↗</w>
+                  <w xml:id="d1e168" synch="#T14" sameAs="#d1e124">nũ↘↗</w>
+                  <w xml:id="d1e175" synch="#T17" sameAs="#d1e126">ŋk̬aː↘</w>
+                  <w xml:id="d1e184" synch="#T20" sameAs="#d1e128">ju↘</w>
                </seg>
             </u>
-            <spanGrp>
-               <span from="#T1" to="#T6">ADPOS-DIST.far</span>
-               <span from="#T6" to="#T75">COP-LOC</span>
-               <span from="#T9" to="#T14">N.tree</span>
-               <span from="#T14" to="#T17">ADPOS-</span>
-               <span from="#T17" to="#T20">COP-LOC</span>
-               <span from="#T20" to="#T76">-1S</span>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e117" xml:lang="en" ana="#S">The pine tree is near me.</span>
+               <span type="translation" target="#d1e117" xml:lang="es" ana="#S">El pino está acerca de mi.</span>
+               <span type="gram" target="#d1e117" ana="#DECL"/>
+               <span type="translation" target="#d1e118" xml:lang="en">near</span>
+               <span type="translation" target="#d1e118" xml:lang="es">acerca</span>
+               <span type="gram" target="#d1e118" ana="#ADPOS">
+                  <gloss type="igt">near</gloss>
+               </span>
+               <span type="translation" target="#d1e120" xml:lang="en">is located</span>
+               <span type="translation" target="#d1e120" xml:lang="es">está</span>
+               <span type="gram" target="#d1e120" ana="#V #INTRANS #INCOMPL">
+                  <gloss type="igt">be.loc</gloss>
+               </span>
+               <span type="translation" target="#d1e122" xml:lang="en">pine tree</span>
+               <span type="translation" target="#d1e122" xml:lang="es">pino</span>
+               <span type="gram" target="#d1e122" ana="#N">
+                  <gloss type="igt">pine</gloss>
+               </span>
+               <span type="translation" target="#d1e124 #d1e126 #d1e128" xml:lang="en" ana="#PHRS">where I am</span>
+               <span type="translation" target="#d1e124 #d1e126 #d1e128" xml:lang="es" ana="#PHRS">dónde estoy yo</span>
+               <span type="gram" target="#d1e124" ana="#PRON-REL" cert="medium">
+                  <gloss type="igt">face</gloss>
+               </span>
+               <span type="note" target="#d1e124">not sure what the POS should be here...it could be "relative pron" "introductory pron" or maybe even "conjuntion"</span>
+               <span type="gram" target="#d1e126" ana="#V #INTRANS #INCOMPL">
+                  <gloss type="igt">be.loc</gloss>
+               </span>
+               <span type="gram" target="#d1e128" ana="#1PERS #SG">
+                  <gloss type="igt">=1sg</gloss>
+               </span>
+               <span type="gram" target="#d1e124 #d1e126 #d1e128" ana="#ADPOS-PHRS #LOC"/><!--should #LOC be moved to semantics?  -->
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
@@ -229,7 +253,7 @@
                start="2.14"
                end="4.33"
                xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e206" notation="orth">
+               <seg xml:lang="mix" xml:id="d1e206" notation="orth" type="S">
                   <w xml:id="d1e207" synch="#T22">yachi</w>
                   <w xml:id="d1e209" synch="#T27">inkaa</w>
                   <w xml:id="d1e211" synch="#T31">tuyutsa</w>
@@ -237,21 +261,54 @@
                   <w xml:id="d1e215" synch="#T41">inkaa</w>
                   <w xml:id="d1e217" synch="#T45">yu</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e219" notation="ipa">
-                  <w xml:id="d1e220" synch="#T22">j<m xml:id="d1e322">˥ꜜ</m>atʃi<m xml:id="d1e330">˩</m>
-                  </w>
-                  <w xml:id="d1e233" synch="#T27">ŋk̬aː<m xml:id="d1e339">↘</m>
-                  </w>
-                  <w xml:id="d1e242" synch="#T31">t̪ju<m xml:id="d1e348">∙</m>tsa<m xml:id="d1e354">↗</m>
-                  </w>
-                  <w xml:id="d1e257" synch="#T38">nũ<m xml:id="d1e361">˩</m>
-                  </w>
-                  <w xml:id="d1e264" synch="#T41">ŋk̬aː<m xml:id="d1e370">↘</m>
-                  </w>
-                  <w xml:id="d1e273" synch="#T45">ju<m xml:id="d1e377">↘</m>
-                  </w>
+               <seg xml:lang="mix"
+                    xml:id="d1e219"
+                    notation="ipa"
+                    sameAs="#d1e206"
+                    type="S">
+                  <w xml:id="d1e220" synch="#T22" sameAs="#d1e207">ja˥ꜜtʃi˩</w>
+                  <w xml:id="d1e233" synch="#T27" sameAs="#d1e209">ŋk̬aː↘</w>
+                  <w xml:id="d1e242" synch="#T31" sameAs="#d1e211">t̪jutsa↗</w>
+                  <w xml:id="d1e257" synch="#T38" sameAs="#d1e213">nũ˩</w>
+                  <w xml:id="d1e264" synch="#T41" sameAs="#d1e215">ŋk̬aː↘</w>
+                  <w xml:id="d1e273" synch="#T45" sameAs="#d1e217">ju↘</w>
                </seg>
             </u>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e206" xml:lang="en" ana="#S"/>
+               <span type="translation" target="#d1e206" xml:lang="es" ana="#S"/>
+               <span type="gram" target="#d1e206" ana="#"/>
+               <span type="translation" target="#d1e207" xml:lang="en"/>
+               <span type="translation" target="#d1e207" xml:lang="es"/>
+               <span type="gram" target="#d1e207" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e209" xml:lang="en"/>
+               <span type="translation" target="#d1e209" xml:lang="es"/>
+               <span type="gram" target="#d1e209" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e211" xml:lang="en"/>
+               <span type="translation" target="#d1e211" xml:lang="es"/>
+               <span type="gram" target="#d1e211" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e213" xml:lang="en"/>
+               <span type="translation" target="#d1e213" xml:lang="es"/>
+               <span type="gram" target="#d1e213" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e215" xml:lang="en"/>
+               <span type="translation" target="#d1e215" xml:lang="es"/>
+               <span type="gram" target="#d1e215" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e217" xml:lang="en"/>
+               <span type="translation" target="#d1e217" xml:lang="es"/>
+               <span type="gram" target="#d1e217" ana="#">
+                  <gloss type="igt"/>
+               </span>
+            </spanGrp>
             <spanGrp>
                <span from="#T22" to="#T27">ADPOS-DIST.far</span>
                <span from="#T27" to="#T77">COP-LOC</span>
@@ -268,7 +325,7 @@
                start="4.33"
                end="6.49"
                xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e295" notation="orth">
+               <seg xml:lang="mix" xml:id="d1e295" notation="orth" type="S">
                   <w xml:id="d1e296" synch="#T48">yachi</w>
                   <w xml:id="d1e298" synch="#T54">inkaa</w>
                   <w xml:id="d1e300" synch="#T58">tuyutsa</w>
@@ -276,21 +333,54 @@
                   <w xml:id="d1e304" synch="#T68">inkaa</w>
                   <w xml:id="d1e306" synch="#T72">yu</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e308" notation="ipa">
-                  <w xml:id="d1e309" synch="#T48">ja<m xml:id="d1e413">↘</m>tʃi<m xml:id="d1e419">∙</m>
-                  </w>
-                  <w xml:id="d1e322" synch="#T54">ŋk̬aː<m xml:id="d1e428">↘</m>
-                  </w>
-                  <w xml:id="d1e331" synch="#T58">t̪ju<m xml:id="d1e437">∙</m>tsa<m xml:id="d1e443">˥</m>
-                  </w>
-                  <w xml:id="d1e346" synch="#T65">nũ<m xml:id="d1e450">↘↗ꜜ</m>
-                  </w>
-                  <w xml:id="d1e353" synch="#T68">ŋk̬aː<m xml:id="d1e459">↘</m>
-                  </w>
-                  <w xml:id="d1e362" synch="#T72">ju<m xml:id="d1e466">↘</m>
-                  </w>
+               <seg xml:lang="mix"
+                    xml:id="d1e308"
+                    notation="ipa"
+                    type="S"
+                    sameAs="#d1e295">
+                  <w xml:id="d1e309" synch="#T48" sameAs="#d1e296">ja↘tʃi</w>
+                  <w xml:id="d1e322" synch="#T54" sameAs="#d1e298">ŋk̬aː↘</w>
+                  <w xml:id="d1e331" synch="#T58" sameAs="#d1e300">t̪jutsa˥</w>
+                  <w xml:id="d1e346" synch="#T65" sameAs="#d1e302">nũ↘↗ꜜ</w>
+                  <w xml:id="d1e353" synch="#T68" sameAs="#d1e304">ŋk̬aː↘</w>
+                  <w xml:id="d1e362" synch="#T72" sameAs="#d1e306">ju↘</w>
                </seg>
             </u>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e295" xml:lang="en" ana="#S"/>
+               <span type="translation" target="#d1e295" xml:lang="es" ana="#S"/>
+               <span type="gram" target="#d1e295" ana="#"/>
+               <span type="translation" target="#d1e296" xml:lang="en"/>
+               <span type="translation" target="#d1e296" xml:lang="es"/>
+               <span type="gram" target="#d1e296" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e298" xml:lang="en"/>
+               <span type="translation" target="#d1e298" xml:lang="es"/>
+               <span type="gram" target="#d1e298" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e300" xml:lang="en"/>
+               <span type="translation" target="#d1e300" xml:lang="es"/>
+               <span type="gram" target="#d1e300" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e302" xml:lang="en"/>
+               <span type="translation" target="#d1e302" xml:lang="es"/>
+               <span type="gram" target="#d1e302" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e304" xml:lang="en"/>
+               <span type="translation" target="#d1e304" xml:lang="es"/>
+               <span type="gram" target="#d1e304" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e306" xml:lang="en"/>
+               <span type="translation" target="#d1e306" xml:lang="es"/>
+               <span type="gram" target="#d1e306" ana="#">
+                  <gloss type="igt"/>
+               </span>
+            </spanGrp>
             <spanGrp>
                <span from="#T48" to="#T54">ADPOS-DIST.far</span>
                <span from="#T54" to="#T79">COP-LOC</span>

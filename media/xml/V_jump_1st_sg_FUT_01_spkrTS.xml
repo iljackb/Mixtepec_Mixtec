@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -9,6 +10,10 @@
                <resp>Transcription</resp>
                <resp>Data Modeling</resp>
                <resp>Speaker Consultation</resp>
+            </respStmt>
+            <respStmt>
+               <resp>Speaker</resp>
+               <name xml:id="TS">Tisu'ma Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -41,13 +46,12 @@
                   </equipment>
                   <ab>
                      <location>
-                        <placeName>San José State University</placeName>
-                        <placeName>San José</placeName>
+                        <placeName>Alameda</placeName>
                         <region>California</region>
                         <country>USA</country>
                      </location>
                   </ab>
-                  <date notBefore="2011-01" notAfter="2011-12">2011</date>
+                  <date>2012-04-28</date>
                   <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
                </recording>
             </recordingStmt>
@@ -93,17 +97,17 @@
          </classDecl>
          <listPrefixDef>
             <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
             <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
             <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../oaxaca/#$1"/>
             <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -129,22 +133,22 @@
                start="0"
                end="1.26"
                xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e41" notation="orth">
-                  <w xml:id="d1e42" synch="#T2">kuun</w>
-                  <w xml:id="d1e44" synch="#T4">kanda yu</w>
+               <seg xml:lang="mix" xml:id="d1e41" notation="orth" type="phrase">
+                  <w xml:id="d1e42" synch="#T2">kunkanta</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e46" notation="ipa">
-                  <w xml:id="d1e47" synch="#T1">ũː</w>
-                  <w xml:id="d1e50" synch="#T2">
-                     <m xml:id="d1e157">↗↘</m>
-                  </w>
-                  <w xml:id="d1e53" synch="#T4">k̬a<m xml:id="d1e164">˩</m>nd̪a<m xml:id="d1e172">˩</m>
-                  </w>
+               <seg xml:lang="mix" xml:id="d1e46" notation="ipa" type="phrase" sameAs="#d1e41">
+                  <w xml:id="d1e47" synch="#T1" sameAs="#d1e42"><m xml:id="d1e157">ũː↗↘</m>k̬a˩nd̪a<m xml:id="d1e172">˩</m></w>
                </seg>
             </u>
-            <spanGrp>
-               <span from="#T2" to="#T4">COP-INCMPL-</span>
-               <span from="#T4" to="#T11">V-MTN.jump\1S</span>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e42" xml:lang="en" ana="#INFL">I will jump</span>
+               <span type="translation" target="#d1e42" xml:lang="es" ana="#INFL">saltaré</span>
+               <span type="translation" target="#d1e42" xml:lang="es" ana="#INFL">voy a saltar</span>
+               <span type="gram" target="#d1e42" ana="#V #INTRANS #FUT #1PERS #SG">
+                  <gloss type="igt">fut- jump\1s</gloss>
+               </span>
+               <span type="gram" subtype="morph" target="#d1e157" ana="#FUT"/>
+               <span type="gram" subtype="tone" target="#d1e172" ana="#1PERS #SG"/>
             </spanGrp>
          </annotationBlock>
       </body>

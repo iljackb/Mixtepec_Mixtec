@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -131,32 +132,20 @@
                end="0.74"
                xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e38" notation="orth" type="phrase">
-                  <w xml:id="d1e39" synch="#T1">kant<m xml:id="d1e40">i</m>
-                  </w>
+                  <w xml:id="d1e39" synch="#T1">kanti</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e41" notation="ipa" type="phrase">
-                  <w xml:id="d1e42" synch="#T1">kʰa<m xml:id="d1e160">˧</m>nd̪i<m xml:id="d1e44">F</m>
-                  </w>
+                  <w xml:id="d1e42" synch="#T1">kʰa<m xml:id="d1e160">˧</m>nd̪<m xml:id="d1e44">i↘</m></w>
                </seg>
             </u>
-            <spanGrp type="praatGloss">
-               <span from="#T1" to="#T8">V.jump[3S-INF]</span>
-            </spanGrp>
-            <spanGrp type="gram">
-               <span ana="#VP" target="#d1e38 #d1e41" type="translation"/>
-               <span type="pos" target="#d1e39 #d1e42" ana="#V"/>
-               <span type="person" target="#d1e40 #d1e43" ana="#3PERS"/>
-               <!-- 3sg.inf points to vowel! -->
-               <span type="number" target="#d1e40 #d1e43" ana="#SG"/>
-               <span type="register" target="#d1e40 #d1e43" ana="#INF"/>
-            </spanGrp>
-            <spanGrp type="semantics"><!-- sense: jump --><!-- typeOf: Motion -->
-               <span type="domain" target="#d1e38 #d1e41" ana="#MTN"/>
-            </spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e38 #d1e41" xml:lang="en" type="translation">I'm jumping</span>
-               <span target="#d1e38 #d1e41" xml:lang="es" type="translation">Salto</span>
-               <span target="#d1e38 #d1e41" xml:lang="es" type="translation">Estoy saltando</span>
+               <span type="translation" target="#d1e38 #d1e41" xml:lang="en" ana="#INFL">He/she is jumping</span>
+               <span type="translation" target="#d1e38 #d1e41" xml:lang="es" ana="#INFL">Él/ella salta.</span>
+               <span type="translation" target="#d1e38 #d1e41" xml:lang="es" ana="#INFL">Está saltando.</span>
+               <span type="gram" target="#d1e39" ana="#V #INTRANS #INCOMPL #3PERS #SG #INF"/>
+               <span type="gram" subtype="tone" target="#d1e39" ana="#INCOMPL"/>
+               <span type="gram" subtype="morph" target="#d1e44" ana="#3PERS #SG #INF"/>
+               <span type="semantics" target="#d1e38 #d1e41" ana="#MTN"/>
             </spanGrp>
          </annotationBlock>
       </body>

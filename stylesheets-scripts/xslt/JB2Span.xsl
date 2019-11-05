@@ -4,31 +4,12 @@
     
     <xsl:output method="xml" indent="yes"/>
     
+    <!-- ADD FOR WHERE ALREADY A <spanGrp> with only translations with or w/o <u>-->
     
-    <!-- Intercepting the <seg>'s  -original LR-->
-    <!--  
-    <xsl:template match="seg[@type='S']">
-        <annotationBlock>
-            <xsl:copy>
-                <xsl:apply-templates select="@* | node()"/>
-            </xsl:copy>
-            <spanGrp type="translation" subtype="segmentGrain">
-                <span target="#{@xml:id}" xml:lang="en"></span>
-                <span target="#{@xml:id}" xml:lang="es"></span>
-            </spanGrp>
-            <spanGrp type="translation" subtype="wordGrain">
-                <xsl:for-each select="w">
-                    <span target="#{@xml:id}" xml:lang="en"></span>
-                    <span target="#{@xml:id}" xml:lang="es"></span>
-                </xsl:for-each>
-            </spanGrp>
-        </annotationBlock>
-    </xsl:template>
-    -->
+    <!-- ADD FOR WHERE NO <spanGrp typ="annotations"> and no <u> -->
 
-    <!-- Works .... for utterance files -->
+    <!-- Works for utterance files -->
     <xsl:template match="//u">
-  
         <xsl:for-each select=".">         
             <xsl:copy>
                 <xsl:apply-templates select="@* | node()"/>
@@ -39,7 +20,8 @@
                             <xsl:value-of select="@xml:id"/>
                         </xsl:variable>                   
                         <span type="translation" target="#{$orthID}" xml:lang="en" ana="#S"></span>
-                        <span type="translation" target="#{$orthID}" xml:lang="es" ana="#S"></span>       
+                        <span type="translation" target="#{$orthID}" xml:lang="es" ana="#S"></span>
+                        <span type="gram" target="#{$orthID}" ana="#"/>  
                     </xsl:for-each>
                 
                 <xsl:for-each select="seg[@notation='orth']/w">
@@ -48,19 +30,44 @@
                     </xsl:variable>
                     <span type="translation" target="#{$wID}" xml:lang="en"></span>
                     <span type="translation" target="#{$wID}" xml:lang="es"></span>
-                    <span type="gram" target="#{$wID}" ana="#"/>            
+                    <span type="gram" target="#{$wID}" ana="#"><gloss type="igt"></gloss></span>            
                 </xsl:for-each>
                 
                 <xsl:for-each select="seg[@notation='ipa']/w/m">
                     <xsl:variable name="mID">
                         <xsl:value-of select="@xml:id"/>
                     </xsl:variable>
-                    <span type="gram" target="#{$mID}" ana="#"/>
+                    <span type="gram" subtype="" target="#{$mID}" ana="#"/>
                 </xsl:for-each>
             </spanGrp>     
         </xsl:for-each>           
     </xsl:template>
       
+      <xsl:template match="span[@type='translation' and @xml:lang='es']">
+          <xsl:for-each select=".">         
+              <xsl:copy>
+                  <xsl:apply-templates select="@* | node()"/>
+              </xsl:copy>  
+                  <xsl:variable name="targetID">
+                      <xsl:value-of select="@target"/>
+                  </xsl:variable> 
+              <span type="gram" target="{$targetID}" ana="#"><gloss type="igt"></gloss></span> 
+              
+          </xsl:for-each>
+      </xsl:template>
+
+<!-- NEED TO ADD WHERE THERE ARE <w>'s with no <span type="translation"> -->
+
+<!-- 
+    for each //seg[@type='S'] which has following-sibling::spanGrp[@type='annotations']
+    
+    for each //seg[@type='S']/w/@xml:id which is not pointed to in //spanGrp[@type='annotations']/span
+     >add <span type="gram" target="{$targetID}" ana="#"><gloss type="igt"></gloss></span>
+    
+    -->
+
+
+
 
             
 <!-- For content in //list/item structures with dual (spanish-mixtec) content -->
@@ -84,38 +91,7 @@
         
     </xsl:template>
 -->
-    <!-- For content in //list/item structures with just mixtec content 
-    <xsl:template match="item">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
-        
-        
-        <spanGrp type="translation">         
-            <xsl:for-each select="w">
-                <span target="#{@xml:id}" xml:lang="en"></span>
-            </xsl:for-each>
-        </spanGrp>       
-        
-    </xsl:template>
-    -->
-    
-<!-- for content in a table /cell
-    <xsl:template match="cell/seg[@xml:lang='mix']">
-        <xsl:copy>
-            <xsl:apply-templates select="@* | node()"/>
-        </xsl:copy>
-        
-        
-        <spanGrp type="translation">     
-            <span target="#{@xml:id}" xml:lang="en"></span>
-            <xsl:for-each select="w">
-                <span target="#{@xml:id}" xml:lang="en"></span>
-            </xsl:for-each>
-        </spanGrp>       
-        
-    </xsl:template>
-  -->
+
     <!-- Generic copy template -->
     <xsl:template match="node()|@*">
         <xsl:copy>

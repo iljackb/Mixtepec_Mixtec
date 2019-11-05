@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -20,7 +21,7 @@
          </publicationStmt>
          <sourceDesc>
             <p>This file was converted from of the speech file <ptr target="praat-export:S_I_will_give_money_to_Jack_01_JS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
-                      url="soundfiles-gen:S_I_will_give_money_to_Jack_01_JS.wav"/>
+               url="soundfiles-gen:S_I_will_give_money_to_Jack_01_JS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -98,17 +99,17 @@
          </classDecl>
          <listPrefixDef>
             <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
             <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
             <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../oaxaca/#$1"/>
             <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -150,20 +151,42 @@
                   <w xml:id="d1e59" synch="#T13">nuu</w>
                   <w xml:id="d1e61" synch="#T16">Jack</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e63" notation="ipa">
-                  <w xml:id="d1e64" synch="#T1">ũ<m xml:id="d1e178">˥</m>gwã↘ʔã<m xml:id="d1e193">↗</m>
+               <seg xml:lang="mix" xml:id="d1e63" notation="ipa" type="S">
+                  <w xml:id="d1e64" synch="#T1">
+                     <m xml:id="d1e190">ũ˥</m>gwã↘ʔã<m xml:id="d1e193">˩</m>
                   </w>
-                  <w xml:id="d1e84" synch="#T10">ʧũː↗↘</w>
+                  <w xml:id="d1e84" synch="#T10">ʧũ˥ʔũ↘</w>
                   <w xml:id="d1e91" synch="#T13">nũː↘ꜜ</w>
-                  <w xml:id="d1e98" synch="#T16">nʤae<m xml:id="d1e216">˥</m>k</w>
+                  <w xml:id="d1e98" synch="#T16">ʤæ˥k</w>
                </seg>
             </u>
-            <spanGrp>
-               <span from="#T1" to="#T3">COP-INCMPL-</span>
-               <span from="#T3" to="#T10">V.give</span>
-               <span from="#T10" to="#T13">N.money</span>
-               <span from="#T13" to="#T16">ADPOS-N.face</span>
-               <span from="#T16" to="#T21">N-PROP.Jack</span>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e52" xml:lang="en" ana="#S">I will give money to Jack.</span>
+               <span type="translation" target="#d1e52" xml:lang="es" ana="#S">Voy a dar dinero a Jack.</span>
+               <span type="gram" target="#d1e52" ana="#DECL"/>
+               <span type="translation" target="#d1e53" xml:lang="en" ana="#INFL">I will give</span>
+               <span type="translation" target="#d1e53" xml:lang="es" ana="#INFL">voy a dar</span>
+               <span type="gram" target="#d1e53" ana="#V #DITRANS #FUT #1PERS #SG">
+                  <gloss type="igt">fut-give\1s</gloss>
+               </span>
+               <span type="info-structure" target="#d1e53" ana="#A"/>
+               <span type="gram" subtype="morph" target="#d1e190" ana="#FUT"/>
+               <span type="gram" subtype="tone" target="#d1e193" ana="#1PERS #SG"/>
+               <span type="translation" target="#d1e57" xml:lang="en">money</span>
+               <span type="translation" target="#d1e57" xml:lang="es">dinero</span>
+               <span type="gram" target="#d1e57" ana="#N">
+                  <gloss type="igt">money</gloss>
+               </span>
+               <span type="info-structure" target="#d1e57" ana="#U"/>
+               <span type="translation" target="#d1e59" xml:lang="en">to</span>
+               <span type="translation" target="#d1e59" xml:lang="es">a</span>
+               <span type="gram" target="#d1e59" ana="#ADPOS">
+                  <gloss type="igt">face</gloss>
+               </span>
+               <span type="translation" target="#d1e61" xml:lang="en">Jack</span>
+               <span type="translation" target="#d1e61" xml:lang="es">Jack</span>
+               <span type="gram" target="#d1e61" ana="#N-PROP"/>
+               <span type="info-structure" target="#d1e59 #d1e61" ana="#OBLQ"/>
             </spanGrp>
          </annotationBlock>
       </body>

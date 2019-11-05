@@ -155,12 +155,17 @@
     </elementSpec>
      -->
         <elementSpec ident="span" module="analysis" mode="change">
+          <classes mode="change">
+            <memberOf key="att.typed" mode="add"/>
+            <memberOf key="att.interpLike" mode="delete"/>
+          </classes>
           <attList>
-            <attDef ident="type" mode="replace" usage="rec">
-              <valList type="semi" mode="change" >
+            <attDef ident="type" mode="change" usage="rec">
+              <valList type="semi" mode="change">
                 <valItem ident="note"/>
-                <valItem ident="sentence"/>
-                <valItem ident="phrase"/>
+                <valItem ident="translation"/>
+                <valItem ident="gram"/>
+                <!--
                 <valItem ident="inflected"/>
                 <valItem ident="compound"/>
                 <valItem ident="literal"/>
@@ -174,9 +179,23 @@
                 <valItem ident="inclusitivity"/>
                 <valItem ident="register"/>
                 <valItem ident="gender"/>
-                <!-- further values to be added there -->
+                 further values to be added there -->
               </valList>
             </attDef>
+            <attDef ident="subtype" mode="change" usage="rec">
+              <valList type="semi" mode="change">
+                <valItem ident="tone"/>
+                <valItem ident="morph"/>
+              </valList>
+            </attDef>
+            <!--  
+            <attDef ident="ana" mode="change" usage="rec">
+              <valList type="semi" mode="change">
+                <valItem ident="V"/>
+                <valItem ident="N"/>
+              </valList>
+            </attDef>
+            -->
           </attList>
         </elementSpec>
         <elementSpec ident="gram" mode="change">
