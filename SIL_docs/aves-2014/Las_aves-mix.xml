@@ -12,7 +12,7 @@
             <respStmt>
                <resp>TEI Encoding</resp>
                <resp>Annotation</resp>
-               <name>Jack Bowers</name>
+               <name xml:id="JB">Jack Bowers</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -75,7 +75,33 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </item>
                </list>
             </ab>
+            <ab>Latin scientific names of the species were added in the translations as well...</ab>
          </editorialDecl>
+         <classDecl>
+            <taxonomy xml:id="tax.sil-mix">
+               <category xml:id="pedagogical">
+                  <catDesc>PEDAGOGICAL</catDesc>
+                  <category xml:id="pedagogical-inter">
+                     <catDesc>PEDAGOGICAL:INTERACTIVE</catDesc>
+                  </category>
+                  <category xml:id="pedagogical-ref">
+                     <catDesc>PEDAGOGICAL:REFERENCE</catDesc>
+                  </category>
+               </category>
+               <category xml:id="fiction">
+                  <catDesc>FICTION</catDesc>
+                  <category xml:id="fiction-fantasy">
+                     <catDesc>FICTION:FANTASY</catDesc>
+                  </category>
+                  <category xml:id="fiction-realistic">
+                     <catDesc>FICTION:REALISTIC</catDesc>
+                  </category>
+               </category>
+               <category xml:id="folklore">
+                  <catDesc>FOLKLORE</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
          <!--  
          <segmentation>
             <p>In the standoff annotation markup, in this document, since there are only single lexical items (simplex, or compound) the pointers in the standoff <tag>span</tag>
@@ -85,7 +111,7 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
       </encodingDesc>
    </teiHeader>
    <!-- after all annotations finished convert all //seg[@type="compound"]/* to //w[@type="compound"]/* -->
-   <text>
+   <text ana="#pedagogical-ref">
       <body>
          <div><!-- p3 -->
             <list>
@@ -113,34 +139,34 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e35 #d1e45"/>
                   </linkGrp>
                   <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e35"
                            corresp="https://www.wikidata.org/wiki/Q1897132"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e35"
                            corresp="http://dbpedia.org/resource/Burrowing_owl"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e35"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e35"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
                </item>
                <item>
                   <graphic url="Aves-02.png"/>
-                  <w xml:id="d1e53" xml:lang="mix" norm="chumi xini ka'nu">
+                  <seg xml:id="d1e53" xml:lang="mix" type="caption">
                      <w xml:id="d1e54">chumi</w>
                      <w xml:id="d1e56">xini</w>
                      <w xml:id="d1e58" orig="kaꞌnu">ka'nu</w>
-                  </w>
-                  <w xml:id="d1e60" xml:lang="es">
+                  </seg>
+                  <seg xml:id="d1e60" xml:lang="es" type="caption">
                      <w xml:id="d1e61">tecolote</w>
-                  </w>
-                  <w xml:id="d1e63" xml:lang="es">
+                  </seg>
+                  <seg xml:id="d1e63" xml:lang="es" type="caption">
                      <w xml:id="d1e64">búho</w>
                      <w xml:id="d1e66">cornado</w>
-                  </w>
+                  </seg>
                   <linkGrp type="translation">
                      <link target="#d1e53 #d1e60"/>
                      <link target="#d1e53 #d1e63"/>
@@ -148,20 +174,10 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span xml:lang="en" target="#d1e53" type="translation">Great Horned Owl</span>
                      <span xml:lang="la" target="#d1e53" type="translation">Bubo virginianus</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
-                           target="#d1e53"
-                           corresp="https://www.wikidata.org/wiki/Q81515"/>
-                     <span type="sense"
-                           target="#d1e53"
-                           corresp="http://dbpedia.org/resource/Great_horned_owl"/>
-                     <span type="domain"
-                           target="#d1e53"
-                           corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
-                           target="#d1e53"
-                           corresp="http://dbpedia.org/resource/Animal"/>
+                     <span type="semantics" subtype="sense" target="#d1e53" corresp="https://www.wikidata.org/wiki/Q81515"/>
+                     <span type="semantics" subtype="sense" target="#d1e53" corresp="http://dbpedia.org/resource/Great_horned_owl"/>
+                     <span type="semantics" subtype="domain" target="#d1e53" corresp="http://dbpedia.org/resource/Bird"/>
+                     <span type="semantics" subtype="domain" target="#d1e53" corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
                </item>
                <item>
@@ -180,16 +196,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e71 #d1e76"/>
                   </linkGrp>
                   <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e71"
                            corresp="https://www.wikidata.org/wiki/Q638019"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e71"
                            corresp="http://dbpedia.org/resource/Northern_saw-whet_owl"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e71"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e71"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -212,18 +228,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="gram">
                      <span type="pos" target="#d1e82" ana="#N"/>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e82"
                            corresp="https://www.wikidata.org/wiki/Q1147207"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e82"
                            corresp="http://dbpedia.org/resource/Whiskered_screech_owl"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e82"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e82"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -249,13 +264,13 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                            type="sense"
                            target="#d1e95"
                            corresp="https://www.wikidata.org/wiki/Q930457"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e95"
                            corresp="http://dbpedia.org/resource/Common_poorwill"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e95"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e95"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -288,16 +303,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e113 #d1e119"/>
                   </linkGrp>
                   <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e107 #d1e113"
                            corresp="https://www.wikidata.org/wiki/Q41181"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e107 #d1e113"
                            corresp="http://dbpedia.org/resource/Golden_eagle"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e107 #d1e113"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e107 #d1e113"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -326,18 +341,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e135 #d1e141 #d1e145" xml:lang="en" type="translation">American Kestral</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e135 #d1e141 #d1e145"
                            corresp="https://www.wikidata.org/wiki/Q651545"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e135 #d1e141 #d1e145"
                            corresp="http://dbpedia.org/resource/American_kestrel"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e135 #d1e141 #d1e145"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e135 #d1e141 #d1e145"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -359,16 +373,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e162 #d1e157"/>
                   </linkGrp>
                   <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e157"
                            corresp="https://www.wikidata.org/wiki/Q586194"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e157"
                            corresp="http://dbpedia.org/resource/Short-tailed_hawk"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e157"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e157"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -386,18 +400,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e170" xml:lang="en" type="translation">Falcon</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e170"
                            corresp="https://www.wikidata.org/wiki/Q43489"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e170"
                            corresp="http://dbpedia.org/resource/Falcon"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e170"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e170"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -427,18 +440,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e182" xml:lang="en" type="translation">Sharp-shinned hawk</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e182"
                            corresp="https://www.wikidata.org/wiki/Q386569"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e182"
                            corresp="http://dbpedia.org/resource/Sharp-shinned_hawk"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e182"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e182"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -459,18 +471,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e202" xml:lang="en" type="translation">Common Black Hawk</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e202"
                            corresp="https://www.wikidata.org/wiki/Q1267120"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e202"
                            corresp="http://dbpedia.org/resource/Common_black_hawk"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e202"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e202"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -491,18 +502,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e217" xml:lang="en" type="translation">Merlin</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e217"
                            corresp="https://www.wikidata.org/wiki/Q131918"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e217"
                            corresp="http://dbpedia.org/resource/Merlin"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e217"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e217"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -527,19 +537,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e232" xml:lang="en" type="translation">Peregrin Falcon</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
+
                      <span cert="medium"
                            type="sense"
                            target="#d1e232"
                            corresp="https://www.wikidata.org/wiki/Q30535"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e232"
                            corresp="http://dbpedia.org/resource/Peregrine_falcon"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e232"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e232"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -579,10 +588,10 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                            type="sense"
                            target="#d1e251"
                            corresp="https://www.wikidata.org/wiki/Q10741794"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e262"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e262"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -608,16 +617,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e273 #d1e278"/>
                   </linkGrp>
                   <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e273"
                            corresp="https://www.wikidata.org/wiki/Q245181"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e273"
                            corresp="http://dbpedia.org/resource/Turkey_vulture"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e273"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e273"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -639,16 +648,16 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <link target="#d1e285 #d1e290"/>
                   </linkGrp>
                   <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e285"
                            corresp="https://www.wikidata.org/wiki/Q213366"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e285"
                            corresp="http://dbpedia.org/resource/Black_vulture"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e285"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e285"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -667,18 +676,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e297" xml:lang="en" type="translation">Crested Caracara</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e297"
                            corresp="https://www.wikidata.org/wiki/Q1260407"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e297"
                            corresp="http://dbpedia.org/resource/Northern_crested_caracara"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e297"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e297"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -698,18 +706,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e307" xml:lang="en" type="translation">White-tailed hawk</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e307"
                            corresp="https://www.wikidata.org/wiki/Q997713"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e307"
                            corresp="http://dbpedia.org/resource/White-tailed_hawk"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e307"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e307"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -733,18 +740,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e322" xml:lang="en" type="translation">Bronzed cowbird</span>
                      <span target="#d1e322" xml:lang="la" type="translation">Molothrus aeneus</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e322"
                            corresp="https://www.wikidata.org/wiki/Q1190592"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e322"
                            corresp="http://dbpedia.org/resource/Bronzed_cowbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e322"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e322"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -765,18 +771,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e332" xml:lang="en" type="translation">Red-winged blackbird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e332"
                            corresp="https://www.wikidata.org/wiki/Q27636532"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e332"
                            corresp="http://dbpedia.org/resource/Red-winged_blackbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e332"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e332"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -795,18 +800,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e346" xml:lang="en" type="translation">Great-tailed grackle</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e346"
                            corresp="https://www.wikidata.org/wiki/Q1234856"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e346"
                            corresp="http://dbpedia.org/resource/Great-tailed_grackle"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e346"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e346"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -824,21 +828,20 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e359" xml:lang="en" type="translation">Crow</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e359"
                            cert="low"
                            corresp="https://www.wikidata.org/wiki/Q43365"/>
                      <!-- specific species of mexican crows!? -->
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e359"
                            corresp="http://dbpedia.org/resource/Crow"/>
                      <span type="note">Species of crow found in la Mixteca can be further specified. More Research needed.</span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e359"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e359"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -863,18 +866,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e367 #d1e372" xml:lang="en" type="translation">Groove-billed ani</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e367 #d1e372"
                            corresp="https://www.wikidata.org/wiki/Q791145"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e367 #d1e372"
                            corresp="http://dbpedia.org/resource/Groove-billed_ani"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e367 #d1e372"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e367 #d1e372"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -897,18 +899,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e387" xml:lang="en" type="translation">Pigeon</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e387"
                            corresp="https://www.wikidata.org/wiki/Q7354625"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e387"
                            corresp="http://dbpedia.org/resource/Pigeon"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e387"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e387"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -934,18 +935,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e397 #d1e402" xml:lang="en" type="translation">Tuxtla quail-dove</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e397 #d1e402"
                            corresp="https://www.wikidata.org/wiki/Q1009577"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e397 #d1e402"
                            corresp="http://dbpedia.org/resource/Tuxtla_quail-dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e397 #d1e402"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e397 #d1e402"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -976,18 +976,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e416 #d1e421" xml:lang="en" type="translation">Eurasian Collared Dove</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e416 #d1e421"
                            corresp="https://www.wikidata.org/wiki/Q54696"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e416 #d1e421"
                            corresp="http://dbpedia.org/resource/Eurasian_collared_dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e416 #d1e421"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e416 #d1e421"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1005,18 +1004,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e438" xml:lang="en" type="translation">Mourning Dove</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e438"
                            corresp="https://www.wikidata.org/wiki/Q1386698"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e438"
                            corresp="http://dbpedia.org/resource/Mourning_dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e438"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e438"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1036,18 +1034,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e446" xml:lang="en" type="translation">European turtle dove</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e446"
                            corresp="https://www.wikidata.org/wiki/Q168514"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e446"
                            corresp="http://dbpedia.org/resource/European_turtle_dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e446"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e446"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1071,18 +1068,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e461" xml:lang="en" type="translation">Pale-vented Pigeon</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e461"
                            corresp="https://www.wikidata.org/wiki/Q1263074"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e461"
                            corresp="http://dbpedia.org/resource/Pale-vented_pigeon"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e461"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e461"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1108,18 +1104,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e473 #d1e478" xml:lang="en" type="translation">Ruddy Ground Dove</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e473 #d1e478"
                            corresp="https://www.wikidata.org/wiki/Q1386698"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e473 #d1e478"
                            corresp="http://dbpedia.org/resource/Ruddy_ground_dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e473 #d1e478"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e473 #d1e478"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1142,18 +1137,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e492" xml:lang="en" cert="medium" type="translation">Collared dove</span>
                      <!-- not the same as "Streptopelia decaocto"? -->
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e492"
                            corresp="https://www.wikidata.org/wiki/Q54696"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e492"
                            corresp="http://dbpedia.org/resource/Eurasian_collared_dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e492"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e492"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1174,18 +1168,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e508" xml:lang="en" type="translation">White-winged Dove</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e508"
                            corresp="https://www.wikidata.org/wiki/Q917542"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e508"
                            corresp="http://dbpedia.org/resource/White-winged_dove"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e508"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e508"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1212,18 +1205,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </spanGrp>
                   <spanGrp type="annotations">
                      <span type="literal" target="#d1e525" xml:lang="en">mountain turkey</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e525"
                            corresp="https://www.wikidata.org/wiki/Q848140"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e525"
                            corresp="http://dbpedia.org/resource/Crested_guan"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e525"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e525"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1241,19 +1233,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e537" xml:lang="en" type="translation">Chachalaca</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e537"
                            corresp="http://dbpedia.org/resource/Chachalaca"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e537"
                            corresp="https://www.wikidata.org/wiki/Q777139"/>
                      <span type="note">Not sure of specific variety of 'chachalaca'.</span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e537"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e537"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1272,18 +1263,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e545" xml:lang="en" type="translation">Montezuma Quail</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e545"
                            corresp="https://www.wikidata.org/wiki/Q1093509"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e545"
                            corresp="http://dbpedia.org/resource/Montezuma_quail"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e545"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e545"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1302,18 +1292,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e555" xml:lang="en" type="translation">Northern Bobwhite</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e555"
                            corresp="https://www.wikidata.org/wiki/Q142651"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e555"
                            corresp="http://dbpedia.org/resource/Northern_bobwhite"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e555"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e555"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1335,20 +1324,19 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e565" xml:lang="en" cert="medium" type="translation">Buffy-crowned wood partridge</span>
                      <span target="#d1e565" xml:lang="en" type="literal">mountain chicken</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            cert="medium"
                            target="#d1e565"
                            corresp="https://www.wikidata.org/wiki/Q1268985"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            cert="medium"
                            target="#d1e565"
                            corresp="http://dbpedia.org/resource/Buffy-crowned_wood_partridge"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e565"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e565"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1371,21 +1359,20 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e582" xml:lang="en" cert="medium" type="translation">Ocellated Thrasher</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e582"
                            corresp="https://www.wikidata.org/wiki/Q1923531"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e582"
                            corresp="http://dbpedia.org/resource/Ocellated_thrasher"/>
                      <span type="note" target="#d1e582">
                         <note resp="#JB" xml:lang="en">Not entirely certain of the specific subspecies of Thrasher, but judging from the content of the following Wikipedia article: <ptr target="https://es.wikipedia.org/wiki/Toxostoma"/> it seems most likely that it is the Ocellated Thrasher.</note>
                      </span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e582"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e582"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1406,18 +1393,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e592" xml:lang="en" type="translation">American Robin</span>
                      <span target="#d1e592" xml:lang="en" type="translation">Robin</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e592"
                            corresp="https://www.wikidata.org/wiki/Q460967"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e592"
                            corresp="http://dbpedia.org/resource/American_robin"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e592"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e592"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1435,18 +1421,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e604" xml:lang="en" type="translation">Roadrunner</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e604"
                            corresp="https://www.wikidata.org/wiki/Q1452250"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e604"
                            corresp="http://dbpedia.org/resource/Roadrunner"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e604"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e604"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1465,18 +1450,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e612" xml:lang="en" type="translation">White-throated Towhee</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e612"
                            corresp="https://www.wikidata.org/wiki/Q1935552"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e612"
                            corresp="http://dbpedia.org/resource/White-throated_towhee"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e612"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e612"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1500,18 +1484,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e622 #d1e627" xml:lang="en" type="translation">Canyon Towhee</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e622 #d1e627"
                            corresp="https://www.wikidata.org/wiki/Q3180746"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e622 #d1e627"
                            corresp="http://dbpedia.org/resource/Canyon_towhee"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e622 #d1e627"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e622 #d1e627"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1539,21 +1522,20 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e640" xml:lang="en" type="translation">Woodhouse's scrub jay</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e640"
                            cert="high"
                            corresp="https://www.wikidata.org/wiki/Q14908008"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e640"
                            cert="high"
                            corresp="http://dbpedia.org/resource/Woodhouse's_scrub_jay"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e640"
                            cert="low"
                            corresp="https://www.wikidata.org/wiki/Q942604"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e640"
                            cert="low"
                            corresp="http://dbpedia.org/resource/Mexican_jay"/>
@@ -1561,10 +1543,10 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                         <note resp="#JB" xml:lang="en">Not clear whether this bird is referring to the Woodhouse's Scrub Jay or the Mexican Scub Jay as their territories overlap and may both be found in La Mixtec (at least according to the maps found in the following locations: <ptr target="https://www.allaboutbirds.org/guide/Woodhouses_Scrub-Jay/id"/>
                            <ptr target="https://www.allaboutbirds.org/guide/Mexican_Jay/id"/>. However based on the picture in the document, it would appear to be a Woodhouse's Scrub Jay as each have a clear white line over the eye brows.</note>
                      </span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e640"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e640"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1589,18 +1571,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e655 #d1e660" xml:lang="en" type="translation">Northern Mockingbird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e655 #d1e660"
                            corresp="https://www.wikidata.org/wiki/Q829683"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e655 #d1e660"
                            corresp="http://dbpedia.org/resource/Northern_mockingbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e655 #d1e660"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e655 #d1e660"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1626,18 +1607,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e672" xml:lang="en" type="translation">Stellar's jay</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e672"
                            corresp="https://www.wikidata.org/wiki/Q838749"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e672"
                            corresp="http://dbpedia.org/resource/Steller's_jay"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e672"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e672"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1662,18 +1642,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e691" xml:lang="en" type="translation">Gray catbird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e691"
                            corresp="https://www.wikidata.org/wiki/Q831597"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e691"
                            corresp="http://dbpedia.org/resource/Gray_catbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e691"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e691"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1710,18 +1689,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e708 #d1e715 #d1e720" xml:lang="en" type="translation">Blue Mockingbird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e708 #d1e715 #d1e720"
                            corresp="https://www.wikidata.org/wiki/Q1587047"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e708 #d1e715 #d1e720"
                            corresp="http://dbpedia.org/resource/Blue_mockingbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e708 #d1e715 #d1e720"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e708 #d1e715 #d1e720"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1747,18 +1725,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e738" xml:lang="en" type="translation">Greater pewee</span>
                      <span target="#d1e738" xml:lang="en" type="literal">rain bird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e738"
                            corresp="https://www.wikidata.org/wiki/Q1263607"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e738"
                            corresp="http://dbpedia.org/resource/Greater_pewee"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e738"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e738"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1777,18 +1754,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e752" xml:lang="en" type="translation">Elegant Trogon</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e752"
                            corresp="https://www.wikidata.org/wiki/Q632823"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e752"
                            corresp="http://dbpedia.org/resource/Elegant_trogon"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e752"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e752"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1808,18 +1784,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e762" xml:lang="en" type="translation">Northern tufted flycatcher</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e762"
                            corresp="https://www.wikidata.org/wiki/Q1268784"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e762"
                            corresp="http://dbpedia.org/resource/Northern_tufted_flycatcher"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e762"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e762"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1843,18 +1818,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e774 #d1e777" xml:lang="en" type="translation">Grey silky-flycatcher</span>
                      <span target="#d1e774 #d1e777" xml:lang="la" type="translation">Pyrocephalus rubinus</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e774 #d1e777"
                            corresp="https://www.wikidata.org/wiki/Q3176494"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e774 #d1e777"
                            corresp="http://dbpedia.org/resource/Grey_silky-flycatcher"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e774 #d1e777"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e774 #d1e777"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1874,18 +1848,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e787" xml:lang="en" type="translation">Loggerhead shrike</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e787"
                            corresp="https://www.wikidata.org/wiki/Q430863"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e787"
                            corresp="http://dbpedia.org/resource/Loggerhead_shrike"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e787"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e787"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1908,18 +1881,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e803" xml:lang="en" type="translation">Common swift</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e803"
                            corresp="https://www.wikidata.org/wiki/Q25377"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e803"
                            corresp="http://dbpedia.org/resource/Common_swift"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e803"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e803"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1957,18 +1929,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e813 #d1e816 #d1e819" xml:lang="en" type="translation">Amazonian motmot</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e813 #d1e816 #d1e819"
                            corresp="https://www.wikidata.org/wiki/Q904932"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e813 #d1e816 #d1e819"
                            corresp="http://dbpedia.org/resource/Amazonian_motmot"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e813 #d1e816 #d1e819"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e813 #d1e816 #d1e819"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -1989,16 +1960,15 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e833" xml:lang="en" type="translation">Mexican yellow grosbeak</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense" target="#d1e833" corresp="NA"/>
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense" target="#d1e833" corresp="NA"/>
+                     <span type="semantics" subtype="sense"
                            target="#d1e833"
                            corresp="http://dbpedia.org/resource/Mexican_yellow_grosbeak"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e833"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e833"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2018,18 +1988,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e847" xml:lang="en" type="translation">Black-headed Grosbeak</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e847"
                            corresp="https://www.wikidata.org/wiki/Q998547"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e847"
                            corresp="http://dbpedia.org/resource/Black-headed_grosbeak"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e847"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e847"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2049,18 +2018,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e859" xml:lang="en" type="translation">Blue grosbeak</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e859"
                            corresp="https://www.wikidata.org/wiki/Q794337"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e859"
                            corresp="http://dbpedia.org/resource/Blue_grosbeak"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e859"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e859"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2082,18 +2050,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e874" xml:lang="en" type="translation">Swallow</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e874"
                            corresp="https://www.wikidata.org/wiki/Q1401371"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e874"
                            corresp="http://dbpedia.org/resource/Swallow"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e874"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e874"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2130,18 +2097,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e882 #d1e885 #d1e890" xml:lang="en" type="translation">Vermilion flycatcher</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e882 #d1e885 #d1e890"
                            corresp="https://www.wikidata.org/wiki/Q572657"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e882 #d1e885 #d1e890"
                            corresp="http://dbpedia.org/resource/Vermilion_flycatcher"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e882 #d1e885 #d1e890"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e882 #d1e885 #d1e890"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2160,18 +2126,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e909" xml:lang="en" type="translation">Violet-green Swallow</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e909"
                            corresp="https://www.wikidata.org/wiki/Q1059968"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e909"
                            corresp="http://dbpedia.org/resource/Violet-green_swallow"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e909"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e909"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2196,18 +2161,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e919 #d1e924" xml:lang="en" type="translation">Summer tanager</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e919 #d1e924"
                            corresp="https://www.wikidata.org/wiki/Q1078246"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e919 #d1e924"
                            corresp="http://dbpedia.org/resource/Summer_tanager"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e919 #d1e924"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e919 #d1e924"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2229,18 +2193,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e936" xml:lang="en" type="translation">Western tanager</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e936"
                            corresp="https://www.wikidata.org/wiki/Q384342"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e936"
                            corresp="http://dbpedia.org/resource/Western_tanager"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e936"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e936"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2268,18 +2231,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e955 #d1e958" xml:lang="en" type="translation">White-collared seedeater</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e955 #d1e958"
                            corresp="https://www.wikidata.org/wiki/Q3121286"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e955 #d1e958"
                            corresp="http://dbpedia.org/resource/White-collared_seedeater"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e955 #d1e958"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e955 #d1e958"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2304,16 +2266,15 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e970 #d1e975" xml:lang="en" type="translation">Painted whitestart</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense" target="#d1e970 #d1e975" corresp="NA"/>
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense" target="#d1e970 #d1e975" corresp="NA"/>
+                     <span type="semantics" subtype="sense"
                            target="#d1e970 #d1e975"
                            corresp="http://dbpedia.org/resource/Painted_whitestart"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e970 #d1e975"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e970 #d1e975"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2333,18 +2294,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e987" xml:lang="en" type="translation">Golden-cheeked warbler</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e987"
                            corresp="https://www.wikidata.org/wiki/Q27075939"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e987"
                            corresp="http://dbpedia.org/resource/Golden-cheeked_warbler"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e987"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e987"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2368,18 +2328,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e999" xml:lang="en" type="translation">Yellow-rumped warbler</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e999"
                            corresp="https://www.wikidata.org/wiki/Q18390024"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e999"
                            corresp="http://dbpedia.org/resource/Yellow-rumped_warbler"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e999 #d1e1004"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e999 #d1e1004"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2415,19 +2374,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e1014 #d1e1025" xml:lang="en" type="translation">Blue-hooded Euphonia</span>
                      <span target="#d1e1014 #d1e1025" xml:lang="en" type="translation">Elegant Euphonia</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1014 #d1e1025"
                            corresp="https://www.wikidata.org/wiki/Q1300998"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1014 #d1e1025"
                            corresp="http://dbpedia.org/resource/Elegant_euphonia"/>
                      <span type="note" target="#d1e1037">The original Spanish species name appears to be misspelled as it should be<name>Eufonia gorro azul</name>.</span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1014 #d1e1025"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1014 #d1e1025"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2448,18 +2406,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1044" xml:lang="en" type="translation">Wilson's warbler</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1044"
                            corresp="https://www.wikidata.org/wiki/Q27076007"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1044"
                            corresp="http://dbpedia.org/resource/Wilson's_warbler"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1044"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1044"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2499,20 +2456,19 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                            xml:lang="en"
                            cert="medium"
                            type="translation">Lesser goldfinch</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1061 #d1e1070"
                            corresp="https://www.wikidata.org/wiki/Q1301194"
                            cert="medium"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1061 #d1e1070"
                            corresp="http://dbpedia.org/resource/Lesser_goldfinch"
                            cert="medium"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1061 #d1e1070"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1061 #d1e1070"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2542,18 +2498,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1086 #d1e1091" xml:lang="en" type="translation">Chalk-browed mockingbird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1086 #d1e1091"
                            corresp="https://www.wikidata.org/wiki/Q1591533"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1086 #d1e1091"
                            corresp="http://dbpedia.org/resource/Chalk-browed_mockingbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1086 #d1e1091"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1086 #d1e1091"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2579,18 +2534,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1105 #d1e1112" xml:lang="en" type="translation">Golden vireo</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1105 #d1e1112"
                            corresp="https://www.wikidata.org/wiki/Q1590852"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1105 #d1e1112"
                            corresp="http://dbpedia.org/resource/Golden_vireo"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1105 #d1e1112"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1105 #d1e1112"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2611,18 +2565,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1124" xml:lang="en" type="translation">Black-throated gray warbler</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1124"
                            corresp="https://www.wikidata.org/wiki/Q3176524"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1124"
                            corresp="http://dbpedia.org/resource/Black-throated_gray_warbler"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1124"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1124"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2644,18 +2597,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1138" xml:lang="en" type="translation">Rufous-capped warbler</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1138"
                            corresp="https://www.wikidata.org/wiki/Q791200"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1138"
                            corresp="http://dbpedia.org/resource/Rufous-capped_warbler"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1138"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1138"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2676,18 +2628,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1154" xml:lang="en" type="translation">Streaked flycatcher</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1154"
                            corresp="https://www.wikidata.org/wiki/Q875860"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1154"
                            corresp="http://dbpedia.org/resource/Streaked_flycatcher"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1154"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1154"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2711,18 +2662,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1171" xml:lang="en" type="translation">Bridled titmouse</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1171"
                            corresp="https://www.wikidata.org/wiki/Q2888535"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1171"
                            corresp="http://dbpedia.org/resource/Bridled_titmouse"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1171"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1171"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2750,20 +2700,19 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                            xml:lang="en"
                            cert="medium"
                            type="translation">Canyon wren</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1183 #d1e1188"
                            corresp="https://www.wikidata.org/wiki/Q776497"
                            cert="medium"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1183 #d1e1188"
                            cert="medium"
                            corresp="http://dbpedia.org/resource/Canyon_wren"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1183 #d1e1188"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1183 #d1e1188"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2787,18 +2736,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1200 #d1e1203" xml:lang="en" type="translation">Bewick's wren</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1200 #d1e1203"
                            corresp="https://www.wikidata.org/wiki/Q997457"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1200 #d1e1203"
                            corresp="http://dbpedia.org/resource/Bewick's_wren"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1200 #d1e1203"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1200 #d1e1203"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2830,18 +2778,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <span target="#d1e1215 #d1e1220 #d1e1230"
                            xml:lang="en"
                            type="translation">Rock wren</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1215 #d1e1220 #d1e1225"
                            corresp="https://www.wikidata.org/wiki/Q935880"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1215 #d1e1220 #d1e1230"
                            corresp="http://dbpedia.org/resource/Rock_wren"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1215 #d1e1220 #d1e1230"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1215 #d1e1220 #d1e1230"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2860,18 +2807,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1237" xml:lang="en" type="translation">Blue-gray gnatcatcher</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1237"
                            corresp="https://www.wikidata.org/wiki/Q883006"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1237"
                            corresp="http://dbpedia.org/resource/Blue-gray_gnatcatcher"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1237"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1237"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2892,16 +2838,15 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   <spanGrp type="annotations">
                      <span target="#d1e1247" xml:lang="en" type="translation">house wren</span>
                      <span target="#d1e1247" xml:lang="la" type="translation">troglodytes aedon</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1247"
                            corresp="http://dbpedia.org/resource/House_wren"/>
                      <span type="note">Troglidita is the non-standard Spanish name for a type of Wren but not sure which one.</span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1247"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1247"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2923,18 +2868,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1262" xml:lang="en" type="translation">Hummingbird</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1262"
                            corresp="https://www.wikidata.org/wiki/Q43624"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1262"
                            corresp="http://dbpedia.org/resource/Hummingbird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1262"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1262"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2954,18 +2898,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1270" xml:lang="en" type="translation">Rose-throated becard</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1270"
                            corresp="https://www.wikidata.org/wiki/Q791067"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1270"
                            corresp="http://dbpedia.org/resource/Rose-throated_becard"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1270"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1270"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -2985,18 +2928,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1282" xml:lang="en" type="translation">Goldcrest</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1282"
                            corresp="https://www.wikidata.org/wiki/Q26657"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1282"
                            corresp="http://dbpedia.org/resource/Goldcrest"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1282"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1282"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3016,18 +2958,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1294" xml:lang="en" type="translation">Black-and-white warbler</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1294"
                            corresp="https://www.wikidata.org/wiki/Q669888"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1294"
                            corresp="http://dbpedia.org/resource/Black-and-white_warbler"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1294"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1294"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3052,18 +2993,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1306 #d1e1311" xml:lang="en" type="translation">Boucard's wren</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1306 #d1e1311"
                            corresp="https://www.wikidata.org/wiki/Q1586939"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1306 #d1e1311"
                            corresp="http://dbpedia.org/resource/Boucard's_wren"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1306 #d1e1311"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1306 #d1e1311"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3083,18 +3023,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1323" xml:lang="en" type="translation">Band-backed wren</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1323"
                            corresp="https://www.wikidata.org/wiki/Q1586963"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1323"
                            corresp="http://dbpedia.org/resource/Band-backed_wren"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1323"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1323"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3135,18 +3074,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                      <span target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
                            xml:lang="en"
                            type="translation">House finch</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
                            corresp="https://www.wikidata.org/wiki/Q25170208"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
                            corresp="http://dbpedia.org/resource/House_finch"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1338 #d1e1343 #d1e1348 #d1e1353"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3165,19 +3103,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1365" xml:lang="en" type="translation">Nuthatch</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1365"
                            corresp="https://www.wikidata.org/wiki/Q858577"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1365"
                            corresp="http://dbpedia.org/resource/Nuthatch"/>
                      <span type="note">Listed source ambiguous as to specific type of Nuthatch.</span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1365"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1365"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3197,18 +3134,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1375" xml:lang="en" type="translation">House sparrow</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1375"
                            corresp="https://www.wikidata.org/wiki/Q14683"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1375"
                            corresp="http://dbpedia.org/resource/House_sparrow"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1375"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1375"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3228,18 +3164,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1387" xml:lang="en" type="translation">Brown creeper</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1387"
                            corresp="https://www.wikidata.org/wiki/Q490294"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1387"
                            corresp="http://dbpedia.org/resource/Brown_creeper"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1387"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1387"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3259,18 +3194,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1399" xml:lang="en" type="translation">Lark sparrow</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1399"
                            corresp="https://www.wikidata.org/wiki/Q1528805"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1399"
                            corresp="http://dbpedia.org/resource/Lark_sparrow"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1399"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1399"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3294,18 +3228,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1414" xml:lang="en" type="translation">Yellow-browed woodpecker</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1414"
                            corresp="https://www.wikidata.org/wiki/Q1263819"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1414"
                            corresp="http://dbpedia.org/resource/Yellow-browed_woodpecker"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1414"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1414"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3326,18 +3259,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1426" xml:lang="en" type="translation">Yellow-bellied Sapsucker</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1426"
                            corresp="https://www.wikidata.org/wiki/Q934735"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1426"
                            corresp="http://dbpedia.org/resource/Yellow-bellied_sapsucker"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1426"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1426"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3363,18 +3295,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1440 #d1e1445" xml:lang="en" type="translation">Ladder-backed woodpecker</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1440 #d1e1445"
                            corresp="https://www.wikidata.org/wiki/Q27074907"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1440 #d1e1445"
                            corresp="http://dbpedia.org/resource/Ladder-backed_woodpecker"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1440 #d1e1445"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1440 #d1e1445"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3395,18 +3326,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1459" xml:lang="en" type="translation">Acorn woodpecker</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1459"
                            corresp="https://www.wikidata.org/wiki/Q368657"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1459"
                            corresp="http://dbpedia.org/resource/Acorn_woodpecker"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1459"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1459"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3426,18 +3356,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1473" xml:lang="en" type="translation">Grey-breasted woodpecker</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1473"
                            corresp="https://www.wikidata.org/wiki/Q1268213"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1473"
                            corresp="http://dbpedia.org/resource/Grey-breasted_woodpecker"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1473"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1473"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3460,18 +3389,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1488" xml:lang="en" type="translation">Pied-billed grebe</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1488"
                            corresp="https://www.wikidata.org/wiki/Q579718"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1488"
                            corresp="http://dbpedia.org/resource/Pied-billed_grebe"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1488"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1488"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3491,18 +3419,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1498" xml:lang="en" type="translation">Common kingfisher</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1498"
                            corresp="https://www.wikidata.org/wiki/Q79915"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1498"
                            corresp="http://dbpedia.org/resource/Common_kingfisher"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1498"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1498"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3522,18 +3449,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1510" xml:lang="en" type="translation">Black phoebe</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1510"
                            corresp="https://www.wikidata.org/wiki/Q920950"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1510"
                            corresp="http://dbpedia.org/resource/Black_phoebe"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1510"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1510"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3554,18 +3480,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1522" xml:lang="en" type="translation">Buff-bellied pipit</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1522"
                            corresp="https://www.wikidata.org/wiki/Q871527"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1522"
                            corresp="http://dbpedia.org/resource/Buff-bellied_pipit"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1522"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1522"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3593,18 +3518,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1539 #d1e1544" xml:lang="en" type="translation">White-winged coot</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1539 #d1e1544"
                            corresp="https://www.wikidata.org/wiki/Q1268737"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1539 #d1e1544"
                            corresp="http://dbpedia.org/resource/White-winged_coot"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1539 #d1e1544"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1539 #d1e1544"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3624,19 +3548,18 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1554" xml:lang="en" type="translation">Green heron</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1554"
                            corresp="https://www.wikidata.org/wiki/Q498228"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1554"
                            corresp="http://dbpedia.org/resource/Green_heron"/>
                      <span type="note">Not sure if the species is the Green Heron (Butorides virescens) or Blue Heron</span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1554"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1554"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3667,18 +3590,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1566 #d1e1571" xml:lang="en" type="translation">Common moorhen</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1566 #d1e1571"
                            corresp="https://www.wikidata.org/wiki/Q18847"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1566 #d1e1571"
                            corresp="http://dbpedia.org/resource/Common_moorhen"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1566 #d1e1571"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1566 #d1e1571"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3696,19 +3618,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1588" xml:lang="en" type="translation">Heron</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1588"
                            corresp="https://www.wikidata.org/wiki/Q18789"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1588"
                            corresp="http://dbpedia.org/resource/Heron"/>
                      <span type="note">Not sure what specific type of Heron is intended. The external references are for the general Heron family of birds. </span>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1588"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1588"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
@@ -3728,18 +3648,17 @@ Mixteco de Mixtepec y español mix 14-097 .4C México, D.F. 2014
                   </linkGrp>
                   <spanGrp type="annotations">
                      <span target="#d1e1596" xml:lang="en" type="translation">Anhinga</span>
-                  </spanGrp>
-                  <spanGrp type="semantics">
-                     <span type="sense"
+
+                     <span type="semantics" subtype="sense"
                            target="#d1e1596"
                            corresp="https://www.wikidata.org/wiki/Q13168473"/>
-                     <span type="sense"
+                     <span type="semantics" subtype="sense"
                            target="#d1e1596"
                            corresp="http://dbpedia.org/resource/Anhinga"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1596"
                            corresp="http://dbpedia.org/resource/Bird"/>
-                     <span type="domain"
+                     <span type="semantics" subtype="domain"
                            target="#d1e1596"
                            corresp="http://dbpedia.org/resource/Animal"/>
                   </spanGrp>
