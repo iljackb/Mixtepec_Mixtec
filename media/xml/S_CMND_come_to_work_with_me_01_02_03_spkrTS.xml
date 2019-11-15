@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -20,7 +21,7 @@
          </publicationStmt>
          <sourceDesc>
             <p>This file was converted from of the speech file <ptr target="praat-export:S_CMND_come_to_work_with_me_01_02_03_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
-                      url="soundfiles-gen:S_CMND_come_to_work_with_me_01_02_03_spkrTS.wav"/>
+               url="soundfiles-gen:S_CMND_come_to_work_with_me_01_02_03_spkrTS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -89,17 +90,17 @@
          </classDecl>
          <listPrefixDef>
             <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
             <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
             <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../oaxaca/#$1"/>
             <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -159,20 +160,35 @@
                start="0"
                end="1.72"
                xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e79" notation="orth">
-                  <w xml:id="d1e80" synch="#T1">na</w>
-                  <w xml:id="d1e82" synch="#T4">ko'o</w>
+               <seg xml:lang="mix" xml:id="d1e79" notation="orth" type="S">
+                  <w xml:id="d1e80" synch="#T1">nako'o</w>
                   <w xml:id="d1e84" synch="#T10">sachuun</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e86" notation="ipa">
-                  <w xml:id="d1e87" synch="#T1">na<m xml:id="d1e191">˥</m>
-                  </w>
-                  <w xml:id="d1e94" synch="#T4">ko<m xml:id="d1e198">˥</m>ʔo<m xml:id="d1e204">˩</m>
-                  </w>
-                  <w xml:id="d1e107" synch="#T10">sa<m xml:id="d1e211">˩</m>tʃũː<m xml:id="d1e217">↘↗</m>
+               <seg xml:lang="mix" xml:id="d1e86" notation="ipa" type="S"
+                  sameAs="#d1e79">
+                  <w xml:id="d1e87" synch="#T1" sameAs="#d1e80">
+                     <m xml:id="d1e88">na˥</m>ko˥ʔo˩</w>
+                  <w xml:id="d1e107" synch="#T10" sameAs="#d1e84">sa˩tʃũː<m xml:id="d1e217">↘↗</m>
                   </w>
                </seg>
             </u>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e79" xml:lang="en" ana="#S">Come to work with me.</span>
+               <span type="translation" target="#d1e79" xml:lang="es" ana="#S">Ven a trabajo conmigo.</span>
+               <span type="gram" target="#d1e79" ana="#CMND"/>
+               <span type="translation" target="#d1e80" xml:lang="en"/>
+               <span type="translation" target="#d1e80" xml:lang="es"/>
+               <span type="gram" target="#d1e80" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e84" xml:lang="en"/>
+               <span type="translation" target="#d1e84" xml:lang="es"/>
+               <span type="gram" target="#d1e84" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="gram" subtype="" target="#d1e88" ana="#"/>
+               <span type="gram" subtype="" target="#d1e217" ana="#"/>
+            </spanGrp>
             <spanGrp>
                <span from="#T1" to="#T40">MOD-EPIST</span>
                <span from="#T4" to="#T10">V-MTN-GL.come</span>
@@ -192,14 +208,32 @@
                   <w xml:id="d1e134" synch="#T22">sachuun</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e136" notation="ipa">
-                  <w xml:id="d1e137" synch="#T16">na<m xml:id="d1e241">˥</m>
+                  <w xml:id="d1e137" synch="#T16">
+                     <m xml:id="d1e241">na˥</m>ko̰ː↘
                   </w>
-                  <w xml:id="d1e144" synch="#T19">ko̰ː<m xml:id="d1e248">↘</m>
-                  </w>
-                  <w xml:id="d1e151" synch="#T22">sa<m xml:id="d1e255">∙</m>tʃũː<m xml:id="d1e261">↘↗ꜜ</m>
+                  <w xml:id="d1e151" synch="#T22">satʃũː<m xml:id="d1e261">↘↗ꜜ</m>
                   </w>
                </seg>
             </u>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e130" xml:lang="en"/>
+               <span type="translation" target="#d1e130" xml:lang="es"/>
+               <span type="gram" target="#d1e130" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e132" xml:lang="en"/>
+               <span type="translation" target="#d1e132" xml:lang="es"/>
+               <span type="gram" target="#d1e132" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e134" xml:lang="en"/>
+               <span type="translation" target="#d1e134" xml:lang="es"/>
+               <span type="gram" target="#d1e134" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="gram" subtype="" target="#d1e241" ana="#"/>
+               <span type="gram" subtype="" target="#d1e261" ana="#"/>
+            </spanGrp>
             <spanGrp>
                <span from="#T16" to="#T42">MOD-EPIST</span>
                <span from="#T19" to="#T22">V-MTN-GL.come</span>
@@ -219,14 +253,30 @@
                   <w xml:id="d1e178" synch="#T34">sachuun</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e180" notation="ipa">
-                  <w xml:id="d1e181" synch="#T28">na<m xml:id="d1e285">∙</m>
-                  </w>
-                  <w xml:id="d1e188" synch="#T31">ko̰ː<m xml:id="d1e292">∙</m>
-                  </w>
+                  <w xml:id="d1e181" synch="#T28">nako̰ː</w>
                   <w xml:id="d1e195" synch="#T34">sa<m xml:id="d1e299">↘</m>tʃũː<m xml:id="d1e305">↘↗ꜜ</m>
                   </w>
                </seg>
             </u>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e174" xml:lang="en"/>
+               <span type="translation" target="#d1e174" xml:lang="es"/>
+               <span type="gram" target="#d1e174" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e176" xml:lang="en"/>
+               <span type="translation" target="#d1e176" xml:lang="es"/>
+               <span type="gram" target="#d1e176" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e178" xml:lang="en"/>
+               <span type="translation" target="#d1e178" xml:lang="es"/>
+               <span type="gram" target="#d1e178" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="gram" subtype="" target="#d1e299" ana="#"/>
+               <span type="gram" subtype="" target="#d1e305" ana="#"/>
+            </spanGrp>
             <spanGrp>
                <span from="#T28" to="#T44">MOD-EPIST</span>
                <span from="#T31" to="#T34">V-MTN-GL.come</span>

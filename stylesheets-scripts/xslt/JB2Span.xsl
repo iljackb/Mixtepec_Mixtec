@@ -7,7 +7,18 @@
     <!-- ADD FOR WHERE ALREADY A <spanGrp> with only translations with or w/o <u>-->
     
     <!-- ADD FOR WHERE NO <spanGrp typ="annotations"> and no <u> -->
-
+    
+    
+    <!-- for where no @sameAs
+    
+    <xsl:template match="//u/descendant::seg[@notation='ipa']">
+        <xsl:variable name="timeSpan">
+            <xsl:value-of select="//w/@synch"/>
+        </xsl:variable>
+        
+    </xsl:template>
+    
+ -->
     <!-- Works for utterance files -->
     <xsl:template match="//u">
         <xsl:for-each select=".">         
@@ -23,7 +34,7 @@
                         <span type="translation" target="#{$orthID}" xml:lang="es" ana="#S"></span>
                         <span type="gram" target="#{$orthID}" ana="#"/>  
                     </xsl:for-each>
-                
+                <!-- MODIFY TO CHECK FOR PRE-EXISTING ! -->
                 <xsl:for-each select="seg[@notation='orth']/w">
                     <xsl:variable name="wID">
                         <xsl:value-of select="@xml:id"/>

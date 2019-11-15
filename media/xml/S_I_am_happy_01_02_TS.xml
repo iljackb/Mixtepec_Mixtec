@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -19,7 +20,10 @@
             <p>Publication Information</p>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:S_I_am_happy_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:S_I_am_happy_01_02_TS.wav"/>
+            <p>This file was converted from of the speech file <ptr
+                  target="praat-export:S_I_am_happy_01_02_TS.txt"/> which was extracted from the
+               Praat TextGrid transcriptions of the speech file <media mimeType="wav"
+                  url="soundfiles-gen:S_I_am_happy_01_02_TS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -36,7 +40,8 @@
                      <name>Larry "Kryn" Corpuz Jr.</name>
                   </respStmt>
                   <equipment>
-                     <ab>Audio recorded using a Sony PCM-D50 Linear PCM Recorder at a rate of 96kHz/24-bit.</ab>
+                     <ab>Audio recorded using a Sony PCM-D50 Linear PCM Recorder at a rate of
+                        96kHz/24-bit.</ab>
                   </equipment>
                   <ab>
                      <location>
@@ -46,7 +51,9 @@
                      </location>
                   </ab>
                   <date>2012-04-28</date>
-                  <ab>Content was recorded using <term ana="#elicitation-translation">Translation-based elicitation</term> using <lang>English</lang> and/or <lang>Spanish</lang>.</ab>
+                  <ab>Content was recorded using <term ana="#elicitation-translation"
+                        >Translation-based elicitation</term> using <lang>English</lang> and/or
+                        <lang>Spanish</lang>.</ab>
                </recording>
             </recordingStmt>
          </sourceDesc>
@@ -54,54 +61,63 @@
       <encodingDesc>
          <classDecl>
             <taxonomy>
-               <desc>Typology of linguistic speech events captured in recordings as per: <bibl>Himmelmann (<date>1998</date>)</bibl>. aka Typology of "naturalness".</desc>
+               <desc>Typology of linguistic speech events captured in recordings as per:
+                     <bibl>Himmelmann (<date>1998</date>)</bibl>. aka Typology of
+                  "naturalness".</desc>
                <category xml:id="observed">
                   <catDesc>
-                     <term>Observed communicative event:</term> the extent of external interference is limited to the knowledge of the speakers that the speech is being recorded or observed.</catDesc>
+                     <term>Observed communicative event:</term> the extent of external interference
+                     is limited to the knowledge of the speakers that the speech is being recorded
+                     or observed.</catDesc>
                </category>
                <category xml:id="staged">
                   <catDesc>
-                     <term>Staged communicative event:</term> speech events realized for the purpose of recording (i.e. elicited speech). Events are not really being realized for the purpose of communication but for the benefit of the investigator.</catDesc>
+                     <term>Staged communicative event:</term> speech events realized for the purpose
+                     of recording (i.e. elicited speech). Events are not really being realized for
+                     the purpose of communication but for the benefit of the investigator.</catDesc>
                   <category xml:id="staged-free-topical">
                      <catDesc>
                         <term>Staged-Topical:</term> Prompt to speak freely about topic</catDesc>
                   </category>
                   <category xml:id="staged-stimuli">
                      <catDesc>
-                        <term>Staged-Stimuli:</term> events based on stimuli to be described in speakers own words</catDesc>
+                        <term>Staged-Stimuli:</term> events based on stimuli to be described in
+                        speakers own words</catDesc>
                   </category>
                </category>
                <category xml:id="elicitation">
                   <catDesc>
-                     <term>Elicitation:</term> speech act for the sole purpose of linguistic investigation. (A new type of speech event for most communities).</catDesc>
+                     <term>Elicitation:</term> speech act for the sole purpose of linguistic
+                     investigation. (A new type of speech event for most communities).</catDesc>
                   <category xml:id="elicitation-contextualizing">
                      <catDesc>
-                        <term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for a item or construction as prompted by the investigator.</catDesc>
+                        <term>Contextualizing elicitation:</term> where native speakers are asked to
+                        provide contexts for a item or construction as prompted by the
+                        investigator.</catDesc>
                   </category>
                   <category xml:id="elicitation-translation">
                      <catDesc>
-                        <term>Translation-based elicitation:</term> native speaker asked to translate item from second language</catDesc>
+                        <term>Translation-based elicitation:</term> native speaker asked to
+                        translate item from second language</catDesc>
                   </category>
                   <category xml:id="elicitation-judgement">
                      <catDesc>
-                        <term>Judgement:</term> where native speakers are asked to judge the acceptibility of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
+                        <term>Judgement:</term> where native speakers are asked to judge the
+                        acceptibility of a given construction based on any aspect of language, e.g.
+                        grammar, etc.</catDesc>
                   </category>
                </category>
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -140,43 +156,72 @@
             <when xml:id="T30" interval="2.77"/>
          </timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e61"
-               n="1"
-               start="0"
-               end="1.50"
-               xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e62" notation="orth">
-                  <w xml:id="d1e63" synch="#T1">kua'a</w>
-                  <w xml:id="d1e65" synch="#T8">ncho'a yu</w>
+            <u who="#TS" xml:id="d1e61" n="1" start="0" end="1.50" xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e62" notation="orth" type="S">
+                  <w xml:id="d1e63" synch="#T1">kuacha</w>
+                  <w xml:id="d1e65" synch="#T8">ncho'a</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e67" notation="ipa">
-                  <w xml:id="d1e68" synch="#T1">kwa<m xml:id="d1e177">˥</m>tʃa<m xml:id="d1e183">˥</m>
+               <seg xml:lang="mix" xml:id="d1e67" notation="ipa" type="S" sameAs="#d1e62">
+                  <w xml:id="d1e68" synch="#T1" sameAs="#d1e63">kwa<m xml:id="d1e177">˥</m>tʃa<m
+                        xml:id="d1e183">˥</m>
                   </w>
-                  <w xml:id="d1e83" synch="#T8">ndʒo<m xml:id="d1e192">↘</m>ʔa<m xml:id="d1e198">↘↗</m>
+                  <w xml:id="d1e83" synch="#T8" sameAs="#d1e65">ndʒo↘ʔa<m xml:id="d1e198">↘↗</m>
                   </w>
                </seg>
             </u>
-            <spanGrp>
-               <span from="#T1" to="#T8">ADJ.happy</span>
-               <span from="#T8" to="#T29">ADV-DEG.very\1S</span>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e62" xml:lang="en" ana="#S">I am happy.</span>
+               <span type="translation" target="#d1e62" xml:lang="es" ana="#S">Estoy feliz.</span>
+               <span type="gram" target="#d1e62" ana="#DECL"/>
+               <span type="translation" target="#d1e63" xml:lang="en">happy</span>
+               <span type="translation" target="#d1e63" xml:lang="es">feliz</span>
+               <span type="gram" target="#d1e63" ana="#ADJ-PRED">
+                  <gloss type="igt">happy</gloss>
+               </span>
+               <span type="semantics" target="#d1e63" ana="#STV #EMOT"/>
+               <span type="translation" target="#d1e65" xml:lang="en"/>
+               <span type="translation" target="#d1e65" xml:lang="es"/>
+               <span type="gram" target="#d1e65" ana="#ADV #1PERS #SG">
+                  <gloss type="igt">very\1s</gloss>
+               </span>
+               <span type="gram" subtype="tone" target="#d1e177" ana="#INCOMPL" cert="medium"/>
+               <span type="gram" subtype="tone" target="#d1e198" ana="#1PERS #SG"/>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e104"
-               n="2"
-               start="1.50"
-               end="3.20"
-               xml:lang="mix">
-               <seg xml:lang="mix" xml:id="d1e105" notation="orth">
-                  <w xml:id="d1e106" synch="#T15">kua'a</w>
+            <u who="#TS" xml:id="d1e104" n="2" start="1.50" end="3.20" xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e105" notation="orth" type="S">
+                  <w xml:id="d1e106" synch="#T15">kuacha</w>
+                  <w xml:id="d1e107" synch="#T17">kua'a</w>
                </seg>
-               <seg xml:lang="mix" xml:id="d1e108" notation="ipa">
-                  <w xml:id="d1e109" synch="#T15">kwa<m xml:id="d1e218">˥</m>tʃa<m xml:id="d1e224">˥</m>ndʒo<m xml:id="d1e232">↘</m>ʔa<m xml:id="d1e239">↘↗ꜜ</m>
+               <seg xml:lang="mix" xml:id="d1e108" notation="ipa" type="S" sameAs="#d1e105">
+                  <w xml:id="d1e109" synch="#T15" sameAs="#d1e106">kwa<m xml:id="d1e218">˥</m>tʃa<m
+                        xml:id="d1e224">˥</m>
+                  </w>
+                  <w xml:id="d1e110" synch="#T17" sameAs="#d1e107">ndʒo<m xml:id="d1e232">↘</m>ʔa<m
+                        xml:id="d1e239">˩</m>
                   </w>
                </seg>
             </u>
+            <spanGrp type="annotations">
+               <span type="translation" target="#d1e105" xml:lang="en" ana="#S"/>
+               <span type="translation" target="#d1e105" xml:lang="es" ana="#S"/>
+               <span type="gram" target="#d1e105" ana="#"/>
+               <span type="translation" target="#d1e106" xml:lang="en"/>
+               <span type="translation" target="#d1e106" xml:lang="es"/>
+               <span type="gram" target="#d1e106" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="translation" target="#d1e107" xml:lang="en"/>
+               <span type="translation" target="#d1e107" xml:lang="es"/>
+               <span type="gram" target="#d1e107" ana="#">
+                  <gloss type="igt"/>
+               </span>
+               <span type="gram" subtype="" target="#d1e218" ana="#"/>
+               <span type="gram" subtype="" target="#d1e224" ana="#"/>
+               <span type="gram" subtype="" target="#d1e232" ana="#"/>
+               <span type="gram" subtype="" target="#d1e239" ana="#"/>
+            </spanGrp>
             <spanGrp>
                <span from="#T15" to="#T22">ADJ.happy</span>
                <span from="#T22" to="#T30">ADV-DEG.very\1S</span>
