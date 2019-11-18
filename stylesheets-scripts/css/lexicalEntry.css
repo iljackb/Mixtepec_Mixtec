@@ -2,7 +2,58 @@
 
 tei { display: block; }
 
-teiHeader { display: none; }
+titleStmt > title{
+    font-size: 26px;
+     content: "\A";
+    text-align: center
+}
+
+title + title {
+    content: "\A"
+}
+
+title {
+    content: "\A"
+}
+
+resp + resp::before {
+    content: ", ";
+}
+
+resp + name::before {
+    content: ": ";
+}
+
+resp + name{
+        font-weight: bold;
+}
+
+edition::before {
+    content:"("
+}
+edition::after {
+    content:")"
+}
+
+respStmt::after {
+    content:";"
+}
+
+licence::before {
+    content:"("
+}
+licence::after {  
+    content:")"
+}
+particDesc { display: none; }
+
+sourceDesc { display: none; }
+
+distributor{
+    display: none;
+}
+
+editorialDecl { display: none; }
 
 entry {
     margin:1em;
@@ -161,7 +212,7 @@ cit[type="translation"] > form {
     font-weight: bold;
 }
 
-cit + cit {
+cit + cit::before {
     content: ",";
 }
 
@@ -206,7 +257,7 @@ cit[type="translation"] > quote  {
 re {
     display: block;
     margin:1em;
-    border: 1px solid silver;
+    border: 1px solid teal;
     /*  
    rather than a "related entry" label, should have different formatting
 */
@@ -220,6 +271,13 @@ re > gramGrp {
 
 /* figure out why "etym.one::before {" removes ALL labels from etym!*/
 entry > etym::before {
+    line-break: loose;
+    text-indent: 50px;
+    font-weight: bold;
+    content: " \A (Etymology)"
+}
+
+sense > etym::before {
     line-break: loose;
     text-indent: 50px;
     font-weight: bold;
@@ -250,4 +308,13 @@ placeName::before {
 
 placeName::after {
     content:")"
+}
+
+cit > def {
+    display: inline;
+    font-style: italic;
+}
+
+def + def::before {
+    content: ",";
 }

@@ -34,12 +34,51 @@
         </xsl:copy>
     </xsl:template>
   
-   
+ 
     <xsl:template match="spanGrp/@type[.='translation']">
         <xsl:attribute name="type">annotations</xsl:attribute>
     </xsl:template>
- -->
+      --> 
+    
+    <!-- 
+   <xsl:template match="linkGrp[@type='translation']/link" priority="1">  
+       <xsl:copy>
+           <xsl:copy-of select="@* "/>
+           <xsl:attribute name="type">translation</xsl:attribute>
+           <xsl:value-of select="."/>
+       </xsl:copy>
+   </xsl:template>
    
+    <xsl:template match="linkGrp[@type='IGT']/link" priority="1">  
+        <xsl:copy>
+            <xsl:copy-of select="@* "/>
+            <xsl:attribute name="type">igt</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="seg/@type[.='IGT']">
+        <xsl:attribute name="type">S</xsl:attribute>
+        <xsl:attribute name="notation">igt</xsl:attribute>
+    </xsl:template>
+-->   
+    <xsl:template match="linkGrp/@type[.='translation']">  
+        <xsl:attribute name="type">annotations</xsl:attribute>
+    </xsl:template>
+    
+    <xsl:template match="linkGrp/@type[.='IGT']">  
+        <xsl:attribute name="type">annotations</xsl:attribute>
+    </xsl:template>
+    
+    <xsl:template match="gloss">  
+        <xsl:copy>
+            <xsl:copy-of select="@* "/>
+            <xsl:attribute name="type">igt</xsl:attribute>
+            <xsl:value-of select="."/>
+        </xsl:copy>
+    </xsl:template>
+   <!--  
+  
     <xsl:template match="//spanGrp[@type='gram']/span">  
         <xsl:copy>
             <xsl:copy-of select="@*  except @type"/>
@@ -85,7 +124,7 @@
     </xsl:template>
   
     
-    <!--  
+  
     <xsl:template match="span/@type[.='S']">
         <xsl:attribute name="type">sentence</xsl:attribute>
     </xsl:template>
