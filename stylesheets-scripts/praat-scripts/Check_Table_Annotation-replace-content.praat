@@ -23,7 +23,7 @@ for ifile to numberOfFiles
 ### Run replacement processes for given tier in TextGrid; 
 
 
-	Replace interval text: 6, 0, 0, "animal\\horse", "animal-horse", "Regular Expressions"
+	Replace interval text: 6, 0, 0, "(==1S)$", "\\1S", "Regular Expressions"
 	Replace interval text: 6, 0, 0, "animal/horse", "animal-horse", "Regular Expressions"
 	Replace interval text: 6, 0, 0, "hand/arm", "hand-arm", "Regular Expressions"
 	Replace interval text: 6, 0, 0, "corn\(uncooked\)", "corn_uncooked", "Regular Expressions"
