@@ -17,7 +17,6 @@ for ifile to numberOfFiles
 	fileName$ = Get string... ifile
 	object_name$ = "'fileName$'" - ".TextGrid"
 	Read from file... 'directory$''object_name$'.TextGrid
-	Read from file... 'directory$''object_name$'.wav
 	
 	select TextGrid 'object_name$'
 
@@ -34,12 +33,12 @@ for ifile to numberOfFiles
 
 	#select Sound 'object_name$'
 	#plus TextGrid 'object_name$'
-	select TextGrid 'object_name$'
-	plus Sound 'object_name$'
+	#select TextGrid 'object_name$'
+	#plus Sound 'object_name$'
 
 # And of course now we want to edit the files.
 
-	Edit
+	#Edit
 
 
 # The script pauses here so that you can work on marking intervals.
@@ -48,7 +47,7 @@ for ifile to numberOfFiles
 # will be in the window. Add any sentence that makes you feel happy
 # when labeling.
 
-     	pause  Let's annotate! Click continue when you're done.
+     	#pause  Let's annotate! Click continue when you're done.
 
 
 # Once you are done marking, you want to save the TextGrid file. So, first you
@@ -62,7 +61,7 @@ for ifile to numberOfFiles
 
 # Create Table file from modified textgrid
 
-Down to Table... no 2 no no
+Down to Table... no 2 yes no
 
 	select Table 'object_name$'
 

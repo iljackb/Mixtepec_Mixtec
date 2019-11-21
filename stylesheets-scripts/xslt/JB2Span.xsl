@@ -19,6 +19,10 @@
     </xsl:template>
     
  -->
+    
+    <!-- MODIFY TO CHECK IF EXISTING FIRST!!! -->
+    
+    
     <!-- Works for utterance files -->
     <xsl:template match="//u">
         <xsl:for-each select=".">         

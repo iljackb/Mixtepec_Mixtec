@@ -8,14 +8,17 @@
     
     <!-- File should be moved or copied to folder w files undergoing transformation -->
     
-    <!-- version 2019-10-24-->
+    <!-- Set up transformation scenario on this xslt script itself as the specific file to be processed is specified in param @type="imput"-->
+    <!-- version 2019-11-20-->
     
     <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
     
     <xsl:strip-space elements="*"/>
     
-    <xsl:param name="input" as="xs:string" select="'cabeza-sombrero_TS.txt'"/>
+    <xsl:param name="input" as="xs:string" select="'pozole-escobe_TS.txt'"/>
     <!-- TRY THIS W/O "@select" and see if it runs on all files in directory -->
+    
+    <xsl:variable name="input-wo-extension" as="xs:string" select="substring-before($input,'.txt')"/>
     
     
     <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
@@ -61,7 +64,7 @@ end of element "data"
         <teiHeader>
             <fileDesc>
                 <titleStmt>
-                    <title>TEI output for Praat transcriptions of file: bueno-malo_TS.wav</title>
+                    <title>TEI output for Praat transcriptions of file: <xsl:value-of select="$input-wo-extension"/>.wav</title>
                     <respStmt>
                         <resp>Annotation</resp>
                         <resp>Encoding</resp>
@@ -82,7 +85,7 @@ end of element "data"
                     <p>Publication Information</p>
                 </publicationStmt>
                 <sourceDesc>
-                    <p>This file was converted from of the speech file <ptr target="soundfiles-gen:leña-papel_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ref>leña-papel_TS.wav</ref>. However, the original soundfile was lost and thus is not available.</p>
+                    <p>This file was converted from of the speech file <ptr target="soundfiles-gen:{concat($input-wo-extension,'.wav')}"/> which was extracted from the Praat TextGrid transcriptions of the speech file <ref><xsl:value-of select="$input-wo-extension"/>.wav</ref>. However, the original soundfile was lost and thus is not available.</p>
                 </sourceDesc>
                 <sourceDesc>
                     <recordingStmt>
@@ -248,7 +251,7 @@ end of element "data"
                                     <xsl:copy-of select="current-group()[1]/(@start, @end)"/>
                                     
                                     <!-- output content from "Orth" -->
-                                    <seg xml:lang="mix" notation="orth" xml:id="{concat('T','-seg-orth-',@start)}">
+                                    <seg xml:lang="mix" notation="orth" xml:id="{concat('T','-seg-orth-',@start)}" type="">
                                         <xsl:for-each select="current-group()/self::Mixtec">
                                             <xsl:variable name="start" select="@start"/>
                                             <w synch="{concat('#T',@start)}" xml:id="{concat('T','-orth',@start)}">
@@ -258,7 +261,7 @@ end of element "data"
                                     </seg>
                                     
                                     <!-- output content from "Pron" -->
-                                    <seg xml:lang="mix" notation="ipa" xml:id="{concat('T','-seg-pron-',@start)}" sameAs="{concat('#','T','-seg-orth-',@start)}">
+                                    <seg xml:lang="mix" notation="ipa" xml:id="{concat('T','-seg-pron-',@start)}" sameAs="{concat('#','T','-seg-orth-',@start)}" type="">
                                         <xsl:for-each select="current-group()/self::IPA">
                                             <xsl:variable name="start" select="@start"/>
                                             <w synch="{concat('#T',@start)}" xml:id="{concat('T','-pron',@start)}" sameAs="{concat('#','T','-orth',@start)}">
@@ -268,39 +271,38 @@ end of element "data"
                                     </seg>
                                 </u>
 
-                            <spanGrp type="translation">
+                            <spanGrp type="annotations">
                                 
+                                <!-- make condition that if only 1 ENGLISH, then adapt pointer -->
                                 <xsl:for-each select="current-group()/self::English">
-                                    <span xml:lang="en" target="{concat('#','T','-orth',@start)}">
+                                    <span type="translation" xml:lang="en" target="{concat('#','T','-seg-orth-',@start)}" ana="#">
                                         <xsl:value-of select="."/>
                                     </span>
                                 </xsl:for-each>
 
                                 <xsl:for-each select="current-group()/self::Spanish">            
-                                    <span xml:lang="es" target="{concat('#','T','-orth',@start)}">
+                                    <span type="translation" xml:lang="es" target="{concat('#','T','-seg-orth-',@start)}" ana="#">
                                         <xsl:value-of select="."/>
+                                    </span>
+                                    <span type="gram" target="{concat('#','T','-seg-orth-',@start)}" ana="#"><!-- check output or remove -->
+                                        <gloss type="igt"></gloss>
                                     </span>
                                 </xsl:for-each>
                                 
                                 <xsl:for-each select="current-group()/self::Mixtec">
-                                    <span xml:lang="en" target="{concat('#','T','-orth',@start)}">
+                                    <span type="translation" xml:lang="en" target="{concat('#','T','-orth',@start)}">
                                       
                                     </span>
-                                    <span xml:lang="es" target="{concat('#','T','-orth',@start)}">
+                                    <span type="translation" xml:lang="es" target="{concat('#','T','-orth',@start)}">
                                  
                                     </span>
+                                    <span type="gram" target="{concat('#','T','-orth',@start)}" ana="#">
+                                        <gloss type="igt"></gloss>
+                                    </span>
+                                    <span type="semantics" target="{concat('#','T','-orth',@start)}" ana="#"/>
                                 </xsl:for-each>
                             </spanGrp>
                             
-                            <!-- add //spanGrp[@type="gram"] -->
-                            <spanGrp type="gram">
-                                <xsl:for-each select="current-group()/self::Mixtec">
-                                    <span type="pos" target="{concat('#','T','-orth',@start)}" ana=""/>
-                                </xsl:for-each>
-                            </spanGrp>
-                                <!-- add //spanGrp[@type="semantics"] -->
-                                
-                            <!-- add //spanGrp[@type="igt"] -->
                             </annotationBlock>
                         </xsl:for-each-group>
                         
