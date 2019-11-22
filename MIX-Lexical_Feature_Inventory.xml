@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Mixtepec-Mixtec corpus annotation inventory and grammar</title>
+            <respStmt>
+               <resp>Editor</resp>
+               <name>Jack Bowers</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+        <div>
+           <fs>
+              <f name="utteranceType">
+                 <vAlt>
+                    <symbol value="declarative" xml:id="DECL"/><!-- COMBINE WITH AFFIR,, NEG... -->
+                    <symbol value="affirmativeDeclarative" xml:id="DECL-AFFIRM"/>
+                    <symbol value="negativeDeclarative" xml:id="DECL-NEG"/>
+                    <symbol value="imperative" xml:id="CMND"/>
+                    <symbol value="sentence" xml:id="S"/>
+                    <symbol value="inflected" xml:id="INFL"/><!-- MOVE! -->
+                    <symbol value="phrase" xml:id="PHRS"/><!-- MOVE! -->
+                    <symbol value="compound" xml:id="CMPND"/><!-- MOVE! -->
+                    <symbol value="interrogative" xml:id="Q"/>
+                    <symbol value="hearsay" xml:id="HRSY"/>
+                    <symbol value="response" xml:id="RESP"/>
+                 </vAlt>
+              </f>
+           </fs>
+           
+           <fs>
+              <f name="pos">
+                 <vAlt>
+                    <symbol value="noun" xml:id="N"/>
+                    <symbol value="verb" xml:id="V"/>
+                    <symbol value="pronoun" xml:id="PRON"/>
+                    <symbol value="emphaticPronoun" xml:id="PRON-EMPH"/><!-- or should I just have "EMPH"? -->
+                    <symbol value="demonstrative" xml:id="DEM"/>
+                    <symbol value="determiner" xml:id="DET"/>
+                    <symbol value="adposition" xml:id="ADPOS"/><!-- same as: PREP, #N #REL,..  -->
+                    <symbol value="interjection" xml:id="INTERJ"/>
+                    <symbol value="quantifier" xml:id="QNTF"/>
+                    <symbol value="particle" xml:id="PTCL"/><!-- default or underspecified value -->
+                    <symbol value="topicParticle" xml:id="TPC"/><!-- distinguish pragmatic topic by "TOP" -->
+                    <symbol value="nominalizingParticle" xml:id="NMLZ"/>
+                    <symbol value="prefix" xml:id="PREF"/>
+                    <symbol value="adverb" xml:id="ADV"/>
+                    <symbol value="adjective" xml:id="ADJ"/>
+                    <symbol value="conjunction" xml:id="CONJ"/><!-- default or underspecified -->
+                    <symbol value="coordinatingConjunction" xml:id="CONJ-COORD"/>
+                    <symbol value="subordinatingConjunction" xml:id="CONJ-SUB"/>
+                    <symbol value="indefiniteArticle" xml:id="ART-INDEF"/>
+                 </vAlt>
+              </f>
+           </fs>
+           
+           <fs>
+              <f name="aspect">
+                 <vAlt>
+                    <symbol value="incompletive" xml:id="INCOMPL"/><!-- sameAs PRES -->
+                    <symbol value="completive" xml:id="COMPL"/><!-- sameAs PAST -->
+                    <symbol value="potential" xml:id="POT"/><!-- sameAs FUT -->
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="mood">
+                 <vAlt>
+                    <symbol value="realis" xml:id="REAL"/><!-- IS THIS MOOD OR ASPECT? -->
+                    <symbol value="modal" xml:id="MOD"/>
+                    <symbol value="deontic" xml:id="DEONTIC"/>
+                 </vAlt>
+              </f>
+           </fs>
+           
+           <fs>
+              <f name="tense">
+                 <vAlt>
+                    <symbol value="present" xml:id="PRES"/><!-- synonymous with INCOMPLETIVE -->
+                    <symbol value="past" xml:id="PAST"/><!-- synomymous with COMPLETIVE -->
+                    <symbol value="future" xml:id="FUT"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="number">
+                 <vAlt>
+                    <symbol value="singular" xml:id="SG"/>
+                    <symbol value="plural" xml:id="PL"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="transitivity">
+                 <vAlt>
+                    <symbol value="transitive" xml:id="TRANS"/>
+                    <symbol value="intransitive" xml:id="INTRANS"/>
+                    <symbol value="ditransitive" xml:id="DITRANS"/>
+                    <symbol value="ambitrans" xml:id="AMBITRANS"/><!-- only for glossforms -->
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="person">
+                 <vAlt>
+                    <symbol value="firstPerson" xml:id="PERS1"/><!-- MODIFY TO MAKE NUMBER FIRST -->
+                    <symbol value="secondPerson" xml:id="PERS2"/>
+                    <symbol value="thirdPerson" xml:id="PERS3"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="gender"> 
+                 <vAlt>
+                    <symbol value="masculine" xml:id="M"/>
+                    <symbol value="feminine" xml:id="F"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="thematic-roles">
+                 <vAlt>
+                    <symbol value="theme" xml:id="THEME"/>
+                    <symbol value="experiencer" xml:id="EXPERIENCER"/>
+                    <symbol value="agent" xml:id="AGENT"/>
+                    <symbol value="patient" xml:id="PATIENT"/>               
+                    <symbol value="cognitizer" xml:id="COGNITIZER"/>
+                    <symbol value="emoter" xml:id="EMOTER"/>
+                    <symbol value="recipient" xml:id="RECIPIENT"/>
+                    <symbol value="stimulus" xml:id="STIMULUS"/>
+                    <symbol value="perceiver" xml:id="PERCEIVER"/>
+                 </vAlt>
+              </f>
+           </fs>
+           
+           <fs>
+              <f name="macro-roles">
+                 <vAlt>
+                    <symbol value="actor" xml:id="A"/>
+                    <symbol value="undergoer" xml:id="U"/>
+                 </vAlt>
+              </f>
+           </fs>
+           
+           <fs>
+              <f name="adHocCategories"><!--
+                  move to separate <div> combine these semantic tags with basic gram pos; 
+                  each has own usage domain patterns (pursue this going forward)  -->
+                 <vAlt>
+                    <symbol value="temporal" xml:id="TEMP"/>
+                    <symbol value="manner" xml:id="MNR"/>
+                    <symbol value="affirmative" xml:id="AFRM"/><!-- occurs as particle' -->
+                    <symbol value="negative" xml:id="NEG"/><!-- occurs as: particle or tone -->
+                    <symbol value="degree" xml:id="DEG"/>
+                    <symbol value="reciprocal" xml:id="RECIP"/><!-- combines with PRON, ADV -->
+                    <symbol value="possessive" xml:id="POSS"/>
+                    <symbol value="mass" xml:id="MASS"/>
+                    <symbol value="count" xml:id="COUNT"/>
+                    <symbol value="concrete" xml:id="CONCRT"/>
+                    <symbol value="relative" xml:id="REL"/><!-- can combine with ADPOS or NOUN (disctinction insignificant) -->
+                    <symbol value="location" xml:id="LOC"/><!-- can combine with noun, can be same as "placeNoun"-->
+                    <symbol value="abstract" xml:id="ABS"/>
+                    <symbol value="collective" xml:id="COLL"/>
+                    <symbol value="attributive" xml:id="ATTRIB"/>
+                    <symbol value="predicative" xml:id="PRED"/>
+                    <symbol value="motion" xml:id="MTN"/>
+                    <symbol value="departure" xml:id="DEPT"/>
+                    <symbol value="arrival" xml:id="ARVL"/>
+                    <symbol value="source" xml:id="SRC"/>
+                    <symbol value="goal" xml:id="GL"/><!-- same as ZLatev... -->
+                    <symbol value="animate" xml:id="ANIM"/>
+                    <symbol value="inanimate" xml:id="INANIM"/>
+                    <symbol value="human" xml:id="HUM"/>
+                    <symbol value="stative" xml:id="STAT"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="inclusivity">
+                 <vAlt>
+                    <symbol value="inclusive" xml:id="INCL"/>
+                    <symbol value="exclusive" xml:id="EXCL"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="register">
+                 <vAlt>
+                    <symbol xml:id="FORM" value="informal"/>
+                    <symbol xml:id="INF" value="formal"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <!-- 
+           Types of concept relation can include:
+   generic relation;
+   partitive relation;
+   sequential relation;
+   temporal relation;
+   spatial relation;
+   associative relation
+           -->
+              
+              <fs>
+                 <f name="configuration"><!-- combines with pronouns, & demonstrative prons can occur in the domain of SPACE & TIME  -->
+                    <vAlt>
+                       <symbol value="distal" xml:id="DIST"/>
+                       <symbol value="proximal" xml:id="PROX"/>
+                       <symbol value="deictic" xml:id="DEIC"/>              <!-- may need to further articulate -->
+                    </vAlt>
+                    
+                 </f>
+              </fs>
+           <fs>
+              <f name="Trajector">
+                 <vAlt>
+                    <symbol value="StaticTrajector" xml:id="TR-STAT"/><!-- default underspecified value -->
+                    <symbol value="DynamicTrajector" xml:id="TR-DYN"/><!-- default underspecified value -->
+                    <symbol value="Object" xml:id="TR"/><!-- default underspecified value -->
+                    <symbol value="Person" xml:id="TR-PERS"/>
+                    <symbol value="EventTrajector" xml:id="TR-EVENT"/>  
+                 </vAlt>
+              </f>
+           </fs>        
+           <fs>
+              <f name="Landmark">
+                 <vAlt>
+                    <symbol value="landmark" xml:id="LM"/>
+                    <symbol value="personLM" xml:id="LM-PERS"/>
+                    <symbol value="objectLM" xml:id="LM-OBJ"/>
+                    <symbol value="eventLM" xml:id="LM-EVNT"/>
+                 </vAlt>
+              </f>
+           </fs>
+           
+           <fs>
+              <f name="frameOfReference">
+                 <vAlt>
+                    <symbol value="viewpoint-centeredFoR" xml:id="FOR-VC"/>
+                    <symbol value="relativeFoR" xml:id="FOR-GC"/>
+                    <symbol value="intrinsicFor" xml:id="FOR-OBJ"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="Path">
+                 <!-- enhance with "perfect" & "impefective" path? (Hawkins 1984; Zlatev: 11-10) to express "towards" vs "to"? -->
+                 <vAlt>
+                    <symbol value="BeginningPath" xml:id="BEG-PATH"/><!-- source -->
+                    <symbol value="MiddlePath" xml:id="MID-PATH"/>
+                    <symbol value="EndPath" xml:id="END-PATH"/><!-- goal -->
+                    <symbol value="ZeroPath" xml:id="ZERO-PATH"/>
+                 </vAlt>
+              </f>
+           </fs>
+           <fs>
+              <f name="Region" xml:id="REG">
+                 <vAlt><!-- might want to refine with more types or just be general -->
+                    <symbol value="interiorRegion" xml:id="REG-INTERN"/>
+                    <symbol value="exteriorRegion" xml:id="REG-EXTERN"/>
+                    
+                 </vAlt>
+              </f>
+           </fs>
+        </div>
+      </body>
+  </text>
+</TEI>
