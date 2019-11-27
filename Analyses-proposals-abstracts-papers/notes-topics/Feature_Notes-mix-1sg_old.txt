@@ -1,0 +1,72 @@
+"""""
+In MIX, 1st.sg is identically marked on the offset portion of verbal(ARG(1)V), adjectival(ATTRIB), and nominal(POSS) constructions. 
+
+Tone transposition has also been observed to occur in the case of a motion verb in the command form creating the meaning of accompanyment.
+
+The variations in how this is realized in the phrase is dependant on the tonal contour "native" to the inflected lexical item.
+""""
+
+Pron1s = "-ju_F"
+highTone = "H"
+midTone = "M"
+lowTone = "L"
+risingTone = "R"
+fallingTone = "F"
+fallingRisingTone = "F_R"
+RisingFallingTone = "R_F"
+
+
+
+for 1st_sg_inflection:
+	if final_tone in root m = ("L" | "M" | "F"):
+		LexItem_1st_sg = "root" + "ju_F"
+
+	if final_tone in root = "H":
+		 final_tone(root) = "F"
+
+	if final_tone in root = "R":
+		 final_tone(root) = "R_F"
+
+	if final_tone in root = "F_R"
+		 final_tone(root) = "_F_R_F"
+
+
+#Morphosemantics
+
+if rootPOS != Vcmnd:
+	inflectedForm = V.1s
+
+if rootPOS = Vcmnd:
+	inflectedForm = V(with).1s
+
+if rootPOS = N:
+	inflectedForm = POSS.1s
+
+if rootPOS = ADJ:
+	inflectedForm = V.COP-ATRB.1s
+
+
+
+
+	The issue of the1st person singular inflectional strategies in Yucunany Mixtec has been discussed by Paster(X), Paster & Azcona(XX), and previously by Pike & Ibach 1978. Paster (X), and Paster & Azcona (X) give examples of how YM marks the 1st person singular when inflecting for the possessive as well as in verbalizing an adjective which the authors characterize as follows: 
+
+"1st sg has a floating L tone allomorph"
+	where:	
+		"the root final tone is High: the Low tone "associates" and there is "no delinking"
+
+(from Paster & Azcona 2004(translated in to IPA (see footnotes for comments on representation of  data discussed))
+
+			(uninflected)	(Inflected for 1st pers sg)
+	Possessive
+		[ na˩ ma˥ ] "soap"  > [ na˩ maː ˥ ˩ ] "my soap"
+		[ vi ˥ lu˥ ]  "cat"	> [ vi ˥ lu˥ ˩ ] "my cat"
+	
+	Verbalization (Attributive Verbs): Adjectives-PRON.1S
+		[ kwi ˥ i ˩ i ˥ ] "thin"  > [ kwi ˥ i ˩ i ˥ i ˩ ] "I am thin"
+
+	While Paster did give one example of the verbalization of the adjective "thin" to create the meaning "I am thin", there is not much more attention dedicted to this phenomena, and the examples given do not extend beyond the aforementioned inflection and the possessive. 
+
+1st person singular inflection in YM is unique in that the same array of strategies is used for marking the primary argument of a verb, 
+
+
+ as opposed to its counterparts in person and number (i.e. 1st pl, 2nd, sg ,form, inf, 3rd, sg, form, inf, m, f), the 1st has been 
