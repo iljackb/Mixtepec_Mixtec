@@ -49,6 +49,7 @@
                     <span type="gram" target="#{$wID}" ana="#">
                         <gloss type="igt"/>
                     </span>
+                    <span type="semantics" target="#{$wID}" ana="#"/>
                 </xsl:for-each>
 
                 <xsl:for-each select="seg[@notation = 'ipa']/w/m">
@@ -56,6 +57,7 @@
                         <xsl:value-of select="@xml:id"/>
                     </xsl:variable>
                     <span type="gram" subtype="" target="#{$mID}" ana="#"/>
+                    <span type="semantics" target="#{$mID}" ana="#"/>
                 </xsl:for-each>
             </spanGrp>
         </xsl:for-each>
