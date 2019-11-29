@@ -10,6 +10,30 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xsl:variable name="sourceFile" as="xs:string" select="tokenize(base-uri(.), '/')[last()]"/>
+    
+    <xsl:variable name="soundFile" as="xs:string" select="concat(substring-before($sourceFile,'.xml'),'.wav')"/>
+    
+    <xsl:template match="title">
+        <title>TEI output for file: <xsl:value-of select="$soundFile"/></title>
+    </xsl:template>
+    
+    <!-- change jerry to Jeremías -->
+    
+    <xsl:template match="name/text()[matches(.,'Jeremaia Salazar')]">
+        <xsl:text>Jeremías Salazar</xsl:text>        
+    </xsl:template>
+    
+    <xsl:template match="publicationStmt">
+        <authority>
+            <name>Jack Bowers</name>          
+        </authority>
+        <availability>
+            <licence>CC-BY</licence>
+        </availability>
+    </xsl:template>
+    
 <!-- 
     <xsl:template match="teiHeader">
         <xsl:copy>
@@ -108,7 +132,7 @@
             </xsl:attribute>
         </xsl:if>
     </xsl:template>
-  -->  
+  
     <xsl:template match="encodingDesc">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
@@ -126,5 +150,5 @@
             
         </listPrefixDef>
         </xsl:copy>
-    </xsl:template>
+    </xsl:template>-->  
 </xsl:stylesheet>
