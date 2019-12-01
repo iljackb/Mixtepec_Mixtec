@@ -19,22 +19,48 @@
         <title>TEI output for file: <xsl:value-of select="$soundFile"/></title>
     </xsl:template>
     
-    <!-- change jerry to Jeremías -->
-    
-    <xsl:template match="name/text()[matches(.,'Jeremaia Salazar')]">
-        <xsl:text>Jeremías Salazar</xsl:text>        
+  <xsl:template match="resp/@resp"/>
+
+    <xsl:template match="name/text()[matches(.,'Jeremaia Salazar') or matches(.,'Geremaia Salazar')]">
+        <xsl:text>Jeremías Salazar</xsl:text>  
     </xsl:template>
-    
+   
+        <!-- 
+    <xsl:template match="name">
+        <xsl:if test="/text()[matches(.,'Jeremaia Salazar') or matches(.,'Geremaia Salazar')]">
+            <xsl:text>Jeremías Salazar</xsl:text>  
+        </xsl:if>
+
+    </xsl:template>
+      -->
     <xsl:template match="publicationStmt">
+        <publicationStmt>
         <authority>
-            <name>Jack Bowers</name>          
+            <name>Jack Bowers</name>   
+            <name>Jeremías Salazar</name>
+            <name>Tisu'ma Salazar</name>
         </authority>
         <availability>
             <licence>CC-BY</licence>
         </availability>
+        </publicationStmt>
     </xsl:template>
     
-<!-- 
+  <!--  
+    <xsl:template match="fileDesc">
+        <publicationStmt>
+            <authority>
+                <name>Jack Bowers</name>   
+                <name>Jeremías Salazar</name>
+                <name>Tisu'ma Salazar</name>
+            </authority>
+            <availability>
+                <licence>CC-BY</licence>
+            </availability>
+        </publicationStmt>
+    </xsl:template>
+    
+ 
     <xsl:template match="teiHeader">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
