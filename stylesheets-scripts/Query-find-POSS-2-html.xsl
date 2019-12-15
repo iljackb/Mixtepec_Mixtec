@@ -10,7 +10,7 @@
       <html>
          <p n="1">
             <xsl:for-each select="$theCollection">
-               <xsl:for-each select="descendant::spanGrp[@type = 'translation']/span[@xml:lang = 'en']">
+               <xsl:for-each select="descendant::spanGrp[@type = 'annotations']/span[@xml:lang = 'en']">
                   <result>
                      <xsl:value-of select="."/>
                   </result>

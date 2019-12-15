@@ -2,6 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="paradigms.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
@@ -9,7 +10,18 @@
             <title>Mixtepec Mixtec Paradigms Entries</title>
             <respStmt>
                <resp>Editor</resp>
+               <resp>Annotation</resp>
                <name>Jack Bowers</name>
+            </respStmt>
+            <respStmt>
+               <resp>Project Member</resp>
+               <resp>Speaker</resp>
+               <name>Tisu'ma Salazar</name>
+            </respStmt>
+            <respStmt>
+               <resp>Project Member</resp>
+               <resp>Speaker</resp>
+               <name>Geremías Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -70,10 +82,16 @@
             <gramGrp>
                <pos>verb</pos>
             </gramGrp>
-            
+            <sense>
+               <cit type="translation">
+                  <orth xml:lang="en">to drink</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">beber</orth>
+               </cit>
+            </sense>
             <form type="paradigm" cert="low">
                <!-- PRESENT/INCOMPLETIVE -->
-               <note></note>
                <gramGrp>
                   <tns norm="present">pres</tns>
                   <gram type="aspect" norm="incompletive">incmpl</gram>
@@ -82,181 +100,179 @@
                
             <!-- 1S -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i</orth>
-                  <pron xml:lang="mix" notation="ipa"/><!-- 1sg is important to get pron because the tone affects the inflection -->
                   <gramGrp>
                      <per>1</per>
                      <number norm="singular">sg</number>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i</orth>
+                  <pron xml:lang="mix" notation="ipa"/><!-- 1sg is important to get pron because the tone affects the inflection -->
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 2S.INF -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'u</orth>
                   <gramGrp>
                      <per>2</per>
                      <number norm="singular">sg</number>
                      <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'u</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 2S.FORM -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i ni</orth>
                   <gramGrp>
                      <per>2</per>
                      <number norm="singular">sg</number>
                      <gram type="register" norm="formal">form</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i ni</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>            
                
                <!-- 3S.INF  -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'a</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="singular">sg</number>
                      <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'a</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 3S.ANML  -->
                <form type="inflected">
-                  <orth xml:lang="mix" cert="medium">tsí'i ti</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="singular">sg</number>
                      <gen cert="medium">animl</gen><!-- best abbreviation? tag is "#ANML"; also, this has it's own semantic profile -->
                      <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix" cert="medium">tsí'i ti</orth>
                   <note xml:lang="en">The base form of the verb used with the enclitic 'animal' is the same as that of the formal masculine singular. This pattern is also true for enclitics for the general pronoun <oRef xml:lang="mix">ña</oRef>, '<gloss>child</gloss>' <oRef xml:lang="mix">tsi</oRef>; '<gloss>wood</gloss>' <oRef xml:lang="mix">tu</oRef>; '<gloss>spherical</gloss>' <oRef xml:lang="mix">ti</oRef>; '<gloss>deity</gloss>' <oRef xml:lang="mix">ya</oRef>; '<gloss>water/liquid</gloss>' <oRef xml:lang="mix">ra</oRef>; (<gloss>3.inf</gloss> <oRef xml:lang="mix">kui</oRef> or its free variant <oRef xml:lang="mix">vi</oRef>), thus the form for animal should be consulted when looking up the inflection of any of the aforementioned.</note>
                </form>
                
                <!-- 3S.FORM.M -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i ra</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="singular">sg</number>
                      <gen norm="masculine">masc</gen>
                      <gram type="register" norm="formal">form</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i ra</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 3S.FORM.F  -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'a</orth>
-                  <orth xml:lang="mix">tsí'á</orth>
-                  <pron notation="ipa" cert="high">tsíʔá</pron><!-- distinction needed between 3s.form.f & 3s.inf -->
                   <gramGrp>
                      <per>3</per>
                      <number norm="singular">sg</number>
                      <gen norm="feminine">fem</gen>
                      <gram type="register" norm="formal">form</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'a</orth>
+                  <orth xml:lang="mix">tsí'á</orth>
+                  <pron notation="ipa" cert="high">tsíʔá</pron><!-- distinction needed between 3s.form.f & 3s.inf -->
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!--  1PL.EXCL -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kue</orth>
                   <gramGrp>
                      <per>1</per>
                      <number norm="plural">pl</number>
                      <gram type="inclusivity" norm="exclusive">excl</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kue</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 1PL.INCL -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'o</orth>
                   <gramGrp>
                      <per>1</per>
                      <number norm="plural">pl</number>
                      <gram type="inclusivity" norm="inclusive">incl</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'o</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 2PL.INF -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kueyu</orth>
                   <gramGrp>
                      <per>2</per>
                      <number norm="plural">pl</number>
                      <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kueyu</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 2PL.FORM -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kueni</orth>
                   <gramGrp>
                      <per>2</per>
                      <number norm="plural">pl</number>
                      <gram type="register" norm="formal">form</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kueni</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!--  3PL.INF-->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kueyi</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="plural">pl</number>
                      <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kueyi</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 3PL.FORM.M -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kuera</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="plural">pl</number>
-                     <gen norm="masculine">masc</gen>
-                     <gram type="register" norm="formal">form</gram>
+                     <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kuera</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 3PL.FORM.F-->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kueñá</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="plural">pl</number>
                      <gen norm="feminine">fem</gen>
                      <gram type="register" norm="formal">form</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kueñá</orth>
                   <gloss xml:lang="en"></gloss>
                   <gloss xml:lang="es"></gloss>
                </form>
                
                <!-- 3PL.FORM.ALL.HUM -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kuena</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="plural">pl</number>
@@ -264,18 +280,19 @@
                      <gram type="register" norm="formal">form</gram>
                      <!-- human -->
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kuena</orth>
                   <note cert="medium">Alternatively the pronoun could be <oRef>kuena</oRef>.</note>
                </form>
                
                <!-- 3PL.ANML  -->
                <form type="inflected">
-                  <orth xml:lang="mix">tsí'i kueti</orth>
                   <gramGrp>
                      <per>3</per>
                      <number norm="plural">pl</number>
                      <gen cert="medium" norm="animal">animl</gen>
                      <gram type="register" norm="informal">inf</gram>
                   </gramGrp>
+                  <orth xml:lang="mix">tsí'i kueti</orth>
                   <note xml:lang="en">The base form of the verb used with the enclitic 'animal' is the same as that of the rest of the 3rd person plural forms. This pattern of adding the clitic seen in the singular form to the plural marker to form the specific plural pronoun is also true for enclitics for the general pronoun <oRef xml:lang="mix">kueña</oRef>; '<gloss>children</gloss>', <oRef xml:lang="mix">kuetsi</oRef>;  '<gloss>wood</gloss>', <oRef xml:lang="mix">kuetu</oRef>; '<gloss>spherical</gloss>', <oRef xml:lang="mix">kueti</oRef> '<gloss>deity</gloss>', <oRef xml:lang="mix">kueya</oRef>; '<gloss>water/liquid</gloss>' <oRef xml:lang="mix">kuera</oRef>; thus the form for animal should be consulted when looking up the inflectio of any of the aforementioned. Note however that this is not the case for the alternative 3rd person pronoun <oRef xml:lang="mix">kui</oRef>, or its free variant <oRef xml:lang="mix">vi</oRef> which may be used for both singular or plural.</note>
                </form>
                         
@@ -989,14 +1006,7 @@
             
             <!-- also possible is negative verbs, as certain verbs (though not all) may be inflected via tone to denote negation -->
             
-            <sense>
-               <cit type="translation">
-                  <orth xml:lang="en">to drink</orth>
-               </cit>
-               <cit type="translation">
-                  <orth xml:lang="es">beber</orth>
-               </cit>
-            </sense>
+
          </entry>
          
          

@@ -1,0 +1,170 @@
+/* TODO: namespace stuff once the annotation files are in the TEI namespace */
+
+tei { display: block; }
+
+titleStmt > title{
+    font-size: 26px;
+     content: "\A";
+    text-align: center
+}
+
+title + title {
+    content: "\A"
+}
+
+title {
+    content: "\A"
+}
+
+resp + resp::before {
+    content: ", ";
+}
+
+resp + name::before {
+    content: ": ";
+}
+
+resp + name{
+        font-weight: bold;
+}
+
+edition::before {
+    content:"("
+}
+edition::after {
+    content:")"
+}
+
+respStmt::after {
+    content:";"
+}
+
+licence::before {
+    content:"("
+}
+licence::after {  
+    content:")"
+}
+particDesc { display: none; }
+
+sourceDesc { display: none; }
+
+distributor{
+    display: none;
+}
+
+editorialDecl { display: none; }
+
+entry {
+    margin:1em;
+    display: block;
+    border: 1px solid silver;
+    padding: 20px
+}
+
+form[type="lemma"] > orth {
+    font-size: 22px;
+    font-weight: bold;
+    display: inline
+}
+
+/*  
+form[type="inflected"] > orth {
+    line-break: loose;
+    content: "\A";
+}*/
+
+form[type="paradigm"] { 
+    display: block;
+    margin:1em;
+    border: 1px solid silver;
+    line-break: loose;
+    content: "\A";
+}
+
+form[type="inflected"] > orth {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-indent: 10px;
+}
+
+
+form[type="inflected"] > pron {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-indent: 10px;
+}
+
+pron::before {
+    content:"["
+}
+
+pron::after {
+    content:"]"
+}
+
+entry > gramGrp {
+    display: inline;
+    font-weight: bold;
+    color:blue;
+    letter-spacing: 0.1em;
+    content: "\A";
+}
+
+form[type="paradigm"] > gramGrp {
+    display: inline;
+    font-weight: bold;
+    color:grey;
+    content: "\A";
+}
+
+form[type="inflected"] > gramGrp {
+    display: inline;
+    text-indent: 10px;
+}
+
+/* 
+ * 
+
+number {
+    display: inline;
+    font-weight: bold;
+    color:blue;
+    letter-spacing: 0.1em;
+}
+
+pers {
+    display: inline;
+    font-weight: bold;
+    color:blue;
+    letter-spacing: 0.1em;
+}
+ */
+gloss { /* CHANGE THIS ISN'T GOOD */
+        font-size: 16px;
+        content: "\A";
+}
+
+.en::before {       /* WHY IS THIS NOT WORKING! */
+  content: "(en)";
+  font-size: 14px !important;
+}
+
+.es::before {       /* WHY IS THIS NOT WORKING! */
+  content: "(es)";
+  font-size: 14px !important;
+}
+
+
+note { display: none; }
+/* put gramGrp contents in group format */
+
+/* make gramGrp header */
+
+/* each inflected in //form[@type='paradigm'] 
+ * 
+ * 
+ * 
+ * */
