@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-stylesheet type="text/css" href="stylesheets-scripts/css/lexicalEntry.css?v=3"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MIX-Dict-TEI">
    <teiHeader>
       <fileDesc>
@@ -510,19 +509,20 @@
                <bibl type="journalArticle" xml:id="Longacre1961">Longacker, Robert E. and Millon,
                   René. (1961). Proto-Mixtecan and Proto-Amuzgo-Mixtecan vocabularies: a preliminary
                   cultural analysis. Anthropological Linguistics,1–44</bibl>
+               <bibl xml:id="Dürr1990">Dürr, Michael. 1987. A preliminary reconstruction of the proto-Mixtec tonal system. Indiana 11: 19–61</bibl>
             </listBibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <particDesc>
             <listPerson xml:base="MIX-People.xml">
-               <person xml:id="TS" role="speaker, collaborator" corresp="MIX-People.xml#TS">
+               <person xml:id="TS" role="speaker collaborator" corresp="MIX-People.xml#TS">
                   <name>Juan "Tisu'ma" Salazar</name>
                </person>
-               <person xml:id="JS" role="speaker, collaborator" corresp="MIX-People.xml#JS">
+               <person xml:id="JS" role="speaker collaborator" corresp="MIX-People.xml#JS">
                   <name>Geremaia Salazar</name>
                </person>
-               <person xml:id="JB" role="editor, researcher" corresp="MIX-People.xml#JB">
+               <person xml:id="JB" role="editor researcher" corresp="MIX-People.xml#JB">
                   <name>Jack Bowers</name>
                </person>
                <!-- more people here -->
@@ -682,7 +682,7 @@
                <form type="variant">
                   <orth xml:lang="mix" notAfter="2016">ña'a</orth>
                </form>
-               <pron xml:lang="mix" notation="ipa">ɲàʔá</pron>
+               <pron xml:lang="mix" notation="ipa">ɲaʔá</pron>
                <form type="variant">
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ɲa˧ʔa˥</pron>
                </form>
@@ -5863,7 +5863,7 @@
          <entry xml:id="animal-fox">
             <form type="lemma">
                <orth xml:lang="mix">nkuii</orth>
-               <pron xml:lang="mix" notation="ipa">nk̜wìí</pron>
+               <pron xml:lang="mix" notation="ipa">nk̜w̌ii</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -5892,7 +5892,6 @@
             </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Coyote">
                <usg type="domain" corresp="http://dbpedia.org/resource/Animal">Animal</usg>
-               <etym/>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">coyote</orth>
@@ -6315,6 +6314,11 @@
                      <orth xml:lang="en">Great Horned Owl</orth>
                   </form>
                </cit>
+               <cit type="translation" subtype="literal">
+                  <form>
+                     <orth xml:lang="en">big head owl</orth>
+                  </form>
+               </cit>
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">tecolote</orth>
@@ -6326,6 +6330,7 @@
                   </form>
                </cit>
                <cit type="translation">
+                  <usg type="domain">scientific</usg>
                   <form>
                      <orth xml:lang="la">Bubo virginianus</orth>
                   </form>
@@ -11501,10 +11506,11 @@
          <entry xml:id="bird-chicken">
             <form type="lemma">
                <orth xml:lang="mix">chuún</orth>
-               <pron notation="ipa" cert="medium">ʧũṹ</pron>
+               <pron notation="ipa" cert="medium">ʧũ̀ṹ</pron>
                <form type="variant">
                   <orth notation="plain" xml:lang="mix">chuun</orth>
-               </form></form>
+               </form>
+            </form>
             <gramGrp>
                <pos>noun</pos>
             </gramGrp>
@@ -13162,14 +13168,26 @@
                <pos>noun</pos>
             </gramGrp>
             <sense corresp="http://dbpedia.org/resource/Category:Rain">
-               <usg type="domain" corresp="http://dbpedia.org/resource/Category:Weather"
-                  >Weather</usg>
+               <usg type="domain" corresp="http://dbpedia.org/resource/Category:Weather">Weather</usg>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">rain</orth>
                   </form>
                </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">lluvia</orth>
+                  </form>
+               </cit>
             </sense>
+            <etym type="inheritance">
+               <cit type="etymon">
+                  <form>
+                     <pron xml:lang="und-x-PMx">*sawiʔ</pron>
+                  </form>
+                  <ref type="bibl" source="#Josserand1983">(Josserand, 1983)</ref>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="lightning-MIX">
             <form type="lemma">
@@ -14073,7 +14091,7 @@
          <entry xml:id="ñuu-MIX">
             <form type="lemma">
                <orth xml:lang="mix">ñuu</orth>
-               <pron xml:lang="mix" notation="ipa">ɲùù</pron>
+               <pron xml:lang="mix" notation="ipa">ɲuù</pron>
                <form>
                   <pron xml:lang="mix" notation="ipa" source="#Pike-Ibach-MIX-1978">ɲu˧u˩</pron></form>
             </form>
@@ -18000,8 +18018,7 @@
                <orth xml:lang="mix">iin</orth>
                <pron notation="ipa" xml:lang="mix" cert="high">ĩĩ↘</pron>
                <form type="variant">
-                  <pron notation="ipa" xml:lang="mix" source="#bibl.pike-ibach-1978" orig="ʔį³į³"
-                     >ʔĩ˩ĩ˩</pron>
+                  <pron notation="ipa" xml:lang="mix" source="#bibl.pike-ibach-1978" orig="ʔį³į³">ʔĩ˩ĩ˩</pron>
                </form>
                <form type="variant">
                   <pron notation="ipa" xml:lang="mix" source="#paster-azcona-2004a" orig="í̱í̱"
@@ -22892,6 +22909,15 @@
                   </form>
                </cit>
             </sense>
+            <etym type="inheritance">
+               <cit type="etymon">
+                  <lang>Proto-Mixtec</lang>
+                  <form>
+                     <pron xml:lang="und-x-PMx">*tútù</pron>
+                  </form>
+                  <ref type="bibl" source="#Dürr1990">(Dürr, 1990)</ref>
+               </cit>
+            </etym>
          </entry>
          <!-- Home Furnishings -->
          <entry xml:id="floor-mat">
@@ -24351,6 +24377,37 @@
                <cit type="translation">
                   <form>
                      <orth xml:lang="es">mañana</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="day-after-tomorrow-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">isa</orth>
+               <pron notation="ipa" xml:lang="mix">i˧sa˧˩</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain" corresp="http://dbpedia.org/resource/Time">Time</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">the day after tomorrow</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">passado mañana</orth>
                   </form>
                </cit>
             </sense>
@@ -26564,6 +26621,9 @@
             <form type="lemma">
                <orth xml:lang="mix">cha</orth>
                <pron notation="ipa" xml:lang="mix">tʃà</pron>
+               <form type="variant">
+                  <orth xml:lang="mix">tya</orth>
+               </form>
             </form>
             <gramGrp>
                <pos>conj-coord</pos>
@@ -28153,6 +28213,47 @@ he is crying - nstakui
                   </form>
                </cit>
             </sense>
+         </entry>
+         <entry xml:id="chop-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">ka'ncha</orth>
+               <pron notation="ipa" xml:lang="mix"></pron>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <gram type="transitivity">trans</gram>
+            </gramGrp>
+            <sense>
+               <usg type="domain"></usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">chop</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">cortar</orth>
+                  </form>
+               </cit>
+            </sense>
+            <etym type="inheritance">
+               <cit type="etymon">
+                  <lang>Proto-Mixtec</lang>
+                  <form>
+                     <pron xml:lang="und-x-PMx">*xeʔⁿde</pron>
+                  </form>
+                  <ref type="bibl" source="#Josserand1983">(Josserand, 1983)</ref>
+               </cit>
+            </etym>
          </entry>
          <entry xml:id="filter-MIX">
             <form type="lemma">
@@ -33963,7 +34064,7 @@ he is crying - nstakui
          <entry xml:id="be-able-to-MIX">
             <form type="lemma">
                <orth xml:lang="mix">kuu</orth>
-               <pron notation="ipa" xml:lang="mix">kúú</pron>
+               <pron notation="ipa" xml:lang="mix">kúu</pron>
             </form>
             <gramGrp>
                <pos>verb</pos>
@@ -35102,7 +35203,7 @@ he is crying - nstakui
          <entry xml:id="tamale-MIX">
             <form type="lemma">
                <orth xml:lang="mix">tikoo</orth>
-               <pron notation="ipa" xml:lang="mix"></pron>
+               <pron notation="ipa" xml:lang="mix">ti˧ko˥˩o˧</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -35943,7 +36044,7 @@ he is crying - nstakui
          <entry xml:id="shell-ii-MIX">
             <form type="lemma">
                <orth xml:lang="mix">soo</orth>
-               <pron notation="ipa" xml:lang="mix">soó</pron>
+               <pron notation="ipa" xml:lang="mix">sòó</pron>
             </form>
             <gramGrp>
                <pos>noun</pos>
@@ -35959,7 +36060,7 @@ he is crying - nstakui
                      <quote xml:lang="es"></quote>
                   </cit>
                </cit>
-               <def cert="low" xml:lang="en">pPaper like cover occuring on certain fruits, vegitables and nuts.</def>
+               <def cert="low" xml:lang="en">Paper like cover occuring on certain fruits, vegitables and nuts.</def>
                <cit type="translation">
                   <form>
                      <orth xml:lang="en">paper skin</orth>
@@ -40035,6 +40136,37 @@ he is crying - nstakui
                </re>             
             </sense>
          </entry>
+         <entry xml:id="earthquake-MIX">
+            <form type="lemma">
+               <orth xml:lang="mix">taan</orth>
+               <pron notation="ipa" xml:lang="mix">tã̂ã̄</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <usg type="domain">Natural Phenomena</usg>
+               <cit type="example">
+                  <quote xml:lang="mix"></quote>
+                  <cit type="translation">
+                     <quote xml:lang="en"></quote>
+                  </cit>
+                  <cit type="translation">
+                     <quote xml:lang="es"></quote>
+                  </cit>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="en">earthquake</orth>
+                  </form>
+               </cit>
+               <cit type="translation">
+                  <form>
+                     <orth xml:lang="es">temblor</orth>
+                  </form>
+               </cit>
+            </sense>
+         </entry>
          <!-- 
          <entry xml:id="pee-MIX">
             <form type="lemma">
@@ -40075,6 +40207,6 @@ he is crying - nstakui
          <!-- kuun - to fall (1)-->
          <!-- (ntacha) ntachí - fall (2) -->
          <!-- yaa - fall (3)? -->
-      </body>
+               </body>
    </text>
 </TEI>

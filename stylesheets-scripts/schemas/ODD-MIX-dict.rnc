@@ -8,10 +8,10 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2019-11-04T15:23:40Z. .
-# TEI Edition: Version 3.6.0. Last updated on
-#	16th July 2019, revision daa3cc0b9
-# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
+# Schema generated from ODD source 2020-03-12T15:34:06Z. .
+# TEI Edition: Version 4.0.0. Last updated on
+#	13th February 2020, revision ccd19b0ba
+# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
 #
 
 # TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
@@ -51,7 +51,7 @@ anyElement-content =
     (text | anyElement-content)*
   }
   >> sch:pattern [
-       id = "d57165010e120688-constraint"
+       id = "d20335624e119581-constraint"
        "\x{a}" ~
        "         "
        sch:rule [
@@ -82,7 +82,7 @@ anyElement-datatype =
     (text | anyElement-datatype)*
   }
   >> sch:pattern [
-       id = "d57165010e121955-constraint"
+       id = "d20335624e120799-constraint"
        "\x{a}" ~
        "         "
        sch:rule [
@@ -205,7 +205,7 @@ att.dimensions.attribute.unit =
     | 
       ## (characters) characters of text
       "char"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.dimensions.attribute.quantity =
   
@@ -241,7 +241,7 @@ att.dimensions.attribute.scope =
   ## where the measurement summarizes more than one observation, specifies the applicability of this measurement.
   ## Sample values include: 1] all; 2] most; 3] range
   attribute scope {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.written.attributes = att.written.attribute.hand
 att.written.attribute.hand =
@@ -264,7 +264,7 @@ att.damaged.attribute.agent =
   ## categorizes the cause of the damage, if it can be identified.
   ## Sample values include: 1] rubbing; 2] mildew; 3] smoke
   attribute agent {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.damaged.attribute.degree =
   [
@@ -302,7 +302,7 @@ att.breaking.attribute.break =
   
   ## indicates whether or not the element bearing this attribute should be considered to mark the end of an orthographic token in the same way as whitespace.
   attribute break {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.cReferencing.attributes = att.cReferencing.attribute.cRef
 att.cReferencing.attribute.cRef =
@@ -579,7 +579,7 @@ att.docStatus.attribute.status =
   ## Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft; 6] embargoed; 7] expired; 8] frozen; 9] galley; 10] proposed; 11] published; 12] recommendation; 13] submitted; 14] unfinished; 15] withdrawn
   [ a:defaultValue = "draft" ]
   attribute status {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.duration.w3c.attributes = att.duration.w3c.attribute.dur
 att.duration.w3c.attribute.dur =
@@ -630,7 +630,7 @@ att.editLike.attribute.evidence =
        | 
          ## the intervention or interpretation has been made by the editor, cataloguer, or scholar on the basis of their expertise.
          "conjecture"
-       | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+       | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
     }
   }?
 att.editLike.attribute.instant =
@@ -655,7 +655,7 @@ att.global.rendition.attribute.rend =
   ## (rendition) indicates how the element in question was rendered or presented in the source text.
   attribute rend {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.global.rendition.attribute.style =
@@ -772,7 +772,7 @@ att.handFeatures.attribute.medium =
   ## describes the tint or type of ink, e.g. brown, or other writing medium, e.g. pencil
   attribute medium {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.handFeatures.attribute.scope =
@@ -795,7 +795,7 @@ att.internetMedia.attribute.mimeType =
   ## (MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type
   attribute mimeType {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.media.attributes =
@@ -841,7 +841,7 @@ att.interpLike.attribute.type =
   ## indicates what kind of phenomenon is being noted in the passage.
   ## Sample values include: 1] image; 2] character; 3] theme; 4] allusion
   attribute type {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.interpLike.attribute.inst =
   
@@ -857,7 +857,7 @@ att.measurement.attributes =
 att.measurement.attribute.unit =
   
   ## indicates the units used for the measurement, usually using the standard symbol for the desired units.
-  ## Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (hertz); 5] Pa (pascal); 6] Ω (ohm); 7] L (litre); 8] t (tonne); 9] ha (hectare); 10] Å (ångström); 11] mL (millilitre); 12] cm (centimetre); 13] dB (decibel); 14] kbit (kilobit); 15] Kibit (kibibit); 16] kB (kilobyte); 17] KiB (kibibyte); 18] MB (megabyte); 19] MiB (mebibyte)
+  ## Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (hertz); 5] Pa (pascal); 6] Ω (ohm); 7] L (litre); 8] t (tonne); 9] ha (hectare); 10] Å (ångström); 11] mL (millilitre); 12] cm (centimetre); 13] dB (decibel); 14] kbit (kilobit); 15] Kibit (kibibit); 16] kB (kilobyte); 17] KiB (kibibyte); 18] MB (megabyte); 19] MiB (mebibyte)
   attribute unit {
     
     ## (metre) SI base unit of length
@@ -876,7 +876,7 @@ att.measurement.attribute.unit =
       "Pa"
     | 
       ## (ohm) SI unit of electric resistance
-      "Ω"
+      "Ω"
     | 
       ## (litre) 1 dm³
       "L"
@@ -888,7 +888,7 @@ att.measurement.attribute.unit =
       "ha"
     | 
       ## (ångström) 10⁻¹⁰ m
-      "Å"
+      "Å"
     | 
       ## (millilitre) 
       "mL"
@@ -916,7 +916,7 @@ att.measurement.attribute.unit =
     | 
       ## (mebibyte) 2²⁰ or 1 048 576 bytes
       "MiB"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.measurement.attribute.unitRef =
   [
@@ -942,7 +942,7 @@ att.measurement.attribute.commodity =
   ## indicates the substance that is being measured
   attribute commodity {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 sch:pattern [
@@ -974,7 +974,7 @@ att.naming.attribute.role =
   ## may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.
   attribute role {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.naming.attribute.nymRef =
@@ -988,7 +988,7 @@ att.notated.attribute.notation =
   
   ## names the notation used for the content of the element.
   attribute notation {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.placement.attributes = att.placement.attribute.place
 att.placement.attribute.place =
@@ -1027,7 +1027,7 @@ att.placement.attribute.place =
        | 
          ## in a predefined space, for example left by an earlier scribe.
          "inspace"
-       | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+       | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
     }
   }?
 att.typed.attributes =
@@ -1036,13 +1036,13 @@ att.typed.attribute.type =
   
   ## characterizes the element in some sense, using any convenient classification scheme or typology.
   attribute type {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.typed.attribute.subtype =
   
   ## provides a sub-categorization of the element, if needed
   attribute subtype {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 sch:pattern [
   id = "tei_all-att.typed-subtypeTyped-constraint-rule-6"
@@ -1154,9 +1154,9 @@ att.pointing.group.attribute.targFunc =
   ]
   attribute targFunc {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" },
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" },
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }*
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" },
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" },
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }*
     }
   }?
 att.scoping.attributes =
@@ -1184,14 +1184,14 @@ att.segLike.attribute.function =
   
   ## characterizes the function of the segment.
   attribute function {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.sortable.attributes = att.sortable.attribute.sortKey
 att.sortable.attribute.sortKey =
   
   ## supplies the sort key for this element in an index, list or group which contains it.
   attribute sortKey {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.edition.attributes =
   att.edition.attribute.ed, att.edition.attribute.edRef
@@ -1200,7 +1200,7 @@ att.edition.attribute.ed =
   ## (edition) supplies a sigil or other arbitrary identifier for the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.
   attribute ed {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.edition.attribute.edRef =
@@ -1314,13 +1314,13 @@ att.transcriptional.attribute.status =
   ## Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] excessEnd; 5] shortStart; 6] shortEnd; 7] partial; 8] unremarkable
   [ a:defaultValue = "unremarkable" ]
   attribute status {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.transcriptional.attribute.cause =
   
   ## documents the presumed cause for the intervention.
   attribute cause {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.transcriptional.attribute.seq =
   
@@ -1373,7 +1373,7 @@ att.citing.attribute.unit =
     | 
       ## the element identifies an entry number or label in a list of entries.
       "entry"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.citing.attribute.from =
   [
@@ -1384,7 +1384,7 @@ att.citing.attribute.from =
     ]
   ]
   attribute from {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.citing.attribute.to =
   [
@@ -1395,7 +1395,7 @@ att.citing.attribute.to =
     ]
   ]
   attribute to {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 model.nameLike.agent = name | orgName | persName
 model.nameLike.agent_alternation = name | orgName | persName
@@ -2098,6 +2098,7 @@ model.frontPart.drama =
 model.pLike.front =
   head
   | byline
+  | dateline
   | argument
   | epigraph
   | docTitle
@@ -2148,7 +2149,7 @@ model.choicePart =
   | supplied
 model.imprintPart = publisher | biblScope | pubPlace | distributor
 model.catDescPart = textDesc
-model.settingPart = locale | activity
+model.settingPart = locale | activity | placeName
 model.castItemPart = role | roleDesc | actor
 model.addressLike = email | address | affiliation
 model.addressLike_alternation = email | address | affiliation
@@ -2233,6 +2234,9 @@ model.biblPart =
   | extent
   | availability
   | msIdentifier
+  | explicit
+  | incipit
+  | decoNote
   | listRelation
   | objectIdentifier
 model.frontPart = model.frontPart.drama | listBibl | divGen | titlePage
@@ -2325,6 +2329,22 @@ model.profileDescPart =
   | correspDesc
   | handNotes
   | listTranspose
+model.standOffPart =
+  model.global.meta
+  | model.biblLike
+  | model.listLike
+  | model.entryLike
+  | castList
+  | listChange
+  | seg
+  | graph
+  | tree
+  | eTree
+  | forest
+  | listForest
+  | u
+  | annotationBlock
+  | zone
 att.formula.attributes = att.formula.attribute.formula
 att.formula.attribute.formula =
   [
@@ -2360,9 +2380,10 @@ att.partials.attribute.extent =
     | 
       ## (partial) 
       "part"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
-model.resourceLike = fsdDecl | \text | facsimile | sourceDoc
+model.resource = fsdDecl | standOff | \text | facsimile | sourceDoc
+model.describedResource = teiCorpus | TEI
 model.objectLike = object | listObject
 att.personal.attributes =
   att.naming.attributes,
@@ -2450,7 +2471,7 @@ att.milestoneUnit.attribute.unit =
     | 
       ## passages present in the text, but not to be included as part of the reference.
       "unnumbered"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }
 p =
   
@@ -2528,10 +2549,11 @@ distinct =
   element distinct {
     macro.phraseSeq,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## specifies the sublanguage or register to which the word or phrase is being assigned
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies how the phrase is distinct diachronically
@@ -2625,7 +2647,7 @@ q =
       | 
         ## refering to itself, not its normal referent
         "mentioned"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -2666,14 +2688,14 @@ desc =
          sch:rule [
            context = "tei:desc[ @type eq 'deprecationInfo']"
            "\x{a}" ~
-           "	              "
+           "               "
            sch:assert [
              test = "../@validUntil"
              "Information about a\x{a}" ~
-             "	deprecation should only be present in a specification element\x{a}" ~
-             "	that is being deprecated: that is, only an element that has a\x{a}" ~
-             "	@validUntil attribute should have a child <desc\x{a}" ~
-             '	type="deprecationInfo">.'
+             "        deprecation should only be present in a specification element\x{a}" ~
+             "        that is being deprecated: that is, only an element that has a\x{a}" ~
+             "        @validUntil attribute should have a child <desc\x{a}" ~
+             '        type="deprecationInfo">.'
            ]
            "\x{a}" ~
            "            "
@@ -2687,7 +2709,7 @@ desc =
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -2789,14 +2811,14 @@ gap =
          | 
            ##
            "sampling"
-         | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+         | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
       }
     }?,
     
     ## in the case of text omitted because of damage, categorizes the cause of the damage, if it can be identified.
     ## Sample values include: 1] rubbing; 2] mildew; 3] smoke
     attribute agent {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -2851,14 +2873,14 @@ unclear =
          | 
            ##
            "eccentric_ductus"
-         | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+         | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
       }
     }?,
     
     ## Where the difficulty in transcription arises from damage, categorizes the cause of the damage, if it can be identified.
     ## Sample values include: 1] rubbing; 2] mildew; 3] smoke
     attribute agent {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -2919,6 +2941,7 @@ num =
   element num {
     macro.phraseSeq,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.ranging.attributes,
     
     ## indicates the type of numeric value.
@@ -2936,7 +2959,7 @@ num =
       | 
         ## a percentage
         "percentage"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## supplies the value of the number in standard form.
@@ -2954,11 +2977,12 @@ measure =
   element measure {
     macro.phraseSeq,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.measurement.attributes,
     
     ## specifies the type of measurement in any convenient typology.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -3022,7 +3046,7 @@ abbr =
     ## allows the encoder to classify the abbreviation according to some convenient typology.
     ## Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscription; 5] acronym; 6] title; 7] organization; 8] geographic
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -3160,7 +3184,7 @@ ref =
       | 
         ## each list item is part of an argument consisting of two or more propositions and a final conclusion derived from them.
         "syllogism"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -3258,7 +3282,7 @@ media =
     ## (MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type
     attribute mimeType {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     },
     empty
@@ -3292,7 +3316,7 @@ binaryObject =
     ]
     attribute encoding {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -3455,14 +3479,14 @@ title =
   element title {
     macro.paraContent,
     att.global.attributes,
-    att.canonical.attributes,
     att.typed.attribute.subtype,
+    att.canonical.attributes,
     att.datable.attributes,
     
     ## classifies the title according to some convenient typology.
     ## Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.
@@ -3603,18 +3627,6 @@ relatedItem =
              " is used, the\x{a}" ~
              "relatedItem element must be empty"
            ]
-           "\x{a}" ~
-           "            "
-         ]
-         "\x{a}" ~
-         "         "
-       ]
-    >> sch:pattern [
-         id = "tei_all-relatedItem-targetorcontent1-constraint-assert-8"
-         "\x{a}" ~
-         "            "
-         sch:rule [
-           context = "tei:relatedItem"
            "\x{a}" ~
            "               "
            sch:assert [
@@ -3788,7 +3800,7 @@ stage =
          | 
            ## more than one of the above
            "mixed"
-         | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })*
+         | xsd:token { pattern = "[^\p{C}\p{Z}]+" })*
       }
     }?,
     empty
@@ -3802,9 +3814,7 @@ teiCorpus =
     ]
   ]
   element teiCorpus {
-    (teiHeader,
-     ((model.resourceLike+, (TEI | teiCorpus)*)
-      | (TEI | teiCorpus)+)),
+    (teiHeader, model.resource*, model.describedResource+),
     att.global.attributes,
     att.typed.attributes,
     
@@ -3820,11 +3830,12 @@ divGen =
   element divGen {
     model.headLike*,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## specifies what type of generated text division (e.g. index, table of contents, etc.) is to appear.
     ## Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4009,7 +4020,7 @@ m =
     
     ## supplies the morpheme's base form.
     attribute baseForm {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4049,7 +4060,7 @@ pc =
     
     ## provides a name for the kind of unit delimited by this punctuation mark.
     attribute unit {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## indicates whether this punctuation mark precedes or follows the unit it delimits.
@@ -4148,8 +4159,27 @@ span =
          "\x{a}" ~
          "         "
        ],
-    att.typed.attribute.subtype,
-    att.global.attributes,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.attribute.xmlbase,
+    att.global.attribute.xmlspace,
+    att.global.rendition.attribute.rend,
+    att.global.rendition.attribute.style,
+    att.global.rendition.attribute.rendition,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.synch,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.global.linking.attribute.exclude,
+    att.global.linking.attribute.select,
+    att.global.facs.attribute.facs,
+    att.global.change.attribute.change,
+    att.global.responsibility.attribute.cert,
+    att.global.responsibility.attribute.resp,
+    att.global.source.attribute.source,
     att.pointing.attributes,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
@@ -4164,7 +4194,347 @@ span =
       | 
         ##
         "gram"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+    }?,
+    
+    ## provides a sub-categorization of the element, if needed
+    ## Suggested values include: 1] tone; 2] morph
+    attribute subtype {
+      
+      ##
+      "tone"
+      | 
+        ##
+        "morph"
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+    }?,
+    [
+      a:documentation [
+        "(analysis) indicates one or more elements containing interpretations of the element on which the "
+        ns1:code [ "@ana" ]
+        " attribute appears.\x{a}" ~
+        "Suggested values include: 1] V; 2] N; 3] N-PROP; 4] PRON; 5] PRON-EMPH; 6] DEM; 7] DET; 8] ADPOS; 9] INTERJ; 10] QNTF; 11] PTCL; 12] TPC; 13] NMLZ; 14] PREF; 15] ADV; 16] ADJ; 17] CONJ; 18] CONJ-COORD; 19] CONJ-SUB; 20] ART-INDEF; 21] NUM; 22] INCOMPL; 23] COMPL; 24] POT; 25] REAL; 26] MOD; 27] DEONTIC; 28] PRES; 29] PAST; 30] FUT; 31] SG; 32] PL; 33] TRANS; 34] INTRANS; 35] DITRANS; 36] AMBITRANS; 37] PERS1; 38] PERS2; 39] PERS3; 40] M; 41] F; 42] THEME; 43] EXPERIENCER; 44] AGENT; 45] PATIENT; 46] COGNITIZER; 47] EMOTER; 48] RECIPIENT; 49] STIMULUS; 50] PERCEIVER; 51] A; 52] U; 53] TEMP; 54] MNR; 55] AFRM; 56] NEG; 57] DEG; 58] RECIP; 59] POSS; 60] MASS; 61] COUNT; 62] CONCRT; 63] REL; 64] LOC; 65] ABS; 66] COLL; 67] ATTRB; 68] PRED; 69] MTN; 70] DEPT; 71] ARVL; 72] SRC; 73] GL; 74] ANIM; 75] INANIM; 76] HUM; 77] STAT; 78] BPT; 79] COMPAR; 80] INCL; 81] EXCL; 82] FORM; 83] INF; 84] DIST; 85] PROX; 86] DEIC; 87] TR-STAT; 88] TR-DYN; 89] TR; 90] TR-PERS; 91] TR-EVENT; 92] LM; 93] LM-PERS; 94] LM-OBJ; 95] LM-EVNT; 96] FOR-VC; 97] FOR-GC; 98] FOR-OBJ; 99] BEG-PATH; 100] MID-PATH; 101] END-PATH; 102] ZERO-PATH; 103] REG; 104] REG-INTERN; 105] REG-EXTERN"
+      ]
+    ]
+    attribute ana {
+      list {
+        (
+         ##
+         "V"
+         | 
+           ##
+           "N"
+         | 
+           ##
+           "N-PROP"
+         | 
+           ##
+           "PRON"
+         | 
+           ##
+           "PRON-EMPH"
+         | 
+           ##
+           "DEM"
+         | 
+           ##
+           "DET"
+         | 
+           ##
+           "ADPOS"
+         | 
+           ##
+           "INTERJ"
+         | 
+           ##
+           "QNTF"
+         | 
+           ##
+           "PTCL"
+         | 
+           ##
+           "TPC"
+         | 
+           ##
+           "NMLZ"
+         | 
+           ##
+           "PREF"
+         | 
+           ##
+           "ADV"
+         | 
+           ##
+           "ADJ"
+         | 
+           ##
+           "CONJ"
+         | 
+           ##
+           "CONJ-COORD"
+         | 
+           ##
+           "CONJ-SUB"
+         | 
+           ##
+           "ART-INDEF"
+         | 
+           ##
+           "NUM"
+         | 
+           ##
+           "INCOMPL"
+         | 
+           ##
+           "COMPL"
+         | 
+           ##
+           "POT"
+         | 
+           ##
+           "REAL"
+         | 
+           ##
+           "MOD"
+         | 
+           ##
+           "DEONTIC"
+         | 
+           ##
+           "PRES"
+         | 
+           ##
+           "PAST"
+         | 
+           ##
+           "FUT"
+         | 
+           ##
+           "SG"
+         | 
+           ##
+           "PL"
+         | 
+           ##
+           "TRANS"
+         | 
+           ##
+           "INTRANS"
+         | 
+           ##
+           "DITRANS"
+         | 
+           ##
+           "AMBITRANS"
+         | 
+           ##
+           "PERS1"
+         | 
+           ##
+           "PERS2"
+         | 
+           ##
+           "PERS3"
+         | 
+           ##
+           "M"
+         | 
+           ##
+           "F"
+         | 
+           ##
+           "THEME"
+         | 
+           ##
+           "EXPERIENCER"
+         | 
+           ##
+           "AGENT"
+         | 
+           ##
+           "PATIENT"
+         | 
+           ##
+           "COGNITIZER"
+         | 
+           ##
+           "EMOTER"
+         | 
+           ##
+           "RECIPIENT"
+         | 
+           ##
+           "STIMULUS"
+         | 
+           ##
+           "PERCEIVER"
+         | 
+           ##
+           "A"
+         | 
+           ##
+           "U"
+         | 
+           ##
+           "TEMP"
+         | 
+           ##
+           "MNR"
+         | 
+           ##
+           "AFRM"
+         | 
+           ##
+           "NEG"
+         | 
+           ##
+           "DEG"
+         | 
+           ##
+           "RECIP"
+         | 
+           ##
+           "POSS"
+         | 
+           ##
+           "MASS"
+         | 
+           ##
+           "COUNT"
+         | 
+           ##
+           "CONCRT"
+         | 
+           ##
+           "REL"
+         | 
+           ##
+           "LOC"
+         | 
+           ##
+           "ABS"
+         | 
+           ##
+           "COLL"
+         | 
+           ##
+           "ATTRB"
+         | 
+           ##
+           "PRED"
+         | 
+           ##
+           "MTN"
+         | 
+           ##
+           "DEPT"
+         | 
+           ##
+           "ARVL"
+         | 
+           ##
+           "SRC"
+         | 
+           ##
+           "GL"
+         | 
+           ##
+           "ANIM"
+         | 
+           ##
+           "INANIM"
+         | 
+           ##
+           "HUM"
+         | 
+           ##
+           "STAT"
+         | 
+           ##
+           "BPT"
+         | 
+           ##
+           "COMPAR"
+         | 
+           ##
+           "INCL"
+         | 
+           ##
+           "EXCL"
+         | 
+           ##
+           "FORM"
+         | 
+           ##
+           "INF"
+         | 
+           ##
+           "DIST"
+         | 
+           ##
+           "PROX"
+         | 
+           ##
+           "DEIC"
+         | 
+           ##
+           "TR-STAT"
+         | 
+           ##
+           "TR-DYN"
+         | 
+           ##
+           "TR"
+         | 
+           ##
+           "TR-PERS"
+         | 
+           ##
+           "TR-EVENT"
+         | 
+           ##
+           "LM"
+         | 
+           ##
+           "LM-PERS"
+         | 
+           ##
+           "LM-OBJ"
+         | 
+           ##
+           "LM-EVNT"
+         | 
+           ##
+           "FOR-VC"
+         | 
+           ##
+           "FOR-GC"
+         | 
+           ##
+           "FOR-OBJ"
+         | 
+           ##
+           "BEG-PATH"
+         | 
+           ##
+           "MID-PATH"
+         | 
+           ##
+           "END-PATH"
+         | 
+           ##
+           "ZERO-PATH"
+         | 
+           ##
+           "REG"
+         | 
+           ##
+           "REG-INTERN"
+         | 
+           ##
+           "REG-EXTERN"
+         | xsd:anyURI)+
+      }
     }?,
     [
       a:documentation [
@@ -4323,7 +4693,7 @@ certainty =
       ]
     ]
     attribute assertedValue {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## indicates one or more element(s) characterizing the conditions which are assumed in the assignment of a degree of confidence.
@@ -4441,22 +4811,12 @@ constitution =
   element constitution {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## specifies how the text was constituted.
     [ a:defaultValue = "single" ]
     attribute type {
-      
-      ## a single complete text
-      "single"
-      | 
-        ## a text made by combining several smaller items, each individually complete
-        "composite"
-      | 
-        ## (fragments) a text made by combining several smaller, not necessarily complete, items
-        "frags"
-      | 
-        ## composition unknown or unspecified
-        "unknown"
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4466,11 +4826,11 @@ derivation =
   element derivation {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## categorizes the derivation of the text.
-    ## Sample values include: 1] original; 2] revision; 3] translation; 4] abridgment; 5] plagiarism; 6] traditional
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4480,11 +4840,11 @@ domain =
   element domain {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## categorizes the domain of use.
-    ## Sample values include: 1] art; 2] domestic; 3] religious; 4] business; 5] education; 6] govt (government); 7] public
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4494,21 +4854,11 @@ factuality =
   element factuality {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## categorizes the factuality of the text.
     attribute type {
-      
-      ## the text is to be regarded as entirely imaginative
-      "fiction"
-      | 
-        ## the text is to be regarded as entirely informative or factual
-        "fact"
-      | 
-        ## the text contains a mixture of fact and fiction
-        "mixed"
-      | 
-        ## the fiction/fact distinction is not regarded as helpful or appropriate to this text
-        "inapplicable"
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4518,21 +4868,11 @@ interaction =
   element interaction {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## specifies the degree of interaction between active and passive participants in the text.
     attribute type {
-      
-      ## no interaction of any kind, e.g. a monologue
-      "none"
-      | 
-        ## some degree of interaction, e.g. a monologue with set responses
-        "partial"
-      | 
-        ## complete interaction, e.g. a face to face conversation
-        "complete"
-      | 
-        ## this parameter is inappropriate or inapplicable in this case
-        "inapplicable"
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the number of active participants (or addressors) producing parts of the text.
@@ -4550,7 +4890,7 @@ interaction =
       | 
         ## number of addressors unknown or unspecifiable
         "unknown"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the number of passive participants (or addressees) to whom a text is directed or in whose presence it is created or performed.
@@ -4571,7 +4911,7 @@ interaction =
       | 
         ## text is addressed to an undefined and indeterminately large number e.g. a published book
         "world"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4581,11 +4921,11 @@ preparedness =
   element preparedness {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## a keyword characterizing the type of preparedness.
-    ## Sample values include: 1] none; 2] scripted; 3] formulaic; 4] revised
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4595,23 +4935,11 @@ purpose =
   element purpose {
     macro.phraseSeq.limited,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## specifies a particular kind of purpose.
-    ## Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain
     attribute type {
-      
-      ## didactic, advertising, propaganda, etc.
-      "persuade"
-      | 
-        ## self expression, confessional, etc.
-        "express"
-      | 
-        ## convey information, educate, etc.
-        "inform"
-      | 
-        ## amuse, entertain, etc.
-        "entertain"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the extent to which this purpose predominates.
@@ -4683,7 +5011,7 @@ att.entryLike.attribute.type =
     | 
       ## an entry for a foreign word in a monolingual dictionary.
       "foreign"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.lexicographic.attributes =
   att.datcat.attributes,
@@ -4877,7 +5205,7 @@ form =
       | 
         ## multiple-word lexical item
         "phrase"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4889,12 +5217,13 @@ orth =
     att.datable.w3c.attributes,
     att.notated.attributes,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     att.partials.attributes,
     
     ## gives the type of spelling.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -4944,6 +5273,7 @@ gram =
   element gram {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     
     ## 
@@ -5031,12 +5361,12 @@ iType =
   element iType {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     
     ## indicates the type of indicator used to specify the inflection class, when it is necessary to distinguish between the usual abbreviated indications (e.g. inv) and other kinds of indicators, such as special codes referring to conjugation patterns, etc.
-    ## Sample values include: 1] abbrev; 2] verbTable
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5140,12 +5470,12 @@ usg =
   element usg {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     
     ## classifies the usage information using any convenient typology.
-    ## Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] register; 5] style; 6] plev (preference level); 7] lang (language); 8] gram (grammatical); 9] syn (synonym); 10] hyper (hypernym); 11] colloc (collocation); 12] comp (complement); 13] obj (object); 14] subj (subject); 15] verb; 16] hint
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5155,11 +5485,12 @@ lbl =
   element lbl {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     
     ## classifies the label using any convenient typology.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5175,12 +5506,12 @@ xr =
      | lbl
      | model.global)*,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     
     ## indicates the type of cross reference, using any convenient typology.
-    ## Sample values include: 1] syn (synonym); 2] etym (etymological); 3] cf (compare or consult); 4] illus (illustration)
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5205,14 +5536,14 @@ oRef =
   element oRef {
     (text | model.gLike | oRef)*,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.lexicographic.attributes,
     att.pointing.attributes,
     att.notated.attributes,
     
     ## indicates the kind of typographic modification made to the headword in the reference.
-    ## Sample values include: 1] cap (capital); 2] noHyph (no hyphen)
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5306,16 +5637,12 @@ castItem =
      | model.phrase
      | model.global)*,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## characterizes the cast item.
     [ a:defaultValue = "role" ]
     attribute type {
-      
-      ## the item describes a single role.
-      "role"
-      | 
-        ## the item describes a list of non-speaking roles.
-        "list"
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5352,28 +5679,19 @@ move =
   element move {
     empty,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.ascribed.directed.attributes,
     
     ## characterizes the movement, for example as an entrance or exit.
-    ## Suggested values include: 1] entrance; 2] exit; 3] onStage
     attribute type {
-      
-      ## character is entering the stage.
-      "entrance"
-      | 
-        ## character is exiting the stage.
-        "exit"
-      | 
-        ## character moves on stage
-        "onStage"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the direction of a stage movement.
     ## Sample values include: 1] L (left); 2] R (right); 3] C (center)
     attribute where {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     [
@@ -5407,10 +5725,11 @@ sound =
   element sound {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## categorizes the sound in some respect, e.g. as music, special effect, etc.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## indicates whether the sound overlaps the surrounding speeches or interrupts them.
@@ -5435,23 +5754,11 @@ tech =
   element tech {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## categorizes the technical stage direction.
-    ## Suggested values include: 1] light; 2] sound; 3] prop; 4] block
     attribute type {
-      
-      ## a lighting cue
-      "light"
-      | 
-        ## a sound cue
-        "sound"
-      | 
-        ## a prop cue
-        "prop"
-      | 
-        ## a blocking instruction
-        "block"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     [
       a:documentation [
@@ -5481,7 +5788,7 @@ att.tableDecoration.attribute.role =
     | 
       ## data values.
       "data"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.tableDecoration.attribute.rows =
   
@@ -5562,6 +5869,97 @@ figDesc =
   
   ## (description of figure) contains a brief prose description of the appearance or content of a graphic figure, for use when documenting an image without displaying it. [14.4. Specific Elements for Graphic Images]
   element figDesc { macro.limitedContent, att.global.attributes, empty }
+att.gaijiProp.attributes =
+  att.gaijiProp.attribute.name,
+  att.gaijiProp.attribute.value,
+  att.gaijiProp.attribute.version
+att.gaijiProp.attribute.name =
+  
+  ## provides the name of the character or glyph property being defined.
+  attribute name { xsd:NCName }
+att.gaijiProp.attribute.value =
+  
+  ## provides the value of the character or glyph property being defined.
+  attribute value { xsd:string }
+att.gaijiProp.attribute.version =
+  
+  ## specifies the version number of the Unicode Standard in which this property name is defined.
+  ## Suggested values include: 1] 1.0.1; 2] 1.1; 3] 2.0; 4] 2.1; 5] 3.0; 6] 3.1; 7] 3.2; 8] 4.0; 9] 4.1; 10] 5.0; 11] 5.1; 12] 5.2; 13] 6.0; 14] 6.1; 15] 6.2; 16] 6.3; 17] 7.0; 18] 8.0; 19] 9.0; 20] 10.0; 21] 11.0; 22] 12.0; 23] 12.1; 24] unassigned
+  attribute version {
+    
+    ##
+    "1.0.1"
+    | 
+      ##
+      "1.1"
+    | 
+      ##
+      "2.0"
+    | 
+      ##
+      "2.1"
+    | 
+      ##
+      "3.0"
+    | 
+      ##
+      "3.1"
+    | 
+      ##
+      "3.2"
+    | 
+      ##
+      "4.0"
+    | 
+      ##
+      "4.1"
+    | 
+      ##
+      "5.0"
+    | 
+      ##
+      "5.1"
+    | 
+      ##
+      "5.2"
+    | 
+      ##
+      "6.0"
+    | 
+      ##
+      "6.1"
+    | 
+      ##
+      "6.2"
+    | 
+      ##
+      "6.3"
+    | 
+      ##
+      "7.0"
+    | 
+      ##
+      "8.0"
+    | 
+      ##
+      "9.0"
+    | 
+      ##
+      "10.0"
+    | 
+      ##
+      "11.0"
+    | 
+      ##
+      "12.0"
+    | 
+      ##
+      "12.1"
+    | 
+      ##
+      "unassigned"
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+  }?
 g =
   
   ## (character or glyph) represents a glyph, or a non-standard character. [5. Characters, Glyphs, and Writing Modes]
@@ -5574,33 +5972,6 @@ g =
     attribute ref { xsd:anyURI }?,
     empty
   }
-char =
-  
-  ## (character) provides descriptive information about a character. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element char {
-    (charName?,
-     model.descLike*,
-     charProp*,
-     mapping*,
-     figure*,
-     model.graphicLike*,
-     model.noteLike*),
-    att.global.attributes,
-    empty
-  }
-charName =
-  
-  ## (character name) contains the name of a character, expressed following Unicode conventions. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element charName { text, att.global.attributes, empty }
-charProp =
-  
-  ## (character property) provides a name and value for some property of the parent character or glyph. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element charProp {
-    ((unicodeName | localName), value),
-    att.global.attributes,
-    att.typed.attributes,
-    empty
-  }
 charDecl =
   
   ## (character declarations) provides information about nonstandard characters and glyphs. [5.2. Markup Constructs for Representation of Characters and Glyphs]
@@ -5609,28 +5980,46 @@ charDecl =
     att.global.attributes,
     empty
   }
+char =
+  
+  ## (character) provides descriptive information about a character. [5.2. Markup Constructs for Representation of Characters and Glyphs]
+  element char {
+    (charName
+     | charProp
+     | unicodeProp
+     | unihanProp
+     | localProp
+     | mapping
+     | figure
+     | model.graphicLike
+     | model.noteLike
+     | model.descLike)*,
+    att.global.attributes,
+    empty
+  }
 glyph =
   
   ## (character glyph) provides descriptive information about a character glyph. [5.2. Markup Constructs for Representation of Characters and Glyphs]
   element glyph {
-    (glyphName?,
-     model.descLike*,
-     charProp*,
-     mapping*,
-     figure*,
-     model.graphicLike*,
-     model.noteLike*),
+    (glyphName
+     | charProp
+     | unicodeProp
+     | unihanProp
+     | localProp
+     | mapping
+     | figure
+     | model.graphicLike
+     | model.noteLike
+     | model.descLike)*,
     att.global.attributes,
     empty
   }
-glyphName =
+localProp =
   
-  ## (character glyph name) contains the name of a glyph, expressed following Unicode conventions for character names. [5.2. Markup Constructs for Representation of Characters and Glyphs]
-  element glyphName { text, att.global.attributes, empty }
-localName =
-  
-  ## (locally-defined property name) contains a locally defined name for some property. [5.2.1. Character Properties]
-  element localName { text, att.global.attributes, empty }
+  ## (locally defined property) provides a locally defined character (or glyph) property. [5.2.1. Character Properties]
+  element localProp {
+    empty, att.global.attributes, att.gaijiProp.attributes, empty
+  }
 mapping =
   [
     a:documentation [
@@ -5642,9 +6031,995 @@ mapping =
   element mapping {
     macro.xtext, att.global.attributes, att.typed.attributes, empty
   }
+unihanProp =
+  
+  ## (unihan property) holds the name and value of a normative or informative Unihan character (or glyph) property as part of its attributes. [5.2.1. Character Properties]
+  element unihanProp {
+    empty,
+    att.global.attributes,
+    att.gaijiProp.attribute.version,
+    
+    ## specifies the normalized name of a unicode han database (Unihan) property
+    attribute name {
+      
+      ##
+      "kZVariant"
+      | 
+        ##
+        "kAccountingNumeric"
+      | 
+        ##
+        "kBigFive"
+      | 
+        ##
+        "kCCCII"
+      | 
+        ##
+        "kCNS1986"
+      | 
+        ##
+        "kCNS1992"
+      | 
+        ##
+        "kCangjie"
+      | 
+        ##
+        "kCantonese"
+      | 
+        ##
+        "kCheungBauer"
+      | 
+        ##
+        "kCheungBauerIndex"
+      | 
+        ##
+        "kCihaiT"
+      | 
+        ##
+        "kCompatibilityVariant"
+      | 
+        ##
+        "kCowles"
+      | 
+        ##
+        "kDaeJaweon"
+      | 
+        ##
+        "kDefinition"
+      | 
+        ##
+        "kEACC"
+      | 
+        ##
+        "kFenn"
+      | 
+        ##
+        "kFennIndex"
+      | 
+        ##
+        "kFourCornerCode"
+      | 
+        ##
+        "kFrequency"
+      | 
+        ##
+        "kGB0"
+      | 
+        ##
+        "kGB1"
+      | 
+        ##
+        "kGB3"
+      | 
+        ##
+        "kGB5"
+      | 
+        ##
+        "kGB7"
+      | 
+        ##
+        "kGB8"
+      | 
+        ##
+        "kGSR"
+      | 
+        ##
+        "kGradeLevel"
+      | 
+        ##
+        "kHDZRadBreak"
+      | 
+        ##
+        "kHKGlyph"
+      | 
+        ##
+        "kHKSCS"
+      | 
+        ##
+        "kHanYu"
+      | 
+        ##
+        "kHangul"
+      | 
+        ##
+        "kHanyuPinlu"
+      | 
+        ##
+        "kHanyuPinyin"
+      | 
+        ##
+        "kIBMJapan"
+      | 
+        ##
+        "kIICore"
+      | 
+        ##
+        "kIRGDaeJaweon"
+      | 
+        ##
+        "kIRGDaiKanwaZiten"
+      | 
+        ##
+        "kIRGHanyuDaZidian"
+      | 
+        ##
+        "kIRGKangXi"
+      | 
+        ##
+        "kIRG_GSource"
+      | 
+        ##
+        "kIRG_HSource"
+      | 
+        ##
+        "kIRG_JSource"
+      | 
+        ##
+        "kIRG_KPSource"
+      | 
+        ##
+        "kIRG_KSource"
+      | 
+        ##
+        "kIRG_MSource"
+      | 
+        ##
+        "kIRG_TSource"
+      | 
+        ##
+        "kIRG_USource"
+      | 
+        ##
+        "kIRG_VSource"
+      | 
+        ##
+        "kJIS0213"
+      | 
+        ##
+        "kJa"
+      | 
+        ##
+        "kJapaneseKun"
+      | 
+        ##
+        "kJapaneseOn"
+      | 
+        ##
+        "kJinmeiyoKanji"
+      | 
+        ##
+        "kJis0"
+      | 
+        ##
+        "kJis1"
+      | 
+        ##
+        "kJoyoKanji"
+      | 
+        ##
+        "kKPS0"
+      | 
+        ##
+        "kKPS1"
+      | 
+        ##
+        "kKSC0"
+      | 
+        ##
+        "kKSC1"
+      | 
+        ##
+        "kKangXi"
+      | 
+        ##
+        "kKarlgren"
+      | 
+        ##
+        "kKorean"
+      | 
+        ##
+        "kKoreanEducationHanja"
+      | 
+        ##
+        "kKoreanName"
+      | 
+        ##
+        "kLau"
+      | 
+        ##
+        "kMainlandTelegraph"
+      | 
+        ##
+        "kMandarin"
+      | 
+        ##
+        "kMatthews"
+      | 
+        ##
+        "kMeyerWempe"
+      | 
+        ##
+        "kMorohashi"
+      | 
+        ##
+        "kNelson"
+      | 
+        ##
+        "kOtherNumeric"
+      | 
+        ##
+        "kPhonetic"
+      | 
+        ##
+        "kPrimaryNumeric"
+      | 
+        ##
+        "kPseudoGB1"
+      | 
+        ##
+        "kRSAdobe_Japan1_6"
+      | 
+        ##
+        "kRSJapanese"
+      | 
+        ##
+        "kRSKanWa"
+      | 
+        ##
+        "kRSKangXi"
+      | 
+        ##
+        "kRSKorean"
+      | 
+        ##
+        "kRSUnicode"
+      | 
+        ##
+        "kSBGY"
+      | 
+        ##
+        "kSemanticVariant"
+      | 
+        ##
+        "kSimplifiedVariant"
+      | 
+        ##
+        "kSpecializedSemanticVariant"
+      | 
+        ##
+        "kTGH"
+      | 
+        ##
+        "kTaiwanTelegraph"
+      | 
+        ##
+        "kTang"
+      | 
+        ##
+        "kTotalStrokes"
+      | 
+        ##
+        "kTraditionalVariant"
+      | 
+        ##
+        "kVietnamese"
+      | 
+        ##
+        "kXHC1983"
+      | 
+        ##
+        "kXerox"
+    },
+    
+    ## specifies the value of a named Unihan property
+    attribute value {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+    },
+    empty
+  }
+unicodeProp =
+  
+  ## (unicode property) provides a Unicode property for a character (or glyph). [5.2.1. Character Properties]
+  element unicodeProp {
+    empty,
+    att.global.attributes,
+    att.gaijiProp.attribute.version,
+    
+    ## specifies the normalized name of a Unicode property.
+    attribute name {
+      
+      ##
+      "Age"
+      | 
+        ##
+        "AHex"
+      | 
+        ##
+        "Alpha"
+      | 
+        ##
+        "Alphabetic"
+      | 
+        ##
+        "ASCII_Hex_Digit"
+      | 
+        ##
+        "bc"
+      | 
+        ##
+        "Bidi_C"
+      | 
+        ##
+        "Bidi_Class"
+      | 
+        ##
+        "Bidi_Control"
+      | 
+        ##
+        "Bidi_M"
+      | 
+        ##
+        "Bidi_Mirrored"
+      | 
+        ##
+        "Bidi_Mirroring_Glyph"
+      | 
+        ##
+        "Bidi_Paired_Bracket"
+      | 
+        ##
+        "Bidi_Paired_Bracket_Type"
+      | 
+        ##
+        "blk"
+      | 
+        ##
+        "Block"
+      | 
+        ##
+        "bmg"
+      | 
+        ##
+        "bpb"
+      | 
+        ##
+        "bpt"
+      | 
+        ##
+        "Canonical_Combining_Class"
+      | 
+        ##
+        "Case_Folding"
+      | 
+        ##
+        "Case_Ignorable"
+      | 
+        ##
+        "Cased"
+      | 
+        ##
+        "ccc"
+      | 
+        ##
+        "CE"
+      | 
+        ##
+        "cf"
+      | 
+        ##
+        "Changes_When_Casefolded"
+      | 
+        ##
+        "Changes_When_Casemapped"
+      | 
+        ##
+        "Changes_When_Lowercased"
+      | 
+        ##
+        "Changes_When_NFKC_Casefolded"
+      | 
+        ##
+        "Changes_When_Titlecased"
+      | 
+        ##
+        "Changes_When_Uppercased"
+      | 
+        ##
+        "CI"
+      | 
+        ##
+        "Comp_Ex"
+      | 
+        ##
+        "Composition_Exclusion"
+      | 
+        ##
+        "CWCF"
+      | 
+        ##
+        "CWCM"
+      | 
+        ##
+        "CWKCF"
+      | 
+        ##
+        "CWL"
+      | 
+        ##
+        "CWT"
+      | 
+        ##
+        "CWU"
+      | 
+        ##
+        "Dash"
+      | 
+        ##
+        "Decomposition_Mapping"
+      | 
+        ##
+        "Decomposition_Type"
+      | 
+        ##
+        "Default_Ignorable_Code_Point"
+      | 
+        ##
+        "Dep"
+      | 
+        ##
+        "Deprecated"
+      | 
+        ##
+        "DI"
+      | 
+        ##
+        "Dia"
+      | 
+        ##
+        "Diacritic"
+      | 
+        ##
+        "dm"
+      | 
+        ##
+        "dt"
+      | 
+        ##
+        "ea"
+      | 
+        ##
+        "East_Asian_Width"
+      | 
+        ##
+        "EqUIdeo"
+      | 
+        ##
+        "Equivalent_Unified_Ideograph"
+      | 
+        ##
+        "Expands_On_NFC"
+      | 
+        ##
+        "Expands_On_NFD"
+      | 
+        ##
+        "Expands_On_NFKC"
+      | 
+        ##
+        "Expands_On_NFKD"
+      | 
+        ##
+        "Ext"
+      | 
+        ##
+        "Extender"
+      | 
+        ##
+        "FC_NFKC"
+      | 
+        ##
+        "FC_NFKC_Closure"
+      | 
+        ##
+        "Full_Composition_Exclusion"
+      | 
+        ##
+        "gc"
+      | 
+        ##
+        "GCB"
+      | 
+        ##
+        "General_Category"
+      | 
+        ##
+        "Gr_Base"
+      | 
+        ##
+        "Gr_Ext"
+      | 
+        ##
+        "Gr_Link"
+      | 
+        ##
+        "Grapheme_Base"
+      | 
+        ##
+        "Grapheme_Cluster_Break"
+      | 
+        ##
+        "Grapheme_Extend"
+      | 
+        ##
+        "Grapheme_Link"
+      | 
+        ##
+        "Hangul_Syllable_Type"
+      | 
+        ##
+        "Hex"
+      | 
+        ##
+        "Hex_Digit"
+      | 
+        ##
+        "hst"
+      | 
+        ##
+        "Hyphen"
+      | 
+        ##
+        "ID_Continue"
+      | 
+        ##
+        "ID_Start"
+      | 
+        ##
+        "IDC"
+      | 
+        ##
+        "Ideo"
+      | 
+        ##
+        "Ideographic"
+      | 
+        ##
+        "IDS"
+      | 
+        ##
+        "IDS_Binary_Operator"
+      | 
+        ##
+        "IDS_Trinary_Operator"
+      | 
+        ##
+        "IDSB"
+      | 
+        ##
+        "IDST"
+      | 
+        ##
+        "Indic_Positional_Category"
+      | 
+        ##
+        "Indic_Syllabic_Category"
+      | 
+        ##
+        "InPC"
+      | 
+        ##
+        "InSC"
+      | 
+        ##
+        "isc"
+      | 
+        ##
+        "ISO_Comment"
+      | 
+        ##
+        "Jamo_Short_Name"
+      | 
+        ##
+        "jg"
+      | 
+        ##
+        "Join_C"
+      | 
+        ##
+        "Join_Control"
+      | 
+        ##
+        "Joining_Group"
+      | 
+        ##
+        "Joining_Type"
+      | 
+        ##
+        "JSN"
+      | 
+        ##
+        "jt"
+      | 
+        ##
+        "kAccountingNumeric"
+      | 
+        ##
+        "kCompatibilityVariant"
+      | 
+        ##
+        "kIICore"
+      | 
+        ##
+        "kIRG_GSource"
+      | 
+        ##
+        "kIRG_HSource"
+      | 
+        ##
+        "kIRG_JSource"
+      | 
+        ##
+        "kIRG_KPSource"
+      | 
+        ##
+        "kIRG_KSource"
+      | 
+        ##
+        "kIRG_MSource"
+      | 
+        ##
+        "kIRG_TSource"
+      | 
+        ##
+        "kIRG_USource"
+      | 
+        ##
+        "kIRG_VSource"
+      | 
+        ##
+        "kOtherNumeric"
+      | 
+        ##
+        "kPrimaryNumeric"
+      | 
+        ##
+        "kRSUnicode"
+      | 
+        ##
+        "lb"
+      | 
+        ##
+        "lc"
+      | 
+        ##
+        "Line_Break"
+      | 
+        ##
+        "LOE"
+      | 
+        ##
+        "Logical_Order_Exception"
+      | 
+        ##
+        "Lower"
+      | 
+        ##
+        "Lowercase"
+      | 
+        ##
+        "Lowercase_Mapping"
+      | 
+        ##
+        "Math"
+      | 
+        ##
+        "na"
+      | 
+        ##
+        "na1"
+      | 
+        ##
+        "Name"
+      | 
+        ##
+        "Name_Alias"
+      | 
+        ##
+        "NChar"
+      | 
+        ##
+        "NFC_QC"
+      | 
+        ##
+        "NFC_Quick_Check"
+      | 
+        ##
+        "NFD_QC"
+      | 
+        ##
+        "NFD_Quick_Check"
+      | 
+        ##
+        "NFKC_Casefold"
+      | 
+        ##
+        "NFKC_CF"
+      | 
+        ##
+        "NFKC_QC"
+      | 
+        ##
+        "NFKC_Quick_Check"
+      | 
+        ##
+        "NFKD_QC"
+      | 
+        ##
+        "NFKD_Quick_Check"
+      | 
+        ##
+        "Noncharacter_Code_Point"
+      | 
+        ##
+        "nt"
+      | 
+        ##
+        "Numeric_Type"
+      | 
+        ##
+        "Numeric_Value"
+      | 
+        ##
+        "nv"
+      | 
+        ##
+        "OAlpha"
+      | 
+        ##
+        "ODI"
+      | 
+        ##
+        "OGr_Ext"
+      | 
+        ##
+        "OIDC"
+      | 
+        ##
+        "OIDS"
+      | 
+        ##
+        "OLower"
+      | 
+        ##
+        "OMath"
+      | 
+        ##
+        "Other_Alphabetic"
+      | 
+        ##
+        "Other_Default_Ignorable_Code_Point"
+      | 
+        ##
+        "Other_Grapheme_Extend"
+      | 
+        ##
+        "Other_ID_Continue"
+      | 
+        ##
+        "Other_ID_Start"
+      | 
+        ##
+        "Other_Lowercase"
+      | 
+        ##
+        "Other_Math"
+      | 
+        ##
+        "Other_Uppercase"
+      | 
+        ##
+        "OUpper"
+      | 
+        ##
+        "Pat_Syn"
+      | 
+        ##
+        "Pat_WS"
+      | 
+        ##
+        "Pattern_Syntax"
+      | 
+        ##
+        "Pattern_White_Space"
+      | 
+        ##
+        "PCM"
+      | 
+        ##
+        "Prepended_Concatenation_Mark"
+      | 
+        ##
+        "QMark"
+      | 
+        ##
+        "Quotation_Mark"
+      | 
+        ##
+        "Radical"
+      | 
+        ##
+        "Regional_Indicator"
+      | 
+        ##
+        "RI"
+      | 
+        ##
+        "SB"
+      | 
+        ##
+        "sc"
+      | 
+        ##
+        "scf"
+      | 
+        ##
+        "Script"
+      | 
+        ##
+        "Script_Extensions"
+      | 
+        ##
+        "scx"
+      | 
+        ##
+        "SD"
+      | 
+        ##
+        "Sentence_Break"
+      | 
+        ##
+        "Sentence_Terminal"
+      | 
+        ##
+        "Simple_Case_Folding"
+      | 
+        ##
+        "Simple_Lowercase_Mapping"
+      | 
+        ##
+        "Simple_Titlecase_Mapping"
+      | 
+        ##
+        "Simple_Uppercase_Mapping"
+      | 
+        ##
+        "slc"
+      | 
+        ##
+        "Soft_Dotted"
+      | 
+        ##
+        "stc"
+      | 
+        ##
+        "STerm"
+      | 
+        ##
+        "suc"
+      | 
+        ##
+        "tc"
+      | 
+        ##
+        "Term"
+      | 
+        ##
+        "Terminal_Punctuation"
+      | 
+        ##
+        "Titlecase_Mapping"
+      | 
+        ##
+        "uc"
+      | 
+        ##
+        "UIdeo"
+      | 
+        ##
+        "Unicode_1_Name"
+      | 
+        ##
+        "Unified_Ideograph"
+      | 
+        ##
+        "Upper"
+      | 
+        ##
+        "Uppercase"
+      | 
+        ##
+        "Uppercase_Mapping"
+      | 
+        ##
+        "Variation_Selector"
+      | 
+        ##
+        "Vertical_Orientation"
+      | 
+        ##
+        "vo"
+      | 
+        ##
+        "VS"
+      | 
+        ##
+        "WB"
+      | 
+        ##
+        "White_Space"
+      | 
+        ##
+        "Word_Break"
+      | 
+        ##
+        "WSpace"
+      | 
+        ##
+        "XID_Continue"
+      | 
+        ##
+        "XID_Start"
+      | 
+        ##
+        "XIDC"
+      | 
+        ##
+        "XIDS"
+      | 
+        ##
+        "XO_NFC"
+      | 
+        ##
+        "XO_NFD"
+      | 
+        ##
+        "XO_NFKC"
+      | 
+        ##
+        "XO_NFKD"
+    },
+    
+    ## specifies the value of a named Unicode property.
+    attribute value { xsd:string },
+    empty
+  }
+value =
+  
+  ## contains a single value for some property, attribute, or other analysis. [5.2.1. Character Properties]
+  element value { macro.xtext, att.global.attributes, empty }
 unicodeName =
   
-  ## (unicode property name) contains the name of a registered Unicode normative or informative property. [5.2.1. Character Properties]
+  ## (Unicode property name) contains the name of a registered Unicode normative or informative property. [5.2.1. Character Properties]
   element unicodeName {
     text,
     att.global.attributes,
@@ -5655,10 +7030,27 @@ unicodeName =
     }?,
     empty
   }
-value =
+localName =
   
-  ## contains a single value for some property, attribute, or other analysis. [5.2.1. Character Properties]
-  element value { macro.xtext, att.global.attributes, empty }
+  ## (locally-defined property name) contains a locally defined name for some property. [5.2.1. Character Properties]
+  element localName { text, att.global.attributes, empty }
+glyphName =
+  
+  ## (character glyph name) contains the name of a glyph, expressed following Unicode conventions for character names. [5.2. Markup Constructs for Representation of Characters and Glyphs]
+  element glyphName { text, att.global.attributes, empty }
+charProp =
+  
+  ## (character property) provides a name and value for some property of the parent character or glyph. [5.2. Markup Constructs for Representation of Characters and Glyphs]
+  element charProp {
+    ((unicodeName | localName), value),
+    att.global.attributes,
+    att.typed.attributes,
+    empty
+  }
+charName =
+  
+  ## (character name) contains the name of a character, expressed following Unicode conventions. [5.2. Markup Constructs for Representation of Characters and Glyphs]
+  element charName { text, att.global.attributes, empty }
 att.patternReplacement.attributes =
   att.patternReplacement.attribute.matchPattern,
   att.patternReplacement.attribute.replacementPattern
@@ -5817,7 +7209,7 @@ idno =
       | 
         ## OCLC control number (record number) for the union catalog record in WorldCat, a union catalog for member libraries in the Online Computer Library Center global cooperative.
         "OCLC"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -5870,7 +7262,7 @@ notesStmt =
   }
 sourceDesc =
   
-  ## (source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]
+  ## (source description) describes the source(s) from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]
   element sourceDesc {
     (model.pLike+
      | (model.biblLike | model.sourceDescPart | model.listLike)+),
@@ -6193,7 +7585,7 @@ rendition =
     ## where CSS is used, provides a way of defining pseudo-elements, that is, styling rules applicable to specific sub-portions of an element.
     ## Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after
     attribute scope {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     [
       a:documentation [
@@ -6305,6 +7697,7 @@ catDesc =
   element catDesc {
     (text | model.limitedPhrase | model.catDescPart)*,
     att.global.attributes,
+    att.canonical.attributes,
     empty
   }
 geoDecl =
@@ -6336,7 +7729,7 @@ geoDecl =
       | 
         ## (European Datum coordinate system) the value supplied is to be interpreted as latitude followed by longitude according to the European Datum coordinate system.
         "ED50"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -6585,7 +7978,7 @@ correspAction =
       | 
         ## information concerning the forwarding of a message.
         "forwarded"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -6673,7 +8066,7 @@ fsDecl =
     
     ## gives a name for the type of feature structure being declared.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     [
       a:documentation [
@@ -6707,7 +8100,7 @@ fsdLink =
       ]
     ]
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     [
       a:documentation [
@@ -6843,7 +8236,7 @@ fs =
     
     ## specifies the type of the feature structure.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## (features) references the feature-value specifications making up this feature structure.
@@ -6891,7 +8284,7 @@ symbol =
     
     ## supplies a symbolic value for the feature, one of a finite list that may be specified in a feature declaration.
     attribute value {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     empty
   }
@@ -6941,7 +8334,7 @@ vLabel =
     
     ## supplies a name identifying the sharing point.
     attribute name {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     empty
   }
@@ -7225,7 +8618,7 @@ when =
       | 
         ## (milliseconds) 
         "ms"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies a time interval either as a number or as one of the keywords defined by the datatype data.interval
@@ -7284,7 +8677,7 @@ timeline =
       | 
         ## (milliseconds) 
         "ms"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies a time interval either as a positive integral value or using one of a set of predefined codes.
@@ -7445,6 +8838,42 @@ altGrp =
     }?,
     empty
   }
+standOff =
+  
+  ## Functions as a container element for linked data, contextual information, and stand-off annotations embedded in a TEI document. [16.10. The standOff Container]
+  element standOff {
+    (model.standOffPart+)
+    >> sch:pattern [
+         id =
+           "tei_all-standOff-nested_standOff_should_be_typed-constraint-assert-12"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:standOff"
+           "\x{a}" ~
+           "               "
+           sch:assert [
+             test = "@type or not(ancestor::tei:standOff)"
+             "This\x{a}" ~
+             "      "
+             sch:name [ ]
+             " element must have a @type attribute, since it is\x{a}" ~
+             "      nested inside a "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attributes,
+    att.typed.attributes,
+    att.declaring.attributes,
+    empty
+  }
 att.msExcerpt.attributes = att.msExcerpt.attribute.defective
 att.msExcerpt.attribute.defective =
   
@@ -7467,7 +8896,7 @@ att.msClass.attribute.class =
   }?
 msDesc =
   
-  ## (manuscript description) contains a description of a single identifiable manuscript or other text-bearing object. [10.1. Overview]
+  ## (manuscript description) contains a description of a single identifiable manuscript or other text-bearing object such as early printed books. [10.1. Overview]
   element msDesc {
     (msIdentifier,
      model.headLike*,
@@ -7491,7 +8920,7 @@ catchwords =
     macro.phraseSeq
     >> sch:pattern [
          id =
-           "tei_all-catchwords-catchword_in_msDesc-constraint-assert-12"
+           "tei_all-catchwords-catchword_in_msDesc-constraint-assert-13"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7535,18 +8964,6 @@ dimensions =
              "      "
            ]
            "\x{a}" ~
-           "            "
-         ]
-         "\x{a}" ~
-         "         "
-       ]
-    >> sch:pattern [
-         id = "tei_all-dimensions-duplicateDim-constraint-report-21"
-         "\x{a}" ~
-         "            "
-         sch:rule [
-           context = "tei:dimensions"
-           "\x{a}" ~
            "               "
            sch:report [
              test = "count(tei:height)> 1"
@@ -7556,18 +8973,6 @@ dimensions =
              " may appear once only\x{a}" ~
              "      "
            ]
-           "\x{a}" ~
-           "            "
-         ]
-         "\x{a}" ~
-         "         "
-       ]
-    >> sch:pattern [
-         id = "tei_all-dimensions-duplicateDim-constraint-report-22"
-         "\x{a}" ~
-         "            "
-         sch:rule [
-           context = "tei:dimensions"
            "\x{a}" ~
            "               "
            sch:report [
@@ -7586,11 +8991,11 @@ dimensions =
        ],
     att.global.attributes,
     att.dimensions.attributes,
+    att.typed.attribute.subtype,
     
     ## indicates which aspect of the object is being measured.
-    ## Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniatures; 6] binding; 7] box
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -7650,12 +9055,12 @@ locus =
     
     ## specifies the starting point of the location in a normalized form, typically a page number.
     attribute from {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the end-point of the location in a normalized form, typically as a page number.
     attribute to {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -7723,7 +9128,7 @@ secFol =
   element secFol {
     macro.phraseSeq
     >> sch:pattern [
-         id = "tei_all-secFol-secFol_in_msDesc-constraint-assert-13"
+         id = "tei_all-secFol-secFol_in_msDesc-constraint-assert-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7752,7 +9157,7 @@ signatures =
     macro.specialPara
     >> sch:pattern [
          id =
-           "tei_all-signatures-signatures_in_msDesc-constraint-assert-14"
+           "tei_all-signatures-signatures_in_msDesc-constraint-assert-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7830,19 +9235,25 @@ institution =
   
   ## contains the name of an organization such as a university or library, with which a manuscript or other object is identified, generally its holding institution. [10.4. The Manuscript Identifier]
   element institution {
-    macro.xtext, att.global.attributes, att.naming.attributes, empty
+    macro.phraseSeq.limited,
+    att.global.attributes,
+    att.naming.attributes,
+    empty
   }
 repository =
   
   ## contains the name of a repository within which manuscripts or other objects are stored, possibly forming part of an institution. [10.4. The Manuscript Identifier]
   element repository {
-    macro.xtext, att.global.attributes, att.naming.attributes, empty
+    macro.phraseSeq.limited,
+    att.global.attributes,
+    att.naming.attributes,
+    empty
   }
 collection =
   
   ## contains the name of a collection of manuscripts or other objects, not necessarily located within a single repository. [10.4. The Manuscript Identifier]
   element collection {
-    macro.xtext,
+    macro.phraseSeq.limited,
     att.global.attributes,
     att.naming.attributes,
     att.typed.attributes,
@@ -8015,7 +9426,7 @@ objectDesc =
     
     ## a short project-specific name identifying the physical form of the carrier, for example as a codex, roll, fragment, partial leaf, cutting etc.
     attribute form {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8039,7 +9450,7 @@ supportDesc =
       | 
         ##
         "mixed"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8359,7 +9770,7 @@ att.datable.custom.attribute.when-custom =
   ## supplies the value of a date or time in some custom standard form.
   attribute when-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.notBefore-custom =
@@ -8367,7 +9778,7 @@ att.datable.custom.attribute.notBefore-custom =
   ## specifies the earliest possible date for the event in some custom standard form.
   attribute notBefore-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.notAfter-custom =
@@ -8375,7 +9786,7 @@ att.datable.custom.attribute.notAfter-custom =
   ## specifies the latest possible date for the event in some custom standard form.
   attribute notAfter-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.from-custom =
@@ -8383,7 +9794,7 @@ att.datable.custom.attribute.from-custom =
   ## indicates the starting point of the period in some custom standard form.
   attribute from-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.to-custom =
@@ -8391,7 +9802,7 @@ att.datable.custom.attribute.to-custom =
   ## indicates the ending point of the period in some custom standard form.
   attribute to-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.datingPoint =
@@ -8694,7 +10105,7 @@ affiliation =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8712,7 +10123,7 @@ age =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] western; 2] sui; 3] subjective; 4] objective; 5] inWorld (in world); 6] chronological; 7] biological; 8] psychological; 9] functional
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## supplies a numeric code representing the age or age group
@@ -8734,7 +10145,7 @@ birth =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] caesarean (caesarean section); 2] vaginal (vaginal delivery); 3] exNihilo (ex nihilo); 4] incorporated; 5] founded; 6] established
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8769,7 +10180,7 @@ death =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] brain; 6] natural; 7] unnatural; 8] fragmentation; 9] dissolution
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8787,7 +10198,7 @@ education =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 5] residency; 6] apprenticeship
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8830,7 +10241,7 @@ faith =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] practicing; 2] clandestine; 3] patrilineal; 4] matrilineal; 5] convert
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8869,7 +10280,7 @@ langKnowledge =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## supplies one or more valid language tags for the languages specified
@@ -8902,7 +10313,7 @@ langKnown =
     
     ## a code indicating the person's level of knowledge for this language
     attribute level {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -8994,7 +10405,7 @@ nationality =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] birth; 2] naturalised; 3] self-assigned
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -9012,7 +10423,7 @@ occupation =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     [
       a:documentation [
@@ -9053,7 +10464,7 @@ org =
     ## specifies a primary role or classification for the organization.
     attribute role {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -9082,20 +10493,20 @@ person =
     ## specifies a primary role or classification for the person.
     attribute role {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     
     ## specifies the sex of the person.
     attribute sex {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     
     ## specifies an age group for the person.
     attribute age {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -9111,20 +10522,20 @@ persona =
     ## specifies a primary role or classification for the persona.
     attribute role {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     
     ## specifies the sex of the persona.
     attribute sex {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     
     ## specifies an age group for the persona.
     attribute age {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -9138,25 +10549,25 @@ personGrp =
     
     ## specifies the role of this group of participants in the interaction.
     attribute role {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the sex of the participant group.
     attribute sex {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     
     ## specifies the age group of the participants.
     attribute age {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## describes informally the size or approximate size of the group for example by means of a number and an indication of accuracy e.g. approx 200.
     attribute size {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -9199,7 +10610,7 @@ relation =
   element relation {
     (desc?)
     >> sch:pattern [
-         id = "tei_all-relation-reforkeyorname-constraint-assert-15"
+         id = "tei_all-relation-reforkeyorname-constraint-assert-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -9261,7 +10672,7 @@ relation =
     
     ## supplies a name for the kind of relationship of which this is an instance.
     attribute name {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     (
      ## identifies the active participants in a non-mutual relationship, or all the participants in a mutual one.
@@ -9294,7 +10705,7 @@ residence =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] primary; 2] secondary; 3] temporary; 4] permanent
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -9311,13 +10722,13 @@ sex =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] explicit; 2] implicit
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## supplies a coded value for sex
     attribute value {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -9336,7 +10747,7 @@ socecStatus =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] independent
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     [
       a:documentation [
@@ -9523,23 +10934,11 @@ graph =
      (((node, model.global*)+, (arc, model.global*)*)
       | ((arc, model.global*)+, (node, model.global*)+))),
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## describes the type of graph.
-    ## Suggested values include: 1] undirected; 2] directed; 3] transitionNetwork; 4] transducer
     attribute type {
-      
-      ## undirected graph
-      "undirected"
-      | 
-        ## directed graph
-        "directed"
-      | 
-        ## a directed graph with distinguished initial and final nodes
-        "transitionNetwork"
-      | 
-        ## a transition network with up to two labels on each arc
-        "transducer"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## states the order of the graph, i.e., the number of its nodes.
@@ -9555,21 +10954,15 @@ node =
   element node {
     (label, label?)?,
     att.global.attributes,
+    att.typed.attribute.subtype,
+    
+    ## provides a type for a node.
+    attribute type {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+    }?,
     
     ## provides the value of a node, which is a feature structure or other analytic element.
     attribute value { xsd:anyURI }?,
-    
-    ## provides a type for a node.
-    ## Suggested values include: 1] initial; 2] final
-    attribute type {
-      
-      ## initial node in a transition network
-      "initial"
-      | 
-        ## final node in a transition network
-        "final"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
-    }?,
     
     ## (adjacent to) gives the identifiers of the nodes which are adjacent to the current node.
     attribute adjTo {
@@ -9789,10 +11182,11 @@ listForest =
   element listForest {
     (desc*, forest+),
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## identifies the type of the forest group.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -10006,7 +11400,7 @@ shift =
   element shift {
     empty
     >> sch:pattern [
-         id = "tei_all-shift-shiftNew-constraint-assert-16"
+         id = "tei_all-shift-shiftNew-constraint-assert-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -10051,13 +11445,13 @@ shift =
       | 
         ## voice quality.
         "voice"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## specifies the new state of the paralinguistic feature specified.
     [ a:defaultValue = "normal" ]
     attribute new {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -10099,14 +11493,14 @@ att.textCritical.attribute.type =
   ## classifies the reading according to some useful typology.
   ## Sample values include: 1] substantive; 2] orthographic
   attribute type {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.textCritical.attribute.cause =
   
   ## classifies the cause for the variant reading, according to any appropriate typology of possible origins.
   ## Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion; 4] haplography; 5] dittography; 6] falseEmendation
   attribute cause {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.textCritical.attribute.varSeq =
   
@@ -10125,10 +11519,11 @@ app =
     (lem?,
      (model.rdgLike | model.noteLike | witDetail | wit | rdgGrp)*),
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## classifies the variation contained in this element according to some convenient typology.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## identifies the beginning of the lemma in the base text.
@@ -10140,7 +11535,7 @@ app =
     ## (location) indicates the location of the variation, when the location-referenced method of apparatus markup is used.
     attribute loc {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -10196,7 +11591,7 @@ rdgGrp =
   element rdgGrp {
     (lem?, (model.rdgLike | model.noteLike | witDetail | wit | rdgGrp)*)
     >> sch:pattern [
-         id = "tei_all-rdgGrp-only1lem-constraint-assert-17"
+         id = "tei_all-rdgGrp-only1lem-constraint-assert-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -10225,16 +11620,17 @@ witDetail =
     att.global.attributes,
     att.placement.attributes,
     att.pointing.attributes,
+    att.typed.attribute.subtype,
+    
+    ## describes the type of information given about the witness.
+    attribute type {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+    }?,
     
     ## (witnesses) indicates the sigil or sigla identifying the witness or witnesses to which the detail refers.
     attribute wit {
       list { xsd:anyURI+ }
     },
-    
-    ## describes the type of information given about the witness.
-    attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
-    }?,
     empty
   }
 wit =
@@ -10344,15 +11740,18 @@ variantEncoding =
 TEI =
   [
     a:documentation [
-      "(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple "
+      "(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple "
       ns1:code [ "<TEI>" ]
-      " elements may be combined to form a "
+      " elements may be combined within a "
+      ns1:code [ "<TEI>" ]
+      " (or "
       ns1:code [ "<teiCorpus>" ]
-      " element. [4. Default Text Structure 15.1. Varieties of Composite Text]"
+      ") element. [4. Default Text Structure 15.1. Varieties of Composite Text]"
     ]
   ]
   element TEI {
-    (teiHeader, model.resourceLike+)
+    (teiHeader,
+     ((model.resource+, TEI*) | TEI+))
     >> sch:ns [ prefix = "tei" uri = "http://www.tei-c.org/ns/1.0" ]
     >> sch:ns [ prefix = "xs" uri = "http://www.w3.org/2001/XMLSchema" ]
     >> sch:ns [
@@ -10706,10 +12105,11 @@ titlePage =
      model.titlepagePart,
      (model.titlepagePart | model.global)*),
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## classifies the title page according to any convenient typology.
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -10728,6 +12128,7 @@ titlePart =
   element titlePart {
     macro.paraContent,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## specifies the role of this subdivision of the title.
     ## Suggested values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)
@@ -10748,7 +12149,7 @@ titlePart =
       | 
         ## (descriptive) descriptive paraphrase of the work
         "desc"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -10902,7 +12303,7 @@ att.coordinated.attribute.lry =
   }?
 att.coordinated.attribute.points =
   
-  ## identifies a two dimensional area within the bounding box specified by the other attributes by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.
+  ## identifies a two dimensional area by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.
   attribute points {
     list {
       xsd:token {
@@ -10951,7 +12352,7 @@ surface =
     ## describes the method by which this surface is or was connected to the main surface
     ## Sample values include: 1] glued; 2] pinned; 3] sewn
     attribute attachment {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## indicates whether the surface is attached and folded in such a way as to provide two writing surfaces
@@ -10978,6 +12379,7 @@ zone =
   ]
   element zone {
     (text
+     | model.gLike
      | model.graphicLike
      | model.global
      | surface
@@ -11105,7 +12507,7 @@ addSpan =
   element addSpan {
     empty
     >> sch:pattern [
-         id = "tei_all-addSpan-spanTo-constraint-assert-19"
+         id = "tei_all-addSpan-spanTo-constraint-assert-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11125,7 +12527,7 @@ addSpan =
          "         "
        ]
     >> sch:pattern [
-         id = "tei_all-addSpan-spanTo_fr-constraint-assert-20"
+         id = "tei_all-addSpan-spanTo_fr-constraint-assert-21"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11166,7 +12568,7 @@ damageSpan =
   element damageSpan {
     empty
     >> sch:pattern [
-         id = "tei_all-damageSpan-spanTo-constraint-assert-21"
+         id = "tei_all-damageSpan-spanTo-constraint-assert-22"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11187,7 +12589,7 @@ damageSpan =
          "         "
        ]
     >> sch:pattern [
-         id = "tei_all-damageSpan-spanTo_fr-constraint-assert-22"
+         id = "tei_all-damageSpan-spanTo_fr-constraint-assert-23"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11216,7 +12618,7 @@ delSpan =
   element delSpan {
     empty
     >> sch:pattern [
-         id = "tei_all-delSpan-spanTo-constraint-assert-23"
+         id = "tei_all-delSpan-spanTo-constraint-assert-24"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11236,7 +12638,7 @@ delSpan =
          "         "
        ]
     >> sch:pattern [
-         id = "tei_all-delSpan-spanTo_fr-constraint-assert-24"
+         id = "tei_all-delSpan-spanTo_fr-constraint-assert-25"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11276,13 +12678,13 @@ fw =
   element fw {
     macro.phraseSeq,
     att.global.attributes,
+    att.typed.attribute.subtype,
     att.placement.attributes,
     att.written.attributes,
     
     ## classifies the material encoded according to some useful typology.
-    ## Sample values include: 1] header; 2] footer; 3] pageNum (page number); 4] lineNum (line number); 5] sig (signature); 6] catch (catchword)
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -11384,7 +12786,7 @@ subst =
   element subst {
     ((add | del | model.milestoneLike)+)
     >> sch:pattern [
-         id = "tei_all-subst-substContents1-constraint-assert-25"
+         id = "tei_all-subst-substContents1-constraint-assert-26"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11432,7 +12834,7 @@ supplied =
     ## one or more words indicating why the text has had to be supplied, e.g. overbinding, faded-ink, lost-folio, omitted-in-original.
     attribute reason {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -11449,7 +12851,7 @@ surplus =
     ## one or more words indicating why this text is believed to be superfluous, e.g. repeated, interpolated etc.
     attribute reason {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -11466,7 +12868,7 @@ secl =
     ## one or more words indicating why this text has been secluded, e.g. interpolated etc.
     attribute reason {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -11499,7 +12901,7 @@ metamark =
     
     ## describes the function (for example status, insertion, deletion, transposition) of the metamark.
     attribute function {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## identifies one or more elements to which the metamark applies.
@@ -11589,7 +12991,7 @@ att.enjamb.attribute.enjamb =
   ## (enjambement) indicates that the end of a verse line is marked by enjambement.
   ## Sample values include: 1] no; 2] yes; 3] weak; 4] strong
   attribute enjamb {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 metDecl =
   [
@@ -11714,7 +13116,7 @@ metSym =
     ## specifies the character or character sequence being documented.
     attribute value {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     },
     [
@@ -11744,7 +13146,7 @@ rhyme =
     
     ## provides a label (usually a single letter) to identify which part of a rhyme scheme this rhyming string instantiates.
     attribute label {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -11791,11 +13193,6 @@ sch:pattern [
     "      "
   ]
   "\x{a}" ~
-  "   "
-]
-sch:pattern [
-  id = "tei_all-att.repeatable-MINandMAXoccurs-constraint-rule-15"
-  "\x{a}" ~
   "      "
   sch:rule [
     context = "*[ @minOccurs  and  not( @maxOccurs ) ]"
@@ -11818,7 +13215,6 @@ model.contentPart =
   | sequence
   | alternate
   | dataRef
-  | valList
   | textNode
   | anyElement
   | \empty
@@ -11919,7 +13315,7 @@ sch:pattern [
       "              "
       sch:value-of [
         select =
-          "                  concat( $me_phrase,                          'construct is outdated (as of ',                          @validUntil,                          '); ODD processors may ignore it, and its use is no longer supported'                        )"
+          "                  concat( $me_phrase,                          ' construct is outdated (as of ',                          @validUntil,                          '); ODD processors may ignore it, and its use is no longer supported'                        )"
       ]
       "\x{a}" ~
       "         "
@@ -11984,7 +13380,7 @@ att =
     ## Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] XX (unknown); 4] imaginary; 5] XHTML; 6] XML; 7] XI
     [ a:defaultValue = "TEI" ]
     attribute scheme {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -11997,7 +13393,7 @@ code =
     
     ## (formal language) a name identifying the formal language in which the code is expressed
     attribute lang {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -12043,7 +13439,7 @@ gi =
     ## Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] HTML
     [ a:defaultValue = "TEI" ]
     attribute scheme {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -12064,34 +13460,18 @@ tag =
   element tag {
     text,
     att.global.attributes,
+    att.typed.attribute.subtype,
     
     ## indicates the type of XML tag intended
     attribute type {
-      
-      ## a start-tag, with delimiters < and > is intended
-      "start"
-      | 
-        ## an end-tag, with delimiters </ and > is intended
-        "end"
-      | 
-        ## a empty tag, with delimiters < and /> is intended
-        "empty"
-      | 
-        ## a pi (processing instruction), with delimiters <? and ?> is intended
-        "pi"
-      | 
-        ## a comment, with delimiters <!-- and --> is intended
-        "comment"
-      | 
-        ## a marked-section, with delimiters <[CDATA[ and ]]> is intended
-        "ms"
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## supplies the name of the schema in which this tag is defined.
     ## Sample values include: 1] TEI (text encoding initiative); 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] HTML
     [ a:defaultValue = "TEI" ]
     attribute scheme {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -12376,6 +13756,7 @@ classSpec =
      listRef*),
     att.global.attributes,
     att.identified.attributes,
+    att.typed.attribute.subtype,
     
     ## indicates whether this is a model class or an attribute class
     attribute type {
@@ -12503,7 +13884,11 @@ remarks =
   element remarks {
     model.pLike+,
     att.global.attributes,
+    att.combinable.attributes,
     att.translatable.attributes,
+    
+    ## specifies the remark concerned.
+    attribute ident { xsd:string }?,
     empty
   }
 listRef =
@@ -12769,7 +14154,7 @@ model =
       | 
         ## create document title
         "title"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     
     ## the condition under which this model applies, given as an XPath predicate expression.
@@ -12781,7 +14166,7 @@ model =
     ## the intended output.
     ## Sample values include: 1] web; 2] print; 3] plain
     attribute output {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## the name of a CSS class which should be associated with this element
@@ -12842,7 +14227,7 @@ modelSequence =
       | 
         ## the output is intended for presentation in a plain text format
         "plaintext"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -12877,7 +14262,7 @@ modelGrp =
       | 
         ## the output is intended for presentation in a plain text format
         "plaintext"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -12891,7 +14276,7 @@ outputRendition =
     ## provides a way of defining pseudo-elements, that is, styling rules applicable to specific sub-portions of an element.
     ## Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after
     attribute scope {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -12961,7 +14346,7 @@ param =
       | 
         ## when used with behaviour graphic, a parameter of this name supplies a value for the width of the graphic e.g. "400px", "70%".
         "width"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     
     ## supplies an XPath expression which when evaluated provides the value for the parameter
@@ -12972,30 +14357,7 @@ content =
   
   ## (content model) contains a declaration of the intended content model for the element (or other construct) being specified. [22.5. Element Specifications]
   element content {
-    (model.contentPart* | anyElement-content+)
-    >> sch:pattern [
-         id =
-           "tei_all-content-empty-content-deprecated-constraint-assert-32"
-         "\x{a}" ~
-         "            "
-         sch:rule [
-           context = "tei:content"
-           "\x{a}" ~
-           "               "
-           sch:assert [
-             test = "*"
-             "The use of the <content> element\x{a}" ~
-             "      without any child elements is deprecated, and will be considered\x{a}" ~
-             "      invalid after 2019-08-25. Use a child <empty> element to\x{a}" ~
-             "      indicate that the element being specified is not allowed to have\x{a}" ~
-             "      content."
-           ]
-           "\x{a}" ~
-           "            "
-         ]
-         "\x{a}" ~
-         "         "
-       ],
+    (valList | model.contentPart+ | anyElement-content+),
     att.global.attributes,
     
     ## controls whether or not pattern names generated in the corresponding RELAX NG schema source are automatically prefixed to avoid potential nameclashes.
@@ -13061,7 +14423,7 @@ alternate =
   
   ## indicates that the constructs referenced by its children form an alternation [22.5.1. Defining Content Models]
   element alternate {
-    (model.contentPart+)
+    ((valList | model.contentPart)+)
     >> sch:pattern [
          id = "tei_all-alternate-alternatechilden-constraint-assert-34"
          "\x{a}" ~
@@ -13187,7 +14549,7 @@ constraintSpec =
       
       ## Indicates that this constraint specification warns that some other construct in the schema is deprecated.
       "deprecationWarning"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## supplies the name of the language in which the constraints are defined
@@ -13196,7 +14558,7 @@ constraintSpec =
       
       ## (ISO Schematron) 
       "schematron"
-      | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     },
     empty
   }
@@ -13387,11 +14749,11 @@ attRef =
     
     ## the name of the attribute class
     attribute class {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## the name of the attribute
-    attribute name { xsd:string }?,
+    attribute name { xsd:Name }?,
     empty
   }
 datatype =
@@ -13401,11 +14763,11 @@ datatype =
     (dataRef | anyElement-datatype),
     att.global.attributes,
     
-    ## (minimum number of occurences) indicates the minimum number of times this datatype may occur in the specification of the attribute being defined
+    ## (minimum number of occurences) indicates the minimum number of times this datatype may occur in an instance of the attribute being defined
     [ a:defaultValue = "1" ]
     attribute minOccurs { xsd:nonNegativeInteger }?,
     
-    ## (maximum number of occurences) indicates the maximum number of times this datatype may occur in the specification of the attribute being defined
+    ## (maximum number of occurences) indicates the maximum number of times this datatype may occur in an instance of the attribute being defined
     [ a:defaultValue = "1" ]
     attribute maxOccurs {
       xsd:nonNegativeInteger
@@ -13541,7 +14903,7 @@ defaultVal =
   
   ## (default value) specifies the default declared value for an attribute. [22.5.3. Attribute List Specification]
   element defaultVal {
-    text, att.global.attributes, att.deprecated.attributes, empty
+    text, att.global.attributes, att.combinable.attributes, empty
   }
 valDesc =
   [
