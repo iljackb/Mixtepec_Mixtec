@@ -22,7 +22,7 @@
                         padding-left: 2em;
                         padding-top: 4em;
                         color: purple;
-                        background-color: #d8da3d;
+                        background-color: #FFFFF0;
                     }
                     h1 {
                         text-align: center;
