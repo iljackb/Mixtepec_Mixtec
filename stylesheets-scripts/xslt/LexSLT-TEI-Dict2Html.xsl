@@ -77,7 +77,7 @@
                     }
                 
                     form[type="lemma"] > orth {
-                    font-size: 24px;
+                    font-size: 28px;
                     font-weight: bold;
                     display: inline;
                     }
@@ -96,6 +96,14 @@
                     
                     cit[type="example"] > quote::before {
                     padding: 20px;
+                    }
+                    
+                    entry::after {
+                    padding: 30px;
+                    }
+                    
+                    etym::after {
+                    padding: 30px;
                     }
                     
                     <!-- 
