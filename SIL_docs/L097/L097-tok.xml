@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-text-docs.rnc" type="application/relax-ng-compact-syntax"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L097-tok">
+<?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="L097tok">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -156,51 +154,9 @@
                   <string>http://dbpedia.org/resource/Bull</string>
                </f>
             </fs>
-            <!-- LEXICAL; ISOcat, other -->
-            <!-- these url's are ISOcat's that should be declared at a higher level & within separate document within this and any other project that references them; this is just a temporary placeholder until these data are properly arranged and organized  -->
-            <fs xml:id="ISOcats">
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="sentence"
-                  xml:id="S"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-1386"/>
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="response"
-                  xml:id="RESP"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-1498"/>
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="lexicalItem"
-                  xml:id="LexItm"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3294"/>
-               <f name="question" xml:id="Q"/>
-               <!-- NO ISOcat! -->
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="interrogative"
-                  xml:id="INTROG"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-4989"/>
-               <!-- Definition: type of pronoun used to formulate a question, while its form differs from that of a relative pronoun -->
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="wh-question"
-                  xml:id="WH"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-2296"/>
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="copula"
-                  xml:id="COP"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3142"/>
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="noun"
-                  xml:id="N"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3347"/>
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="concreteNoun"
-                  xml:id="N-CNCRT"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-1505"/>
-               <f xmlns:dcr="http://www.isocat.org/ns/dcr"
-                  name="demonstrative"
-                  dcr:datcat="http://www.isocat.org/datcat/DC-3153"
-                  xml:id="DEM"/>
-            </fs>
+  
          </ab>
-         <!--  
+
             <classDecl>
                <taxonomy xml:id="tax.sil-mix">
                   <equiv uri=""></equiv>
@@ -227,7 +183,7 @@
                   </category>
                </taxonomy>
             </classDecl>
-            -->
+     
       </encodingDesc>
       <revisionDesc>
          <change>
@@ -240,7 +196,7 @@
          <div xml:id="L097-01">
             <p>
                <graphic url="L097-1-Q-pig.jpg"/>
-               <seg type="interrogative" xml:id="d1e214">
+               <seg type="S" xml:lang="mix" xml:id="d1e214">
                   <pc>¿</pc>
                   <w xml:id="d1e218">Nchii</w>
                   <w xml:id="d1e220">tsa'a</w>
@@ -264,7 +220,7 @@
          <div xml:id="L097-02">
             <p>
                <graphic url="L097-1-A-pig.png"/>
-               <seg type="declarative" xml:id="d1e261">
+               <seg type="S" xml:lang="mix" xml:id="d1e261">
                   <w xml:id="d1e262">kini</w>
                </seg>
                <spanGrp type="annotations">
@@ -279,7 +235,7 @@
          <div xml:id="L097-03">
             <p>
                <graphic url="L097-1-A-pig.png"/>
-               <seg type="interrogative" xml:id="d1e269">
+               <seg type="S" xml:lang="mix" xml:id="d1e269">
                   <pc>¿</pc>
                   <w xml:id="d1e272">Nchii</w>
                   <w xml:id="d1e274">tsa'a</w>
@@ -300,7 +256,7 @@
                <graphic url="L097-2-Q.jpg"/>
             </p>
             <p>
-               <seg type="declarative" xml:id="d1e295">
+               <seg type="S" xml:lang="mix" xml:id="d1e295">
                   <w xml:id="d1e296">to'lo</w>
                </seg>
                <spanGrp type="annotations">
@@ -314,7 +270,7 @@
                <graphic url="L097-3-Q.jpg"/>
             </p>
             <p>
-               <seg type="interrogative" xml:id="d1e302">
+               <seg type="S" xml:lang="mix" xml:id="d1e302">
                   <pc>¿</pc>
                   <w xml:id="d1e305">Nchii</w>
                   <w xml:id="d1e307">tsa'a</w>
@@ -335,7 +291,7 @@
                <graphic url="L097-3-A-horse.jpg"/>
             </p>
             <p>
-               <seg type="declarative" xml:id="d1e328">
+               <seg type="S" xml:lang="mix" xml:id="d1e328">
                   <w xml:id="d1e329">kiti</w>
                </seg>
                <spanGrp type="annotations">
@@ -349,7 +305,7 @@
                <graphic url="L097-4-Q.jpg"/>
             </p>
             <p>
-               <seg type="interrogative" xml:id="d1e338">
+               <seg type="S" xml:lang="mix" xml:id="d1e338">
                   <pc>¿</pc>
                   <w xml:id="d1e341">Nchii</w>
                   <w xml:id="d1e343">tsa'a</w>
@@ -370,7 +326,7 @@
                <graphic url="L097-4-A-dog.jpg"/>
             </p>
             <p>
-               <seg type="declarative" xml:id="d1e364">
+               <seg type="S" xml:lang="mix" xml:id="d1e364">
                   <w xml:id="d1e365">tina</w>
                </seg>
                <spanGrp type="annotations">
@@ -384,7 +340,7 @@
                <graphic url="L097-5-Q.jpg"/>
             </p>
             <p>
-               <seg type="interrogative" xml:id="d1e374">
+               <seg type="S" xml:lang="mix" xml:id="d1e374">
                   <pc>¿</pc>
                   <w xml:id="d1e377">Nchii</w>
                   <w xml:id="d1e379">tsa'a</w>
@@ -405,7 +361,7 @@
                <graphic url="L097-5-A-goat.jpg"/>
             </p>
             <p>
-               <seg type="declarative" xml:id="d1e400">
+               <seg type="S" xml:lang="mix" xml:id="d1e400">
                   <w xml:id="d1e401">ntucha</w>
                </seg>
                <spanGrp type="annotations">
@@ -419,7 +375,7 @@
                <graphic url="L097-6-Q-bull.png"/>
             </p>
             <p>
-               <seg type="interrogative" xml:id="d1e410">
+               <seg type="S" xml:lang="mix" xml:id="d1e410">
                   <pc>¿</pc>
                   <w xml:id="d1e413">Nchii</w>
                   <w xml:id="d1e415">tsa'a</w>
@@ -440,7 +396,7 @@
                <graphic url="L097-6-A.jpg"/>
             </p>
             <p>
-               <seg type="declarative" xml:id="d1e437">
+               <seg type="S" xml:lang="mix" xml:id="d1e437">
                   <w xml:id="d1e438">stiki</w>
                </seg>
                <spanGrp type="annotations">
