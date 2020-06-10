@@ -36,7 +36,7 @@
                     <symbol value="compound" xml:id="CMPND"/><!-- MOVE! -->
                     <symbol value="interrogative" xml:id="Q"/>
                     <symbol value="hearsay" xml:id="HRSY"/>
-                    <symbol value="response" xml:id="RESP"/>
+                    <symbol value="response" xml:id="RESP"/>  
                  </vAlt>
               </f>
            </fs>
@@ -57,7 +57,6 @@
                     <symbol value="particle" xml:id="PTCL"/><!-- default or underspecified value -->
                     <symbol value="topicParticle" xml:id="TPC"/><!-- distinguish pragmatic topic by "TOP" -->
                     <symbol value="nominalizingParticle" xml:id="NMLZ"/>
-                    <!-- need to integrate "plural particle" -->
                     <symbol value="prefix" xml:id="PREF"/>
                     <symbol value="adverb" xml:id="ADV"/>
                     <symbol value="adjective" xml:id="ADJ"/>
@@ -73,31 +72,26 @@
            <fs>
               <f name="aspect">
                  <vAlt>
-                    <symbol value="incompletive" xml:id="INCOMPL"/><!-- sameAs PRES -->
-                    <symbol value="completive" xml:id="COMPL"/><!-- sameAs PAST -->
-                    <symbol value="potential" xml:id="POT"/><!-- sameAs FUT -->
+                    <symbol value="imperfective" sameAs="#INCOMPL" xml:id="IMPFV"/>
+                    <symbol value="incompletive" sameAs="#IMPFV" xml:id="INCOMPL"/>
+                    <symbol value="perfective" sameAs="#COMPL" xml:id="PFV"/>
+                    <symbol value="completive" sameAs="#PFV" xml:id="COMPL"/>
+                    <symbol value="potential" xml:id="POT"/>
+                    <symbol value="progressive" xml:id="PROG"/>
                  </vAlt>
               </f>
            </fs>
            <fs>
               <f name="mood">
                  <vAlt>
-                    <symbol value="realis" xml:id="REAL"/><!-- IS THIS MOOD OR ASPECT? -->
+                    <symbol value="irrealis" xml:id="IRREAL"/>
+                    <symbol value="realis" xml:id="REAL"/>
                     <symbol value="modal" xml:id="MOD"/>
                     <symbol value="deontic" xml:id="DEONTIC"/>
                  </vAlt>
               </f>
            </fs>
            
-           <fs>
-              <f name="tense">
-                 <vAlt>
-                    <symbol value="present" xml:id="PRES"/><!-- synonymous with INCOMPLETIVE -->
-                    <symbol value="past" xml:id="PAST"/><!-- synomymous with COMPLETIVE -->
-                    <symbol value="future" xml:id="FUT"/>
-                 </vAlt>
-              </f>
-           </fs>
            <fs>
               <f name="number">
                  <vAlt>
@@ -168,6 +162,7 @@
                     <symbol value="affirmative" xml:id="AFRM"/><!-- occurs as particle' -->
                     <symbol value="negative" xml:id="NEG"/><!-- occurs as: particle or tone -->
                     <symbol value="degree" xml:id="DEG"/>
+                    <symbol value="additive" xml:id="ADD"/>
                     <symbol value="reciprocal" xml:id="RECIP"/><!-- combines with PRON, ADV -->
                     <symbol value="possessive" xml:id="POSS"/>
                     <symbol value="mass" xml:id="MASS"/><!-- combines with NOUN -->
