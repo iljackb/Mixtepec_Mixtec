@@ -6,7 +6,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Inflection paradigm test be.happy</title>
+            <title>kwacha 'be happy'</title>
          </titleStmt>
          <publicationStmt>
             <p>Publication Information</p>
@@ -30,12 +30,10 @@
             </gramGrp>
 
             <!-- PRESENT/INCOMPLETIVE -->
-            <form type="paradigm" subtype="present">
+            <form type="paradigm" subtype="imperfective">
                <gramGrp>
-                  <tns norm="present">pres</tns>
-                  <gram type="aspect" norm="incompletive">incmpl</gram>
-                  <mood norm="indicative">indic</mood>
-                  <gram type="aspect" cert="medium">realis</gram>
+                  <gram type="aspect" norm="imperfective">impv</gram>
+                  <mood>realis</mood>
                </gramGrp>
                
                <!-- PRES: 1 SG -->
@@ -254,13 +252,12 @@
                </form>
             </form>
 
-            <form type="paradigm" subtype="past">
+            <form type="paradigm" subtype="perfective">
                
-               <!--PAST/COMPLETIVE  -->
+               <!--PERFECTIVE/COMPLETIVE  -->
                <gramGrp>
-                  <tns>past</tns>
-                  <gram type="aspect" norm="completive">cmpl</gram>
-                  <mood norm="indicative">indic</mood>
+                  <gram type="aspect" norm="perfective">pfv</gram>
+                  <mood>realis</mood>
                </gramGrp>
                
                <!--COMPL: 1 SG -->
@@ -472,12 +469,11 @@
                </form>
             </form>
 
-            <form type="paradigm" subtype="future">
+            <form type="paradigm" subtype="potential">
                <!-- FUTURE/POTENTIVE -->
                <gramGrp>
-                  <tns>future</tns>
-                  <gram type="aspect" norm="potential">pot</gram>
-                  <mood norm="indicative">indic</mood>
+                  <gram type="aspect" norm="potential">pot</gram> 
+                  <mood>irrealis</mood>
                </gramGrp>
                <!-- 1S -->
                <form type="inflected">
@@ -679,11 +675,13 @@
                   <gloss xml:lang="en"/>
                   <gloss xml:lang="es"/>
                </form>
-               <form type="paradigm" subtype="imperative">
-                  <!-- IMPERATIVE/HORATIVE -->
+               <form type="paradigm" subtype="modal">
+                  <!-- MODAL/HORATIVE -->
                   <gramGrp>
                      <mood norm="imperative">imper</mood>
+                     <mood>irrealis</mood>
                   </gramGrp>
+                  
                   <!-- 2S.INF -->
                   <form type="inflected">
                      <orth xml:lang="mix"/>
@@ -761,12 +759,11 @@
                </form>
             </form>
 
-            <form type="paradigm" subtype="imperfect">
-               <!-- IMPERF/HAB -->
+            <form type="paradigm" subtype="habitual">
+               <!-- HABITUAL -->
                <gramGrp>
-                  <tns>past</tns>
-                  <gram type="aspect">imperf</gram>
-                  <mood norm="indicative">indic</mood>
+                  <gram type="aspect" norm="habitual">hab</gram>
+                  <mood>realis</mood>
                </gramGrp>
                <!-- 1S -->
                <form type="inflected">
