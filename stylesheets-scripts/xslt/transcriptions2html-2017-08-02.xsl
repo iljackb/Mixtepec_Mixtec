@@ -40,7 +40,9 @@
                         </xsl:for-each>
                     </tr>
                 </table>
-                <xsl:variable name="annotations" select="following-sibling::spanGrp[@type='translation'][1]"/>
+                    
+                    <!-- (BUG!!!) SPANISH OUTPUT TABLE LINES UP, ENGLISH ONLY COLLECTS SUBSEQUENT FULL SENTENCE TRANSLATIONS!!! -->
+                <xsl:variable name="annotations" select="following-sibling::spanGrp[@type='annotations']"/>
                 <table border="1">
                     <tr><td colspan="2"><b>English</b></td></tr>
                     <xsl:for-each select="$annotations/span[@xml:lang='en']">
