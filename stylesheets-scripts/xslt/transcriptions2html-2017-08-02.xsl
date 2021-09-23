@@ -41,11 +41,10 @@
                     </tr>
                 </table>
                     
-                    <!-- (BUG!!!) SPANISH OUTPUT TABLE LINES UP, ENGLISH ONLY COLLECTS SUBSEQUENT FULL SENTENCE TRANSLATIONS!!! -->
                 <xsl:variable name="annotations" select="following-sibling::spanGrp[@type='annotations']"/>
                 <table border="1">
                     <tr><td colspan="2"><b>English</b></td></tr>
-                    <xsl:for-each select="$annotations/span[@xml:lang='en']">
+                    <xsl:for-each select="$annotations/span[@xml:lang='en']"><!-- (bug!!) need to limit to annotations (spanGrp) following specific sentence w/axes!! -->
                         <tr>
                             <td>
                                 <!-- can add condition of w[@cert] vs w[not(@cert)] here -->

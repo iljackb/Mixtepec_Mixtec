@@ -30,8 +30,8 @@
                 <xsl:apply-templates select="@* | node()"/>
             </xsl:copy>
             <spanGrp type="translation">
-                <span target="#{@xml:id}" xml:lang="en"/>
-                <span target="#{@xml:id}" xml:lang="es"/>
+                <span target="#{@xml:id}" xml:lang="en" ana="#S"/>
+                <span target="#{@xml:id}" xml:lang="es" ana="#S"/>
                 <xsl:for-each select="w">
                     <span target="#{@xml:id}" xml:lang="en"/>
                     <span target="#{@xml:id}" xml:lang="es"/>
