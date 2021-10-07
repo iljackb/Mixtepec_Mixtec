@@ -5,8 +5,8 @@
     <xsl:output encoding="UTF-8" method="html" indent="yes"/>
     
     <xsl:template match="/">
-
-<!-- extracts original text and glosses into html -->
+        
+        <!-- extracts original text and glosses into html -->
         
         <html>
             
@@ -15,30 +15,16 @@
                 <label><b><font size="6"><xsl:value-of select="."/></font></b></label>
             </xsl:for-each>
             
-            <!-- author -->
-            <!-- editor -->
+         <!-- print just sentences and translations (for review purposes) -->
             
-            <!--(for each) source description -->
-            
-            <xsl:for-each select="//div">
-                <!-- 
-                <xsl:for-each select="//head">
-                    <label><b><xsl:value-of select="."/></b></label>
-                </xsl:for-each> -->
-                <br/>
-                <br/>
-                <label><b><font size="5"><xsl:value-of select="head/text()"/></font></b></label>
-                <br/>
-                <br/>
-                <br/>
-                <xsl:for-each select="descendant::p/seg[@xml:id and @xml:lang='mix']">
+                <xsl:for-each select="//seg[@xml:id and @xml:lang='mix']">
                     <!-- numbering, need to find and number ALL sentences, not just each in every //div  -->
-                    <!--<font size="5"><xsl:number count="seg[@xml:id and @xml:lang='mix']"/><xsl:text>)</xsl:text></font>  -->
+                    <font size="5"><xsl:number count="seg[@xml:id and @xml:lang='mix']"/><xsl:text>)</xsl:text></font> 
                     <table border="0">
                         <tr>   
                             <xsl:for-each select="*">
                                 <td>
-                                   
+                                    
                                     <font size="5"><xsl:value-of select="."/></font>
                                 </td>
                             </xsl:for-each>
@@ -49,8 +35,8 @@
                             <font size="5"><xsl:value-of select="."/></font>
                         </p>
                     </xsl:for-each> -->
-                  <xsl:variable name="annotations" select="following-sibling::spanGrp[@type='annotations'][1]"/>
-                      
+                    <xsl:variable name="annotations" select="following-sibling::spanGrp[@type='annotations'][1]"/>
+                    
                     <table border="0">
                         <xsl:for-each select="$annotations/span[@ana='#S' and @xml:lang='en']">
                             <tr>   
@@ -65,17 +51,17 @@
                         <font size="4"><xsl:value-of select="."/></font>
                     </p>
                     </xsl:for-each>-->
-                    <br/>
-                  
+                        <br/>
+                        
                         <xsl:for-each select="$annotations/span[@ana='#S' and @xml:lang='es']">
                             <tr>   
-                                    <td>
-                                        <font size="4"><xsl:value-of select="."/></font>
-                                    </td>                       
+                                <td>
+                                    <font size="4"><xsl:value-of select="."/></font>
+                                </td>                       
                             </tr>       
                         </xsl:for-each>
                     </table>  
-                      <!--<xsl:for-each select="$annotations/span[@ana='#S' and @xml:lang='es']">
+                    <!--<xsl:for-each select="$annotations/span[@ana='#S' and @xml:lang='es']">
                     <p>
                         <font size="4"><xsl:value-of select="."/></font>
                     </p>
@@ -83,11 +69,10 @@
                     <br/>
                     <br/>
                 </xsl:for-each> 
-               
-            </xsl:for-each>
-
-
+                
+            
+            
         </html>
-                         
+        
     </xsl:template>
 </xsl:stylesheet>
