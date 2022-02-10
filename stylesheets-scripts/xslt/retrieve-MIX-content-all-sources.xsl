@@ -82,7 +82,7 @@
                   (<xsl:value-of select="$linkLang"/>)
                   <xsl:value-of select="$currentLinkedObject"/>
                </xsl:if>
-            </xsl:for-each>,
+            </xsl:for-each>
          </xsl:for-each>
          
          <xsl:for-each select="$literalLinkTranslations">
