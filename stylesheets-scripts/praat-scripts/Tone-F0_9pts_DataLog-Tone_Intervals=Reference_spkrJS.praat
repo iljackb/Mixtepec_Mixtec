@@ -8,7 +8,7 @@ form Analyze pitch of tones and log the corresponding vowels
 	text sound_directory /Users/jackbowers/Documents/praat/mixtec/processed_files/updated_files/jerry_files/
 	sentence Sound_file_extension .wav
 	comment Directory of TextGrid files
-	text textGrid_directory /Users/jackbowers/Documents/praat/mixtec/processed_files/updated_files/jerry_files/
+	text textGrid_directory /Users/jackbowers/Documents/praat/mixtec/processed_files/updated_files/jerry_files/ 
 	sentence TextGrid_file_extension .TextGrid
 	comment Full path of the resulting text file:
 	text resultfile /Users/jackbowers/Desktop/Tone_Recognition/Inventory_Logs/Tone-F0_9pts_DataLog-Tone_Intervals=Reference_spkrJS_013112.txt

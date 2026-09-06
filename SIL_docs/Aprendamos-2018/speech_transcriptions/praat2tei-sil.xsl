@@ -4,7 +4,7 @@
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xpath-default-namespace="http://www.tei-c.org/ns/1.0"
                 exclude-result-prefixes="xs"
-                version="2.0"><!-- version 2019-04-17 --><!-- INSTRUCTIONS: 
+                version="2.0"><!-- version 2026-09-06--><!-- INSTRUCTIONS: 
         PROCESSES ONE FILE AT A TIME:
         XSL SHOULD BE IN SAME DIRECTORY    
         INSERT FILENAME IN $input
@@ -13,8 +13,8 @@
     -->
    <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
    <xsl:strip-space elements="*"/>
-   <xsl:param name="input" as="xs:string" select="'Leccion_02.txt'"/>
-   <xsl:param name="text-encoding" as="xs:string" select="'UTF-16'"/>
+   <xsl:param name="input" as="xs:string" select="'Leccion_04.txt'"/>
+   <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/>
    <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
    <!-- Reading the text file $input into the string variable $input-text -->
    <xsl:variable name="input-text"
@@ -147,22 +147,13 @@ end of element "data"
                   </timeline>
                   <xsl:for-each-group select="$praat-parsed" group-starting-with="Tokens"><!-- DEFINED VARIABLES FOR TIMEPOINTS IN TIMELINE -->
                      <xsl:variable name="whens" as="element()*">
-                        <xsl:for-each select="                                     distinct-values(                                     (current-group()[self::Mixtec|self::Spanish|self::IPA|self::English]/@start, current-group()[self::English]/@end)                                     )">
+                        <xsl:for-each select="                                     distinct-values(                                     (current-group()[self::Mixtec|self::IPA|self::English|self::Spanish]/@start, current-group()[self::English]/@end)                                     )">
                            <when xml:id="T{position()}" interval="{.}"/>
                         </xsl:for-each>
                      </xsl:variable>
                      <annotationBlock>
                         <u n="{current-group()[1]}" xml:id="{generate-id(.)}"><!-- ID's ok-->
                            <xsl:copy-of select="current-group()[1]/(@start, @end)"/>
-                           <!-- output content from "Spanish" -->
-                           <seg xml:lang="es" xml:id="{concat('T','-es-',@start)}"><!--concat(tier+timestamp) -->
-                              <xsl:for-each select="current-group()/self::Spanish">
-                                 <xsl:variable name="start" select="@start"/>
-                                 <w xml:id="{concat('T','-',@start)}">
-                                    <xsl:value-of select="."/>
-                                 </w>
-                              </xsl:for-each>
-                           </seg>
                            <!-- output content from "Orth" -->
                            <seg xml:lang="mix"
                                 xml:id="{concat('T','-mx-',@start)}"
@@ -195,13 +186,16 @@ end of element "data"
                         </xsl:variable>
                         <spanGrp type="annotations">
                            <xsl:for-each select="current-group()/self::English">
-                              <span xml:lang="en" target="#{$mixSegID}" type="translation"/>
+                              <span xml:lang="en" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
                            </xsl:for-each>
-                        </spanGrp>
+                           <xsl:for-each select="current-group()/self::Spanish">
+                              <span xml:lang="es" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
+                           </xsl:for-each>
                         <linkGrp type="translation">
                            <link target="#{$espSegID} #{$mixSegID}"/>
                         </linkGrp>
                         <!-- can add other features as needed -->
+                        </spanGrp>
                      </annotationBlock>
                   </xsl:for-each-group>
                </body>
