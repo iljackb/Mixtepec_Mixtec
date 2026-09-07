@@ -4,7 +4,7 @@
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xpath-default-namespace="http://www.tei-c.org/ns/1.0"
                 exclude-result-prefixes="xs"
-                version="2.0"><!-- version 2026-09-06--><!-- INSTRUCTIONS: 
+                version="2.0"><!-- version 2019-04-17 --><!-- INSTRUCTIONS: 
         PROCESSES ONE FILE AT A TIME:
         XSL SHOULD BE IN SAME DIRECTORY    
         INSERT FILENAME IN $input
@@ -13,7 +13,7 @@
     -->
    <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
    <xsl:strip-space elements="*"/>
-   <xsl:param name="input" as="xs:string" select="'Leccion_04.txt'"/>
+   <xsl:param name="input" as="xs:string" select="'Leccion_03.txt'"/>
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/>
    <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
    <!-- Reading the text file $input into the string variable $input-text -->
@@ -87,9 +87,16 @@ end of element "data"
    <xsl:variable name="lines-into-tabs" as="element()*">
       <xsl:for-each select="$lines[. != '']">
          <xsl:variable name="lpos" select="position()"/>
-         <xsl:if test="not(starts-with(normalize-space(.), 'ilo'))">
+         <xsl:variable name="cols" select="tokenize(., '&#9;')"/>
+         <!-- Strip a possible leading BOM (U+FEFF) from the first column, in case the
+              .tsv was saved with a byte-order mark; otherwise the header check below
+              could fail to match even when the line really is the header row. -->
+         <xsl:variable name="col1-clean" select="translate($cols[1], codepoints-to-string(65279), '')"/>
+         <xsl:variable name="is-header"
+                       select="$col1-clean = 'tmin' and $cols[2] = 'tier' and $cols[3] = 'text' and count($cols) ge 4 and $cols[4] = 'tmax'"/>
+         <xsl:if test="not(starts-with(normalize-space(.), 'ilo')) and not($is-header)">
             <line>
-               <xsl:for-each select="tokenize(., '\t')">
+               <xsl:for-each select="$cols">
                   <xsl:choose>
                      <xsl:when test="position() eq 1">
                         <start>
