@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -97,18 +97,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -123,22 +115,17 @@
             <when xml:id="T6" interval="0.46"/>
             <when xml:id="T7" interval="0.49"/>
             <when xml:id="T8" interval="0.59"/>
-         </timeline>
+         <when xml:id="T9" interval="0.65"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e37"
-               n="1"
-               start="0"
-               end="0.65"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e37" n="1" start="0" end="0.65" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e38" notation="orth" type="compound">
-                  <w xml:id="d1e39" synch="#T1">koo</w>
-                  <w xml:id="d1e40" synch="#T3">ña'a</w>
+                  <w xml:id="d1e39" synch="#T1 #T3">koo</w>
+                  <w xml:id="d1e40" synch="#T3 #T9">ña'a</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e41" notation="ipa" type="compound">
-                  <w xml:id="d1e42" synch="#T1">kɔː<m xml:id="d1e152">↘</m>
+                  <w xml:id="d1e42" synch="#T1 #T3">kɔː<m xml:id="d1e152">↘</m>
                   </w>
-                  <w xml:id="d1e43" synch="#T3">ɲã̰<m xml:id="d1e159">˥</m>ʔa̰<m xml:id="d1e165">˩</m>
+                  <w xml:id="d1e43" synch="#T3 #T9">ɲã̰<m xml:id="d1e159">˥</m>ʔa̰<m xml:id="d1e165">˩</m>
                   </w>
                </seg>
             </u>
@@ -160,14 +147,8 @@
                <span type="" target="" corresp=""/>
                --></spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e38 #d1e41"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/nothing"
-                     type="translation">nothing</span>
-               <span target="#d1e38 #d1e41"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/nada"
-                     type="translation">nada</span>
+               <span target="#d1e38 #d1e41" xml:lang="en" corresp="https://en.wiktionary.org/wiki/nothing" type="translation">nothing</span>
+               <span target="#d1e38 #d1e41" xml:lang="es" corresp="https://es.wiktionary.org/wiki/nada" type="translation">nada</span>
             </spanGrp>
          </annotationBlock>
       </body>

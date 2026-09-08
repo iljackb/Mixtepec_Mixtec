@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -103,18 +103,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -136,20 +128,15 @@
             <when xml:id="T13" interval="1.29"/>
             <when xml:id="T14" interval="0.64"/>
             <when xml:id="T15" interval="1.43"/>
-         </timeline>
+         <when xml:id="T16" interval="1.57"/></timeline>
          <annotationBlock>
-            <u who="#"
-               xml:id="d1e45"
-               n="1"
-               start="0"
-               end="0.78"
-               xml:lang="mix">
+            <u who="#" xml:id="d1e45" n="1" start="0" end="0.78" xml:lang="mix">
                <seg xml:id="d1e46" notation="orth" xml:lang="mix">
                   <w xml:id="d1e47" synch="#T2">xcho'o</w>
                </seg>
                <seg xml:id="d1e49" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e50" synch="#T1"/>
-                  <w xml:id="d1e51" synch="#T2">stʃo̰<m xml:id="d1e167">˥</m>ʔoː<m xml:id="d1e173">˩↗</m>
+                  <w xml:id="d1e50" synch="#T1 #T2"/>
+                  <w xml:id="d1e51" synch="#T2 #T7">stʃo̰<m xml:id="d1e167">˥</m>ʔoː<m xml:id="d1e173">˩↗</m>
                   </w>
                </seg>
             </u>
@@ -162,29 +149,18 @@
             </spanGrp>
             <spanGrp type="semantics"><!-- domain: cooking --><!-- domain: food preparation --></spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e47 #d1e51"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/boil"
-                     type="translation">boil</span>
-               <span target="#d1e47 #d1e51"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/hervir"
-                     type="translation">hervir</span>
+               <span target="#d1e47 #d1e51" xml:lang="en" corresp="https://en.wiktionary.org/wiki/boil" type="translation">boil</span>
+               <span target="#d1e47 #d1e51" xml:lang="es" corresp="https://es.wiktionary.org/wiki/hervir" type="translation">hervir</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#"
-               xml:id="d1e68"
-               n="2"
-               start="0.78"
-               end="1.57"
-               xml:lang="mix">
+            <u who="#" xml:id="d1e68" n="2" start="0.78" end="1.57" xml:lang="mix">
                <seg xml:id="d1e69" notation="orth" xml:lang="mix">
                   <w xml:id="d1e70" synch="#T8">xcho'o</w>
                </seg>
                <seg xml:id="d1e72" notation="ipa" xml:lang="mix">
-                  <w xml:id="d1e73" synch="#T7"/>
-                  <w xml:id="d1e74" synch="#T8">stʃo<m xml:id="d1e201">˥</m>ʔoː<m xml:id="d1e207">˩↗</m>
+                  <w xml:id="d1e73" synch="#T7 #T8"/>
+                  <w xml:id="d1e74" synch="#T8 #T16">stʃo<m xml:id="d1e201">˥</m>ʔoː<m xml:id="d1e207">˩↗</m>
                   </w>
                </seg>
             </u>
@@ -200,14 +176,8 @@
             </spanGrp>
             <spanGrp type="semantics"><!-- domain: cooking --><!-- domain: food preparation --></spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e70 #d1e74"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/boil"
-                     type="translation">boil</span>
-               <span target="#d1e70 #d1e74"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/hervir"
-                     type="translation">hervir</span>
+               <span target="#d1e70 #d1e74" xml:lang="en" corresp="https://en.wiktionary.org/wiki/boil" type="translation">boil</span>
+               <span target="#d1e70 #d1e74" xml:lang="es" corresp="https://es.wiktionary.org/wiki/hervir" type="translation">hervir</span>
             </spanGrp>
          </annotationBlock>
       </body>

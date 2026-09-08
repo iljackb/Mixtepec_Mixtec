@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../../../schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -27,8 +27,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
-                      url="soundfiles-gen:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:ADPOS-CONFG_above-over-north_01_02_03_spkrTS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -96,18 +95,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -143,22 +134,17 @@
             <when xml:id="T27" interval="0.68"/>
             <when xml:id="T28" interval="1.56"/>
             <when xml:id="T29" interval="2.36"/>
-         </timeline>
+         <when xml:id="T30" interval="0.75"/><when xml:id="T31" interval="1.62"/><when xml:id="T32" interval="2.38"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e65"
-               n="1"
-               start="0"
-               end="0.75"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e65" n="1" start="0" end="0.75" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e66" notation="orth" type="term"><!-- or should I tag this: @type="lexicalItem" @subtype="compound" -->
-                  <w xml:id="d1e67" synch="#T1">chi</w>
-                  <w xml:id="d1e69" synch="#T4">Kuchi</w>
+                  <w xml:id="d1e67" synch="#T1 #T4">chi</w>
+                  <w xml:id="d1e69" synch="#T4 #T30">Kuchi</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e71" notation="ipa" type="term">
-                  <w xml:id="d1e72" synch="#T1">tʃi<m xml:id="d1e172">˥</m>
+                  <w xml:id="d1e72" synch="#T1 #T4">tʃi<m xml:id="d1e172">˥</m>
                   </w>
-                  <w xml:id="d1e79" synch="#T4">ku<m xml:id="d1e179">˩</m>tʃi<m xml:id="d1e185">˩</m>
+                  <w xml:id="d1e79" synch="#T4 #T30">ku<m xml:id="d1e179">˩</m>tʃi<m xml:id="d1e185">˩</m>
                   </w>
                </seg>
             </u>
@@ -178,62 +164,36 @@
                <span target="#d1e67 #d1e69" type="pos" ana="#ADJ"/>
             </spanGrp>
             <spanGrp type="semantics" n="1"><!-- above (lm) sense -->
-               <span target="#d1e67 #d1e69"
-                     type="domain"
-                     corresp="http://dbpedia.org/resource/Spatial_relation">SPATIAL RELATION</span>
+               <span target="#d1e67 #d1e69" type="domain" corresp="http://dbpedia.org/resource/Spatial_relation">SPATIAL RELATION</span>
             </spanGrp>
             <spanGrp type="semantics" n="2"><!-- north -->
                <span target="#d1e67 #d1e69" type="domain">SPATIAL RELATION</span>
                <!-- should i replace the term 'configuration' with 'spatial relation'? everywhere? -->
                <span target="#d1e67 #d1e69" type="domain">CARDINAL DIRECTIONS</span>
-               <span target="#d1e67 #d1e69"
-                     corresp="http://dbpedia.org/resource/Geography"
-                     type="domain">GEOGRAPHY</span>
-               <span target="#d1e67 #d1e69"
-                     corresp="http://dbpedia.org/resource/North"
-                     type="sense"/>
+               <span target="#d1e67 #d1e69" corresp="http://dbpedia.org/resource/Geography" type="domain">GEOGRAPHY</span>
+               <span target="#d1e67 #d1e69" corresp="http://dbpedia.org/resource/North" type="sense"/>
                <!-- should this have id? goes in <sense>-->
             </spanGrp>
             <spanGrp type="annotations" n="1">
-               <span ana="#CMPND"
-                     target="#d1e67 #d1e69"
-                     xml:lang="en"
-                     type="translation">above</span>
-               <span ana="#CMPND"
-                     target="#d1e67 #d1e69"
-                     xml:lang="es"
-                     type="translation">encima de</span>
-               <span ana="#CMPND"
-                     target="#d1e67 #d1e69"
-                     xml:lang="en"
-                     type="translation">over</span>
+               <span ana="#CMPND" target="#d1e67 #d1e69" xml:lang="en" type="translation">above</span>
+               <span ana="#CMPND" target="#d1e67 #d1e69" xml:lang="es" type="translation">encima de</span>
+               <span ana="#CMPND" target="#d1e67 #d1e69" xml:lang="en" type="translation">over</span>
             </spanGrp>
             <spanGrp type="annotations" n="2">
-               <span ana="#CMPND"
-                     target="#d1e67 #d1e69"
-                     xml:lang="en"
-                     type="translation">north</span>
-               <span ana="#CMPND"
-                     target="#d1e67 #d1e69"
-                     xml:lang="es"
-                     type="translation">norte</span>
+               <span ana="#CMPND" target="#d1e67 #d1e69" xml:lang="en" type="translation">north</span>
+               <span ana="#CMPND" target="#d1e67 #d1e69" xml:lang="es" type="translation">norte</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e96"
-               n="2"
-               start="0.75"
-               end="1.62"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e96" n="2" start="0.75" end="1.62" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e97" notation="orth">
-                  <w xml:id="d1e98" synch="#T10">chi</w>
-                  <w xml:id="d1e100" synch="#T13">Kuchi</w>
+                  <w xml:id="d1e98" synch="#T10 #T13">chi</w>
+                  <w xml:id="d1e100" synch="#T13 #T31">Kuchi</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e102" notation="ipa">
-                  <w xml:id="d1e103" synch="#T10">tʃi<m xml:id="d1e238">˥</m>
+                  <w xml:id="d1e103" synch="#T10 #T13">tʃi<m xml:id="d1e238">˥</m>
                   </w>
-                  <w xml:id="d1e110" synch="#T13">ku<m xml:id="d1e245">˩</m>tʃi<m xml:id="d1e251">˩</m>
+                  <w xml:id="d1e110" synch="#T13 #T31">ku<m xml:id="d1e245">˩</m>tʃi<m xml:id="d1e251">˩</m>
                   </w>
                </seg>
             </u>
@@ -242,20 +202,15 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e127"
-               n="3"
-               start="1.62"
-               end="2.38"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e127" n="3" start="1.62" end="2.38" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e128" notation="orth">
-                  <w xml:id="d1e129" synch="#T19">chi</w>
-                  <w xml:id="d1e131" synch="#T22">Kuchi</w>
+                  <w xml:id="d1e129" synch="#T19 #T22">chi</w>
+                  <w xml:id="d1e131" synch="#T22 #T32">Kuchi</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e133" notation="ipa">
-                  <w xml:id="d1e134" synch="#T19">tʃi<m xml:id="d1e269">˥</m>
+                  <w xml:id="d1e134" synch="#T19 #T22">tʃi<m xml:id="d1e269">˥</m>
                   </w>
-                  <w xml:id="d1e141" synch="#T22">ku<m xml:id="d1e276">˩</m>tʃi<m xml:id="d1e282">˩</m>
+                  <w xml:id="d1e141" synch="#T22 #T32">ku<m xml:id="d1e276">˩</m>tʃi<m xml:id="d1e282">˩</m>
                   </w>
                </seg>
             </u>

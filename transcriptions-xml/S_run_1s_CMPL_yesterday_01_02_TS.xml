@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="../../stylesheets-scripts/schemas/ODD-MIX-dict.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -27,8 +27,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:S_run_1s_CMPL_yesterday_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
-                      url="soundfiles-gen:S_run_1s_CMPL_yesterday_01_02_TS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:S_run_1s_CMPL_yesterday_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:S_run_1s_CMPL_yesterday_01_02_TS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -99,18 +98,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -149,26 +140,17 @@
             <when xml:id="T30" interval="1.70"/>
             <when xml:id="T31" interval="3.11"/>
             <when xml:id="T32" interval="4.14"/>
-         </timeline>
+         <when xml:id="T33" interval="2.10"/><when xml:id="T34" interval="4.37"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e63"
-               n="1"
-               start="0"
-               end="2.10"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e63" n="1" start="0" end="2.10" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e64" notation="orth" type="S">
-                  <w xml:id="d1e65" synch="#T1">sketa</w>
-                  <w xml:id="d1e67" synch="#T6">takuni</w>
+                  <w xml:id="d1e65" synch="#T1 #T6">sketa</w>
+                  <w xml:id="d1e67" synch="#T6 #T33">takuni</w>
                </seg>
-               <seg xml:lang="mix"
-                    xml:id="d1e69"
-                    sameAs="#d1e64"
-                    notation="ipa"
-                    type="S">
-                  <w xml:id="d1e70" synch="#T1" sameAs="#d1e65">skɛ<m xml:id="d1e177">˩</m>t̪a<m xml:id="d1e181">↘</m>
+               <seg xml:lang="mix" xml:id="d1e69" sameAs="#d1e64" notation="ipa" type="S">
+                  <w xml:id="d1e70" synch="#T1 #T6" sameAs="#d1e65">skɛ<m xml:id="d1e177">˩</m>t̪a<m xml:id="d1e181">↘</m>
                   </w>
-                  <w xml:id="d1e83" synch="#T6" sameAs="#d1e67">t̪a˥ku↘ni˧</w>
+                  <w xml:id="d1e83" synch="#T6 #T33" sameAs="#d1e67">t̪a˥ku↘ni˧</w>
                </seg>
             </u>
             <spanGrp type="annotations">
@@ -206,20 +188,15 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e108"
-               n="2"
-               start="2.10"
-               end="4.37"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e108" n="2" start="2.10" end="4.37" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e109" notation="orth" type="S">
-                  <w xml:id="d1e110" synch="#T15">sketa</w>
-                  <w xml:id="d1e112" synch="#T21">takuni</w>
+                  <w xml:id="d1e110" synch="#T15 #T21">sketa</w>
+                  <w xml:id="d1e112" synch="#T21 #T34">takuni</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e114" notation="ipa" type="S">
-                  <w xml:id="d1e115" synch="#T15">skɛ<m xml:id="d1e222">˩</m>t̪a<m xml:id="d1e228">˥↘</m>
+                  <w xml:id="d1e115" synch="#T15 #T21">skɛ<m xml:id="d1e222">˩</m>t̪a<m xml:id="d1e228">˥↘</m>
                   </w>
-                  <w xml:id="d1e128" synch="#T21">t̪a˥ku↘n˧i</w>
+                  <w xml:id="d1e128" synch="#T21 #T34">t̪a˥ku↘n˧i</w>
                </seg>
             </u>
             <spanGrp>

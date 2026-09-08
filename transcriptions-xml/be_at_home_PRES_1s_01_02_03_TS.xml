@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -103,18 +103,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -147,32 +139,24 @@
             <when xml:id="T24" interval="9.17"/>
             <when xml:id="T25" interval="8.10"/>
             <when xml:id="T26" interval="9.29"/>
-         </timeline>
+         <when xml:id="T27" interval="11.49"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e57"
-               n="3"
-               start="7.50"
-               end="11.49"
-               xml:lang="mix">
-               <seg xml:lang="mix"
-                    xml:id="d1e58"
-                    notation="orth"
-                    type="declarative">
+            <u who="#TS" xml:id="d1e57" n="3" start="7.50" end="11.49" xml:lang="mix">
+               <seg xml:lang="mix" xml:id="d1e58" notation="orth" type="declarative">
                   <!-- CHANGE PRAAT TRANSCRIPTION !! -->
-                  <w xml:id="d1e61" synch="#T3">ntu'u</w>
-                  <w xml:id="d1e63" synch="#T10" cert="low">ve'e</w>
+                  <w xml:id="d1e61" synch="#T3 #T10">ntu'u</w>
+                  <w xml:id="d1e63" synch="#T10 #T16" cert="low">ve'e</w>
                   <!-- ask MIX expert! Should I have a 'yu' added in there?! -->
-                  <w xml:id="d1e65" synch="#T16">michuni</w>
+                  <w xml:id="d1e65" synch="#T16 #T27">michuni</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e67" notation="ipa" type="declarative">
-                  <w xml:id="d1e68" synch="#T1">i<m xml:id="d1e183">↘</m>
+                  <w xml:id="d1e68" synch="#T1 #T3">i<m xml:id="d1e183">↘</m>
                   </w>
-                  <w xml:id="d1e73" synch="#T3">nd̪u<m xml:id="d1e192">˥</m>ʔu<m xml:id="d1e75">L</m>
+                  <w xml:id="d1e73" synch="#T3 #T10">nd̪u<m xml:id="d1e192">˥</m>ʔu<m xml:id="d1e75">L</m>
                   </w>
-                  <w xml:id="d1e88" synch="#T10">βɛ<m xml:id="d1e205">˥</m>ʔe<m xml:id="d1e211">˩</m>
+                  <w xml:id="d1e88" synch="#T10 #T16">βɛ<m xml:id="d1e205">˥</m>ʔe<m xml:id="d1e211">˩</m>
                   </w>
-                  <w xml:id="d1e101" synch="#T16">mi<m xml:id="d1e218">˩</m>tʃu<m xml:id="d1e224">∙</m>ni<m xml:id="d1e230">↗</m>
+                  <w xml:id="d1e101" synch="#T16 #T27">mi<m xml:id="d1e218">˩</m>tʃu<m xml:id="d1e224">∙</m>ni<m xml:id="d1e230">↗</m>
                   </w>
                </seg>
             </u>
@@ -197,10 +181,7 @@
                <span type="spatialRel" target="#d1e63 #d1e88" ana="#LM"/>
             </spanGrp>
             <spanGrp type="annotations"><!-- NO TRANSLATION FOR 'II' -->
-               <span target="#d1e61 #d1e73"
-                     xml:lang="en"
-                     cert="low"
-                     type="translation">be at, sit</span>
+               <span target="#d1e61 #d1e73" xml:lang="en" cert="low" type="translation">be at, sit</span>
                <!-- should I translate to/from lemma or inflected!? -->
                <span target="#d1e61 #d1e73" xml:lang="es" type="translation">estar, sentar</span>
                <span target="#d1e63 #d1e88" xml:lang="en" type="translation">home</span>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -26,8 +26,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:N_LANG_MIX_poor-language_01_02_03_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
-                      url="soundfiles-gen:N_LANG_MIX_poor-language_01_02_03_TS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:N_LANG_MIX_poor-language_01_02_03_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:N_LANG_MIX_poor-language_01_02_03_TS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -98,18 +97,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -157,14 +148,9 @@
             <when xml:id="T39" interval="1.94"/>
             <when xml:id="T40" interval="3.16"/>
             <when xml:id="T41" interval="4.31"/>
-         </timeline>
+         <when xml:id="T42" interval="4.72"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e73"
-               n="1"
-               start="0"
-               end="2.12"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e73" n="1" start="0" end="2.12" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e74" notation="orth">
                   <w xml:id="d1e75" synch="#T1">sa'an ntavi</w>
                </seg>
@@ -178,12 +164,7 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e110"
-               n="2"
-               start="2.12"
-               end="3.30"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e110" n="2" start="2.12" end="3.30" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e111" notation="orth">
                   <w xml:id="d1e112" synch="#T14">sa'an ntavi</w>
                </seg>
@@ -197,20 +178,15 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e147"
-               n="3"
-               start="3.30"
-               end="4.72"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e147" n="3" start="3.30" end="4.72" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e148" notation="orth" type="compound">
-                  <w xml:id="d1e149" synch="#T27">sa'an</w>
-                  <w xml:id="d1e150" synch="#T33">ntavi</w>
+                  <w xml:id="d1e149" synch="#T27 #T33">sa'an</w>
+                  <w xml:id="d1e150" synch="#T33 #T42">ntavi</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e151" notation="ipa" type="compound">
-                  <w xml:id="d1e152" synch="#T27">sã<m xml:id="d1e261">˩</m>ʔã<m xml:id="d1e267">˥</m>
+                  <w xml:id="d1e152" synch="#T27 #T33">sã<m xml:id="d1e261">˩</m>ʔã<m xml:id="d1e267">˥</m>
                   </w>
-                  <w xml:id="d1e153" synch="#T33">nda<m xml:id="d1e276">˥</m>vi<m xml:id="d1e282">˩</m>
+                  <w xml:id="d1e153" synch="#T33 #T42">nda<m xml:id="d1e276">˥</m>vi<m xml:id="d1e282">˩</m>
                   </w>
                </seg>
             </u>
@@ -223,9 +199,7 @@
             <spanGrp type="semantics">
                <span type="sense" target="#d1e148 #d1e151" cert="unknown"/>
                <!-- no uri! -->
-               <span type="domain"
-                     target="#d1e148 #d1e151"
-                     corresp="http://dbpedia.org/resource/Language"/>
+               <span type="domain" target="#d1e148 #d1e151" corresp="http://dbpedia.org/resource/Language"/>
             </spanGrp>
             <!--  
             <spanGrp type="decomposition">

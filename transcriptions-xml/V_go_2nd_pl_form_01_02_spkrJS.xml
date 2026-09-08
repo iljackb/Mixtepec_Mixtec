@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -103,18 +103,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -135,22 +127,17 @@
             <when xml:id="T12" interval="0.71"/>
             <when xml:id="T13" interval="0.72"/>
             <when xml:id="T14" interval="0.78"/>
-         </timeline>
+         <when xml:id="T15" interval="0.90"/></timeline>
          <annotationBlock>
-            <u who="#JS"
-               xml:id="d1e44"
-               n="1"
-               start="0"
-               end="0.90"
-               xml:lang="mix">
+            <u who="#JS" xml:id="d1e44" n="1" start="0" end="0.90" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e45" notation="orth">
-                  <w xml:id="d1e46" synch="#T1">kua'an</w>
-                  <w xml:id="d1e48" synch="#T8">kueni</w>
+                  <w xml:id="d1e46" synch="#T1 #T8">kua'an</w>
+                  <w xml:id="d1e48" synch="#T8 #T15">kueni</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e50" notation="ipa">
-                  <w xml:id="d1e51" synch="#T1">kwa<m xml:id="d1e169">˥</m>ʔã<m xml:id="d1e175">˧</m>
+                  <w xml:id="d1e51" synch="#T1 #T8">kwa<m xml:id="d1e169">˥</m>ʔã<m xml:id="d1e175">˧</m>
                   </w>
-                  <w xml:id="d1e66" synch="#T8">we<m xml:id="d1e182">˩</m>ni<m xml:id="d1e188">˥</m>
+                  <w xml:id="d1e66" synch="#T8 #T15">we<m xml:id="d1e182">˩</m>ni<m xml:id="d1e188">˥</m>
                   </w>
                </seg>
             </u>

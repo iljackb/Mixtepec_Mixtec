@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -93,18 +93,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -215,36 +207,31 @@
             <when xml:id="T102" interval="10.19"/>
             <when xml:id="T103" interval="10.53"/>
             <when xml:id="T104" interval="11.10"/>
-         </timeline>
+         <when xml:id="T105" interval="5.00"/><when xml:id="T106" interval="8.02"/><when xml:id="T107" interval="12.90"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e142"
-               n="1"
-               start="0"
-               end="5.00"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e142" n="1" start="0" end="5.00" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e143" notation="orth">
-                  <w xml:id="d1e144" synch="#T2">nuu</w>
-                  <w xml:id="d1e146" synch="#T5">mesa</w>
-                  <w xml:id="d1e148" synch="#T9">tsaa</w>
-                  <w xml:id="d1e150" synch="#T11">ntu'u</w>
-                  <w xml:id="d1e152" synch="#T19">in</w>
-                  <w xml:id="d1e154" synch="#T21">tikama</w>
+                  <w xml:id="d1e144" synch="#T2 #T5">nuu</w>
+                  <w xml:id="d1e146" synch="#T5 #T9">mesa</w>
+                  <w xml:id="d1e148" synch="#T9 #T11">tsaa</w>
+                  <w xml:id="d1e150" synch="#T11 #T19">ntu'u</w>
+                  <w xml:id="d1e152" synch="#T19 #T21">in</w>
+                  <w xml:id="d1e154" synch="#T21 #T105">tikama</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e156" notation="ipa">
-                  <w xml:id="d1e157" synch="#T1">
+                  <w xml:id="d1e157" synch="#T1 #T2">
                      <m xml:id="d1e255"/>
                   </w>
-                  <w xml:id="d1e159" synch="#T2">nũː<m xml:id="d1e261">↘↗</m>
+                  <w xml:id="d1e159" synch="#T2 #T5">nũː<m xml:id="d1e261">↘↗</m>
                   </w>
-                  <w xml:id="d1e166" synch="#T5">m<m xml:id="d1e266">˥</m>ɛsa<m xml:id="d1e274">∙</m>
+                  <w xml:id="d1e166" synch="#T5 #T9">m<m xml:id="d1e266">˥</m>ɛsa<m xml:id="d1e274">∙</m>
                   </w>
-                  <w xml:id="d1e179" synch="#T9">ts<m xml:id="d1e279">↘↗</m>ãː</w>
-                  <w xml:id="d1e186" synch="#T11">ĩ<m xml:id="d1e286">↘</m>nd̪u<m xml:id="d1e294">↗</m>ʔu<m xml:id="d1e300">↘</m>
+                  <w xml:id="d1e179" synch="#T9 #T11">ts<m xml:id="d1e279">↘↗</m>ãː</w>
+                  <w xml:id="d1e186" synch="#T11 #T19">ĩ<m xml:id="d1e286">↘</m>nd̪u<m xml:id="d1e294">↗</m>ʔu<m xml:id="d1e300">↘</m>
                   </w>
-                  <w xml:id="d1e205" synch="#T19">ĩː<m xml:id="d1e305">↘ꜜ</m>
+                  <w xml:id="d1e205" synch="#T19 #T21">ĩː<m xml:id="d1e305">↘ꜜ</m>
                   </w>
-                  <w xml:id="d1e210" synch="#T21">t̪<m xml:id="d1e310">∙</m>ika<m xml:id="d1e318">˥ꜜ</m>ma<m xml:id="d1e324">˩</m>
+                  <w xml:id="d1e210" synch="#T21 #T105">t̪<m xml:id="d1e310">∙</m>ika<m xml:id="d1e318">˥ꜜ</m>ma<m xml:id="d1e324">˩</m>
                   </w>
                </seg>
             </u>
@@ -258,30 +245,25 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e243"
-               n="2"
-               start="5.00"
-               end="8.02"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e243" n="2" start="5.00" end="8.02" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e244" notation="orth">
-                  <w xml:id="d1e245" synch="#T28">nuu</w>
-                  <w xml:id="d1e247" synch="#T31">mesa</w>
-                  <w xml:id="d1e249" synch="#T36">tsaa</w>
-                  <w xml:id="d1e251" synch="#T38">ntu'u</w>
-                  <w xml:id="d1e253" synch="#T47">in</w>
-                  <w xml:id="d1e255" synch="#T50">tikama</w>
+                  <w xml:id="d1e245" synch="#T28 #T31">nuu</w>
+                  <w xml:id="d1e247" synch="#T31 #T36">mesa</w>
+                  <w xml:id="d1e249" synch="#T36 #T38">tsaa</w>
+                  <w xml:id="d1e251" synch="#T38 #T47">ntu'u</w>
+                  <w xml:id="d1e253" synch="#T47 #T50">in</w>
+                  <w xml:id="d1e255" synch="#T50 #T106">tikama</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e257" notation="ipa">
-                  <w xml:id="d1e258" synch="#T28">nũː<m xml:id="d1e360">↘↗</m>
+                  <w xml:id="d1e258" synch="#T28 #T31">nũː<m xml:id="d1e360">↘↗</m>
                   </w>
-                  <w xml:id="d1e265" synch="#T31">mɛ<m xml:id="d1e367">˥</m>s<m xml:id="d1e371">↘</m>a</w>
-                  <w xml:id="d1e278" synch="#T36">ts<m xml:id="d1e378">↗↘ꜜ</m>ãː</w>
-                  <w xml:id="d1e285" synch="#T38">i<m xml:id="d1e385">˧</m>nd̪u<m xml:id="d1e393">˩</m>ʔu<m xml:id="d1e399">↗</m>
+                  <w xml:id="d1e265" synch="#T31 #T36">mɛ<m xml:id="d1e367">˥</m>s<m xml:id="d1e371">↘</m>a</w>
+                  <w xml:id="d1e278" synch="#T36 #T38">ts<m xml:id="d1e378">↗↘ꜜ</m>ãː</w>
+                  <w xml:id="d1e285" synch="#T38 #T47">i<m xml:id="d1e385">˧</m>nd̪u<m xml:id="d1e393">˩</m>ʔu<m xml:id="d1e399">↗</m>
                   </w>
-                  <w xml:id="d1e304" synch="#T47">ĩː<m xml:id="d1e404">↘</m>
+                  <w xml:id="d1e304" synch="#T47 #T50">ĩː<m xml:id="d1e404">↘</m>
                   </w>
-                  <w xml:id="d1e309" synch="#T50">t̪i<m xml:id="d1e411">∙</m>ka<m xml:id="d1e417">˥ꜜ</m>ma<m xml:id="d1e423">˩</m>
+                  <w xml:id="d1e309" synch="#T50 #T106">t̪i<m xml:id="d1e411">∙</m>ka<m xml:id="d1e417">˥ꜜ</m>ma<m xml:id="d1e423">˩</m>
                   </w>
                </seg>
             </u>
@@ -295,32 +277,27 @@
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e342"
-               n="3"
-               start="8.02"
-               end="12.90"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e342" n="3" start="8.02" end="12.90" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e343" notation="orth">
-                  <w xml:id="d1e344" synch="#T59">nuu</w>
-                  <w xml:id="d1e346" synch="#T62">mesa</w>
-                  <w xml:id="d1e348" synch="#T68">tsaa</w>
-                  <w xml:id="d1e350" synch="#T72">ntu'u</w>
-                  <w xml:id="d1e352" synch="#T81">in</w>
-                  <w xml:id="d1e354" synch="#T83">tikama</w>
+                  <w xml:id="d1e344" synch="#T59 #T62">nuu</w>
+                  <w xml:id="d1e346" synch="#T62 #T68">mesa</w>
+                  <w xml:id="d1e348" synch="#T68 #T72">tsaa</w>
+                  <w xml:id="d1e350" synch="#T72 #T81">ntu'u</w>
+                  <w xml:id="d1e352" synch="#T81 #T83">in</w>
+                  <w xml:id="d1e354" synch="#T83 #T107">tikama</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e356" notation="ipa">
-                  <w xml:id="d1e357" synch="#T59">nũː<m xml:id="d1e459">↘↗ꜜ</m>
+                  <w xml:id="d1e357" synch="#T59 #T62">nũː<m xml:id="d1e459">↘↗ꜜ</m>
                   </w>
-                  <w xml:id="d1e364" synch="#T62">mɛ<m xml:id="d1e466">˥</m>sa<m xml:id="d1e472">↘</m>
+                  <w xml:id="d1e364" synch="#T62 #T68">mɛ<m xml:id="d1e466">˥</m>sa<m xml:id="d1e472">↘</m>
                   </w>
-                  <w xml:id="d1e377" synch="#T68">tsãː<m xml:id="d1e479">↘↗</m>
+                  <w xml:id="d1e377" synch="#T68 #T72">tsãː<m xml:id="d1e479">↘↗</m>
                   </w>
-                  <w xml:id="d1e384" synch="#T72">ĩ<m xml:id="d1e484">↘</m>nd̪u<m xml:id="d1e492">↘ꜜ</m>ʔu<m xml:id="d1e498">↗</m>
+                  <w xml:id="d1e384" synch="#T72 #T81">ĩ<m xml:id="d1e484">↘</m>nd̪u<m xml:id="d1e492">↘ꜜ</m>ʔu<m xml:id="d1e498">↗</m>
                   </w>
-                  <w xml:id="d1e403" synch="#T81">ĩː<m xml:id="d1e503">↘</m>
+                  <w xml:id="d1e403" synch="#T81 #T83">ĩː<m xml:id="d1e503">↘</m>
                   </w>
-                  <w xml:id="d1e408" synch="#T83">t̺i<m xml:id="d1e510">∙</m>ka<m xml:id="d1e516">↗</m>ma<m xml:id="d1e522">˩</m>
+                  <w xml:id="d1e408" synch="#T83 #T107">t̺i<m xml:id="d1e510">∙</m>ka<m xml:id="d1e516">↗</m>ma<m xml:id="d1e522">˩</m>
                   </w>
                </seg>
             </u>

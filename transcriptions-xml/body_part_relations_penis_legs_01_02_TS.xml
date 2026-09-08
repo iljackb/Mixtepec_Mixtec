@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -26,8 +26,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>This file was converted from of the speech file <ptr target="praat-export:body_part_relations_penis_legs_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav"
-                      url="soundfiles-gen:body_part_relations_penis_legs_01_02_TS.wav"/>
+            <p>This file was converted from of the speech file <ptr target="praat-export:body_part_relations_penis_legs_01_02_TS.txt"/> which was extracted from the Praat TextGrid transcriptions of the speech file <media mimeType="wav" url="soundfiles-gen:body_part_relations_penis_legs_01_02_TS.wav"/>
             </p>
          </sourceDesc>
          <sourceDesc>
@@ -95,18 +94,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -144,36 +135,31 @@
             <when xml:id="T29" interval="4.60"/>
             <when xml:id="T30" interval="5.40"/>
             <when xml:id="T31" interval="6.67"/>
-         </timeline>
+         <when xml:id="T32" interval="6.92"/></timeline>
          <annotationBlock>
-            <u who="#TS"
-               xml:id="d1e62"
-               n="2"
-               start="3.75"
-               end="6.92"
-               xml:lang="mix">
+            <u who="#TS" xml:id="d1e62" n="2" start="3.75" end="6.92" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e63" notation="orth">
-                  <w xml:id="d1e64" synch="#T1">tisa</w>
-                  <w xml:id="d1e66" synch="#T6">ku</w>
-                  <w xml:id="d1e68" synch="#T9">ra</w>
-                  <w xml:id="d1e70" synch="#T12" cert="low">inkai</w>
+                  <w xml:id="d1e64" synch="#T1 #T6">tisa</w>
+                  <w xml:id="d1e66" synch="#T6 #T9">ku</w>
+                  <w xml:id="d1e68" synch="#T9 #T12">ra</w>
+                  <w xml:id="d1e70" synch="#T12 #T17" cert="low">inkai</w>
                   <!-- need to point specifically to inflection "-i" in "inkai"!! redo in praat or manually separate into ne <w> with @synch and @xml:id !? -->
-                  <w xml:id="d1e72" synch="#T17">ma'in</w>
-                  <w xml:id="d1e74" synch="#T23">si'un</w>
+                  <w xml:id="d1e72" synch="#T17 #T23">ma'in</w>
+                  <w xml:id="d1e74" synch="#T23 #T32">si'un</w>
                   <!-- neet to poin to inflection "-un" marking 2s.inf -->
                </seg>
                <seg xml:lang="mix" xml:id="d1e76" notation="ipa">
-                  <w xml:id="d1e77" synch="#T1">t̪i<m xml:id="d1e183">˧</m>sa<m xml:id="d1e189">˩</m>
+                  <w xml:id="d1e77" synch="#T1 #T6">t̪i<m xml:id="d1e183">˧</m>sa<m xml:id="d1e189">˩</m>
                   </w>
-                  <w xml:id="d1e90" synch="#T6">ɣu<m xml:id="d1e196">↗</m>
+                  <w xml:id="d1e90" synch="#T6 #T9">ɣu<m xml:id="d1e196">↗</m>
                   </w>
-                  <w xml:id="d1e97" synch="#T9">ra<m xml:id="d1e203">∙</m>
+                  <w xml:id="d1e97" synch="#T9 #T12">ra<m xml:id="d1e203">∙</m>
                   </w>
-                  <w xml:id="d1e104" synch="#T12">ĩŋk̬ai<!-- need to normalize transcriptions of diphthongs or is this ok where needed? (i.e. where duration too small to segment further w/o compromising tone alignment) --><m xml:id="d1e215">↘</m>
+                  <w xml:id="d1e104" synch="#T12 #T17">ĩŋk̬ai<!-- need to normalize transcriptions of diphthongs or is this ok where needed? (i.e. where duration too small to segment further w/o compromising tone alignment) --><m xml:id="d1e215">↘</m>
                   </w>
-                  <w xml:id="d1e115" synch="#T17">ma<m xml:id="d1e222">˧</m>ʔĩ<m xml:id="d1e228">∙</m>
+                  <w xml:id="d1e115" synch="#T17 #T23">ma<m xml:id="d1e222">˧</m>ʔĩ<m xml:id="d1e228">∙</m>
                   </w>
-                  <w xml:id="d1e128" synch="#T23">sĩ<m xml:id="d1e235">∙</m>ʔũ<m xml:id="d1e241">↗</m>
+                  <w xml:id="d1e128" synch="#T23 #T32">sĩ<m xml:id="d1e235">∙</m>ʔũ<m xml:id="d1e241">↗</m>
                      <!-- @synch with preceeding <c> -->
                   </w>
                </seg>
@@ -213,22 +199,12 @@
                <span type="spatialRel" target="#d1e74 #d1e128" ana="#LM"/>
                <!-- reconcile the terminology "spatial Rel" make distict from value of "domain"!! -->
                <!-- search domain!? Review literature!! -->
-               <span type="sense"
-                     target="#d1e64 #d1e77"
-                     corresp="http://dbpedia.org/resource/Penis"/>
-               <span type="sense"
-                     target="#d1e74 #d1e128"
-                     corresp="http://dbpedia.org/resource/Leg"/>
-               <span type="domain"
-                     target="#d1e64 #d1e77"
-                     corresp="http://dbpedia.org/resource/Human_body"/>
+               <span type="sense" target="#d1e64 #d1e77" corresp="http://dbpedia.org/resource/Penis"/>
+               <span type="sense" target="#d1e74 #d1e128" corresp="http://dbpedia.org/resource/Leg"/>
+               <span type="domain" target="#d1e64 #d1e77" corresp="http://dbpedia.org/resource/Human_body"/>
                <!-- do I only need to tag domain once since it's the same for the entire sentence? -->
-               <span type="domain"
-                     target="#d1e74 #d1e128"
-                     corresp="http://dbpedia.org/resource/Human_body"/>
-               <span target="#d1e63 #d1e76"
-                     type="domain"
-                     corresp="http://dbpedia.org/resource/Spatial_relation"/>
+               <span type="domain" target="#d1e74 #d1e128" corresp="http://dbpedia.org/resource/Human_body"/>
+               <span target="#d1e63 #d1e76" type="domain" corresp="http://dbpedia.org/resource/Spatial_relation"/>
                <!-- TAGGING SENTENCE -->
                <!-- TAG SENTENCE OR ONLY SPECIFIC ELEMENTS!?-->
                <!-- SHOULD THIS BE CALLED "FRAME" OR OTHER? -->

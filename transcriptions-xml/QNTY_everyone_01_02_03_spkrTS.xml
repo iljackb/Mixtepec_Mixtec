@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -97,18 +97,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -147,17 +139,17 @@
             <when xml:id="T30" interval="0.95"/>
             <when xml:id="T31" interval="2.00"/>
             <when xml:id="T32" interval="3.14"/>
-         </timeline>
+         <when xml:id="T33" interval="1.13"/><when xml:id="T34" interval="2.21"/><when xml:id="T35" interval="3.26"/></timeline>
          <annotationBlock>
             <u who="#TS" n="1" start="0" end="1.13" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e64" notation="orth" type="compound">
-                  <w xml:id="d1e65" synch="#T1">nti'i</w>
-                  <w xml:id="d1e67" synch="#T7">na</w>
+                  <w xml:id="d1e65" synch="#T1 #T7">nti'i</w>
+                  <w xml:id="d1e67" synch="#T7 #T33">na</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e69" notation="ipa" type="compound">
-                  <w xml:id="d1e70" synch="#T1">nd̪i<m xml:id="d1e179">˥</m>ʔi<m xml:id="d1e185">↘</m>
+                  <w xml:id="d1e70" synch="#T1 #T7">nd̪i<m xml:id="d1e179">˥</m>ʔi<m xml:id="d1e185">↘</m>
                   </w>
-                  <w xml:id="d1e85" synch="#T7">na<m xml:id="d1e192">↘</m>
+                  <w xml:id="d1e85" synch="#T7 #T33">na<m xml:id="d1e192">↘</m>
                   </w>
                </seg>
             </u>
@@ -173,30 +165,21 @@
                <!-- INCLUSIVE /ALL? -->
             </spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e64 #d1e69"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/everybody"
-                     type="translation">everybody</span>
-               <span target="#d1e64 #d1e69"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/everyone"
-                     type="translation">everyone</span>
-               <span target="#d1e64 #d1e69"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/todos"
-                     type="translation">todos</span>
+               <span target="#d1e64 #d1e69" xml:lang="en" corresp="https://en.wiktionary.org/wiki/everybody" type="translation">everybody</span>
+               <span target="#d1e64 #d1e69" xml:lang="en" corresp="https://en.wiktionary.org/wiki/everyone" type="translation">everyone</span>
+               <span target="#d1e64 #d1e69" xml:lang="es" corresp="https://es.wiktionary.org/wiki/todos" type="translation">todos</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
             <u who="#TS" n="2" start="1.13" end="2.21" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e97" notation="orth" type="compound">
-                  <w xml:id="d1e98" synch="#T10">nti'i</w>
-                  <w xml:id="d1e100" synch="#T17">na</w>
+                  <w xml:id="d1e98" synch="#T10 #T17">nti'i</w>
+                  <w xml:id="d1e100" synch="#T17 #T34">na</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e102" notation="ipa" type="compound">
-                  <w xml:id="d1e103" synch="#T10">nd̪i<m xml:id="d1e225">↗</m>ʔi<m xml:id="d1e231">↘</m>
+                  <w xml:id="d1e103" synch="#T10 #T17">nd̪i<m xml:id="d1e225">↗</m>ʔi<m xml:id="d1e231">↘</m>
                   </w>
-                  <w xml:id="d1e118" synch="#T17">na<m xml:id="d1e238">↘</m>
+                  <w xml:id="d1e118" synch="#T17 #T34">na<m xml:id="d1e238">↘</m>
                   </w>
                </seg>
             </u>
@@ -212,30 +195,21 @@
                <!-- INCLUSIVE /ALL? -->
             </spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e97 #d1e103"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/everybody"
-                     type="translation">everybody</span>
-               <span target="#d1e97 #d1e103"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/everyone"
-                     type="translation">everyone</span>
-               <span target="#d1e97 #d1e103"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/todos"
-                     type="translation">todos</span>
+               <span target="#d1e97 #d1e103" xml:lang="en" corresp="https://en.wiktionary.org/wiki/everybody" type="translation">everybody</span>
+               <span target="#d1e97 #d1e103" xml:lang="en" corresp="https://en.wiktionary.org/wiki/everyone" type="translation">everyone</span>
+               <span target="#d1e97 #d1e103" xml:lang="es" corresp="https://es.wiktionary.org/wiki/todos" type="translation">todos</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
             <u who="#TS" n="3" start="2.21" end="3.26" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e130" notation="orth" type="compound">
-                  <w xml:id="d1e131" synch="#T19">nti'i</w>
-                  <w xml:id="d1e133" synch="#T27">na</w>
+                  <w xml:id="d1e131" synch="#T19 #T27">nti'i</w>
+                  <w xml:id="d1e133" synch="#T27 #T35">na</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e135" notation="ipa" type="compound">
-                  <w xml:id="d1e136" synch="#T19">nd̪i<m xml:id="d1e271">˥</m>ʔi<m xml:id="d1e277">↘</m>
+                  <w xml:id="d1e136" synch="#T19 #T27">nd̪i<m xml:id="d1e271">˥</m>ʔi<m xml:id="d1e277">↘</m>
                   </w>
-                  <w xml:id="d1e151" synch="#T27">na<m xml:id="d1e284">↘</m>
+                  <w xml:id="d1e151" synch="#T27 #T35">na<m xml:id="d1e284">↘</m>
                   </w>
                </seg>
             </u>

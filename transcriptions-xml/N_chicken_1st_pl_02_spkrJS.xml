@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -103,18 +103,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -128,22 +120,17 @@
             <when xml:id="T5" interval="0.71"/>
             <when xml:id="T6" interval="0.72"/>
             <when xml:id="T7" interval="0.91"/>
-         </timeline>
+         <when xml:id="T8" interval="1.00"/></timeline>
          <annotationBlock>
-            <u who="#JS"
-               xml:id="d1e36"
-               n="1"
-               start="0"
-               end="1.00"
-               xml:lang="mix">
+            <u who="#JS" xml:id="d1e36" n="1" start="0" end="1.00" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e37" notation="orth" type="phrase">
-                  <w xml:id="d1e38" synch="#T1">chuun</w>
-                  <w xml:id="d1e40" synch="#T4">ko</w>
+                  <w xml:id="d1e38" synch="#T1 #T4">chuun</w>
+                  <w xml:id="d1e40" synch="#T4 #T8">ko</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e42" notation="ipa" type="phrase">
-                  <w xml:id="d1e43" synch="#T1">tʃũː<m xml:id="d1e159">↘↗</m>
+                  <w xml:id="d1e43" synch="#T1 #T4">tʃũː<m xml:id="d1e159">↘↗</m>
                   </w>
-                  <w xml:id="d1e50" synch="#T4">ɣo<m xml:id="d1e166">↗</m>
+                  <w xml:id="d1e50" synch="#T4 #T8">ɣo<m xml:id="d1e166">↗</m>
                   </w>
                </seg>
             </u>
@@ -160,17 +147,11 @@
                <span type="inclusivity" target="#d1e40 #d1e50" ana="#EXCL"/>
             </spanGrp>
             <spanGrp type="semantics">
-               <span type="sense"
-                     target="#d1e38 #d1e43"
-                     corresp="http://dbpedia.org/resource/Chicken"/>
+               <span type="sense" target="#d1e38 #d1e43" corresp="http://dbpedia.org/resource/Chicken"/>
                <!-- is_a:Bird -->
-               <span type="domain"
-                     target="#d1e38 #d1e43"
-                     corresp="http://dbpedia.org/resource/Bird"/>
+               <span type="domain" target="#d1e38 #d1e43" corresp="http://dbpedia.org/resource/Bird"/>
                <!-- is_a:Animal -->
-               <span type="domain"
-                     target="#d1e38 #d1e43"
-                     corresp="http://dbpedia.org/resource/Animal"/>
+               <span type="domain" target="#d1e38 #d1e43" corresp="http://dbpedia.org/resource/Animal"/>
             </spanGrp>
             <spanGrp type="annotations">
                <span target="#d1e37 #d1e42" xml:lang="en" type="translation">our chicken</span>

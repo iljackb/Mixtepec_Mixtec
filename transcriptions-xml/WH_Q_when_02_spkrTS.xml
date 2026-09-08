@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -102,18 +102,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -134,13 +126,13 @@
          <annotationBlock>
             <u who="#TS" n="1" start="0" end="0.78" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e40" notation="orth" type="MWE">
-                  <w xml:id="d1e41" synch="#T2">nchi</w>
-                  <w xml:id="d1e43" synch="#T6">kii</w>
+                  <w xml:id="d1e41" synch="#T2 #T6">nchi</w>
+                  <w xml:id="d1e43" synch="#T6 #T10">kii</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e45" notation="ipa" type="MWE">
-                  <w xml:id="d1e47" synch="#T2">nʤi<m xml:id="d1e162">↘</m>
+                  <w xml:id="d1e47" synch="#T2 #T6">nʤi<m xml:id="d1e162">↘</m>
                   </w>
-                  <w xml:id="d1e56" synch="#T6">ki<m xml:id="d1e169">↗</m>
+                  <w xml:id="d1e56" synch="#T6 #T10">ki<m xml:id="d1e169">↗</m>
                   </w>
                </seg>
             </u>
@@ -155,14 +147,8 @@
                <span type="domain" target="#d1e40 #d1e47" ana="#TIME" corresp=""/>
             </spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e40 #d1e47"
-                     xml:lang="en"
-                     corresp=""
-                     type="translation"/>
-               <span target="#d1e40 #d1e47"
-                     xml:lang="es"
-                     corresp=""
-                     type="translation"/>
+               <span target="#d1e40 #d1e47" xml:lang="en" corresp="" type="translation"/>
+               <span target="#d1e40 #d1e47" xml:lang="es" corresp="" type="translation"/>
             </spanGrp>
          </annotationBlock>
       </body>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -102,18 +102,10 @@
             </taxonomy>
          </classDecl>
          <listPrefixDef>
-            <prefixDef ident="praat-export"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-gen"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
-            <prefixDef ident="soundfiles-oax"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../oaxaca/#$1"/>
-            <prefixDef ident="stimuli"
-                       matchPattern="([a-zA-Z0-9]+)"
-                       replacementPattern="../media/stimuli/#$1"/>
+            <prefixDef ident="praat-export" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-gen" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/speech-mix/with-txtgrd/#$1"/>
+            <prefixDef ident="soundfiles-oax" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../oaxaca/#$1"/>
+            <prefixDef ident="stimuli" matchPattern="([a-zA-Z0-9]+)" replacementPattern="../media/stimuli/#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -133,7 +125,7 @@
             <when xml:id="T11" interval="1.36"/>
             <when xml:id="T12" interval="0.73"/>
             <when xml:id="T13" interval="1.69"/>
-         </timeline>
+         <when xml:id="T14" interval="1.81"/></timeline>
          <annotationBlock>
             <u who="#TS" n="1" start="0" end="0.80" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e44" notation="orth">
@@ -151,34 +143,24 @@
                <span type="pos" target="#d1e45 #d1e48" ana="#NUM"/>
             </spanGrp>
             <spanGrp type="semantics">
-               <span type="sense"
-                     target="#d1e45 #d1e48"
-                     corresp="http://dbpedia.org/resource/20_(number)"/>
-               <span type="domain"
-                     target="#d1e45 #d1e48"
-                     corresp="http://dbpedia.org/resource/Number"/>
+               <span type="sense" target="#d1e45 #d1e48" corresp="http://dbpedia.org/resource/20_(number)"/>
+               <span type="domain" target="#d1e45 #d1e48" corresp="http://dbpedia.org/resource/Number"/>
             </spanGrp>
             <spanGrp type="annotations">
-               <span target="#d1e45 #d1e48"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/twenty"
-                     type="translation">twenty</span>
-               <span target="#d1e45 #d1e48"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/viente"
-                     type="translation">viente</span>
+               <span target="#d1e45 #d1e48" xml:lang="en" corresp="https://en.wiktionary.org/wiki/twenty" type="translation">twenty</span>
+               <span target="#d1e45 #d1e48" xml:lang="es" corresp="https://es.wiktionary.org/wiki/viente" type="translation">viente</span>
             </spanGrp>
          </annotationBlock>
          <annotationBlock>
             <u who="#TS" n="2" start="0.80" end="1.81" xml:lang="mix">
                <seg xml:lang="mix" xml:id="d1e64" notation="orth" type="compound">
-                  <w xml:id="d1e65" synch="#T6">oko</w>
-                  <w xml:id="d1e67" synch="#T10">in</w>
+                  <w xml:id="d1e65" synch="#T6 #T10">oko</w>
+                  <w xml:id="d1e67" synch="#T10 #T14">in</w>
                </seg>
                <seg xml:lang="mix" xml:id="d1e69" notation="ipa" type="compound">
-                  <w xml:id="d1e70" synch="#T6">o<m xml:id="d1e192">∙</m>ko<m xml:id="d1e198">˩</m>
+                  <w xml:id="d1e70" synch="#T6 #T10">o<m xml:id="d1e192">∙</m>ko<m xml:id="d1e198">˩</m>
                   </w>
-                  <w xml:id="d1e81" synch="#T10">ĩː<m xml:id="d1e203">˧</m>
+                  <w xml:id="d1e81" synch="#T10 #T14">ĩː<m xml:id="d1e203">˧</m>
                   </w>
                </seg>
             </u>
@@ -189,27 +171,14 @@
                <span type="pos" target="#d1e64 #d1e69" ana="#NUM"/>
             </spanGrp>
             <spanGrp type="semantics">
-               <span type="sense"
-                     target="#d1e64 #d1e69"
-                     corresp="http://dbpedia.org/resource/21_(number)"/>
-               <span type="domain"
-                     target="#d1e64 #d1e69"
-                     corresp="http://dbpedia.org/resource/Number"/>
+               <span type="sense" target="#d1e64 #d1e69" corresp="http://dbpedia.org/resource/21_(number)"/>
+               <span type="domain" target="#d1e64 #d1e69" corresp="http://dbpedia.org/resource/Number"/>
             </spanGrp>
             <!-- decomposition: twenty + one -->
             <spanGrp type="annotations">
-               <span target="#d1e64 #d1e69"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/twenty-one"
-                     type="translation">twenty-one</span>
-               <span target="#d1e64 #d1e69"
-                     xml:lang="en"
-                     corresp="https://en.wiktionary.org/wiki/twenty-one"
-                     type="translation">twenty one</span>
-               <span target="#d1e64 #d1e69"
-                     xml:lang="es"
-                     corresp="https://es.wiktionary.org/wiki/veintiuno"
-                     type="translation">viente</span>
+               <span target="#d1e64 #d1e69" xml:lang="en" corresp="https://en.wiktionary.org/wiki/twenty-one" type="translation">twenty-one</span>
+               <span target="#d1e64 #d1e69" xml:lang="en" corresp="https://en.wiktionary.org/wiki/twenty-one" type="translation">twenty one</span>
+               <span target="#d1e64 #d1e69" xml:lang="es" corresp="https://es.wiktionary.org/wiki/veintiuno" type="translation">viente</span>
             </spanGrp>
          </annotationBlock>
       </body>
