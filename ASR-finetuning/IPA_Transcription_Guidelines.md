@@ -98,6 +98,14 @@ Rationale generalizes the same principle as the tone/affricate/vowel-length norm
 
 Transcriptions of long /e/ across the corpus are suspected to actually be **open-mid [ɛː]** rather than **close-mid [eː]** in most/all cases. This needs a manual review pass across the corpus before fine-tuning — not yet normalized, since the correct target value per-token hasn't been confirmed.
 
+## 5a. Other diacritics reviewed (2026-09-09 corpus scan)
+
+A full scan of every combining diacritic actually in use across the training manifests, prompted by identifying the dental diacritic issue below, surfaced a few more cases worth a documented decision each:
+
+- **Dental diacritic (combining bridge below, U+032A, 143 occurrences)**: **stripped** from training targets. Dental articulation is not phonologically contrastive in this language (confirmed via direct consultation) — this is narrow phonetic detail, not a meaningful distinction, and leaving it in would only add notational noise without conveying real information to the model.
+- **Combining caron below (U+032C, 28 occurrences)**: **kept, not stripped.** This marks a systematic, regular partially-voiced variant of /k/ in post-nasal position — not incidental noise like the dental diacritic. Stripping it would collapse two acoustically distinct sounds (this variant and a "clean" voiceless /k/ elsewhere in the corpus) onto the identical training symbol, which is exactly the kind of inconsistency the rest of this normalization effort is trying to eliminate, not create. There is an open concern that this partially-voiced variant may be perceptually/acoustically close enough to /g/ that the ASR could confuse the two — but this is treated as an empirical question to observe in future evaluation, not a reason to hide the distinction via normalization.
+- **Two rare, single-occurrence marks** (combining vertical line below U+0329, "syllabic"; combining right half ring below U+0339, "less rounded"): **stripped** from training targets, confirmed incidental rather than a systematic pattern given only one occurrence each across the whole corpus.
+
 ---
 
 ## 6. Open decisions pending
