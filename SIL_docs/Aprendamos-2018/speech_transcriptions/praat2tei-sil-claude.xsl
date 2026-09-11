@@ -13,7 +13,7 @@
     -->
    <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
    <xsl:strip-space elements="*"/>
-   <xsl:param name="input" as="xs:string" select="'Leccion_09.txt'"/>
+   <xsl:param name="input" as="xs:string" select="'Leccion_12.txt'"/>
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/>
    <!-- <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/> -->
    <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
@@ -56,7 +56,7 @@ end of element "data"
       <teiHeader>
          <fileDesc>
             <titleStmt>
-               <title>TEI output for tab separated bilingual text files exported from file Leccion_09.wav</title>
+               <title>TEI output for tab separated bilingual text files exported from file <xsl:value-of select="$input"/></title>
                <respStmt>
                   <resp>Annotation</resp>
                   <resp>Encoding</resp>
@@ -69,18 +69,40 @@ end of element "data"
                                 OF @xml:id
                             --></name>
                </respStmt>
+               <respStmt>
+                  <resp>Compiler</resp>
+                  <name>María M. Nieves</name>
+               </respStmt>
+               <respStmt>
+                  <resp>Editor (Mixtec text)</resp>
+                  <name>Juan Miguel Bautista Martínez</name>
+                  <name>Octavio Hernández Velasco</name>
+                  <name>Bernardino Santiago Velasco</name>
+               </respStmt>
+               <respStmt>
+                  <resp>Recording (Spanish content)</resp>
+                  <name>Víctor Moreno Rojas</name>
+               </respStmt>
+               <respStmt>
+                  <resp>Recording (Mixtec content)</resp>
+                  <name>Bernardino Santiago Velasco</name>
+               </respStmt>
             </titleStmt>
             <publicationStmt>
-               <p>Publication Information</p>
+               <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Ciudad de México</pubPlace>
+               <date>2018</date>
+               <availability>
+                  <p>© 2018 Instituto Lingüístico de Verano, A.C. Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 (CC BY-NC-ND 3.0).</p>
+               </availability>
             </publicationStmt>
             <notesStmt>
-               <note>add note</note>
+               <note>Content originally published as: <title>Aprendamos el idioma mixteco</title> (<title xml:lang="mix">Na kutuꞌva ko saꞌan savi</title>), Libro 1, disco 1. Catalog reference: mix 18-027 .25C. Primera edición.</note>
+               <note>Content reviewed and recorded by Mixtec speakers originally from the municipality of San Juan Mixtepec, Juxtlahuaca district.</note>
+               <note>Originally retrieved from www.sil.org/mexico/mixteca/mixtepec (no longer active as of 2026).</note>
             </notesStmt>
             <sourceDesc>
-               <p>Information about the source(ADD POINTER TO SOURCE FILE) <ptr target="{base-uri()}"/>
-                  <!--
-                   ADD POINTER TO <fs> INVENTORY WHERE TAGS ARE!! -->
-               </p>
+               <p>Information about the source <ptr target="{base-uri()}"/></p>
             </sourceDesc>
          </fileDesc>
       </teiHeader>
