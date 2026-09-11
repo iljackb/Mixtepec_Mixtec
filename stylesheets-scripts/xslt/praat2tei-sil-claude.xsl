@@ -4,7 +4,7 @@
                 xmlns="http://www.tei-c.org/ns/1.0"
                 xpath-default-namespace="http://www.tei-c.org/ns/1.0"
                 exclude-result-prefixes="xs"
-                version="2.0"><!-- version 2019-04-17 --><!-- INSTRUCTIONS: 
+                version="2.0"><!-- version 2026-10-07 --><!-- INSTRUCTIONS: 
         PROCESSES ONE FILE AT A TIME:
         XSL SHOULD BE IN SAME DIRECTORY    
         INSERT FILENAME IN $input
@@ -13,8 +13,9 @@
     -->
    <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
    <xsl:strip-space elements="*"/>
-   <xsl:param name="input" as="xs:string" select="'Leccion_03.txt'"/>
+   <xsl:param name="input" as="xs:string" select="'Leccion_07.txt'"/>
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/>
+   <!-- <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/> -->
    <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
    <!-- Reading the text file $input into the string variable $input-text -->
    <xsl:variable name="input-text"
@@ -55,7 +56,7 @@ end of element "data"
       <teiHeader>
          <fileDesc>
             <titleStmt>
-               <title>TEI output for tab separated bilingual text files exported from file <!-- insert filename here!! --></title>
+               <title>TEI output for tab separated bilingual text files exported from file <xsl:value-of select="$input"/></title>
                <respStmt>
                   <resp>Annotation</resp>
                   <resp>Encoding</resp>
@@ -68,18 +69,40 @@ end of element "data"
                                 OF @xml:id
                             --></name>
                </respStmt>
+               <respStmt>
+                  <resp>Compiler</resp>
+                  <name>María M. Nieves</name>
+               </respStmt>
+               <respStmt>
+                  <resp>Editor (Mixtec text)</resp>
+                  <name>Juan Miguel Bautista Martínez</name>
+                  <name>Octavio Hernández Velasco</name>
+                  <name>Bernardino Santiago Velasco</name>
+               </respStmt>
+               <respStmt>
+                  <resp>Recording (Spanish content)</resp>
+                  <name>Víctor Moreno Rojas</name>
+               </respStmt>
+               <respStmt>
+                  <resp>Recording (Mixtec content)</resp>
+                  <name>Bernardino Santiago Velasco</name>
+               </respStmt>
             </titleStmt>
             <publicationStmt>
-               <p>Publication Information</p>
+               <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
+               <pubPlace>Ciudad de México</pubPlace>
+               <date>2018</date>
+               <availability>
+                  <p>© 2018 Instituto Lingüístico de Verano, A.C. Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 (CC BY-NC-ND 3.0).</p>
+               </availability>
             </publicationStmt>
             <notesStmt>
-               <note>add note</note>
+               <note>Content originally published as: <title>Aprendamos el idioma mixteco</title> (<title xml:lang="mix">Na kutuꞌva ko saꞌan savi</title>), Libro 1, disco 1. Catalog reference: mix 18-027 .25C. Primera edición.</note>
+               <note>Content reviewed and recorded by Mixtec speakers originally from the municipality of San Juan Mixtepec, Juxtlahuaca district.</note>
+               <note>Originally retrieved from www.sil.org/mexico/mixteca/mixtepec (no longer active as of 2026).</note>
             </notesStmt>
             <sourceDesc>
-               <p>Information about the source(ADD POINTER TO SOURCE FILE) <ptr target="{base-uri()}"/>
-                  <!--
-                   ADD POINTER TO <fs> INVENTORY WHERE TAGS ARE!! -->
-               </p>
+               <p>Information about the source <ptr target="{base-uri()}"/></p>
             </sourceDesc>
          </fileDesc>
       </teiHeader>
@@ -130,11 +153,26 @@ end of element "data"
    <xsl:variable name="praat-parsed" as="element()*">
       <xsl:for-each-group select="$lines-into-tabs" group-by="start">
          <xsl:for-each select="current-group()">
-            <xsl:element name="{tier}">
-               <xsl:attribute name="start" select="start"/>
-               <xsl:attribute name="end" select="end"/>
-               <xsl:value-of select="text"/>
-            </xsl:element>
+            <!-- Defensive guard: only construct an element when tier resolves to a
+                 real, non-blank name. Some Saxon editions/optimizers (observed:
+                 Saxon-PE, both 9.9.1.7 and 12.9) can surface a fatal XTDE0820 error
+                 ("zero-length element name") when downstream distinct-values()
+                 forces eager atomization of every constructed element, even for
+                 edge-case rows that Saxon-HE's evaluation order does not trigger
+                 the same way on. Skipping (with a warning, not a silent drop)
+                 makes this robust regardless of which edition/version runs it. -->
+            <xsl:choose>
+               <xsl:when test="normalize-space(tier) = ''">
+                  <xsl:message>WARNING: skipped row with blank tier -- start=[<xsl:value-of select="start"/>] text=[<xsl:value-of select="text"/>] end=[<xsl:value-of select="end"/>]</xsl:message>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:element name="{tier}">
+                     <xsl:attribute name="start" select="start"/>
+                     <xsl:attribute name="end" select="end"/>
+                     <xsl:value-of select="text"/>
+                  </xsl:element>
+               </xsl:otherwise>
+            </xsl:choose>
          </xsl:for-each>
       </xsl:for-each-group>
    </xsl:variable>
@@ -153,6 +191,11 @@ end of element "data"
                      </xsl:for-each>
                   </timeline>
                   <xsl:for-each-group select="$praat-parsed" group-starting-with="Tokens"><!-- DEFINED VARIABLES FOR TIMEPOINTS IN TIMELINE -->
+                     <!-- Only process real utterance groups; content appearing before the first
+                          genuine Tokens boundary (stray tier rows, header rows, etc.) falls into an
+                          "orphan" leftover group here and must be skipped, since its fabricated xml:id
+                          can collide with the real first utterance if they share a start time. -->
+                     <xsl:if test="current-group()[1]/self::Tokens">
                      <xsl:variable name="whens" as="element()*">
                         <xsl:for-each select="                                     distinct-values(                                     (current-group()[self::Mixtec|self::IPA|self::English|self::Spanish]/@start, current-group()[self::English]/@end)                                     )">
                            <when xml:id="T{position()}" interval="{.}"/>
@@ -167,7 +210,7 @@ end of element "data"
                                 synch="{@start}">
                               <xsl:for-each select="current-group()/self::Mixtec">
                                  <xsl:variable name="start" select="@start"/>
-                                 <w synch="{concat('#T',@start)}" xml:id="{concat('T','-o-',@start)}">
+                                 <w synch="{concat('#T',@start,' #T',@end)}" xml:id="{concat('T','-o-',@start)}">
                                     <xsl:value-of select="."/>
                                  </w>
                               </xsl:for-each>
@@ -179,31 +222,29 @@ end of element "data"
                                 xml:id="{concat('T','-ipa-',@start)}">
                               <xsl:for-each select="current-group()/self::IPA">
                                  <xsl:variable name="start" select="@start"/>
-                                 <w synch="{concat('#T',@start)}" xml:id="{concat('T','-p-',@start)}">
+                                 <w synch="{concat('#T',@start,' #T',@end)}" xml:id="{concat('T','-p-',@start)}">
                                     <xsl:value-of select="."/>
                                  </w>
                               </xsl:for-each>
                            </seg>
+                           <xsl:variable name="mixSegID">
+                              <xsl:value-of select="current-group()/seg[@xml:lang='mix' and not(@function)]/@xml:id"/>
+                           </xsl:variable>
+                           <xsl:variable name="espSegID">
+                              <xsl:value-of select="current-group()/seg[@xml:lang='es']/@xml:id"/>
+                           </xsl:variable>
+                           <spanGrp type="annotations">
+                              <xsl:for-each select="current-group()/self::English">
+                                 <span xml:lang="en" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
+                              </xsl:for-each>
+                              <xsl:for-each select="current-group()/self::Spanish">
+                                 <span xml:lang="es" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
+                              </xsl:for-each>
+                           </spanGrp>
                         </u>
-                        <xsl:variable name="mixSegID">
-                           <xsl:value-of select="current-group()/seg[@xml:lang='mix' and not(@function)]/@xml:id"/>
-                        </xsl:variable>
-                        <xsl:variable name="espSegID">
-                           <xsl:value-of select="current-group()/seg[@xml:lang='es']/@xml:id"/>
-                        </xsl:variable>
-                        <spanGrp type="annotations">
-                           <xsl:for-each select="current-group()/self::English">
-                              <span xml:lang="en" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
-                           </xsl:for-each>
-                           <xsl:for-each select="current-group()/self::Spanish">
-                              <span xml:lang="es" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
-                           </xsl:for-each>
-                        <linkGrp type="translation">
-                           <link target="#{$espSegID} #{$mixSegID}"/>
-                        </linkGrp>
                         <!-- can add other features as needed -->
-                        </spanGrp>
                      </annotationBlock>
+                     </xsl:if>
                   </xsl:for-each-group>
                </body>
             </text>

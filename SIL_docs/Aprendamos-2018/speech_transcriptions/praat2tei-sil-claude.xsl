@@ -13,7 +13,7 @@
     -->
    <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
    <xsl:strip-space elements="*"/>
-   <xsl:param name="input" as="xs:string" select="'Leccion_07.txt'"/>
+   <xsl:param name="input" as="xs:string" select="'Leccion_09.txt'"/>
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/>
    <!-- <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/> -->
    <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
@@ -56,7 +56,7 @@ end of element "data"
       <teiHeader>
          <fileDesc>
             <titleStmt>
-               <title>TEI output for tab separated bilingual text files exported from file _Los_Sonidos_del_mixteco.wav</title>
+               <title>TEI output for tab separated bilingual text files exported from file Leccion_09.wav</title>
                <respStmt>
                   <resp>Annotation</resp>
                   <resp>Encoding</resp>
