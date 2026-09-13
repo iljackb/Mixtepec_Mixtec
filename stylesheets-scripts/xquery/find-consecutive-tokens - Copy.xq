@@ -1,0 +1,1 @@
+ db:open("Mixtepec_Mixtec")//w[contains(.,"va'a")]/following-sibling::w[contains(.,"nchu'a")]/ancestor::seg
