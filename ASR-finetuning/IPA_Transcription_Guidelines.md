@@ -108,9 +108,40 @@ A full scan of every combining diacritic actually in use across the training man
 
 ---
 
+## 5b. Transcription methodology — AILLA MYUC-1042 source specifically
+
+These principles apply to phonetic transcription of the MYUC-1042 (AILLA) recording specifically, not the corpus's general conventions elsewhere:
+
+**General articulatory phones**: transcribing what is actually heard, not what the source orthography states. The original transcription (Jerry Salazar / Guillem Belmar's team) normalizes both pronunciation variants and, at times, vocabulary itself in its orthographic layer — this project's IPA layer is independent of that normalization and reflects direct auditory judgment instead.
+
+**Tone transcription/attribution**: the original transcribers' tone marking is trusted and preserved by default (Guillem Belmar's tone judgments specifically). Exception: cases where the source orthography marks two different tones on a single long vowel. These require direct judgment call:
+- If there is no audible pitch change across the vowel, one of the two marked tones is chosen (informed by, but not strictly bound to, the source's own attribution) — e.g. source "oò" with no perceptible pitch movement resolves to a single chosen tone.
+- If there is an audible pitch slope, but its duration only spans a single mora's length (not the full long vowel), the slope is transcribed as a simple rising or falling tone accordingly, based on direct auditory judgment.
+
+### 5b.1 Overriding a confident (non-ambiguous) original tone transcription
+
+The case above concerns resolving genuine ambiguity already present in the source's own marking. A separate, stronger situation: overriding an original tone transcription that is NOT ambiguous — the source clearly and confidently marked a specific tone pattern — because direct evidence contradicts it.
+
+**Confirmed case**: a CVCV utterance the source transcribed as L-L, where auditory judgment and F0 both clearly indicated H-F instead. Corrected to H-F in this project's IPA layer.
+
+**Criteria for this kind of override** (not to be applied loosely):
+- The utterance was carefully, deliberately articulated (not rapid/casual connected speech) — this matters because it supports confident phonetic judgment in the first place, and because F0 in casual speech is heavily shaped by intonation, prosodic phrasing, declination, and emphasis, not just lexical tone (see caution below).
+- The discrepancy is clear and unambiguous, not a borderline or subtle judgment call.
+- Auditory perception and F0 evidence agree with each other, not just one or the other.
+
+**Caution, explicitly flagged**: reading phonological tone categories directly off F0 contours in natural, casual, spontaneous speech is methodologically risky — F0 movement in that register reflects many overlapping factors beyond lexical tone, and is not a reliable basis for confident tone reassignment the way a carefully-articulated, citation-style utterance is. This override policy is NOT license to systematically "correct" tone transcriptions across casual conversational material based on F0 measurement alone.
+
+**Open action item**: this specific case suggests a broader review of tone transcriptions in this source may be warranted before the tone-inclusive data is used for fine-tuning, distinct from and in addition to the already-open questions in Section 6. Not yet scoped as a formal task.
+
 ## 6. Open decisions pending
 
 - **Praat TextGrid source sync (added 2026-09-09)**: If tone/notation normalization is ever applied more broadly than the current ASR-training-manifest scope (i.e., beyond just deriving a training target), a decision is needed on whether to also update the original Praat TextGrid source files to match, or leave them as-is. If only the TEI/XML output is updated and the TextGrid sources are not, the two will fall out of sync with each other; the TextGrid would show the old/legacy notation while the XML shows the new one, for the same recording. Not yet decided; flagging as a real tradeoff (consistency across the whole pipeline vs. the cost/risk of touching archival TextGrid sources) rather than assuming either direction.
+
+- **[r] vs. [ɾ] not currently distinguished (added 2026-09-10)**: the trill and the flap have not been distinguished in transcription so far, due to the low number of observed flap cases — distinguishing them was judged not worth the added complexity at that frequency. However, a more serious concern than under-distinguishing [r]/[ɾ] themselves: [r] may end up mistakenly transcribed by the ASR as [d] instead, which would be a substantially worse error than conflating the two rhotics with each other. Planned action: check the next training run's output for a disproportionate rate of /r/–/d/ confusion specifically, to determine whether this needs to be addressed (e.g. by beginning to distinguish [r]/[ɾ], or some other fix) before it compounds further.
+
+- **Inconsistent voicing-gradient notation between /k/ and /t/ (added 2026-09-10)**: in pre-vocalic/intervocalic context (especially in clitics, e.g. "ka", "ko"), voiceless velar stop /k/ varies in voicing and tenseness, and this variation IS currently captured with a three-way notation: [k] ~ [k̬] ~ [ɣ] (voiceless, partially voiced, fully lenited to a fricative). /t/ undergoes an analogous voicing gradient in the same kind of context, and is always articulated as dental regardless of voicing, but this is currently captured with only two endpoints: [t̪] ~ [d] — no intermediate partially-voiced stage is marked (unlike [k̬] for /k/), and the fully-voiced endpoint also drops the dental place marker entirely (plain [d], not [d̪]), even though the dental place of articulation does not actually change. A parallel, consistent notation for /t/ would be [t̪] ~ [t̬̪] ~ [d̪] (preserving dental place throughout, with a partially-voiced dental stage matching how [k̬] is already handled). Not yet decided whether to adopt this; flagged for consideration alongside the other open items here.
+
+- **Trimming non-lexical onset/offset transition sounds (added 2026-09-10)**: current practice trims segment start/end times to exclude non-lexical transitional sounds immediately before or after a word (e.g. "[nnn ɲààà]" trimmed to just "[ɲààà]"). This is in tension with the eventual goal of transcribing unsegmented input directly. Resolution: this tension is not actually about whether to include noise generally -- it is deferred to the planned VAD (voice activity detection) pre-processing stage (Idea 1 in the original project TODO), which is meant to handle segmentation of raw audio BEFORE WhIPA ever sees it, rather than expecting WhIPA itself to learn word-boundary-finding in raw continuous audio. The real open question this raises is narrower than "keep all noise or none": once VAD is implemented, its output will likely have some realistic boundary imprecision (a little transitional noise at segment edges), and it may be worth training WhIPA to be robust to that small amount of boundary slop specifically -- WITHOUT notating the noise itself in the transcription target (the target stays the clean word; only the audio input would include a bit of edge noise). This is a narrower, more bounded technique than transcribing noise generally, and does not require inventing notation for non-lexical sounds. Not yet implemented; current practice (precise trimming) is being kept for now given the small dataset size, where clean, precisely-bounded training signal is judged more valuable than this robustness technique at this stage. Revisit once the VAD pipeline exists and the actual scale of its boundary imprecision can be measured, rather than guessing at the right amount of noise-tolerance now.
 
 ## 7. Historical pipeline notes (for future reference, not active conventions)
 
