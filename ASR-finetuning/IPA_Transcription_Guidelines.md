@@ -2,7 +2,7 @@
 
 **Purpose**: This document logs (1) the transcription conventions Jack uses going forward for new annotation, and (2) the normalization rules applied when converting existing/legacy transcriptions into consistent ASR training targets. These are two different things — the *archival* transcription can stay however it was originally written; normalization happens at the point of generating a derived training manifest, never by editing the original TEI source.
 
-Last updated: 2026-09-08
+Last updated: 2026-09-21
 
 ---
 
@@ -11,7 +11,7 @@ Last updated: 2026-09-08
 ### Current/forward convention
 - Level tones marked with a single combining diacritic directly on the vowel: acute ( ́ , high), grave ( ̀ , low), macron ( ̄ , mid), caron ( ̌ , rising contour), circumflex ( ̂ , falling contour).
 - Additional contour diacritics available: combining acute-macron (᷇, high-mid), combining grave-macron (᷅, low-mid), combining macron-acute (᷄, mid-high), combining macron-grave (᷆, mid-low).
-- Downstep marked with ꜜ (U+A71C, standalone modifier letter).
+- Downstep marked with ꜜ (U+A71C, standalone modifier letter); upstep marked with ꜛ (U+A71B, standalone modifier letter).
 - On a **long vowel** (spelled as two vowel letters, e.g. `ee`), a contour tone is spelled as **one diacritic per mora** — one accent on each of the two letters — rather than a single combined symbol on one letter. E.g. `jéê` (high-falling long /e/), not a single vowel + combined contour mark.
 
 ### Legacy convention (older transcriptions, being phased out)
@@ -43,6 +43,7 @@ Since the current fine-tuning pass is training on segmental phones only (tone ex
 - Contour arrows: `↗ ↘` (U+2197, U+2198)
 - Indeterminate-tone marker: `∙` (U+2219)
 - Downstep: `ꜜ` (U+A71C)
+- Upstep: `ꜛ` (U+A71B) -- previously undocumented and not stripped by the extraction pipeline; the omission was found and fixed 2026-09-21.
 
 **Combining diacritics** (stripped after NFD decomposition, so stacked marks like nasalization+tone separate correctly):
 - Acute `´` (U+0301, high)
@@ -54,7 +55,7 @@ Since the current fine-tuning pass is training on segmental phones only (tone ex
 
 **Critically NOT stripped** (these are segmental, not tonal): vowel length `ː`, nasalization tilde `̃`, glottal stop `ʔ`, dental diacritic, or any other segmental IPA symbol/diacritic. The stripping function must operate on individual Unicode combining marks after decomposition, not delete whole characters wholesale — e.g. `meṹ` (nasalized + high tone /u/) → `meũ` (nasalization preserved, tone removed), not `meu` (which would incorrectly also destroy the nasalization).
 
-Implemented in `extract_finetune_data.py`'s `strip_tones()`.
+Implemented in `normalize_ipa.py`'s `strip_tones()`.
 
 ---
 
@@ -133,6 +134,23 @@ The case above concerns resolving genuine ambiguity already present in the sourc
 
 **Open action item**: this specific case suggests a broader review of tone transcriptions in this source may be warranted before the tone-inclusive data is used for fine-tuning, distinct from and in addition to the already-open questions in Section 6. Not yet scoped as a formal task.
 
+## 5c. Aspiration
+
+### Decision: strip superscript aspiration (ʰ, U+02B0) from training targets
+Aspiration is not phonologically significant for this corpus's training targets -- e.g. `kʰa` -> `ka`. Stripped unconditionally, no adjacency or context condition needed (unlike creakiness, which is conditionally meaningful).
+
+## 5d. Prenasal marking
+
+### Decision: normalize superscript prenasal (ⁿ, U+207F) to plain 'n'
+Newer transcriptions represent a prenasalized consonant as plain `n` + the following consonant (e.g. `nd`); older transcriptions more often used superscript `ⁿ` (e.g. `ⁿd`) for the same thing. Training targets standardize on the plain-`n` form, so both conventions are represented identically -- e.g. `ⁿtʃ` -> `ntʃ`. Decided 2026-09-21.
+
+## 5e. Case normalization (backstop)
+
+### Decision: lowercase all training-target IPA strings
+Standard IPA has no case distinction -- true small-capital symbols (e.g. `ʟ`) are their own distinct Unicode codepoints, not uppercase forms of a lowercase letter, so blanket lowercasing does not affect them. This step exists as a backstop against (a) manual transcription typos producing a stray uppercase Latin letter (found: `suLuu` in the source XML, corrected at the archival level, not just normalized away), and (b) any SAMPA vestiges missed during the 2026-09-21 corpus cleanup pass (SAMPA conventionally uses uppercase letters for values IPA gives distinct lowercase/special symbols, e.g. `S` for `ʃ`, `N` for `ŋ`). Real occurrences should still be fixed at the source when found; this normalization step only protects the training data, it does not surface or flag the underlying archival error.
+
+---
+
 ## 6. Open decisions pending
 
 - **Praat TextGrid source sync (added 2026-09-09)**: If tone/notation normalization is ever applied more broadly than the current ASR-training-manifest scope (i.e., beyond just deriving a training target), a decision is needed on whether to also update the original Praat TextGrid source files to match, or leave them as-is. If only the TEI/XML output is updated and the TextGrid sources are not, the two will fall out of sync with each other; the TextGrid would show the old/legacy notation while the XML shows the new one, for the same recording. Not yet decided; flagging as a real tradeoff (consistency across the whole pipeline vs. the cost/risk of touching archival TextGrid sources) rather than assuming either direction.
@@ -161,9 +179,9 @@ The corpus's annotation/export pipeline evolved through several distinct stages,
 
 | Script | Purpose |
 |---|---|
-| `extract_finetune_data.py` | Extracts tokens from `transcriptions-xml/` (ADJ_*-style single-word corpus), strips tone marks (`strip_tones()`), outputs review CSV |
-| `extract_finetune_data_sentences.py` | Same, for multi-word-per-utterance files (Lección/`_Los_Sonidos_del_mixteco` style), reusing `strip_tones()` |
+| `extract_finetune_data_unified.py` | Extracts tokens from the whole corpus in one pass, classifying and dispatching each `<u>` independently by structure (single-word / sentence / whole-utterance); replaces the three older per-format scripts below |
+| `normalize_ipa.py` | Consolidated normalization pipeline applied to derived training targets: whitespace collapsing, case normalization, tone-stripping (`strip_tones()`), affricate tie-bar standardization, vowel-length normalization, dental/rare-mark stripping, creakiness heuristic, aspiration stripping, prenasal normalization |
 | `regenerate_word_alignment.py` | Recovers word-level timing + concatenated IPA from legacy 3-column raw multi-tier `.txt` exports; applies legacy-to-current long-vowel-contour conversion |
 | `normalize_encoding.py` | Detects and normalizes `.txt` file encoding (UTF-8/UTF-16 BE/LE, with or without BOM) to clean UTF-8, to work around Praat's inconsistent export encoding behavior |
 | `praat2tei-sil-claude.xsl` | Current SIL/Lección TSV-to-TEI pipeline; includes fixes for header-row filtering, orphan pre-Tokens groups, and per-word `@synch` start+end timing |
-
+| `extract_finetune_data.py`, `extract_finetune_data_sentences.py`, `extract_finetune_data_myuc.py` | Superseded by `extract_finetune_data_unified.py`; moved to `legacy-scripts/` in `mixtec-whipa-finetuning`, kept for historical reference only |
