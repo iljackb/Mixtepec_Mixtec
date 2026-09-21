@@ -144,10 +144,12 @@ Aspiration is not phonologically significant for this corpus's training targets 
 ### Decision: normalize superscript prenasal (ⁿ, U+207F) to plain 'n'
 Newer transcriptions represent a prenasalized consonant as plain `n` + the following consonant (e.g. `nd`); older transcriptions more often used superscript `ⁿ` (e.g. `ⁿd`) for the same thing. Training targets standardize on the plain-`n` form, so both conventions are represented identically -- e.g. `ⁿtʃ` -> `ntʃ`. Decided 2026-09-21.
 
-## 5e. Case normalization (backstop)
+## 5e. Case normalization -- tried, then rejected
 
-### Decision: lowercase all training-target IPA strings
-Standard IPA has no case distinction -- true small-capital symbols (e.g. `ʟ`) are their own distinct Unicode codepoints, not uppercase forms of a lowercase letter, so blanket lowercasing does not affect them. This step exists as a backstop against (a) manual transcription typos producing a stray uppercase Latin letter (found: `suLuu` in the source XML, corrected at the archival level, not just normalized away), and (b) any SAMPA vestiges missed during the 2026-09-21 corpus cleanup pass (SAMPA conventionally uses uppercase letters for values IPA gives distinct lowercase/special symbols, e.g. `S` for `ʃ`, `N` for `ŋ`). Real occurrences should still be fixed at the source when found; this normalization step only protects the training data, it does not surface or flag the underlying archival error.
+### Decision: do NOT blanket-lowercase training-target IPA strings
+A blanket lowercasing step was added 2026-09-21 as a backstop against stray uppercase Latin letters (a manual transcription typo, `suLuu`, found and fixed at the source) and any leftover SAMPA vestiges (SAMPA conventionally uses uppercase letters where IPA gives distinct lowercase/special symbols, e.g. `S` for `ʃ`, `N` for `ŋ`).
+
+It was removed the same day: stray uppercase letters are the visual signal used to *find* remaining SAMPA vestiges during manual corpus review (e.g. `saːL` silently becoming `saal` hides exactly the thing that needed fixing). Since normalization only ever applies to derived training-target columns and never touches the archival source, lowercasing here doesn't actually protect anything that manual review of the raw/gold column wouldn't also catch -- it just makes that review harder. SAMPA cleanup is handled by direct correction of the source XML, not by normalizing the symptom away in the training manifest.
 
 ---
 
@@ -180,7 +182,7 @@ The corpus's annotation/export pipeline evolved through several distinct stages,
 | Script | Purpose |
 |---|---|
 | `extract_finetune_data_unified.py` | Extracts tokens from the whole corpus in one pass, classifying and dispatching each `<u>` independently by structure (single-word / sentence / whole-utterance); replaces the three older per-format scripts below |
-| `normalize_ipa.py` | Consolidated normalization pipeline applied to derived training targets: whitespace collapsing, case normalization, tone-stripping (`strip_tones()`), affricate tie-bar standardization, vowel-length normalization, dental/rare-mark stripping, creakiness heuristic, aspiration stripping, prenasal normalization |
+| `normalize_ipa.py` | Consolidated normalization pipeline applied to derived training targets: whitespace collapsing, tone-stripping (`strip_tones()`), affricate tie-bar standardization, vowel-length normalization, dental/rare-mark stripping, creakiness heuristic, aspiration stripping, prenasal normalization (case normalization was tried and rejected, see 5e) |
 | `regenerate_word_alignment.py` | Recovers word-level timing + concatenated IPA from legacy 3-column raw multi-tier `.txt` exports; applies legacy-to-current long-vowel-contour conversion |
 | `normalize_encoding.py` | Detects and normalizes `.txt` file encoding (UTF-8/UTF-16 BE/LE, with or without BOM) to clean UTF-8, to work around Praat's inconsistent export encoding behavior |
 | `praat2tei-sil-claude.xsl` | Current SIL/Lección TSV-to-TEI pipeline; includes fixes for header-row filtering, orphan pre-Tokens groups, and per-word `@synch` start+end timing |
