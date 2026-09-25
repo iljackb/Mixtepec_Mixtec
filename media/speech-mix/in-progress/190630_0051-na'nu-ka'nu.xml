@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>TEI output for file: 190710_0257-ate-eat-will-eat.wav</title>
+            <title>TEI output for file: 190630_0051-na_nu-ka_nu.wav</title>
             <respStmt>
                <resp>Annotation</resp>
                <resp>Encoding</resp>
                <name xml:id="JB">Jack Bowers</name>
             </respStmt>
-            <!-- edit as needed -->
             <respStmt>
                <resp>Speaker</resp>
-               <name xml:id="JS">Jeremías Salazar</name> 
+               <name xml:id="JS">Jeremías Salazar</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -29,11 +25,11 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>This is a record of the speech file  <media mimeType="wav" url="190710_0257-ate-eat-will-eat.wav"/></p>
+            <p>This is a record of the speech file  <media mimeType="wav" url="190710_0270-tell-the-truth.wav"/>
+            </p>
          </sourceDesc>
          <sourceDesc>
             <recordingStmt>
-               <!-- change as needed -->
                <recording type="audio">
                   <respStmt>
                      <resp>Recording</resp>
@@ -44,14 +40,13 @@
                      <ab>Audio recorded using a Tascam DR-05X Linear PCM Recorder at a rate of 96kHz/24-bit.</ab>
                   </equipment>
                   <ab>
-                     <location>                      
+                     <location>
                         <placeName>Santiago Juxtlahuaca</placeName>
                         <country>Mexico</country>
                      </location>
                   </ab>
                   <date>2019-07-10</date>
-                  <ab>
-                     Content was recorded from <term ana="#elicitation-translation">Translation-based elicitation</term> from <lang>English</lang> or <lang>Spanish</lang> for sentences "they (gen) ate", "they (gen) are eating" and "they (gen) will eat". </ab>
+                  <ab>Content was recorded from <term ana="#elicitation-translation">Translation-based elicitation</term> from <lang>English</lang>.</ab>
                </recording>
             </recordingStmt>
          </sourceDesc>
@@ -95,8 +90,63 @@
             </taxonomy>
          </classDecl>
       </encodingDesc>
+      <revisionDesc status="unfinished">
+         <list>
+            <item>
+               <note>Not all utterances in this recording have been transcribed</note>
+            </item>
+         </list>
+      </revisionDesc>
    </teiHeader>
-  <text>
-     <body><ab>This is a metadata record of this spoken language content.</ab></body>
-  </text>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T7.84" interval="7.84"/>
+            <when xml:id="T8.31" interval="8.31"/>
+            <when xml:id="T7.85" interval="7.85"/>
+            <when xml:id="T8.29" interval="8.29"/>
+            <when xml:id="T9.59" interval="9.59"/>
+            <when xml:id="T10.30" interval="10.30"/>
+            <when xml:id="T9.62" interval="9.62"/>
+            <when xml:id="T9.89" interval="9.89"/>
+            <when xml:id="T10.26" interval="10.26"/>
+         </timeline>
+         <annotationBlock>
+            <u n="1" xml:id="d13e0" start="7.84" end="8.31">
+               <seg xml:lang="mix" xml:id="T-mx-7.84" synch="7.84" notation="orth">
+                  <w synch="#T7.85 #T8.29" xml:id="T-o-7.85">naꞌnu</w>
+               </seg>
+               <seg function="utterance"
+                    xml:lang="mix"
+                    notation="ipa"
+                    xml:id="T-ipa-7.84">
+                  <w synch="#T7.85 #T8.29" xml:id="T-p-7.85">nã́ʔnũ</w>
+               </seg>
+               <spanGrp type="annotations">
+                  <span xml:lang="en" target="#" type="translation">big</span>
+                  <span xml:lang="es" target="#" type="translation">grande</span>
+               </spanGrp>
+            </u>
+         </annotationBlock>
+         <annotationBlock>
+            <u n="2" xml:id="d17e0" start="9.59" end="10.30">
+               <seg xml:lang="mix" xml:id="T-mx-9.59" synch="9.59" notation="orth">
+                  <w synch="#T9.62 #T9.89" xml:id="T-o-9.62">ita</w>
+                  <w synch="#T9.89 #T10.26" xml:id="T-o-9.89">naꞌnu</w>
+               </seg>
+               <seg function="utterance"
+                    xml:lang="mix"
+                    notation="ipa"
+                    xml:id="T-ipa-9.59">
+                  <w synch="#T9.62 #T9.89" xml:id="T-p-9.62">itá</w>
+                  <w synch="#T9.89 #T10.26" xml:id="T-p-9.89">nã́ʔnũ</w>
+               </seg>
+               <spanGrp type="annotations">
+                  <span xml:lang="en" target="#" type="translation">big flower</span>
+                  <span xml:lang="es" target="#" type="translation">flor grande</span>
+               </spanGrp>
+            </u>
+         </annotationBlock>
+      </body>
+   </text>
 </TEI>

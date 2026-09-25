@@ -13,7 +13,7 @@
     -->
    <xsl:output encoding="UTF-8" method="xml" indent="yes"/>
    <xsl:strip-space elements="*"/>
-   <xsl:param name="input" as="xs:string" select="'Leccion_02.txt'"/>
+   <xsl:param name="input" as="xs:string" select="'190630_0051-na_nu-ka_nu.txt'"/>
    <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/>
    <!-- <xsl:param name="text-encoding" as="xs:string" select="'UTF-8'"/> -->
    <!-- utf-8 ISO-8859-1 and it works well. I think it's for European characters, which is fine. I still don't know why UTF-16 -->
@@ -56,55 +56,101 @@ end of element "data"
       <teiHeader>
          <fileDesc>
             <titleStmt>
-               <title>TEI output for tab separated bilingual text files exported from file <xsl:value-of select="$input"/></title>
+               <title>TEI output for file: 190630_0051-na_nu-ka_nu.wav</title>
                <respStmt>
                   <resp>Annotation</resp>
                   <resp>Encoding</resp>
                   <name xml:id="JB">Jack Bowers</name>
                </respStmt>
+               <!-- edit as needed -->
                <respStmt>
                   <resp>Speaker</resp>
-                  <name><!-- ADD FROM END OF FILENAME STRING!! --><!-- CREATE VARIABLES FOR EACH SPEAKER
-                                & ASSIGN DESIGNATED INITIALS AS VALUE 
-                                OF @xml:id
-                            --></name>
-               </respStmt>
-               <respStmt>
-                  <resp>Compiler</resp>
-                  <name>María M. Nieves</name>
-               </respStmt>
-               <respStmt>
-                  <resp>Editor (Mixtec text)</resp>
-                  <name>Juan Miguel Bautista Martínez</name>
-                  <name>Octavio Hernández Velasco</name>
-                  <name>Bernardino Santiago Velasco</name>
-               </respStmt>
-               <respStmt>
-                  <resp>Recording (Spanish content)</resp>
-                  <name>Víctor Moreno Rojas</name>
-               </respStmt>
-               <respStmt>
-                  <resp>Recording (Mixtec content)</resp>
-                  <name>Bernardino Santiago Velasco</name>
+                  <name xml:id="JS">Jeremías Salazar</name> 
                </respStmt>
             </titleStmt>
             <publicationStmt>
-               <publisher>Instituto Lingüístico de Verano, A.C.</publisher>
-               <pubPlace>Ciudad de México</pubPlace>
-               <date>2018</date>
+               <authority>
+                  <name>Jack Bowers</name>
+                  <name>Jeremías Salazar</name>
+                  <name>Tisu'ma Salazar</name>
+               </authority>
                <availability>
-                  <p>© 2018 Instituto Lingüístico de Verano, A.C. Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 (CC BY-NC-ND 3.0).</p>
+                  <licence>CC-BY</licence>
                </availability>
             </publicationStmt>
-            <notesStmt>
-               <note>Content originally published as: <title>Aprendamos el idioma mixteco</title> (<title xml:lang="mix">Na kutuꞌva ko saꞌan savi</title>), Libro 1, disco 1. Catalog reference: mix 18-027 .25C. Primera edición.</note>
-               <note>Content reviewed and recorded by Mixtec speakers originally from the municipality of San Juan Mixtepec, Juxtlahuaca district.</note>
-               <note>Originally retrieved from www.sil.org/mexico/mixteca/mixtepec (no longer active as of 2026).</note>
-            </notesStmt>
             <sourceDesc>
-               <p>Information about the source <ptr target="{base-uri()}"/></p>
+               <p>This is a record of the speech file  <media mimeType="wav" url="190710_0270-tell-the-truth.wav"/></p>
+            </sourceDesc>
+            <sourceDesc>
+               <recordingStmt>
+                  <!-- change as needed -->
+                  <recording type="audio">
+                     <respStmt>
+                        <resp>Recording</resp>
+                        <resp>Elicitation</resp>
+                        <name>Jack Bowers</name>
+                     </respStmt>
+                     <equipment>
+                        <ab>Audio recorded using a Tascam DR-05X Linear PCM Recorder at a rate of 96kHz/24-bit.</ab>
+                     </equipment>
+                     <ab>
+                        <location>                      
+                           <placeName>Santiago Juxtlahuaca</placeName>
+                           <country>Mexico</country>
+                        </location>
+                     </ab>
+                     <date>2019-07-10</date>
+                     <ab>Content was recorded from <term ana="#elicitation-translation">Translation-based elicitation</term> from <lang>English</lang>.</ab>
+                  </recording>
+               </recordingStmt>
             </sourceDesc>
          </fileDesc>
+         <encodingDesc>
+            <classDecl>
+               <taxonomy>
+                  <desc>Typology of linguistic speech events captured in recordings as per: <bibl>Himmelmann (<date>1998</date>)</bibl>. aka Typology of "naturalness".</desc>
+                  <category xml:id="observed">
+                     <catDesc>
+                        <term>Observed communicative event:</term> the extent of external interference is limited to the knowledge of the speakers that the speech is being recorded or observed.</catDesc>
+                  </category>
+                  <category xml:id="staged">
+                     <catDesc>
+                        <term>Staged communicative event:</term> speech events realized for the purpose of recording (i.e. elicited speech). Events are not really being realized for the purpose of communication but for the benefit of the investigator.</catDesc>
+                     <category xml:id="staged-free-topical">
+                        <catDesc>
+                           <term>Staged-Topical</term>Prompt to speak freely about topic</catDesc>
+                     </category>
+                     <category xml:id="staged-stimuli">
+                        <catDesc>
+                           <term>Staged-Stimuli</term> events based on stimuli to be described in speakers own words</catDesc>
+                     </category>
+                  </category>
+                  <category xml:id="elicitation">
+                     <catDesc>
+                        <term>Elicitation:</term> speech act for the sole purpose of linguistic investigation. (A new type of speech event for most communities).</catDesc>
+                     <category xml:id="elicitation-contextualizing">
+                        <catDesc>
+                           <term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for a item or construction as prompted by the investigator.</catDesc>
+                     </category>
+                     <category xml:id="elicitation-translation">
+                        <catDesc>
+                           <term>Translation-based elicitation:</term> native speaker asked to translate item from second language</catDesc>
+                     </category>
+                     <category xml:id="elicitation-judgement">
+                        <catDesc>
+                           <term>Judgement:</term> where native speakers are asked to judge the acceptibility of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
+                     </category>
+                  </category>
+               </taxonomy>
+            </classDecl>
+         </encodingDesc>
+         <revisionDesc status="unfinished">
+            <list>
+               <item>
+                  <note>Not all utterances in this recording have been transcribed</note>
+               </item>
+            </list>
+         </revisionDesc>
       </teiHeader>
    </xsl:variable>
    <xsl:variable name="lines-into-tabs" as="element()*">
@@ -197,7 +243,7 @@ end of element "data"
                           can collide with the real first utterance if they share a start time. -->
                      <xsl:if test="current-group()[1]/self::Tokens">
                      <xsl:variable name="whens" as="element()*">
-                        <xsl:for-each select="                                     distinct-values(                                     (current-group()[self::Mixtec|self::IPA|self::English|self::Spanish]/@start, current-group()[self::English]/@end)                                     )">
+                        <xsl:for-each select="distinct-values((current-group()[self::Mixtec|self::IPA|self::English]/@start, current-group()[self::English]/@end))">
                            <when xml:id="T{position()}" interval="{.}"/>
                         </xsl:for-each>
                      </xsl:variable>
@@ -238,9 +284,7 @@ end of element "data"
                               <xsl:for-each select="current-group()/self::English">
                                  <span xml:lang="en" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
                               </xsl:for-each>
-                              <xsl:for-each select="current-group()/self::Spanish">
-                                 <span xml:lang="es" target="#{$mixSegID}" type="translation"><xsl:value-of select="."/></span>
-                              </xsl:for-each>
+                                 <span xml:lang="es" target="#{$mixSegID}" type="translation"></span>
                            </spanGrp>
                         </u>
                         <!-- can add other features as needed -->

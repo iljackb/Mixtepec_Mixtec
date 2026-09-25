@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>TEI output for file: 190710_0257-ate-eat-will-eat.wav</title>
+            <title>TEI output for file: 190630_0048-hand-cactus.wav</title>
             <respStmt>
                <resp>Annotation</resp>
                <resp>Encoding</resp>
                <name xml:id="JB">Jack Bowers</name>
             </respStmt>
-            <!-- edit as needed -->
             <respStmt>
                <resp>Speaker</resp>
-               <name xml:id="JS">Jeremías Salazar</name> 
+               <resp>Elicitation</resp>
+               <name xml:id="JS">Jeremías Salazar</name>
+            </respStmt>
+            <respStmt>
+               <resp>Speaker</resp>
+               <name xml:id="X">X</name>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -29,29 +30,27 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>This is a record of the speech file  <media mimeType="wav" url="190710_0257-ate-eat-will-eat.wav"/></p>
+            <p>This is a record of the speech file <media mimeType="wav" url="190630_0048-hand-cactus.wav"/>
+            </p>
          </sourceDesc>
          <sourceDesc>
             <recordingStmt>
-               <!-- change as needed -->
                <recording type="audio">
                   <respStmt>
                      <resp>Recording</resp>
-                     <resp>Elicitation</resp>
                      <name>Jack Bowers</name>
                   </respStmt>
                   <equipment>
                      <ab>Audio recorded using a Tascam DR-05X Linear PCM Recorder at a rate of 96kHz/24-bit.</ab>
                   </equipment>
                   <ab>
-                     <location>                      
+                     <location>
                         <placeName>Santiago Juxtlahuaca</placeName>
                         <country>Mexico</country>
                      </location>
                   </ab>
-                  <date>2019-07-10</date>
-                  <ab>
-                     Content was recorded from <term ana="#elicitation-translation">Translation-based elicitation</term> from <lang>English</lang> or <lang>Spanish</lang> for sentences "they (gen) ate", "they (gen) are eating" and "they (gen) will eat". </ab>
+                  <date>2019-06-30</date>
+                  <ab>Content was recorded using <term ana="#elicitation">elicitation</term> using <lang>Spanish</lang> and or <lang>Mixtec</lang> to ask what the item (saguaro cactus) is called.</ab>
                </recording>
             </recordingStmt>
          </sourceDesc>
@@ -81,7 +80,7 @@
                      <term>Elicitation:</term> speech act for the sole purpose of linguistic investigation. (A new type of speech event for most communities).</catDesc>
                   <category xml:id="elicitation-contextualizing">
                      <catDesc>
-                        <term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for a item or construction as prompted by the investigator.</catDesc>
+                        <term>Contextualizing elicitation:</term> where native speakers are asked to provide contexts for an item or construction as prompted by the investigator.</catDesc>
                   </category>
                   <category xml:id="elicitation-translation">
                      <catDesc>
@@ -89,14 +88,45 @@
                   </category>
                   <category xml:id="elicitation-judgement">
                      <catDesc>
-                        <term>Judgement:</term> where native speakers are asked to judge the acceptibility of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
+                        <term>Judgement:</term> where native speakers are asked to judge the acceptability of a given construction based on any aspect of language, e.g. grammar, etc.</catDesc>
                   </category>
                </category>
             </taxonomy>
          </classDecl>
       </encodingDesc>
+      <revisionDesc status="unfinished">
+         <list>
+            <item>
+               <note>Not all utterances in this recording have been transcribed</note>
+            </item>
+         </list>
+      </revisionDesc>
    </teiHeader>
-  <text>
-     <body><ab>This is a metadata record of this spoken language content.</ab></body>
-  </text>
+   <text>
+      <body>
+         <timeline>
+            <when xml:id="T19.10" interval="19.10"/>
+            <when xml:id="T19.89" interval="19.89"/>
+            <when xml:id="T19.19" interval="19.19"/>
+            <when xml:id="T19.78" interval="19.78"/>
+         </timeline>
+         <annotationBlock>
+            <u n="1" xml:id="d7e0" start="19.10" end="19.89">
+               <seg xml:lang="mix" xml:id="T-mx-19.10" synch="19.10" notation="orth">
+                  <w synch="#T19.19 #T19.78" xml:id="T-o-19.19">tuxichi</w>
+               </seg>
+               <seg function="utterance"
+                    xml:lang="mix"
+                    notation="ipa"
+                    xml:id="T-ipa-19.10">
+                  <w synch="#T19.19 #T19.78" xml:id="T-p-19.19">tùʃitʃǐ</w>
+               </seg>
+               <spanGrp type="annotations">
+                  <span xml:lang="en" target="#" type="translation">Candelabro Cactus</span>
+                  <span xml:lang="es" target="#" type="translation"/>
+               </spanGrp>
+            </u>
+         </annotationBlock>
+      </body>
+   </text>
 </TEI>
